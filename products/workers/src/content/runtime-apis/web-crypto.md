@@ -271,26 +271,32 @@ Workers implements a subset of the most common cryptographic algorithms, as show
 
 <TableWrap>
 
-| Algorithm                                 | sign()<br/>verify() | encrypt()<br/>decrypt() | digest() | deriveBits()<br/>deriveKey() | generateKey() | wrapKey()<br/>unwrapKey() | exportKey() |
-| :---------------------------------------- | :------------------ | :---------------------- | :------- | :--------------------------- | :------------ | :------------------------ | ----------- |
-| RSASSA-PKCS1-v1_5                         | ✓                   |                         |          |                              | ✓             |                           | ✓           |
-| RSA-PSS                                   | ✓                   |                         |          |                              | ✓             |                           | ✓           |
-| ECDSA                                     | ✓                   |                         |          |                              |               |                           | ✓           |
-| HMAC                                      | ✓                   |                         |          |                              | ✓             |                           |             |
-| AES-CBC                                   |                     | ✓                       |          |                              |               | ✓                         |             |
-| AES-GCM                                   |                     | ✓                       |          |                              | ✓             | ✓                         |             |
-| SHA-1                                     |                     |                         | ✓        |                              |               |                           |             |
-| SHA-256                                   |                     |                         | ✓        |                              |               |                           |             |
-| SHA-384                                   |                     |                         | ✓        |                              |               |                           |             |
-| SHA-512                                   |                     |                         | ✓        |                              |               |                           |             |
-| MD5<sup><a href="#footnote-1">1</a></sup> |                     |                         | ✓        |                              |               |                           |             |
-| PBKDF2                                    |                     |                         |          | ✓                            |               |                           |             |
+| Algorithm                                 | sign()<br/>verify()                      | encrypt()<br/>decrypt()   | digest() | deriveBits()<br/>deriveKey() | generateKey() | wrapKey()<br/>unwrapKey() | exportKey() | importKey() |
+| :---------------------------------------- | :--------------------------------------- | :------------------------ | :------- | :--------------------------- | :------------ | :------------------------ | :---------- | :---------- |
+| RSASSA-PKCS1-v1_5                         | ✓                                        | -                         | -        | -                            | ✓             | -                         | not jwk     | ✓           |
+| RSA-PSS                                   | ✓                                        | -                         | -        | -                            | ✓             | -                         | not jwk     | ✓           |
+| RSA-OAEP                                  | ✘ <sup><a href="#footnote-1">1</a></sup> | -                         | -        | -                            | ✘             | -                         | ✘           | ✓           |
+| ECDSA                                     | ✓                                        | -                         | -        | -                            | ✓             | -                         | not jwk     | ✓           |
+| ECDH                                      | -                                        | -                         | -        | ✓                            | ✓             | -                         | ✘           | ✓           |
+| HMAC                                      | ✓                                        | -                         | -        | -                            | ✓             | -                         | raw only    | ✓           |
+| AES-CBC                                   | -                                        | ✓                         | -        | -                            | ✓             | ✘                         | raw only    | ✓           |
+| AES-GCM                                   | -                                        | ✓                         | -        | -                            | ✓             | ✘                         | raw only    | ✓           |
+| AES-CTR                                   | -                                        | ✘                         | -        | -                            | ✓             | ✘                         | raw only    | ✓           |
+| AES-KW                                    | -                                        | -                         | -        | -                            | ✘             | ✘                         | raw only    | ✓           |
+| SHA-1                                     | -                                        | -                         | ✓        | -                            | -             | -                         | -           | -           |
+| SHA-256                                   | -                                        | -                         | ✓        | -                            | -             | -                         | -           | -           |
+| SHA-384                                   | -                                        | -                         | ✓        | -                            | -             | -                         | -           | -           |
+| SHA-512                                   | -                                        | -                         | ✓        | -                            | -             | -                         | -           | -           |
+| MD5<sup><a href="#footnote-2">1</a></sup> | -                                        | -                         | ✓        | -                            | -             | -                         | -           | -           |
+| PBKDF2                                    | -                                        | -                         | -        | ✓                            | -             | -                         | ✓           | ✓           |
+| HKDF                                      | -                                        | -                         | -        | ✘                            | -             | -                         | ✘           | ✘           |
 
 </TableWrap>
 
 __Footnotes:__
 
-1. <a name="footnote-1"></a> MD5 is not part of the WebCrypto standard, but is supported in Cloudflare Workers for interacting with legacy systems that require MD5. MD5 is considered a weak algorithm. Do not rely upon MD5 for security.
+1. <a name="footnote-1"></a> This indicates that this feature isn't implemented yet. A dash indicates the operation isn't applicable for the algorithm.
+1. <a name="footnote-2"></a> MD5 is not part of the WebCrypto standard, but is supported in Cloudflare Workers for interacting with legacy systems that require MD5. MD5 is considered a weak algorithm. Do not rely upon MD5 for security.
 
 --------------------------------
 
