@@ -5,6 +5,9 @@
   "repository": "cloudflare/cloudflare-docs",
   "description": "Cloudflare Developer Docs",
   "scripts": {
-    "build": "exit 0"
+    "build": "bongo build"
+  },
+  "devDependencies": {
+    "bongo": "npm:@lukeed/bongo"
   }
 }
