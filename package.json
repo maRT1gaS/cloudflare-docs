@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Cloudflare Developer Docs",
   "scripts": {
+    "build": "exit 0",
     "develop": "node develop.js"
   },
   "repository": {
