@@ -5,6 +5,11 @@
   "repository": "cloudflare/cloudflare-docs",
   "description": "Cloudflare Developer Docs",
   "scripts": {
-    "build": "exit 0"
+    "build": "bongo build"
+  },
+  "devDependencies": {
+    "@bongo/markdown": "0.0.4",
+    "@types/node": "16.11.12",
+    "bongo": "npm:@lukeed/bongo@0.0.4"
   }
 }
