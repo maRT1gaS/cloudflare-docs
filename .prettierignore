@@ -1,0 +1,10 @@
+node_modules
+public
+*.hbs
+
+/*.md
+/*.json
+/*.yaml
+
+_components
+_ignore
