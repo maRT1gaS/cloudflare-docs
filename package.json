@@ -11,6 +11,7 @@
   "devDependencies": {
     "@bongo/markdown": "0.0.5",
     "@types/node": "16.11.12",
-    "bongo": "npm:@lukeed/bongo@0.0.5"
+    "bongo": "npm:@lukeed/bongo@0.0.5",
+    "prismjs": "1.25.0"
   }
 }

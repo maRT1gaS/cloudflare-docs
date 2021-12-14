@@ -1,5 +1,6 @@
 import { define } from 'bongo';
-import * as markdown from '@bongo/markdown';
+import { markdown } from '@bongo/markdown';
+import { highlight } from './config/prism.mjs';
 
 export default define({
 	$site: {
@@ -8,6 +9,8 @@ export default define({
 		url: 'https://developers.cloudflare.com',
 	},
 	plugins: [
-		markdown,
+		markdown({
+			highlight
+		})
 	]
 });
