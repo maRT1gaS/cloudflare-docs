@@ -1,0 +1,37 @@
+name: CI
+
+on:
+  push:
+    paths-ignore:
+      - '_ignore/**' # todo
+      - '_components/**' # todo
+    branches:
+      - '**'
+    tags-ignore:
+      - '**'
+  pull_request:
+    branches:
+      - production
+      - dev # todo
+
+jobs:
+  test:
+    name: Node.js v16
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 16
+
+      - name: (env) pnpm
+        run: curl -L https://raw.githubusercontent.com/pnpm/self-installer/master/install.js | node
+
+      - name: Install
+        run: pnpm install
+
+      - name: Lint
+        run: pnpm run lint
+
+      # - name: Build
+      #   run: pnpm run build
