@@ -21,6 +21,7 @@
 		{{#style src="style.css" output="s.css" }}
 		{{ $page.styles }}
 
+		{{#script src="theme.ts" inline=true format="iife" }}
 		{{#script src="main.ts" defer=true inline=true }}
 		{{ $page.scripts }}
 
