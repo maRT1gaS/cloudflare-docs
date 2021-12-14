@@ -15,18 +15,19 @@ To set up a generic OIDC:
 
 1. When creating a client/app, your IdP may request an **authorized redirect URI**. Enter your [team domain](/glossary#team-domain) followed by this callback at the end of the path: `/cdn-cgi/access/callback`. For example:
 
-    ```txt
-    https://<your-team-name>.cloudflareaccess.com/cdn-cgi/access/callback
-    ```
+   ```txt
+   https://<your-team-name>.cloudflareaccess.com/cdn-cgi/access/callback
+   ```
 
 1. Copy the content of these fields:
-   * Client ID
-   * Client secret
-   * Auth URL: The `authorization_endpoint` URL of your IdP
-   * Token URL: The token_endpoint URL of your IdP
-   * Certificate URL: The `jwks_uri` endpoint of your IdP to allow the IdP keys to sign the tokens
 
-    You can find these values on your identity provider’s **OIDC discovery endpoint**. Some providers call this the “well-known URL.”
+   - Client ID
+   - Client secret
+   - Auth URL: The `authorization_endpoint` URL of your IdP
+   - Token URL: The token_endpoint URL of your IdP
+   - Certificate URL: The `jwks_uri` endpoint of your IdP to allow the IdP keys to sign the tokens
+
+   You can find these values on your identity provider’s **OIDC discovery endpoint**. Some providers call this the “well-known URL.”
 
 1. On the Teams dashboard, navigate to **Settings > Authentication**.
 1. Under **Login methods**, click **Add new**.
@@ -45,14 +46,14 @@ On success, a confirmation screen displays.
 
 ```json
 {
-	"config": {
-		"client_id": "<your client id>",
-		"client_secret": "<your client secret>",
-		"auth_url": "https://accounts.google.com/o/oauth2/auth",
-		"token_url": "https://accounts.google.com/o/oauth2/token",
-		"certs_url": "https://www.googleapis.com/oauth2/v3/certs",
-	},
-	"type": "oidc",
-	"name": "Generic Google"
+  "config": {
+    "client_id": "<your client id>",
+    "client_secret": "<your client secret>",
+    "auth_url": "https://accounts.google.com/o/oauth2/auth",
+    "token_url": "https://accounts.google.com/o/oauth2/token",
+    "certs_url": "https://www.googleapis.com/oauth2/v3/certs"
+  },
+  "type": "oidc",
+  "name": "Generic Google"
 }
 ```

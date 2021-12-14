@@ -6,4 +6,4 @@ order: 2
 
 # Tutorials
 
-<DirectoryListing path="/tutorials"/>
+<DirectoryListing path="/tutorials" />

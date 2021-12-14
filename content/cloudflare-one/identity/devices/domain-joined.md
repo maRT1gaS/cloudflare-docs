@@ -11,8 +11,8 @@ title: Domain Joined
 <div>
 
 | Status | Operating Systems | [WARP mode required](/connections/connect-devices/warp#warp-client-modes) | [Teams plans](https://www.cloudflare.com/teams-pricing/) |
-| --- | ----------------- | --------- | ---- |
-| Beta | Windows | WARP with Gateway | All plans | 
+| ------ | ----------------- | ------------------------------------------------------------------------- | -------------------------------------------------------- |
+| Beta   | Windows           | WARP with Gateway                                                         | All plans                                                |
 
 </div>
 </details>

@@ -19,7 +19,7 @@ Polish may not be applied to origin responses that contain a `Vary` header. The 
 
 </Aside>
 
-### Lossless 
+### Lossless
 
 Lossless attempts to strip most metadata, like EXIF data, but does not change the image detail. Effectively, when uncompressed, a lossless image is identical to the original. On average, Lossless compression reduces file size by 21 percent.
 

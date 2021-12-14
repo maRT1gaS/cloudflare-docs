@@ -12,6 +12,7 @@ Workers Sites require the latest version of [Wrangler](https://github.com/cloudf
 <Definitions>
 
 - `wrangler generate proj --site`
+
   - Creates a project with a Worker serving a generic HTML file and favicon with the directory structure:
 
     ```txt
@@ -38,17 +39,20 @@ There are a few specific configuration settings for Workers Sites in your `wrang
 
 <Definitions>
 
-  - `bucket` <PropMeta>required</PropMeta>
-    - The directory containing your static assets, path relative to your `wrangler.toml`. Example: `bucket = "./public"`.
+- `bucket` <PropMeta>required</PropMeta>
 
-  - `entry-point` <PropMeta>optional</PropMeta>
-    - The location of your Worker script, default is `workers-site`. Example: `entry-point = "./workers-site"`.
+  - The directory containing your static assets, path relative to your `wrangler.toml`. Example: `bucket = "./public"`.
 
-  - `include` <PropMeta>optional</PropMeta>
-    - A list of gitignore-style patterns for files or directories in `bucket` you exclusively want to upload. Example: `include = ["upload_dir"]`.
+- `entry-point` <PropMeta>optional</PropMeta>
 
-  - `exclude` <PropMeta>optional</PropMeta>
-    - A list of gitignore-style patterns for files or directories in `bucket` you want to exclude from uploads. Example: `exclude = ["ignore_dir"]`.
+  - The location of your Worker script, default is `workers-site`. Example: `entry-point = "./workers-site"`.
+
+- `include` <PropMeta>optional</PropMeta>
+
+  - A list of gitignore-style patterns for files or directories in `bucket` you exclusively want to upload. Example: `include = ["upload_dir"]`.
+
+- `exclude` <PropMeta>optional</PropMeta>
+  - A list of gitignore-style patterns for files or directories in `bucket` you want to exclude from uploads. Example: `exclude = ["ignore_dir"]`.
 
 </Definitions>
 
@@ -56,7 +60,7 @@ To learn more about the optional `include` and `exclude` fields, visit [Ignoring
 
 <Aside>
 
-__Note:__ if your project uses [environments](/platform/environments), make sure to place `site` at the top level config.
+**Note:** if your project uses [environments](/platform/environments), make sure to place `site` at the top level config.
 
 </Aside>
 

@@ -76,16 +76,25 @@ If you're using your own player or rendering the video in a mobile app, view inf
 Update to Stream component once available
 https://github.com/cloudflare/cloudflare-docs-engine/issues/281
 -->
+
 <figure data-type="stream">
-  <div className="AspectRatio" style={{"--aspect-ratio": "calc(16 / 9)"}}>
+  <div className="AspectRatio" style={{ '--aspect-ratio': 'calc(16 / 9)' }}>
     <iframe
       className="AspectRatio--content"
       src="https://iframe.videodelivery.net/5d5bc37ffcf54c9b82e996823bffbb81?mute=true"
       title="Example Stream video"
       frameBorder="0"
       allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-      allowFullScreen/>
+      allowFullScreen
+    />
   </div>
 </figure>
 
-<p><Button type="primary" href="https://api.cloudflare.com/#stream-videos-upload-a-video-from-a-url">View detailed API reference</Button></p>
+<p>
+  <Button
+    type="primary"
+    href="https://api.cloudflare.com/#stream-videos-upload-a-video-from-a-url"
+  >
+    View detailed API reference
+  </Button>
+</p>

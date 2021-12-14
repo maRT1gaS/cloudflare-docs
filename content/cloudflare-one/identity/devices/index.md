@@ -6,7 +6,7 @@ title: Device posture
 
 # Device posture attributes
 
-With Teams, you can configure Zero Trust policies that rely on additional signals from endpoint security providers to allow or deny connections to your applications. 
+With Teams, you can configure Zero Trust policies that rely on additional signals from endpoint security providers to allow or deny connections to your applications.
 
 When device posture checks are configured, users can only connect to a protected application if they have a managed or healthy device, as determined by the endpoint security provider associated to the Zero Trust policy regulating access to the protected application.
 
@@ -14,13 +14,13 @@ To enable one or more device posture attributes, navigate to **My Team** > **Dev
 
 <Aside>
 
-When setting up new device posture checks, we recommend first testing them without setting certificate thumbprint or SHA256 checksum values. 
+When setting up new device posture checks, we recommend first testing them without setting certificate thumbprint or SHA256 checksum values.
 
 </Aside>
 
 ## Available device posture attributes
 
-<DirectoryListing path="/identity/devices"/>
+<DirectoryListing path="/identity/devices" />
 
 ## Verify device posture checks in the WARP client
 
@@ -32,4 +32,4 @@ On desktop clients, you can always verify which device posture checks are active
 
 This will show a list of active device posture checks.
 
-   ![Device posture attributes](../../static/documentation/identity/devices/device-posture-client-ui.png)
+![Device posture attributes](../../static/documentation/identity/devices/device-posture-client-ui.png)

@@ -3,11 +3,11 @@ order: 11
 pcx-content-type: how-to
 ---
 
-import TLS13Definition from "../../_partials/_tls-13-definition.md"
+import TLS13Definition from '../../_partials/_tls-13-definition.md';
 
 # TLS 1.3
 
-<TLS13Definition/>
+<TLS13Definition />
 
 ## What is TLS 1.3?
 
@@ -47,7 +47,6 @@ After enabling TLS 1.3, visit a site with TLS 1.3 enabled over HTTPS. Then:
 </div>
 </details>
 
-
 <details>
 <summary>Firefox</summary>
 <div>
@@ -66,7 +65,7 @@ After enabling TLS 1.3, visit a site with TLS 1.3 enabled over HTTPS. Then:
 
 ### Troubleshooting
 
-Since TLS 1.3 implementations are relatively new, some failures may occur.  If you experience errors, submit a Cloudflare Support ticket with the following information:
+Since TLS 1.3 implementations are relatively new, some failures may occur. If you experience errors, submit a Cloudflare Support ticket with the following information:
 
 - Steps to replicate the issue (if possible)
 - Client build version

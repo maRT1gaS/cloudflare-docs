@@ -15,8 +15,8 @@ This feature is only available for selected customers on an Enterprise plan. Con
 
 Like other rules evaluated by Cloudflare's [Ruleset Engine](https://developers.cloudflare.com/ruleset-engine/), Custom Firewall rules have an **expression** and an **action**:
 
-* The **expression** specifies the criteria you are matching traffic on — the same as in [Firewall Rules](https://developers.cloudflare.com/firewall/cf-firewall-rules).
-* The **action** specifies what to perform when there is a match for the rule.
+- The **expression** specifies the criteria you are matching traffic on — the same as in [Firewall Rules](https://developers.cloudflare.com/firewall/cf-firewall-rules).
+- The **action** specifies what to perform when there is a match for the rule.
 
 ---
 

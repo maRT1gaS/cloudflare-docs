@@ -21,9 +21,9 @@ If you are migrating from "classic" Cloudflare Tunnel deployments to the new, pe
 
 **🗺️ This tutorial covers how to:**
 
-* Start a secure, outbound-only, connection from a machine to Cloudflare
-* Give the application a hostname where users can connect
-* Complete the entire process with a single command using `cloudflared`
+- Start a secure, outbound-only, connection from a machine to Cloudflare
+- Give the application a hostname where users can connect
+- Complete the entire process with a single command using `cloudflared`
 
 **⏲️ Time to complete:**
 
@@ -67,9 +67,10 @@ Run the following command to perform all of the functions listed above, replacin
 ![Command Output](../static/secure-origin-connections/single-command/command-output.png)
 
 The command above will
-* create a Tunnel named `Grafana`,
-* create a persisent DNS record at the `example` subdomain, and
-* send traffic directed to that hostname through the Tunnel and to the service available at `localhost:3000`.
+
+- create a Tunnel named `Grafana`,
+- create a persisent DNS record at the `example` subdomain, and
+- send traffic directed to that hostname through the Tunnel and to the service available at `localhost:3000`.
 
 ## Manage the Tunnel
 

@@ -14,11 +14,11 @@ After a Railgun has been activated, it can be exposed to a particular domain wit
 Expose a verified Railgun to a domain via the Cloudflare Settings user-interface. This method allows an end-user to select and enable the specified Railgun within the Cloudflare Settings user-interface. If `auto_enabled` is set to `0`, it is also necessary to perform a [conn_set](/user-guide/optimized-partner-api/enable-and-disable-connections#post-conn_set) for the Railgun in order to setup a connection with the domain.
 
 ### Form parameters
- 	
-* **host_key** – Host API key
-* **z** – Domain name
-* **rtkn** – Railgun token
-* **auto_enabled** – Railgun operation mode, `1` for active `0` for inactive
+
+- **host_key** – Host API key
+- **z** – Domain name
+- **rtkn** – Railgun token
+- **auto_enabled** – Railgun operation mode, `1` for active `0` for inactive
 
 <details>
 <summary>Example request</summary>
@@ -70,10 +70,10 @@ Expose a verified Railgun to a domain via the Cloudflare Settings user-interface
 
 ### Query parameters
 
-* **host_key** – Host API key
-* **z** – Domain name
-* **rtkn** – Railgun token
-* **auto_enabled** – Railgun operation mode, `1` for active `0` for inactive
+- **host_key** – Host API key
+- **z** – Domain name
+- **rtkn** – Railgun token
+- **auto_enabled** – Railgun operation mode, `1` for active `0` for inactive
 
 <details>
 <summary>Example request</summary>
@@ -124,11 +124,11 @@ Content-Type: application/json
 Establish a connection between a domain and a Railgun without requiring the domain’s user to utilize the Cloudflare Settings user-interface to change or deactivate it. The `mode` parameter can be set to `1` in order to enable the Railgun globally if `conn_set` succeeds.
 
 ### Form parameters
- 	
-* **host_key** – Host API key
-* **z** – Domain name
-* **rtkn** – Railgun token
-* **mode** – Railgun operation mode, `1` for active `0` for inactive
+
+- **host_key** – Host API key
+- **z** – Domain name
+- **rtkn** – Railgun token
+- **mode** – Railgun operation mode, `1` for active `0` for inactive
 
 <details>
 <summary>Example request</summary>
@@ -180,11 +180,11 @@ Content-Type: application/json
 Establish a connection between a domain and a Railgun without requiring the domain’s user to utilize the Cloudflare Settings user-interface to change or deactivate it. The `mode` parameter can be set to `1` in order to enable the Railgun globally if `conn_set` succeeds.
 
 ### Query parameters
- 	
-* **host_key** – Host API key
-* **z** – Domain name
-* **rtkn** – Railgun token
-* **mode** – Railgun operation mode, `1` for active `0` for inactive
+
+- **host_key** – Host API key
+- **z** – Domain name
+- **rtkn** – Railgun token
+- **mode** – Railgun operation mode, `1` for active `0` for inactive
 
 <details>
 <summary>Example request</summary>
@@ -236,10 +236,10 @@ Content-Type: application/json
 Enable a Railgun. If request is successful, the specified Railgun will be enabled and traffic for the specified domain will be proxied through Railgun.
 
 ### Form parameters
- 	
-* **host_key** – Host API key
-* **z** – Domain name
-* **rtkn** – Railgun token
+
+- **host_key** – Host API key
+- **z** – Domain name
+- **rtkn** – Railgun token
 
 <details>
 <summary>Example request</summary>
@@ -289,10 +289,10 @@ Content-Type: application/json
 Enable a Railgun. If request is successful, the specified Railgun will be enabled and traffic for the specified domain will be proxied through Railgun.
 
 ### Query parameters
- 	
-* **host_key** – Host API key
-* **z** – Domain name
-* **rtkn** – Railgun token
+
+- **host_key** – Host API key
+- **z** – Domain name
+- **rtkn** – Railgun token
 
 <details>
 <summary>Example request</summary>
@@ -342,10 +342,10 @@ Content-Type: application/json
 Disable a Railgun. If request is successful, the specified Railgun will be disabled and traffic for the specified domain will no longer use Railgun.
 
 ### Form parameters
- 	
-* **host_key** – Host API key
-* **z** – Domain name
-* **rtkn** – Railgun token
+
+- **host_key** – Host API key
+- **z** – Domain name
+- **rtkn** – Railgun token
 
 <details>
 <summary>Example request</summary>
@@ -395,10 +395,10 @@ Content-Type: application/json
 Disable a Railgun. If request is successful, the specified Railgun will be disabled and traffic for the specified domain will no longer use Railgun.
 
 ### Query parameters
- 	
-* **host_key** – Host API key
-* **z** – Domain name
-* **rtkn** – Railgun token
+
+- **host_key** – Host API key
+- **z** – Domain name
+- **rtkn** – Railgun token
 
 <details>
 <summary>Example request</summary>
@@ -448,10 +448,10 @@ Content-Type: application/json
 Remove a connection between a domain and a Railgun. This API call will allow a connected Railgun to be assigned to a different domain. Removing the connection of an enabled Railgun and domain will disable Railgun for the domain until a new connection is made with [conn_set](/user-guide/optimized-partner-api/enable-and-disable-connections#post-conn_set).
 
 ### Form parameters
- 	
-* **host_key** – Host API key
-* **z** – Domain name
-* **rtkn** – Railgun token
+
+- **host_key** – Host API key
+- **z** – Domain name
+- **rtkn** – Railgun token
 
 <details>
 <summary>Example request</summary>
@@ -501,10 +501,10 @@ Content-Type: application/json
 Remove a connection between a domain and a Railgun. This API call will allow a connected Railgun to be assigned to a different domain. Removing the connection of an enabled Railgun and domain will disable Railgun for the domain until a new connection is made with [conn_set](/user-guide/optimized-partner-api/enable-and-disable-connections#post-conn_set).
 
 ### Query parameters
- 	
-* **host_key** – Host API key
-* **z** – Domain name
-* **rtkn** – Railgun token
+
+- **host_key** – Host API key
+- **z** – Domain name
+- **rtkn** – Railgun token
 
 <details>
 <summary>Example request</summary>

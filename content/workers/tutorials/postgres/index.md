@@ -1,7 +1,7 @@
 ---
 updated: 2021-06-10
 difficulty: Intermediate
-content_type: "📝 Tutorial"
+content_type: '📝 Tutorial'
 pcx-content-type: tutorial
 ---
 
@@ -118,7 +118,7 @@ async function handleRequest(request) {
   const { data, error } = await client
     .from('users')
     .select()
-  
+
   if (error) throw error
 
   return new Response(JSON.stringify(data), {
@@ -259,7 +259,6 @@ router.all('*', () => new Response("Not Found", { status: 404 }))
 
 The second planned route is `GET /users/:id`, which returns a single user based on their ID. Configure another route, which will use parameters to capture part of the URL and make it available as part of the route handler as an object `params`:
 
-
 ```js
 ---
 filename: index.js
@@ -377,7 +376,7 @@ $ curl https://postgrest-worker-example.signalnerve.workers.dev/users -X POST -H
 
 In this tutorial, you have used PostgREST, `postgrest-js`, and Cloudflare Workers to build a serverless API for your PostgreSQL database. This architecture provides an infinitely-scaling and secure approach to interfacing between your databases and your front-end applications, while still retaining the control and flexibility of avoiding lock-in to Database-as-a-Service tools and other complicated SDKs for data management.
 
-If you found this tutorial useful, continue building with other Cloudflare Workers tutorials below. 
+If you found this tutorial useful, continue building with other Cloudflare Workers tutorials below.
 
 - [Authorize users with Auth0](/tutorials/authorize-users-with-auth0)
 - [Build a Slackbot](/tutorials/build-a-slackbot)

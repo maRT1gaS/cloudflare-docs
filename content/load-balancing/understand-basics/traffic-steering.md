@@ -4,7 +4,7 @@ order: 12
 pcx-content-type: concept
 ---
 
-import RegionMapping from "../_partials/_region-mapping.md"
+import RegionMapping from '../_partials/_region-mapping.md';
 
 # Traffic steering
 
@@ -56,9 +56,9 @@ Geo Steering directs traffic to pools to a specific geographical region or — f
 
 You can assign multiple pools to the same region and the load balancer will use them in failover order. If there is no configuration for a region or pool, the load balancer will use the default failover order.
 
-Cloudflare has 13 geographic regions that span the world. The region of a client is determined by the region of the Cloudflare data center that answers the client’s DNS query. 
+Cloudflare has 13 geographic regions that span the world. The region of a client is determined by the region of the Cloudflare data center that answers the client’s DNS query.
 
-<RegionMapping/>
+<RegionMapping />
 
 For more details on working with regions and region codes, refer to [Region Mapping API](/reference/region-mapping-api).
 
@@ -104,12 +104,14 @@ To use proximity steering on a load balancer, you first need to add GPS coordina
 ### How to add proximity steering
 
 To add coordinates when creating or editing a pool:
+
 1. Click the **Configure co-ordinates for Proximity Steering** dropdown.
 1. Enter the latitude and longitude or drag a marker on the map.
 1. Select **Save**.
 
 <Aside type="warning" header="Warning:">
-  For accurate proximity steering, add GPS coordinates to all pools within the same load balancer.
+  For accurate proximity steering, add GPS coordinates to all pools within the
+  same load balancer.
 </Aside>
 
 ## Random steering

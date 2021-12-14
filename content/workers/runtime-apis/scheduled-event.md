@@ -8,15 +8,14 @@ pcx-content-type: configuration
 
 A `ScheduledEvent` is the event type for scheduled requests to a Worker. It is the `Object` passed through as the `event` when a Worker is invoked by a Worker's [Cron Trigger](/platform/cron-triggers). `ScheduledEvent` is supported in Workers written with [Service Worker syntax](#syntax-service-worker) and [Module Worker syntax](#syntax-module-worker).
 
-
 ## Syntax: Service Worker
 
 A `ScheduledEvent` can be handled in Workers functions written using the Service Worker syntax by attaching to the `scheduled` event with `addEventListener`:
 
 ```js
-addEventListener("scheduled", event => {
-  event.waitUntil(handleScheduled(event))
-})
+addEventListener('scheduled', event => {
+  event.waitUntil(handleScheduled(event));
+});
 ```
 
 ### Properties
@@ -24,13 +23,15 @@ addEventListener("scheduled", event => {
 <Definitions>
 
 - `event.cron` <Type>string</Type>
-    - The value of the [Cron Trigger](/platform/cron-triggers) that started the `ScheduledEvent`.
+
+  - The value of the [Cron Trigger](/platform/cron-triggers) that started the `ScheduledEvent`.
 
 - `event.type` <Type>string</Type>
-    - The type of event. This will always return `"scheduled"`.
+
+  - The type of event. This will always return `"scheduled"`.
 
 - `event.scheduledTime` <Type>number</Type>
-    - The time the `ScheduledEvent` was scheduled to be executed in milliseconds since January 1, 1970, UTC. It can be parsed as <Code>new Date(event.scheduledTime)</Code>
+  - The time the `ScheduledEvent` was scheduled to be executed in milliseconds since January 1, 1970, UTC. It can be parsed as <Code>new Date(event.scheduledTime)</Code>
 
 </Definitions>
 
@@ -40,9 +41,11 @@ When a Workers script is invoked by a [Cron Trigger](/platform/cron-triggers), t
 
 <Definitions>
 
-- <Code>event.waitUntil(promise<ParamType>Promise</ParamType>)</Code> <Type>void</Type>
+- <Code>
+    event.waitUntil(promise<ParamType>Promise</ParamType>)
+  </Code> <Type>void</Type>
 
-    - Use this method to notify the runtime to wait for asynchronous tasks (e.g. logging, analytics to third-party services, streaming and caching). The first `event.waitUntil` to fail will be observed and recorded as the status in the [Cron Trigger](/platform/cron-triggers) Past Events table. Otherwise, it will be reported as a Success.
+  - Use this method to notify the runtime to wait for asynchronous tasks (e.g. logging, analytics to third-party services, streaming and caching). The first `event.waitUntil` to fail will be observed and recorded as the status in the [Cron Trigger](/platform/cron-triggers) Past Events table. Otherwise, it will be reported as a Success.
 
 </Definitions>
 
@@ -53,9 +56,9 @@ A `ScheduledEvent` can be handled in Workers functions written using the Module 
 ```js
 export default {
   async scheduled(event, env, ctx) {
-    ctx.waitUntil(doSomeTaskOnASchedule())
-  }
-}
+    ctx.waitUntil(doSomeTaskOnASchedule());
+  },
+};
 ```
 
 ### Properties
@@ -63,19 +66,23 @@ export default {
 <Definitions>
 
 - `event.cron` <Type>string</Type>
-    - The value of the [Cron Trigger](/platform/cron-triggers) that started the `ScheduledEvent`.
+
+  - The value of the [Cron Trigger](/platform/cron-triggers) that started the `ScheduledEvent`.
 
 - `event.type` <Type>string</Type>
-    - The type of event. This will always return `"scheduled"`.
+
+  - The type of event. This will always return `"scheduled"`.
 
 - `event.scheduledTime` <Type>number</Type>
-    - The time the `ScheduledEvent` was scheduled to be executed in milliseconds since January 1, 1970, UTC. It can be parsed as <Code>new Date(event.scheduledTime)</Code>.
+
+  - The time the `ScheduledEvent` was scheduled to be executed in milliseconds since January 1, 1970, UTC. It can be parsed as <Code>new Date(event.scheduledTime)</Code>.
 
 - `env` <Type>object</Type>
-    - An object containing the bindings associated with your Module Worker, such as KV namespaces and Durable Objects.
+
+  - An object containing the bindings associated with your Module Worker, such as KV namespaces and Durable Objects.
 
 - `ctx` <Type>object</Type>
-    - An object containing the context associated with your Module Worker. Currently, this object just contains the `waitUntil` function.
+  - An object containing the context associated with your Module Worker. Currently, this object just contains the `waitUntil` function.
 
 </Definitions>
 
@@ -85,8 +92,10 @@ When a Workers script is invoked by a [Cron Trigger](/platform/cron-triggers), t
 
 <Definitions>
 
-- <Code>ctx.waitUntil(promise<ParamType>Promise</ParamType>)</Code> <Type>void</Type>
+- <Code>
+    ctx.waitUntil(promise<ParamType>Promise</ParamType>)
+  </Code> <Type>void</Type>
 
-    - Use this method to notify the runtime to wait for asynchronous tasks (e.g., logging, analytics to third-party services, streaming and caching). The first `ctx.waitUntil` to fail will be observed and recorded as the status in the [Cron Trigger](/platform/cron-triggers) Past Events table. Otherwise, it will be reported as a Success.
+  - Use this method to notify the runtime to wait for asynchronous tasks (e.g., logging, analytics to third-party services, streaming and caching). The first `ctx.waitUntil` to fail will be observed and recorded as the status in the [Cron Trigger](/platform/cron-triggers) Past Events table. Otherwise, it will be reported as a Success.
 
 </Definitions>

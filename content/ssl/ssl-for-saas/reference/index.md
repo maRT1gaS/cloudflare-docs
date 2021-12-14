@@ -6,4 +6,4 @@ pcx-content-type: navigation
 
 # Reference — SSL for SaaS
 
-<DirectoryListing path="/ssl-for-saas/reference"/>
+<DirectoryListing path="/ssl-for-saas/reference" />

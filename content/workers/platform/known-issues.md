@@ -7,7 +7,7 @@ pcx-content-type: concept
 
 Below are some known bugs and issues to be aware of when using Cloudflare Workers.
 
-## Route specificity 
+## Route specificity
 
 - When defining route specificity, a trailing `/*` in your pattern may not act as expected.
 
@@ -17,9 +17,9 @@ Consider two different Workers, each deployed to the same zone. Worker A is assi
 // (A) example.com/images/*
 // (B) example.com/images*
 
-"example.com/images" 
+"example.com/images"
 // -> B
-"example.com/images123" 
+"example.com/images123"
 // -> B
 "example.com/images/hello"
 // -> B
@@ -32,7 +32,7 @@ You will notice that all examples trigger Worker B. This includes the final exam
 - When running `wrangler dev`, all outgoing requests are given the `cf-workers-preview-token` header, which Cloudflare recognizes as a preview request. This applies to the entire Cloudflare network, so making HTTP requests to other Cloudflare zones is currently discarded for security reasons. To enable a workaround, insert the following code into your Worker script:
 
 ```js
-const request = new Request(url, incomingRequest)
-request.headers.delete('cf-workers-preview-token')
-return await fetch(request)
+const request = new Request(url, incomingRequest);
+request.headers.delete('cf-workers-preview-token');
+return await fetch(request);
 ```

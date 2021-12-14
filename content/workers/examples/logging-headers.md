@@ -15,17 +15,17 @@ pcx-content-type: configuration
 
 ```js
 async function handleRequest(request) {
-  console.log(new Map(request.headers))
+  console.log(new Map(request.headers));
 
-  return new Response("Hello world")
+  return new Response('Hello world');
 }
 
-addEventListener("fetch", event => {
-  return event.respondWith(handleRequest(event.request))
-})
+addEventListener('fetch', event => {
+  return event.respondWith(handleRequest(event.request));
+});
 ```
 
---------------------------------
+---
 
 <ContentColumn>
 
@@ -34,19 +34,19 @@ addEventListener("fetch", event => {
 **TL;DR:** Use a Map if you just need to log a Headers object to the console:
 
 ```js
-console.log(new Map(request.headers))
+console.log(new Map(request.headers));
 ```
 
 Use the spread operator if you need to quickly stringify a Headers object:
 
 ```js
-let requestHeaders = JSON.stringify([...request.headers])
+let requestHeaders = JSON.stringify([...request.headers]);
 ```
 
 Or use ES2019 `Object.fromEntries` to convert it to an object:
 
 ```js
-let requestHeaders = Object.fromEntries(request.headers)
+let requestHeaders = Object.fromEntries(request.headers);
 ```
 
 ### The problem
@@ -54,13 +54,13 @@ let requestHeaders = Object.fromEntries(request.headers)
 When debugging Worker scripts, we often want to examine the headers on a request or response. A common pitfall is to try to log headers to the developer console via code like this:
 
 ```js
-console.log(request.headers)
+console.log(request.headers);
 ```
 
 Or this:
 
 ```js
-console.log(`Request headers: ${JSON.stringify(request.headers)}`)
+console.log(`Request headers: ${JSON.stringify(request.headers)}`);
 ```
 
 Both result in what appears to be an empty object — the string `"{}"` — even though calling `request.headers.has("Your-Header-Name")` might return true. This is the same behavior that browsers implement.
@@ -74,7 +74,7 @@ Headers objects are iterable, however, which we can take advantage of to develop
 The first common idiom for making Headers `console.log()`-friendly is to construct a Map object from the Headers object, and log the Map object.
 
 ```js
-console.log(new Map(request.headers))
+console.log(new Map(request.headers));
 ```
 
 This works because:
@@ -92,8 +92,8 @@ The JSON stringifier can’t help us, either: even though our Map stores its dat
 Instead, we can take advantage of the iterability of the Headers object in a new way by applying the [spread operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_operator) (`...`) to it.
 
 ```js
-let requestHeaders = JSON.stringify([...request.headers], null, 2)
-console.log(`Request headers: ${requestHeaders}`)
+let requestHeaders = JSON.stringify([...request.headers], null, 2);
+console.log(`Request headers: ${requestHeaders}`);
 ```
 
 ### Convert headers into an object with Object.fromEntries (ES2019)
@@ -101,8 +101,12 @@ console.log(`Request headers: ${requestHeaders}`)
 [ES2019 provides `Object.fromEntries`](https://github.com/tc39/proposal-object-from-entries), so it's just a simple call to convert the headers into an object:
 
 ```js
-let requestHeaders = JSON.stringify(Object.fromEntries(request.headers), null, 2)
-console.log(`Request headers: ${requestHeaders}`)
+let requestHeaders = JSON.stringify(
+  Object.fromEntries(request.headers),
+  null,
+  2
+);
+console.log(`Request headers: ${requestHeaders}`);
 ```
 
 This results in something like:

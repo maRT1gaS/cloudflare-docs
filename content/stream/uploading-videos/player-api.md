@@ -24,7 +24,7 @@ Multiple attributes can be used together, added one after each other like this:
 
     To disable video autoplay, the `autoplay` attribute needs to be removed altogether as this attribute. Setting `autoplay="false"` will not work; the video will autoplay if the attribute is there in the `<stream>` tag.
 
-    In addition, some browsers now prevent videos with audio from playing automatically. You may add the `mute` attribute to allow your videos to autoplay. For  more information, go [here](https://webkit.org/blog/6784/new-video-policies-for-ios/).
+    In addition, some browsers now prevent videos with audio from playing automatically. You may add the `mute` attribute to allow your videos to autoplay. For more information, go [here](https://webkit.org/blog/6784/new-video-policies-for-ios/).
 
     </Aside>
 
@@ -150,7 +150,7 @@ Stream supports most of the [standardized media element events](https://develope
 
 - `durationchange`
 
-  - The metadata has loaded or changed, indicating a change in duration of the media.  This is sent, for example, when the media has loaded enough that the duration is known.
+  - The metadata has loaded or changed, indicating a change in duration of the media. This is sent, for example, when the media has loaded enough that the duration is known.
 
 - `ended`
 
@@ -162,7 +162,7 @@ Stream supports most of the [standardized media element events](https://develope
 
 - `loadeddata`
 
-   - The first frame of the media has finished loading.
+  - The first frame of the media has finished loading.
 
 - `loadedmetadata`
 

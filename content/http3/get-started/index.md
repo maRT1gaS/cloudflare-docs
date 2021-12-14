@@ -22,12 +22,11 @@ Cloudflare supports multiple draft versions of HTTP/3 and QUIC. When using a cli
 
 ## Enable HTTP/3 on a Cloudflare domain
 
-HTTP/3 can easily be turned on for a domain in the dashboard. 
+HTTP/3 can easily be turned on for a domain in the dashboard.
 
 1. Log in to your [Cloudflare dashboard](https://dash.cloudflare.com/).
 1. Click **Network**.
 1. Enable the **HTTP/3 (with QUIC)** toggle.
-
 
 Enabling the toggle allows compatible clients to connect to it using HTTP/3 but does not affect existing clients using HTTP/1.1 or HTTP/2.
 

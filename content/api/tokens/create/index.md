@@ -20,7 +20,7 @@ For this example, the `Edit Zone DNS` template has been selected. After selectin
 2. The permissions granted to the token
 3. The resources the token can affect
 
-There are two additional inputs that can be used to restrict how a token is used. These are *IP restrictions* and *Time to Live (TTL) restrictions*. Both of these are covered in Advance Usage under [Restricting Token Use](/tokens/advanced/restrictions)
+There are two additional inputs that can be used to restrict how a token is used. These are _IP restrictions_ and _Time to Live (TTL) restrictions_. Both of these are covered in Advance Usage under [Restricting Token Use](/tokens/advanced/restrictions)
 
 ![Template Customization](./media/template-customize.png)
 
@@ -85,7 +85,7 @@ Once you have verified the token is as desired, select `Create Token` to proceed
 
 Once successfully generated, the token secret is only shown once. Make sure to copy the secret to a secure place.
 
-*Warning:* Do not store the secret in plaintext where others may be able to access it. Anyone with this token can perform the authorized actions against the resources the token has been granted access to.
+_Warning:_ Do not store the secret in plaintext where others may be able to access it. Anyone with this token can perform the authorized actions against the resources the token has been granted access to.
 
 ![Token Create Completion Screen](./media/token-complete.png)
 
@@ -124,6 +124,7 @@ With this you have successfully created an API Token and can now start working w
 If the secret is lost or believed to be compromised, you can either create a new token or your token can be rolled to generate a new secret. Rolling your secret key into a new one will invalidate the previous secret, but the access and permissions will be the same as the previous key.
 
 To roll your API token:
+
 1. Log into your [Cloudflare account](https://dash.cloudflare.com) and go to **User Profile** > **API Tokens**.
 1. Next to the API token you wish to roll, click the **three dot icon** > **Roll**.
 1. Then, click **Confirm** to continue and you will see a new API token secret key.

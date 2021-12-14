@@ -5,7 +5,7 @@ pcx-content-type: how-to
 
 # Get started
 
-For Enterprise users who want to use Network Error Logging, sign up for the closed beta group. 
+For Enterprise users who want to use Network Error Logging, sign up for the closed beta group.
 
 1. Log in to your [Cloudflare dashboard](https://dash.cloudflare.com/).
 1. Click **Analytics** > **Edge Reachability**.

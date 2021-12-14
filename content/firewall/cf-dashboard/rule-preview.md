@@ -49,18 +49,34 @@ In this screenshot, a rule that matches all User-Agents that contain the string 
 </ContentColumn>
 
 <TableWrap style="width:100%">
-<table style="width: 100%">
-   <thead>
+  <table style="width: 100%">
+    <thead>
       <tr>
         <td></td>
-        <td><strong>Equal</strong></td>
-        <td><strong>Not equal</strong></td>
-        <td><strong>Greater than</strong></td>
-        <td><strong>Less than</strong></td>
-        <td><strong>Greater than or equal</strong></td>
-        <td><strong>Less than or equal</strong></td>
-        <td><strong>In</strong></td>
-        <td><strong>Contains</strong></td>
+        <td>
+          <strong>Equal</strong>
+        </td>
+        <td>
+          <strong>Not equal</strong>
+        </td>
+        <td>
+          <strong>Greater than</strong>
+        </td>
+        <td>
+          <strong>Less than</strong>
+        </td>
+        <td>
+          <strong>Greater than or equal</strong>
+        </td>
+        <td>
+          <strong>Less than or equal</strong>
+        </td>
+        <td>
+          <strong>In</strong>
+        </td>
+        <td>
+          <strong>Contains</strong>
+        </td>
       </tr>
     </thead>
     <tbody>
@@ -68,7 +84,9 @@ In this screenshot, a rule that matches all User-Agents that contain the string 
         <td>
           <strong>AS Number</strong>
           <p />
-          <strong><code class="InlineCode">ip.geoip.asnum</code></strong>
+          <strong>
+            <code class="InlineCode">ip.geoip.asnum</code>
+          </strong>
         </td>
         <td>&#x2705;</td>
         <td>&#x2705;</td>
@@ -81,11 +99,11 @@ In this screenshot, a rule that matches all User-Agents that contain the string 
       </tr>
       <tr>
         <td>
-          <strong
-            >Country
+          <strong>
+            Country
             <p />
-            <code class="InlineCode">ip.geoip.country</code></strong
-          >
+            <code class="InlineCode">ip.geoip.country</code>
+          </strong>
         </td>
         <td>&#x2705;</td>
         <td>&#x2705;</td>
@@ -98,11 +116,11 @@ In this screenshot, a rule that matches all User-Agents that contain the string 
       </tr>
       <tr>
         <td>
-          <strong
-            >Hostname
+          <strong>
+            Hostname
             <p />
-            <code class="InlineCode">http.host</code></strong
-          >
+            <code class="InlineCode">http.host</code>
+          </strong>
         </td>
         <td>&#x2705;</td>
         <td>&#x2705;</td>
@@ -115,11 +133,11 @@ In this screenshot, a rule that matches all User-Agents that contain the string 
       </tr>
       <tr>
         <td>
-          <strong
-            >IP Address
+          <strong>
+            IP Address
             <p />
-            <code class="InlineCode">ip.src</code></strong
-          >
+            <code class="InlineCode">ip.src</code>
+          </strong>
         </td>
         <td>&#x2705;</td>
         <td>&#x2705;</td>
@@ -132,11 +150,11 @@ In this screenshot, a rule that matches all User-Agents that contain the string 
       </tr>
       <tr>
         <td>
-          <strong
-            >Referer
+          <strong>
+            Referer
             <p />
-            <code class="InlineCode">http.referer</code></strong
-          >
+            <code class="InlineCode">http.referer</code>
+          </strong>
         </td>
         <td>&#x2705;</td>
         <td>&#x2705;</td>
@@ -149,11 +167,11 @@ In this screenshot, a rule that matches all User-Agents that contain the string 
       </tr>
       <tr>
         <td>
-          <strong
-            >Request method
+          <strong>
+            Request method
             <p />
-            <code class="InlineCode">http.request.method</code></strong
-          >
+            <code class="InlineCode">http.request.method</code>
+          </strong>
         </td>
         <td>&#x2705;</td>
         <td>&#x2705;</td>
@@ -166,11 +184,11 @@ In this screenshot, a rule that matches all User-Agents that contain the string 
       </tr>
       <tr>
         <td>
-          <strong
-            >SSL
+          <strong>
+            SSL
             <p />
-            <code class="InlineCode">ssl</code></strong
-          >
+            <code class="InlineCode">ssl</code>
+          </strong>
         </td>
         <td>&#x2705;</td>
         <td>❌</td>
@@ -183,11 +201,11 @@ In this screenshot, a rule that matches all User-Agents that contain the string 
       </tr>
       <tr>
         <td>
-          <strong
-            >URI
+          <strong>
+            URI
             <p />
-            <code class="InlineCode">http.request.uri</code></strong
-          >
+            <code class="InlineCode">http.request.uri</code>
+          </strong>
         </td>
         <td>&#x2705;</td>
         <td>&#x2705;</td>
@@ -200,11 +218,11 @@ In this screenshot, a rule that matches all User-Agents that contain the string 
       </tr>
       <tr>
         <td>
-          <strong
-            >URI path
+          <strong>
+            URI path
             <p />
-            <code class="InlineCode">http.request.uri.path</code></strong
-          >
+            <code class="InlineCode">http.request.uri.path</code>
+          </strong>
         </td>
         <td>&#x2705;</td>
         <td>&#x2705;</td>
@@ -217,11 +235,11 @@ In this screenshot, a rule that matches all User-Agents that contain the string 
       </tr>
       <tr>
         <td>
-          <strong
-            >URI query string
+          <strong>
+            URI query string
             <p />
-            <code class="InlineCode">http.request.uri.query</code></strong
-          >
+            <code class="InlineCode">http.request.uri.query</code>
+          </strong>
         </td>
         <td>&#x2705;</td>
         <td>&#x2705;</td>
@@ -234,11 +252,11 @@ In this screenshot, a rule that matches all User-Agents that contain the string 
       </tr>
       <tr>
         <td>
-          <strong
-            >User agent
+          <strong>
+            User agent
             <p />
-            <code class="InlineCode">http.user_agent</code></strong
-          >
+            <code class="InlineCode">http.user_agent</code>
+          </strong>
         </td>
         <td>&#x2705;</td>
         <td>&#x2705;</td>

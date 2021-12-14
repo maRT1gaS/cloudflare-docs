@@ -1,5 +1,5 @@
 ---
-title: "1: Provisioning resources"
+title: '1: Provisioning resources'
 order: 0
 pcx-content-type: tutorial
 ---
@@ -23,6 +23,7 @@ Name (string): The name of the account that is displayed in the Cloudflare dashb
 Type (enum): Valid values are `standard` (default) and `enterprise`. For self-serve customers, use `standard`. For enterprise customers, use `enterprise`.
 
 Example:
+
 ```bash
 curl -X POST https://api.cloudflare.com/client/v4/accounts -H 'Content-Type: application/json' -H 'x-auth-email: <x-auth-email>' -H 'x-auth-key: <x-auth-key>' \
 -d '{ "name": "<Account Name>", \
@@ -33,17 +34,17 @@ A successful request will return with an HTTP status of 200 and the following re
 
 ```json
 {
-    "result": {
-        "id": "2bab6ace8c72ed3f09b9eca6db1396bb",
-        "name": "<Account Name>",
-        "type": "standard",
-        "settings": {
-            "enforce_twofactor": false
-        }
-    },
-    "success": true,
-    "errors": [],
-    "messages": []
+  "result": {
+    "id": "2bab6ace8c72ed3f09b9eca6db1396bb",
+    "name": "<Account Name>",
+    "type": "standard",
+    "settings": {
+      "enforce_twofactor": false
+    }
+  },
+  "success": true,
+  "errors": [],
+  "messages": []
 }
 ```
 
@@ -54,9 +55,10 @@ You own the account lifecycle from creation, ongoing management, and finally del
 ```bash
 curl -X GET https://api.cloudflare.com/client/v4/accounts -H 'x-auth-email: <x-auth-email>' -H 'x-auth-key: <x-auth-key>'
 ```
+
 <Aside type="note">
 
-__Note:__ This endpoint is the same as documented in our [API docs](https://api.cloudflare.com/#accounts-list-accounts). The same filters can be used for created accounts.
+**Note:** This endpoint is the same as documented in our [API docs](https://api.cloudflare.com/#accounts-list-accounts). The same filters can be used for created accounts.
 
 </Aside>
 
@@ -64,32 +66,32 @@ You will get back a list of all the accounts you have created plus any accounts 
 
 ```json
 {
-    "result": [
-        {
-            "id": "a34bd6cc645a31486aa2ef71f1b9afb6",
-            "name": "My Personal Account",
-            "settings": {
-                "enforce_twofactor": false
-            }
-        },
-        {
-            "id": "1b16db169c9cb7853009857198fae1b9",
-            "name": "Created Account",
-            "settings": {
-                "enforce_twofactor": false
-            }
-        }
-    ],
-    "result_info": {
-        "page": 1,
-        "per_page": 20,
-        "total_pages": 1,
-        "count": 2,
-        "total_count": 2
+  "result": [
+    {
+      "id": "a34bd6cc645a31486aa2ef71f1b9afb6",
+      "name": "My Personal Account",
+      "settings": {
+        "enforce_twofactor": false
+      }
     },
-    "success": true,
-    "errors": [],
-    "messages": []
+    {
+      "id": "1b16db169c9cb7853009857198fae1b9",
+      "name": "Created Account",
+      "settings": {
+        "enforce_twofactor": false
+      }
+    }
+  ],
+  "result_info": {
+    "page": 1,
+    "per_page": 20,
+    "total_pages": 1,
+    "count": 2,
+    "total_count": 2
+  },
+  "success": true,
+  "errors": [],
+  "messages": []
 }
 ```
 
@@ -109,19 +111,23 @@ A successful request will return the id to confirm the operation:
 
 ```json
 {
-    "result": {
-        "id": "1b16db169c9cb7853009857198fae1b9"
-    },
-    "success": true,
-    "errors": [],
-    "messages": []
+  "result": {
+    "id": "1b16db169c9cb7853009857198fae1b9"
+  },
+  "success": true,
+  "errors": [],
+  "messages": []
 }
 ```
 
---------------------------------
+---
 
 ## Continue the tutorial
 
 Learn how to manage how external customers access Cloudflare.
 
-<p><Button type="primary" href="/tutorial/user-access">Step 2: User access</Button></p>
+<p>
+  <Button type="primary" href="/tutorial/user-access">
+    Step 2: User access
+  </Button>
+</p>

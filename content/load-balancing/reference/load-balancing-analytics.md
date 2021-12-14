@@ -7,6 +7,7 @@ pcx-content-type: how-to
 # Load balancing analytics
 
 Using load balancing analytics, you can:
+
 - Evaluate traffic flow.
 - Assess the health status of origin servers in your pools.
 - Review changes in pools and pool health over time.
@@ -24,6 +25,7 @@ Load balancing analytics are only available to customers on paid plans (Pro, Bus
 To view **Overview** metrics for your load balancer, go to **Traffic** > **Load Balancing Analytics**.
 
 These metrics show the number of requests routed to specific pools within a load balancer, helping you:
+
 - Evaluate the effects of adding or removing a pool.
 - Decide when to create new origin pools.
 - Plan for peak traffic demands and future infrastructure needs.
@@ -67,14 +69,14 @@ header: Query
 {
   viewer {
     zones(filter: {zoneTag: "your Zone ID"}) {
-         loadBalancingRequestsAdaptiveGroups( 
-            limit: 100, 
-            filter: {   
-                datetime_geq: "2021-06-26T00:00:00Z", 
+         loadBalancingRequestsAdaptiveGroups(
+            limit: 100,
+            filter: {
+                datetime_geq: "2021-06-26T00:00:00Z",
                 datetime_leq: "2021-06-26T03:00:00Z",
                 lbName:"lb.example.com"
             },
-            orderBy: [datetimeFifteenMinutes_DESC] 
+            orderBy: [datetimeFifteenMinutes_DESC]
         ) {
           count
           dimensions {
@@ -132,15 +134,15 @@ header: Query
 {
   viewer {
     zones(filter: {zoneTag: "your Zone ID"}) {
-         loadBalancingRequestsAdapative( 
-            limit: 100, 
-            filter: { 
-                datetime_geq: "2021-06-26T00:00:00Z", 
+         loadBalancingRequestsAdapative(
+            limit: 100,
+            filter: {
+                datetime_geq: "2021-06-26T00:00:00Z",
                 datetime_leq: "2021-06-26T03:00:00Z",
                 lbName:"lb.example.com",
                 coloCode: "SIN"
             },
-            orderBy: [datetime_DESC] 
+            orderBy: [datetime_DESC]
         ) {
         selectedPoolName
         pools {

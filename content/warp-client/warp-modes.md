@@ -39,7 +39,7 @@ This will enable the **WARP via Local Proxy** option in the **WARP Settings** me
 ## WARP+
 
 While WARP is able to take advantage of the many Cloudflare data centers around the world to give you a more private and robust connection, WARP+ improves on that with intelligent routing. Leveraging the same technology that powers [Argo Smart Routing](https://www.cloudflare.com/products/argo-smart-routing/), WARP+ will route your traffic around congested Internet routes and improve overall end-to-end performance.
- 
+
 ## WARP Unlimited
 
 WARP Unlimited is our monthly subscription offering for WARP+. Currently, WARP Unlimited can only be purchased via iOS and Android devices.

@@ -5,7 +5,7 @@ pcx-content-type: concept
 
 # Origin Cache Control
 
-Set `Cache-Control` headers to tell Cloudflare how to handle content from the origin. 
+Set `Cache-Control` headers to tell Cloudflare how to handle content from the origin.
 
 When a user sends an HTTP request, the user’s request URL is matched against a [list of cacheable file extensions](/about/default-cache-behavior#default-cached-file-extensions). If the request matches an extension on this list, Cloudflare serves the resource from cache if it is present. If the content is stale in Cloudflare’s cache, Cloudflare attempts to revalidate the content with the origin before serving the response to the client.
 
@@ -51,7 +51,7 @@ When using Origin Cache-Control and setting `max-age=0`, Cloudflare prefers to c
 - `s-maxage=seconds` — Indicates that in shared caches, the maximum age specified by this directive overrides the maximum age specified by either the `max-age` directive or the `Expires` header field. The `s-maxage` directive also implies the semantics of the proxy-revalidate response directive. Browsers ignore `s-maxage`.
 - `no-cache` — Indicates the response cannot be used to satisfy a subsequent request without successful validation on the origin server. This allows an origin server to prevent a cache from using the origin to satisfy a request without contacting it, even by caches that have been configured to send stale responses.
 
-Ensure the HTTP `Expires` header is set in your origin server to use Greenwich Mean Time (GMT) as stipulated in [RFC 2616](https://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.3 "3.3.1 Full Date").
+Ensure the HTTP `Expires` header is set in your origin server to use Greenwich Mean Time (GMT) as stipulated in [RFC 2616](https://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.3 '3.3.1 Full Date').
 
 ### Revalidation
 
@@ -64,7 +64,7 @@ Revalidation determines how the cache should behave when a resource expires, and
 
 The `stale-if-error` directive is ignored if [Always Online](/about/always-online) is enabled or if an explicit in-protocol directive is passed. Examples of explicit in-protocol directives include a `no-store` or `no-cache cache` directive, a `must-revalidate` cache-response-directive, or an applicable `s-maxage` or `proxy-revalidate` cache-response-directive.
 
-### Other 
+### Other
 
 Additional directives that influence cache behavior are listed below.
 
@@ -128,7 +128,9 @@ The table below lists directives and their behaviors when Origin Cache-Control i
         Will not cache at all
       </td>
       <td colspan="5" rowspan="1">
-        Caches if headers mentioned in <code>no-cache=#headers</code> do not exist. Always revalidates if any header mentioned in <code>no-cache=#headers</code> is present.
+        Caches if headers mentioned in <code>no-cache=#headers</code> do not
+        exist. Always revalidates if any header mentioned in{' '}
+        <code>no-cache=#headers</code> is present.
       </td>
     </tr>
     <tr>
@@ -139,7 +141,8 @@ The table below lists directives and their behaviors when Origin Cache-Control i
         Will not cache at all
       </td>
       <td colspan="5" rowspan="1">
-        Does not cache <code>#headers</code> values mentioned in <code>Private=#headers</code> directive.
+        Does not cache <code>#headers</code> values mentioned in{' '}
+        <code>Private=#headers</code> directive.
       </td>
     </tr>
     <tr>
@@ -196,7 +199,7 @@ The table below lists directives and their behaviors when Origin Cache-Control i
       <td colspan="5" rowspan="1">
         Proxied downstream. Browser facing, does not impact caching proxies.
       </td>
-    </tr>                
+    </tr>
   </tbody>
 </table>
 
@@ -221,7 +224,8 @@ Certain scenarios also affect Origin Cache-Control behavior when it is enabled o
         Content may be cached
       </td>
       <td colspan="5" rowspan="1">
-        Content is cached only <code>if must-revalidate</code>, <code>public</code>, or <code>s-maxage</code> is also present
+        Content is cached only <code>if must-revalidate</code>,{' '}
+        <code>public</code>, or <code>s-maxage</code> is also present
       </td>
     </tr>
     <tr>
@@ -237,7 +241,8 @@ Certain scenarios also affect Origin Cache-Control behavior when it is enabled o
     </tr>
     <tr>
       <td colspan="5" rowspan="1">
-        Origin response has <code>Set-Cookie</code> header and default cache level is used
+        Origin response has <code>Set-Cookie</code> header and default cache
+        level is used
       </td>
       <td colspan="5" rowspan="1">
         Content may be cached with stripped <code>set-cookie</code> header
@@ -256,7 +261,7 @@ Certain scenarios also affect Origin Cache-Control behavior when it is enabled o
       <td colspan="5" rowspan="1">
         If origin returns <code>private</code> in Cache-Control then preserve it
       </td>
-    </tr>             
+    </tr>
   </tbody>
 </table>
 
@@ -265,57 +270,54 @@ Certain scenarios also affect Origin Cache-Control behavior when it is enabled o
 Review the examples below to learn which directives to use with the Cache-Control header to control specific caching behavior.
 
 <details>
-  <summary>
-    Cache a static asset
-  </summary>
-    <div>
-      <code>Cache-Control: public, max-age=86400</code>
-    </div>
+  <summary>Cache a static asset</summary>
+  <div>
+    <code>Cache-Control: public, max-age=86400</code>
+  </div>
 </details>
 
 <details>
-  <summary>
-    Ensure a secret asset is never cached
-  </summary>
-    <div>
-      <code>Cache-Control: no-store</code>
-    </div>
+  <summary>Ensure a secret asset is never cached</summary>
+  <div>
+    <code>Cache-Control: no-store</code>
+  </div>
 </details>
 
 <details>
-  <summary>
-    Cache assets on browsers but not on proxy caches
-  </summary>
-    <div>
-      <code>Cache-Control: private, max-age=3600</code>
-    </div>
+  <summary>Cache assets on browsers but not on proxy caches</summary>
+  <div>
+    <code>Cache-Control: private, max-age=3600</code>
+  </div>
 </details>
 
 <details>
   <summary>
     Cache assets in client and proxy caches, but prefer revalidation when served
   </summary>
-    <div>
-      <code>Cache-Control: public, no-cache</code>
-    </div>
+  <div>
+    <code>Cache-Control: public, no-cache</code>
+  </div>
 </details>
 
 <details>
   <summary>
-    Cache assets in proxy caches but REQUIRE revalidation by the proxy when served
+    Cache assets in proxy caches but REQUIRE revalidation by the proxy when
+    served
   </summary>
-    <div>
-      <code>Cache-Control: public, no-cache, proxy-revalidate</code> or <code>Cache-Control: public, s-maxage=0</code>
-    </div>
+  <div>
+    <code>Cache-Control: public, no-cache, proxy-revalidate</code> or{' '}
+    <code>Cache-Control: public, s-maxage=0</code>
+  </div>
 </details>
 
 <details>
   <summary>
-    Cache assets in proxy caches, but REQUIRE revalidation by any cache when served
+    Cache assets in proxy caches, but REQUIRE revalidation by any cache when
+    served
   </summary>
-    <div>
-      <code>Cache-Control: public, no-cache, must-revalidate</code>
-    </div>
+  <div>
+    <code>Cache-Control: public, no-cache, must-revalidate</code>
+  </div>
 </details>
 
 <details>
@@ -325,7 +327,8 @@ Review the examples below to learn which directives to use with the Cache-Contro
   <div>
     <code>Cache-Control: public, no-transform</code>
 
-  This configuration also disables transformation like gzip or brotli compression from our edge to your visitors if the original payload was served uncompressed.
+This configuration also disables transformation like gzip or brotli compression from our edge to your visitors if the original payload was served uncompressed.
+
   </div>
 </details>
 
@@ -336,17 +339,19 @@ Review the examples below to learn which directives to use with the Cache-Contro
   <div>
     <code>Cache-Control: public, max-age=3600, stale-if-error=60</code>
 
-  With this configuration, Cloudflare attempts to revalidate the content with the origin server after it has been in cache for 3600 seconds (one hour). If the server returns an error instead of proper revalidation responses, Cloudflare continues serving the stale resource for a total of one minute beyond the expiration of the resource.
+With this configuration, Cloudflare attempts to revalidate the content with the origin server after it has been in cache for 3600 seconds (one hour). If the server returns an error instead of proper revalidation responses, Cloudflare continues serving the stale resource for a total of one minute beyond the expiration of the resource.
+
   </div>
 </details>
 
 <details>
   <summary>
-    Cache assets for different amounts of time on Cloudflare and in visitor browsers
+    Cache assets for different amounts of time on Cloudflare and in visitor
+    browsers
   </summary>
-    <div>
-      <code>Cache-Control: public, max-age=7200, s-maxage=3600</code>
-    </div>
+  <div>
+    <code>Cache-Control: public, max-age=7200, s-maxage=3600</code>
+  </div>
 </details>
 
 <details>
@@ -357,20 +362,24 @@ Review the examples below to learn which directives to use with the Cache-Contro
     <code>Cache-Control: max-age=600, stale-while-revalidate=30</code>
 
 This configuration indicates the asset is fresh for 600 seconds. The asset can be served stale for up to an additional 30 seconds to parallel requests for the same resource while the initial synchronous revalidation is attempted.
+
   </div>
 </details>
 
 ## Interaction with other Cloudflare features
 
-### [Edge Cache TTL](/about/edge-browser-cache-ttl#edge-cache-ttl) 
+### [Edge Cache TTL](/about/edge-browser-cache-ttl#edge-cache-ttl)
 
 Edge Cache TTL Page Rules override `s-maxage` and disable revalidation directives if present. When Origin Cache-Control is enabled at Cloudflare, the original Cache-Control header passes downstream from our edge even if Edge Cache TTL overrides are present. Otherwise, when Origin Cache-Control is disabled at Cloudflare (the default), Cloudflare overrides the origin cache control.
 
 ### [Browser Cache TTL](/about/edge-browser-cache-ttl#browser-cache-ttl)
+
 Browser Cache TTL Page Rules override `max-age` settings passed downstream from our edge, typically to your visitor's browsers.
 
 ### [Polish](https://developers.cloudflare.com/images/polish)
+
 Polish is disabled when the `no-transform` directive is present.
 
 ### Gzip and Other Compression
+
 Compression is disabled when the `no-transform` directive is present. If the original asset fetched from the origin is compressed, it is served compressed to the visitor. If the original asset is uncompressed, compression is not applied.

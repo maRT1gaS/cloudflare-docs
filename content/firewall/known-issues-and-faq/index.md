@@ -56,168 +56,171 @@ See [_How do I create an exception to exclude certain requests from being blocke
 The table below lists a **sample** of known bots that Firewall Rules currently detects. When traffic comes from these bots and others not listed, the _cf.client.bot_ field is set to true.
 
 <TableWrap>
-<table style="width: 100%">
+  <table style="width: 100%">
     <thead>
-        <tr>
-            <th>Bot</th>
-            <th>Description</th>
-        </tr>
+      <tr>
+        <th>Bot</th>
+        <th>Description</th>
+      </tr>
     </thead>
     <tbody>
-        <tr>
-            <td>
-                <p>ahrefs</p>
-            </td>
-            <td>
-                <p>Ahrefs SEO bot</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <p>apple</p>
-            </td>
-            <td>
-                <p>Applebot is the web crawler for Apple, for products like Siri and Spotlight Suggestions</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <p>archive.org</p>
-            </td>
-            <td>
-                <p>Archive.org bots</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <p>baidu</p>
-            </td>
-            <td>
-                <p>Baidu search engine bots</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <p>better uptime</p>
-            </td>
-            <td>
-                <p>Bot for monitoring website uptime</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <p>bing</p>
-            </td>
-            <td>
-                <p>Bing search engine bots</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <p>feedbin</p>
-            </td>
-            <td>
-                <p>Feedbin.com bots</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <p>google</p>
-            </td>
-            <td>
-                <p>Google search engine bots</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <p>grapeshot</p>
-            </td>
-            <td>
-                <p>Grapeshot (Oracle) SEO bots</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <p>linkedin</p>
-            </td>
-            <td>
-                <p>LinkedIn bots</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <p>mail.ru</p>
-            </td>
-            <td>
-                <p>Mail.ru bots</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <p>naver</p>
-            </td>
-            <td>
-                <p>Naver (South Korean) search engine bots</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <p>pingdom</p>
-            </td>
-            <td>
-                <p>Pingdom.com monitoring bots</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <p>pinterest</p>
-            </td>
-            <td>
-                <p>Pinterest bots</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <p>seznam</p>
-            </td>
-            <td>
-                <p>Seznam search engine bots</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <p>sogou</p>
-            </td>
-            <td>
-                <p>Sogou search engine bots</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <p>uptimerobot</p>
-            </td>
-            <td>
-                <p>Uptime Robot monitoring bots</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <p>yahoo</p>
-            </td>
-            <td>
-                <p>Yahoo! search engine bots</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <p>yandex</p>
-            </td>
-            <td>
-                <p>Yandex search engine bots</p>
-            </td>
-        </tr>
+      <tr>
+        <td>
+          <p>ahrefs</p>
+        </td>
+        <td>
+          <p>Ahrefs SEO bot</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>apple</p>
+        </td>
+        <td>
+          <p>
+            Applebot is the web crawler for Apple, for products like Siri and
+            Spotlight Suggestions
+          </p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>archive.org</p>
+        </td>
+        <td>
+          <p>Archive.org bots</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>baidu</p>
+        </td>
+        <td>
+          <p>Baidu search engine bots</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>better uptime</p>
+        </td>
+        <td>
+          <p>Bot for monitoring website uptime</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>bing</p>
+        </td>
+        <td>
+          <p>Bing search engine bots</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>feedbin</p>
+        </td>
+        <td>
+          <p>Feedbin.com bots</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>google</p>
+        </td>
+        <td>
+          <p>Google search engine bots</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>grapeshot</p>
+        </td>
+        <td>
+          <p>Grapeshot (Oracle) SEO bots</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>linkedin</p>
+        </td>
+        <td>
+          <p>LinkedIn bots</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>mail.ru</p>
+        </td>
+        <td>
+          <p>Mail.ru bots</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>naver</p>
+        </td>
+        <td>
+          <p>Naver (South Korean) search engine bots</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>pingdom</p>
+        </td>
+        <td>
+          <p>Pingdom.com monitoring bots</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>pinterest</p>
+        </td>
+        <td>
+          <p>Pinterest bots</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>seznam</p>
+        </td>
+        <td>
+          <p>Seznam search engine bots</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>sogou</p>
+        </td>
+        <td>
+          <p>Sogou search engine bots</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>uptimerobot</p>
+        </td>
+        <td>
+          <p>Uptime Robot monitoring bots</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>yahoo</p>
+        </td>
+        <td>
+          <p>Yahoo! search engine bots</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>yandex</p>
+        </td>
+        <td>
+          <p>Yandex search engine bots</p>
+        </td>
+      </tr>
     </tbody>
-</table>
+  </table>
 </TableWrap>
 
 ## How do I create an exception to exclude certain requests from being blocked or challenged?
@@ -306,61 +309,71 @@ Exclude multiple IP addresses from a blocking/challenging rule that assesses Thr
 Block Amazon Web Services (AWS) and Google Cloud Platform (GCP) because of large volumes of undesired traffic, but allow Googlebot and other known bots that Cloudflare validates
 
 <TableWrap>
-<table style="width: 100%">
-  <tbody>
-    <tr>
-      <td colspan="2">
-        <strong>Basic rule, with no <em>exclusion</em></strong>
-      </td>
-    </tr>
-    <tr>
-      <td>Action</td>
-      <td><em>block (or challenge)</em></td>
-    </tr>
-    <tr>
-      <td>Expression</td>
-      <td><em>(ip.geoip.asnum in {'{7224 15169}'})</em></td>
-    </tr>
-    <tr>
-      <td colspan="2">
-        <strong>Rule that excludes known bots that Cloudflare validates</strong>
-      </td>
-    </tr>
-    <tr>
-      <td>Action</td>
-      <td><em>block (or challenge)</em></td>
-    </tr>
-    <tr>
-      <td>Expression</td>
-      <td>
-        <em>(ip.geoip.asnum in {'{7224 15169}'}) and not cf.client.bot)</em>
-      </td>
-    </tr>
-    <tr>
-      <td colspan="2">
-        <strong
-          ><strong
-            >Two rules to allow exceptions and block the rest</strong
-          ></strong
-        >
-      </td>
-    </tr>
-    <tr>
-      <td>Rule 1</td>
-      <td>
-        Action: <em>allow</em><br />
-        Expression: <em>cf.client.bot</em>
-      </td>
-    </tr>
-    <tr>
-      <td>Rule 2</td>
-      <td>
-        Action: <em>block (or challenge)</em><br />
-        Expression: <em>(ip.geoip.asnum in {'{7224 15169}'})</em>
-      </td>
-    </tr>
-  </tbody>
-</table>
+  <table style="width: 100%">
+    <tbody>
+      <tr>
+        <td colspan="2">
+          <strong>
+            Basic rule, with no <em>exclusion</em>
+          </strong>
+        </td>
+      </tr>
+      <tr>
+        <td>Action</td>
+        <td>
+          <em>block (or challenge)</em>
+        </td>
+      </tr>
+      <tr>
+        <td>Expression</td>
+        <td>
+          <em>(ip.geoip.asnum in {'{7224 15169}'})</em>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <strong>
+            Rule that excludes known bots that Cloudflare validates
+          </strong>
+        </td>
+      </tr>
+      <tr>
+        <td>Action</td>
+        <td>
+          <em>block (or challenge)</em>
+        </td>
+      </tr>
+      <tr>
+        <td>Expression</td>
+        <td>
+          <em>(ip.geoip.asnum in {'{7224 15169}'}) and not cf.client.bot)</em>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <strong>
+            <strong>Two rules to allow exceptions and block the rest</strong>
+          </strong>
+        </td>
+      </tr>
+      <tr>
+        <td>Rule 1</td>
+        <td>
+          Action: <em>allow</em>
+          <br />
+          Expression: <em>cf.client.bot</em>
+        </td>
+      </tr>
+      <tr>
+        <td>Rule 2</td>
+        <td>
+          Action: <em>block (or challenge)</em>
+          <br />
+          Expression: <em>(ip.geoip.asnum in {'{7224 15169}'})</em>
+        </td>
+      </tr>
+    </tbody>
+  </table>
 </TableWrap>
 
 ## Why does a Firewall Event display a Cloudflare IP address even though other fields match the client details?
@@ -377,8 +390,8 @@ Challenges presented to users display an intermediate page where they must prove
 
 When an XHR or AJAX request triggers one of the _Challenge_ actions, the resulting request will have the following status code:
 
-* HTTP status code 403 for _Challenge (Captcha)_
-* HTTP status code 503 for _JS Challenge_
+- HTTP status code 403 for _Challenge (Captcha)_
+- HTTP status code 503 for _JS Challenge_
 
 Your application can use these status codes to handle unexpected challenges.
 
@@ -394,11 +407,11 @@ Users do not complete all challenges. Cloudflare issues challenges that are neve
 
 There are multiple reasons for this:
 
-* Users give up on a challenge.
-* Users try to solve a challenge but cannot provide an answer.
-* Users keep refreshing the challenge but never submit an answer.
-* Users keep retrying hCaptcha (CAPTCHA failures in hCaptcha are not registered as failed and represent interim failures).
-* Cloudflare receives a malformed challenge answer.
+- Users give up on a challenge.
+- Users try to solve a challenge but cannot provide an answer.
+- Users keep refreshing the challenge but never submit an answer.
+- Users keep retrying hCaptcha (CAPTCHA failures in hCaptcha are not registered as failed and represent interim failures).
+- Cloudflare receives a malformed challenge answer.
 
 ## Why do I see matches for a Firewall Rule that was not supposed to match the request?
 

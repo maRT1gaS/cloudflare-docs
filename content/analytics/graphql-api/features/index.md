@@ -7,4 +7,4 @@ pcx-content-type: navigation
 
 The GraphQL Analytics API offers the following features:
 
-<DirectoryListing path="/graphql-api/features"/>
+<DirectoryListing path="/graphql-api/features" />

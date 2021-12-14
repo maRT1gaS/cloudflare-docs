@@ -11,29 +11,35 @@ The Cloudflare Filters API supports an endpoint for validating expressions.
 <TableWrap>
   <table style="width: 100%;">
     <thead>
-        <tr>
-            <th>
-                Operation
-            </th>
-            <th>
-                Method + Endpoint
-            </th>
-            <th>
-                Notes
-            </th>
-        </tr>
+      <tr>
+        <th>Operation</th>
+        <th>Method + Endpoint</th>
+        <th>Notes</th>
+      </tr>
     </thead>
     <tbody>
-        <tr>
-            <td style='width:25%; word-wrap:break-word; white-space:normal'>Validate expression via query string (<em>?expression=</em>) </td>
-            <td><code class='InlineCode'>GET /filters/validate-expr</code></td>
-            <td>Allows testing and validating expressions without changing anything</td>
-        </tr>
-        <tr>
-            <td style='width:25%; word-wrap:break-word; white-space:normal'>Validate expression via JSON object</td>
-            <td><code class='InlineCode'>POST /filters/validate-expr</code></td>
-            <td>Allows testing and validating expressions without changing anything</td>
-        </tr>
+      <tr>
+        <td style="width:25%; word-wrap:break-word; white-space:normal">
+          Validate expression via query string (<em>?expression=</em>){' '}
+        </td>
+        <td>
+          <code class="InlineCode">GET /filters/validate-expr</code>
+        </td>
+        <td>
+          Allows testing and validating expressions without changing anything
+        </td>
+      </tr>
+      <tr>
+        <td style="width:25%; word-wrap:break-word; white-space:normal">
+          Validate expression via JSON object
+        </td>
+        <td>
+          <code class="InlineCode">POST /filters/validate-expr</code>
+        </td>
+        <td>
+          Allows testing and validating expressions without changing anything
+        </td>
+      </tr>
     </tbody>
   </table>
 </TableWrap>

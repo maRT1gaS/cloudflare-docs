@@ -1,5 +1,5 @@
 ---
-order: 
+order:
 pcx-content-type: how-to
 ---
 
@@ -22,7 +22,7 @@ List all prefixes and the ASNs where they should originate. When specifying pref
 <div class="special-class" markdown="1">
 
 | Prefix          | Originating AS |
-| ----------------| -------------- |
+| --------------- | -------------- |
 | 103.21.244.0/23 | AS209242       |
 | 131.0.72.0/22   | AS395747       |
 | 103.21.245.0/24 | AS395747       |

@@ -23,7 +23,7 @@ Session Affinity automatically directs requests from the same client to the same
 1. Subsequent requests by the same client are forwarded to that origin for the duration of the cookie and as long as the origin server remains healthy.
 1. If the cookie expires or the origin server becomes unhealthy, Cloudflare sets a new cookie tracking the new failover origin.
 
-All sessions default to 23 hours unless you set a custom session *Time to live* (TTL).
+All sessions default to 23 hours unless you set a custom session _Time to live_ (TTL).
 
 The session cookie is secure when [Always Use HTTPS](https://developers.cloudflare.com/ssl/edge-certificates/additional-options/always-use-https) is enabled. Additionally, HttpOnly is always enabled for the cookie to prevent cross-site scripting attacks.
 
@@ -31,9 +31,10 @@ The session cookie is secure when [Always Use HTTPS](https://developers.cloudfla
 
 ## Enabling Session Affinity from the Cloudflare dashboard
 
-Enable Session Affinity when you [create  or edit a load balancer](/create-load-balancer-ui), during the **Hostname** step.
+Enable Session Affinity when you [create or edit a load balancer](/create-load-balancer-ui), during the **Hostname** step.
 
 If you enable Session Affinity, choose one of the following options:
+
 - **By Cloudflare cookie only**: Sets a `CFLib` cookie to track the associated origin web server
 - **By Cloudflare cookie and Client IP fallback**: Sets a `CFLib` cookie, but also uses the client IP address when no session affinity cookie is provided
 

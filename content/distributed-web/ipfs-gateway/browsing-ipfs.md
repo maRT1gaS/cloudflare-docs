@@ -14,7 +14,7 @@ IPFS network is given a unique address based on its contents which is called a
 Content Identifier, or CID. So if you have an image stored on IPFS, its CID
 would be based on the hash of the bits that compose that image.
 
-The job of an *IPFS Gateway* like Cloudflare's is to take requests for CIDs and
+The job of an _IPFS Gateway_ like Cloudflare's is to take requests for CIDs and
 return the content corresponding to the given CID. Each time you access a piece
 of content through a gateway, you provide a URL with two parts:
 
@@ -26,7 +26,7 @@ of content through a gateway, you provide a URL with two parts:
    starts with `/ipfs/<hash>` or `/ipns/<domain>`. If the request starts with
    `/ipfs/`, that tells the gateway that you want the content with the CID that
    immediately follows. Because the content is addressed by CID, the gateway's
-   response is *immutable* and will *never change*. If the request starts with
+   response is _immutable_ and will _never change_. If the request starts with
    `/ipns/`, that tells the gateway that you want it to lookup the CID
    associated with a given domain in DNS and then serve whatever content
    corresponds to the CID it happens to find. Because DNS can change over time,

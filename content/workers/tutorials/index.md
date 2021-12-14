@@ -5,8 +5,8 @@ order: 3
 pcx-content-type: navigation
 ---
 
-import DocsTutorials from "../components/content-table"
+import DocsTutorials from '../components/content-table';
 
 # Tutorials
 
-<DocsTutorials/>
+<DocsTutorials />

@@ -1,9 +1,9 @@
 ---
-order: 
+order:
 pcx-content-type: best-practices
 ---
 
-import ChangeQueueMethod from "../_partials/_change-queueing-method.md"
+import ChangeQueueMethod from '../_partials/_change-queueing-method.md';
 
 # Best practices
 
@@ -31,4 +31,4 @@ When users are actively queueing, only make changes to your [configuration setti
 
 ### Queueing method
 
-<ChangeQueueMethod/>
+<ChangeQueueMethod />

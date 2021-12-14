@@ -26,10 +26,10 @@ To configure 1.1.1.1 for your Google Cloud VPC network(s):
 
 1. Under **Alternate DNS servers**, click **Add Item** and type:
 
-    ```txt
-    1.1.1.1
-    1.0.0.1
-    ```
+   ```txt
+   1.1.1.1
+   1.0.0.1
+   ```
 
 1. Click **Create**.
 

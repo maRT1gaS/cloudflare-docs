@@ -2,8 +2,9 @@
 order: 0
 pcx-content-type: how-to
 ---
-import DCVDefinition from "../../_partials/_dcv-definition.md"
-import CipherSuitesDefinition from "../../_partials/_cipher-suites-definition.md"
+
+import DCVDefinition from '../../_partials/_dcv-definition.md';
+import CipherSuitesDefinition from '../../_partials/_cipher-suites-definition.md';
 
 # Manage advanced certificates
 
@@ -18,10 +19,10 @@ To create a new advanced certificate in the dashboard:
 1. Click **Order Advanced Certificate**.
 1. If Cloudflare does not have your billing information, you will need to enter that information.
 1. Enter the following information:
-    - Certificate Authority
-    - Certificate Hostnames
-    - Validation method
-    - Certificate Validity Period
+   - Certificate Authority
+   - Certificate Hostnames
+   - Validation method
+   - Certificate Validity Period
 1. Click **Save**.
 
 <Aside type='warning' header='Important'>
@@ -61,7 +62,7 @@ To restart validation for a certificate in a `validation_timed_out` status, send
 
 ## Restrict cipher suites
 
-<CipherSuitesDefinition/>
+<CipherSuitesDefinition />
 
 For more details, refer to [Disable cipher suites](/ssl-tls/cipher-suites#disable-cipher-suites).
 
@@ -69,7 +70,7 @@ For more details, refer to [Disable cipher suites](/ssl-tls/cipher-suites#disabl
 
 ## Perform domain control validation (DCV)
 
-<DCVDefinition/>
+<DCVDefinition />
 
 Normally, you only need to update DCV if you have your application on a partial setup (Cloudflare does not run your authoritative nameservers).
 

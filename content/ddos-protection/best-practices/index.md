@@ -8,4 +8,4 @@ order: 6
 
 Refer to the following pages for more information on DDoS protection best practices:
 
-<DirectoryListing path="/best-practices"/>
+<DirectoryListing path="/best-practices" />

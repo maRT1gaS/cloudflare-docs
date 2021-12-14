@@ -8,8 +8,8 @@ order: 1
 
 You can customize the **action** and **sensitivity** of the rules in the Network-layer DDoS Attack Protection Managed Ruleset in the following ways:
 
-* [Override all the rules in the ruleset](#override-all-the-rules-in-the-ruleset)
-* [Override one or more rules](#override-one-or-more-rules)
+- [Override all the rules in the ruleset](#override-all-the-rules-in-the-ruleset)
+- [Override one or more rules](#override-one-or-more-rules)
 
 You define overrides for the Network-layer DDoS Attack Protection Managed Ruleset at the account level. Tag and rule overrides have greater priority than ruleset overrides.
 
@@ -39,7 +39,7 @@ For more information on the available parameters and allowed values, refer to [M
 1. Search for the rules you wish to override using the available filters. You can search for tags.
 1. To override a single rule, select the desired value for a field in the displayed dropdowns next to the rule.
 
-    To configure more than one rule, select the rules using the row checkboxes and update the fields for the selected rules using the dropdowns displayed before the table. You can also configure all the rules with a given tag. For more information, refer to [Configure rules in bulk in a Managed Ruleset](https://developers.cloudflare.com/waf/managed-rulesets/deploy-zone-dashboard#configure-rules-in-bulk-in-a-managed-ruleset).
+   To configure more than one rule, select the rules using the row checkboxes and update the fields for the selected rules using the dropdowns displayed before the table. You can also configure all the rules with a given tag. For more information, refer to [Configure rules in bulk in a Managed Ruleset](https://developers.cloudflare.com/waf/managed-rulesets/deploy-zone-dashboard#configure-rules-in-bulk-in-a-managed-ruleset).
 
 1. Click **Next**.
 1. Enter a name for your override in **Rule description**.

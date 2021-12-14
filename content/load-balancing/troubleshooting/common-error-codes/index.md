@@ -175,9 +175,11 @@ If you're using the **Cloudflare API**, you will receive this error message.
 ## TCP Timeout
 
 ### Cause
+
 Data transmission was not acknowledged and retransmit of data did not succeed.
 
 ### Solution
+
 Confirm whether the SYN-ACK for the handshake takes place at your origin and _[contact Cloudflare Support](https://support.cloudflare.com/hc/articles/200172476)_.
 
 ---
@@ -185,9 +187,11 @@ Confirm whether the SYN-ACK for the handshake takes place at your origin and _[c
 ## TLS Handshake Failure
 
 ### Cause
+
 Indicates that the browser's connection to the web server is not secure.
 
 ### Solution
+
 Change wifi networks, connect to a wired network, or verify the network connection is stable.
 
 ---
@@ -195,9 +199,11 @@ Change wifi networks, connect to a wired network, or verify the network connecti
 ## Network Unreachable
 
 ### Cause
-Cloudflare cannot connect to the origin web server due to network unavailability.  This is usually caused by a network issue or incorrect origin IP.
+
+Cloudflare cannot connect to the origin web server due to network unavailability. This is usually caused by a network issue or incorrect origin IP.
 
 ### Solution
+
 Check either the IP entered for the origin in Cloudflare's Load Balancer configuration or the IP returned via DNS for the origin hostname.
 
 ---
@@ -205,9 +211,11 @@ Check either the IP entered for the origin in Cloudflare's Load Balancer configu
 ## HTTP Invalid Response
 
 ### Cause
+
 Usually caused by an HTTP 502 error or bad gateway.
 
 ### Solution
+
 Ensure the origin web server responds to requests and that no applications have crashed or are under high load.
 
 ---
@@ -215,9 +223,11 @@ Ensure the origin web server responds to requests and that no applications have 
 ## DNS Unknown Host
 
 ### Cause
+
 The origin web server hostname does not exist.
 
 ### Solution
+
 Confirm the origin web server resolves to an IP address.
 
 ---
@@ -225,9 +235,11 @@ Confirm the origin web server resolves to an IP address.
 ## Connection Reset by Peer
 
 ### Cause
+
 A network error occurred while the client received data from the origin web server.
 
 ### Solution
+
 Confirm whether the origin web server is experiencing a high amount of traffic or an error.
 
 ---
@@ -235,19 +247,23 @@ Confirm whether the origin web server is experiencing a high amount of traffic o
 ## Monitor Config Error
 
 ### Cause
+
 There was a configuration error in the monitor and no checks are run against the pool origins.
 
 ### Solution
-Review your monitor configuration to ensure it matches an expected request to your origin.  For further assistance, _[contact Cloudflare Support](https://support.cloudflare.com/hc/articles/200172476)_.
+
+Review your monitor configuration to ensure it matches an expected request to your origin. For further assistance, _[contact Cloudflare Support](https://support.cloudflare.com/hc/articles/200172476)_.
 
 ---
 
 ## DNS Internal
 
 ### Cause
-The origin web server's hostname resolves to an internal or orange-clouded IP address.  No checks are run against the pool origins.
+
+The origin web server's hostname resolves to an internal or orange-clouded IP address. No checks are run against the pool origins.
 
 ### Solution
+
 Cloudflare does not allow use of an origin web server hostname that is proxied by Cloudflare.
 
 ---
@@ -255,9 +271,11 @@ Cloudflare does not allow use of an origin web server hostname that is proxied b
 ## Other Failure
 
 ### Cause
+
 If the failure cannot be classified as any other type of failure mentioned above.
 
 ### Solution
+
 _[Contact Cloudflare Support](https://support.cloudflare.com/hc/articles/200172476)_.
 
 ---
@@ -265,7 +283,9 @@ _[Contact Cloudflare Support](https://support.cloudflare.com/hc/articles/2001724
 ## Load Balancing Not Enabled
 
 ### Cause
+
 Load Balancing is not enabled for your account or zone.
 
 ### Solution
-For Enterprise customers, reach out to your Cloudflare Account Team.  Free, Pro, and Business customers _[contact Cloudflare Support](https://support.cloudflare.com/hc/articles/200172476)_.
+
+For Enterprise customers, reach out to your Cloudflare Account Team. Free, Pro, and Business customers _[contact Cloudflare Support](https://support.cloudflare.com/hc/articles/200172476)_.

@@ -5,4 +5,4 @@ pcx-content-type: tutorial
 
 # Installation
 
-<DirectoryListing path="/user-guide/set-up"/>
+<DirectoryListing path="/user-guide/set-up" />

@@ -10,8 +10,8 @@ pcx-content-type: how-to
 <div>
 
 | Operating Systems | [WARP mode required](/connections/connect-devices/warp#warp-client-modes) | [Teams plans](https://www.cloudflare.com/teams-pricing/) |
-| ----------------- | --------- | ---- |
-| All sytems | WARP not required | Enterprise plans | 
+| ----------------- | ------------------------------------------------------------------------- | -------------------------------------------------------- |
+| All sytems        | WARP not required                                                         | Enterprise plans                                         |
 
 </div>
 </details>
@@ -30,13 +30,12 @@ Currently, mTLS does not work with HTTP3 traffic.
 
 ![mTLS Diagram](../../static/documentation/identity/devices/mtls.png)
 
-
 ## Add mTLS authentication to your Access configuration
 
 <Aside type='warning' header='Important'>
 
-The mTLS certificate is used only to verify the client certificate. It does not control the SSL certificate presented during the [server hello](https://www.cloudflare.com/learning/ssl/what-happens-in-a-tls-handshake/). 
- 
+The mTLS certificate is used only to verify the client certificate. It does not control the SSL certificate presented during the [server hello](https://www.cloudflare.com/learning/ssl/what-happens-in-a-tls-handshake/).
+
 mTLS is checked on a per host basis. Access sets a flag for when a client certificate was presented and successfully completed mTLS authentication. However, to actually enforce mTLS, you need an Access policy in place, and Access policies are both host and path specific. If you want to enforce mTLS on a specific path, you need to make sure your Access policies are configured accordingly.
 
 </Aside>
@@ -61,14 +60,14 @@ If your zone is using an intermediate certificate in addition to the root certif
 
 7. Create a new (or amend an existing) policy that will enforce mTLS authentication.
 
-The policy must be built with a hostname that was associated in the certificate upload modal. If this is for a client who does not need to log in through an IdP, select **Service Auth** from the drop-down for *Rule Action*. In the Include rule, you can pick from two options for mTLS authentication or both.
+The policy must be built with a hostname that was associated in the certificate upload modal. If this is for a client who does not need to log in through an IdP, select **Service Auth** from the drop-down for _Rule Action_. In the Include rule, you can pick from two options for mTLS authentication or both.
 
 ![mTLS Policy](../../static/documentation/identity/devices/create-mtls-rule.png)
 
-|Option|Result|
-|-|-|
-|**Common Name**|Only client certificates with a specific common name will be allowed to proceed.|
-|**Valid Certificate**|Any client certificate that can authenticate with the Root CA will be allowed to proceed.|
+| Option                | Result                                                                                    |
+| --------------------- | ----------------------------------------------------------------------------------------- |
+| **Common Name**       | Only client certificates with a specific common name will be allowed to proceed.          |
+| **Valid Certificate** | Any client certificate that can authenticate with the Root CA will be allowed to proceed. |
 
 8. Save the rule.
 
@@ -76,7 +75,7 @@ The policy must be built with a hostname that was associated in the certificate 
 
 10. Set the application session duration to `no duration, expires immediately`. This ensures the certificate is checked on every request.
 
- ![mTLS session duration](../../static/documentation/identity/devices/mutual-tls-session-duration.png)
+![mTLS session duration](../../static/documentation/identity/devices/mutual-tls-session-duration.png)
 
 ## Test using cURL
 
@@ -89,6 +88,7 @@ curl -sv https://auth.example.com
 
 Without a client certificate in the request, a `403 forbidden` response displays and the site cannot be accessed.
 Add your client certificate information to the request:
+
 ```curl
 curl -sv https://auth.example.com --cert example.pem --key key.pem
 ```
@@ -114,7 +114,7 @@ Use the instructions under Installation to install the toolkit, and ensure that 
 
 2. Within that directory, create two new files:
 
-* **CSR**. Create a file named `ca-csr.json` and add the following JSON blob, then save the file.
+- **CSR**. Create a file named `ca-csr.json` and add the following JSON blob, then save the file.
 
 ```json
 {
@@ -135,7 +135,7 @@ Use the instructions under Installation to install the toolkit, and ensure that 
 }
 ```
 
-* **config**. Create a file named `ca-config.json` and add the following JSON blob, then save the file.
+- **config**. Create a file named `ca-config.json` and add the following JSON blob, then save the file.
 
 ```json
 {
@@ -149,7 +149,7 @@ Use the instructions under Installation to install the toolkit, and ensure that 
         "expiry": "8760h"
       },
       "client": {
-        "usages": ["signing","key encipherment","client auth"],
+        "usages": ["signing", "key encipherment", "client auth"],
         "expiry": "8760h"
       }
     }
@@ -200,6 +200,7 @@ Returning to the terminal, generate a client certificate that will authenticate 
   ]
 }
 ```
+
 2. Now, use the following command to generate a client certificate with the Cloudflare PKI toolkit:
 
 ```sh
@@ -229,11 +230,12 @@ $ open client.pem
 $ security import client-key.pem -k ~/Library/Keychains/login.keychain-db
 ```
 
-2. Click on the certificate in the Keychain list to set the certificate to trusted. Confirm that the certificate is listed in *My Certificates*.
+2. Click on the certificate in the Keychain list to set the certificate to trusted. Confirm that the certificate is listed in _My Certificates_.
 
 ### Creating a CRL
 
 You can use the Cloudflare PKI toolkit to generate a certificate revocation list (CRL), as well. This list will contain client certificates that are revoked.
+
 1. Get the serial number from the client certificate generated earlier. Add that serial number, or any others you intend to revoke, in hex format in a text file. This example uses a file named `serials.txt`.
 
 2. Create the CRL with the following command.

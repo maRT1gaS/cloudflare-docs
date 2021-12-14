@@ -10,8 +10,8 @@ Configure the HTTP DDoS Attack Protection Managed Ruleset to change the action a
 
 The available parameters are the following:
 
-* [Action](#action)
-* [Sensitivity Level](#sensitivity-level)
+- [Action](#action)
+- [Sensitivity Level](#sensitivity-level)
 
 ## Action
 
@@ -22,28 +22,32 @@ The action that will be performed for requests that match specific rules of Clou
 <Definitions>
 
 - **Log**
-    - API value: `"log"`.
-    - Only available on Enterprise plans. Logs requests that match the expression of a rule detecting HTTP DDoS attacks. Recommended for validating a rule before committing to a more severe action.
+
+  - API value: `"log"`.
+  - Only available on Enterprise plans. Logs requests that match the expression of a rule detecting HTTP DDoS attacks. Recommended for validating a rule before committing to a more severe action.
 
 - **Block**
-    - API value: `"block"`.
-    - Blocks HTTP requests that match the rule expression.
+
+  - API value: `"block"`.
+  - Blocks HTTP requests that match the rule expression.
 
 - **Challenge (CAPTCHA)**
-    - API value: `"challenge"`.
-    - Presents a CAPTCHA challenge to the clients making HTTP requests that match a rule expression.
+
+  - API value: `"challenge"`.
+  - Presents a CAPTCHA challenge to the clients making HTTP requests that match a rule expression.
 
 - **Force Connection Close**
-    - API value: _N/A_ (internal rule action that you cannot use in overrides).
-    - Closes ongoing HTTP connections. This action does not block a request, but it forces the client to reconnect.
-    - The performed action depends on the HTTP version:
 
-      - HTTP/1: set the [`Connection` header](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Connection#directives) to `close`.
-      - HTTP/2: send a [`GOAWAY` frame](https://datatracker.ietf.org/doc/html/rfc7540#section-6.8) to the client.
+  - API value: _N/A_ (internal rule action that you cannot use in overrides).
+  - Closes ongoing HTTP connections. This action does not block a request, but it forces the client to reconnect.
+  - The performed action depends on the HTTP version:
+
+    - HTTP/1: set the [`Connection` header](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Connection#directives) to `close`.
+    - HTTP/2: send a [`GOAWAY` frame](https://datatracker.ietf.org/doc/html/rfc7540#section-6.8) to the client.
 
 - **DDoS Dynamic**
-    - API value: _N/A_ (internal rule action that you cannot use in overrides).
-    - Performs a specific action according to a set of internal guidelines defined by Cloudflare. The executed action can be one of the above or an undisclosed mitigation action.
+  - API value: _N/A_ (internal rule action that you cannot use in overrides).
+  - Performs a specific action according to a set of internal guidelines defined by Cloudflare. The executed action can be one of the above or an undisclosed mitigation action.
 
 </Definitions>
 
@@ -63,12 +67,12 @@ Defines how sensitive a rule is. Affects the thresholds used to determine if an 
 
 The available sensitivity levels are:
 
-UI value          | API value
-------------------|----------
-_High_            | `"default"`
-_Medium_          | `"medium"`
-_Low_             | `"low"`
-_Essentially Off_ | `"eoff"`
+| UI value          | API value   |
+| ----------------- | ----------- |
+| _High_            | `"default"` |
+| _Medium_          | `"medium"`  |
+| _Low_             | `"low"`     |
+| _Essentially Off_ | `"eoff"`    |
 
 You cannot increase the sensitivity level beyond _High_ (`"default"`).
 

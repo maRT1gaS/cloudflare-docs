@@ -3,11 +3,11 @@ order: 6
 pcx-content-type: how to
 ---
 
-import CAADefinition from "../../_partials/_caa-records-definition.md"
+import CAADefinition from '../../_partials/_caa-records-definition.md';
 
 # Add CAA records
 
-<CAADefinition/>
+<CAADefinition />
 
 For additional security, set up [Certificate Transparency Monitoring](/edge-certificates/additional-options/certificate-transparency-monitoring) as well.
 
@@ -50,7 +50,7 @@ To add a CAA record:
 1. For **CA domain name**, enter the CA name.
 1. Click **Save**.
 1. Repeat for each CA associated with your domain.
-    
+
 Once you have finished creating all the records, you can review them in the list of records appearing under the DNS Records panel.
 
 To create these records via the API, use this [POST endpoint](https://api.cloudflare.com/#dns-records-for-a-zone-create-dns-record).

@@ -1,17 +1,17 @@
 ---
 updated: 2020-06-29
 difficulty: Beginner
-content_type: "📝 Tutorial"
+content_type: '📝 Tutorial'
 pcx-content-type: tutorial
 ---
 
-import TutorialsBeforeYouStart from "../../_partials/_tutorials-before-you-start.md"
+import TutorialsBeforeYouStart from '../../_partials/_tutorials-before-you-start.md';
 
 # Hello World in Rust
 
 In this tutorial, you will learn how to generate, build, preview, configure, and publish a Rust-generated WebAssembly serverless function that parses Markdown for Cloudflare Workers.
 
-<TutorialsBeforeYouStart/>
+<TutorialsBeforeYouStart />
 
 ## Generate
 
@@ -97,12 +97,12 @@ pub fn parse() -> String {
 Update your `worker/worker.js` to use the new code:
 
 ```javascript
-addEventListener('fetch', (event) => {
-  event.respondWith(handleRequest(event.request))
-})
+addEventListener('fetch', event => {
+  event.respondWith(handleRequest(event.request));
+});
 
 const { parse } = wasm_bindgen;
-const instance =  wasm_bindgen(wasm);
+const instance = wasm_bindgen(wasm);
 
 /**
  * Fetch and log a request
@@ -110,10 +110,10 @@ const instance =  wasm_bindgen(wasm);
  */
 async function handleRequest(request) {
   await instance;
-  const output = parse()
-  let res = new Response(output, { status: 200 })
-  res.headers.set('Content-type', 'text/html')
-  return res
+  const output = parse();
+  let res = new Response(output, { status: 200 });
+  res.headers.set('Content-type', 'text/html');
+  return res;
 }
 ```
 

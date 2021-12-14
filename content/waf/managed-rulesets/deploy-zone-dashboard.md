@@ -24,8 +24,8 @@ Under **Web Application Firewall (WAF)**, click the **Enabled** toggle on the ri
 
 Configure a Managed Ruleset to:
 
-* Define specific field values for one or more rules (for example, configure a rule with an action different from the action configured by Cloudflare)
-* Disable one or more rules
+- Define specific field values for one or more rules (for example, configure a rule with an action different from the action configured by Cloudflare)
+- Disable one or more rules
 
 To skip one or more rules or WAF Managed Rulesets, [add a WAF exception](/managed-rulesets/waf-exceptions).
 
@@ -45,9 +45,9 @@ To configure rule field values for all the rules in a Managed Ruleset:
 
 1. Under **Ruleset configuration**, set one or more rule fields from the available values in the drop-down lists.
 
-    For example, select the action to perform for all the rules in the ruleset from the **Ruleset action** drop-down list.
+   For example, select the action to perform for all the rules in the ruleset from the **Ruleset action** drop-down list.
 
-    ![Configure Managed Ruleset](../images/waf-configure-ruleset.png)
+   ![Configure Managed Ruleset](../images/waf-configure-ruleset.png)
 
 1. Click **Save**.
 
@@ -65,9 +65,9 @@ To view the rules of a Managed Ruleset:
 
 1. Click **Browse rules**.
 
-    The Browse Managed Ruleset interface displays.
+   The Browse Managed Ruleset interface displays.
 
-    ![Browse rules in Managed Ruleset](../images/waf-browse-rules.png)
+   ![Browse rules in Managed Ruleset](../images/waf-browse-rules.png)
 
 ### Configure a single rule in a Managed Ruleset
 
@@ -81,13 +81,13 @@ Do the following:
 
 1. In the result line for the rule you want to change, select the desired value for a field in the displayed drop-down lists. For example, select the rule action in the **Action** dropdown.
 
-    In some Managed Rulesets, you can also change the status of a rule using the toggle available on the right.
+   In some Managed Rulesets, you can also change the status of a rule using the toggle available on the right.
 
-    ![Browse rules in Managed Ruleset](../images/waf-browse-rules.png)
+   ![Browse rules in Managed Ruleset](../images/waf-browse-rules.png)
 
 1. Click **Next**.
 
-    The Configure Managed Ruleset interface displays, listing the configuration you just defined.
+   The Configure Managed Ruleset interface displays, listing the configuration you just defined.
 
 1. Click **Save**.
 
@@ -99,26 +99,26 @@ Do the following:
 
 1. Enter search terms in the available input to find the rules you want to configure. You can search for tags.
 
-    ![Select tag when browsing a Managed Ruleset](../images/waf-selected-tag.png)
+   ![Select tag when browsing a Managed Ruleset](../images/waf-selected-tag.png)
 
 1. In the results list, click the checkbox on the left of all the rules you want to configure.
 
-    Alternatively, click a tag name under the search input to filter the rules with that tag, and then click the checkboxes for the rules you want to configure.
+   Alternatively, click a tag name under the search input to filter the rules with that tag, and then click the checkboxes for the rules you want to configure.
 
 1. Update one or more fields for the selected rules using the drop-down lists displayed in the top right corner of the table.
 
-    ![Configure Managed Ruleset rules in bulk](../images/waf-modify-selected-rules.png)
+   ![Configure Managed Ruleset rules in bulk](../images/waf-modify-selected-rules.png)
 
 1. Click **Next**.
 
-    <Aside type='note' header='Note'>
+   <Aside type='note' header='Note'>
 
-    If you selected a tag, you get a dialog asking you if any new rules with the selected tag should be configured with the field values you selected.
+   If you selected a tag, you get a dialog asking you if any new rules with the selected tag should be configured with the field values you selected.
 
-    Select **Do not apply to new rules** to apply your configurations to the selected rules only.
+   Select **Do not apply to new rules** to apply your configurations to the selected rules only.
 
-    Select **Apply to new rules** if you want to apply your configurations to any new rules with the select tag.
+   Select **Apply to new rules** if you want to apply your configurations to any new rules with the select tag.
 
-    </Aside>
+   </Aside>
 
 1. Click **Save**.

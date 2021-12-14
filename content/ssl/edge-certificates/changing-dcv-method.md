@@ -4,16 +4,16 @@ order: 3
 pcx-content-type: how-to
 ---
 
-import DCVDefinition from "../_partials/_dcv-definition.md"
-import CNAMECertValidation from "../_partials/_cname-cert-verification.md"
-import GenericValidationProcess from "../_partials/_generic-validation-process.md"
-import EmailValidationDefinition from "../_partials/_email-validation-definition.md"
-import TXTValidationDefinition from "../_partials/_txt-validation-definition.md"
-import EmailValidationProcess from "../_partials/_email-validation-process.md"
+import DCVDefinition from '../_partials/_dcv-definition.md';
+import CNAMECertValidation from '../_partials/_cname-cert-verification.md';
+import GenericValidationProcess from '../_partials/_generic-validation-process.md';
+import EmailValidationDefinition from '../_partials/_email-validation-definition.md';
+import TXTValidationDefinition from '../_partials/_txt-validation-definition.md';
+import EmailValidationProcess from '../_partials/_email-validation-process.md';
 
 # Domain Control Validation (DCV) — SSL/TLS
 
-<DCVDefinition/>
+<DCVDefinition />
 
 ## DCV exceptions
 
@@ -45,13 +45,13 @@ Due to recent changes, HTTP DCV validation will soon not be allowed for wildcard
 
 </Aside>
 
- If you are using proxied (orange-clouded) DNS records and can tolerate a few minutes of downtime, Cloudflare can handle DCV by using an HTTP token. This token is available for the Certificate Authority as soon as you create a CNAME record to Cloudflare in your authoritative DNS and you create proxied DNS records for your hostname within Cloudflare. 
+If you are using proxied (orange-clouded) DNS records and can tolerate a few minutes of downtime, Cloudflare can handle DCV by using an HTTP token. This token is available for the Certificate Authority as soon as you create a CNAME record to Cloudflare in your authoritative DNS and you create proxied DNS records for your hostname within Cloudflare.
 
 <details>
 <summary>What happens after you create your records</summary>
 <div>
 
-<CNAMECertValidation/>
+<CNAMECertValidation />
 
 </div>
 
@@ -61,9 +61,9 @@ Though this process happens relatively quickly, your application may experience 
 
 #### TXT
 
-<TXTValidationDefinition/>
+<TXTValidationDefinition />
 
-<GenericProcess/>
+<GenericProcess />
 
 - API: `txt_name` and `txt_value`
 - Dashboard: When viewing an individual certificate at **SSL/TLS** > **Edge Certificates**, refer to the values for **Certificate validation TXT name** and **Certificate validation TXT value**.
@@ -72,14 +72,14 @@ At your authoritative DNS provider, create a TXT record named the **name** and c
 
 #### Email
 
-<EmailValidationDefinition/>
+<EmailValidationDefinition />
 
-<GenericValidationProcess/>
+<GenericValidationProcess />
 
 - API: `emails`
 - Dashboard: When viewing an individual certificate at **SSL/TLS** > **Edge Certificates**, refer to the value for **Certificate validation email recipients**.
 
-<EmailValidationProcess/>
+<EmailValidationProcess />
 
 ### Verify DCV status
 

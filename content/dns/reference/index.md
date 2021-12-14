@@ -5,4 +5,4 @@ pcx-content-type: navigation
 
 # Reference
 
-<DirectoryListing path="/reference"/>
+<DirectoryListing path="/reference" />

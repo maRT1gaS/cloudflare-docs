@@ -57,6 +57,7 @@ Provided that your port is open to Cloudflare traffic, it’s time for testing. 
 (GNU/Linux)
 $ sudo -u railgun /usr/bin/rg-listener -config=/etc/railgun/railgun.conf
 ```
+
 ## Testing Railgun
 
 Once you have configured Railgun, you can test its operation using the **Test** button on the Cloudflare dashboard found in **Speed** > **Optimization** > scroll down to Railgun > **Test**. This will indicate whether a request to your web server uses Railgun.

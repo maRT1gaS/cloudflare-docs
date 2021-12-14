@@ -7,4 +7,4 @@ pcx-content-type: navigation
 
 Use the following reference information when setting up and deploying your waiting rooms:
 
-<DirectoryListing path="/reference"/>
+<DirectoryListing path="/reference" />

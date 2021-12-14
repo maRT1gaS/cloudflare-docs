@@ -3,7 +3,7 @@ order: 3
 type: example
 summary: Allow members of an Okta Group.
 tags:
-- Okta® Group
+  - Okta® Group
 ---
 
 # Okta® Group

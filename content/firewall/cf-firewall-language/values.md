@@ -53,22 +53,22 @@ The Cloudflare Firewall Rules language includes [fields](/cf-firewall-language/f
 
 You can access individual array elements using an index (a non-negative value) between square brackets (`[]`). Array indexes start at `0` (zero).
 
-Use the special notation `[*]` when specifying an expression that will be evaluated for each array element (like the [`map` high-order function](https://wikipedia.org/wiki/Map_(higher-order_function))). This special index notation will unpack the array, call the enclosing function for all its elements individually, and return a new array containing all the individual return values.
+Use the special notation `[*]` when specifying an expression that will be evaluated for each array element (like the [`map` high-order function](<https://wikipedia.org/wiki/Map_(higher-order_function)>)). This special index notation will unpack the array, call the enclosing function for all its elements individually, and return a new array containing all the individual return values.
 
 ### Examples
 
 Consider the `http.request.headers.names` field with type `Array<String>` in the following examples:
 
-* Obtain the first element in the array:<br/>
+- Obtain the first element in the array:<br/>
   `http.request.headers.names[0]`
 
-* Check if the first array element is equal to `Content-Type` (case sensitive):<br/>
+- Check if the first array element is equal to `Content-Type` (case sensitive):<br/>
   `http.request.headers.names[0] == "Content-Type"`
 
-* Check if any array element is equal to `Content-Type` (case sensitive):<br/>
+- Check if any array element is equal to `Content-Type` (case sensitive):<br/>
   `any(http.request.headers.names[*] == "Content-Type")`
 
-* Check if any array element is equal to `Content-Type`, ignoring the case:<br/>
+- Check if any array element is equal to `Content-Type`, ignoring the case:<br/>
   `any(lower(http.request.headers.names[*])[*] == "content-type")`
 
 In the last example, the `lower()` function includes the `[*]` notation so that the function is evaluated for each array element. This function, used along `[*]`, returns a new array where each element of the input array is converted to lowercase. Then, the string comparison uses `[*]` to transform the array resulting from applying `lower()` to each header name into an array of boolean values. Finally, `any()` evaluates to true if at least one of these array elements is true.
@@ -79,15 +79,15 @@ It is not possible to define your own arrays. You can only use arrays returned b
 
 Accessing an out-of-bounds array index produces a "missing value". A missing value has the following behavior:
 
-* Any comparison `<expr> <op> <literal>` where `<expr>` evaluates to a missing value will evaluate to false.
-* Function calls like `function(<expr>)`, where `<expr>` evaluates to a missing value, will return a missing value in most cases, but the exact behavior can vary per function.
+- Any comparison `<expr> <op> <literal>` where `<expr>` evaluates to a missing value will evaluate to false.
+- Function calls like `function(<expr>)`, where `<expr>` evaluates to a missing value, will return a missing value in most cases, but the exact behavior can vary per function.
 
 You can only use `[*]` multiple times in the same expression if applied to the same array. Also, you can only use `[*]` in the first argument of a function call.
 
 The Firewall Rules language [operators](/cf-firewall-language/operators) do not directly support arrays or the `[*]` operator — however, they support indexed array elements like `array_value[0]`. For example, you cannot use `[*]` with the `==` operator outside the context of an enclosing function call:
 
-* `http.request.headers.names[*] == "Content-Type"` — **Invalid** expression
-* `any(http.request.headers.names[*] == "Content-Type")` — **Valid** expression
+- `http.request.headers.names[*] == "Content-Type"` — **Invalid** expression
+- `any(http.request.headers.names[*] == "Content-Type")` — **Valid** expression
 
 ## Rules Lists
 

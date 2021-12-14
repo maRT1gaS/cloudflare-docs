@@ -6,7 +6,7 @@ pcx-content-type: navigation
 # Wildcard matching and referencing
 
 You can use the asterisk (`*`) in any URL segment to match certain patterns. For example,
-example.com/t*st would match:
+example.com/t\*st would match:
 
 - `example.com/test`
 - `example.com/toast`

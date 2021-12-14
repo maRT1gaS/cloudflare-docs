@@ -10,20 +10,22 @@ The `fetch` method is implemented on the ServiceWorkerGlobalScope. See [MDN docu
 
 <Aside>
 
-__Note:__ Asynchronous tasks such as `fetch` are not executed at the top level in a Worker script and must be executed within a FetchEvent handler such as [`respondWith`](/runtime-apis/fetch-event#methods). Learn more about [the Request context](/runtime-apis/request#the-request-context).
+**Note:** Asynchronous tasks such as `fetch` are not executed at the top level in a Worker script and must be executed within a FetchEvent handler such as [`respondWith`](/runtime-apis/fetch-event#methods). Learn more about [the Request context](/runtime-apis/request#the-request-context).
 
 </Aside>
 
 <Aside type="warning" header="Warning">
 
-It is not currently possible to send fetch requests to other Workers (Worker to Worker) within the same zone. The origin server, if any, will receive the request instead. However, sending requests to Workers within other zones is possible and will work as normal. 
+It is not currently possible to send fetch requests to other Workers (Worker to Worker) within the same zone. The origin server, if any, will receive the request instead. However, sending requests to Workers within other zones is possible and will work as normal.
 
 </Aside>
 
---------------------------------
+---
 
 ## Constructor
+
 <!-- This code example needs more work -->
+
 ```js
 ---
 highlight: [8]
@@ -41,21 +43,25 @@ async function eventHandler(event) {
 ```
 
 <!-- Where do we have the return type in this format? -->
+
 <Definitions>
 
-- <Code>fetch()</Code> <TypeLink href="/runtime-apis/response">Promise{`<Response>`}</TypeLink>
+- <Code>fetch()</Code> <TypeLink href="/runtime-apis/response">
+    Promise{`<Response>`}
+  </TypeLink>
 
   - Fetch returns a promise to a Response.
 
 </Definitions>
 
---------------------------------
+---
 
 ## Properties
 
 <Definitions>
 
 - `request` <TypeLink href="/runtime-apis/request">Request</TypeLink> | <Type>string</Type>
+
   - The [`Request`](/runtime-apis/request) object or a string represents the URL to fetch.
 
 - `init` <TypeLink href="/runtime-apis/request#requestinit">RequestInit</TypeLink>
@@ -63,7 +69,7 @@ async function eventHandler(event) {
 
 </Definitions>
 
---------------------------------
+---
 
 ## See also
 

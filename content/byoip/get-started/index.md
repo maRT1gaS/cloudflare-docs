@@ -8,7 +8,7 @@ pcx-content-type: how-to
 
 To bring your own IPs, you must go through the onboarding process. Work with your account team to understand everything you need to ensure a smooth transition.
 
-##  Overview
+## Overview
 
 Cloudflare requires a service-specific configuration for your prefixes, as well as some requirements common to all BYOIP customers regardless of service type. These requirements are common to all products compatible with BYOIP, such as Magic Transit, CDN, and Spectrum.
 

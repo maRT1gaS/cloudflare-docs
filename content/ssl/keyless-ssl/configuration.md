@@ -6,7 +6,7 @@ pcx-content-type: tutorial
 
 # Get started with Keyless SSL
 
---------
+---
 
 ## Before you begin
 
@@ -20,10 +20,10 @@ In addition to running on bare metal, the key server should run without issue in
 
 You will need to be running a supported operating system (OS) to run Keyless. Supported operating systems include:
 
-* Ubuntu 12.04.5 LTS, 14.04 LTS, 15.10, 16.04, 17.10
-* Debian 7, 8, 9
-* RHEL and CentOS 6, 7
-* Amazon Linux 1, 2
+- Ubuntu 12.04.5 LTS, 14.04 LTS, 15.10, 16.04, 17.10
+- Debian 7, 8, 9
+- RHEL and CentOS 6, 7
+- Amazon Linux 1, 2
 
 We strongly recommend that you use an operating system still supported by the vendor (still receiving security updates) as your key server will have access to your private keys.
 
@@ -37,7 +37,7 @@ You need to create a public DNS record for your key server. If you are using Clo
 1. Add this record via your DNS provider’s interface as an **A** or **AAAA** record pointing to the IP address of your Keyless SSL server.
 1. Use this hostname as the server hostname during initialization of your Keyless SSL server.
 
---------
+---
 
 ## Step 2 — Upload “Keyless” SSL Certificates
 
@@ -52,15 +52,15 @@ For each certificate you wish to use with Keyless SSL:
 1. Click **Upload Keyless SSL Certificate**.
 1. Fill in the upload modal with the certificate and other details and click **Add**.
 
-  Label | Description | Example Values
-  ------|-------------|---------------
-  Key server label|Any unique identifier for your key server|“test-keyless”, “production-keyless-1”
-  Key server hostname|The hostname of your key server that holds the key for this certificate (such as the random hostname generated earlier).|11aa40b4a5db06d4889e48e2f738950ddfa50b7349d09b5f.example.com
-  Key server port|Set to 2407 unless you have changed this on the key server.|2407
-  SSL Certificate|The valid X509v3 SSL certificate (in PEM form) for which you hold the private key.| (PEM bytes)
-  Bundle method|This should almost always be **Compatible**. Refer to [Uploading Custom Certificates](/edge-certificates/custom-certificates/bundling-methodologies) for more details.|Compatible
+| Label               | Description                                                                                                                                                            | Example Values                                               |
+| ------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------ |
+| Key server label    | Any unique identifier for your key server                                                                                                                              | “test-keyless”, “production-keyless-1”                       |
+| Key server hostname | The hostname of your key server that holds the key for this certificate (such as the random hostname generated earlier).                                               | 11aa40b4a5db06d4889e48e2f738950ddfa50b7349d09b5f.example.com |
+| Key server port     | Set to 2407 unless you have changed this on the key server.                                                                                                            | 2407                                                         |
+| SSL Certificate     | The valid X509v3 SSL certificate (in PEM form) for which you hold the private key.                                                                                     | (PEM bytes)                                                  |
+| Bundle method       | This should almost always be **Compatible**. Refer to [Uploading Custom Certificates](/edge-certificates/custom-certificates/bundling-methodologies) for more details. | Compatible                                                   |
 
---------
+---
 
 ## Step 3 — Set up and activate key server
 
@@ -76,13 +76,13 @@ If you plan to run Keyless SSL in a [high availability setup](../reference/high-
 
 1. Add the Cloudflare Package Repository as per https://pkg.cloudflare.com/.
 1. Amazon Linux customers need to manually set the yum `$releasever` value:
-  1. Amazon Linux 1: `sudo sed -i 's/$releasever/6/' /etc/yum.repos.d/cloudflare.repo`
-  1. Amazon Linux 2: `sudo sed -i 's/$releasever/7/' /etc/yum.repos.d/cloudflare.repo`
+1. Amazon Linux 1: `sudo sed -i 's/$releasever/6/' /etc/yum.repos.d/cloudflare.repo`
+1. Amazon Linux 2: `sudo sed -i 's/$releasever/7/' /etc/yum.repos.d/cloudflare.repo`
 1. Update your OS’ package listings, e.g., `apt-get update` or `yum makecache`.
 1. Install the gokeyless server (min version used should be 1.5.3):
-  1. Debian/Ubuntu: `sudo apt-get install gokeyless`
-  1. RHEL/CentOS: `sudo yum install gokeyless`
-  1. Amazon Linux: `sudo yum install rsyslog shadow-utils && sudo yum install gokeyless`
+1. Debian/Ubuntu: `sudo apt-get install gokeyless`
+1. RHEL/CentOS: `sudo yum install gokeyless`
+1. Amazon Linux: `sudo yum install rsyslog shadow-utils && sudo yum install gokeyless`
 
 ### Configure
 
@@ -107,8 +107,8 @@ When running multiple key servers, make sure all required keys are distributed t
 
 To activate, restart your keyless instance:
 
-* systemd: `sudo service gokeyless restart`
-* upstart/sysvinit: `sudo /etc/init.d/gokeyless restart`
+- systemd: `sudo service gokeyless restart`
+- upstart/sysvinit: `sudo /etc/init.d/gokeyless restart`
 
 If this command fails, try troubleshooting by [checking the logs](/keyless-ssl/troubleshooting/).
 

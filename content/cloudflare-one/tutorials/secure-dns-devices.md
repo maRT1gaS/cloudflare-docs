@@ -10,15 +10,16 @@ You can use Cloudflare Gateway and the Cloudflare WARP client application to fil
 
 **🗺️ This tutorial covers how to:**
 
-* Create a DNS filtering policy that secures devices by blocking malicious hostnames
-* Apply that policy to devices on any network
-* Enroll devices into a Cloudflare Gateway deployment
+- Create a DNS filtering policy that secures devices by blocking malicious hostnames
+- Apply that policy to devices on any network
+- Enroll devices into a Cloudflare Gateway deployment
 
 **⏲️ Time to complete:**
 
 30 minutes
 
 ## Before you start
+
 1. [Add Gateway to your account](/setup)
 
 ---
@@ -55,7 +56,7 @@ Navigate to the `Settings` section of the Cloudflare for Teams Dashboard and sel
 
 ## Determine which devices can enroll
 
-Next, build a rule to decide which devices can enroll in your account. 
+Next, build a rule to decide which devices can enroll in your account.
 
 1. Navigate to **Settings > Devices > Device enrollment**.
 
@@ -63,11 +64,11 @@ Next, build a rule to decide which devices can enroll in your account.
 
 1. Click **Add a rule**.
 
-    ![Device Enrollment](../static/secure-web-gateway/block-football/device-enrollment-add-rule.png)
+   ![Device Enrollment](../static/secure-web-gateway/block-football/device-enrollment-add-rule.png)
 
-    Determine who is allowed to enroll by using criteria including Access groups, groups from your identity provider, email domain, or named users. This example allows any user with a `@cloudflare.com` account to enroll.
+   Determine who is allowed to enroll by using criteria including Access groups, groups from your identity provider, email domain, or named users. This example allows any user with a `@cloudflare.com` account to enroll.
 
-    ![Allow Cloudflare users](../static/secure-web-gateway/block-football/allow-cf-users.png)
+   ![Allow Cloudflare users](../static/secure-web-gateway/block-football/allow-cf-users.png)
 
 1. Click **Save**.
 

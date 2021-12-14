@@ -51,9 +51,9 @@ curl -X PUT \
 }'
 ```
 
-* `"id": "{managed-ruleset-id}"` adds a rule to the ruleset of a phase that will apply the Cloudflare Managed Ruleset to requests for the specified zone (`{zone-id}`).
-* `"enabled": false` defines an override at the ruleset level that disables all rules in the Managed Ruleset.
-* `"categories": [{"category": "joomla", "action": "block", "enabled": true}]` defines an override at the tag level that enables the Joomla rules and sets their action to `block`.
+- `"id": "{managed-ruleset-id}"` adds a rule to the ruleset of a phase that will apply the Cloudflare Managed Ruleset to requests for the specified zone (`{zone-id}`).
+- `"enabled": false` defines an override at the ruleset level that disables all rules in the Managed Ruleset.
+- `"categories": [{"category": "joomla", "action": "block", "enabled": true}]` defines an override at the tag level that enables the Joomla rules and sets their action to `block`.
 
 </div>
 </details>
@@ -90,9 +90,9 @@ curl -X PUT \
 }'
 ```
 
-* `"id": "{managed-ruleset-id}"` adds a rule to the ruleset of a phase that will apply the Cloudflare Managed Ruleset to requests for `example.com`.
-* `"enabled": false` defines an override at the ruleset level that disables all rules in the Managed Ruleset.
-* `"categories": [{"category": "joomla", "action": "block", "enabled": true}]` defines an override at the tag level that enables the Joomla rules and sets their action to `block`.
+- `"id": "{managed-ruleset-id}"` adds a rule to the ruleset of a phase that will apply the Cloudflare Managed Ruleset to requests for `example.com`.
+- `"enabled": false` defines an override at the ruleset level that disables all rules in the Managed Ruleset.
+- `"categories": [{"category": "joomla", "action": "block", "enabled": true}]` defines an override at the tag level that enables the Joomla rules and sets their action to `block`.
 
 </div>
 </details>
@@ -157,7 +157,7 @@ curl -X PUT \
       "action_parameters": {
         "id": "{managed-ruleset-id}",
         "overrides": {
-          "enabled": false,          
+          "enabled": false,
           "categories": [
             {
               "category": "joomla",
@@ -200,7 +200,7 @@ The following table shows the status of the rules after the overrides.
     <tr>
       <td>ManagedRule2</td>
       <td>drupal, dos, joomla</td>
-       <td>enabled</td>
+      <td>enabled</td>
     </tr>
     <tr>
       <td>ManagedRule3</td>

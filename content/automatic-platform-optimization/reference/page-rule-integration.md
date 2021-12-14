@@ -10,11 +10,11 @@ The following Page rules can control APO. Any changes to Caching page rules requ
 
 - **Cache Level: Bypass** — APO bypasses pages with response header `cf-apo-via: origin,page-rules`
 - **Cache Level: Ignore Query String** — APO ignores all query strings when serving from Cache.
-- **Cache Level: Cache Everything** — APO caches pages with all query strings. Default cookies rules still apply. 
+- **Cache Level: Cache Everything** — APO caches pages with all query strings. Default cookies rules still apply.
 
   <Aside type="warning">
 
-    Automatic page purge via the WordPress plugin won’t clean all cached pages, only pages without query strings. Cached responses will be returned even with request header `cache-control: no-cache`.
+  Automatic page purge via the WordPress plugin won’t clean all cached pages, only pages without query strings. Cached responses will be returned even with request header `cache-control: no-cache`.
 
   </Aside>
 

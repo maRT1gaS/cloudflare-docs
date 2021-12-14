@@ -9,9 +9,9 @@ pcx-content-type: how-to
 <summary>Feature availability</summary>
 <div>
 
-| Operating Systems | [WARP mode required](/connections/connect-devices/warp#warp-client-modes) | [Teams plans](https://www.cloudflare.com/teams-pricing/) |
-| ----------------- | --------- | ---- |
-| Any OS supported by Tanium | WARP with Gateway | All plans | 
+| Operating Systems          | [WARP mode required](/connections/connect-devices/warp#warp-client-modes) | [Teams plans](https://www.cloudflare.com/teams-pricing/) |
+| -------------------------- | ------------------------------------------------------------------------- | -------------------------------------------------------- |
+| Any OS supported by Tanium | WARP with Gateway                                                         | All plans                                                |
 
 </div>
 </details>
@@ -33,14 +33,15 @@ Cloudflare Access relies on a secure exchange between a user's browser and the T
 <Aside>
 
 The integration does not currently support Safari.
+
 </Aside>
 
 ## Integrating Tanium Identity
 
 <TableWrap>
 
-| Requirements |
-| ------------ |
+| Requirements                                                                             |
+| ---------------------------------------------------------------------------------------- |
 | You will need an active Tanium™ Core Platform deployment that runs version 7.2 or later. |
 
 </TableWrap>
@@ -51,32 +52,32 @@ Integrate your Tanium deployment with Cloudflare Access using public keys genera
 
 2. Select the **Device posture** tab.
 
-    ![Configuring Zero Trust Policy](../../static/documentation/identity/devices/add-device-posture.png)
+   ![Configuring Zero Trust Policy](../../static/documentation/identity/devices/add-device-posture.png)
 
-3. Click *+Add* to start configuring the Tanium integration.
+3. Click _+Add_ to start configuring the Tanium integration.
 
-3. Select **Tanium** from the list of providers.
+4. Select **Tanium** from the list of providers.
 
-    ![Configuring Zero Trust Policy](../../static/documentation/identity/devices/add-posture-tanium.png)
+   ![Configuring Zero Trust Policy](../../static/documentation/identity/devices/add-posture-tanium.png)
 
-4. In the next screen, give a name to the Tanium integration. *Tanium* will work, or, if you prefer, you can choose a more specific name.
+5. In the next screen, give a name to the Tanium integration. _Tanium_ will work, or, if you prefer, you can choose a more specific name.
 
-    ![Configuring Zero Trust Policy](../../static/documentation/identity/devices/tanium-setup.png)
+   ![Configuring Zero Trust Policy](../../static/documentation/identity/devices/tanium-setup.png)
 
-5. Input `17472` for the port value.
+6. Input `17472` for the port value.
 
- This is the default port used by the Tanium endpoints to communicate inbound and outbound with Cloudflare Access. You may need to modify it to reflect your organization's deployment.
+This is the default port used by the Tanium endpoints to communicate inbound and outbound with Cloudflare Access. You may need to modify it to reflect your organization's deployment.
 
 6. Input the public certificate generated in the Tanium step-by-step documentation above.
 
- Adding the certificate allows Cloudflare to validate that the response from the Tanium agent is valid.
+Adding the certificate allows Cloudflare to validate that the response from the Tanium agent is valid.
 
 ## Building policy rules with Tanium endpoint signal
 
 With Tanium integrated, you can build policies that enforce decisions using signal from the endpoint.
 
-| Signal | Value | Description |
-|--|--|--|
+| Signal  | Value   | Description                                                                 |
+| ------- | ------- | --------------------------------------------------------------------------- |
 | Managed | Boolean | Validates that the device is managed in your organization's Tanium account. |
 
 1. On the Teams dashboard, navigate to **Access > Applications**.
@@ -85,11 +86,11 @@ With Tanium integrated, you can build policies that enforce decisions using sign
 
 3. [Build a policy](/policies/zero-trust/policy-management) that contains a rule with an Allow action that includes identity.
 
- For example, a rule that allows users to connect if they are members of your team's email domain.
+For example, a rule that allows users to connect if they are members of your team's email domain.
 
 4. Add an additional rule that contains a Require action that includes Device Posture and choose Tanium.
 
- The Tanium rule will require that the device connecting is managed in your Tanium deployment and has checked into the Tanium server in the last 7 days.
+The Tanium rule will require that the device connecting is managed in your Tanium deployment and has checked into the Tanium server in the last 7 days.
 
 5. Save the rule.
 

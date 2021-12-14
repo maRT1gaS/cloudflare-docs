@@ -21,16 +21,16 @@ Available options include:
 
 - `samesite`: Configures the `SameSite` attribute on the waiting room cookie:
 
-    - **auto** (default): Meant to be as flexible as possible, defaulting to **lax** but becoming **none** if you have enabled [**Always Use HTTPS**](https://developers.cloudflare.com/ssl/edge-certificates/additional-options/always-use-https).
-    - **lax**: Cookies are not sent on normal cross-site subrequests (for example to load images or frames into a third party site), but are sent when a user is navigating to the origin site
-    - **strict**: Cookies will only be sent in a first-party context.
-    - **none**: Cookies will always be sent.
+  - **auto** (default): Meant to be as flexible as possible, defaulting to **lax** but becoming **none** if you have enabled [**Always Use HTTPS**](https://developers.cloudflare.com/ssl/edge-certificates/additional-options/always-use-https).
+  - **lax**: Cookies are not sent on normal cross-site subrequests (for example to load images or frames into a third party site), but are sent when a user is navigating to the origin site
+  - **strict**: Cookies will only be sent in a first-party context.
+  - **none**: Cookies will always be sent.
 
 - `secure`: Configures the `Secure` attribute on the waiting room cookie, which requires the request to be made over `https`:
 
-    - **auto** (default): Meant to be as flexible as possible, defaulting to **never** but becoming **always** if you have enabled [**Always Use HTTPS**](https://developers.cloudflare.com/ssl/edge-certificates/additional-options/always-use-https).
-    - **always**: Cookies can only be sent using `https` requests.
-    - **never**: Cookies can be sent using `http` or `https` requests.
+  - **auto** (default): Meant to be as flexible as possible, defaulting to **never** but becoming **always** if you have enabled [**Always Use HTTPS**](https://developers.cloudflare.com/ssl/edge-certificates/additional-options/always-use-https).
+  - **always**: Cookies can only be sent using `https` requests.
+  - **never**: Cookies can be sent using `http` or `https` requests.
 
 ## Allow cookies to pass through iFrames
 
@@ -100,7 +100,7 @@ curl -X POST "https://api.cloudflare.com/client/v4/zones/{zone-id}/waiting_rooms
       "cookie_attributes": {
         "samesite": "none",
         "secure": "auto"
-      },
+      }
     }
   ]
 }
@@ -109,4 +109,3 @@ curl -X POST "https://api.cloudflare.com/client/v4/zones/{zone-id}/waiting_rooms
 </div>
 
 </details>
-

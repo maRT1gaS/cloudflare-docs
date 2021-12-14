@@ -5,4 +5,4 @@ pcx-content-type: navigation
 
 # Account options
 
-<DirectoryListing path="/account-options"/>
+<DirectoryListing path="/account-options" />

@@ -10,26 +10,30 @@ Page Shield provides you with visibility on the scripts loaded on your domain's 
 
 Page Shield includes the following features:
 
-* **Script Monitor**: Dashboard that displays information about all scripts detected in your domain's pages.
-* **Page attribution**: Allows you to find in which page a script first appeared, and view a list of the latest occurrences of the script in your pages.
-* **Malicious code detection**: Detects malicious code in your pages using threat intelligence and machine learning.
-* **Code change detection**: Detects any changes in the scripts loaded in your pages.
-* **Alerts**: Receive notifications about newly detected scripts, scripts loaded from unknown domains, new scripts considered malicious, or code changes in your existing scripts.
+- **Script Monitor**: Dashboard that displays information about all scripts detected in your domain's pages.
+- **Page attribution**: Allows you to find in which page a script first appeared, and view a list of the latest occurrences of the script in your pages.
+- **Malicious code detection**: Detects malicious code in your pages using threat intelligence and machine learning.
+- **Code change detection**: Detects any changes in the scripts loaded in your pages.
+- **Alerts**: Receive notifications about newly detected scripts, scripts loaded from unknown domains, new scripts considered malicious, or code changes in your existing scripts.
 
 <ButtonGroup>
-  <Button type="primary" href="/get-started">Set up Page Shield</Button>
-  <Button type="secondary" href="/about">Learn more</Button>
+  <Button type="primary" href="/get-started">
+    Set up Page Shield
+  </Button>
+  <Button type="secondary" href="/about">
+    Learn more
+  </Button>
 </ButtonGroup>
 
 ## Availability
 
-Feature | Free | Pro | Business | Enterprise | Enterprise w/ paid add-on
-----------|------|-----|----------|----------|----------------------------
-Script Monitor                               |     | Yes | Yes | Yes | Yes
-New Script Alerts and New Domain Alerts      |     |     | Yes | Yes | Yes
-Page attribution                             |     |     | Yes | Yes | Yes
-Malicious code detection and alerting        |     |     |     |     | Yes
-Code change detection and alerting           |     |     |     |     | Yes
+| Feature                                 | Free | Pro | Business | Enterprise | Enterprise w/ paid add-on |
+| --------------------------------------- | ---- | --- | -------- | ---------- | ------------------------- |
+| Script Monitor                          |      | Yes | Yes      | Yes        | Yes                       |
+| New Script Alerts and New Domain Alerts |      |     | Yes      | Yes        | Yes                       |
+| Page attribution                        |      |     | Yes      | Yes        | Yes                       |
+| Malicious code detection and alerting   |      |     |          |            | Yes                       |
+| Code change detection and alerting      |      |     |          |            | Yes                       |
 
 ## Get started
 

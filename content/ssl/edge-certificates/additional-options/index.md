@@ -3,15 +3,14 @@ order: 8
 pcx-content-type: navigation
 ---
 
-import AlwaysUseHTTPSDefinition from "../../_partials/_always-use-https-definition.md"
-import HSTSDefinition from "../../_partials/_hsts-definition.md"
-import AutomaticHTTPSRewritesDefinition from "../../_partials/_automatic-https-rewrites-definition.md"
-import MinimumTLSDefinition from "../../_partials/_minimum-tls-definition.md"
-import OpportunisticEncryptionDefinition from "../../_partials/_opportunistic-encryption-definition.md"
-import TLS13Definition from "../../_partials/_tls-13-definition.md"
-import CertTransparencyDefinition from "../../_partials/_cert-transparency-monitoring-definition.md"
-import CSRDefinition from "../../_partials/_csr-definition.md"
-
+import AlwaysUseHTTPSDefinition from '../../_partials/_always-use-https-definition.md';
+import HSTSDefinition from '../../_partials/_hsts-definition.md';
+import AutomaticHTTPSRewritesDefinition from '../../_partials/_automatic-https-rewrites-definition.md';
+import MinimumTLSDefinition from '../../_partials/_minimum-tls-definition.md';
+import OpportunisticEncryptionDefinition from '../../_partials/_opportunistic-encryption-definition.md';
+import TLS13Definition from '../../_partials/_tls-13-definition.md';
+import CertTransparencyDefinition from '../../_partials/_cert-transparency-monitoring-definition.md';
+import CSRDefinition from '../../_partials/_csr-definition.md';
 
 # Additional options
 

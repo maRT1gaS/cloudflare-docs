@@ -11,14 +11,14 @@ A member can be given one of six roles within a Teams account:
 
 <TableWrap>
 
-| Role | Permissions |
-| ---- | ----------- |
+| Role                                 | Permissions                                                                                                                                                                                   |
+| ------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Super Administrator - All Privileges | <ul><li>Can edit any Cloudflare for Teams setting.</li><li>Can make purchases, update billing, and manage memberships.</li><li>Can revoke the access of other Super Administrators.</li></ul> |
-| Administrator | <ul><li>Can access the full Cloudflare for Teams account except for membership management and billing.</li></ul> |
-| Cloudflare for Teams | <ul><li>Can edit Cloudflare for Teams.</li></ul> |
-| Cloudflare for Teams PII | <ul><li>Can access Cloudflare for Teams PII data.</li></ul> |
-| Cloudflare for Teams Read Only | <ul><li>Can access Cloudflare for Teams in read only mode.</li></ul> |
-| Cloudflare for Teams Reporting | <ul><li>Can access Cloudflare for Teams reporting data.</li></ul> |
+| Administrator                        | <ul><li>Can access the full Cloudflare for Teams account except for membership management and billing.</li></ul>                                                                              |
+| Cloudflare for Teams                 | <ul><li>Can edit Cloudflare for Teams.</li></ul>                                                                                                                                              |
+| Cloudflare for Teams PII             | <ul><li>Can access Cloudflare for Teams PII data.</li></ul>                                                                                                                                   |
+| Cloudflare for Teams Read Only       | <ul><li>Can access Cloudflare for Teams in read only mode.</li></ul>                                                                                                                          |
+| Cloudflare for Teams Reporting       | <ul><li>Can access Cloudflare for Teams reporting data.</li></ul>                                                                                                                             |
 
 </TableWrap>
 

@@ -105,8 +105,12 @@ Below is a table of the currently available API Token Templates and access they 
     </tr>
     <tr>
       <td>Read all resources</td>
-      <td><em>All Read Permissions</em></td>
-      <td><em>Account & Zone</em></td>
+      <td>
+        <em>All Read Permissions</em>
+      </td>
+      <td>
+        <em>Account & Zone</em>
+      </td>
     </tr>
   </tbody>
 </table>

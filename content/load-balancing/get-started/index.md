@@ -3,18 +3,17 @@ order: 2
 pcx-content-type: how-to
 ---
 
-import PoolDefinition from "../_partials/_pool-definition.md"
-import PoolCreate from "../_partials/_pool-create.md"
-import PoolCreateAPI from "../_partials/_pool-create-api.md"
-import MonitorDefinition from "../_partials/_monitor-definition.md"
-import MonitorCreate from "../_partials/_monitor-create.md"
-import MonitorCreateAPI from "../_partials/_monitor-create-api.md"
-import MonitorPrepareServers from "../_partials/_monitor-prepare-server.md"
-import MonitorExample from "../_partials/_monitor-example.md"
-import LBDefinition from "../_partials/_load-balancer-definition.md"
-import LBCreate from "../_partials/_load-balancer-create.md"
-import LBCreateAPI from "../_partials/_load-balancer-create-api.md"
-
+import PoolDefinition from '../_partials/_pool-definition.md';
+import PoolCreate from '../_partials/_pool-create.md';
+import PoolCreateAPI from '../_partials/_pool-create-api.md';
+import MonitorDefinition from '../_partials/_monitor-definition.md';
+import MonitorCreate from '../_partials/_monitor-create.md';
+import MonitorCreateAPI from '../_partials/_monitor-create-api.md';
+import MonitorPrepareServers from '../_partials/_monitor-prepare-server.md';
+import MonitorExample from '../_partials/_monitor-example.md';
+import LBDefinition from '../_partials/_load-balancer-definition.md';
+import LBCreate from '../_partials/_load-balancer-create.md';
+import LBCreateAPI from '../_partials/_load-balancer-create-api.md';
 
 # Get started
 
@@ -32,7 +31,7 @@ This guide is meant for organizations setting up their first load balancer. If y
 
 ## Step 1 — Create a monitor
 
-<MonitorDefinition/>
+<MonitorDefinition />
 
 <details>
 <summary>Create a monitor (dashboard)</summary>
@@ -40,11 +39,11 @@ This guide is meant for organizations setting up their first load balancer. If y
 
 <strong>Set up the monitor</strong>
 
-<MonitorCreate/>
+<MonitorCreate />
 
 <strong>Prepare your servers</strong>
 
-<MonitorPrepareServers/>
+<MonitorPrepareServers />
 
 </div>
 </details>
@@ -55,26 +54,26 @@ This guide is meant for organizations setting up their first load balancer. If y
 
 <strong>Set up the monitor</strong>
 
-<MonitorCreateAPI/>
+<MonitorCreateAPI />
 
 <strong>Prepare your servers</strong>
 
-<MonitorPrepareServers/>
+<MonitorPrepareServers />
 
 </div>
 </details>
 
-<MonitorExample/>
+<MonitorExample />
 
 ## Step 2 — Create an origin pool
 
-<PoolDefinition/>
+<PoolDefinition />
 
 <details>
 <summary>Create a pool (dashboard)</summary>
 <div>
 
-<PoolCreate/>
+<PoolCreate />
 
 </div>
 
@@ -84,7 +83,7 @@ This guide is meant for organizations setting up their first load balancer. If y
 <summary>Create a pool (API)</summary>
 <div>
 
-<PoolCreateAPI/>
+<PoolCreateAPI />
 
 </div>
 
@@ -92,7 +91,7 @@ This guide is meant for organizations setting up their first load balancer. If y
 
 ## Step 3 — Confirm pool health
 
-Before directing any traffic to your pools, make sure that your pools and monitors are set up correctly. The status of your health check will be *unknown* until the results of the first check are available.
+Before directing any traffic to your pools, make sure that your pools and monitors are set up correctly. The status of your health check will be _unknown_ until the results of the first check are available.
 
 <details>
 <summary>Confirm pool health (dashboard)</summary>
@@ -127,13 +126,13 @@ If you notice that healthy pools are being marked unhealthy:
 
 ## Step 4 — Create a load balancer on a test subdomain
 
-<LBDefinition/>
+<LBDefinition />
 
 <details>
 <summary>Create a load balancer (dashboard)</summary>
 <div>
 
-<LBCreate/>
+<LBCreate />
 
 </div>
 
@@ -143,7 +142,7 @@ If you notice that healthy pools are being marked unhealthy:
 <summary>Create a load balancer (API)</summary>
 <div>
 
-<LBCreateAPI/>
+<LBCreateAPI />
 
 </div>
 

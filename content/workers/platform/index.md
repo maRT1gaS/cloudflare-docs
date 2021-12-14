@@ -5,4 +5,4 @@ pcx-content-type: navigation
 
 # Platform
 
-<DirectoryListing path="/platform"/>
+<DirectoryListing path="/platform" />

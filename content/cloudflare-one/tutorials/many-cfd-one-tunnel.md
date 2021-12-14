@@ -17,8 +17,8 @@ This architecture allows `cloudflared` instances to proxy Internet traffic into 
 
 **🗺️ This tutorial covers how to:**
 
-* Deploy `cloudflared` in a replica model
-* Proxy traffic into a Kubernetes service with Tunnel
+- Deploy `cloudflared` in a replica model
+- Proxy traffic into a Kubernetes service with Tunnel
 
 **⏲️ Time to complete: 45 minutes**
 
@@ -100,7 +100,7 @@ configmap/cloudflared configured
 
 ## Visit your hostname
 
-At this point, you'll see the httpbin welcome page.  
+At this point, you'll see the httpbin welcome page.
 
 In this tutorial, we've covered how the same Tunnel can be run in many `cloudflared` processes. You can also use this knowledge to support elastic scaling, graceful `cloudflared` restarts, and rolling upgrades in the future.
 

@@ -13,7 +13,7 @@ To set up SAML with Centrify as your identity provider:
 
 1. Log in to your **Centrify** admin portal and click **Apps**.
 
-    ![Centrify Apps page](../../static/documentation/identity/saml-centrify/saml-centrify-1.png)
+   ![Centrify Apps page](../../static/documentation/identity/saml-centrify/saml-centrify-1.png)
 
 1. Select **Add Web Apps**.
 
@@ -21,7 +21,7 @@ To set up SAML with Centrify as your identity provider:
 
 1. Next to the **SAML** icon click **Add**.
 
-    ![Centrify Settings Add Application details page](../../static/documentation/identity/saml-centrify/saml-centrify-3.png)
+   ![Centrify Settings Add Application details page](../../static/documentation/identity/saml-centrify/saml-centrify-3.png)
 
 1. Enter the required information for your application.
 
@@ -35,9 +35,9 @@ To set up SAML with Centrify as your identity provider:
 
 1. In the **SP Entity ID** and **Assertion Consumer Service (ACS) URL fields**, enter your [team domain](/glossary#team-domain) followed by this callback at the end of the path: `/cdn-cgi/access/callback`. For example:
 
-    ```txt
-    https://<your-team-name>.cloudflareaccess.com/cdn-cgi/access/callback
-    ```
+   ```txt
+   https://<your-team-name>.cloudflareaccess.com/cdn-cgi/access/callback
+   ```
 
 1. Click **Save**.
 
@@ -45,17 +45,17 @@ To set up SAML with Centrify as your identity provider:
 
 1. Click **Add**. The **Select Role** dialog displays.
 
-    ![Centrify Settings Select Role dialog](../../static/documentation/identity/saml-centrify/saml-centrify-6.png)
+   ![Centrify Settings Select Role dialog](../../static/documentation/identity/saml-centrify/saml-centrify-6.png)
 
 1. Complete your roles access assignments. The Role rules display on the **User Access** card.
 
-    ![Centrify Added Roles list](../../static/documentation/identity/saml-centrify/saml-centrify-7.png)
+   ![Centrify Added Roles list](../../static/documentation/identity/saml-centrify/saml-centrify-7.png)
 
 1. In the middle menu pane, select **SAML Response**.
 
 1. Click **Active > Add** to create a new **Attribute Name**, **Email**.
 
-    ![Centrify Settings Email Attribute](../../static/documentation/identity/saml-centrify/saml-centrify-9.png)
+   ![Centrify Settings Email Attribute](../../static/documentation/identity/saml-centrify/saml-centrify-9.png)
 
 1. Enter the user email addresses in the **Attribute Value** field.
 
@@ -85,11 +85,11 @@ To get your Cloudflare metadata file:
 
 1. Download your unique SAML metadata file at the following URL:
 
-    ```txt
-    https://<your-team-name>.cloudflareaccess.com/cdn-cgi/access/saml-metadata
-    ```
+   ```txt
+   https://<your-team-name>.cloudflareaccess.com/cdn-cgi/access/saml-metadata
+   ```
 
-    Replace `<your-team-name>`  with your [team name](/glossary#team-name).
+   Replace `<your-team-name>` with your [team name](/glossary#team-name).
 
 1. Save the file in XML format.
 1. Upload the XML document to your **Centrify** account.
@@ -98,16 +98,15 @@ To get your Cloudflare metadata file:
 
 ```json
 {
-    "config":
-    {
-        "issuer_url": "https://abc123.my.centrify.com/baaa2117-0ec0-4d76-84cc-abccb551a123",
-        "sso_target_url": "https://abc123.my.centrify.com/applogin/appKey/baaa2117-0ec0-4d76-84cc-abccb551a123/customerId/abc123",
-        "attributes": ["email"],
-        "email_attribute_name": "",
-        "sign_request": false,
-        "idp_public_cert": "MIIDpDCCAoygAwIBAgIGAV2ka+55MA0GCSqGSIb3DQEBCwUAMIGSMQswCQYDVQQGEwJVUzETMBEG\nA1UEC.....GF/Q2/MHadws97cZg\nuTnQyuOqPuHbnN83d/2l1NSYKCbHt24o"
-    },
-    "type": "saml",
-    "name": "centrify saml example"
+  "config": {
+    "issuer_url": "https://abc123.my.centrify.com/baaa2117-0ec0-4d76-84cc-abccb551a123",
+    "sso_target_url": "https://abc123.my.centrify.com/applogin/appKey/baaa2117-0ec0-4d76-84cc-abccb551a123/customerId/abc123",
+    "attributes": ["email"],
+    "email_attribute_name": "",
+    "sign_request": false,
+    "idp_public_cert": "MIIDpDCCAoygAwIBAgIGAV2ka+55MA0GCSqGSIb3DQEBCwUAMIGSMQswCQYDVQQGEwJVUzETMBEG\nA1UEC.....GF/Q2/MHadws97cZg\nuTnQyuOqPuHbnN83d/2l1NSYKCbHt24o"
+  },
+  "type": "saml",
+  "name": "centrify saml example"
 }
 ```

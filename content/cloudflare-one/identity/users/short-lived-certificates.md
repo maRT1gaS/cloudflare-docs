@@ -20,14 +20,14 @@ To protect a resource behind Cloudflare Access, first follow [these instructions
 
 2. In the drop-down, choose the application that represents the resource you secured in Step 1.
 
-    ![New Cert](../../static/documentation/applications/non-http/slc-create.png)
+   ![New Cert](../../static/documentation/applications/non-http/slc-create.png)
 
 3. Click **Generate certificate**. A row will appear with a public key scoped to your application.
 
 4. Save the key or keep it somewhere convenient for configuring your server.
-    You can return to copy this public key any time in the Service Auth dashboard.
+   You can return to copy this public key any time in the Service Auth dashboard.
 
-    ![Pub Key Cert](../../static/documentation/applications/non-http/slc-detail.png)
+   ![Pub Key Cert](../../static/documentation/applications/non-http/slc-detail.png)
 
 ## 3. **Ensure Unix usernames match user SSO identities**
 
@@ -42,6 +42,7 @@ For testing purposes, you can run the following command to generate a Unix user 
 ```sh
 $ sudo adduser jdoe
 ```
+
 ## 4. **Save your public key**
 
 1. Save the public key generated from the dashboard in Step 2 as a new `.pub` file in your system.
@@ -76,6 +77,7 @@ The first change requires that you uncomment a field already set in most default
 ```sh
 $ vim /etc/ssh/sshd_config
 ```
+
 2. Navigate to the row named `PubkeyAuthentication`. In most default configurations, the row will appear commented out as follows:
 
 ```bash
@@ -133,13 +135,14 @@ If you prefer to configure manually, these are the required commands:
 Host vm.example.com
     ProxyCommand bash -c '/usr/local/bin/cloudflared access ssh-gen --hostname %h; ssh -tt %r@cfpipe-vm.example.com >&2 <&1'
 ```
+
 ```bash
 Host cfpipe-vm.example.com
     HostName vm.example.com
     ProxyCommand /usr/local/bin/cloudflared access ssh --hostname %h
     IdentityFile ~/.cloudflared/vm.example.com-cf_key
     CertificateFile ~/.cloudflared/vm.example.com-cf_key-cert.pub
- ```
+```
 
 ### Connect through a browser-based terminal
 

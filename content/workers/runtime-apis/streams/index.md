@@ -4,4 +4,4 @@ pcx-content-type: navigation
 
 # Streams
 
-<DirectoryListing path="/runtime-apis/streams"/>
+<DirectoryListing path="/runtime-apis/streams" />

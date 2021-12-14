@@ -6,4 +6,4 @@ pcx-content-type: navigation
 
 # Upload videos
 
-<DirectoryListing path="/uploading-videos"/>
+<DirectoryListing path="/uploading-videos" />

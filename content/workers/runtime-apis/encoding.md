@@ -15,7 +15,7 @@ The TextEncoder takes a stream of code points as input and emits a stream of byt
 ### Constructor
 
 ```js
-let encoder = new TextEncoder()
+let encoder = new TextEncoder();
 ```
 
 ### Properties
@@ -31,13 +31,20 @@ let encoder = new TextEncoder()
 
 <Definitions>
 
-- <Code>encode(input<TypeLink href="https://developer.mozilla.org/en-US/docs/Web/API/USVString">USVString</TypeLink>)</Code> <TypeLink href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array">Uint8Array</TypeLink>
+- <Code>
+    encode(input
+    <TypeLink href="https://developer.mozilla.org/en-US/docs/Web/API/USVString">
+      USVString
+    </TypeLink>)
+  </Code> <TypeLink href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array">
+    Uint8Array
+  </TypeLink>
 
   - Encodes a string input.
 
 </Definitions>
 
---------------------------------
+---
 
 ## TextDecoder
 
@@ -48,8 +55,9 @@ The TextDecoder interface represents a UTF-8 decoder. Decoders take a stream of 
 [`TextDecoder()`](https://developer.mozilla.org/en-US/docs/Web/API/TextDecoder/TextDecoder) returns a newly constructed `TextDecoder` that generates a code-point stream.
 
 ### Constructor
+
 ```js
-let decoder = new TextDecoder()
+let decoder = new TextDecoder();
 ```
 
 ### Properties
@@ -57,9 +65,11 @@ let decoder = new TextDecoder()
 <Definitions>
 
 - `encoding` <TypeLink href="https://developer.mozilla.org/en-US/docs/Web/API/DOMString">DOMString</TypeLink> <PropMeta>read-only</PropMeta>
+
   - The name of the decoder that describes the method the `TextDecoder` uses.
 
 - `fatal` <Type>boolean</Type> <PropMeta>read-only</PropMeta>
+
   - Indicates if the error mode is fatal.
 
 - `ignoreBOM` <Type>boolean</Type> <PropMeta>read-only</PropMeta>

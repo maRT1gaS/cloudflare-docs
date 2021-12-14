@@ -24,4 +24,4 @@ Configuration of DNS-O-Matic requires the following information:
 - **Email**: `<CLOUDFLARE ACCOUNT EMAIL ADDRESS>` (associated account must have sufficient privileges to manage DNS)
 - **API Token**: `<CLOUDFLARE GLOBAL API KEY>` (for details refer to [API Keys](https://developers.cloudflare.com/api/keys))
 - **Domain**: `<example.com>`
-- **Hostname**: *dynamic*
+- **Hostname**: _dynamic_

@@ -16,7 +16,7 @@ Unless specifically set in a [Page Rule](/how-to/create-page-rules), Cloudflare 
 
 ## Set Browser Cache TTL
 
-The Cloudflare UI and API both prohibit setting Browser Cache TTL to 0 for non-Enterprise domains. 
+The Cloudflare UI and API both prohibit setting Browser Cache TTL to 0 for non-Enterprise domains.
 
 <Aside type="note" header="Note">
 

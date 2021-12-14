@@ -11,7 +11,7 @@ Create and manage [Load Balancing rules](../) in the **Custom Rules** page, whic
 
 ## Prerequisites
 
-- **Understand whether Cloudflare proxies your traffic**: Depending on the nature of your traffic, you may have access to different fields for your load balancing rules. For more details, see [Supported fields and expressions](../reference). 
+- **Understand whether Cloudflare proxies your traffic**: Depending on the nature of your traffic, you may have access to different fields for your load balancing rules. For more details, see [Supported fields and expressions](../reference).
 
 ---
 
@@ -55,33 +55,39 @@ To save a new load balancer rule, make sure to save both the rule **and** the ov
 
 <Example>
 
-  This example routes certain content requests from our webserver to a different origin pool.
+This example routes certain content requests from our webserver to a different origin pool.
 
-  <strong>When incoming requests match</strong>:
+<strong>When incoming requests match</strong>:
 
-  <table style="width:100%">
-    <thead>
-      <tr>
-        <th>Field</th>
-        <th>Operator</th>
-        <th>Value</th>
-      </tr>
-    </thead>
-    <tbody>
+{' '}
+
+<table style="width:100%">
+  <thead>
     <tr>
-        <td>URI Path</td>
-        <td>contains</td>
-        <td><code>/content</code></td>
-      </tr>
+      <th>Field</th>
+      <th>Operator</th>
+      <th>Value</th>
+    </tr>
+  </thead>
+  <tbody>
     <tr>
-        <td>URI Query String</td>
-        <td>contains</td>
-        <td><code>webserver</code></td>
-      </tr>
-    </tbody>
-  </table>
+      <td>URI Path</td>
+      <td>contains</td>
+      <td>
+        <code>/content</code>
+      </td>
+    </tr>
+    <tr>
+      <td>URI Query String</td>
+      <td>contains</td>
+      <td>
+        <code>webserver</code>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
-  <strong>Then</strong>:
+<strong>Then</strong>:
 
   <table style="width:100%">
     <thead>

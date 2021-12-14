@@ -1,5 +1,5 @@
 ---
-title: "4: Service configuration"
+title: '4: Service configuration'
 weight: 40
 pcx-content-type: reference
 ---

@@ -10,8 +10,8 @@ You have two ways of installing WARP on Linux, depending on the distro you are u
 
 1. Find the [setup repository](https://pkg.cloudflareclient.com/).
 1. Install the `cloudflare-warp` package that suits your distro:
-    1. **apt-based OS** (like Ubuntu): `sudo apt install cloudflare-warp`.
-    2. **yum-based OS** (like CentOS or RHEL): `sudo yum install cloudflare-warp`.
+   1. **apt-based OS** (like Ubuntu): `sudo apt install cloudflare-warp`.
+   2. **yum-based OS** (like CentOS or RHEL): `sudo yum install cloudflare-warp`.
 
 ## Using WARP
 
@@ -27,9 +27,9 @@ To connect for the very first time you must call `register` first:
 
 ### Always stay connected
 
-If you want to always stay connected to WARP you must call `enable-always-on`. This is the `cli` equivalent to switching the toggle switch to the `on` position in our GUI apps. 
+If you want to always stay connected to WARP you must call `enable-always-on`. This is the `cli` equivalent to switching the toggle switch to the `on` position in our GUI apps.
 
-To enable this feature, run: 
+To enable this feature, run:
 
 ```sh
 $ warp-cli enable-always-on
@@ -59,6 +59,7 @@ $ warp-cli --help
 ```
 
 ## Feedback
+
 You can find logs required to debug WARP issues by running `sudo warp-diag`. This will place a `warp-debugging-info.zip` file in the path from which you ran the command.
 
 To report bugs or provide feedback to the team use the command `sudo warp-diag feedback`. This will submit a support ticket.

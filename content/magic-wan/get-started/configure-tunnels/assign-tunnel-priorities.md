@@ -1,6 +1,6 @@
 ---
 title: Create static routes
-order: 
+order:
 pcx-content-type: how-to
 ---
 
@@ -20,30 +20,44 @@ For an example edge routing configuration, refer to this table:
 <table>
   <thead>
     <tr>
-      <th><strong>GRE tunnel</strong></th>
-      <th><strong>Subnet</strong></th>
-      <th><strong>Priority</strong></th>
+      <th>
+        <strong>GRE tunnel</strong>
+      </th>
+      <th>
+        <strong>Subnet</strong>
+      </th>
+      <th>
+        <strong>Priority</strong>
+      </th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>GRE_1_IAD</td>
-      <td><strong>103.21.244.0/24</strong></td>
+      <td>
+        <strong>103.21.244.0/24</strong>
+      </td>
       <td>100</td>
     </tr>
     <tr>
       <td>GRE_2_IAD</td>
-      <td><strong>103.21.244.0/24</strong></td>
+      <td>
+        <strong>103.21.244.0/24</strong>
+      </td>
       <td>100</td>
     </tr>
     <tr>
       <td>GRE_3_ATL</td>
-      <td><strong>103.21.244.0/24</strong></td>
+      <td>
+        <strong>103.21.244.0/24</strong>
+      </td>
       <td>100</td>
     </tr>
     <tr>
       <td>GRE_4_ATL</td>
-      <td><strong>103.21.244.0/24</strong></td>
+      <td>
+        <strong>103.21.244.0/24</strong>
+      </td>
       <td>100</td>
     </tr>
     <tr>

@@ -15,14 +15,14 @@ For example, if you want to test a ruleset before enforcing it, you may want to 
 
 You can override a ruleset at three levels:
 
-* **Ruleset overrides** apply to all rules in the executed ruleset.
-* **Tag overrides** apply to all rules with a specific tag. For example, use a tag override to customize the Cloudflare Managed Ruleset so all rules with the `wordpress` tag are set to _Block_. If multiple tags have overrides and if a given rule has more than one of these tags, the tag overrides order determines the behavior. For rules tagged with multiple overridden tags, the last tag's overrides apply.
-* **Rule overrides** apply to specific rules in a Managed Ruleset, referenced by their Rule ID.
+- **Ruleset overrides** apply to all rules in the executed ruleset.
+- **Tag overrides** apply to all rules with a specific tag. For example, use a tag override to customize the Cloudflare Managed Ruleset so all rules with the `wordpress` tag are set to _Block_. If multiple tags have overrides and if a given rule has more than one of these tags, the tag overrides order determines the behavior. For rules tagged with multiple overridden tags, the last tag's overrides apply.
+- **Rule overrides** apply to specific rules in a Managed Ruleset, referenced by their Rule ID.
 
 To apply an override for a Managed Ruleset:
 
-* Call the [Update ruleset](/rulesets-api/update) method on your account-level phase entry point.
-* Specify the `overrides` in the `action_parameters` of the rule that executes your Managed Ruleset.
+- Call the [Update ruleset](/rulesets-api/update) method on your account-level phase entry point.
+- Specify the `overrides` in the `action_parameters` of the rule that executes your Managed Ruleset.
 
 ```json
 "action_parameters": {
@@ -55,8 +55,8 @@ Specific overrides take precedence over more general ones, and rule overrides ta
 
 You can override the following rule properties:
 
-* `"action"` (`"block"`, `"challenge"`, `"log"`)
-* `"enabled"` (`true`, `false`)
+- `"action"` (`"block"`, `"challenge"`, `"log"`)
+- `"enabled"` (`true`, `false`)
 
 <Aside type="note" header="Note">
 

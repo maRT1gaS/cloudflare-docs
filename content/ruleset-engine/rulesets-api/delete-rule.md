@@ -10,10 +10,10 @@ Deletes a single rule in a ruleset at the account or zone level.
 
 Use one of the following API endpoints:
 
-| Operation | Method + Endpoint |
-|-----------|-------------------|
+| Operation                                         | Method + Endpoint                                                     |
+| ------------------------------------------------- | --------------------------------------------------------------------- |
 | [Delete an individual rule][dr-account] (account) | `DELETE /accounts/{account-id}/rulesets/{ruleset-id}/rules/{rule-id}` |
-| Delete an individual rule (zone) | `DELETE /zones/{zone-id}/rulesets/{ruleset-id}/rules/{rule-id}` |
+| Delete an individual rule (zone)                  | `DELETE /zones/{zone-id}/rulesets/{ruleset-id}/rules/{rule-id}`       |
 
 [dr-account]: https://api.cloudflare.com/#account-rulesets-delete-an-individual-rule
 

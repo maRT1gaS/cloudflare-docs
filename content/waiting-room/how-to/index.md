@@ -8,4 +8,4 @@ pcx-content-type: navigation
 
 When working with Cloudflare Waiting Rooms, you will commonly perform the following tasks:
 
-<DirectoryListing path="/how-to"/>
+<DirectoryListing path="/how-to" />

@@ -7,4 +7,4 @@ pcx-content-type: navigation
 
 Beyond [creating a simple waiting room](/get-started), you may want to further customize how your waiting room appears or functions.
 
-<DirectoryListing path="/how-to"/>
+<DirectoryListing path="/how-to" />

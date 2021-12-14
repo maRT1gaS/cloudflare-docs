@@ -5,4 +5,4 @@ pcx-content-type: navigation
 
 # Get Started
 
-<DirectoryListing path="/get-started"/>
+<DirectoryListing path="/get-started" />

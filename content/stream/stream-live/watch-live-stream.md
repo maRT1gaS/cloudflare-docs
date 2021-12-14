@@ -112,12 +112,12 @@ This is a response for an input ID with an active live stream:
 
 ```json
 {
-      // indicates if the ID provided is for an input or a video
-    "isInput": true,
-    // returns the active video ID or null for an input ID, otherwise returns the provided video ID
-    "videoUID": "55b9b5ce48c3968c6b514c458959d6a",
-    // if isInput is true, indicates if the input is actively streaming or not
-    "live": true
+  // indicates if the ID provided is for an input or a video
+  "isInput": true,
+  // returns the active video ID or null for an input ID, otherwise returns the provided video ID
+  "videoUID": "55b9b5ce48c3968c6b514c458959d6a",
+  // if isInput is true, indicates if the input is actively streaming or not
+  "live": true
 }
 ```
 
@@ -125,9 +125,9 @@ Or if the input ID does not have an active live stream:
 
 ```json
 {
-    "isInput": true,
-    "videoUID": null,
-    "live": false
+  "isInput": true,
+  "videoUID": null,
+  "live": false
 }
 ```
 
@@ -137,7 +137,7 @@ When viewing a livestream via the live input id, the `requireSignedURLs` and `al
 
 ## Replaying recordings
 
-Live streams are automatically recorded. To get a list of recorded streams for a given input id, make the same `GET` request as you would to get the live video and filter for videos where the state property is set to `ready`: 
+Live streams are automatically recorded. To get a list of recorded streams for a given input id, make the same `GET` request as you would to get the live video and filter for videos where the state property is set to `ready`:
 
 ```bash
 GET https://dash.cloudflare.com/api/v4/accounts/{account}/stream/live_inputs/{live-input-id}/videos

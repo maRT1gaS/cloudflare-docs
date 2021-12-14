@@ -22,6 +22,7 @@ Before sending your Cloudflare log data to Elastic, make sure that you:
 <Aside type="note" header="Note">
 
 Cloudflare logs are HTTP/HTTPS request logs in JSON format and are gathered from our 200+ data centers globally. By default, timestamps are returned as Unix nanosecond integers. We recommend using the RFC 3339 format for sending logs to Elastic.
+
 </Aside>
 
 ## Task 1 - Preparation
@@ -190,6 +191,7 @@ All dashboard have a set of filters that you can apply to the entire dashboard, 
 <Aside type="note" header="Note">
 
 You can use filters to drill down and examine the data at a granular level. Filters include client country, client device type, client IP, client request host, client request URI, client request user agent, edge response status, origin IP, and origin response status.
+
 </Aside>
 
 The default time interval is set to 24 hours. Note that for correct calculations filter will need to exclude Worker subrequests (**WorkerSubrequest** = _false_) and purge requests (**ClientRequestMethod** is not _PURGE_).
@@ -253,6 +255,7 @@ It is important to verify the return status of the call to Elasticsearch. Lines 
 <Aside type="note" header="Note">
 
 You might see a _WARNING_ message containing text that says _‘y’ year should be replaced…_. You can ignore this message.
+
 </Aside>
 
 If you run into any other issues, take note of the exact return message and contact your Cloudflare support team.

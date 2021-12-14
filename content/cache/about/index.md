@@ -6,4 +6,4 @@ pcx-content-type: navigation
 
 # About Cache
 
-<DirectoryListing path="/about"/>
+<DirectoryListing path="/about" />

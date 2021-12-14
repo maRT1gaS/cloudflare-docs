@@ -4,7 +4,7 @@ order: 2
 pcx-content-type: getting-started
 ---
 
-import WorkerStarter from "../../components/worker-starter"
+import WorkerStarter from '../../components/worker-starter';
 
 # Quickstarts
 
@@ -19,6 +19,7 @@ $ wrangler generate <new-project-name> <github-repo-url>
 <Definitions>
 
 - `new-project-name`
+
   - A folder with this name will be created with your new project inside, pre-configured to [your Workers account](/cli-wrangler/configuration).
 
 - `github-repo-url`
@@ -28,7 +29,7 @@ $ wrangler generate <new-project-name> <github-repo-url>
 
 </ContentColumn>
 
---------------------------------
+---
 
 ## Templates
 
@@ -62,7 +63,7 @@ $ wrangler generate <new-project-name> <github-repo-url>
   repo="sunderjs/sunder-worker-template"
 />
 
---------------------------------
+---
 
 ## Frameworks
 
@@ -78,7 +79,7 @@ $ wrangler generate <new-project-name> <github-repo-url>
   repo="flareact/flareact"
 />
 
---------------------------------
+---
 
 ## Example Projects
 
@@ -130,7 +131,7 @@ $ wrangler generate <new-project-name> <github-repo-url>
   repo="fauna-labs/fauna-workers"
 />
 
---------------------------------
+---
 
 ## Other languages
 
@@ -208,10 +209,12 @@ Other languages may require you to install additional tools beyond wrangler. See
   repo="cloudflare/worker-emscripten-template"
 />
 
---------------------------------
+---
 
 ## Built with Workers
 
 Get inspiration from other sites and projects out there that were built with Cloudflare Workers.
 
-<Button type="primary" href="https://workers.cloudflare.com/built-with">Built with Workers</Button>
+<Button type="primary" href="https://workers.cloudflare.com/built-with">
+  Built with Workers
+</Button>

@@ -25,7 +25,7 @@ The **Documentation Explorer** opens and displays a list of available objects:
 
 ![GraphiQl Doc Explorer](../../static/images/graphiql-doc-explorer.png)
 
- Objects in the **Documentation Explorer** use this syntax:
+Objects in the **Documentation Explorer** use this syntax:
 
 ```
 object-name: object-type-definition

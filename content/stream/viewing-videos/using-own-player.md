@@ -48,8 +48,8 @@ Currently, the following hints are available:
 
 <Definitions>
 
-  - `clientBandwidthHint` <Type>float</Type>
-    - Require all video representations in the manifest have a bitrate at least the provided Mbps. This can be used to enforce a minimum level of quality at the expense of users on slower connections.
+- `clientBandwidthHint` <Type>float</Type>
+  - Require all video representations in the manifest have a bitrate at least the provided Mbps. This can be used to enforce a minimum level of quality at the expense of users on slower connections.
 
 </Definitions>
 
@@ -73,10 +73,7 @@ If you need complete control over the video element's CSS you can use a third pa
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <style>
       body,
       html {
@@ -96,8 +93,10 @@ If you need complete control over the video element's CSS you can use a third pa
     <video autoplay muted loop id="cover-video"></video>
     <script>
       var hls = new Hls();
-      hls.loadSource("https://videodelivery.net/5d5bc37ffcf54c9b82e996823bffbb81/manifest/video.m3u8");
-      hls.attachMedia(document.getElementById("cover-video"));
+      hls.loadSource(
+        'https://videodelivery.net/5d5bc37ffcf54c9b82e996823bffbb81/manifest/video.m3u8'
+      );
+      hls.attachMedia(document.getElementById('cover-video'));
     </script>
   </body>
 </html>

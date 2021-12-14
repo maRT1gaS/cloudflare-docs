@@ -14,7 +14,6 @@ Be sure to trigger a new deployment after changing any settings.
 
 </Aside>
 
-
 ## Registry Access Token
 
 Every package registry should have a means of issuing new access tokens. Ideally, you should create a new token specifically for Pages, as you would with any other CI/CD platform.
@@ -33,7 +32,6 @@ $ npm token create --read-only
 
 This will produce a read-only token that looks like a UUID string. Save this value for a later step.
 
-
 ## Private modules on the npm registry
 
 The following section applies to users with applications that are only using private modules from the npm registry.
@@ -47,7 +45,6 @@ Add the `NPM_TOKEN` variable to both the **Production** and **Preview** environm
 </Aside>
 
 By default, `npm` looks for an environment variable named `NPM_TOKEN` and because you did not define a [custom registry endpoint](#custom-registry-endpoints), the npm registry is assumed. Local development should continue to work as expected, provided that you and your teammates are authenticated with npm accounts (see `npm whoami` and `npm login`) that have been granted access to the private package(s).
-
 
 ## Custom registry endpoints
 
@@ -69,7 +66,6 @@ You only need to define an Access Token for the npm registry (refer to `TOKEN_FO
 
 Your Pages project must then have the matching [environment variables](/platform/build-configuration#environment-variables) defined for all environments. In our example, that means `TOKEN_FOR_NPM` must contain [the read-only npm token](#registry-access-token) value and `TOKEN_FOR_GITHUB` must contain its own [personal access token](https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token#creating-a-token).
 
-
 ### Managing multiple environments
 
 In the event that your local development no longer works with your new `.npmrc` file, you will need to add some additional changes:
@@ -80,19 +76,19 @@ In the event that your local development no longer works with your new `.npmrc` 
 
 3. Create a new `is-pages.js` file in your project's root directory:
 
-    ```js
-    // Pages always has `CF_PAGES` defined
-    if (!process.env.CF_PAGES) process.exit(1);
-    ```
+   ```js
+   // Pages always has `CF_PAGES` defined
+   if (!process.env.CF_PAGES) process.exit(1);
+   ```
 
 4. In your `package.json` file, create a new `"preinstall"` script, which will rename the `.npmrc.pages` file to `.npmrc` only during the Pages build process:
 
-    ```js
-    // package.json
-    {
-      "scripts": {
-        "preinstall": "node is-pages && mv .npmrc.pages .npmrc || echo \"Not Pages\"",
-        // your existing scripts
-      }
-    }
-    ```
+   ```js
+   // package.json
+   {
+     "scripts": {
+       "preinstall": "node is-pages && mv .npmrc.pages .npmrc || echo \"Not Pages\"",
+       // your existing scripts
+     }
+   }
+   ```

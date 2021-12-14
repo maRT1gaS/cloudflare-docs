@@ -28,33 +28,56 @@ The Cloudflare Firewall Rules language supports these transformation functions:
 
 <Definitions>
 
-- <code>any(<Type>Array</Type>{'<'}<ParamType>Boolean</ParamType>{'>'})</code> <Type>Boolean</Type>
+- <code>
+    any(<Type>Array</Type>
+    {'<'}
+    <ParamType>Boolean</ParamType>
+    {'>'})
+  </code> <Type>Boolean</Type>
 
   - Returns <code class="InlineCode">true</code> when the comparison operator in the argument returns `true` for <em>any</em> of the values in the argument array. Returns <code class="InlineCode">false</code> otherwise.
-  
-  - <em>Example:</em><br />
 
-    <code class='InlineCode' style='width:100%'>
-    any(url_decode(http.request.body.form.values[*])[*] contains "an xss attack")
+  - <em>Example:</em>
+    <br />
+
+    <code class="InlineCode" style="width:100%">
+      any(url_decode(http.request.body.form.values[*])[*] contains "an xss
+      attack")
     </code>
 
-- <code>all(<Type>Array</Type>{'<'}<ParamType>Boolean</ParamType>{'>'})</code> <Type>Boolean</Type>
+- <code>
+    all(<Type>Array</Type>
+    {'<'}
+    <ParamType>Boolean</ParamType>
+    {'>'})
+  </code> <Type>Boolean</Type>
 
   - Returns <code class="InlineCode">true</code> when the comparison operator in the argument returns `true` for <em>all</em> values in the argument array. Returns <code class="InlineCode">false</code> otherwise.
 
-  - <em>Example:</em><br />
+  - <em>Example:</em>
+    <br />
 
-    <code class="InlineCode">all(http.request.headers['content-type'][*] == "application/json")</code>
+    <code class="InlineCode">
+      all(http.request.headers['content-type'][*] == "application/json")
+    </code>
 
-- <code>concat(<Type>String | Integer | bytes | Array elements</Type>)</code> <Type>String</Type>
+- <code>
+    concat(<Type>String | Integer | bytes | Array elements</Type>)
+  </code> <Type>String</Type>
 
   - Takes a comma-separated list of values. Concatenates the argument values into a single String.
 
-  - <em>Example:</em><br />
+  - <em>Example:</em>
+    <br />
 
-    <code class="InlineCode">concat("String1"," ","String",2) == "String1 String2"</code>
+    <code class="InlineCode">
+      concat("String1"," ","String",2) == "String1 String2"
+    </code>
 
-- <code>ends_with(source<ParamType>String</ParamType>, substring<ParamType>String</ParamType>)</code> <Type>Boolean</Type>
+- <code>
+    ends_with(source<ParamType>String</ParamType>, substring
+    <ParamType>String</ParamType>)
+  </code> <Type>Boolean</Type>
 
   - Returns `true` when a source string ends with a given substring. Returns `false` otherwise.
 
@@ -67,23 +90,32 @@ The Cloudflare Firewall Rules language supports these transformation functions:
 
     </Aside>
 
-- <code>len(<Type>String | bytes</Type>)</code> <Type>Integer</Type>
+- <code>
+    len(<Type>String | bytes</Type>)
+  </code> <Type>Integer</Type>
 
   - Returns the byte length of a String or Bytes field.
 
-  - <em>Example:</em><br />
+  - <em>Example:</em>
+    <br />
 
     <code class="InlineCode">len(http.host)</code>
 
-- <code>lower(<Type>String</Type>)</code> <Type>String</Type>
+- <code>
+    lower(<Type>String</Type>)
+  </code> <Type>String</Type>
 
   - Converts a string field to lowercase. Only uppercase ASCII bytes are converted. All other bytes are unaffected.
 
-  - <em>Example:</em><br />
+  - <em>Example:</em>
+    <br />
 
     <code class="InlineCode">lower(http.host) == "www.cloudflare.com"</code>
 
-- <code>regex_replace(source<ParamType>String</ParamType>, regular_expression<ParamType>String</ParamType>, replacement<ParamType>String</ParamType>)</code> <Type>String</Type>
+- <code>
+    regex_replace(source<ParamType>String</ParamType>, regular_expression
+    <ParamType>String</ParamType>, replacement<ParamType>String</ParamType>)
+  </code> <Type>String</Type>
 
   - Replaces a part of a source string matched by a regular expression with a replacement string, returning the result. The replacement string can contain references to regular expression capture groups.
 
@@ -113,15 +145,23 @@ The Cloudflare Firewall Rules language supports these transformation functions:
 
     </Aside>
 
-- <code>remove_bytes(<Type>bytes</Type>)</code> <Type>bytes</Type>
+- <code>
+    remove_bytes(<Type>bytes</Type>)
+  </code> <Type>bytes</Type>
 
   - Returns a new byte array with all the occurrences of the given bytes removed.
 
-  - <em>Example:</em><br />
+  - <em>Example:</em>
+    <br />
 
-    <code class="InlineCode">remove_bytes(http.host, "\x2e\x77") == "cloudflarecom"</code>
+    <code class="InlineCode">
+      remove_bytes(http.host, "\x2e\x77") == "cloudflarecom"
+    </code>
 
-- <code>starts_with(source<ParamType>String</ParamType>, substring<ParamType>String</ParamType>)</code> <Type>Boolean</Type>
+- <code>
+    starts_with(source<ParamType>String</ParamType>, substring
+    <ParamType>String</ParamType>)
+  </code> <Type>Boolean</Type>
 
   - Returns `true` when a source string starts with a given substring. Returns `false` otherwise.
 
@@ -134,7 +174,9 @@ The Cloudflare Firewall Rules language supports these transformation functions:
 
     </Aside>
 
-- <code>to_string(<Type>Integer | Boolean | IP address</Type>)</code> <Type>String</Type>
+- <code>
+    to_string(<Type>Integer | Boolean | IP address</Type>)
+  </code> <Type>String</Type>
 
   - Returns the string representation of an Integer, Boolean, or IP address value.
 
@@ -151,31 +193,45 @@ The Cloudflare Firewall Rules language supports these transformation functions:
 
     </Aside>
 
-- <code>upper(<Type>String</Type>)</code> <Type>String</Type>
+- <code>
+    upper(<Type>String</Type>)
+  </code> <Type>String</Type>
 
   - Converts a string field to uppercase. Only lowercase ASCII bytes are converted. All other bytes are unaffected.
 
-  - <em>Example:</em><br />
+  - <em>Example:</em>
+    <br />
 
     <code class="InlineCode">upper(http.host) == "WWW.CLOUDFLARE.COM"</code>
 
-- <code>url_decode(<Type>String</Type>)</code> <Type>String</Type>
+- <code>
+    url_decode(<Type>String</Type>)
+  </code> <Type>String</Type>
 
   - Decodes a URL formatted string, as in the following:
 
-    - <code class="InlineCode">%20</code> and <code class="InlineCode">+</code> decode to space characters <code class="InlineCode"> </code>
+    - <code class="InlineCode">%20</code> and <code class="InlineCode">+</code> decode
+      to space characters <code class="InlineCode"> </code>
 
-    - <code class="InlineCode">%E4%BD</code> decodes to <code class="InlineCode">ä½ </code>
+    - <code class="InlineCode">%E4%BD</code> decodes to <code class="InlineCode">
+        ä½{' '}
+      </code>
 
-  - <em>Example:</em><br />
+  - <em>Example:</em>
+    <br />
 
-    <code class="InlineCode">any(url_decode(http.request.body.form.values[*])[*] contains "an xss attack")</code>
+    <code class="InlineCode">
+      any(url_decode(http.request.body.form.values[*])[*] contains "an xss
+      attack")
+    </code>
 
 </Definitions>
 
 ## Magic Firewall Functions
 
-- <code>bit_slice(<Type>String</Type>, <Type>Number</Type>, <Type>Number</Type>)</code> <Type>Number</Type>
+- <code>
+    bit_slice(<Type>String</Type>, <Type>Number</Type>, <Type>Number</Type>)
+  </code> <Type>Number</Type>
 
   - Select a slice of contiguous bits from a string field. This is primarily intended for use with <code class="InlineCode">ip</code> and <code class="InlineCode">tcp</code>.
   - The slice can be no longer than 31 bits, but multiple calls can be joined together via a logical expression.
@@ -269,25 +325,64 @@ and is composed of these parentheses-delimited expressions:
   </thead>
   <tbody>
     <tr>
-      <td valign="top"><code>(.+)</code></td>
-      <td>The <em>message</em> to validate</td>
-      <td valign="top"><code class="InlineCode">/download/cat.jpg</code></td>
+      <td valign="top">
+        <code>(.+)</code>
+      </td>
+      <td>
+        The <em>message</em> to validate
+      </td>
+      <td valign="top">
+        <code class="InlineCode">/download/cat.jpg</code>
+      </td>
     </tr>
     <tr>
-      <td valign="top"><code>(.*)</code></td>
-      <td>The <em>separator</em> between message and timestamp, commonly a parameter name</td>
-      <td valign="top"><code class="InlineCode">&verify=</code></td>
+      <td valign="top">
+        <code>(.*)</code>
+      </td>
+      <td>
+        The <em>separator</em> between message and timestamp, commonly a
+        parameter name
+      </td>
+      <td valign="top">
+        <code class="InlineCode">&verify=</code>
+      </td>
     </tr>
     <tr>
-      <td valign="top"><code>(\d{'{10}'})</code></td>
-      <td>The 10-digit Unix <em>timestamp</em> when the MAC was issued, expressed in seconds</td>
-      <td valign="top"><code class="InlineCode">1484063137</code></td>
+      <td valign="top">
+        <code>(\d{'{10}'})</code>
+      </td>
+      <td>
+        The 10-digit Unix <em>timestamp</em> when the MAC was issued, expressed
+        in seconds
+      </td>
+      <td valign="top">
+        <code class="InlineCode">1484063137</code>
+      </td>
     </tr>
     <tr>
-      <td valign="top"><code>(.{'{43,}'})</code></td>
-      <td><p>A base64-encoded version of the <em>MAC</em>. When you do not set the value of the <em>urlSafe</em> argument in the HMAC validation function to <code class="InlineCode">'s'</code>, you must URL encode the base64 value for <em>mac</em>.</p>
-      <p>When the base64 MAC encoding is URL-safe, the value for <em>mac</em> contains 43 bytes. Otherwise, the value will be 44 bytes or more, because of URL encoding.</p></td>
-      <td valign="top"><code class="InlineCode">IaLGSmELTvlhfd0ItdN6PhhHTFhzx<br />73EX8uy%2FcSDiIU%3D</code></td>
+      <td valign="top">
+        <code>(.{'{43,}'})</code>
+      </td>
+      <td>
+        <p>
+          A base64-encoded version of the <em>MAC</em>. When you do not set the
+          value of the <em>urlSafe</em> argument in the HMAC validation function
+          to <code class="InlineCode">'s'</code>, you must URL encode the base64
+          value for <em>mac</em>.
+        </p>
+        <p>
+          When the base64 MAC encoding is URL-safe, the value for <em>mac</em>{' '}
+          contains 43 bytes. Otherwise, the value will be 44 bytes or more,
+          because of URL encoding.
+        </p>
+      </td>
+      <td valign="top">
+        <code class="InlineCode">
+          IaLGSmELTvlhfd0ItdN6PhhHTFhzx
+          <br />
+          73EX8uy%2FcSDiIU%3D
+        </code>
+      </td>
     </tr>
   </tbody>
 </table>

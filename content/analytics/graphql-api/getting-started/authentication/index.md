@@ -15,21 +15,40 @@ This table outlines the differences between Cloudflare API keys and tokens:
 
 <table>
   <thead>
-      <tr>
-          <th>Authentication Method</th>
-          <th>Description</th>
-      </tr>
+    <tr>
+      <th>Authentication Method</th>
+      <th>Description</th>
+    </tr>
   </thead>
   <tbody>
-      <tr>
-        <td><a href='https://developers.cloudflare.com/api/tokens/create'>API Tokens</a></td>
-        <td>Cloudflare recommends API Tokens as the preferred way to interact with Cloudflare APIs. You can configure the scope of tokens to limit access to account and zone resources, and you can define the Cloudflare APIs to which the token authorizes access.</td>
-      </tr>
-      <tr>
-        <td><a href='https://developers.cloudflare.com/api/keys'>API Keys</a></td>
-        <td><p>Unique to each Cloudflare user and used only for authentication. API keys do not authorize access to accounts or zones.</p>
-        <p>Use the Global API Key for authentication. Only use the Origin CA Key when you create origin certificates through the API.</p></td>
-      </tr>
+    <tr>
+      <td>
+        <a href="https://developers.cloudflare.com/api/tokens/create">
+          API Tokens
+        </a>
+      </td>
+      <td>
+        Cloudflare recommends API Tokens as the preferred way to interact with
+        Cloudflare APIs. You can configure the scope of tokens to limit access
+        to account and zone resources, and you can define the Cloudflare APIs to
+        which the token authorizes access.
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="https://developers.cloudflare.com/api/keys">API Keys</a>
+      </td>
+      <td>
+        <p>
+          Unique to each Cloudflare user and used only for authentication. API
+          keys do not authorize access to accounts or zones.
+        </p>
+        <p>
+          Use the Global API Key for authentication. Only use the Origin CA Key
+          when you create origin certificates through the API.
+        </p>
+      </td>
+    </tr>
   </tbody>
 </table>
 

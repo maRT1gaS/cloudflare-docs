@@ -13,8 +13,8 @@ Follow the steps below to override the sensitivity of a specific rule of the Clo
 
 The example below uses the [Update ruleset](/rulesets-api/update) operation to execute the steps in a single `PUT` request.
 
-* Add a rule to the ruleset of the `ddos_l7` phase that applies the Cloudflare HTTP DDoS Managed Ruleset (with ID `{http-ddos-ruleset-id}`).
-* Create an override for the rule with ID `{rule-id}` and set the rule sensitivity to `low`. All other rules use the default sensitivity defined by Cloudflare.
+- Add a rule to the ruleset of the `ddos_l7` phase that applies the Cloudflare HTTP DDoS Managed Ruleset (with ID `{http-ddos-ruleset-id}`).
+- Create an override for the rule with ID `{rule-id}` and set the rule sensitivity to `low`. All other rules use the default sensitivity defined by Cloudflare.
 
 <details>
 <summary>Example: Use an override to set the sensitivity of an HTTP DDoS rule at the zone level</summary>

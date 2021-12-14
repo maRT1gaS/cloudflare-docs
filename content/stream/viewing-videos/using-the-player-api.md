@@ -25,15 +25,15 @@ The SDK provides an API for programmatically controlling the player and listenin
 
 <!-- Your JavaScript code below-->
 <script>
-  const player = Stream(document.getElementById('stream-player'))
+  const player = Stream(document.getElementById('stream-player'));
   player.addEventListener('play', () => {
-    console.log('playing!')
-  })
+    console.log('playing!');
+  });
   player.play().catch(() => {
-    console.log('playback failed, muting to try again')
-    player.muted = true
-    player.play()
-  })
+    console.log('playback failed, muting to try again');
+    player.muted = true;
+    player.play();
+  });
 </script>
 ```
 
@@ -61,7 +61,7 @@ The SDK provides an API for programmatically controlling the player and listenin
 
     <Aside>
 
-      Some browsers prevent videos with audio from playing automatically. You may add the `mute` attribute to allow your videos to autoplay. For  more information, go [here](https://webkit.org/blog/6784/new-video-policies-for-ios/).
+    Some browsers prevent videos with audio from playing automatically. You may add the `mute` attribute to allow your videos to autoplay. For more information, go [here](https://webkit.org/blog/6784/new-video-policies-for-ios/).
 
     </Aside>
 
@@ -83,7 +83,7 @@ The SDK provides an API for programmatically controlling the player and listenin
 
     <Aside>
 
-      This will _only_ work once during initialization. Beyond that point the user has full control over their text track settings.
+    This will _only_ work once during initialization. Beyond that point the user has full control over their text track settings.
 
     </Aside>
 
@@ -117,7 +117,7 @@ The SDK provides an API for programmatically controlling the player and listenin
 
     <Aside>
 
-      The `<video>` element does not force the browser to follow the value of this attribute; it is a mere hint. Even though the `preload="none"` option is a valid HTML5 attribute, Stream player will always load some metadata to initialize the player. The amount of data loaded in this case is negligible.
+    The `<video>` element does not force the browser to follow the value of this attribute; it is a mere hint. Even though the `preload="none"` option is a valid HTML5 attribute, Stream player will always load some metadata to initialize the player. The amount of data loaded in this case is negligible.
 
     </Aside>
 

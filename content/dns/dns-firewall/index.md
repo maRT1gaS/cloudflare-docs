@@ -16,7 +16,7 @@ When a DNS query goes to your nameservers:
 1. Queries go to the closest Cloudflare data center to the website visitor.
 1. Cloudflare tries to return a response from DNS cache.
 1. If the cache is not available, Cloudflare queries the provider's nameservers.
-1. Cloudflare temporarily caches the response for subsequent DNS queries. 
+1. Cloudflare temporarily caches the response for subsequent DNS queries.
 
 ## Benefits
 

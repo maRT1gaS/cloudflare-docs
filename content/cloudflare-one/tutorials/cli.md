@@ -12,7 +12,7 @@ These instructions are not meant for configuring a service to run against an API
 
 **🗺️ This walkthrough covers how to:**
 
-* Connect to resources secured by Cloudflare Access from a CLI
+- Connect to resources secured by Cloudflare Access from a CLI
 
 **⏲️ Time to complete:**
 
@@ -30,15 +30,15 @@ Once you have installed `cloudflared`, you can use it to retrieve a Cloudflare A
 $ cloudflared access login https://example.com
 ```
 
-  With this command, `cloudflared` launches a browser window containing the same Access login page found when attempting to access a web application.
+With this command, `cloudflared` launches a browser window containing the same Access login page found when attempting to access a web application.
 
 2. Select your identity provider and log in.
 
-  If the browser window does not launch, you can use the unique URL that is automatically printed to the command line.
+If the browser window does not launch, you can use the unique URL that is automatically printed to the command line.
 
 3. Once you have successfully authenticated, the browser returns the token to `cloudflared` in a cryptographic transfer and stores it.
 
-  The token is valid for the session duration configured by the Access administrator.
+The token is valid for the session duration configured by the Access administrator.
 
 ## Access your API
 
@@ -86,15 +86,15 @@ Set up a token as an environment variable as follows:
 
 1. Run the following command to export the token to the shell environment:
 
-    ```sh
-    $ export TOKEN=$(cloudflared access token -app=http://example.com)
-    ```
+   ```sh
+   $ export TOKEN=$(cloudflared access token -app=http://example.com)
+   ```
 
 2. Confirm the token was saved with the following:
 
-    ```sh
-    $ echo $TOKEN
-    ```
+   ```sh
+   $ echo $TOKEN
+   ```
 
 Once you have exported the token to your environment, use the variable with the Cloudflare Access request header in the script to access a protected endpoint, as in the following example:
 

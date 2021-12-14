@@ -61,7 +61,7 @@ Once you have deployed your Sanity studio:
 
 1. Go into Sanity's management panel ([manage.sanity.io](https://manage.sanity.io)).
 2. Find your project.
-3. Select **API**. 
+3. Select **API**.
 4. Add `http://localhost:3000` as an allowed CORS origin for your project.
 
 This means that requests that come to your Sanity dataset from your Nuxt application will be whitelisted.
@@ -136,12 +136,11 @@ To begin, update the `index` page, which will be rendered when you visit the roo
 ---
 filename: pages/index.vue
 ---
+
 <template>
   <div class="container">
     <div>
-      <h1 class="title">
-        My Blog
-      </h1>
+      <h1 class="title">My Blog</h1>
     </div>
     <div class="posts">
       <div v-for="post in posts" :key="post._id">
@@ -152,25 +151,25 @@ filename: pages/index.vue
 </template>
 
 <script>
-import { groq } from '@nuxtjs/sanity'
+  import { groq } from '@nuxtjs/sanity';
 
-export default {
-  async asyncData({ $sanity }) {
-    const query = groq`*[_type == "post"]`
-    const posts = await $sanity.fetch(query)
-    return { posts }
-  },
-}
+  export default {
+    async asyncData({ $sanity }) {
+      const query = groq`*[_type == "post"]`;
+      const posts = await $sanity.fetch(query);
+      return { posts };
+    },
+  };
 </script>
 
 <style>
-.container {
-  margin: 2rem;
-  min-height: 100vh;
-}
-.posts {
-  margin: 2rem 0;
-}
+  .container {
+    margin: 2rem;
+    min-height: 100vh;
+  }
+  .posts {
+    margin: 2rem 0;
+  }
 </style>
 ```
 
@@ -182,6 +181,7 @@ Importantly, `v-for` is used as a directive to tell Vue to render HTML for each 
 ---
 header: Inspecting the v-for directive
 ---
+
 <div v-for="post in posts" :key="post._id">
   <h2><a v-bind:href="post.slug.current" v-text="post.title" /></h2>
 </div>
@@ -211,12 +211,13 @@ Nuxt has built-in support for these kind of pages, by creating a new file in `pa
 ---
 filename: pages/_slug.vue
 ---
+
 <script>
-export default {
-  async asyncData({ params, $sanity }) {
-    console.log(params) // { slug: "hello-world" }
-  }
-}
+  export default {
+    async asyncData({ params, $sanity }) {
+      console.log(params); // { slug: "hello-world" }
+    },
+  };
 </script>
 ```
 
@@ -226,41 +227,43 @@ With that in mind, you can build `pages/_slug.vue` to take the incoming `slug` v
 ---
 filename: pages/_slug.vue
 ---
+
 <template>
   <div class="container">
     <div v-if="post">
       <h1 class="title" v-text="post.title" />
-      <div class="content">
-      </div>
+      <div class="content"></div>
     </div>
     <h4><a href="/">← Go back</a></h4>
   </div>
 </template>
 
 <script>
-import { groq } from '@nuxtjs/sanity'
+  import { groq } from '@nuxtjs/sanity';
 
-export default {
-  async asyncData({ params, $sanity }) {
-    const query = groq`*[_type == "post" && slug.current == "${params.slug}"][0]`
-    const post = await $sanity.fetch(query)
-    return { post }
-  }
-}
+  export default {
+    async asyncData({ params, $sanity }) {
+      const query = groq`*[_type == "post" && slug.current == "${params.slug}"][0]`;
+      const post = await $sanity.fetch(query);
+      return { post };
+    },
+  };
 </script>
 
 <style>
-.container {
-  margin: 2rem;
-  min-height: 100vh;
-}
+  .container {
+    margin: 2rem;
+    min-height: 100vh;
+  }
 
-.content {
-  margin: 2rem 0;
-  max-width: 38rem;
-}
+  .content {
+    margin: 2rem 0;
+    max-width: 38rem;
+  }
 
-p { margin: 1rem 0; }
+  p {
+    margin: 1rem 0;
+  }
 </style>
 ```
 
@@ -308,12 +311,17 @@ In `pages/_slug.vue`, you can now use the `<block-content>` component to render 
 filename: pages/_slug.vue
 highlight: [6]
 ---
+
 <template>
   <div class="container">
     <div v-if="post">
       <h1 class="title" v-text="post.title" />
       <div class="content">
-        <block-content :blocks="child" v-for="child in post.body" :key="child._id" />
+        <block-content
+          :blocks="child"
+          v-for="child in post.body"
+          :key="child._id"
+        />
       </div>
     </div>
     <h4><a href="/">← Go back</a></h4>
@@ -321,29 +329,31 @@ highlight: [6]
 </template>
 
 <script>
-import { groq } from '@nuxtjs/sanity'
+  import { groq } from '@nuxtjs/sanity';
 
-export default {
-  async asyncData({ params, $sanity }) {
-    const query = groq`*[_type == "post" && slug.current == "${params.slug}"][0]`
-    const post = await $sanity.fetch(query)
-    return { post }
-  }
-}
+  export default {
+    async asyncData({ params, $sanity }) {
+      const query = groq`*[_type == "post" && slug.current == "${params.slug}"][0]`;
+      const post = await $sanity.fetch(query);
+      return { post };
+    },
+  };
 </script>
 
 <style>
-.container {
-  margin: 2rem;
-  min-height: 100vh;
-}
+  .container {
+    margin: 2rem;
+    min-height: 100vh;
+  }
 
-.content {
-  margin: 2rem 0;
-  max-width: 38rem;
-}
+  .content {
+    margin: 2rem 0;
+    max-width: 38rem;
+  }
 
-p { margin: 1rem 0; }
+  p {
+    margin: 1rem 0;
+  }
 </style>
 ```
 
@@ -354,18 +364,21 @@ In `pages/index.vue`, you can use the `block-content` component to render a summ
 filename: pages/index.vue
 highlight: [11, 12, 13, 39]
 ---
+
 <template>
   <div class="container">
     <div>
-      <h1 class="title">
-        My Blog
-      </h1>
+      <h1 class="title">My Blog</h1>
     </div>
     <div class="posts">
       <div v-for="post in posts" :key="post._id">
         <h2><a v-bind:href="post.slug.current" v-text="post.title" /></h2>
         <div class="summary">
-          <block-content :blocks="post.body[0]" v-bind:key="post.body[0]._id" v-if="post.body.length" />
+          <block-content
+            :blocks="post.body[0]"
+            v-bind:key="post.body[0]._id"
+            v-if="post.body.length"
+          />
         </div>
       </div>
     </div>
@@ -373,26 +386,28 @@ highlight: [11, 12, 13, 39]
 </template>
 
 <script>
-import { groq } from '@nuxtjs/sanity'
+  import { groq } from '@nuxtjs/sanity';
 
-export default {
-  async asyncData({ $sanity }) {
-    const query = groq`*[_type == "post"]`
-    const posts = await $sanity.fetch(query)
-    return { posts }
-  },
-}
+  export default {
+    async asyncData({ $sanity }) {
+      const query = groq`*[_type == "post"]`;
+      const posts = await $sanity.fetch(query);
+      return { posts };
+    },
+  };
 </script>
 
 <style>
-.container {
-  margin: 2rem;
-  min-height: 100vh;
-}
-.posts {
-  margin: 2rem 0;
-}
-.summary { margin-top: 0.5rem; }
+  .container {
+    margin: 2rem;
+    min-height: 100vh;
+  }
+  .posts {
+    margin: 2rem 0;
+  }
+  .summary {
+    margin-top: 0.5rem;
+  }
 </style>
 ```
 

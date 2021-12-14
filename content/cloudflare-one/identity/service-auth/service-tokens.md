@@ -8,9 +8,10 @@ pcx-content-type: how-to
 <Aside>
 
 This feature is only available if you're using the Teams Standard plan or the Teams Enterprise plan. For more information, see our [plans page](https://www.cloudflare.com/teams-pricing/).
+
 </Aside>
 
-You can provide automated systems with service tokens to authenticate against Cloudflare's Zero Trust policies. Cloudflare for teams will generate service tokens that consist of an ID and Secret. Automated systems or applications can then use these values to reach an application protected by Access. 
+You can provide automated systems with service tokens to authenticate against Cloudflare's Zero Trust policies. Cloudflare for teams will generate service tokens that consist of an ID and Secret. Automated systems or applications can then use these values to reach an application protected by Access.
 
 This section covers how to create, renew, and revoke a service token.
 
@@ -24,17 +25,17 @@ This section covers how to create, renew, and revoke a service token.
 
 1. Next, name the service token.
 
-  The name allows you to easily identify events related to the token in the logs and to revoke the token individually.
+The name allows you to easily identify events related to the token in the logs and to revoke the token individually.
 
-  ![Name Service Token](../../static/documentation/identity/users/service-token-name.png)
+![Name Service Token](../../static/documentation/identity/users/service-token-name.png)
 
 1. Click **Generate token**.
-  
-  The next page will display the generated `Client ID` and `Client Secret` for the service token.
+
+The next page will display the generated `Client ID` and `Client Secret` for the service token.
 
 1. In the next page, copy the `Client Secret`.
 
-  ![Access Service Token card](../../static/documentation/identity/users/detail-service-token.png)
+![Access Service Token card](../../static/documentation/identity/users/detail-service-token.png)
 
 <Aside type='warning' header='Important'>
 
@@ -47,6 +48,7 @@ This is the **only time** Cloudflare Access will display the Client Secret. If y
 You can now use the service token when you create [service auth policies](/policies/zero-trust/). When creating these policies, use the `Service Auth` action to ensure that the identity provider login screen is not required for end users.
 
 ## Connect your service to Access
+
 Access expects both values as headers in any request sent to the applications behind Access. Add the following to the headers of any requests and name them as follows:
 
 `CF-Access-Client-Id: <Client ID>`
@@ -71,10 +73,10 @@ To revoke a service token immediately:
 
 When revoking service tokens, keep in mind:
 
-* Services that rely on a deleted service token can no longer reach your application.
-* Clicking **Revoke Existing Tokens** when editing a policy in the **Edit Access Policy** dialog revokes existing sessions but does not revoke access.
+- Services that rely on a deleted service token can no longer reach your application.
+- Clicking **Revoke Existing Tokens** when editing a policy in the **Edit Access Policy** dialog revokes existing sessions but does not revoke access.
 
-As long as the Client ID and Client Secret are still valid, they can be exchanged for a new token on the next request. To revoke access, you must *delete* the service token.
+As long as the Client ID and Client Secret are still valid, they can be exchanged for a new token on the next request. To revoke access, you must _delete_ the service token.
 
 ## Set a token expiration alert
 
@@ -94,7 +96,7 @@ To configure a service token expiration alert:
 
    ![Expiration notification](../../static/documentation/identity/users/notification-token.png)
 
-1. If you'd like to add other recipients for the notification email, click *+Add email recipient*.
+1. If you'd like to add other recipients for the notification email, click _+Add email recipient_.
 
 1. Click **Create**.
 

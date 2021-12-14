@@ -9,8 +9,8 @@ You can manage your Cloudflare Logpush service from the command line using cURL.
 
 Before getting started, review:
 
-* [Logpush API configuration](/reference/logpush-api-configuration)
-* [Logpush job object definition](https://api.cloudflare.com/#logpush-jobs-properties)
+- [Logpush API configuration](/reference/logpush-api-configuration)
+- [Logpush job object definition](https://api.cloudflare.com/#logpush-jobs-properties)
 
 <Aside type="note">
 
@@ -22,14 +22,15 @@ The examples below are for zone-scoped data sets. Account-scoped data sets shoul
 
 ```bash
 $ curl -s -XPOST https://api.cloudflare.com/client/v4/zones/<ZONE_ID>/logpush/ownership \
--H "X-Auth-Email: user@example.com" \ 
+-H "X-Auth-Email: user@example.com" \
 -H "X-Auth-Key: api_key" \
--H "Content-Type: application/json" \ 
+-H "Content-Type: application/json" \
 --data '{"destination_conf":"s3://<BUCKET_PATH>?region=us-west-2"}' | jq .
 ```
 
 ### Parameters
-* *destination_conf* - see [Destination](/reference/logpush-api-configuration/#destination) for details
+
+- _destination_conf_ - see [Destination](/reference/logpush-api-configuration/#destination) for details
 
 ### Response
 
@@ -53,6 +54,7 @@ You will need to provide the token contained in this file when creating a job in
 <Aside type="note" header="Note">
 
 When using Sumo Logic, you may find it helpful to have [Live Tail](https://help.sumologic.com/05Search/Live-Tail/About-Live-Tail) open to see the challenge file as soon as it's uploaded.
+
 </Aside>
 
 ## Step 2 - Create a job
@@ -65,15 +67,15 @@ https://api.cloudflare.com/client/v4/zones/<ZONE_ID>/logpush/jobs \
 
 ### Parameters
 
-* *name* (optional) - we suggest using your domain name as the job name; cannot be changed after the job is created
-* *destination_conf* - see [Destination](/reference/logpush-api-configuration/#destination) for details
-* *dataset* - the category of logs you want to receive; either  `http_requests` (default), `spectrum_events`, or `firewall_events`; cannot be changed after the job is created
-* *logpull_options* (optional) - see [Options](/reference/logpush-api-configuration/#options)
-    * Typically includes the desired fields and timestamp format
-    * Set the timestamp format to RFC 3339 (`&timestamps=rfc3339`) for:
-      * Google BigQuery usage
-      * Automated timestamp parsing within Sumo Logic; *see [timestamps from Sumo Logic](https://help.sumologic.com/03Send-Data/Sources/04Reference-Information-for-Sources/Timestamps%2C-Time-Zones%2C-Time-Ranges%2C-and-Date-Formats) for details*
-* *ownership_challenge* - challenge token required to prove destination ownership
+- _name_ (optional) - we suggest using your domain name as the job name; cannot be changed after the job is created
+- _destination_conf_ - see [Destination](/reference/logpush-api-configuration/#destination) for details
+- _dataset_ - the category of logs you want to receive; either `http_requests` (default), `spectrum_events`, or `firewall_events`; cannot be changed after the job is created
+- _logpull_options_ (optional) - see [Options](/reference/logpush-api-configuration/#options)
+  - Typically includes the desired fields and timestamp format
+  - Set the timestamp format to RFC 3339 (`&timestamps=rfc3339`) for:
+    - Google BigQuery usage
+    - Automated timestamp parsing within Sumo Logic; _see [timestamps from Sumo Logic](https://help.sumologic.com/03Send-Data/Sources/04Reference-Information-for-Sources/Timestamps%2C-Time-Zones%2C-Time-Ranges%2C-and-Date-Formats) for details_
+- _ownership_challenge_ - challenge token required to prove destination ownership
 
 ### Response
 
@@ -131,20 +133,20 @@ https://api.cloudflare.com/client/v4/zones/<ZONE_ID>/logpush/jobs/146 | jq .
 
 ```json
 {
- "errors": [],
- "messages": [],
- "result": {
-     "id": 146,
-     "dataset": "http_requests",
-     "enabled": false,
-     "name": "<DOMAIN_NAME>",
-     "logpull_options": "fields=RayID,EdgeStartTimestamp&timestamps=rfc3339",
-     "destination_conf": "s3://<BUCKET_PATH>?region=us-west-2",
-     "last_complete": null,
-     "last_error": null,
-     "error_message": null
- },
- "success": true
+  "errors": [],
+  "messages": [],
+  "result": {
+    "id": 146,
+    "dataset": "http_requests",
+    "enabled": false,
+    "name": "<DOMAIN_NAME>",
+    "logpull_options": "fields=RayID,EdgeStartTimestamp&timestamps=rfc3339",
+    "destination_conf": "s3://<BUCKET_PATH>?region=us-west-2",
+    "last_complete": null,
+    "last_error": null,
+    "error_message": null
+  },
+  "success": true
 }
 ```
 
@@ -168,30 +170,30 @@ https://api.cloudflare.com/client/v4/zones/<ZONE_ID>/logpush/jobs/146 -d'{"enabl
 
 ```json
 {
- "errors": [],
- "messages": [],
- "result": {
-     "id": 146,
-     "dataset": "http_requests",
-     "enabled": true,
-     "name": "<DOMAIN_NAME>",
-     "logpull_options": "fields=RayID,EdgeStartTimestamp&timestamps=rfc3339",
-     "destination_conf": "s3://<BUCKET_PATH>?region=us-west-2",
-     "last_complete": null,
-     "last_error": null,
-     "error_message": null
- },
- "success": true
+  "errors": [],
+  "messages": [],
+  "result": {
+    "id": 146,
+    "dataset": "http_requests",
+    "enabled": true,
+    "name": "<DOMAIN_NAME>",
+    "logpull_options": "fields=RayID,EdgeStartTimestamp&timestamps=rfc3339",
+    "destination_conf": "s3://<BUCKET_PATH>?region=us-west-2",
+    "last_complete": null,
+    "last_error": null,
+    "error_message": null
+  },
+  "success": true
 }
 ```
 
 Once the job is enabled, you will start receiving logs within a few minutes and then in batches as soon as possible until you disable the job. For zones with very high request volume, it may take several hours before you start receiving logs for the first time.
 
-In addition to modifying *enabled*, you can also update the value for *logpull_options*. To modify *destination_conf*, you will need to request an ownership challenge and provide the associated token with your update request. You can also delete your current job and create a new one.
+In addition to modifying _enabled_, you can also update the value for _logpull_options_. To modify _destination_conf_, you will need to request an ownership challenge and provide the associated token with your update request. You can also delete your current job and create a new one.
 
-Once a job has been enabled and has started executing, the *last_complete* field will show the time when the last batch of logs was successfully sent to the destination:
+Once a job has been enabled and has started executing, the _last_complete_ field will show the time when the last batch of logs was successfully sent to the destination:
 
-### Request to get job by ID and see *last_complete* info
+### Request to get job by ID and see _last_complete_ info
 
 ```bash
 curl -s -X GET \
@@ -201,20 +203,21 @@ https://api.cloudflare.com/client/v4/zones/<ZONE_ID>logpush/jobs/146 | jq .
 ### Response
 
 ```json
-{"errors": [],
- "messages": [],
- "result": {
-     "id": 146,
-     "dataset": "http_requests",
-     "enabled": true,
-     "name": "<DOMAIN_NAME>",
-     "logpull_options": "fields=RayID,EdgeStartTimestamp&timestamps=rfc3339",
-     "destination_conf": "s3://<BUCKET_PATH>?region=us-west-2",
-     "last_complete": "2018-08-09T21:26:00Z",
-     "last_error": null,
-     "error_message": null
- },
- "success": true
+{
+  "errors": [],
+  "messages": [],
+  "result": {
+    "id": 146,
+    "dataset": "http_requests",
+    "enabled": true,
+    "name": "<DOMAIN_NAME>",
+    "logpull_options": "fields=RayID,EdgeStartTimestamp&timestamps=rfc3339",
+    "destination_conf": "s3://<BUCKET_PATH>?region=us-west-2",
+    "last_complete": "2018-08-09T21:26:00Z",
+    "last_error": null,
+    "error_message": null
+  },
+  "success": true
 }
 ```
 
@@ -254,15 +257,15 @@ curl -s -X GET https://api.cloudflare.com/client/v4/zones/<ZONE_ID>/logpush/jobs
   "messages": [],
   "result": [
     {
-     "id": 146,
-     "dataset": "http_requests",
-     "enabled": true,
-     "name": "<DOMAIN_NAME>",
-     "logpull_options": "fields=RayID,EdgeStartTimestamp&timestamps=rfc3339",
-     "destination_conf": "s3://<BUCKET_PATH>?region=us-west-2",
-     "last_complete": null,
-     "last_error": null,
-     "error_message": null
+      "id": 146,
+      "dataset": "http_requests",
+      "enabled": true,
+      "name": "<DOMAIN_NAME>",
+      "logpull_options": "fields=RayID,EdgeStartTimestamp&timestamps=rfc3339",
+      "destination_conf": "s3://<BUCKET_PATH>?region=us-west-2",
+      "last_complete": null,
+      "last_error": null,
+      "error_message": null
     }
   ],
   "success": true

@@ -13,14 +13,14 @@ The Workers platform currently only implements an â€œidentity transform streamâ€
 ## Constructor
 
 ```js
-let { readable, writable } = new TransformStream()
+let { readable, writable } = new TransformStream();
 ```
 
 <Definitions>
 
 - `TransformStream()` <Type>TransformStream</Type>
 
-    - Returns a new identity transform stream.
+  - Returns a new identity transform stream.
 
 </Definitions>
 
@@ -29,9 +29,9 @@ let { readable, writable } = new TransformStream()
 <Definitions>
 
 - `readable` <TypeLink href="#readablestream">ReadableStream</TypeLink>
-    - An instance of a `ReadableStream`.
+  - An instance of a `ReadableStream`.
 - `writable` <TypeLink href="#writablestream">WritableStream</TypeLink>
-    - An instance of a `WritableStream`.
+  - An instance of a `WritableStream`.
 
 </Definitions>
 

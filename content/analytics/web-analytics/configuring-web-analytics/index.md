@@ -7,4 +7,4 @@ pcx-content-type: navigation
 
 Customize your Web Analytics views by using filters.
 
-<DirectoryListing path="/web-analytics/configuring-web-analytics"/>
+<DirectoryListing path="/web-analytics/configuring-web-analytics" />

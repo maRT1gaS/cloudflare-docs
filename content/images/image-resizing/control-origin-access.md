@@ -10,14 +10,14 @@ You can serve resized images without giving access to the original image. Images
 All these behaviors are completely customizable, because they are handled by custom code of a script running [on the edge in a Cloudflare Worker](/image-resizing/resize-with-workers).
 
 ```js
-addEventListener("fetch", event => {
-  event.respondWith(handleRequest(event.request))
-})
+addEventListener('fetch', event => {
+  event.respondWith(handleRequest(event.request));
+});
 
 async function handleRequest(request) {
   // Here you can compute arbitrary imageURL and
   // resizingOptions from any request data ...
-  return fetch(imageURL, {cf:{image:resizingOptions}})
+  return fetch(imageURL, { cf: { image: resizingOptions } });
 }
 ```
 
@@ -35,17 +35,19 @@ When testing Image Resizing, make sure you deploy the script and test it from a 
 
 ```js
 async function handleRequest(request) {
-  const resizingOptions = {/* resizing options will be demonstrated in the next example */}
+  const resizingOptions = {
+    /* resizing options will be demonstrated in the next example */
+  };
 
-  const hiddenImageOrigin = "https://secret.example.com/hidden-directory"
-  const requestURL = new URL(request.url)
+  const hiddenImageOrigin = 'https://secret.example.com/hidden-directory';
+  const requestURL = new URL(request.url);
   // Append the request path such as "/assets/image1.jpg" to the hiddenImageOrigin.
   // You could also process the path to add or remove directories, modify filenames, etc.
-  const imageURL = hiddenImageOrigin + requestURL.path
+  const imageURL = hiddenImageOrigin + requestURL.path;
   // This will fetch image from the given URL, but to the website's visitors this
   // will appear as a response to the original request. Visitor’s browser will
   // not see this URL.
-  return fetch(imageURL, {cf:{image:resizingOptions}})
+  return fetch(imageURL, { cf: { image: resizingOptions } });
 }
 ```
 
@@ -76,28 +78,34 @@ You do not have to include actual pixel dimensions in the URL. You can embed siz
 
 ```js
 async function handleRequest(request) {
-  const requestURL = new URL(request.url)
-  const resizingOptions = {}
+  const requestURL = new URL(request.url);
+  const resizingOptions = {};
 
   // The regex selects the first path component after the "images"
   // prefix, and the rest of the path (e.g. "/images/first/rest")
-  const match = requestURL.path.match(/images\/([^/]+)\/(.+)/)
+  const match = requestURL.path.match(/images\/([^/]+)\/(.+)/);
 
   // You can require the first path component to be one of the
   // predefined sizes only, and set actual dimensions accordingly.
   switch (match && match[1]) {
-    case "small": resizingOptions.width = 300; break;
-    case "medium": resizingOptions.width = 600; break;
-    case "large": resizingOptions.width = 900; break;
+    case 'small':
+      resizingOptions.width = 300;
+      break;
+    case 'medium':
+      resizingOptions.width = 600;
+      break;
+    case 'large':
+      resizingOptions.width = 900;
+      break;
     default:
-      throw Error("invalid size");
+      throw Error('invalid size');
   }
 
   // The remainder of the path may be used to locate the original
   // image, e.g. here "/images/small/image1.jpg" would map to
   // "https://storage.example.com/bucket/image1.jpg" resized to 300px.
-  const imageURL = "https://storage.example.com/bucket/" + match[2]
-  return fetch(imageURL, {cf:{image:resizingOptions}})
+  const imageURL = 'https://storage.example.com/bucket/' + match[2];
+  return fetch(imageURL, { cf: { image: resizingOptions } });
 }
 ```
 
@@ -111,7 +119,7 @@ highlight: [9]
 ---
 // generate signed headers (application specific)
 const signedHeaders = generatedSignedHeaders();
- 
+
 fetch(private_url, {
   headers: signedHeaders
   cf: {
@@ -125,9 +133,9 @@ fetch(private_url, {
 
 When using this code, the following headers are passed through to the origin, and allow your request to be successful:
 
-* `Authorization`
-* `Cookie`
-* `x-amz-content-sha256`
-* `x-amz-date`
+- `Authorization`
+- `Cookie`
+- `x-amz-content-sha256`
+- `x-amz-date`
 
 For more information, refer to [Authenticating Requests (AWS Signature Version 4)](https://docs.aws.amazon.com/AmazonS3/latest/API/sig-v4-authenticating-requests.html).

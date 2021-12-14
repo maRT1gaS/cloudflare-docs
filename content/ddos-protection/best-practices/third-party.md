@@ -14,8 +14,8 @@ Cloudflare recommends that you **do not use a third-party CDN in front of Cloudf
 
 Therefore, it is recommended that you **use the [Cloudflare CDN](https://developers.cloudflare.com/cache/)**, which provides the following benefits:
 
-* You remove an additional hop between vendor data centers, thus reducing latency for your users.
-* You perform DDoS filtering in the first point of contact from the Internet, which is a recommended best practice.
+- You remove an additional hop between vendor data centers, thus reducing latency for your users.
+- You perform DDoS filtering in the first point of contact from the Internet, which is a recommended best practice.
 
 Note that, if you are using a third-party CDN in front of Cloudflare and Cloudflare mitigates a DDoS attack, you will still pay your first-hop CDN provider for the attack traffic that they processed before it was mitigated by Cloudflare.
 
@@ -23,8 +23,8 @@ Note that, if you are using a third-party CDN in front of Cloudflare and Cloudfl
 
 If you are using the Akamai CDN in front of Cloudflare, it is recommended that you change the action and/or sensitivity level of the DDoS rule named **HTTP requests with unusual HTTP headers or URI path (signature #1)** with rule ID `0b1e17bd25c74e38834f19043486aee1`:
 
-* Change the rule’s action to _Log_ (only available on Enterprise plans) to view the flagged traffic in the [analytics dashboard](/reference/analytics).
-* Alternatively, change the rule's **Sensitivity Level** to _Essentially Off_ to prevent the rule from being triggered.
+- Change the rule’s action to _Log_ (only available on Enterprise plans) to view the flagged traffic in the [analytics dashboard](/reference/analytics).
+- Alternatively, change the rule's **Sensitivity Level** to _Essentially Off_ to prevent the rule from being triggered.
 
 For more information, refer to [HTTP DDoS Attack Protection Managed Ruleset > Ruleset configuration](/managed-rulesets/http#ruleset-configuration).
 
@@ -40,8 +40,8 @@ Additionally, since this traffic may also be targeting a limited set of destinat
 
 If your organization uses VPNs, NATs, or third-party services at high rates of over 100 Mbps, it is recommended that you one of the following:
 
-* Change the **Sensitivity Level** of the relevant rules to a lower level. Changing the level to _Essentially Off_ will prevent the rules from being triggered. Refer to [HTTP DDoS Attack Protection Managed Ruleset](/managed-rulesets/http) and [Network-layer DDoS Attack Protection Managed Ruleset](/managed-rulesets/network) for more information on the available adjustments per ruleset and how to perform them.
+- Change the **Sensitivity Level** of the relevant rules to a lower level. Changing the level to _Essentially Off_ will prevent the rules from being triggered. Refer to [HTTP DDoS Attack Protection Managed Ruleset](/managed-rulesets/http) and [Network-layer DDoS Attack Protection Managed Ruleset](/managed-rulesets/network) for more information on the available adjustments per ruleset and how to perform them.
 
-* Exclude the desired traffic from the Managed DDoS rule using expression filters. You can exclude a combination of source ports, source IP addresses, destination ports, destination IP addresses, and protocol. For more information, refer to [Configure Network-layer DDoS Attack Protection via API](/managed-rulesets/network/configure-api).
+- Exclude the desired traffic from the Managed DDoS rule using expression filters. You can exclude a combination of source ports, source IP addresses, destination ports, destination IP addresses, and protocol. For more information, refer to [Configure Network-layer DDoS Attack Protection via API](/managed-rulesets/network/configure-api).
 
 If you are on an Enterprise plan, you can change a rule’s action to _Log_ to view the flagged traffic in the [analytics dashboard](/reference/analytics). After gathering this information, you can later define rule adjustments as previously described.

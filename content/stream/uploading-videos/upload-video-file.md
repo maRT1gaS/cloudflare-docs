@@ -39,8 +39,8 @@ Note that cURL `-F` flag automatically configures the content-type header and ma
 Important: Cloudflare Stream requires a minimum chunk size of 5,242,880 bytes when using TUS, unless the entire file is less than this amount.
 
 We recommend increasing the chunk size to 52,428,800 bytes for better performance when the client connection is expected to be reliable.
-	
 Maximum chunk size can be 209,715,200 bytes.
+
 </Aside>
 
 <Aside>
@@ -193,52 +193,52 @@ npm install tus-js-client
 
 Set up an index.js and configure:
 
-* API endpoint with your Cloudflare Account ID
-* Request headers to include a API token
+- API endpoint with your Cloudflare Account ID
+- Request headers to include a API token
 
 ```javascript
-var fs = require("fs");
-var tus = require("tus-js-client");
+var fs = require('fs');
+var tus = require('tus-js-client');
 
 // specify location of file you'd like to upload below
-var path = __dirname + "/test.mp4";
+var path = __dirname + '/test.mp4';
 var file = fs.createReadStream(path);
 var size = fs.statSync(path).size;
-var mediaId = ''
+var mediaId = '';
 
 var options = {
-  endpoint: "https://api.cloudflare.com/client/v4/accounts/{ACCOUNT ID}/stream",
+  endpoint: 'https://api.cloudflare.com/client/v4/accounts/{ACCOUNT ID}/stream',
   headers: {
-    'Authorization': 'Bearer $TOKEN',
+    Authorization: 'Bearer $TOKEN',
   },
   chunkSize: 50 * 1024 * 1024, // Required a minimum chunk size of 5MB, here we use 50MB.
   resume: true,
   metadata: {
-    filename: "test.mp4",
-    filetype: "video/mp4",
+    filename: 'test.mp4',
+    filetype: 'video/mp4',
     defaulttimestamppct: 0.5,
-    watermark: "$WATERMARKUID"
+    watermark: '$WATERMARKUID',
   },
   uploadSize: size,
   onError: function (error) {
     throw error;
   },
   onProgress: function (bytesUploaded, bytesTotal) {
-    var percentage = (bytesUploaded / bytesTotal * 100).toFixed(2);
-    console.log(bytesUploaded, bytesTotal, percentage + "%");
+    var percentage = ((bytesUploaded / bytesTotal) * 100).toFixed(2);
+    console.log(bytesUploaded, bytesTotal, percentage + '%');
   },
   onSuccess: function () {
-    console.log("Upload finished");
+    console.log('Upload finished');
   },
   onAfterResponse: function (req, res) {
     return new Promise(resolve => {
-        var mediaIdHeader = res.getHeader("stream-media-id");
-        if (mediaIdHeader) {
-            mediaId = mediaIdHeader;
-        }
-        resolve()
-    })
-  }
+      var mediaIdHeader = res.getHeader('stream-media-id');
+      if (mediaIdHeader) {
+        mediaId = mediaIdHeader;
+      }
+      resolve();
+    });
+  },
 };
 
 var upload = new tus.Upload(file, options);

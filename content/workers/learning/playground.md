@@ -7,21 +7,28 @@ pcx-content-type: concept
 
 The quickest way to experiment with Cloudflare Workers is in the [Playground](https://cloudflareworkers.com/#36ebe026bf3510a2e5acace89c09829f:about:blank). It does not require any setup. The Playground is a sandbox which gives an instant way to preview and test a Workers script directly in the browser against any site.
 
-<p><Button type="primary" href="https://cloudflareworkers.com/#36ebe026bf3510a2e5acace89c09829f:about:blank">Launch playground</Button></p>
+<p>
+  <Button
+    type="primary"
+    href="https://cloudflareworkers.com/#36ebe026bf3510a2e5acace89c09829f:about:blank"
+  >
+    Launch playground
+  </Button>
+</p>
 
---------------------------------
+---
 
 ## Hello world
 
 When you arrive in the playground, you will see this default code:
 
 ```javascript
-addEventListener("fetch", event => {
-  event.respondWith(handleRequest(event.request))
-})
+addEventListener('fetch', event => {
+  event.respondWith(handleRequest(event.request));
+});
 
 async function handleRequest(request) {
-  return new Response("Hello world")
+  return new Response('Hello world');
 }
 ```
 
@@ -29,17 +36,17 @@ This is the least complex Worker you can write. When the Worker receives a reque
 
 Refer to the reference for [addEventListener](/runtime-apis/add-event-listener), [FetchEvent](/runtime-apis/fetch-event), and [FetchEvent lifecycle](/learning/fetch-event-lifecycle) to learn more.
 
---------------------------------
+---
 
 ## Beyond hello world
 
 To get familiar with Workers, experiment with the Playground by borrowing [Examples](/examples) from the documentation. This will allow you to experience firsthand [what Workers can do](https://www.cloudflare.com/learning/serverless/why-use-serverless/).
 
---------------------------------
+---
 
 ## Using the Playground
 
-There are two versions of the Playground available. The [browser Playground](cloudflareworkers.com) and the dashboard Playground, also known as the previewer. 
+There are two versions of the Playground available. The [browser Playground](cloudflareworkers.com) and the dashboard Playground, also known as the previewer.
 
 To access the dashboard Playground, log into your Cloudflare account and go to **Account Home** > **Workers** > **your Worker script** > **Quick edit**.
 
@@ -51,7 +58,7 @@ You can modify the script and click the preview button to view the effect on the
 
 To test a raw HTTP request — not in an HTML previewer, for example, to test a `POST` request — go to **HTTP**. To run the HTTP preview, select **Run Test**.
 
---------------------------------
+---
 
 ## Devtools
 

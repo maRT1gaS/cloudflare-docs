@@ -4,7 +4,7 @@ pcx-content-type: how-to
 order: 310
 ---
 
-import firewallRulesExpressionBuilder10 from '../images/firewall-rules-expression-builder-10.gif'
+import firewallRulesExpressionBuilder10 from '../images/firewall-rules-expression-builder-10.gif';
 
 # Create, edit, and delete rules
 

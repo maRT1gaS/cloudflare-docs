@@ -3,7 +3,7 @@ order: 3
 type: example
 summary: Use a pre-existing Access group.
 tags:
-- Access group
+  - Access group
 ---
 
 # Access group

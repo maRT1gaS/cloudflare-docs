@@ -7,7 +7,7 @@ pcx-content-type: navigation
 
 Learn more about SSL/TLS protection options for your edge certificates:
 
-<DirectoryListing path="/edge-certificates"/>
+<DirectoryListing path="/edge-certificates" />
 
 <Aside type="note">
 

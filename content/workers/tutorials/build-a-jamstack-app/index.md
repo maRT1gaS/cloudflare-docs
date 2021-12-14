@@ -1,15 +1,15 @@
 ---
 updated: 2020-03-09
 difficulty: Beginner
-content_type: "📝 Tutorial"
+content_type: '📝 Tutorial'
 pcx-content-type: tutorial
 ---
 
-import TutorialsBeforeYouStart from "../../_partials/_tutorials-before-you-start.md"
+import TutorialsBeforeYouStart from '../../_partials/_tutorials-before-you-start.md';
 
 # Build a Todo list JAMstack application
 
-<TutorialsBeforeYouStart/>
+<TutorialsBeforeYouStart />
 
 ## Overview
 
@@ -19,7 +19,7 @@ In this tutorial, you will build a todo list application using HTML, CSS, and Ja
 
 Before starting this project, you should have some experience with HTML, CSS, and JavaScript. If you are new to writing web applications, Workers is a great platform to get started. You will learn:
 
-1. How building with Workers makes it easy to focus on writing code and ship finished products. 
+1. How building with Workers makes it easy to focus on writing code and ship finished products.
 2. How the addition of Workers KV makes this tutorial a great introduction to building full, data-driven applications.
 
 If you would like to see the finished code for this project, find the [project on GitHub](https://github.com/signalnerve/cloudflare-workers-todos) and refer to the [live demo](https://todos.signalnerve.workers.dev/) to review what you will be building.
@@ -479,10 +479,10 @@ const html = todos => `
       window.todos.forEach(todo => {
         var el = document.createElement("div")
         el.dataset.todo = todo.id
-        
+
         var name = document.createElement("span")
         name.textContent = todo.name
-        
+
         el.appendChild(name)
         todoContainer.appendChild(el)
       })
@@ -566,7 +566,7 @@ The final result of our code is a system that checks the todos variable, updates
 
 ## Conclusions and next steps
 
-By completing this tutorial, you have created a pretty remarkable project. You have built a static HTML, CSS, and JavaScript application that is transparently powered by Workers and Workers KV, which take full advantage of Cloudflare's edge network. 
+By completing this tutorial, you have created a pretty remarkable project. You have built a static HTML, CSS, and JavaScript application that is transparently powered by Workers and Workers KV, which take full advantage of Cloudflare's edge network.
 
 There is room for improvement, too, if you feel so inclined. For example, you may want to implement a better design (you can refer to a live version available at [todos.signalnerve.workers.dev](https://todos.signalnerve.workers.dev/)), or make additional improvements to security, speed, etc.
 

@@ -3,17 +3,18 @@ title: How to
 pcx-content-type: how-to
 ---
 
-import Beta from "../_partials/_beta.md"
+import Beta from '../_partials/_beta.md';
 
 # View Reports
 
 Use NEL reports to view information such as:
+
 - Why a request failed
 - The country a request failed from
 - The last mile network a request failed from
 - The Cloudflare data center the request was most likely meant for
 
-<Beta/>
+<Beta />
 
 1. Log in to your [Cloudflare dashboard](https://dash.cloudflare.com/).
 1. Click **Analytics** > **Origin Reachability**.
@@ -24,7 +25,7 @@ Under **Reachability by data center**, click a location under Data Centers to fi
 
 ## Run a traceroute to origin
 
-Run a traceroute from a specific data center to an origin IP to for information on the number of packets sent and the amount of time it took. 
+Run a traceroute from a specific data center to an origin IP to for information on the number of packets sent and the amount of time it took.
 
 1. Under **From**, choose a data center.
 1. Under **To**, choose an origin IP.

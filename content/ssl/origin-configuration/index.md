@@ -8,4 +8,4 @@ pcx-content-type: navigation
 
 Learn more about SSL/TLS protection options for your origin servers:
 
-<DirectoryListing path="/origin-configuration"/>
+<DirectoryListing path="/origin-configuration" />

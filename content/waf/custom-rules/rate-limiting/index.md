@@ -21,10 +21,10 @@ The **expression** specifies the criteria you are matching traffic on — the sa
 
 Besides these two parameters, Rate Limiting rules require the following additional parameters:
 
-* **Characteristics** — The set of parameters that define how Cloudflare tracks the request rate for this rule.
-* **Period** — The period of time to consider (in seconds) when evaluating the request rate.
-* **Requests per period** — The number of requests over the period of time that will trigger the Rate Limiting rule.
-* **Mitigation timeout** — Once the request rate is reached, the Rate Limiting rule blocks further requests for the period of time defined in this field.
+- **Characteristics** — The set of parameters that define how Cloudflare tracks the request rate for this rule.
+- **Period** — The period of time to consider (in seconds) when evaluating the request rate.
+- **Requests per period** — The number of requests over the period of time that will trigger the Rate Limiting rule.
+- **Mitigation timeout** — Once the request rate is reached, the Rate Limiting rule blocks further requests for the period of time defined in this field.
 
 Check [Rate limiting parameters](/custom-rules/rate-limiting/parameters) for more details on these parameters.
 

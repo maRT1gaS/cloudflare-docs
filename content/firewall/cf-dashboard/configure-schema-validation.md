@@ -24,41 +24,41 @@ To configure Schema Validation in the Cloudflare dashboard, follow these steps:
 
 1. Click the **Firewall** app.
 
-    The Firewall **Overview** displays.
+   The Firewall **Overview** displays.
 
-    ![Firewall Overview tab](../images/firewall-app-overview.png)
+   ![Firewall Overview tab](../images/firewall-app-overview.png)
 
 1. Click the **API Shield** tab.
 
-    The **API Shield** card displays.
+   The **API Shield** card displays.
 
-    ![API Shield card](../images/api-shield-card.png)
+   ![API Shield card](../images/api-shield-card.png)
 
 1. Click **Deploy API Shield**.
 
-    The API Shield creation wizard displays.
+   The API Shield creation wizard displays.
 
-    ![API Shield Properties wizard step](../images/api-shield-properties-step.png)
+   ![API Shield Properties wizard step](../images/api-shield-properties-step.png)
 
-1. Enter a descriptive name for the API Shield in the **Shield name** input. 
+1. Enter a descriptive name for the API Shield in the **Shield name** input.
 
 1. Configure the expression for the API Shield using the available request fields.
 
-    For example, if your API is available at `http://api.example.com/v1`, the expression must include a check for the _Hostname_ field (which must be equal to `api.example.com`) and a check for the _URI Path_ field using a regular expression (which must match the regex `^/v1`).
+   For example, if your API is available at `http://api.example.com/v1`, the expression must include a check for the _Hostname_ field (which must be equal to `api.example.com`) and a check for the _URI Path_ field using a regular expression (which must match the regex `^/v1`).
 
-    <Aside type='warning' header='Important'>
+   <Aside type='warning' header='Important'>
 
-    To validate the hostname, you must include the _Hostname_ field explicitly in the rule, even if the hostname value is in the schema file. Any hostname value present in the schema file will be ignored.
+   To validate the hostname, you must include the _Hostname_ field explicitly in the rule, even if the hostname value is in the schema file. Any hostname value present in the schema file will be ignored.
 
-    Regular expression support is a paid add-on in the Enterprise plan.
+   Regular expression support is a paid add-on in the Enterprise plan.
 
-    </Aside>
+   </Aside>
 
 1. Click **Next**.
 
-    The **Security solution** step displays.
+   The **Security solution** step displays.
 
-    ![API Shield Security solution wizard step](../images/api-shield-security-solution-step.png)
+   ![API Shield Security solution wizard step](../images/api-shield-security-solution-step.png)
 
 1. Enable the toggle in the **Schema Validation** card.
 
@@ -66,27 +66,27 @@ To configure Schema Validation in the Cloudflare dashboard, follow these steps:
 
 1. Click **Deploy** to validate the content of the schema file and deploy the Schema Validation rule.
 
-    <Aside type='warning'>
+   <Aside type='warning'>
 
-    If you get a validation error, make sure you are using one of the supported file formats. Also, each endpoint and method pair must have a [unique Operation ID](/cf-firewall-rules/api-shield#operation-ids).
+   If you get a validation error, make sure you are using one of the supported file formats. Also, each endpoint and method pair must have a [unique Operation ID](/cf-firewall-rules/api-shield#operation-ids).
 
-    </Aside>
+   </Aside>
 
 1. After deploying your API Shield rule, Cloudflare displays a summary of all API endpoints organized by their protection level and what will be the actions taken for non-compliant and unprotected requests.
 
-    ![API Shield Review endpoints wizard step](../images/api-shield-review-endpoints-step.png)
+   ![API Shield Review endpoints wizard step](../images/api-shield-review-endpoints-step.png)
 
-    The API Shield rule will validate all incoming requests addressed at the endpoints listed in **API Schema endpoints**. The several columns in the table list the validations deployed for each endpoint, according to the information described in the API Schema file.
+   The API Shield rule will validate all incoming requests addressed at the endpoints listed in **API Schema endpoints**. The several columns in the table list the validations deployed for each endpoint, according to the information described in the API Schema file.
 
 1. In the **Endpoint action** dropdown, select the action that API Shield will perform for every request targeting a protected endpoint that fails Schema Validation.
 
 1. In the **Fallthrough action** dropdown, select the action to perform for incoming requests addressed at other (non-protected) API endpoints.
 
-    <Aside type='warning'>
+   <Aside type='warning'>
 
-    Currently, request body validations are not supported.
+   Currently, request body validations are not supported.
 
-    </Aside>
+   </Aside>
 
 1. Click **Done**.
 

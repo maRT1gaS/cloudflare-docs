@@ -11,10 +11,10 @@ Creates a ruleset of a given kind in the specified phase. Allows you to create p
 
 Use one of the following API endpoints:
 
-| Operation | Method + Endpoint |
-|-----------|-------------------|
+| Operation                            | Method + Endpoint                      |
+| ------------------------------------ | -------------------------------------- |
 | [Create account ruleset][cr-account] | `POST /accounts/{account-id}/rulesets` |
-| [Create zone ruleset][cr-zone] | `POST /zones/{zone-id}/rulesets` |
+| [Create zone ruleset][cr-zone]       | `POST /zones/{zone-id}/rulesets`       |
 
 [cr-account]: https://api.cloudflare.com/#account-rulesets-create-account-ruleset
 [cr-zone]: https://api.cloudflare.com/#zone-rulesets-create-zone-ruleset
@@ -30,36 +30,61 @@ The following parameters are required:
       <th>Notes</th>
     </tr>
   </thead>
-  <tbody style='vertical-align:top'>
+  <tbody style="vertical-align:top">
     <tr>
-      <td><code>name</code></td>
+      <td>
+        <code>name</code>
+      </td>
       <td>A human-readable name for the ruleset.</td>
       <td>String</td>
-      <td>The name is immutable. You cannot change it over the lifetime of the ruleset.</td>
+      <td>
+        The name is immutable. You cannot change it over the lifetime of the
+        ruleset.
+      </td>
     </tr>
     <tr>
-      <td><code>description</code></td>
+      <td>
+        <code>description</code>
+      </td>
       <td>Optional description for the ruleset.</td>
       <td>String</td>
       <td>You can change the description over the lifetime of the ruleset.</td>
     </tr>
     <tr>
-      <td><code>kind</code></td>
+      <td>
+        <code>kind</code>
+      </td>
       <td>The kind of ruleset the JSON object represents.</td>
       <td>String</td>
-      <td><p>Allowed values:
+      <td>
+        <p>
+          Allowed values:
           <ul>
-            <li><em>custom</em> - creates a custom ruleset</li>
-            <li><em>root</em> - creates a phase entry point ruleset at the account level</li>
-            <li><em>zone</em> - creates a phase entry point ruleset at the zone level</li>
+            <li>
+              <em>custom</em> - creates a custom ruleset
+            </li>
+            <li>
+              <em>root</em> - creates a phase entry point ruleset at the account
+              level
+            </li>
+            <li>
+              <em>zone</em> - creates a phase entry point ruleset at the zone
+              level
+            </li>
           </ul>
-        </p></td>
+        </p>
+      </td>
     </tr>
     <tr>
-      <td><code>phase</code></td>
+      <td>
+        <code>phase</code>
+      </td>
       <td>The name of the phase where the ruleset will be created.</td>
       <td>String</td>
-      <td>Check the specific Cloudflare product documentation for more information on the phases where you can create rulesets for that product.</td>
+      <td>
+        Check the specific Cloudflare product documentation for more information
+        on the phases where you can create rulesets for that product.
+      </td>
     </tr>
   </tbody>
 </table>

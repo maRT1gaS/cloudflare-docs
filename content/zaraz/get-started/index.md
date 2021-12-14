@@ -11,4 +11,4 @@ If your tool just needs a `pageviews` event as a trigger, go to [Add a third-par
 
 All configurations and triggers are accessible from the dashboard. If you need more complex integrations, Cloudflare Zaraz provides a unified set of functions to send data programmatically to third-party tools. Regardless of the tool you need to use, `zaraz.track()` will send your data wherever you choose, without even needing to load the tool’s script.
 
-<DirectoryListing path="/get-started"/> 
+<DirectoryListing path="/get-started" />

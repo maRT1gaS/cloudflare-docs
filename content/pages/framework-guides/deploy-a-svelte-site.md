@@ -2,7 +2,7 @@
 pcx-content-type: how-to
 ---
 
-import TutorialsBeforeYouStart from "../_partials/_tutorials-before-you-start.md" 
+import TutorialsBeforeYouStart from '../_partials/_tutorials-before-you-start.md';
 
 # Deploy a Svelte site
 
@@ -28,7 +28,7 @@ $ cd my-svelte-app
 
 During `init`, SvelteKit will prompt you for customization choices. Your answers will not affect the rest of this tutorial. Choose the option that is ideal for your project.
 
-<TutorialsBeforeYouStart/>
+<TutorialsBeforeYouStart />
 
 ## Creating a GitHub repository
 
@@ -95,7 +95,7 @@ const config = {
   kit: {
 ++  adapter: adapter(),
     // ... truncated ...
-    target: '#svelte'  
+    target: '#svelte'
   }
 };
 
@@ -123,7 +123,6 @@ Additionally, you will have access to [preview deployments](/platform/preview-de
 For the complete guide to deploying your first site to Cloudflare Pages, refer to the [Get started guide](/get-started).
 
 </Aside>
-
 
 ## Learn more
 

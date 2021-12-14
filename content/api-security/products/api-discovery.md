@@ -4,12 +4,12 @@ pcx-content-type: concept
 type: overview
 ---
 
-import Availability from "../_partials/_availability.md"
-import BlogBlurb from "../_partials/_blog-post.md"
+import Availability from '../_partials/_availability.md';
+import BlogBlurb from '../_partials/_blog-post.md';
 
 # API Discovery
 
-<Availability/>
+<Availability />
 
 Most development teams struggle to keep track of their APIs. Cloudflare API Discovery helps you map out and understand your attack surface area.
 
@@ -18,6 +18,7 @@ Most development teams struggle to keep track of their APIs. Cloudflare API Disc
 Cloudflare produces a simple, trustworthy map of API endpoints through a process of path normalization.
 
 For example, you might have thousands of APIs, but a lot of the calls look similar, such as:
+
 - `api.example.com/login/238`
 - `api.example.com/login/392`
 
@@ -33,7 +34,7 @@ API Discovery runs this process across all your authenticated endpoints, eventua
 
 This process currently requires a session identifier, like an authorization token available as a request header. Once you have finished API Discovery, your APIs are ready for protection from [volumetric](../volumetric-abuse-detection) and [sequential](../sequential-abuse-detection) attacks.
 
-<BlogBlurb/>
+<BlogBlurb />
 
 ## API requests
 

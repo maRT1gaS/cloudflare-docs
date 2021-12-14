@@ -8,4 +8,4 @@ pcx-content-type: navigation
 
 You can perform the following Page Shield tasks in the Cloudflare dashboard:
 
-<DirectoryListing path="/use-dashboard"/>
+<DirectoryListing path="/use-dashboard" />

@@ -1,5 +1,5 @@
 ---
-title: "2: User access"
+title: '2: User access'
 order: 1
 pcx-content-type: tutorial
 ---
@@ -43,32 +43,36 @@ An example response for a successful creation:
 
 ```json
 {
-    "result": {
-        "id": "60758bd48392a06215ae817bc35084b6",
-        "email": "<identifier>@youremaildomain.com>",
-        "first_name": null,
-        "last_name": null,
-        "username": "17bd2796b374cec14976ac3bced85c05",
-        "telephone": null,
-        "country": null,
-        "created_on": "2019-02-21T23:20:28.645256Z",
-        "modified_on": "2019-02-21T23:20:28.645256Z",
-        "two_factor_authentication": {
-            "enabled": false,
-            "locked": false
-        },
-        "api_key": "xxx"
+  "result": {
+    "id": "60758bd48392a06215ae817bc35084b6",
+    "email": "<identifier>@youremaildomain.com>",
+    "first_name": null,
+    "last_name": null,
+    "username": "17bd2796b374cec14976ac3bced85c05",
+    "telephone": null,
+    "country": null,
+    "created_on": "2019-02-21T23:20:28.645256Z",
+    "modified_on": "2019-02-21T23:20:28.645256Z",
+    "two_factor_authentication": {
+      "enabled": false,
+      "locked": false
     },
-    "success": true,
-    "errors": [],
-    "messages": []
+    "api_key": "xxx"
+  },
+  "success": true,
+  "errors": [],
+  "messages": []
 }
 ```
 
---------------------------------
+---
 
 ## Continue the tutorial
 
 Now that the customer has access to the account in the next step we will look at how to enable paid services for customers.
 
-<p><Button type="primary" href="/tutorial/enabling-services">Step 3: Enabling services</Button></p>
+<p>
+  <Button type="primary" href="/tutorial/enabling-services">
+    Step 3: Enabling services
+  </Button>
+</p>

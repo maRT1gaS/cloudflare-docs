@@ -1,28 +1,29 @@
 ---
 updated: 2020-08-25
 difficulty: Beginner
-content_type: "📝 Tutorial"
+content_type: '📝 Tutorial'
 pcx-content-type: tutorial
 ---
 
-import TutorialsBeforeYouStart from "../../_partials/_tutorials-before-you-start.md"
+import TutorialsBeforeYouStart from '../../_partials/_tutorials-before-you-start.md';
 
 # GitHub SMS notifications using Twilio
 
-<TutorialsBeforeYouStart/>
+<TutorialsBeforeYouStart />
 
 ## Overview
 
 In this tutorial, you will learn to build an SMS notification system on Workers to receive updates on a GitHub repository. Your Worker will send you a text update using Twilio when there is new activity on your repository.
 
 You will learn how to:
+
 - Build Webhooks using Workers
 - Integrate Workers with GitHub and Twilio
 - Use Worker secrets with Wrangler
 
 ![Video of receiving a text after pushing to a repo](media/video-of-receiving-a-text-after-pushing-to-a-repo.gif)
 
---------------------------------
+---
 
 ## Generate a project
 
@@ -44,7 +45,7 @@ First, create a Webhook for your repository to post updates to your Worker. Insi
 
 You can reference the finished code on this [GitHub repository](https://github.com/davidtsong/github-twilio-notifications/).
 
---------------------------------
+---
 
 ## Configure GitHub
 
@@ -64,7 +65,7 @@ To start, you will need to configure a GitHub Webhook to post to your Worker whe
 
 ![GitHub config screenshot](media/github-config-screenshot.png)
 
---------------------------------
+---
 
 ## Parsing the response
 
@@ -196,7 +197,7 @@ route = ""
 zone_id = ""
 ```
 
---------------------------------
+---
 
 ## Sending a text with Twilio
 
@@ -235,6 +236,7 @@ async function sendText(message){
   return new Response(JSON.stringify(result), request)
 }
 ```
+
 To make this work, you need to set some secrets to hide your `ACCOUNT_SID` and `AUTH_TOKEN` from the source code. You can set secrets with `wrangler secret put` in your command line.
 
 ```sh
@@ -247,30 +249,25 @@ Finally, modify your `githubWebhookHandler` to send a text at the end using the 
 
 ```js
 async function githubWebhookHandler(request) {
-  if (request.method !== "POST") {
-    return simpleResponse(
-      200,
-      "Please send a POST request :)"
-    )
+  if (request.method !== 'POST') {
+    return simpleResponse(200, 'Please send a POST request :)');
   }
   try {
-    const formData = await request.json()
-    const headers = await request.headers
-    const action = headers.get("X-GitHub-Event")
-    const repo_name = formData.repository.full_name
-    const sender_name = formData.sender.login
+    const formData = await request.json();
+    const headers = await request.headers;
+    const action = headers.get('X-GitHub-Event');
+    const repo_name = formData.repository.full_name;
+    const sender_name = formData.sender.login;
 
     if (!checkSignature(formData, headers)) {
-      return simpleResponse(403, "Wrong password, try again :P")
+      return simpleResponse(403, 'Wrong password, try again :P');
     }
 
-    return await sendText(`${sender_name} casted spell: ${action} onto your repo ${repo_name}`)
-
+    return await sendText(
+      `${sender_name} casted spell: ${action} onto your repo ${repo_name}`
+    );
   } catch (e) {
-    return simpleResponse(
-      200,
-      `Error:  ${e}`
-    )
+    return simpleResponse(200, `Error:  ${e}`);
   }
 }
 ```
@@ -288,11 +285,13 @@ Now, when you make an update (that you configured in the GitHub **Webhook** sett
 You can reference the finished code on this [GitHub repository](https://github.com/davidtsong/github-twilio-notifications/).
 
 By completing this tutorial, you have learned how to:
+
 - Build Webhooks using Workers
 - Integrate Workers with GitHub and Twilio
 - Use Worker secrets with Wrangler
 
 Other tutorials:
+
 - [Authorize users with Auth0](/tutorials/authorize-users-with-auth0)
 - [Build a JAMStack app](/tutorials/build-a-jamstack-app)
 - [Build a QR code generator](/tutorials/build-a-qr-code-generator)

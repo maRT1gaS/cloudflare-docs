@@ -14,12 +14,12 @@ After a Railgun has been activated, it can be assigned to a particular domain wi
 Establish a connection between a domain and a Railgun.
 
 ### Form parameters
- 	
-* **email** – User account email
-* **tkn** – User API token
-* **z** – Domain name
-* **rtkn** – Railgun token
-* **mode** – Railgun operation mode, `1` for active `0` for inactive
+
+- **email** – User account email
+- **tkn** – User API token
+- **z** – Domain name
+- **rtkn** – Railgun token
+- **mode** – Railgun operation mode, `1` for active `0` for inactive
 
 <details>
 <summary>Example request</summary>
@@ -71,12 +71,12 @@ Content-Type: application/json
 Establish a connection between a domain and a Railgun.
 
 ### Query parameters
- 	
-* **email** – User account email
-* **tkn** – User API token
-* **z** – Domain name
-* **rtkn** – Railgun token
-* **mode** – Railgun operation mode, `1` for active `0` for inactive
+
+- **email** – User account email
+- **tkn** – User API token
+- **z** – Domain name
+- **rtkn** – Railgun token
+- **mode** – Railgun operation mode, `1` for active `0` for inactive
 
 <details>
 <summary>Example request</summary>
@@ -128,11 +128,11 @@ Content-Type: application/json
 Enable a Railgun. If request is successful, the specified Railgun will be enabled and traffic for the specified domain will be proxied through Railgun.
 
 ### Form parameters
- 	
-* **email** – User account email
-* **tkn** – User API token
-* **z** – Domain name
-* **rtkn** – Railgun token
+
+- **email** – User account email
+- **tkn** – User API token
+- **z** – Domain name
+- **rtkn** – Railgun token
 
 <details>
 <summary>Example request</summary>
@@ -183,11 +183,11 @@ Content-Type: application/json
 Enable a Railgun. If request is successful, the specified Railgun will be enabled and traffic for the specified domain will be proxied through Railgun.
 
 ### Query parameters
- 	
-* **email** – User account email
-* **tkn** – User API token
-* **z** – Domain name
-* **rtkn** – Railgun token
+
+- **email** – User account email
+- **tkn** – User API token
+- **z** – Domain name
+- **rtkn** – Railgun token
 
 <details>
 <summary>Example request</summary>
@@ -238,11 +238,11 @@ Content-Type: application/json
 Disable a Railgun. If request is successful, the specified Railgun will be disabled and traffic for the specified domain will no longer use Railgun.
 
 ### Form parameters
- 	
-* **email** – User account email
-* **tkn** – User API token
-* **z** – Domain name
-* **rtkn** – Railgun token
+
+- **email** – User account email
+- **tkn** – User API token
+- **z** – Domain name
+- **rtkn** – Railgun token
 
 <details>
 <summary>Example request</summary>
@@ -293,11 +293,11 @@ Content-Type: application/json
 Disable a Railgun. If request is successful, the specified Railgun will be disabled and traffic for the specified domain will no longer use Railgun.
 
 ### Query parameters
- 	
-* **email** – User account email
-* **tkn** – User API token
-* **z** – Domain name
-* **rtkn** – Railgun token
+
+- **email** – User account email
+- **tkn** – User API token
+- **z** – Domain name
+- **rtkn** – Railgun token
 
 <details>
 <summary>Example request</summary>
@@ -348,11 +348,11 @@ Content-Type: application/json
 Remove a connection between a domain and a Railgun. This API call will allow a connected Railgun to be assigned to a different domain. Removing the connection of an enabled Railgun and domain will disable Railgun for the domain until a new connection is made with [conn_set](/user-guide/client-api/enable-and-disable-connections/#post-conn_set).
 
 ### Form parameters
- 	
-* **email** – User account email
-* **tkn** – User API token
-* **z** – Domain name
-* **rtkn** – Railgun token
+
+- **email** – User account email
+- **tkn** – User API token
+- **z** – Domain name
+- **rtkn** – Railgun token
 
 <details>
 <summary>Example request</summary>
@@ -403,11 +403,11 @@ Content-Type: application/json
 Remove a connection between a domain and a Railgun. This API call will allow a connected Railgun to be assigned to a different domain. Removing the connection of an enabled Railgun and domain will disable Railgun for the domain until a new connection is made with [conn_set](/user-guide/client-api/enable-and-disable-connections/#post-conn_set).
 
 ### Query parameters
- 	
-* **email** – User account email
-* **tkn** – User API token
-* **z** – Domain name
-* **rtkn** – Railgun token
+
+- **email** – User account email
+- **tkn** – User API token
+- **z** – Domain name
+- **rtkn** – Railgun token
 
 <details>
 <summary>Example request</summary>

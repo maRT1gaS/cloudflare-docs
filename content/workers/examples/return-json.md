@@ -16,25 +16,31 @@ pcx-content-type: configuration
 </ContentColumn>
 
 ```js
-addEventListener("fetch", event => {
+addEventListener('fetch', event => {
   const data = {
-    hello: "world"
-  }
+    hello: 'world',
+  };
 
-  const json = JSON.stringify(data, null, 2)
+  const json = JSON.stringify(data, null, 2);
 
   return event.respondWith(
     new Response(json, {
       headers: {
-        "content-type": "application/json;charset=UTF-8"
-      }
+        'content-type': 'application/json;charset=UTF-8',
+      },
     })
-  )
-})
+  );
+});
 ```
 
 ## Demo
 
-<p><a href={props.frontmatter.demo}>Open demo</a></p>
+<p>
+  <a href={props.frontmatter.demo}>Open demo</a>
+</p>
 
-<Demo src={props.frontmatter.demo} title={props.frontmatter.summary} height="80"/>
+<Demo
+  src={props.frontmatter.demo}
+  title={props.frontmatter.summary}
+  height="80"
+/>

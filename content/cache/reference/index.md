@@ -8,4 +8,4 @@ pcx-content-type: navigation
 
 Review the reference content to learn more about specific caching functionality.
 
-<DirectoryListing path="/reference"/>
+<DirectoryListing path="/reference" />

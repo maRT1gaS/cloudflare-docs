@@ -10,6 +10,7 @@ Web Analytics relies on the `performance.getEntriesByType('navigation')` object 
 Refer to the [W3C Processing Model](https://www.w3.org/TR/navigation-timing-2/#processing-model) for a visual depiction of the sequence of timing events for web page loads.
 
 ## Data collection and reporting
+
 Web Analytics collects the minimum amount of information - timing metrics - to show customers how their websites perform. Cloudflare does not track individual end users across our customers’ Internet properties.
 
 The Web Analytics performance beacon loads from [https://static.cloudflareinsights.com/beacon.min.js](https://static.cloudflareinsights.com/beacon.min.js) and uses a third-party domain so that the script is cached across website loads. You may need to update your [Content Security Policy (CSP)](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP) settings to load this script.

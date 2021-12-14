@@ -10,7 +10,6 @@ Many security teams rely on Microsoft MCAS (Microsoft Cloud App Security), Micro
 
 Microsoft provides an MCAS API endpoint to allow queries to see which applications have been marked as blocked or allowed. With an MCAS API call, you can manage a URL category that contains the blocked URLs returned by the API query, and use the output to create a Hostname List that can be used by Gateway HTTP policies to block them.
 
-
 **⏲️ Time to complete:**
 
 20 minutes
@@ -38,20 +37,19 @@ As you can see, the banned hostnames are preceded by a `.`. To use this output f
 
 1. Run the curl API call and direct the output to a file, in this case `mcas.txt`:
 
-    ```txt
-    curl -v "https://<MCAS API URL>/api/discovery_block_scripts/?format=120&type=banned" -H "Authorization: Token <API token>" > mcas.txt
-    ```
+   ```txt
+   curl -v "https://<MCAS API URL>/api/discovery_block_scripts/?format=120&type=banned" -H "Authorization: Token <API token>" > mcas.txt
+   ```
 
-1. Remove the leading `.`, for example by running `sed` from the CLI: 
+1. Remove the leading `.`, for example by running `sed` from the CLI:
 
-    ```txt
-    sed -i 's/^.//' mcas.txt
-    ```
+   ```txt
+   sed -i 's/^.//' mcas.txt
+   ```
 
 1. This will give you the list of hostnames without leading `.`.
 
 1. Replace the file's `.txt` extension with `.csv`. The file can now be imported into Teams as a Hostname list.
-
 
 ## Using the API to query allowed applications
 
@@ -64,7 +62,7 @@ curl -v "https://<MCAS API URL>/api/discovery_block_scripts/?format=120&type=all
 ## Adding a hostname list in the Teams Dashboard
 
 1. In the Teams Dashboard, navigate to **My Team** > **Lists**
-1. Click on **Upload CSV**. Even though the hostname list is not really in CSV format, it will work with no issues. 
+1. Click on **Upload CSV**. Even though the hostname list is not really in CSV format, it will work with no issues.
 1. Add a name for the list, specify "Hostnames" as the list type, and give it a description.
 1. Drag and drop your MCAS output file created via the API call, or you can click **Select a file**.
 1. Click **Create**. You will see the list of hostnames that have been added to the list.
@@ -79,12 +77,12 @@ Your list is now ready to be referenced by Gateway HTTP policies.
 1. Navigate to **Gateway** > **Policies** > **HTTP policies**.
 1. Click **Create a policy**.
 
-    ![List of hostnames](../static/secure-web-gateway/microsoft-mcas/mcas-policy.png)
+   ![List of hostnames](../static/secure-web-gateway/microsoft-mcas/mcas-policy.png)
 
 1. Set the expression to:
-    * Selector: `Host`
-    * Operator: `In List`
-    * Value: your newly created list name.
+   - Selector: `Host`
+   - Operator: `In List`
+   - Value: your newly created list name.
 1. Set the Action to `Block`.
 
 Now when trying to visit one of the MCAS defined sites, the user will be blocked.

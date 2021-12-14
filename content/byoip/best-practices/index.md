@@ -8,4 +8,4 @@ order: 4
 
 Review the topics below for best practices related to BYOIP.
 
-<DirectoryListing path="/best-practices"/>
+<DirectoryListing path="/best-practices" />

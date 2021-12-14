@@ -9,8 +9,8 @@ With Zero Trust policies, you can require that users log in to certain applicati
 
 This feature is only available if you are using the following identity providers:
 
-* Okta
-* Azure AD
+- Okta
+- Azure AD
 
 To enforce an MFA requirement to an application:
 
@@ -20,15 +20,15 @@ To enforce an MFA requirement to an application:
 
 1. Navigate to the **Rules** section of the application.
 
-1. If your application already has a  rule containing an identity requirement, find it and click **Edit**.
+1. If your application already has a rule containing an identity requirement, find it and click **Edit**.
 
 ![Identity rule](../../static/documentation/applications/identity-rule.png)
 
- The rule must contain an Include rule which defines an identity. For example, the Include rule should allow for users who are part of a user [group](/identity/users/groups), email domain, or identity provider group.
+The rule must contain an Include rule which defines an identity. For example, the Include rule should allow for users who are part of a user [group](/identity/users/groups), email domain, or identity provider group.
 
-3. Add a *Require* action to the rule.
+3. Add a _Require_ action to the rule.
 
-4. Select *Authentication Method* and choose `mfa - multiple-factor authentication`.
+4. Select _Authentication Method_ and choose `mfa - multiple-factor authentication`.
 
 ![MFA](../../static/documentation/applications/mfa.png)
 
@@ -39,14 +39,14 @@ To enforce an MFA requirement to an application:
 **What happens if the user fails to present the required MFA method?**
 
 Cloudflare Access will reject the user, even if they successfully login to the identity provider with an alternative method.
-</Aside>
 
+</Aside>
 
 ## Adding authentication methods into the JWT
 
 When users authenticate with their identity provider, the identity provider then shares their username with Cloudflare Access. Cloudflare Access then writes that value into the [JSON Web Token (JWT)](/glossary#json-web-token) generated for the user.
 
-Certain identity providers can also share the multifactor authentication (MFA) method presented by the user to login. Cloudflare Access can add these values into the JWT and force. For example, if the user authenticated with their password and a physical hard key, the identity provider can send a confirmation to Cloudflare Access. 
+Certain identity providers can also share the multifactor authentication (MFA) method presented by the user to login. Cloudflare Access can add these values into the JWT and force. For example, if the user authenticated with their password and a physical hard key, the identity provider can send a confirmation to Cloudflare Access.
 
 Cloudflare Access then stores that method into the same JWT issued to the user.
 

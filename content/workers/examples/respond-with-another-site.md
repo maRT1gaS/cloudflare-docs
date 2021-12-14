@@ -15,26 +15,32 @@ pcx-content-type: configuration
 </ContentColumn>
 
 ```js
-addEventListener('fetch', function(event) {
-  event.respondWith(handleRequest(event.request))
-})
+addEventListener('fetch', function (event) {
+  event.respondWith(handleRequest(event.request));
+});
 async function handleRequest(request) {
   // Only GET requests work with this proxy.
-  if (request.method !== 'GET') return MethodNotAllowed(request)
-  return fetch(`https://example.com`)
+  if (request.method !== 'GET') return MethodNotAllowed(request);
+  return fetch(`https://example.com`);
 }
 function MethodNotAllowed(request) {
   return new Response(`Method ${request.method} not allowed.`, {
     status: 405,
     headers: {
-      'Allow': 'GET'
-    }
-  })
+      Allow: 'GET',
+    },
+  });
 }
 ```
 
 ## Demo
 
-<p><a href={props.frontmatter.demo}>Open demo</a></p>
+<p>
+  <a href={props.frontmatter.demo}>Open demo</a>
+</p>
 
-<Demo src={props.frontmatter.demo} title={props.frontmatter.summary} aspectRatio={16/9}/>
+<Demo
+  src={props.frontmatter.demo}
+  title={props.frontmatter.summary}
+  aspectRatio={16 / 9}
+/>

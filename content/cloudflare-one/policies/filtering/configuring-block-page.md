@@ -30,15 +30,15 @@ Now you will need to add the certificate to your system. This ensures your web b
 
 1. If you are on a Mac, **double-click** on the `.pem` file.
 
- The certificate is now listed in the **Keychain Access** application.
+The certificate is now listed in the **Keychain Access** application.
 
- ![Keychain](../../static/documentation/policies/listed-in-keychain.png)
+![Keychain](../../static/documentation/policies/listed-in-keychain.png)
 
 1. Double-click on the certificate.
 
 1. Click **Trust**.
 
- ![Keychain](../../static/documentation/policies/cert-click-on-trust.png)
+![Keychain](../../static/documentation/policies/cert-click-on-trust.png)
 
 1. Select **Always Trust** from the drop-down menu for **When using this certificate**.
 
@@ -60,7 +60,7 @@ Follow the instructions below to finish configuring the block page:
 
 The block page is automatically enabled for all HTTP policies. When a user is blocked at the HTTP layer, the block page is displayed. As you configure a policy with a Block action, you can specify a policy-specific block message.
 
- ![Enable HTTP block page](../../static/documentation/policies/http-block-page.png)
+![Enable HTTP block page](../../static/documentation/policies/http-block-page.png)
 
 ## Enable the block page for DNS policies
 
@@ -72,11 +72,11 @@ For DNS policies:
 1. Scroll down to find the **Configure policy settings** step.
 1. Toggle the **Display block page** switch.
 
- ![Enable block page](../../static/documentation/policies/display-block-page.png)
+![Enable block page](../../static/documentation/policies/display-block-page.png)
 
 1. Click **Save**.
 
-Your block page is now enabled for this policy. 
+Your block page is now enabled for this policy.
 
 <Aside header='Warning: Potential Security Risk'>
 
@@ -90,23 +90,22 @@ If your users are seeing the following error when navigating to a blocked page, 
 
 You can customize the block page by making global changes that will show up every time a user navigates to a block page, independently of the type of rule (DNS or HTTP) that's blocking the website. These global customizations include:
 
-* Adding your organization's name
-* Adding a logo 
-* Adding a header text
-* Adding a global block message
-* Choosing a background color
+- Adding your organization's name
+- Adding a logo
+- Adding a header text
+- Adding a global block message
+- Choosing a background color
 
 All of these elements will display in addition to two fields specific to the policy that's blocking the website:
 
-* **The policy-specific block message** you've specified while creating the policy. This message is displayed under your global block message, and above the Rule ID.
+- **The policy-specific block message** you've specified while creating the policy. This message is displayed under your global block message, and above the Rule ID.
 
-* **The Rule ID**, which will make it easier for admins to debug possible policy issues in relation to blocked websites.
+- **The Rule ID**, which will make it easier for admins to debug possible policy issues in relation to blocked websites.
 
 To apply customizations to your block page, navigate to the **Block page** card under **Settings > General**.
 
-
- ![Block page](../../static/documentation/policies/customize-settings-page.png)
+![Block page](../../static/documentation/policies/customize-settings-page.png)
 
 Once you have completed your customization, click **Save**. Your customers will now see your custom block page when navigating to a blocked website.
 
- ![Final block page](../../static/documentation/policies/final-block-page.png)
+![Final block page](../../static/documentation/policies/final-block-page.png)

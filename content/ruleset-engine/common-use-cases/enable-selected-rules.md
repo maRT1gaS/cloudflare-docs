@@ -21,9 +21,9 @@ The following `PUT` request uses the [Update ruleset](/rulesets-api/update) oper
 
 In this example:
 
-* `"id": "{managed-ruleset-id}"` adds a rule to the phase entry point ruleset to execute a Managed Ruleset for requests in the specified zone (`{zone-id}`).
-* `"enabled": false` defines an override at the ruleset level to disable all rules in the Managed Ruleset.
-* `"rules": [{"id": "{rule-id-1}", "action": "block", "enabled": true}, {"id": "{rule-id-2}", "action": "log", "enabled": true}]` defines a list of overrides at the rule level to enable two individual rules.
+- `"id": "{managed-ruleset-id}"` adds a rule to the phase entry point ruleset to execute a Managed Ruleset for requests in the specified zone (`{zone-id}`).
+- `"enabled": false` defines an override at the ruleset level to disable all rules in the Managed Ruleset.
+- `"rules": [{"id": "{rule-id-1}", "action": "block", "enabled": true}, {"id": "{rule-id-2}", "action": "log", "enabled": true}]` defines a list of overrides at the rule level to enable two individual rules.
 
 ```json
 curl -X PUT \
@@ -34,11 +34,11 @@ curl -X PUT \
   "rules": [
     {
       "action": "execute",
-      "expression": "true", 
+      "expression": "true",
       "action_parameters": {
         "id": "{managed-ruleset-id}",
         "overrides": {
-          "enabled": false,          
+          "enabled": false,
           "rules": [
             {
               "id": "{rule-id-1}",
@@ -48,7 +48,7 @@ curl -X PUT \
             {
               "id": "{rule-id-2}",
               "action": "log",
-              "enabled": true              
+              "enabled": true
             }
           ]
         }
@@ -69,9 +69,9 @@ The following `PUT` request uses the [Update ruleset](/rulesets-api/update) oper
 
 In this example:
 
-* `"id": "{managed-ruleset-id}"` adds a rule to the phase entry point ruleset to execute a Managed Ruleset for requests addressed to `example.com`.
-* `"enabled": false` defines an override at the ruleset level to disable all rules in the Managed Ruleset.
-* `"rules": [{"id": "{rule-id-1}", "action": "block", "enabled": true}, {"id": "{rule-id-2}", "action": "log", "enabled": true}]` defines a list of overrides at the rule level to enable two individual rules.
+- `"id": "{managed-ruleset-id}"` adds a rule to the phase entry point ruleset to execute a Managed Ruleset for requests addressed to `example.com`.
+- `"enabled": false` defines an override at the ruleset level to disable all rules in the Managed Ruleset.
+- `"rules": [{"id": "{rule-id-1}", "action": "block", "enabled": true}, {"id": "{rule-id-2}", "action": "log", "enabled": true}]` defines a list of overrides at the rule level to enable two individual rules.
 
 ```json
 curl -X PUT \
@@ -82,7 +82,7 @@ curl -X PUT \
   "rules": [
     {
       "action": "execute",
-      "expression": "cf.zone.name eq \"example.com\"", 
+      "expression": "cf.zone.name eq \"example.com\"",
       "action_parameters": {
         "id": "{managed-ruleset-id}",
         "overrides": {

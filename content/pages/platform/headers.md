@@ -61,7 +61,6 @@ When matching, a splat pattern — signified by an asterisk (`*`) — will greed
 
 The matched value can be referenced within the header value as the `:splat` placeholder.
 
-
 #### Placeholders
 
 A placeholder can be defined with `:placeholder_name`. A colon (`:`) indicates the start of a placeholder and the name that follows must be composed of alphanumeric characters and underscores (`:\w+`). Every named placeholder can only be referenced once. Placeholders match all characters apart from the delimiter, which when part of the host, is a period (`.`) or a forward-slash (`/`) and may only be a forward-slash (`/`) when part of the path.

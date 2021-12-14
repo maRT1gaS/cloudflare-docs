@@ -30,49 +30,28 @@ Page rules trigger certain actions when a request matches a defined URL pattern.
 
 <table>
   <tbody>
-    <th>
-      Plan
-    </th>
-    <th>
-      Page rules allowed
-    </th>
+    <th>Plan</th>
+    <th>Page rules allowed</th>
     <tr>
-      <td>
-        Free
-      </td>
-      <td>
-        3
-      </td>
+      <td>Free</td>
+      <td>3</td>
     </tr>
     <tr>
-      <td>
-        Pro
-      </td> 
-      <td>
-        20
-      </td>
+      <td>Pro</td>
+      <td>20</td>
     </tr>
     <tr>
-      <td>
-        Business
-      </td> 
-      <td>
-        50
-      </td>
+      <td>Business</td>
+      <td>50</td>
     </tr>
     <tr>
-      <td>
-        Enterprise
-      </td>  
-      <td>
-        125
-      </td>
+      <td>Enterprise</td>
+      <td>125</td>
     </tr>
   </tbody>
 </table>
 
 You can also [purchase additional rules](https://www.cloudflare.com/features-page-rules/) up to a maximum of 100 for domains in the Free, Pro, and Business plans.
-
 
 ## Create a page rule
 
@@ -81,12 +60,13 @@ You can also [purchase additional rules](https://www.cloudflare.com/features-pag
 1. Click **Rules**.
 1. In the **Page Rules** tab, click **Create Page Rule**. The **Create Page Rul**e for `<your domain>` dialog opens.
 1. Under **If the URL matches**, enter the URL or URL pattern that should match the rule. Learn more about wildcard matching
-1. Under **Then the settings are**, click **Add a Setting**. 
+1. Under **Then the settings are**, click **Add a Setting**.
 1. Select an option from the dropdown. You can include more than one setting per rule. Learn more about settings in the summary below.
 1. From the **Order** dropdown, specify the desired order: **First**, **Last**, or **Custom**.
 1. Choose a save option:
-  - **Save as Draft** to save the rule and leave it disabled. Note that disabled rules count towards the number of rules allowed for your domain.
-  - **Save and Deploy** to save the rule and enable it immediately.
+
+- **Save as Draft** to save the rule and leave it disabled. Note that disabled rules count towards the number of rules allowed for your domain.
+- **Save and Deploy** to save the rule and enable it immediately.
 
 <Aside type="note" header="Note">
 
@@ -101,14 +81,14 @@ We do not support non-ASCII characters (e.g. punycode/unicode domain) in Page Ru
 1. Click **Rules**.
 1. In the **Page Rules** tab, locate the rule to edit.
 1. Proceed to make the necessary changes, as follows:
-    - To enable or disable a rule, click the **On/Off** toggle.
-    - To modify the URL pattern, settings, or order, click the **Edit** button (wrench icon). In the dialog, enter the information you want to change.
+   - To enable or disable a rule, click the **On/Off** toggle.
+   - To modify the URL pattern, settings, or order, click the **Edit** button (wrench icon). In the dialog, enter the information you want to change.
 
 ## Delete a rule
 
 1. Log in to your Cloudflare dashboard.
 1. Select the domain where you want to edit your page rule.
-1. Click  **Rules**.
+1. Click **Rules**.
 1. In the **Page Rules** tab, locate the rule to edit.
 1. Click the **Delete** button (wrench icon) and confirm the deletion when prompted.
 
@@ -135,7 +115,7 @@ To purge resources using Cache By Device Type, you must [purge by Cache-Tag](/ho
 
 ## Cache Everything
 
-Caching additional content at Cloudflare requires a **Cache Everything** Page Rule.  Without creating a Cache Everything Page Rule, dynamic assets are never cached even if a [public Cache-Control header](/about/cache-control) is returned. When combined with an Edge Cache TTL > 0, **Cache Everything** removes cookies from the origin web server response. 
+Caching additional content at Cloudflare requires a **Cache Everything** Page Rule. Without creating a Cache Everything Page Rule, dynamic assets are never cached even if a [public Cache-Control header](/about/cache-control) is returned. When combined with an Edge Cache TTL > 0, **Cache Everything** removes cookies from the origin web server response.
 
 <Aside type="warning" header="Warning">
 
@@ -147,9 +127,9 @@ Do not use **Cache Everything** for admin sections of your website or for pages 
 1. Choose the appropriate domain.
 1. Click **Rules** > Page **Rules**.
 1. Click **Create Page Rule**.
-1. Under **If the URL matches**, create a URL pattern to differentiate your website’s static versus dynamic content. 
-1. Under **Then the settings are**, choose **Cache Level**. 
-1. For **Select Cache Level**, choose the **Cache Everything** submenu setting.  
+1. Under **If the URL matches**, create a URL pattern to differentiate your website’s static versus dynamic content.
+1. Under **Then the settings are**, choose **Cache Level**.
+1. For **Select Cache Level**, choose the **Cache Everything** submenu setting.
 1. Click **Save and Deploy**.
 1. Verify your resources are cached by checking the [cache response returned by Cloudflare](/about/default-cache-behavior#cloudflare-cache-responses).
 

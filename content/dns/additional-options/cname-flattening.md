@@ -26,4 +26,3 @@ Accounts on paid plans can also choose to flatten all CNAME records on their dom
 1. Log in to the [Cloudflare dashboard](https://dash.cloudflare.com/login) and select your account and domain.
 1. Navigate to **DNS**.
 1. For **CNAME Flattening**, select **Flatten all CNAMEs**.
-

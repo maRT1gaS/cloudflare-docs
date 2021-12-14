@@ -5,4 +5,4 @@ pcx-content-type: navigation
 
 # Advanced topics
 
-<DirectoryListing path="/advanced-topics"/>
+<DirectoryListing path="/advanced-topics" />

@@ -11,9 +11,9 @@ To create a list, follow these steps:
 
 1. In the **Lists** interface, click **Create new list**.
 
-  The **Create new list** page displays.
+The **Create new list** page displays.
 
-  ![Create new list](../../images/lists-create-new.png)
+![Create new list](../../images/lists-create-new.png)
 
 1. Enter a name for your list, observing the following guidelines:
 

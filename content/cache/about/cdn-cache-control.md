@@ -7,9 +7,10 @@ pcx-content-type: concept
 
 `CDN-Cache-Control` is a response header field set on the origin to separately control the behavior of CDN caches from other intermediaries that might handle a response. You can set the `CDN-Cache-Control` or `Cloudflare-CDN-Cache-Control` response header using the same directives used with the [Cache-Control](/about/cache-control)
 .
+
 ## Header precedence
 
-You have several options available to determine how `CDN-Cache-Control` directives interact with `Cache-Control directives`. 
+You have several options available to determine how `CDN-Cache-Control` directives interact with `Cache-Control directives`.
 
 An origin can:
 
@@ -23,7 +24,7 @@ An origin can:
 
 ### Edge Cache TTL page rule
 
-The Edge Cache TTL page rule overrides the amount of time an asset is cached on the edge (Cloudflare data centers). This page rule overrides directives in `Cloudflare-CDN-Cache-Control/CDN-Cache-Control` which manage how long an asset is cached on the edge. You can set this page rule from the rules section of the dashboard. 
+The Edge Cache TTL page rule overrides the amount of time an asset is cached on the edge (Cloudflare data centers). This page rule overrides directives in `Cloudflare-CDN-Cache-Control/CDN-Cache-Control` which manage how long an asset is cached on the edge. You can set this page rule from the rules section of the dashboard.
 
 ### Browser Cache TTL page rule
 
@@ -43,12 +44,13 @@ In situations where Cloudflare does not receive `Cloudflare-CDN-Cache-Control`, 
 
 Use `CDN-Cache-Control` when you want to manage cached asset’s TTLs separately for origin caches, CDN caches, and browser caches. Previously, this scenario required creating page rules, but `CDN-Cache-Control` accomplishes the desired behavior through origin-set response headers. The example below shows how you could manage your cached asset’s TTLs.
 
-Headers: 
+Headers:
+
 - `Cache-Control: max-age=14400, s-maxage=84000`
 - `Cloudflare-CDN-Cache-Control: max-age=24400`
 - `CDN-Cache-Control: 18000`
 
-Cache behavior: 
+Cache behavior:
 
 <table>
   <tbody>
@@ -106,6 +108,7 @@ Cache behavior:
 Use `CDN-Cache-Control` headers in conjunction with `Cache-Control` headers to specify when to serve stale content in the case of error or during revalidation. The example below shows how you might set your headers and directives to apply to CDNs when handling errors.
 
 Headers:
+
 - `Cache-Control: stale-if-error=400`
 - `Cloudflare-CDN-Cache-Control: stale-if-error=60`
 - `CDN-Cache-Control: stale-if-error=200`

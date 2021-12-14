@@ -5,4 +5,4 @@ pcx-content-type: navigation
 
 # Concepts
 
-<DirectoryListing path="/concepts"/>
+<DirectoryListing path="/concepts" />

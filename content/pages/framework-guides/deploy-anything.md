@@ -2,13 +2,13 @@
 pcx-content-type: how-to
 ---
 
-import TutorialsBeforeYouStart from "../_partials/_tutorials-before-you-start.md" 
+import TutorialsBeforeYouStart from '../_partials/_tutorials-before-you-start.md';
 
 # Deploying your site
 
 Cloudflare supports deploying any static HTML website to Cloudflare Pages. If you manage your website without using a framework or static site generator, or if your framework is not listed in [Framework guides](/framework-guides), you can still deploy it using this guide.
 
-<TutorialsBeforeYouStart/>
+<TutorialsBeforeYouStart />
 
 ## Creating a GitHub repository
 
@@ -34,7 +34,7 @@ Deploy your site to Pages by logging into the [Cloudflare dashboard](https://das
 
 </TableLayout>
 
-Unlike many of our framework guides, the build command and build directory for your site are going to be completely custom. If you do not need a build step, input  `exit 0` into the **Build command** field.
+Unlike many of our framework guides, the build command and build directory for your site are going to be completely custom. If you do not need a build step, input `exit 0` into the **Build command** field.
 
 After configuring your site, you can begin your first deploy. Your custom build command (if provided) will run, and Pages will deploy your static site.
 

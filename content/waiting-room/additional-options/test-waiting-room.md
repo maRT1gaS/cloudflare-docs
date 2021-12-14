@@ -1,5 +1,5 @@
 ---
-order: 
+order:
 pcx-content-type: tutorial
 ---
 
@@ -8,7 +8,8 @@ pcx-content-type: tutorial
 Follow this tutorial to ensure your Waiting Room queues and admits users as expected.
 
 <Aside type="warning" header="Warning:">
-This tutorial uses an open-sourced load testing tool that is not created or supported by Cloudflare.
+  This tutorial uses an open-sourced load testing tool that is not created or
+  supported by Cloudflare.
 </Aside>
 
 ---
@@ -16,6 +17,7 @@ This tutorial uses an open-sourced load testing tool that is not created or supp
 ## Before you begin
 
 Before you start this tutorial, ensure you have:
+
 - Fulfilled all the [prerequisites](../../about#prerequisites)
 - Previously [created a waiting room](/get-started)
 - Updated the [sample script](#1-download-sample-script) to ensure your waiting room captures when a "simulated user" enters and is released from your waiting room (if you [customized the design](/additional-options/customize-waiting-room) of your waiting room)
@@ -31,7 +33,8 @@ This script simulates users entering a waiting room. It divides traffic into two
 ## 2. Run sample script
 
 Once you have downloaded the script, run it with the following command-line arguments:
--  `-n <num_secs_p1>`: Number of seconds to send requests during phase 1
+
+- `-n <num_secs_p1>`: Number of seconds to send requests during phase 1
 - `-m <num_secs_p2>`: Number of seconds to send requests during phase 2, which is fixed at 1 request per second
 - `-s <sleep_time_p1>`: Amount of time to sleep between requests during phase 1 (fractional time accepted, such as `.3`)
 - `-o <results>`: File to store the per-session statistics
@@ -64,6 +67,7 @@ Once you have downloaded the script, run it with the following command-line argu
 </details>
 
 As the script runs, it will output characters with each character representing:
+
 - A user session that advanced past the waiting room
 - The amount of time the user spent in the waiting room:
   - 0 seconds: `.`
@@ -87,20 +91,48 @@ Once the script finishes running, it creates a CSV file with the following field
   <summary>Fields in CSV file</summary>
   <div>
     <ul>
-        <li><strong>job</strong>: The fixed string will either be <strong>main</strong> for phase 1 or <strong>post</strong> for phase 2</li>
-       <li><strong>status</strong>: Status of the last response of the session:</li>
-       <ul>
-            <li>0: curl command received an HTTP status code of <code>200</code></li>
-            <li>1: curl command did not receive any HTTP status codes, which typically means the curl command itself failed</li>
-            <li>2: curl command received an HTTP status code of something other than <code>200</code></li>
-        </ul>
-        <li><strong>wait_time</strong>: Number of seconds the user waited in the waiting room</li>
-       <li><strong>wr_cnt_before</strong>: Number of users in the waiting room when the session first started</li>
-       <li><strong>wr_cnt_after</strong>: Number of users in the waiting room when the session made it past the waiting room</li>
-       <li><strong>start_time</strong>: Time when the session first started (in UNIX epoch seconds)</li>
-       <li><strong>end_time</strong>: Time when the session made it past the waiting room (in UNIX epoch seconds)</li>
+      <li>
+        <strong>job</strong>: The fixed string will either be{' '}
+        <strong>main</strong> for phase 1 or <strong>post</strong> for phase 2
+      </li>
+      <li>
+        <strong>status</strong>: Status of the last response of the session:
+      </li>
+      <ul>
+        <li>
+          0: curl command received an HTTP status code of <code>200</code>
+        </li>
+        <li>
+          1: curl command did not receive any HTTP status codes, which typically
+          means the curl command itself failed
+        </li>
+        <li>
+          2: curl command received an HTTP status code of something other than{' '}
+          <code>200</code>
+        </li>
+      </ul>
+      <li>
+        <strong>wait_time</strong>: Number of seconds the user waited in the
+        waiting room
+      </li>
+      <li>
+        <strong>wr_cnt_before</strong>: Number of users in the waiting room when
+        the session first started
+      </li>
+      <li>
+        <strong>wr_cnt_after</strong>: Number of users in the waiting room when
+        the session made it past the waiting room
+      </li>
+      <li>
+        <strong>start_time</strong>: Time when the session first started (in
+        UNIX epoch seconds)
+      </li>
+      <li>
+        <strong>end_time</strong>: Time when the session made it past the
+        waiting room (in UNIX epoch seconds)
+      </li>
     </ul>
-</div>
+  </div>
 </details>
 
 To visualize your results, open your CSV file within a spreadsheet application. For example, here is a basic chart that shows the amount of time a user waited verses the time they first tried to get to the web service:

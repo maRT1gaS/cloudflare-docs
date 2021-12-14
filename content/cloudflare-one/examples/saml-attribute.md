@@ -3,7 +3,7 @@ order: 3
 type: example
 summary: Allow users with specific SAML attributes.
 tags:
-- SAML Attribute
+  - SAML Attribute
 ---
 
 # SAML Attribute

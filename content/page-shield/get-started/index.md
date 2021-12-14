@@ -4,8 +4,8 @@ order: 1
 pcx-content-type: how-to
 ---
 
-import AlertsIntro from "../_partials/_alerts-intro.md"
-import ConfigureAlerts from "../_partials/_alerts-configure.md"
+import AlertsIntro from '../_partials/_alerts-intro.md';
+import ConfigureAlerts from '../_partials/_alerts-configure.md';
 
 # Get started with Cloudflare Page Shield
 
@@ -27,6 +27,6 @@ Only available to customers on Business and Enterprise plans.
 
 </Aside>
 
-<AlertsIntro/>
+<AlertsIntro />
 
-<ConfigureAlerts/>
+<ConfigureAlerts />

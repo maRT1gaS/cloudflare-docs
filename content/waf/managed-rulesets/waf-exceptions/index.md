@@ -15,9 +15,9 @@ You can [define WAF exceptions in the Cloudflare dashboard](/managed-rulesets/wa
 
 WAF exceptions can have one of the following behaviors (from highest to lowest priority):
 
-* Skip all remaining rules (belonging to WAF Managed Rulesets).
-* Skip one or more specific WAF Managed Rulesets.
-* Skip one or more specific rules of WAF Managed Rulesets.
+- Skip all remaining rules (belonging to WAF Managed Rulesets).
+- Skip one or more specific WAF Managed Rulesets.
+- Skip one or more specific rules of WAF Managed Rulesets.
 
 You define WAF exceptions in a given context — zone level or account level — and they apply only to that context. For example, if you define a WAF exception that skips all remaining rules at the account level, the WAF rules at the zone level will still be evaluated.
 

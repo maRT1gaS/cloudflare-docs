@@ -11,4 +11,4 @@ The Cloudflare [`matched-data-cli`](https://github.com/cloudflare/matched-data-c
 
 Use the tool to:
 
-<DirectoryListing path="/managed-rulesets/payload-logging/command-line"/>
+<DirectoryListing path="/managed-rulesets/payload-logging/command-line" />

@@ -5,4 +5,4 @@ pcx-content-type: navigation
 
 # Getting analytics
 
-<DirectoryListing path="/getting-analytics"/>
+<DirectoryListing path="/getting-analytics" />

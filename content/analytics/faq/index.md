@@ -7,4 +7,4 @@ pcx-content-type: navigation
 
 Visit the following pages to see commonly asked questions:
 
-<DirectoryListing path="/faq"/>
+<DirectoryListing path="/faq" />

@@ -11,4 +11,4 @@ Enrolling devices using static IP addresses may prevent users from connecting to
 
 </Aside>
 
-<DirectoryListing path="/connections/connect-devices/agentless"/>
+<DirectoryListing path="/connections/connect-devices/agentless" />

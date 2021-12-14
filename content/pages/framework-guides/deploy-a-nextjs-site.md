@@ -2,7 +2,7 @@
 pcx-content-type: how-to
 ---
 
-import TutorialsBeforeYouStart from "../_partials/_tutorials-before-you-start.md" 
+import TutorialsBeforeYouStart from '../_partials/_tutorials-before-you-start.md';
 
 # Deploy a Next.js site
 
@@ -20,7 +20,7 @@ $ yarn create next-app --example with-static-export my-app
 
 After creating your project, a new `my-app` directory will be generated using the official [`with-static-export`](https://github.com/vercel/next.js/tree/canary/examples/with-static-export) example as a template.
 
-<TutorialsBeforeYouStart/>
+<TutorialsBeforeYouStart />
 
 ## Creating a GitHub repository
 
@@ -38,8 +38,8 @@ Deploy your site to Pages by logging into the [Cloudflare dashboard](https://das
 
 <TableLayout>
 
-| Configuration option | Value           |
-| -------------------- | ----------------|
+| Configuration option | Value            |
+| -------------------- | ---------------- |
 | Production branch    | `main`           |
 | Build command        | `npm run export` |
 | Build directory      | `out`            |

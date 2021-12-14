@@ -23,19 +23,19 @@ The following data sets (and associated nodes) are available in Cloudflare Analy
 
 <TableWrap>
 
-| Data set (product)          | Node                                                                                                                           |
-| :-------------------------- | :----------------------------------------------------------------------------------------------------------------------------- |
-| Firewall Activity Log       | `firewallEventsAdaptive` `firewallEventsAdaptiveByTimeGroups`                                                                  |
-| Firewall Analytics          | `firewallEventsAdaptiveGroups`                                                                                                 |
-| Health Check Analytics      | `healthCheckEventsAdaptive` `healthCheckEventsAdaptiveGroups`                                                                  |
-| HTTP Requests               | `httpRequestsAdaptiveGroups` `httpRequests1mGroups` `httpRequests1hGroups`  `httpRequests1dGroups`                             |
-| Image Resizing Analytics    | `imageResizingRequests1mGroups`                                                                                                |
-| Load Balancing Analytics    | `loadBalancingRequestsAdaptive` `loadBalancingRequestsAdaptiveGroups`                                                          |
-| Magic Firewall Analytics    | `magicFirewallSamplesAdaptiveGroups`                                                                                           |
-| Network Analytics v2<br/> for Magic Transit customers | `magicTransitNetworkAnalyticsAdaptiveGroups` `dosdNetworkAnalyticsAdaptiveGroups` `dosdAttackAnalyticsAdaptiveGroups` `flowtrackdNetworkAnalyticsAdaptiveGroups` `magicFirewallNetworkAnalyticsAdaptiveGroups` |
-| Network Analytics v2<br/> for Spectrum customers<br/> (Enterprise plans only) | `spectrumNetworkAnalyticsAdaptiveGroups` `dosdNetworkAnalyticsAdaptiveGroups` `dosdAttackAnalyticsAdaptiveGroups` |
-| SYN Attacks (DoS Analytics) | `synAvgPps1mGroups`                                                                                                            |
-| Workers Metrics             | `workersInvocationsAdaptive`                                                                                                   |
+| Data set (product)                                                            | Node                                                                                                                                                                                                           |
+| :---------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Firewall Activity Log                                                         | `firewallEventsAdaptive` `firewallEventsAdaptiveByTimeGroups`                                                                                                                                                  |
+| Firewall Analytics                                                            | `firewallEventsAdaptiveGroups`                                                                                                                                                                                 |
+| Health Check Analytics                                                        | `healthCheckEventsAdaptive` `healthCheckEventsAdaptiveGroups`                                                                                                                                                  |
+| HTTP Requests                                                                 | `httpRequestsAdaptiveGroups` `httpRequests1mGroups` `httpRequests1hGroups` `httpRequests1dGroups`                                                                                                              |
+| Image Resizing Analytics                                                      | `imageResizingRequests1mGroups`                                                                                                                                                                                |
+| Load Balancing Analytics                                                      | `loadBalancingRequestsAdaptive` `loadBalancingRequestsAdaptiveGroups`                                                                                                                                          |
+| Magic Firewall Analytics                                                      | `magicFirewallSamplesAdaptiveGroups`                                                                                                                                                                           |
+| Network Analytics v2<br/> for Magic Transit customers                         | `magicTransitNetworkAnalyticsAdaptiveGroups` `dosdNetworkAnalyticsAdaptiveGroups` `dosdAttackAnalyticsAdaptiveGroups` `flowtrackdNetworkAnalyticsAdaptiveGroups` `magicFirewallNetworkAnalyticsAdaptiveGroups` |
+| Network Analytics v2<br/> for Spectrum customers<br/> (Enterprise plans only) | `spectrumNetworkAnalyticsAdaptiveGroups` `dosdNetworkAnalyticsAdaptiveGroups` `dosdAttackAnalyticsAdaptiveGroups`                                                                                              |
+| SYN Attacks (DoS Analytics)                                                   | `synAvgPps1mGroups`                                                                                                                                                                                            |
+| Workers Metrics                                                               | `workersInvocationsAdaptive`                                                                                                                                                                                   |
 
 </TableWrap>
 
@@ -45,10 +45,10 @@ Beta data sets are available to Enterprise customers for testing and exploration
 
 <TableWrap>
 
-| Data set (product) | Node                                                                                                        |
-| :----------------- | :---------------------------------------------------------------------------------------------------------- |
-| Browser Insights   | `browserInsightsAdaptiveGroups` `webVitalsAdaptiveGroups`                                                   |
-| Web Analytics      | `rumPageloadEventsAdaptiveGroups` `rumPerformanceEventsAdaptiveGroups` `rumWebVitalsEventsAdaptiveGroups`   |
+| Data set (product) | Node                                                                                                      |
+| :----------------- | :-------------------------------------------------------------------------------------------------------- |
+| Browser Insights   | `browserInsightsAdaptiveGroups` `webVitalsAdaptiveGroups`                                                 |
+| Web Analytics      | `rumPageloadEventsAdaptiveGroups` `rumPerformanceEventsAdaptiveGroups` `rumWebVitalsEventsAdaptiveGroups` |
 
 </TableWrap>
 
@@ -58,17 +58,17 @@ The following data nodes are deprecated. To avoid disruption, migrate to replace
 
 <TableWrap>
 
-| Node                         | Replacement node                     | Sunset date       |
-| ---------------------------- | ------------------------------------ | ----------------- |
-| `httpRequestsCacheGroups`    | `httpRequestsAdaptiveGroups`         | March 1, 2021     |
-| `httpRequests1mByColoGroups` | `httpRequestsAdaptiveGroups`         | September 1, 2021 |
-| `httpRequests1dByColoGroups` | `httpRequestsAdaptiveGroups`         | September 1, 2021 |
-| `firewallRulePreviewGroups`  | `httpRequestsAdaptiveGroups`         | March 1, 2021     |
-| `healthCheckEvents`          | `healthCheckEventsAdaptive`          | March 1, 2021     |   
-| `healthCheckEventsGroups`    | `healthCheckEventsAdaptiveGroups`    | March 1, 2021     |  
-| `loadBalancingRequests`      | `loadBalancingRequestsAdaptive`      | September 30, 2021     | 
-| `loadBalancingRequestsGroups`| `loadBalancingRequestsAdaptiveGroups`| September 30, 2021     |
-| `ipFlows1mGroups`<br/> `ipFlows1hGroups`<br/> `ipFlows1dGroups`<br/> `ipFlows1mAttacksGroups` | `spectrumNetworkAnalyticsAdaptiveGroups`<br/> `magicTransitNetworkAnalyticsAdaptiveGroups`<br/> `dosdNetworkAnalyticsAdaptiveGroups`<br/> `dosdAttackAnalyticsAdaptiveGroups`<br/> `flowtrackdNetworkAnalyticsAdaptiveGroups`<br/> `magicFirewallNetworkAnalyticsAdaptiveGroups` | March 31, 2022 |
+| Node                                                                                          | Replacement node                                                                                                                                                                                                                                                                 | Sunset date        |
+| --------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------ |
+| `httpRequestsCacheGroups`                                                                     | `httpRequestsAdaptiveGroups`                                                                                                                                                                                                                                                     | March 1, 2021      |
+| `httpRequests1mByColoGroups`                                                                  | `httpRequestsAdaptiveGroups`                                                                                                                                                                                                                                                     | September 1, 2021  |
+| `httpRequests1dByColoGroups`                                                                  | `httpRequestsAdaptiveGroups`                                                                                                                                                                                                                                                     | September 1, 2021  |
+| `firewallRulePreviewGroups`                                                                   | `httpRequestsAdaptiveGroups`                                                                                                                                                                                                                                                     | March 1, 2021      |
+| `healthCheckEvents`                                                                           | `healthCheckEventsAdaptive`                                                                                                                                                                                                                                                      | March 1, 2021      |
+| `healthCheckEventsGroups`                                                                     | `healthCheckEventsAdaptiveGroups`                                                                                                                                                                                                                                                | March 1, 2021      |
+| `loadBalancingRequests`                                                                       | `loadBalancingRequestsAdaptive`                                                                                                                                                                                                                                                  | September 30, 2021 |
+| `loadBalancingRequestsGroups`                                                                 | `loadBalancingRequestsAdaptiveGroups`                                                                                                                                                                                                                                            | September 30, 2021 |
+| `ipFlows1mGroups`<br/> `ipFlows1hGroups`<br/> `ipFlows1dGroups`<br/> `ipFlows1mAttacksGroups` | `spectrumNetworkAnalyticsAdaptiveGroups`<br/> `magicTransitNetworkAnalyticsAdaptiveGroups`<br/> `dosdNetworkAnalyticsAdaptiveGroups`<br/> `dosdAttackAnalyticsAdaptiveGroups`<br/> `flowtrackdNetworkAnalyticsAdaptiveGroups`<br/> `magicFirewallNetworkAnalyticsAdaptiveGroups` | March 31, 2022     |
 
 </TableWrap>
 

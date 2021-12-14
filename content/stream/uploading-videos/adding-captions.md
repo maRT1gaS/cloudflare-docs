@@ -11,10 +11,10 @@ Adding captions and subtitles to your video library.
 
 To create or modify a caption on a video a [Cloudflare API Token](https://www.cloudflare.com/a/account/my-account) is required.
 
-The `$LANGUAGE` must adhere to the [BCP 47 format](http://www.unicode.org/reports/tr35/#Unicode_Language_and_Locale_Identifiers).  For convenience, the most common
+The `$LANGUAGE` must adhere to the [BCP 47 format](http://www.unicode.org/reports/tr35/#Unicode_Language_and_Locale_Identifiers). For convenience, the most common
 language codes are provided [at the bottom of this document](#most-common-language-codes).
 If the language you are adding isn't included in the table, you can find the value
-through the [The IANA registry](https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry), which maintains a list of language codes.  To find the
+through the [The IANA registry](https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry), which maintains a list of language codes. To find the
 value to send, search for the language. Below is an example value from IANA when
 we look for the value to send for a Turkish subtitle:
 
@@ -125,28 +125,28 @@ deleted.
 
 ## Most common language codes
 
-| Language Code |     Language     |
-|---------------|------------------|
-|       zh      | Mandarin Chinese |
-|       hi      |       Hindi      |
-|       es      |      Spanish     |
-|       en      |      English     |
-|       ar      |      Arabic      |
-|       pt      |    Portuguese    |
-|       bn      |      Bengali     |
-|       ru      |      Russian     |
-|       ja      |      Japanese    |
-|       de      |      German      |
-|       pa      |      Panjabi     |
-|       jv      |     Javanese     |
-|       ko      |      Korean      |
-|       vi      |    Vietnamese    |
-|       fr      |      French      |
-|       ur      |       Urdu       |
-|       it      |      Italian     |
-|       tr      |      Turkish     |
-|       fa      |      Persian     |
-|       pl      |       Polish     |
-|       uk      |     Ukrainian    |
-|       my      |      Burmese     |
-|       th      |       Thai       |
+| Language Code | Language         |
+| ------------- | ---------------- |
+| zh            | Mandarin Chinese |
+| hi            | Hindi            |
+| es            | Spanish          |
+| en            | English          |
+| ar            | Arabic           |
+| pt            | Portuguese       |
+| bn            | Bengali          |
+| ru            | Russian          |
+| ja            | Japanese         |
+| de            | German           |
+| pa            | Panjabi          |
+| jv            | Javanese         |
+| ko            | Korean           |
+| vi            | Vietnamese       |
+| fr            | French           |
+| ur            | Urdu             |
+| it            | Italian          |
+| tr            | Turkish          |
+| fa            | Persian          |
+| pl            | Polish           |
+| uk            | Ukrainian        |
+| my            | Burmese          |
+| th            | Thai             |

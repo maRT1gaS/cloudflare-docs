@@ -4,9 +4,9 @@ title: Types of Notifications
 pcx-content-type: concept
 ---
 
-import SSLTroubleshoot from "../_partials/_troubleshoot-ssl"
-import DDOS from "../_partials/_ddos"
-import Errors5xx from "../_partials/_errors"
+import SSLTroubleshoot from '../_partials/_troubleshoot-ssl';
+import DDOS from '../_partials/_ddos';
+import Errors5xx from '../_partials/_errors';
 
 # What kinds of Notifications are available?
 
@@ -15,7 +15,7 @@ Depending on your plan, you will also be able to configure webhooks. Webhooks al
 
 ## What should you do when receiving Notifications?
 
-Each Notification carries different types of information about the status of your Cloudflare account, or the type of action you can take. 
+Each Notification carries different types of information about the status of your Cloudflare account, or the type of action you can take.
 
 Click below to understand what each Notification does and what to do when receiving one.
 
@@ -34,7 +34,7 @@ Enterprise plans.
 **What should you do if you receive one?**
 
 1. Use the link in the Notification you received to see which error codes Cloudflare is seeing from your origin.
-1. <Errors5xx/>
+1. <Errors5xx />
 
 </div>
 </details>
@@ -53,7 +53,7 @@ Free plan.
 
 **What should you do if you receive one?**
 
-<SSLTroubleshoot/>
+<SSLTroubleshoot />
 
 </div>
 </details>
@@ -72,7 +72,7 @@ Free plan.
 
 **What should you do if you receive one?**
 
-<SSLTroubleshoot/>
+<SSLTroubleshoot />
 
 </div>
 </details>
@@ -91,7 +91,7 @@ Purchase of Cloudflare for SaaS.
 
 **What should you do if you receive one?**
 
-<SSLTroubleshoot/>
+<SSLTroubleshoot />
 
 </div>
 </details>
@@ -110,7 +110,7 @@ Professional or higher plans.
 
 **What should you do if you receive one?**
 
-<DDOS/>
+<DDOS />
 
 </div>
 </details>
@@ -129,7 +129,7 @@ Purchase of Magic Transit and/or BYOIP.
 
 **What should you do if you receive one?**
 
-<DDOS/>
+<DDOS />
 
 </div>
 </details>
@@ -209,7 +209,7 @@ Free plans.
 
 **What should you do if you receive one?**
 
-<Errors5xx/>
+<Errors5xx />
 
 </div>
 </details>
@@ -229,7 +229,6 @@ Purchase of Access.
 **What should you do if you receive one?**
 
 Refresh your service token in the [Teams dashboard](https://dash.teams.cloudflare.com/) under **Configuration** > **Service Auth**.
-
 
 </div>
 </details>
@@ -287,7 +286,6 @@ Business plans or higher.
 **What should you do if you receive one?**
 
 Investigate to confirm it is an expected change.
-
 
 </div>
 </details>
@@ -347,7 +345,7 @@ Purchase of Secondary DNS.
 **What should you do if you receive one?**
 
 1. Confirm that the primary nameserver that is failing is up and running.
-1. Confirm that the ACL on the primary nameserver that is failing is configured correctly. 
+1. Confirm that the ACL on the primary nameserver that is failing is configured correctly.
 1. Confirm that the primary nameserver that is failing is configured correctly in your Cloudflare account (correct IP, port, TSIG).
 
 </div>

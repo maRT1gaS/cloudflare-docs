@@ -7,7 +7,7 @@ pcx-content-type: how-to
 
 ## Browser
 
-Browsers can be configured to use any DoH endpoint. If you choose to configure DoH directly in your browser, you must choose a Gateway location as your DoH endpoint, otherwise Gateway DNS filtering will not occur in that browser. 
+Browsers can be configured to use any DoH endpoint. If you choose to configure DoH directly in your browser, you must choose a Gateway location as your DoH endpoint, otherwise Gateway DNS filtering will not occur in that browser.
 
 ### Firefox
 
@@ -17,11 +17,10 @@ If you want to disable DoH for your organization so that Gateway can be enforced
 
 </Aside>
 
-
 <TableWrap>
 
-| Before you start |
-| ---------------- |
+| Before you start                                                                                |
+| ----------------------------------------------------------------------------------------------- |
 | Obtain a location's [DoH subdomain](/glossary#doh-subdomain) (previously known as a unique id). |
 
 </TableWrap>
@@ -56,8 +55,8 @@ You should now be able to send queries through the DNS over HTTPS protocol.
 
 1. Open **Settings**.
 2. In your address bar, type the following and hit **Enter**:
- `chrome://flags/#dns-over-https`. This will take you to Secure DNS lookups.
-4. Click on the **Secure DNS lookups** radio button to enable DoH.
+   `chrome://flags/#dns-over-https`. This will take you to Secure DNS lookups.
+3. Click on the **Secure DNS lookups** radio button to enable DoH.
 
 Read more about [enabling DNS over HTTPS](https://www.chromium.org/developers/dns-over-https) on Chrome.
 

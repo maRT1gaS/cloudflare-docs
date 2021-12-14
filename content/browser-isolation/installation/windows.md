@@ -6,9 +6,11 @@ order: 2
 # Installation on Windows
 
 ## Install WARP client
+
 Download and install the WARP client here: https://developers.cloudflare.com/warp-client/warp-for-everyone/setting-up/windows.
 
 ## Install the Cloudflare Root CA
+
 Advanced security features including Browser Isolation require users to install and trust the Cloudflare root certificate on their machine or device.
 
 Follow this article to configure the Cloudflare root certificate on your device: https://developers.cloudflare.com/cloudflare-one/connections/connect-devices/warp/install-cloudflare-cert

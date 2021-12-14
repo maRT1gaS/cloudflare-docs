@@ -5,7 +5,7 @@ pcx-content-type: reference
 
 # Events API
 
-Cloudflare Zaraz allows you to track the actions your users are taking on your website and other events that might happen in real-time. 
+Cloudflare Zaraz allows you to track the actions your users are taking on your website and other events that might happen in real-time.
 
 Common user actions you will probably be interested in tracking are Successful Signups, CTA clicks, and Purchases, among others. Common examples for other types of events are tracking the impressions of specific elements on a page, or loading a specific widget.
 

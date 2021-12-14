@@ -70,6 +70,7 @@ kv_namespaces = [
   { binding = "FOO", id = "1a2b3c4d5e", preview_id = "6e7f8g9h10i" }
 ]
 ```
+
 To deploy this example Worker to the `helloworld` environment, you would run `wrangler publish --env helloworld`.
 
 ---
@@ -78,11 +79,11 @@ To deploy this example Worker to the `helloworld` environment, you would run `wr
 
 There are three types of keys in a `wrangler.toml` file:
 
-* Top level only keys are required to be configured at the top level of your `wrangler.toml` file only; multiple environments on the same project must share this key's value.
+- Top level only keys are required to be configured at the top level of your `wrangler.toml` file only; multiple environments on the same project must share this key's value.
 
-* Inherited keys can be configured at the top level and/or environment. If the key is defined only at the top level, the environment will use the key's value from the top level. If the key is defined in the environment, the environment value will override the top-level value.
+- Inherited keys can be configured at the top level and/or environment. If the key is defined only at the top level, the environment will use the key's value from the top level. If the key is defined in the environment, the environment value will override the top-level value.
 
-* Non-inherited keys must be defined for every environment individually.
+- Non-inherited keys must be defined for every environment individually.
 
 <Definitions>
 
@@ -96,7 +97,7 @@ There are three types of keys in a `wrangler.toml` file:
 
 <Aside type="note">
 
-  Cloudflare will continue to support `rust` and `webpack` project types, but recommends using the `javascript` project type and specifying a custom [`build`](#build) section.
+Cloudflare will continue to support `rust` and `webpack` project types, but recommends using the `javascript` project type and specifying a custom [`build`](#build) section.
 
 </Aside>
 
@@ -145,12 +146,12 @@ There are three types of keys in a `wrangler.toml` file:
   - Configures cron triggers for running a Worker on a schedule.
 
 - `usage_model` <Type>inherited</Type> <PropMeta>optional</PropMeta>
+
   - Specifies the [Usage Model](/platform/pricing#usage-models) for your Worker. There are two options - [`bundled`](/platform/limits#bundled-usage-model) and [`unbound`](/platform/limits#unbound-usage-model). For newly created Workers, if the Usage Model is omitted it will be set to the [default Usage Model set on the account](https://dash.cloudflare.com/?account=workers/default-usage-model). For existing Workers, if the Usage Model is omitted, it will be set to the Usage Model configured in the dashboard for that Worker.
 
 - `build` <Type>top level</Type> <PropMeta>optional</PropMeta>
 
   - Configures a custom build step to be run by Wrangler when building your Worker. Refer to the [custom builds documentation](#build) for more details.
-
 
 </Definitions>
 
@@ -165,6 +166,7 @@ Usage:
 FOO = "some value"
 BAR = "some other string"
 ```
+
 The table keys are available to your script as global variables, which will contain their associated values.
 
 ```js
@@ -200,6 +202,7 @@ kv_namespaces = [
   { binding = "BAR", id = "068c101e168d03c65bddf4ba75150fb0", preview_id = "fb69528dbc7336525313f2e8c3b17db0" }
 ]
 ```
+
 Alternatively, you can define `kv namespaces` like so:
 
 ```toml
@@ -213,12 +216,13 @@ binding = "BAR"
 preview_id = "xyz456"
 id = "xyz123"
 ```
+
 Much like environment variables and secrets, the `binding` names are available to your Worker as global variables.
 
 ```js
 // Worker script:
 
-let value = await FOO.get("keyname");
+let value = await FOO.get('keyname');
 //=> gets the value for "keyname" from
 //=> the FOO variable, which points to
 //=> the "0f2ac...e279" KV namespace
@@ -395,8 +399,8 @@ This section is for customizing Workers with the `service-worker` format. These 
 
 ```js
 addEventListener('fetch', event => {
-  event.respondWith(new Response("I'm a service Worker!"))
-})
+  event.respondWith(new Response("I'm a service Worker!"));
+});
 ```
 
 Usage:
@@ -431,9 +435,9 @@ format = "service-worker"
 
 <Definitions>
 
-  - `format` <PropMeta>required</PropMeta>
+- `format` <PropMeta>required</PropMeta>
 
-    - The format of the Worker script, must be `"service-worker"`.
+  - The format of the Worker script, must be `"service-worker"`.
 
 </Definitions>
 
@@ -460,7 +464,7 @@ Refer to the [`FetchEvent` documentation](https://developers.cloudflare.com/work
 An uploaded module may `import` other uploaded ES Modules. If using the CommonJS format, you may `require` other uploaded CommonJS modules.
 
 ```js
-import html from './index.html'
+import html from './index.html';
 
 export default {
   // * request is the same as `event.request` from the service worker format
@@ -468,10 +472,10 @@ export default {
   // * env is where bindings like KV namespaces, Durable Object namespaces, Config variables, and Secrets
   // are exposed, instead of them being placed in global scope.
   async fetch(request, env, ctx) {
-    const headers = { 'Content-Type': 'text/html;charset=UTF-8' }
-    return new Response(html, { headers })
-  }
-}
+    const headers = { 'Content-Type': 'text/html;charset=UTF-8' };
+    return new Response(html, { headers });
+  },
+};
 ```
 
 To create a Workers project using Wrangler and Modules, add a `[build]` section:
@@ -521,7 +525,7 @@ main = "./worker.mjs"
 
 <Aside type="note">
 
-  If your project is written using CommonJS modules, you will need to re-export your handlers and Durable Object classes using an ES module shim. Refer to the [modules-webpack-commonjs](https://github.com/cloudflare/modules-webpack-commonjs) template as an example.
+If your project is written using CommonJS modules, you will need to re-export your handlers and Durable Object classes using an ES module shim. Refer to the [modules-webpack-commonjs](https://github.com/cloudflare/modules-webpack-commonjs) template as an example.
 
 </Aside>
 
@@ -558,13 +562,13 @@ main = "./worker.mjs"
 
       <TableWrap>
 
-        | `type`       | JavaScript type      |
-        | ------------ | -------------------- |
-        | ESModule     | -                    |
-        | CommonJS     | -                    |
-        | Text         | `String`             |
-        | Data         | `ArrayBuffer`        |
-        | CompiledWasm | `WebAssembly.Module` |
+      | `type`       | JavaScript type      |
+      | ------------ | -------------------- |
+      | ESModule     | -                    |
+      | CommonJS     | -                    |
+      | Text         | `String`             |
+      | Data         | `ArrayBuffer`        |
+      | CompiledWasm | `WebAssembly.Module` |
 
       </TableWrap>
 

@@ -25,12 +25,12 @@ The `{:script_id}` argument is the script ID (a hexadecimal string). This value 
 
 The following table summarizes the available operations:
 
-| Operation | Method + URL stub | Notes |
-|-----------|-------------------|-------|
-| [Get Page Shield settings][1] | `GET zones/{:zone_id}/script_monitor` | Fetch the current Page Shield status (enabled/disabled). |
-| [Update Page Shield settings][2] | `PUT zones/{:zone_id}/script_monitor` | Updates the Page Shield status (enabled/disabled). |
-| [List Page Shield scripts][3] | `GET zones/{:zone_id}/script_monitor/scripts` | Fetch a list of currently monitored scripts. |
-| [Get a script][4] | `GET zones/{:zone_id}/script_monitor/scripts/{:script_id}` | Fetch the details of a currently monitored script.
+| Operation                        | Method + URL stub                                          | Notes                                                    |
+| -------------------------------- | ---------------------------------------------------------- | -------------------------------------------------------- |
+| [Get Page Shield settings][1]    | `GET zones/{:zone_id}/script_monitor`                      | Fetch the current Page Shield status (enabled/disabled). |
+| [Update Page Shield settings][2] | `PUT zones/{:zone_id}/script_monitor`                      | Updates the Page Shield status (enabled/disabled).       |
+| [List Page Shield scripts][3]    | `GET zones/{:zone_id}/script_monitor/scripts`              | Fetch a list of currently monitored scripts.             |
+| [Get a script][4]                | `GET zones/{:zone_id}/script_monitor/scripts/{:script_id}` | Fetch the details of a currently monitored script.       |
 
 [1]: https://api.cloudflare.com/#script-monitor-get-script-monitor-settings
 [2]: https://api.cloudflare.com/#script-monitor-update-script-monitor-settings

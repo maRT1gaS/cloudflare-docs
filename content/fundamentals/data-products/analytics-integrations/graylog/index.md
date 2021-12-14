@@ -24,6 +24,7 @@ Before sending your Cloudflare log data to Graylog, make sure that you:
 <Aside type="note" header="Note">
 
 Cloudflare logs are HTTP/HTTPS request logs in JSON format and are gathered from our 200+ data centers globally. By default, timestamps are returned as Unix nanosecond integers. All timestamp formats are supported by Graylog.
+
 </Aside>
 
 ## Task 1 - Preparation
@@ -98,6 +99,7 @@ Lambda function and Graylog is not currently supported. We recommend taking
 appropriate measures to secure the log messages in transit, such as placing
 the Lambda function within a secure VPC subnet where the Graylog node or
 cluster is running.
+
 </Aside>
 
 ## Task 3 - Import the content pack in Graylog
@@ -187,6 +189,7 @@ Use this dashboard to detect and mitigate bad bots so that you can prevent crede
 
 To get bot requests identified correctly, use only one Cloudflare
 Firewall Rule, configured with the action _Challenge (Captcha)_. To lear more, consult the [Cloudflare Firewall Rules documentation](https://developers.cloudflare.com/firewall/cf-firewall-rules/).
+
 </Aside>
 
 Use this dashboard to:

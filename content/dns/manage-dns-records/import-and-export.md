@@ -18,7 +18,7 @@ The number of imported records per domain depends on your plan:
 - **Enterprise**: 3500 records, but can request a limit increase
 
 ### Format your file:
-    
+
 Create a [BIND zone file](https://help.dyn.com/how-to-format-a-zone-file/) for your domain. If you need help, use a [third-party tool](https://pgl.yoyo.org/as/bind-zone-file-creator.php).
 
 Make sure to remove all comments from your import file that start with a semicolon (;).

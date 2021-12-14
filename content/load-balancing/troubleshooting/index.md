@@ -7,4 +7,4 @@ pcx-content-type: navigation
 
 For more guidance related to common issues with load balancers, refer to the following resources:
 
-<DirectoryListing path="/troubleshooting"/>
+<DirectoryListing path="/troubleshooting" />

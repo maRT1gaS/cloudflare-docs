@@ -10,8 +10,8 @@ pcx-content-type: faq
 
 To check logs, use a command similar to the following.
 
-* systemd: `sudo journalctl -f -u gokeyless`
-* upstart/sysvinit: `sudo tail -f /var/log/gokeyless.log`
+- systemd: `sudo journalctl -f -u gokeyless`
+- upstart/sysvinit: `sudo tail -f /var/log/gokeyless.log`
 
 ## Enable debug logging
 
@@ -26,7 +26,7 @@ $ sudo -u keyless gokeyless --loglevel 0
 
 1. Make sure your key server is accessible from outside your network (tcp/2407).
 1. Provide a packet capture:
-`$ sudo tcpdump -nni <interface> -s 0 -w keyless-$(date +%s).pcap port 2407`
+   `$ sudo tcpdump -nni <interface> -s 0 -w keyless-$(date +%s).pcap port 2407`
 
 ## Clients are connecting, but immediately aborting
 

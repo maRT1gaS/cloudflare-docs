@@ -11,15 +11,15 @@ pcx-content-type: how-to
 <div>
 
 | Operating Systems | [WARP mode required](/connections/connect-devices/warp#warp-client-modes) | [Teams plans](https://www.cloudflare.com/teams-pricing/) |
-| ----------------- | --------- | ---- |
-| All systems | WARP with Gateway | All plans | 
+| ----------------- | ------------------------------------------------------------------------- | -------------------------------------------------------- |
+| All systems       | WARP with Gateway                                                         | All plans                                                |
 
 </div>
 </details>
 
 <Aside type="note">
 
-This device posture attribute will check for all versions of WARP, including the consumer version. 
+This device posture attribute will check for all versions of WARP, including the consumer version.
 
 </Aside>
 
@@ -34,9 +34,9 @@ The process involves two steps:
 
 1. On your [Teams dashboard](https://dash.teams.cloudflare.com/), navigate to **My Team > Devices > Device Posture**.
 
-    ![Device Posture](../../static/documentation/identity/devices/device-posture.png)
+   ![Device Posture](../../static/documentation/identity/devices/device-posture.png)
 
-1. Select **WARP**. 
+1. Select **WARP**.
 
 1. Click **Save**.
 
@@ -50,8 +50,8 @@ You are now ready to start requiring WARP for your Access applications.
 
 1. Click **Edit**.
 
-1. To have an existing policy require WARP, click **Edit** for that specific policy. Then, add an **Include** or **Require** rule with the option *WARP* selected.
+1. To have an existing policy require WARP, click **Edit** for that specific policy. Then, add an **Include** or **Require** rule with the option _WARP_ selected.
 
 1. Click **Save rule**.
 
-Before granting access to the application, your policy will now check that the user is running the WARP client on their machine. 
+Before granting access to the application, your policy will now check that the user is running the WARP client on their machine.

@@ -29,21 +29,21 @@ To create a mTLS rule in the Cloudflare dashboard, follow these steps:
 
 1. Click the **Firewall** app.
 
-    The Firewall **Overview** displays.
+   The Firewall **Overview** displays.
 
-    ![Firewall Overview tab](../images/firewall-app-overview.png)
+   ![Firewall Overview tab](../images/firewall-app-overview.png)
 
 1. Click the **Firewall Rules** tab.
 
-    The **Firewall Rules** card displays.
+   The **Firewall Rules** card displays.
 
-    ![Firewall Rules card](../images/firewall-rules-card.png)
+   ![Firewall Rules card](../images/firewall-rules-card.png)
 
 1. Click **Create a mTLS rule**.
 
-    The **Mutual TLS Rule** dialog displays.
+   The **Mutual TLS Rule** dialog displays.
 
-    ![Firewall Rules Mutual TLS page](../images/firewall-rules-mutual-tls-page.png)
+   ![Firewall Rules Mutual TLS page](../images/firewall-rules-mutual-tls-page.png)
 
 1. Enter a descriptive identifier for your mTLS rule in the **Rule name** input.
 
@@ -79,8 +79,8 @@ When a request includes a revoked certificate, the `cf.tls_client_auth.cert_revo
 
 For example, the following Firewall rule blocks incoming requests that include a revoked certificate:
 
-* **Rule expression**: `cf.tls_client_auth.cert_revoked`
-* **Action**: _Block_
+- **Rule expression**: `cf.tls_client_auth.cert_revoked`
+- **Action**: _Block_
 
 You can also use a single mTLS rule to block requests that do not include a valid client certificate or that include a revoked certificate. You must also use the Expression Editor to enter this rule expression.
 

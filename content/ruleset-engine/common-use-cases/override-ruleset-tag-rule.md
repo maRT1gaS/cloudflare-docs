@@ -15,9 +15,9 @@ Customize the execution of Managed Rulesets with a combination of ruleset overri
 
 The request below uses the [Update ruleset](/rulesets-api/update) operation to execute the following in a single `PUT` request:
 
-* Add a rule to the `http_request_firewall_managed` phase entry point ruleset that executes a Managed Ruleset.
-* Use category overrides to enable rules with `wordpress` and `drupal` tags and set their actions to `log`.
-* Add a rule override that enables a single rule.
+- Add a rule to the `http_request_firewall_managed` phase entry point ruleset that executes a Managed Ruleset.
+- Use category overrides to enable rules with `wordpress` and `drupal` tags and set their actions to `log`.
+- Add a rule override that enables a single rule.
 
 <details>
 <summary>Example: Execute a Managed Ruleset at the zone level with overrides</summary>
@@ -25,10 +25,10 @@ The request below uses the [Update ruleset](/rulesets-api/update) operation to e
 
 In this example:
 
-* `"id": "{managed-ruleset-id}"` adds a rule to the `http_request_firewall_managed` phase entry point ruleset to execute a Managed Ruleset for requests addressed to a zone (`{zone-id}`).
-* `"enabled": false` defines an override at the ruleset level to disable all rules in the Managed Ruleset.
-* `"categories": [{"category": "wordpress", "action": "log", "enabled": true}, {"category": "drupal", "action": "log", "enabled": true}]` defines an override at the tag level to enable rules tagged with `wordpress` or `drupal` and sets their action to `log`.
-* `"rules": [{"id": "{rule-id}", "action": "block", "enabled": true}]` defines an override at the rule level that enables one individual rule and sets the action to `block`.
+- `"id": "{managed-ruleset-id}"` adds a rule to the `http_request_firewall_managed` phase entry point ruleset to execute a Managed Ruleset for requests addressed to a zone (`{zone-id}`).
+- `"enabled": false` defines an override at the ruleset level to disable all rules in the Managed Ruleset.
+- `"categories": [{"category": "wordpress", "action": "log", "enabled": true}, {"category": "drupal", "action": "log", "enabled": true}]` defines an override at the tag level to enable rules tagged with `wordpress` or `drupal` and sets their action to `log`.
+- `"rules": [{"id": "{rule-id}", "action": "block", "enabled": true}]` defines an override at the rule level that enables one individual rule and sets the action to `block`.
 
 ```json
 curl -X PUT \
@@ -37,7 +37,7 @@ curl -X PUT \
   "rules": [
     {
       "action": "execute",
-      "expression": "true", 
+      "expression": "true",
       "action_parameters": {
         "id": "{managed-ruleset-id}",
         "overrides": {
@@ -51,7 +51,7 @@ curl -X PUT \
             {
               "category": "drupal",
               "action": "log",
-              "enabled": true              
+              "enabled": true
             }
           ],
           "rules": [
@@ -77,10 +77,10 @@ curl -X PUT \
 
 In this example:
 
-* `"id": "{managed-ruleset-id}"` adds a rule to the `http_request_firewall_managed` phase entry point ruleset that executes a Managed Ruleset for requests addressed to `example.com`.
-* `"enabled": false` defines an override at the ruleset level to disable all rules in the Managed Ruleset.
-* `"categories": [{"category": "wordpress", "action": "log", "enabled": true}, {"category": "drupal", "action": "log", "enabled": true}]` defines an override at the tag level to enable rules tagged with `wordpress` or `drupal` and sets their action to `log`.
-* `"rules": [{"id": "{rule-id}", "action": "block", "enabled": true}]` defines an override at the rule level that enables one individual rule and sets the action to `block`.
+- `"id": "{managed-ruleset-id}"` adds a rule to the `http_request_firewall_managed` phase entry point ruleset that executes a Managed Ruleset for requests addressed to `example.com`.
+- `"enabled": false` defines an override at the ruleset level to disable all rules in the Managed Ruleset.
+- `"categories": [{"category": "wordpress", "action": "log", "enabled": true}, {"category": "drupal", "action": "log", "enabled": true}]` defines an override at the tag level to enable rules tagged with `wordpress` or `drupal` and sets their action to `log`.
+- `"rules": [{"id": "{rule-id}", "action": "block", "enabled": true}]` defines an override at the rule level that enables one individual rule and sets the action to `block`.
 
 ```json
 curl -X PUT \
@@ -89,7 +89,7 @@ curl -X PUT \
   "rules": [
     {
       "action": "execute",
-      "expression": "cf.zone.name eq \"example.com\"", 
+      "expression": "cf.zone.name eq \"example.com\"",
       "action_parameters": {
         "id": "{managed-ruleset-id}",
         "overrides": {

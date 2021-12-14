@@ -1,15 +1,15 @@
 ---
 updated: 2020-04-15
 difficulty: Beginner
-content_type: "📝 Tutorial"
+content_type: '📝 Tutorial'
 pcx-content-type: tutorial
 ---
 
-import TutorialsBeforeYouStart from "../../_partials/_tutorials-before-you-start.md"
+import TutorialsBeforeYouStart from '../../_partials/_tutorials-before-you-start.md';
 
 # Configure your CDN
 
-<TutorialsBeforeYouStart/>
+<TutorialsBeforeYouStart />
 
 ## Overview
 
@@ -83,7 +83,7 @@ When a Worker receives a `fetch` event, the script must use `event.respondWith` 
 
 Any project you publish to Cloudflare Workers can make use of modern JS tooling like ES modules, NPM packages, and [async/await](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function) functions to put together your application. You can [build full applications](/tutorials/build-a-slackbot), or [serverless functions](/tutorials/build-a-qr-code-generator) on Workers using the same tooling and process as what you will be building today.
 
-The Cloudflare Workers project built in this tutorial will be a serverless function that runs on a wildcard route and receives requests. When the serverless function receives an incoming request, it should parse the URL, find what asset is being requested, and serve it from the configured Cloud Storage bucket. 
+The Cloudflare Workers project built in this tutorial will be a serverless function that runs on a wildcard route and receives requests. When the serverless function receives an incoming request, it should parse the URL, find what asset is being requested, and serve it from the configured Cloud Storage bucket.
 
 Because the asset will go through your Workers function, and Cloudflare’s network, you can also make use of both Cloudflare’s default caching behavior, as well as your own custom logic, to ensure that as much data can be cached at Cloudflare’s globally distributed data centers. The result is an easy-to-understand and highly performant CDN configuration, with the ability to customize it to your application’s specific needs.
 
@@ -125,7 +125,7 @@ async function handleRequest(event) {
 
 ### Routing to your assets
 
-Looking back at the original definition of this project, at the beginning of the [Build](/tutorials/configure-your-cdn#build) section, the `serveAsset` function should parse the URL, find what asset is being requested, and serve it from the configured Cloud Storage bucket. To do this, the `event.request.url` field should be parsed using the `URL` library, and set to `url`. 
+Looking back at the original definition of this project, at the beginning of the [Build](/tutorials/configure-your-cdn#build) section, the `serveAsset` function should parse the URL, find what asset is being requested, and serve it from the configured Cloud Storage bucket. To do this, the `event.request.url` field should be parsed using the `URL` library, and set to `url`.
 
 Given an instance of the `URL` class, `url`, there are a number of useful properties that can be used to query the incoming request. `serveAsset` should check the `pathname`, which contains the part of the URL after the `host`: for example, given the URL `https://assets.mysite.com/faces/1.jpg`, the pathname will be `/faces/1.jpg`:
 
@@ -166,7 +166,7 @@ To cache responses in a Workers function, the Cache API provides `cache.match`, 
 2. If `response` does not exist, get the asset from cloud storage, set it to `response`, and cache it.
 3. Return `response` from the function, back to the `fetch` event handler.
 
-The `Cache-Control` header is a common way that HTML responses indicate how they should be cached. The Workers implementation respects the `Cache-Control` header, in indicating how assets should be cached on Cloudflare’s CDN. In building a custom asset serving solution, and enabling caching, you should set a custom `Cache-Control` header (in this example, we’ll set it to `public`, and a `max-age` value of `14400` seconds, or four hours). 
+The `Cache-Control` header is a common way that HTML responses indicate how they should be cached. The Workers implementation respects the `Cache-Control` header, in indicating how assets should be cached on Cloudflare’s CDN. In building a custom asset serving solution, and enabling caching, you should set a custom `Cache-Control` header (in this example, we’ll set it to `public`, and a `max-age` value of `14400` seconds, or four hours).
 
 When the asset is retrieved from cloud storage, the `serveAsset` function should construct a new instance of `Response`, copying much of the HTML response data from the cloud storage response, but overwriting the response headers. By doing this, you will define your own custom caching information, and passing it to the Workers Cache API.
 
@@ -215,36 +215,36 @@ async function handleRequest(event) {
 And with that, you are finished writing the code for this tutorial. The final version of your script should like this:
 
 ```js
-addEventListener("fetch", event => {
-  event.respondWith(handleRequest(event))
-})
+addEventListener('fetch', event => {
+  event.respondWith(handleRequest(event));
+});
 
-const BUCKET_NAME = "hugo-workers"
-const BUCKET_URL = `http://storage.googleapis.com/${BUCKET_NAME}`
+const BUCKET_NAME = 'hugo-workers';
+const BUCKET_URL = `http://storage.googleapis.com/${BUCKET_NAME}`;
 
 async function serveAsset(event) {
-  const url = new URL(event.request.url)
-  const cache = caches.default
-  let response = await cache.match(event.request)
+  const url = new URL(event.request.url);
+  const cache = caches.default;
+  let response = await cache.match(event.request);
 
   if (!response) {
-    response = await fetch(`${BUCKET_URL}${url.pathname}`)
-    const headers = { "cache-control": "public, max-age=14400" }
-    response = new Response(response.body, { ...response, headers })
-    event.waitUntil(cache.put(event.request, response.clone()))
+    response = await fetch(`${BUCKET_URL}${url.pathname}`);
+    const headers = { 'cache-control': 'public, max-age=14400' };
+    response = new Response(response.body, { ...response, headers });
+    event.waitUntil(cache.put(event.request, response.clone()));
   }
-  return response
+  return response;
 }
 
 async function handleRequest(event) {
-  if (event.request.method === "GET") {
-    let response = await serveAsset(event)
+  if (event.request.method === 'GET') {
+    let response = await serveAsset(event);
     if (response.status > 399) {
-      response = new Response(response.statusText, { status: response.status })
+      response = new Response(response.statusText, { status: response.status });
     }
-    return response
+    return response;
   } else {
-    return new Response("Method not allowed", { status: 405 })
+    return new Response('Method not allowed', { status: 405 });
   }
 }
 ```

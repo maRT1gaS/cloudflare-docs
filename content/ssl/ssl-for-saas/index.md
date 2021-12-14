@@ -3,11 +3,11 @@ order: 8
 pcx-content-type: landing-page
 ---
 
-import SSLforSaaSDefinition from "../_partials/_ssl-for-saas-definition.md"
+import SSLforSaaSDefinition from '../_partials/_ssl-for-saas-definition.md';
 
 # SSL for SaaS
 
-<SSLforSaaSDefinition/>
+<SSLforSaaSDefinition />
 
 For example, a customer may want to use their vanity domain `app.customer.com` to point to an application hosted on your Cloudflare zone `service.saas.com`.
 
@@ -19,7 +19,6 @@ When you use SSL for SaaS, it helps you:
 - Offer a branded visitor experience, leading to increased trust.
 - Improve SEO rankings.
 - Increase site speed via HTTP/2.
-
 
 ## Limitations
 
@@ -39,6 +38,14 @@ SSL for SaaS is available as an add-on purchase for customers on any plan. For m
 ## Next steps
 
 <ButtonGroup>
-  <Button type="primary" href="getting-started">Get started</Button>
-  <Button type="secondary" href="https://blog.cloudflare.com/introducing-ssl-for-saas/" target="_blank">Learn more</Button>
+  <Button type="primary" href="getting-started">
+    Get started
+  </Button>
+  <Button
+    type="secondary"
+    href="https://blog.cloudflare.com/introducing-ssl-for-saas/"
+    target="_blank"
+  >
+    Learn more
+  </Button>
 </ButtonGroup>

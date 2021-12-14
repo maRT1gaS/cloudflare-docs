@@ -1,11 +1,11 @@
 ---
 updated: 2020-07-25
 difficulty: Intermediate
-content_type: "📝 Tutorial"
+content_type: '📝 Tutorial'
 pcx-content-type: tutorial
 ---
 
-import TutorialsBeforeYouStart from "../../_partials/_tutorials-before-you-start.md"
+import TutorialsBeforeYouStart from '../../_partials/_tutorials-before-you-start.md';
 
 # Deploy a static WordPress site
 
@@ -15,7 +15,7 @@ As of August 2020, the WP2Static plugin is closed for downloads on WordPress.org
 
 </Aside>
 
-<TutorialsBeforeYouStart/>
+<TutorialsBeforeYouStart />
 
 ## Overview
 

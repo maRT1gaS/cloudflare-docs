@@ -3,7 +3,7 @@ order: 1
 pcx-content-type: reference
 ---
 
-import SSLModeErrors from "../_partials/_ssl-mode-errors.md"
+import SSLModeErrors from '../_partials/_ssl-mode-errors.md';
 
 # Encryption modes
 
@@ -71,7 +71,7 @@ Choose this option when you cannot set up an SSL certificate on your origin or y
 
 ### Required setup
 
-<SSLModeErrors/>
+<SSLModeErrors />
 
 ### Limitations
 
@@ -79,7 +79,7 @@ If your application contains sensitive information (personalized data, user logi
 
 ![SSL Encryption set to Flexible](../static/ssl-encryption-mode-flexible.png)
 
---------
+---
 
 ## Full
 
@@ -95,7 +95,7 @@ Before enabling **Full** mode, make sure your origin allows HTTPS connections on
 
 To prevent any unencrypted requests from reaching your origin, enable [Always Use HTTPS](/edge-certificates/additional-options/always-use-https).
 
-<SSLModeErrors/>
+<SSLModeErrors />
 
 ### Limitations
 
@@ -113,7 +113,7 @@ When you set your encryption mode to **Full (strict)**, Cloudflare does everythi
 
 ### Use when
 
-For the best security, choose **Full (strict)** mode whenever possible (unless your are an [Enterprise customer](#strict-ssl-only-origin-pull)). 
+For the best security, choose **Full (strict)** mode whenever possible (unless your are an [Enterprise customer](#strict-ssl-only-origin-pull)).
 
 Your origin needs to be able to support an SSL certificate that is:
 
@@ -129,7 +129,7 @@ To prevent any unencrypted requests from reaching your origin, enable [Always Us
 
 ### Limitations
 
-<SSLModeErrors/>
+<SSLModeErrors />
 
 ![SSL Encryption set to Full (strict)](../static/ssl-encryption-mode-full-strict.png)
 
@@ -137,7 +137,7 @@ To prevent any unencrypted requests from reaching your origin, enable [Always Us
 
 ## Strict (SSL-Only Origin Pull)
 
-*This method is only available for Enterprise zones.*
+_This method is only available for Enterprise zones._
 
 Connections to the origin will always be made using SSL/TLS, regardless of the scheme requested by the visitor.
 
@@ -153,7 +153,7 @@ The setup is the same as [**Full (strict)** mode](#full-strict), but you select 
 
 ### Limitations
 
-<SSLModeErrors/>
+<SSLModeErrors />
 
 ## ERR_SSL_VERSION_OR_CIPHER_MISMATCH
 

@@ -39,7 +39,7 @@ For example, you might have a load balancer for `www.example.com` with the follo
 
     - Origin 1 (`Host` header set to `lb-app-a.example.com`)
     - Origin 2
-  
+
   - Pool 2:
 
     - Origin 3

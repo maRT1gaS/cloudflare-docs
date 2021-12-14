@@ -8,8 +8,8 @@ order: 4
 
 Create a [static or dynamic URL rewrite](/transform/url-rewrite) based on the parameter name provided in the `action_parameters` field:
 
-* Define the `value` parameter to specify a static URL rewrite.
-* Define the `expression` parameter to specify the expression that defines the dynamic URL rewrite to perform.
+- Define the `value` parameter to specify a static URL rewrite.
+- Define the `expression` parameter to specify the expression that defines the dynamic URL rewrite to perform.
 
 ## Static URL rewrite parameters
 
@@ -18,9 +18,9 @@ The full syntax of the `action_parameters` field for a static URL Rewrite Rule t
 ```json
 "action_parameters": {
   "uri": {
-    "path": { 
+    "path": {
       "value": "<URI_PATH_VALUE>"
-    }, 
+    },
     "query": {
       "value": "<QUERY_STRING_VALUE>"
     }
@@ -37,9 +37,9 @@ The full syntax of the `action_parameters` field for a dynamic URL Rewrite Rule 
 ```json
 "action_parameters": {
   "uri": {
-    "path": { 
+    "path": {
       "expression": "<URI_PATH_EXPRESSION>"
-    }, 
+    },
     "query": {
       "expression": "<QUERY_STRING_EXPRESSION>"
     }
@@ -56,9 +56,9 @@ The same rule can have different types of URL rewrites for the URI path and the 
 ```json
 "action_parameters": {
   "uri": {
-    "path": { 
+    "path": {
       "expression": "<URI_PATH_EXPRESSION>"
-    }, 
+    },
     "query": {
       "value": "<QUERY_STRING_VALUE>"
     }

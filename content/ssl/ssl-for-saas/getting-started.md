@@ -4,9 +4,9 @@ order: 0
 pcx-content-type: tutorial
 ---
 
-import IssueCertsPreamble from "../_partials/_issue-certs-preamble.md"
-import CreateCustomHostname from "../_partials/_create-custom-hostname.md"
-import CreateCustomHostnameAPI from "../_partials/_create-custom-hostname-api.md"
+import IssueCertsPreamble from '../_partials/_issue-certs-preamble.md';
+import CreateCustomHostname from '../_partials/_create-custom-hostname.md';
+import CreateCustomHostnameAPI from '../_partials/_create-custom-hostname-api.md';
 
 # Get started with SSL for SaaS
 
@@ -29,31 +29,33 @@ The CNAME target — optional, but highly encouraged — provides a friendly and
 1. Create a [new application](https://support.cloudflare.com/hc/articles/201720164) and select the **Free** plan.
 1. Navigate to **DNS**.
 1. Create two DNS records:
-    - A proxied *A* or *AAAA* record pointing to the IP address of your **fallback origin** (where Cloudflare wil send custom hostname traffic).
-    - A *CNAME* record that points your **CNAME target** to your fallback origin (can be a wildcard such as `*.customers.saasprovider.com`).
 
-    <Example>
+   - A proxied _A_ or _AAAA_ record pointing to the IP address of your **fallback origin** (where Cloudflare wil send custom hostname traffic).
+   - A _CNAME_ record that points your **CNAME target** to your fallback origin (can be a wildcard such as `*.customers.saasprovider.com`).
 
-    Record|Type|Name|Content
-    -----|-------|-------|-----
-    Fallback origin|A|`proxy-fallback.saasprovider.com`|192.0.2.1
-    CNAME target|CNAME|`*.customers.saasprovider.com`|`proxy-fallback.saasprovider.com`
+   <Example>
 
-    </Example>
+   | Record          | Type  | Name                              | Content                           |
+   | --------------- | ----- | --------------------------------- | --------------------------------- |
+   | Fallback origin | A     | `proxy-fallback.saasprovider.com` | 192.0.2.1                         |
+   | CNAME target    | CNAME | `*.customers.saasprovider.com`    | `proxy-fallback.saasprovider.com` |
+
+   </Example>
 
 1. Enable **Custom Hostnames** for your zone:
 
-    - If you are an Enterprise customer, upgrade your zone to an Enterprise plan and contact your Customer Success Manager to enable **SSL for SaaS Certificates**. 
-    - If you are not an Enterprise customer, go to **SSL/TLS** > **Custom Hostnames** to enable **Cloudflare for SaaS**.
-    
+   - If you are an Enterprise customer, upgrade your zone to an Enterprise plan and contact your Customer Success Manager to enable **SSL for SaaS Certificates**.
+   - If you are not an Enterprise customer, go to **SSL/TLS** > **Custom Hostnames** to enable **Cloudflare for SaaS**.
+
 1. Set the **Fallback Origin** via either the dashboard or API.
-    - **Dashboard**: 
 
-        1. Navigate to **SSL/TLS** > **Custom Hostnames**.
-        1. In the **Custom Hostnames** card, enter the hostname for your fallback origin.
-        1. Click **Add**.
+   - **Dashboard**:
 
-    - **API**: Using the hostname from the A or AAAA record you just created, [update the fallback origin value](https://api.cloudflare.com/#custom-hostname-fallback-origin-for-a-zone-update-fallback-origin-for-custom-hostnames).
+     1. Navigate to **SSL/TLS** > **Custom Hostnames**.
+     1. In the **Custom Hostnames** card, enter the hostname for your fallback origin.
+     1. Click **Add**.
+
+   - **API**: Using the hostname from the A or AAAA record you just created, [update the fallback origin value](https://api.cloudflare.com/#custom-hostname-fallback-origin-for-a-zone-update-fallback-origin-for-custom-hostnames).
 
 ---
 
@@ -61,8 +63,8 @@ The CNAME target — optional, but highly encouraged — provides a friendly and
 
 Each Custom Hostname requires successful Certificate Validation and Hostname Verification.
 
-* [Certificate Validation](/ssl-for-saas/common-tasks/certificate-validation-methods): Upon successful validation, the certificates are deployed to Cloudflare’s edge network.
-* [Hostname Verification](/ssl-for-saas/common-tasks/hostname-verification/): Upon successful validation, Cloudflare proxies traffic for this hostname.
+- [Certificate Validation](/ssl-for-saas/common-tasks/certificate-validation-methods): Upon successful validation, the certificates are deployed to Cloudflare’s edge network.
+- [Hostname Verification](/ssl-for-saas/common-tasks/hostname-verification/): Upon successful validation, Cloudflare proxies traffic for this hostname.
 
 Depending on which method you select for each of these options, additional steps might be required for you and your customers.
 
@@ -72,14 +74,13 @@ Depending on which method you select for each of these options, additional steps
 
 Once your account has been provisioned, you are ready to issue certificates.
 
-<IssueCertsPreamble/>
-
+<IssueCertsPreamble />
 
 <details>
 <summary>Using the dashboard</summary>
 <div>
 
-<CreateCustomHostname/>
+<CreateCustomHostname />
 
 </div>
 </details>
@@ -88,11 +89,10 @@ Once your account has been provisioned, you are ready to issue certificates.
 <summary>Using the API</summary>
 <div>
 
-<CreateCustomHostnameAPI/>
+<CreateCustomHostnameAPI />
 
 </div>
 </details>
-
 
 ---
 
@@ -108,7 +108,7 @@ For help tracking a certificate's status, refer to [Monitor certificates](/ssl-f
 
 ### View certificates
 
-Once domain validation has been completed, the certificates will be issued and distributed to Cloudflare’s edge. 
+Once domain validation has been completed, the certificates will be issued and distributed to Cloudflare’s edge.
 
 To view these certificates, use `openssl` or your browser. The command below can be used in advance of your customer pointing the `app.example.com` hostname to the edge ([provided validation was completed](/ssl-for-saas/common-tasks/certificate-validation-methods)).
 
@@ -123,6 +123,7 @@ $ openssl s_client -servername app.example.com -connect $CNAME_TARGET:443 </dev/
 Your customer needs to set up a CNAME record at their DNS provider that points to your [CNAME target](#step-1--create-fallback-origin-and-cname-target).
 
 For example:
+
 ```txt
 app CNAME john.customers.saasprovider.com
 ```

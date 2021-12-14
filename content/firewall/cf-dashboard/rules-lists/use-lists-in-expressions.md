@@ -38,6 +38,6 @@ To create a new rule via API using the Cloudflare Open Proxies Managed List use 
 
 <Aside type='warning' header='Important'>
 
-Access to the  Open Proxy List requires a Cloudflare Enterprise plan.
+Access to the Open Proxy List requires a Cloudflare Enterprise plan.
 
 </Aside>

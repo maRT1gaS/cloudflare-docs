@@ -11,9 +11,9 @@ You can use Cloudflare Access to require team members to connect to self-hosted 
 
 **🗺️ This walkthrough covers how to:**
 
-* Create or upload a list of devices in your inventory
-* Deploy the Cloudflare WARP client to collect device information
-* Build a Zero Trust policy that requires users to connect from devices in your inventory
+- Create or upload a list of devices in your inventory
+- Deploy the Cloudflare WARP client to collect device information
+- Build a Zero Trust policy that requires users to connect from devices in your inventory
 
 **⏲️Time to complete:**
 
@@ -26,7 +26,7 @@ You can use Cloudflare Access to require team members to connect to self-hosted 
 1. Click **Create manual list**. You can also upload a CSV list.
 1. Give your list a name and choose `Serial numbers` from the List type field.
 
-    ![Create List](../static/zero-trust-security/corp-device/list-create.png)
+   ![Create List](../static/zero-trust-security/corp-device/list-create.png)
 
 1. Input the serial numbers of the devices your team manages. For larger teams, we recommend uploading a CSV or using Cloudflare's API endpoint. Click **Save**.
 
@@ -52,7 +52,7 @@ You can now add this corporate device requirement to existing or new application
 
 1. Add a `Require` rule and choose `Device Posture - Serial Number List` from the drop down menu. Choose the list of devices to require and click **Save rule**.
 
-    ![Add Require](../static/zero-trust-security/corp-device/add-require.png)
+   ![Add Require](../static/zero-trust-security/corp-device/add-require.png)
 
 Once saved, any device attempting to reach the application in this example will both need to be in the `@cloudflare.com` domain and connecting from a device that uses Cloudflare WARP and presents a serial number in the list created.
 

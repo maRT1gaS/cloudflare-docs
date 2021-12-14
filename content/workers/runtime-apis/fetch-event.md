@@ -10,7 +10,6 @@ In Workers, any incoming HTTP requests are referred to as `"fetch"` events. A Wo
 
 Both the [Service Worker](#syntax-service-worker) and [Module Worker](#syntax-module-worker) formats are able to handle `"fetch"` events, but with significant differences in their authoring syntax.
 
-
 ## Syntax: Service Worker
 
 In the Service Worker format, events are handled by using `addEventListener` to assign a handler to an event name. Additionally, the Service Worker specification assigns network requests to the `"fetch"` event, using the [`FetchEvent`](https://developer.mozilla.org/en-US/docs/Web/API/FetchEvent) interface.
@@ -18,11 +17,9 @@ In the Service Worker format, events are handled by using `addEventListener` to 
 Incoming HTTP requests can be handled by assigning a "fetch" event handler:
 
 ```js
-addEventListener("fetch", event => {
-  event.respondWith(
-    new Response("Hello")
-  )
-})
+addEventListener('fetch', event => {
+  event.respondWith(new Response('Hello'));
+});
 ```
 
 ### Supported `FetchEvent` properties
@@ -30,29 +27,39 @@ addEventListener("fetch", event => {
 <Definitions>
 
 - `event.type` <Type>string</Type>
-    - The type of event. This will always return `"fetch"`.
+
+  - The type of event. This will always return `"fetch"`.
 
 - `event.request` <TypeLink href="/runtime-apis/request">Request</TypeLink>
-    - The incoming HTTP request.
 
--  <Code>event.respondWith(response<TypeLink href="/runtime-apis/response">Response</TypeLink>|<span style={{marginLeft:"-6px"}}><ParamType>Promise</ParamType></span>)</Code> <Type>void</Type>
+  - The incoming HTTP request.
 
-    - See [`respondWith`](#respondwith).
+- <Code>
+    event.respondWith(response
+    <TypeLink href="/runtime-apis/response">Response</TypeLink>|<span
+      style={{ marginLeft: '-6px' }}
+    >
+      <ParamType>Promise</ParamType>
+    </span>)
+  </Code> <Type>void</Type>
 
-- <Code>event.waitUntil(promise<ParamType>Promise</ParamType>)</Code> <Type>void</Type>
+  - See [`respondWith`](#respondwith).
 
-    - See [`waitUntil`](#waituntil).
+- <Code>
+    event.waitUntil(promise<ParamType>Promise</ParamType>)
+  </Code> <Type>void</Type>
+
+  - See [`waitUntil`](#waituntil).
 
 - <Code>event.passThroughOnException()</Code> <Type>void</Type>
 
-    - See [`passThroughOnException`](#passthroughonexception).
+  - See [`passThroughOnException`](#passthroughonexception).
 
 </Definitions>
 
 ### Bindings
 
 When a Worker is deployed using the Service Worker syntax, any [bindings](/platform/environment-variables) will be made available as global runtime variables.
-
 
 ## Syntax: Module Worker
 
@@ -63,9 +70,9 @@ While an incoming HTTP request is still given the `"fetch"` name, a Module Worke
 ```js
 export default {
   fetch(request, env, context) {
-    return new Response("Hello")
-  }
-}
+    return new Response('Hello');
+  },
+};
 ```
 
 ### Parameters
@@ -73,25 +80,28 @@ export default {
 <Definitions>
 
 - `request` <TypeLink href="/runtime-apis/request">Request</TypeLink>
-    - The incoming HTTP request.
+
+  - The incoming HTTP request.
 
 - `env` <Type>object</Type>
-    - The [bindings](/platform/environment-variables) assigned to the Worker.
 
-- <Code>context.waitUntil(promise<ParamType>Promise</ParamType>)</Code> <Type>void</Type>
+  - The [bindings](/platform/environment-variables) assigned to the Worker.
 
-    - See [`waitUntil`](#waituntil).
+- <Code>
+    context.waitUntil(promise<ParamType>Promise</ParamType>)
+  </Code> <Type>void</Type>
+
+  - See [`waitUntil`](#waituntil).
 
 - <Code>context.passThroughOnException()</Code> <Type>void</Type>
 
-    - See [`passThroughOnException`](#passthroughonexception).
+  - See [`passThroughOnException`](#passthroughonexception).
 
 </Definitions>
 
 ### Bindings
 
 When deploying a Module Worker, any [bindings](/platform/environment-variables) will not be available as global runtime variables. Instead, they are passed to the handler as a [parameter](#parameters) – refer to `env`.
-
 
 ## Lifecycle methods
 
@@ -115,19 +125,16 @@ If no `fetch` event handler calls `respondWith`, then the runtime forwards the r
 
 ```js
 // Format: Service Worker
-addEventListener("fetch", event => {
-  let { pathname } = new URL(event.request.url)
+addEventListener('fetch', event => {
+  let { pathname } = new URL(event.request.url);
 
   // Allow "/ignore/*" URLs to hit origin
-  if (pathname.startsWith("/ignore/")) return
+  if (pathname.startsWith('/ignore/')) return;
 
   // Otherwise, respond with something
-  event.respondWith(
-    handler(event)
-  )
-})
+  event.respondWith(handler(event));
+});
 ```
-
 
 ### `waitUntil`
 
@@ -198,7 +205,6 @@ export default {
   }
 }
 ```
-
 
 ### `passThroughOnException`
 

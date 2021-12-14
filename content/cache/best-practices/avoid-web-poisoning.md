@@ -34,7 +34,6 @@ Client-side vulnerabilities are often exploited through HTTP headers, including 
 
 Cloudflare caches contents of GET request bodies, but they are not included in the cache key. GET request bodies should be considered untrusted and should not modify the contents of a response. If a GET body can change the contents of a response, consider bypassing cache or using a POST request.
 
-
 ## Monitor web security advisories
 
 To keep informed about Internet security threats, Cloudflare recommends that you monitor web security advisories on a regular basis. Some of the more popular advisories include:

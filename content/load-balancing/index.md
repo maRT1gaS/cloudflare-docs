@@ -30,7 +30,10 @@ Cloudflare Load Balancing is available as an add-on feature for any type of acco
 ## Next steps
 
 <ButtonGroup>
-  <Button type="primary" href="/get-started">Get started</Button>
-  <Button type="secondary" href="/understand-basics">Learn more</Button>
+  <Button type="primary" href="/get-started">
+    Get started
+  </Button>
+  <Button type="secondary" href="/understand-basics">
+    Learn more
+  </Button>
 </ButtonGroup>
-

@@ -5,10 +5,10 @@ pcx-content-type: how-to
 
 # Install the Cloudflare certificate
 
-<Aside type='note'>
- 
-This procedure is only required to enable specific Cloudflare for Teams features, and should only be done at the direction of your IT department. This procedure is not required to enable the WARP client for consumers.
- 
+<Aside type="note">
+  This procedure is only required to enable specific Cloudflare for Teams
+  features, and should only be done at the direction of your IT department. This
+  procedure is not required to enable the WARP client for consumers.
 </Aside>
 
 Advanced security features including HTTPS traffic inspection require users to install and trust the Cloudflare root certificate on their machine or device. If you are installing certificates manually on all of your devices, these steps will need to be performed on each new device that is to be subject to HTTP filtering.
@@ -17,17 +17,19 @@ Advanced security features including HTTPS traffic inspection require users to i
 
 First, download the Cloudflare certificate. The certificate is available both as a `.pem` and as a `.crt` file. Certain applications require the certificate to be in a specific file type, so ensure you download the most appropriate file for your use case.
 
-* [Download certificate (.crt)](../../../static/documentation/connections/Cloudflare_CA.crt)
-* [Download certificate (.pem)](../../../static/documentation/connections/Cloudflare_CA.pem)
+- [Download certificate (.crt)](../../../static/documentation/connections/Cloudflare_CA.crt)
+- [Download certificate (.pem)](../../../static/documentation/connections/Cloudflare_CA.pem)
 
 ### Verify the certificate fingerprint
 
 To verify your download, check that the certificate's thumbprint matches:
 
 #### SHA1
+
 ```txt
 BB:2D:B6:3D:6B:DE:DA:06:4E:CA:CB:40:F6:F2:61:40:B7:10:F0:6C
 ```
+
 ```
 ➜  ~ openssl x509 -noout -fingerprint -sha1 -inform der -in <Cloudflare_CA.crt>
 SHA1 Fingerprint=BB:2D:B6:3D:6B:DE:DA:06:4E:CA:CB:40:F6:F2:61:40:B7:10:F0:6C
@@ -36,9 +38,11 @@ SHA1 Fingerprint=BB:2D:B6:3D:6B:DE:DA:06:4E:CA:CB:40:F6:F2:61:40:B7:10:F0:6C
 ```
 
 #### SHA256
+
 ```txt
 F5:E1:56:C4:89:78:77:AD:79:3A:1E:83:FA:77:83:F1:9C:B0:C6:1B:58:2C:2F:50:11:B3:37:72:7C:62:3D:EF
 ```
+
 ```
 ➜  ~ openssl x509 -noout -fingerprint -sha256 -inform der -in <Cloudflare_CA.crt>
 sha256 Fingerprint=F5:E1:56:C4:89:78:77:AD:79:3A:1E:83:FA:77:83:F1:9C:B0:C6:1B:58:2C:2F:50:11:B3:37:72:7C:62:3D:EF
@@ -52,8 +56,8 @@ sha256 Fingerprint=F5:E1:56:C4:89:78:77:AD:79:3A:1E:83:FA:77:83:F1:9C:B0:C6:1B:5
 
 You will need to install the root certificate in the **Keychain Access** application. In the application, you can choose the keychain in which you want to install the certificate. macOS offers three options, each having a different impact on which users will be affected by trusting the root certificate.
 
-| Keychain   | Impact                  |
-|-------------|-------------------------|
+| Keychain    | Impact                  |
+| ----------- | ----------------------- |
 | login       | The logged in user      |
 | Local Items | Cached iCloud passwords |
 | System      | All users on the system |
@@ -66,13 +70,13 @@ To install the certificate in **Keychain Access**:
 
 2. Double-click on the `.crt` file.
 
-3. In the pop-up message, choose the option that suits your needs (*login*, *Local Items*, or *System*) and click **Add**.
+3. In the pop-up message, choose the option that suits your needs (_login_, _Local Items_, or _System_) and click **Add**.
 
- ![Popup](../../../static/documentation/connections/keychain-popup.png)
+![Popup](../../../static/documentation/connections/keychain-popup.png)
 
- The certificate is now listed in your preferred keychain within the **Keychain Access** application. You can always move the certificate under a different keychain by dragging and dropping the certificate onto the desired keychain on the left.
+The certificate is now listed in your preferred keychain within the **Keychain Access** application. You can always move the certificate under a different keychain by dragging and dropping the certificate onto the desired keychain on the left.
 
- ![Keychain](../../../static/documentation/connections/listed-in-keych.png)
+![Keychain](../../../static/documentation/connections/listed-in-keych.png)
 
 4. Double-click on the certificate.
 
@@ -96,21 +100,21 @@ You can install the Cloudflare certificate on your terminal, too.
 1. Open Terminal.
 1. Launch the following command:
 
- ```bash
- sudo security add-trusted-cert -d -r trustRoot -k /Library/Keychains/System.keychain <Cloudflare_CA.crt>
- ```
+```bash
+sudo security add-trusted-cert -d -r trustRoot -k /Library/Keychains/System.keychain <Cloudflare_CA.crt>
+```
 
 1. Update the OpenSSL CA Store to include the Cloudflare certificate:
 
- ```bash
+```bash
 sudo cat Cloudflare_CA.crt >> /usr/local/etc/openssl/cert.pem
- ```
+```
 
 ### iOS
 
 1. [Download the Cloudflare certificate](#download-the-cloudflare-root-certificate).
 
- The device will show a message: *This website is trying to open Settings to how you a configuration profile. Do you want to allow this?*
+The device will show a message: _This website is trying to open Settings to how you a configuration profile. Do you want to allow this?_
 
 ![iOS download](../../../static/documentation/connections/ios_cert_download.jpg)
 
@@ -124,23 +128,23 @@ sudo cat Cloudflare_CA.crt >> /usr/local/etc/openssl/cert.pem
 
 5. Next, a certificate warning will appear. Tap **Install**.
 
- If a second prompt is displayed, tap **Install** again.
+If a second prompt is displayed, tap **Install** again.
 
 6. Next, the **Profile Installed** screen will appear. Tap **Done**.
 
- The certificate is now installed. However, before it can be used, it must be trusted by the device.
+The certificate is now installed. However, before it can be used, it must be trusted by the device.
 
 7. On the device, go to **Settings** > **General** > **About** > **Certificate Trust Settings**.
 
- The installed root certificates will be displayed in the *Enable full trust for root certificates* section.
+The installed root certificates will be displayed in the _Enable full trust for root certificates_ section.
 
- ![iOS cert trust](../../../static/documentation/connections/ios_cert_trust1.jpg)
+![iOS cert trust](../../../static/documentation/connections/ios_cert_trust1.jpg)
 
 8. Tap the slide button next to the Cloudflare certificate you just installed.
 
 9. A confirmation dialogue will appear. Tap **Continue**.
 
- ![iOS cert confirm](../../../static/documentation/connections/ios_cert_trust2.jpg)
+![iOS cert confirm](../../../static/documentation/connections/ios_cert_trust2.jpg)
 
 The root certificate is now installed and ready to be used.
 
@@ -149,7 +153,7 @@ The root certificate is now installed and ready to be used.
 Windows offers two options to install the certificate, each having a different impact on which users will be affected by trusting the root certificate.
 
 | Store Location      | Impact                  |
-|---------------------|-------------------------|
+| ------------------- | ----------------------- |
 | Current User Store  | The logged in user      |
 | Local Machine Store | All users on the system |
 
@@ -158,7 +162,7 @@ Windows offers two options to install the certificate, each having a different i
 2. Right-click on the certificate file.
 
 3. Click **Open**.  
- If you see a Security Warning window, click **Open**.
+   If you see a Security Warning window, click **Open**.
 
 4. The **Certificate** window will appear. Click **Install Certificate**.
 
@@ -196,8 +200,8 @@ The root certificate is now installed and ready to be used.
 
 <TableWrap>
 
-|  |  |
-|------|------|
+|                                                                                                     |                                                                                                   |
+| --------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
 | ![Android encrypt settings](../../../static/documentation/connections/android_advanced_encrypt.png) | ![Android cred settings](../../../static/documentation/connections/android_advanced_encrypt2.png) |
 
 </TableWrap>
@@ -206,8 +210,8 @@ The root certificate is now installed and ready to be used.
 
 <TableWrap>
 
-|  |  |
-|------|------|
+|                                                                                             |                                                                                   |
+| ------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
 | ![Android install cert](../../../static/documentation/connections/android_install_cert.png) | ![Android ca cert](../../../static/documentation/connections/android_ca_cert.png) |
 
 </TableWrap>
@@ -244,8 +248,8 @@ The root certificate is now installed and ready to be used.
 
 <TableWrap>
 
-|  |  |  |
-|------|------|------|
+|                                                                                            |                                                                                    |                                                                                             |
+| ------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
 | ![Click security & location](../../../static/documentation/connections/chromeOS4_cert.png) | ![click credentials](../../../static/documentation/connections/chromeOS5_cert.png) | ![click install from SD card](../../../static/documentation/connections/chromeOS6_cert.png) |
 
 </TableWrap>
@@ -272,7 +276,7 @@ If your organization is using Firefox, the browser may need additional configura
 
 #### Python on Windows
 
-The command to install the certificate with Python on Windows automatically includes PIP and Certifi (the default certificate bundle for certificate validation). 
+The command to install the certificate with Python on Windows automatically includes PIP and Certifi (the default certificate bundle for certificate validation).
 
 1. Run the following command to update the bundle to include the Cloudflare certificate:
 
@@ -284,35 +288,35 @@ gc .\Cloudflare_CA.crt | ac C:\Python37\Lib\site-packages\pip\_vendor\certifi\ca
 
 1. Install the `certifi` package.
 
- ```bash
- pip install certifi
- ```
+```bash
+pip install certifi
+```
 
 1. Identify the CA store by running:
 
- ```bash
- python -m certifi
- ```
+```bash
+python -m certifi
+```
 
 1. This will output:
 
- ```
- ~/Library/Python/3.7/lib/python/site-packages/certifi/cert.pem
- ```
+```
+~/Library/Python/3.7/lib/python/site-packages/certifi/cert.pem
+```
 
 1. Append the Cloudflare certificate to this CA Store by running:
 
- ```bash
- cat /Library/Keychains/System.keychain Cloudflare_CA.crt >> $(python -m certifi)
- ```
+```bash
+cat /Library/Keychains/System.keychain Cloudflare_CA.crt >> $(python -m certifi)
+```
 
 1. If needed, configure system variables to point to this CA Store by running:
 
- ```
- export CERT_PATH=$(python -m certifi)
- export SSL_CERT_FILE=${CERT_PATH}
- export REQUESTS_CA_BUNDLE=${CERT_PATH}
- ```
+```
+export CERT_PATH=$(python -m certifi)
+export SSL_CERT_FILE=${CERT_PATH}
+export REQUESTS_CA_BUNDLE=${CERT_PATH}
+```
 
 ### Git
 
@@ -322,53 +326,53 @@ gc .\Cloudflare_CA.crt | ac C:\Python37\Lib\site-packages\pip\_vendor\certifi\ca
 
 1. Run the following command:
 
- ```git
- git config -l
- ```
+```git
+git config -l
+```
 
 1. This will output:
 
- ```
- core.symlinks=false
- core.autocrlf=true
- core.fscache=true
- color.diff=auto
- color.status=auto
- color.branch=auto
- color.interactive=true
- help.format=html
- rebase.autosquash=true
- http.sslcainfo=C:/Program Files/Git/mingw64/ssl/certs/ca-bundle.crt
- http.sslbackend=openssl
- diff.astextplain.textconv=astextplain
- filter.lfs.clean=git-lfs clean -- %f
- filter.lfs.smudge=git-lfs smudge -- %f
- filter.lfs.process=git-lfs filter-process
- filter.lfs.required=true
- credential.helper=manager
- ```
- 
+```
+core.symlinks=false
+core.autocrlf=true
+core.fscache=true
+color.diff=auto
+color.status=auto
+color.branch=auto
+color.interactive=true
+help.format=html
+rebase.autosquash=true
+http.sslcainfo=C:/Program Files/Git/mingw64/ssl/certs/ca-bundle.crt
+http.sslbackend=openssl
+diff.astextplain.textconv=astextplain
+filter.lfs.clean=git-lfs clean -- %f
+filter.lfs.smudge=git-lfs smudge -- %f
+filter.lfs.process=git-lfs filter-process
+filter.lfs.required=true
+credential.helper=manager
+```
+
 1. The `http.sslcainfo` defines the CA Certificate store. Update this to append the Cloudflare certificate to the CA bundle by running this command:
 
- ```git
- gc .\Cloudflare_CA.crt | ac $(git config --get http.sslcainfo)
- ```
+```git
+gc .\Cloudflare_CA.crt | ac $(git config --get http.sslcainfo)
+```
 
 #### Git on Mac
 
 1. Configure Git to trust the Cloudflare certificate with the following command.
 
- ```
- git config --global http.sslcainfo [PATH_TO_CLOUDFLARE_CERT]
- ```
+```
+git config --global http.sslcainfo [PATH_TO_CLOUDFLARE_CERT]
+```
 
 ### npm
 
 The command below will set the `cafile` configuration to use the Cloudflare certificate. Make sure to use the certificate in the [`.pem`](../../../static/documentation/connections/Cloudflare_CA.pem) file type.
 
- ```
- npm config set cafile [PATH_TO_CLOUDFLARE_CERT]
- ```
+```
+npm config set cafile [PATH_TO_CLOUDFLARE_CERT]
+```
 
 ### Google Cloud SDK
 
@@ -384,14 +388,13 @@ cat Cloudflare_CA.pem >> ca.pem
 gcloud config set core/custom_ca_certs_file /Users/mgusev/ca.pem
 ```
 
- ```
- gcloud config set core/custom_ca_certs_file [PATH_TO_CLOUDFLARE_CERT]
- ```
+```
+gcloud config set core/custom_ca_certs_file [PATH_TO_CLOUDFLARE_CERT]
+```
 
 ### AWS CLI
 
 If you're using the AWS CLI, you need to set the `AWS_CA_BUNDLE` environment variable to use the Cloudflare root certificate. Commands are available for different operating systems in the instructions available [here](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-envvars.html).
-
 
 ## IntelliJ IDEA
 

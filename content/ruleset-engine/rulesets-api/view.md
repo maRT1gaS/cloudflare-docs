@@ -7,11 +7,11 @@ type: overview
 
 # List and view rulesets
 
-* [List existing rulesets](#list-existing-rulesets)
-* [View a specific ruleset](#view-a-specific-ruleset)
-* [List all versions of a ruleset](#list-all-versions-of-a-ruleset)
-* [View a specific version of a ruleset](#view-a-specific-version-of-a-ruleset)
-* [List rules in a Managed Ruleset with a specific tag](#list-rules-in-a-managed-ruleset-with-a-specific-tag)
+- [List existing rulesets](#list-existing-rulesets)
+- [View a specific ruleset](#view-a-specific-ruleset)
+- [List all versions of a ruleset](#list-all-versions-of-a-ruleset)
+- [View a specific version of a ruleset](#view-a-specific-version-of-a-ruleset)
+- [List rules in a Managed Ruleset with a specific tag](#list-rules-in-a-managed-ruleset-with-a-specific-tag)
 
 ## List existing rulesets
 
@@ -20,7 +20,7 @@ Returns the list of existing rulesets at the account level or at the zone level.
 Use one of the following API endpoints:
 
 | Operation                           | Method + Endpoint                     |
-|-------------------------------------|---------------------------------------|
+| ----------------------------------- | ------------------------------------- |
 | [List account rulesets][lr-account] | `GET /accounts/{account-id}/rulesets` |
 | [List zone rulesets][lr-zone]       | `GET /zones/{zone-id}/rulesets`       |
 
@@ -87,12 +87,12 @@ Returns the properties of the most recent version of the ruleset with the specif
 
 Use one of the following API endpoints:
 
-| Operation | Method + Endpoint |
-|-----------|-------------------|
-| [Get an account ruleset][gr-account] | `GET /accounts/{account-id}/rulesets/{ruleset-id}` |
-| [Get a zone ruleset][gr-zone] | `GET /zones/{zone-id}/rulesets/{ruleset-id}` |
+| Operation                                      | Method + Endpoint                                                    |
+| ---------------------------------------------- | -------------------------------------------------------------------- |
+| [Get an account ruleset][gr-account]           | `GET /accounts/{account-id}/rulesets/{ruleset-id}`                   |
+| [Get a zone ruleset][gr-zone]                  | `GET /zones/{zone-id}/rulesets/{ruleset-id}`                         |
 | [Get account entry point ruleset][gep-account] | `GET /accounts/{account-id}/rulesets/phases/{phase-name}/entrypoint` |
-| [Get zone entry point ruleset][gep-zone] | `GET /zones/{zone-id}/rulesets/phases/{phase-name}/entrypoint` |
+| [Get zone entry point ruleset][gep-zone]       | `GET /zones/{zone-id}/rulesets/phases/{phase-name}/entrypoint`       |
 
 [gr-account]: https://api.cloudflare.com/#account-rulesets-get-an-account-ruleset
 [gr-zone]: https://api.cloudflare.com/#zone-rulesets-get-a-zone-ruleset
@@ -107,8 +107,8 @@ Note: You can only use the _Get a zone ruleset_ operation for zone-level phase e
 
 The API returns a `404 Not Found` HTTP status code under these conditions:
 
-* When a ruleset cannot be found.
-* When the specified ruleset is not a Managed Ruleset the calling account is entitled to execute.
+- When a ruleset cannot be found.
+- When the specified ruleset is not a Managed Ruleset the calling account is entitled to execute.
 
 ### Example
 
@@ -168,12 +168,12 @@ Returns a list of all the versions of a ruleset.
 
 Use one of the following API endpoints:
 
-| Operation | Method + Endpoint |
-|-----------|-------------------|
-| [List versions of an account ruleset][lv-account] | `GET /accounts/{account-id}/rulesets/{ruleset-id}/versions` |
-| List versions of a zone ruleset | `GET /zones/{zone-id}/rulesets/{ruleset-id}/versions` |
-| [List versions of an account entry point ruleset][lvep-account] | `GET /accounts/{account-id}/rulesets/phases/{phase-name}/entrypoint/versions`|
-| [List versions of a zone entry point ruleset][lvep-zone] | `GET /zones/{zone-id}/rulesets/phases/{phase-name}/entrypoint/versions` |
+| Operation                                                       | Method + Endpoint                                                             |
+| --------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| [List versions of an account ruleset][lv-account]               | `GET /accounts/{account-id}/rulesets/{ruleset-id}/versions`                   |
+| List versions of a zone ruleset                                 | `GET /zones/{zone-id}/rulesets/{ruleset-id}/versions`                         |
+| [List versions of an account entry point ruleset][lvep-account] | `GET /accounts/{account-id}/rulesets/phases/{phase-name}/entrypoint/versions` |
+| [List versions of a zone entry point ruleset][lvep-zone]        | `GET /zones/{zone-id}/rulesets/phases/{phase-name}/entrypoint/versions`       |
 
 [lv-account]: https://api.cloudflare.com/#account-rulesets-list-versions-of-an-account-ruleset
 [lvep-account]: https://api.cloudflare.com/#account-rulesets-list-versions-of-an-entrypoint-ruleset
@@ -242,12 +242,12 @@ Returns the configuration of a specific version of a ruleset, including its rule
 
 Use one of the following API endpoints:
 
-| Operation | Method + Endpoint |
-|-----------|-------------------|
-| [Get an account ruleset version][grv-account] | `GET /account/{account-id}/rulesets/{ruleset-id}/versions/{version-number}` |
-| [Get a zone ruleset version][grv-zone] | `GET /zones/{zone-id}/rulesets/{ruleset-id}/versions/{version-number}`
+| Operation                                               | Method + Endpoint                                                                              |
+| ------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| [Get an account ruleset version][grv-account]           | `GET /account/{account-id}/rulesets/{ruleset-id}/versions/{version-number}`                    |
+| [Get a zone ruleset version][grv-zone]                  | `GET /zones/{zone-id}/rulesets/{ruleset-id}/versions/{version-number}`                         |
 | [Get account entry point ruleset version][gepv-account] | `GET /accounts/{account-id}/rulesets/phases/{phase-name}/entrypoint/versions/{version-number}` |
-| [Get zone entry point ruleset version][gepv-zone] | `GET /zones/{zone-id}/rulesets/phases/{phase-name}/entrypoint/versions/{version-number}` |
+| [Get zone entry point ruleset version][gepv-zone]       | `GET /zones/{zone-id}/rulesets/phases/{phase-name}/entrypoint/versions/{version-number}`       |
 
 [grv-account]: https://api.cloudflare.com/#account-rulesets-get-an-account-ruleset-version
 [grv-zone]: https://api.cloudflare.com/#zone-rulesets-get-a-zone-ruleset-version
@@ -320,8 +320,8 @@ When you view a specific version of a Managed Ruleset, each rule listed in the r
 
 Returns a list of all the rules in a Managed Ruleset with a specific tag.
 
-| Operation | Method + Endpoint |
-|-----------|-------------------|
+| Operation                    | Method + Endpoint                                                                             |
+| ---------------------------- | --------------------------------------------------------------------------------------------- |
 | List rules in ruleset by tag | `GET /accounts/{account-id}/rulesets/{managed-ruleset-id}/{version-number}/by_tag/{tag-name}` |
 
 ### Example
@@ -374,16 +374,12 @@ curl -X GET \
         "id": "{rule-id-2}",
         "version": "3",
         "action": "block",
-        "categories": [
-          "broken-access-control",
-          "cve-2018-12895",
-          "wordpress"
-        ],
+        "categories": ["broken-access-control", "cve-2018-12895", "wordpress"],
         "description": "Wordpress - Broken Access Control - CVE:CVE-2018-12895",
         "last_updated": "2021-03-19T16:54:32.942986Z",
         "ref": "{rule-ref-2}",
         "enabled": true
-      },
+      }
       // (...)
     ],
     "last_updated": "2021-03-19T16:54:32.942986Z",

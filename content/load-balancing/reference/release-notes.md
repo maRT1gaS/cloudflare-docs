@@ -8,9 +8,10 @@ pcx-content-type: reference
 ## 30 September 2021 — Deprecation of Load Balancing nodes
 
 After 30 September 2021, we will make the following changes to the Load Balancing GraphQL schema:
+
 - Deprecate nodes:
-    - `loadBalancingRequestsGroups` will be deprecated for `loadBalancingRequestsAdaptiveGroups`
-    - `loadBalancingRequests` will be deprecated for `loadBalancingRequestsAdaptive`
+  - `loadBalancingRequestsGroups` will be deprecated for `loadBalancingRequestsAdaptiveGroups`
+  - `loadBalancingRequests` will be deprecated for `loadBalancingRequestsAdaptive`
 - Deprecate the `date` field (replace it with the existing `datetime` field)
 - Add the `sampleInterval` field
 
@@ -19,6 +20,7 @@ After 30 September 2021, we will make the following changes to the Load Balancin
 <div>
 
 The following example:
+
 - Replaces `loadBalancingRequestsGroups` with `loadBalancingRequestsAdaptiveGroups`
 - Replaces `date` with `datetime`
 - Uses the new `sampleInterval` field

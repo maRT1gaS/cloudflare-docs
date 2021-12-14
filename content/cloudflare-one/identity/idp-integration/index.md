@@ -12,6 +12,7 @@ Adding an identity provider as a login method requires configuration both on the
 <Aside>
 
 Cloudflare Access supports social identity providers that do not require administrator accounts, open source providers, and corporate providers. Cloudflare also supports using signed AuthN requests with SAML providers.
+
 </Aside>
 
 ## Set up IdPs on the Teams dashboard
@@ -41,7 +42,7 @@ To test if an IdP is correctly configured, navigate to **Settings** > **Authenti
 If your provider is connected, another window will open in your browser, with this message:
 
 ![Connected IdP](../../static/documentation/identity/connected-idp.png)
- 
+
 ### Your provider is not connected
 
 If your provider is not connected, another window will open in your browser. Along with an error message, you will receive a detailed explanation of why the test has failed.

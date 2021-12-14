@@ -2,7 +2,7 @@
 pcx-content-type: how-to
 ---
 
-import TutorialsBeforeYouStart from "../_partials/_tutorials-before-you-start.md" 
+import TutorialsBeforeYouStart from '../_partials/_tutorials-before-you-start.md';
 
 # Deploy a Nuxt.js site
 
@@ -18,7 +18,8 @@ Create a new project using `npx`, giving it the title `my-nuxt-app` in your term
 $ npx create-nuxt-app my-nuxt-app
 $ cd my-nuxt-app
 ```
-<TutorialsBeforeYouStart/>
+
+<TutorialsBeforeYouStart />
 
 ## Creating a GitHub repository
 
@@ -48,11 +49,11 @@ Select the new GitHub repository that you created and, in the **Set up builds an
 
 <TableLayout>
 
-| Configuration option | Value             |
-| -------------------- | ---------------   |
-| Production branch    | `main`            |
-| Build command        | `npm run build`   |
-| Build directory      | `dist`            |
+| Configuration option | Value           |
+| -------------------- | --------------- |
+| Production branch    | `main`          |
+| Build command        | `npm run build` |
+| Build directory      | `dist`          |
 
 </TableLayout>
 

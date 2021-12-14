@@ -8,4 +8,4 @@ order: 3
 
 Review the content below to learn more about tasks related to BYOIP.
 
-<DirectoryListing path="/how-to"/>
+<DirectoryListing path="/how-to" />

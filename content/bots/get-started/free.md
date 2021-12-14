@@ -15,6 +15,7 @@ Bot Fight Mode is a simple, free product that helps detect and mitigate bot traf
 ## Enable Bot Fight Mode
 
 To start using Bot Fight Mode:
+
 1. Go to **Firewall**.
 1. Select **Bots**.
 1. For **Bot Fight Mode**, select **On**.

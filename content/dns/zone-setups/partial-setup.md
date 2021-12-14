@@ -9,7 +9,6 @@ With a partial (CNAME) setup, you can use Cloudflare DNS while maintaining autho
 
 Use this option to migrate individual subdomains onto Cloudflare or when you cannot update your authoritative DNS.
 
-
 ## Set up a partial domain
 
 ---
@@ -28,7 +27,7 @@ A partial (CNAME) setup is only available to customers on a Business or Enterpri
 1. Ignore the instructions to change your nameservers.
 1. For **Advanced Actions**, click **Convert to CNAME DNS Setup**.
 
-    ![On your domain's overview page, click Convert to CNAME DNS Setup](../static/dns_cname_setup.png)
+   ![On your domain's overview page, click Convert to CNAME DNS Setup](../static/dns_cname_setup.png)
 
 1. Click **Convert**.
 1. Save the information from the **Verification TXT Record**. If you lose the information, you can also access it by going to **DNS** > **Verification TXT Record**.
@@ -51,26 +50,29 @@ To provision a Universal SSL certificate through Cloudflare, follow [these instr
 
 ### Add DNS records
 
-1. In Cloudflare, [add an **A** or **CNAME** record](/manage-dns-records#create-dns-records).
-1. At your authoritative DNS provider:
-    
-    1. Remove any existing **A** records for your domain.
-    1. Add a **CNAME** record for `{your-hostname}.cdn.cloudflare.net`.
-        
-        <details>
-        <summary>Example</summary>
-        <div>
-        
-        The CNAME record for `www.example.com` would be:
+1.  In Cloudflare, [add an **A** or **CNAME** record](/manage-dns-records#create-dns-records).
+1.  At your authoritative DNS provider:
 
-        ```txt
-        www.example.com CNAME www.example.com.cdn.cloudflare.net
-        ```
-        
-        </div>
-        </details>
+        1.  Remove any existing **A** records for your domain.
+        1.  Add a **CNAME** record for `{your-hostname}.cdn.cloudflare.net`.
 
-    1. Repeat this process for each subdomain proxied to Cloudflare.
+                  <details>
+
+            <summary>Example</summary>
+
+    <div>
+
+                  The CNAME record for `www.example.com` would be:
+
+                  ```txt
+                  www.example.com CNAME www.example.com.cdn.cloudflare.net
+                  ```
+
+                  </div>
+
+            </details>
+
+        1.  Repeat this process for each subdomain proxied to Cloudflare.
 
 ---
 

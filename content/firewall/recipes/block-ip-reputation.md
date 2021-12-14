@@ -12,15 +12,22 @@ This example also blocks requests based on country code ([ISO 3166-1 Alpha 2](ht
 
 <table>
   <thead>
-  <tr>
-    <th>Expression</th>
-    <th>Action</th>
-  </tr>
+    <tr>
+      <th>Expression</th>
+      <th>Action</th>
+    </tr>
   </thead>
   <tbody>
     <tr>
-      <td><code>(ip.geoip.country in {'{'}"CN" "TW" "US" "GB"{'}'}) or cf.threat_score > 0</code></td>
-      <td><em>Block</em></td>
+      <td>
+        <code>
+          (ip.geoip.country in {'{'}"CN" "TW" "US" "GB"{'}'}) or cf.threat_score
+          > 0
+        </code>
+      </td>
+      <td>
+        <em>Block</em>
+      </td>
     </tr>
   </tbody>
 </table>

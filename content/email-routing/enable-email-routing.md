@@ -16,7 +16,7 @@ To enable Email Routing, create a custom email address for your domain, and link
 
   <Aside type="note">
 
-  Email Routing will only process the most recent rule per custom address. Other destination addresses will not receive your forwarded emails.
+Email Routing will only process the most recent rule per custom address. Other destination addresses will not receive your forwarded emails.
 
   </Aside>
 

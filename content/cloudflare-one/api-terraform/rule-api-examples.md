@@ -38,6 +38,6 @@ Access users can create policies, including individual rule blocks inside of gro
 
 These are commonly used rule configurations.
 
-import DocsCodeExamplesOverview from "../../components/docs-code-examples-overview"
+import DocsCodeExamplesOverview from '../../components/docs-code-examples-overview';
 
-<DocsCodeExamplesOverview/>
+<DocsCodeExamplesOverview />

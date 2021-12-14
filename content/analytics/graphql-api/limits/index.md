@@ -38,10 +38,10 @@ Access to Network Analytics `*NetworkAnalyticsAdaptiveGroups` nodes is only avai
 | `httpRequests1hGroups`                        |   3 days |   7 days |  30 days |    90 days |
 | `httpRequests1mByColoGroups`                  |      n/a |      n/a |      n/a |     7 days |
 | `httpRequests1mGroups`                        |      n/a | 24 hours |   3 days |     7 days |
-| `ipFlows1mGroups`*                            |      n/a |      n/a |      n/a |    30 days |
-| `ipFlows1hGroups`*                            |      n/a |      n/a |      n/a |   6 months |
-| `ipFlows1dGroups`*                            |      n/a |      n/a |      n/a |     1 year |
-| `ipFlows1mAttackGroups`*                      |      n/a |      n/a |      n/a |     1 year |
+| `ipFlows1mGroups`\*                           |      n/a |      n/a |      n/a |    30 days |
+| `ipFlows1hGroups`\*                           |      n/a |      n/a |      n/a |   6 months |
+| `ipFlows1dGroups`\*                           |      n/a |      n/a |      n/a |     1 year |
+| `ipFlows1mAttackGroups`\*                     |      n/a |      n/a |      n/a |     1 year |
 | `loadBalancingRequestsGroups`                 |      n/a |   3 days |  30 days |    30 days |
 | `loadBalancingRequests`                       |      n/a |   3 days |  30 days |    30 days |
 | `magicFirewallNetworkAnalyticsAdaptiveGroups` |      n/a |      n/a |      n/a |    90 days |
@@ -52,7 +52,7 @@ Access to Network Analytics `*NetworkAnalyticsAdaptiveGroups` nodes is only avai
 
 </TableWrap>
 
-_* These nodes are deprecated. Refer to [Data Sets](/graphql-api/features/data-sets#deprecated-data-nodes) for more information._
+_\* These nodes are deprecated. Refer to [Data Sets](/graphql-api/features/data-sets#deprecated-data-nodes) for more information._
 
 ### Query settings for account limits
 

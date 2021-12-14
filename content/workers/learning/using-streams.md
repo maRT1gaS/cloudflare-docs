@@ -25,23 +25,23 @@ The two primitives developers use to perform active streaming are [`TransformStr
 A basic pass-through usage of streams:
 
 ```js
-addEventListener("fetch", event => {
-  event.respondWith(fetchAndStream(event.request))
-})
+addEventListener('fetch', event => {
+  event.respondWith(fetchAndStream(event.request));
+});
 
 async function fetchAndStream(request) {
   // Fetch from origin server.
-  let response = await fetch(request)
+  let response = await fetch(request);
 
   // Create an identity TransformStream (a.k.a. a pipe).
   // The readable side will become our new response body.
-  let { readable, writable } = new TransformStream()
+  let { readable, writable } = new TransformStream();
 
   // Start pumping the body. NOTE: No await!
-  response.body.pipeTo(writable)
+  response.body.pipeTo(writable);
 
   // ... and deliver our Response while that’s running.
-  return new Response(readable, response)
+  return new Response(readable, response);
 }
 ```
 
@@ -49,7 +49,7 @@ This example calls `response.body.pipeTo(writable)` but does not `await` it. Thi
 
 The runtime can continue running a function (`response.body.pipeTo(writable)`) after a response is returned to the client. This example just pumps the subrequest response body to the final response body; however, you can use more complicated logic, such as adding a prefix or a suffix to the body or to process it somehow.
 
---------------------------------
+---
 
 ## Common issues
 
@@ -59,7 +59,7 @@ The Streams API is only available inside of the [Request context](/runtime-apis/
 
 </Aside>
 
---------------------------------
+---
 
 ## Related resources
 

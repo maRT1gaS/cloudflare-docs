@@ -8,8 +8,8 @@ type: overview
 
 You can use the API to delete all the versions of a ruleset or delete a specific version of a ruleset.
 
-* [Delete ruleset (all versions)](#delete-ruleset)
-* [Delete ruleset version](#delete-ruleset-version)
+- [Delete ruleset (all versions)](#delete-ruleset)
+- [Delete ruleset version](#delete-ruleset-version)
 
 ## Delete ruleset
 
@@ -18,7 +18,7 @@ Deletes all the versions of an existing ruleset at the account or zone level.
 Use one of the following API endpoints:
 
 | Operation                            | Method + Endpoint                                     |
-|--------------------------------------|-------------------------------------------------------|
+| ------------------------------------ | ----------------------------------------------------- |
 | [Delete account ruleset][dr-account] | `DELETE /accounts/{account-id}/rulesets/{ruleset-id}` |
 | [Delete zone ruleset][dr-zone]       | `DELETE /zones/{zone-id}/rulesets/{ruleset-id}`       |
 
@@ -55,10 +55,10 @@ Deletes a specific version of a ruleset.
 
 Use one of the following API endpoints:
 
-| Operation | Method + Endpoint |
-|-----------|-------------------|
+| Operation                                             | Method + Endpoint                                                               |
+| ----------------------------------------------------- | ------------------------------------------------------------------------------- |
 | [Delete a version of an account ruleset][drv-account] | `DELETE /accounts/{account-id}/rulesets/{ruleset-id}/versions/{version-number}` |
-| [Delete a version of a zone ruleset][drv-zone] | `DELETE /zones/{zone-id}/rulesets/{ruleset-id}/versions/{version-number}` |
+| [Delete a version of a zone ruleset][drv-zone]        | `DELETE /zones/{zone-id}/rulesets/{ruleset-id}/versions/{version-number}`       |
 
 [drv-account]: https://api.cloudflare.com/#account-rulesets-delete-a-version-of-an-account-ruleset
 [drv-zone]: https://api.cloudflare.com/#zone-rulesets-delete-a-version-of-a-zone-ruleset

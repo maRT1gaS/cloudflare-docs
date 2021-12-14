@@ -7,4 +7,4 @@ pcx-content-type: navigation
 
 Review the content below to learn how to complete tasks using Magic Firewall.
 
-<DirectoryListing path="/how-to"/>
+<DirectoryListing path="/how-to" />

@@ -17,6 +17,7 @@ There are two endpoints for managing log retention:
 <Aside type="note" header="Note">
 
 To make a `POST` call, you must have a Cloudflare account role with "edit" permissions, such as Super Administrator, Administrator, or Log Share.
+
 </Aside>
 
 ## Example API requests using cURL
@@ -47,7 +48,8 @@ curl -s -H "X-Auth-Email: <REDACTED>" -H "X-Auth-Key: <REDACTED>" POST "https://
 ```
 
 #### Parameters
-* *flag* - can be either `true` or `false`
+
+- _flag_ - can be either `true` or `false`
 
 #### Response
 

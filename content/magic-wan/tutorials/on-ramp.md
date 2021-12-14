@@ -12,7 +12,7 @@ You can use a variety of on-ramp options with Magic WAN, including [Anycast GRE 
 
 Before you can begin using GRE as on-ramp, you must have already completed onboarding with Magic WAN.
 
-### 1. Enable Gateway 
+### 1. Enable Gateway
 
 Contact your account manager to enable Teams Gateway on your account.
 
@@ -22,7 +22,7 @@ First, reserve an IP for the GRE tunnel and then create a VM instance. The examp
 
 **Reserve an IP for the GRE tunnel**
 
-`gcloud compute addresses create $ADDRESS_NAME  --region=$REGION`
+`gcloud compute addresses create $ADDRESS_NAME --region=$REGION`
 
 **Create a new GCP VM instance**
 
@@ -39,11 +39,11 @@ First, reserve an IP for the GRE tunnel and then create a VM instance. The examp
   addrs:
   - 10.0.0.1/31
   check_health: false
-  ```
+```
 
- **Add a new static route** 
+**Add a new static route**
 
- Note the RFC1918 address used for the prefix. This address is assigned to the GCP instance so that the Gateway response can come down this tunnel. In the example below, replace `1234` with your account ID.
+Note the RFC1918 address used for the prefix. This address is assigned to the GCP instance so that the Gateway response can come down this tunnel. In the example below, replace `1234` with your account ID.
 
 ```
 cloudflared access curl "https://conduit-api.cfdata.org/accounts/1234/routes" --data '{"routes": [{"prefix":"10.0.0.100/32","nexthop":"10.0.0.0","priority":100}]}'
@@ -61,14 +61,14 @@ ip addr add 10.0.0.0/31 dev cf-gw-gcp
 ```
 
 ### 5. Route web requests over the GRE tunnel
- 
+
 With the GRE tunnel set up on both sides, now you need to route web requests from the GCP node over the tunnel to Cloudflare. In the example below, we also included a rule that says any traffic from a private IP should go over this GRE tunnel.
 
 ```
 # bind an ip address to source requests from
 ip addr add 10.0.0.100/32 dev lo
 ip link set dev lo up
- 
+
 # Add a table and a rule to route requests from 10.0.0.100 over the GRE tunnel
 echo "100 onramp" >> /etc/iproute2/rt_tables
 ip route add default via 10.0.0.1 table onramp

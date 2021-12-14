@@ -8,4 +8,4 @@ pcx-content-type: navigation
 
 Learn how to complete different tasks to customize your cache behavior.
 
-<DirectoryListing path="/how-to"/>
+<DirectoryListing path="/how-to" />

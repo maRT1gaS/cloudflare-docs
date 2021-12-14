@@ -11,9 +11,9 @@ Use the [Rulesets API](https://developers.cloudflare.com/ruleset-engine/rulesets
 
 When creating a URL Rewrite Rule via API, make sure you:
 
-* Set the rule action to `rewrite`
-* Define the [URL rewrite parameters](/transform/url-rewrite/parameters) in the `action_parameters` field according to the type of URL rewrite (static or dynamic)
-* Deploy the rule to the `http_request_transform` phase at the zone level
+- Set the rule action to `rewrite`
+- Define the [URL rewrite parameters](/transform/url-rewrite/parameters) in the `action_parameters` field according to the type of URL rewrite (static or dynamic)
+- Deploy the rule to the `http_request_transform` phase at the zone level
 
 ---
 
@@ -23,8 +23,8 @@ Follow this workflow to create a URL Rewrite Rule for a given zone via API:
 
 1. If the phase ruleset does not exist, create it using the [Create ruleset](https://developers.cloudflare.com/ruleset-engine/rulesets-api/create) method with the zone-level endpoint. In the new ruleset properties, set the following values:
 
-    * **kind**: `zone`
-    * **phase**: `http_request_transform`
+   - **kind**: `zone`
+   - **phase**: `http_request_transform`
 
 1. Use the [Update ruleset](https://developers.cloudflare.com/ruleset-engine/rulesets-api/update) method to add a URL Rewrite Rule to the list of ruleset rules (check the examples below). Alternatively, include the rule in the [Create ruleset](https://developers.cloudflare.com/ruleset-engine/rulesets-api/create) request mentioned in the previous step.
 

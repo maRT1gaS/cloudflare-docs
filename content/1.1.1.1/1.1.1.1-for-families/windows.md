@@ -4,7 +4,7 @@ title: Windows 10
 pcx-content-type: how-to
 ---
 
-import CaptivePortals from "../_partials/_captive-portals.md"
+import CaptivePortals from '../_partials/_captive-portals.md';
 
 # Set up 1.1.1.1 for Families - Windows 10
 
@@ -23,12 +23,12 @@ Follow these steps to configure 1.1.1.1 for Families:
 1. Take note of any IP addresses you might have and save them in a safe place in case you need to use them later.
 1. Remove any IP addresses that may be already listed and in their place add:
 
-    ```txt
-    1.1.1.2
-    1.0.0.2
-    ```
+   ```txt
+   1.1.1.2
+   1.0.0.2
+   ```
 
-7. Click **OK**.
+1. Click **OK**.
 
 ### IPv6
 
@@ -40,12 +40,12 @@ Follow these steps to configure 1.1.1.1 for Families:
 1. Take note of any IP addresses you might have and save them in a safe place in case you need to use them later.
 1. Remove any IP addresses that may be already listed and in their place add the following IP addresses:
 
-    ```txt
-    2606:4700:4700::1112
-    2606:4700:4700::1002
-    ```
+   ```txt
+   2606:4700:4700::1112
+   2606:4700:4700::1002
+   ```
 
-7.  Click **OK**.
+1. Click **OK**.
 
 ## Block malware and adult content
 
@@ -60,10 +60,10 @@ Follow these steps to configure 1.1.1.1 for Families:
 1. Take note of any IP addresses you might have and save them in a safe place in case you need to use them later.
 1. Remove any IP addresses that may be already listed and in their place add:
 
-    ```txt
-    1.1.1.3
-    1.0.0.3
-    ```
+   ```txt
+   1.1.1.3
+   1.0.0.3
+   ```
 
 1. Click **OK**.
 
@@ -77,10 +77,11 @@ Follow these steps to configure 1.1.1.1 for Families:
 1. Take note of any IP addresses you might have and save them in a safe place in case you need to use them later.
 1. Remove any IP addresses that may be already listed and in their place add the following IP addresses:
 
-    ```txt
-    2606:4700:4700::1113
-    2606:4700:4700::1003
-    ```
-1.  Click **OK**.
+   ```txt
+   2606:4700:4700::1113
+   2606:4700:4700::1003
+   ```
 
-<CaptivePortals/>
+1. Click **OK**.
+
+<CaptivePortals />

@@ -3,7 +3,7 @@ order: 3
 type: example
 summary: The request will need to present the correct service token headers.
 tags:
-- Service token
+  - Service token
 ---
 
 # Service token

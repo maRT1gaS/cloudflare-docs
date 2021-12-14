@@ -24,64 +24,82 @@ import 'prismjs/components/prism-yaml.min.js';
 
 // Custom `shell` grammar
 Prism.languages.sh = {
-	comment: {
-		pattern: /(^|[^'{\\$])#.*/,
-		alias: 'unselectable',
-		lookbehind: true
-	},
+  comment: {
+    pattern: /(^|[^'{\\$])#.*/,
+    alias: 'unselectable',
+    lookbehind: true,
+  },
 
-	directory: {
-		pattern: /^[^\r\n$*!]+(?=[$])/m,
-		alias: 'unselectable'
-	},
+  directory: {
+    pattern: /^[^\r\n$*!]+(?=[$])/m,
+    alias: 'unselectable',
+  },
 
-	command: {
-		pattern: /[$](?:[^\r\n])+/,
-		inside: {
-			prompt: {
-				pattern: /^[$] /,
-				alias: 'unselectable'
-			}
-		}
-	}
+  command: {
+    pattern: /[$](?:[^\r\n])+/,
+    inside: {
+      prompt: {
+        pattern: /^[$] /,
+        alias: 'unselectable',
+      },
+    },
+  },
 };
 
 // prism aliases
 const langs = {
-	tf: 'hcl', // terraform -> hashicorp config lang
-	shell: 'sh',
-	curl: 'bash',
-	svelte: 'html',
-	javascript: 'js',
-	typescript: 'ts',
-	vue: 'html'
+  tf: 'hcl', // terraform -> hashicorp config lang
+  shell: 'sh',
+  curl: 'bash',
+  svelte: 'html',
+  javascript: 'js',
+  typescript: 'ts',
+  vue: 'html',
 };
 
 const transformations = {
-	js: {
-		'keyword': {
-			to: 'declaration-keyword',
-			for: new Set(['const', 'let', 'var', 'async', 'await', 'function', 'class']),
-		},
-		'punctuation': {
-			to: 'operator',
-			for: new Set(['.']),
-		},
-		'class-name': {
-			to: 'api',
-			for: new Set(['HTMLRewriter', 'Request', 'Response', 'URL', 'Error']),
-		},
-		'function': {
-			to: 'builtin',
-			for: new Set(['fetch', 'console', 'addEventListener', 'atob', 'btoa', 'setInterval', 'clearInterval', 'setTimeout', 'clearTimeout']),
-		}
-	}
+  js: {
+    'keyword': {
+      to: 'declaration-keyword',
+      for: new Set([
+        'const',
+        'let',
+        'var',
+        'async',
+        'await',
+        'function',
+        'class',
+      ]),
+    },
+    'punctuation': {
+      to: 'operator',
+      for: new Set(['.']),
+    },
+    'class-name': {
+      to: 'api',
+      for: new Set(['HTMLRewriter', 'Request', 'Response', 'URL', 'Error']),
+    },
+    'function': {
+      to: 'builtin',
+      for: new Set([
+        'fetch',
+        'console',
+        'addEventListener',
+        'atob',
+        'btoa',
+        'setInterval',
+        'clearInterval',
+        'setTimeout',
+        'clearTimeout',
+      ]),
+    },
+  },
 };
 
 transformations.ts = transformations.js;
 
 transformations.html = {
-	keyword: transformations.js.keyword,
+  keyword: transformations.js.keyword,
 };
 
 /**
@@ -91,38 +109,36 @@ transformations.html = {
  * @returns {string}
  */
 export function highlight(code, lang, attrs) {
-	lang = langs[lang] || lang || 'txt';
-	let grammar = Prism.languages[lang.toLowerCase()];
+  lang = langs[lang] || lang || 'txt';
+  let grammar = Prism.languages[lang.toLowerCase()];
 
-	if (!grammar) {
-		console.warn('[prism] Missing "%s" grammar; using "txt" fallback', lang);
-		grammar = Prism.languages.txt;
-	}
+  if (!grammar) {
+    console.warn('[prism] Missing "%s" grammar; using "txt" fallback', lang);
+    grammar = Prism.languages.txt;
+  }
 
-	// tokenize & build custom string output
-	let tokens = Prism.tokenize(code, grammar);
+  // tokenize & build custom string output
+  let tokens = Prism.tokenize(code, grammar);
+  let dict = transformations[lang];
+  let output = '';
 
-	let i=0, tmp, wip, output='';
-	let dict = transformations[lang];
+  for (let i = 0; i < tokens.length; i++) {
+    let tmp = tokens[i];
+    let wip = '<span class="CodeBlock--token-';
 
-	for (; i < tokens.length; i++) {
-		tmp = tokens[i];
-		wip = '<span class="CodeBlock--token-';
+    if (typeof tmp === 'string') {
+      wip += 'plain">' + tmp;
+    } else {
+      if (dict && dict[tmp.type] && dict[tmp.type].for.has(tmp.content)) {
+        wip += dict[tmp.type].to;
+      } else {
+        wip += tmp.type;
+      }
+      wip += '">' + tmp.content;
+    }
 
-		if (typeof tmp === 'string') {
-			wip += 'plain">' + tmp;
-		} else {
-			if (dict && dict[tmp.type] && dict[tmp.type].for.has(tmp.content)) {
-				wip += dict[tmp.type].to;
-			} else {
-				wip += tmp.type;
-			}
-			wip += '">' + tmp.content;
-		}
+    output += wip + '</span>';
+  }
 
-		output += wip + '</span>';
-	}
-
-	return output;
-	// return Prism.highlight(code, grammar, lang);
+  return output;
 }

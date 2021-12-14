@@ -11,14 +11,15 @@ You can use Cloudflare Gateway to filter and log DNS queries from any device in 
 
 **🗺️ This tutorial covers how to:**
 
-* Create a DNS filtering policy that secures a home or office network by blocking malicious hostnames
-* Review logs and events that occur on that network
+- Create a DNS filtering policy that secures a home or office network by blocking malicious hostnames
+- Review logs and events that occur on that network
 
 **⏲️ Time to complete:**
 
 15 minutes
 
 ## Before you start
+
 1. [Add Gateway to your account](/setup)
 
 ---
@@ -27,9 +28,9 @@ You can use Cloudflare Gateway to filter and log DNS queries from any device in 
 
 Before you begin, you'll need to follow [these instructions](/setup) to set up Cloudflare Gateway in your account. To perform DNS filtering, you need one of the following subscriptions:
 
-* Teams Free
-* Teams Standard
-* Gateway
+- Teams Free
+- Teams Standard
+- Gateway
 
 ## Add a location
 

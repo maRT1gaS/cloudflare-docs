@@ -9,20 +9,20 @@ pcx-content-type: interim
 
 The three endpoints the Logpull API supports are:
 
-* `GET /logs/received` - returns HTTP request log data based on the parameters specified
-* `GET /logs/received/fields` - returns the list of all available log fields
-* `GET /logs/rayids/<rayid>` - returns HTTP request log data matching `<rayid>`
+- `GET /logs/received` - returns HTTP request log data based on the parameters specified
+- `GET /logs/received/fields` - returns the list of all available log fields
+- `GET /logs/rayids/<rayid>` - returns HTTP request log data matching `<rayid>`
 
 ## Required authentication headers
 
 The following headers are required for all endpoint calls:
 
-* `X-Auth-Email` - the Cloudflare account email address associated with the domain
-* `X-Auth-Key` - the Cloudflare API key
+- `X-Auth-Email` - the Cloudflare account email address associated with the domain
+- `X-Auth-Key` - the Cloudflare API key
 
 ## Parameters
 
-The API expects endpoint parameters in the GET request query string.  See the example formats below.
+The API expects endpoint parameters in the GET request query string. See the example formats below.
 
 `logs/received`
 
@@ -40,14 +40,14 @@ The following table describes the parameters available:
 
 <TableWrap>
 
-| Parameter | Description | Applies to | Required? |
-|---|---|---|--|
-| <em>start</em> | <p>- Inclusive</p> <p>- Timestamp formatted as UNIX (UTC by definition), UNIX Nano, or rfc3339 (specifies time zone)</p> <p>- Must be no more than 7 days earlier than now</p> | /logs/received | Yes |
-| <em>end</em> | <p>- Exclusive</p> <p>- Same format as <em>start</em></p> <p>- Must be at least 1 minute earlier than now and later than <em>start</em></p> | /logs/received | Yes |
-| <em>count</em> | <p>- Return up to that many records</p> <p>- Do not include if returning all records</p> <p>- Results are not sorted; therefore, different data for repeated requests is likely</p> <p></p> <p>- Applies to number of total records returned, not number of sampled records</p> | /logs/received | No |
-| <em>sample</em> | <p>- Return only a sample of records</p> <p>- Do not include if returning all records</p> <p>- Value can range from 0.001 to 1.0 (inclusive)</p> <p>- <em>sample=0.1</em> means return 10% (1 in 10) of all records</p> <p>- Results are random; therefore, different numbers of results for repeated requests are likely</p> | /logs/received | No |
-| <em>fields</em> | <p>- Comma-separated list of fields to return</p> <p>- If empty, the default list is returned</p> | <p>/logs/received</p> <p>/logs/rayids</p> | No |
-| <em>timestamps</em> | <p>- Format in which timestamp fields will be returned</p> <p>- Value options are: <em>unixnano</em> (default), <em>unix</em>, <em>rfc3339</em></p> <p>- Timestamps retuned as integers for <em>unix</em> and <em>unixnano</em> and as strings for <em>rfc3339</em></p> | <p>/logs/received</p> <p>/logs/rayids</p> | No |
+| Parameter           | Description                                                                                                                                                                                                                                                                                                                   | Applies to                                | Required? |
+| ------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------- | --------- |
+| <em>start</em>      | <p>- Inclusive</p> <p>- Timestamp formatted as UNIX (UTC by definition), UNIX Nano, or rfc3339 (specifies time zone)</p> <p>- Must be no more than 7 days earlier than now</p>                                                                                                                                                | /logs/received                            | Yes       |
+| <em>end</em>        | <p>- Exclusive</p> <p>- Same format as <em>start</em></p> <p>- Must be at least 1 minute earlier than now and later than <em>start</em></p>                                                                                                                                                                                   | /logs/received                            | Yes       |
+| <em>count</em>      | <p>- Return up to that many records</p> <p>- Do not include if returning all records</p> <p>- Results are not sorted; therefore, different data for repeated requests is likely</p> <p></p> <p>- Applies to number of total records returned, not number of sampled records</p>                                               | /logs/received                            | No        |
+| <em>sample</em>     | <p>- Return only a sample of records</p> <p>- Do not include if returning all records</p> <p>- Value can range from 0.001 to 1.0 (inclusive)</p> <p>- <em>sample=0.1</em> means return 10% (1 in 10) of all records</p> <p>- Results are random; therefore, different numbers of results for repeated requests are likely</p> | /logs/received                            | No        |
+| <em>fields</em>     | <p>- Comma-separated list of fields to return</p> <p>- If empty, the default list is returned</p>                                                                                                                                                                                                                             | <p>/logs/received</p> <p>/logs/rayids</p> | No        |
+| <em>timestamps</em> | <p>- Format in which timestamp fields will be returned</p> <p>- Value options are: <em>unixnano</em> (default), <em>unix</em>, <em>rfc3339</em></p> <p>- Timestamps retuned as integers for <em>unix</em> and <em>unixnano</em> and as strings for <em>rfc3339</em></p>                                                       | <p>/logs/received</p> <p>/logs/rayids</p> | No        |
 
 </TableWrap>
 
@@ -58,6 +58,7 @@ The maximum time range from <em>start</em> to <em>end</em> can't exceed 1 hour. 
 `start=2018-05-15T10:00:00Z&end=2018-05-15T10:01:00Z`, then `start=2018-05-15T10:01:00Z&end=2018-05-15T10:02:00Z` and so on.
 
 The overlap will be handled correctly.
+
 </Aside>
 
 ## Example API requests using cURL
@@ -83,6 +84,7 @@ curl -s \
 <Aside type="note" header="Note">
 
 The IATA code returned as part of the Ray ID does not need to included in the request. For example: if you have a RayID such as `49ddb3e70e665831-DFW` only include `49ddb3e70e665831` in your request.
+
 </Aside>
 
 ## Fields
@@ -102,4 +104,4 @@ curl -s \
     "https://api.cloudflare.com/client/v4/zones/<ZONE_ID>/logs/received?start=2017-07-18T22:00:00Z&end=2017-07-18T22:01:00Z&count=1&fields=$(curl -s -H "X-Auth-Email: <REDACTED>" -H "X-Auth-Key: <REDACTED>" "https://api.cloudflare.com/client/v4/zones/<ZONE_ID>/logs/received/fields" | jq '. | to_entries[] | .key' -r | paste -sd "," -)"
 ```
 
-*See [HTTP request fields](/reference/log-fields/#http-requests)* for the currently available fields.
+_See [HTTP request fields](/reference/log-fields/#http-requests)_ for the currently available fields.

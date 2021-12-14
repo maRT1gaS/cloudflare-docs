@@ -5,10 +5,10 @@ pcx-content-type: how-to
 
 # Enable Always Online
 
-Always Online with Internet Archive integration is a Beta feature and is not enabled by default. 
+Always Online with Internet Archive integration is a Beta feature and is not enabled by default.
 
 1. Log in to your Cloudflare account.
-1. Choose the domain that will use Always Online with Internet Archive integration. 
+1. Choose the domain that will use Always Online with Internet Archive integration.
 1. Click the **Caching** > **Configuration**.
 1. Under **Always Online**, set the toggle to **On**.
 1. To enable Internet Archive integration, click **Update**.

@@ -13,7 +13,7 @@ Throughout the onboarding process, Cloudflare partners closely with your organiz
 
 Starting with an initial kickoff call, Cloudflare engages with your organization to confirm the scope and timeline for setting up Magic Transit.
 
-*Duration:* Less than one business day
+_Duration:_ Less than one business day
 
 After your call with Cloudflare, verify that you meet the [onboarding requirements](/get-started/requirements/).
 
@@ -21,7 +21,7 @@ After your call with Cloudflare, verify that you meet the [onboarding requiremen
 
 Cloudflare sets up Anycast tunnels for Magic Transit based on configuration details you supply.
 
-*Duration:* ~4 business days
+_Duration:_ ~4 business days
 
 Provide the information specified in [Specify GRE Tunnel Endpoints](/get-started/configure-tunnels/specify-gre-tunnel-endpoints/) so that Cloudflare can set up your tunnels.
 
@@ -31,7 +31,7 @@ After Cloudflare stages the tunnels, Cloudflare validates tunnel connectivity, L
 
 To ensure that the integration is ready to go live the following week, complete this step by close of business Thursday.
 
-*Duration:* ~4 business days
+_Duration:_ ~4 business days
 
 ## 4. Configure edge network
 
@@ -46,7 +46,7 @@ These routing changes return any traffic generated within the Cloudflare edge ne
 
 You control the edge router advertisement, which dictates whether Cloudflare’s edge network advertises your prefixes. Advertisement is activated at the go-live call, routing traffic via Cloudflare and the GRE tunnels to your data centers.
 
-*Duration:* ~5 business days
+_Duration:_ ~5 business days
 
 <Aside type='warning' header='Important'>
 
@@ -59,4 +59,3 @@ When using [Cloudflare Network Interconnect](https://developers.cloudflare.com/n
 ## 5. Go live and announce prefixes
 
 Once edge network configuration is complete, schedule a go-live call. During this call, you announce your prefixes from Cloudflare’s edge network for the first time.
-

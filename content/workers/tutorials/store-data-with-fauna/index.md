@@ -1,15 +1,15 @@
 ---
 updated: 2021-11-04
 difficulty: Beginner
-content_type: "📝 Tutorial"
+content_type: '📝 Tutorial'
 pcx-content-type: tutorial
 ---
 
-import TutorialsBeforeYouStart from "../../_partials/_tutorials-before-you-start.md"
+import TutorialsBeforeYouStart from '../../_partials/_tutorials-before-you-start.md';
 
 # Create a serverless, globally distributed REST API with Fauna
 
-<TutorialsBeforeYouStart/>
+<TutorialsBeforeYouStart />
 
 ## Overview
 
@@ -17,9 +17,9 @@ In this tutorial you learn how to store and retrieve data in your Cloudflare Wor
 
 ### Learning goals
 
-* How to store and retrieve data from Fauna in your Workers.
-* How to use Wrangler to store secrets securely.
-* How to use [Worktop][worktop] to add routing to your Workers.
+- How to store and retrieve data from Fauna in your Workers.
+- How to use Wrangler to store secrets securely.
+- How to use [Worktop][worktop] to add routing to your Workers.
 
 Building with Fauna, Workers, and Worktop enables you to create a globally distributed, strongly consistent, fully serverless REST API in a single repository. You can develop and reason about your application as if it were a monolith but gain the resilience and reduced latency of a distributed application running at the edge.
 
@@ -27,10 +27,10 @@ Building with Fauna, Workers, and Worktop enables you to create a globally distr
 
 Fauna is a document-based database with a flexible schema. This allows you to define the structure of your data – whatever it may be – and store documents that adhere to that structure. In this tutorial, you build a product inventory, where each `product` document must contain the following properties:
 
-*   **title** - A human-friendly string that represents the title or name of a product.
-*   **serialNumber** - A machine-friendly string that uniquely identifies the product.
-*   **weightLbs** - A floating point number that represents the weight in pounds of the product.
-*   **quantity** A non-negative integer that represents how many items of a particular product there are in the inventory.
+- **title** - A human-friendly string that represents the title or name of a product.
+- **serialNumber** - A machine-friendly string that uniquely identifies the product.
+- **weightLbs** - A floating point number that represents the weight in pounds of the product.
+- **quantity** A non-negative integer that represents how many items of a particular product there are in the inventory.
 
 Documents are stored in the **Products** [collection][fauna-collections]. Collections in document databases are groups of related documents.
 
@@ -40,7 +40,7 @@ For this tutorial all API endpoints are public. However, Fauna also offers multi
 
 ### Creating your database
 
-Open the [Fauna dashboard][fauna-dashboard] in your browser and log into your Fauna account. 
+Open the [Fauna dashboard][fauna-dashboard] in your browser and log into your Fauna account.
 
 <Aside type="note" header="Fauna Account">
 
@@ -49,6 +49,7 @@ If you do not have a Fauna account, you can [sign up][fauna-signup] and deploy t
 </Aside>
 
 In the Fauna dashboard:
+
 1. Select **Create database**.
 2. Provide a valid name.
 3. Select the **Classic** [Region Group][fauna-region-groups].
@@ -90,6 +91,7 @@ $ wrangler generate fauna-workers
 $ cd fauna-workers
 $ wrangler publish
 ```
+
 <Aside type="note" header="Publish before storing secrets">
 
 You must publish a version of your project before storing your server secret in the next step.
@@ -131,7 +133,7 @@ header: Installing Worktop
 $ npm install worktop@0.7
 ```
 
-Worktop solves common needs such as routing, path parameters, and  HTTP methods.
+Worktop solves common needs such as routing, path parameters, and HTTP methods.
 
 Edit your `wrangler.toml` file found in your Worker's project directory. Set the type to `"javascript"` (not `"webpack"`) and add the `[build]` and `[build.upload]` sections as shown in the following snippet:
 
@@ -320,9 +322,9 @@ header: Newly created document
 
 ```
 
-*   **ref** - A [reference][fql-reference] to the newly created document.
-*   **ts** - The timestamp of the new document creation in microseconds.
-*   **data** - The  actual content of the document.
+- **ref** - A [reference][fql-reference] to the newly created document.
+- **ts** - The timestamp of the new document creation in microseconds.
+- **data** - The actual content of the document.
 
 Examining the route you create, when the query is successful, the ID of the newly created document is returned in the response body:
 
@@ -579,9 +581,9 @@ Let(
 
 This query uses the FQL [Let][fql-let] function to set some variables for use later in the query:
 
-*   **productRef** - The **Ref** of the document to update.
-*   **productDocument** - The full product document that will be updated.
-*   **currentQuantity** - The currently available quantity of the product. You extract the property by using the FQL [Select][fql-select] function.
+- **productRef** - The **Ref** of the document to update.
+- **productDocument** - The full product document that will be updated.
+- **currentQuantity** - The currently available quantity of the product. You extract the property by using the FQL [Select][fql-select] function.
 
 You can access the values of variables created by `Let` in any subsequent FQL expressions by using the FQL [Var][fql-var] function.
 
@@ -691,9 +693,9 @@ format = "service-worker"
 // Copyright Fauna, Inc.
 // SPDX-License-Identifier: MIT-0
 
-import {Router, listen} from 'worktop';
+import { Router, listen } from 'worktop';
 import faunadb from 'faunadb';
-import {getFaunaError} from './utils.js';
+import { getFaunaError } from './utils.js';
 
 const router = new Router();
 
@@ -701,7 +703,22 @@ const faunaClient = new faunadb.Client({
   secret: FAUNA_SECRET,
 });
 
-const {Create, Collection, Match, Index, Get, Ref, Paginate, Sum, Delete, Add, Select, Let, Var, Update} = faunadb.query;
+const {
+  Create,
+  Collection,
+  Match,
+  Index,
+  Get,
+  Ref,
+  Paginate,
+  Sum,
+  Delete,
+  Add,
+  Select,
+  Let,
+  Var,
+  Update,
+} = faunadb.query;
 
 router.add('GET', '/', async (request, response) => {
   response.send(200, 'hello world');
@@ -709,24 +726,21 @@ router.add('GET', '/', async (request, response) => {
 
 router.add('POST', '/products', async (request, response) => {
   try {
-    const {serialNumber, title, weightLbs} = await request.body();
+    const { serialNumber, title, weightLbs } = await request.body();
 
     const result = await faunaClient.query(
-      Create(
-        Collection('Products'),
-        {
-          data: {
-            serialNumber,
-            title,
-            weightLbs,
-            quantity: 0
-          }
-        }
-      )
+      Create(Collection('Products'), {
+        data: {
+          serialNumber,
+          title,
+          weightLbs,
+          quantity: 0,
+        },
+      })
     );
 
     response.send(200, {
-      productId: result.ref.id
+      productId: result.ref.id,
     });
   } catch (error) {
     const faunaError = getFaunaError(error);
@@ -743,7 +757,6 @@ router.add('GET', '/products/:productId', async (request, response) => {
     );
 
     response.send(200, result);
-
   } catch (error) {
     const faunaError = getFaunaError(error);
     response.send(faunaError.status, faunaError);
@@ -765,38 +778,39 @@ router.add('DELETE', '/products/:productId', async (request, response) => {
   }
 });
 
-router.add('PATCH', '/products/:productId/add-quantity', async (request, response) => {
-  try {
-    const productId = request.params.productId;
-    const {quantity} = await request.body();
+router.add(
+  'PATCH',
+  '/products/:productId/add-quantity',
+  async (request, response) => {
+    try {
+      const productId = request.params.productId;
+      const { quantity } = await request.body();
 
-    const result = await faunaClient.query(
-      Let(
-        {
-          productRef: Ref(Collection('Products'), productId),
-          productDocument: Get(Var('productRef')),
-          currentQuantity: Select(['data', 'quantity'], Var('productDocument'))
-        },
-        Update(
-          Var('productRef'),
+      const result = await faunaClient.query(
+        Let(
           {
+            productRef: Ref(Collection('Products'), productId),
+            productDocument: Get(Var('productRef')),
+            currentQuantity: Select(
+              ['data', 'quantity'],
+              Var('productDocument')
+            ),
+          },
+          Update(Var('productRef'), {
             data: {
-              quantity: Add(
-                Var('currentQuantity'),
-                quantity
-              )
-            }
-          }
+              quantity: Add(Var('currentQuantity'), quantity),
+            },
+          })
         )
-      )
-    );
+      );
 
-    response.send(200, result);
-  } catch (error) {
-    const faunaError = getFaunaError(error);
-    response.send(faunaError.status, faunaError);
+      response.send(200, result);
+    } catch (error) {
+      const faunaError = getFaunaError(error);
+      response.send(faunaError.status, faunaError);
+    }
   }
-});
+);
 
 listen(router.run);
 ```
@@ -869,7 +883,6 @@ If you'd like to speak directly with a Fauna expert about building your applicat
 [fauna-region-groups]: https://docs.fauna.com/fauna/current/api/fql/region_groups#how-to-use-region-groups?utm_source=Cloudflare&utm_medium=referral&utm_campaign=Q4_CF_2021
 [fauna-signup]: https://dashboard.fauna.com/signup?utm_source=Cloudflare&utm_medium=referral&utm_campaign=Q4_CF_2021
 [fauna-udfs]: https://docs.fauna.com/fauna/current/learn/understanding/user_defined_functions?utm_source=Cloudflare&utm_medium=referral&utm_campaign=Q4_CF_2021
-
 [fql]: https://docs.fauna.com/fauna/current/api/fql/?utm_source=Cloudflare&utm_medium=referral&utm_campaign=Q4_CF_2021
 [fql-add]: https://docs.fauna.com/fauna/current/api/fql/functions/add?lang=shell&utm_source=Cloudflare&utm_medium=referral&utm_campaign=Q4_CF_2021
 [fql-delete]: https://docs.fauna.com/fauna/current/api/fql/functions/delete?lang=shell&utm_source=Cloudflare&utm_medium=referral&utm_campaign=Q4_CF_2021
@@ -879,7 +892,6 @@ If you'd like to speak directly with a Fauna expert about building your applicat
 [fql-select]: https://docs.fauna.com/fauna/current/api/fql/functions/select?lang=shell&utm_source=Cloudflare&utm_medium=referral&utm_campaign=Q4_CF_2021
 [fql-update]: https://docs.fauna.com/fauna/current/api/fql/functions/update?lang=shell&utm_source=Cloudflare&utm_medium=referral&utm_campaign=Q4_CF_2021
 [fql-var]: https://docs.fauna.com/fauna/current/api/fql/functions/var?lang=shell&utm_source=Cloudflare&utm_medium=referral&utm_campaign=Q4_CF_2021
-
 [fauna-js-docs]: https://github.com/fauna/faunadb-js#using-with-cloudflare-workers
 [http-status-codes]: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status
 [worktop]: https://github.com/lukeed/worktop

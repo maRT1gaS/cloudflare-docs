@@ -9,15 +9,15 @@ order: 1
 1. Log in to your Microsoft Intune account.
 1. Navigate to **Apps** > **All Apps**.
 1. Click **+Add**.
-1. In **App type**, select *Line-of-business app* from the drop-down menu.
+1. In **App type**, select _Line-of-business app_ from the drop-down menu.
 1. Click **Select**.
 1. Click **Select app package file** and upload the `Cloudflare_WARP_Release-x64.msi` installer you downloaded previously.
 1. Click **OK**.
 1. In the **Name** field, we recommend entering the version number of the package being uploaded.
 1. In the **Publisher** field, we recommend entering `Cloudflare, Inc`.
 1. In the **Command-line arguments** field, enter a valid set of command-line arguments as described above.
-    - Example: `/quiet ORGANIZATION="exampleorg" SERVICE_MODE="warp" GATEWAY_UNIQUE_ID="fmxk762nrj" SUPPORT_URL="http://support.example.com"`
-1. You do not need to fill other optional fields. Once you have entered all the necessary values, click **Next**. 
+   - Example: `/quiet ORGANIZATION="exampleorg" SERVICE_MODE="warp" GATEWAY_UNIQUE_ID="fmxk762nrj" SUPPORT_URL="http://support.example.com"`
+1. You do not need to fill other optional fields. Once you have entered all the necessary values, click **Next**.
 1. Add the users or groups who require Cloudflare WARP.
 1. Click **Next**.
 1. Review your configuration.
@@ -29,7 +29,7 @@ Intune is now configured to deploy the WARP client.
 
 The Cloudflare WARP client allows for an automated install via tools like Jamf, Intune, Kandji, or JumpCloud or any script or management tool that can place a `com.cloudflare.warp.plist` file in `/Library/Managed Preferences` on a supported macOS device. Additionally, this `plist` can be wrapped in a `.mobileconfig`.
 
-Here is an example `plist` file with the accepted arguments: 
+Here is an example `plist` file with the accepted arguments:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -38,9 +38,9 @@ Here is an example `plist` file with the accepted arguments:
     <dict>
         <key>organization</key>
         <string>yourorganization</string>
-        <key>auto_connect</key> 
+        <key>auto_connect</key>
         <integer>1</integer>
-        <key>switch_locked</key> 
+        <key>switch_locked</key>
         <false />
         <key>service_mode</key>
         <string>warp</string>
@@ -101,9 +101,9 @@ Here is an example `.mobileconfig` file with the accepted arguments:
                                 <dict>
                                     <key>organization</key>
                                     <string>yourorganization</string>
-                                    <key>auto_connect</key> 
+                                    <key>auto_connect</key>
                                     <integer>1</integer>
-                                    <key>switch_locked</key> 
+                                    <key>switch_locked</key>
                                     <false />
                                     <key>service_mode</key>
                                     <string>warp</string>
@@ -123,12 +123,13 @@ Here is an example `.mobileconfig` file with the accepted arguments:
 For a description of each argument and what it means, see [deployment parameters](/connections/connect-devices/warp/deployment/mdm-deployment/parameters).
 
 [Click here to download](../../../../../static/documentation/connections/com.cloudflare.warp.plist) this example `plist`. If you plan to download the `plist` file and manually place it in `/Library/Managed Preferences`, convert the `plist` into binary format first. To do that:
+
 1. Open a Terminal window.
 2. Run the following command:
 
- ```
- % plutil -convert binary1 com.cloudflare.warp.plist
- ```
+```
+% plutil -convert binary1 com.cloudflare.warp.plist
+```
 
 [Click here to download](../../../../../static/documentation/connections/CloudflareWARP.mobileconfig) this example `.mobileconfig`. Before doing so, you may need to run `uuidgen` from your macOS terminal. This will generate a value for `PayloadUUID`, which you can use to replace the default value used for `PayloadUUID` in the example above.
 
@@ -136,15 +137,15 @@ For a description of each argument and what it means, see [deployment parameters
 
 The WARP client, known in the App Store as [1.1.1.1: Faster Internet](https://apps.apple.com/us/app/1-1-1-1-faster-internet/id1423538627), allows for an automated install via Intune.
 
-To proceed with the installation, here is an example of the XML code you will need, with the accepted arguments: 
+To proceed with the installation, here is an example of the XML code you will need, with the accepted arguments:
 
 ```xml
 <dict>
     <key>organization</key>
     <string>yourorganization</string>
-    <key>auto_connect</key> 
+    <key>auto_connect</key>
     <integer>1</integer>
-    <key>switch_locked</key> 
+    <key>switch_locked</key>
     <false />
     <key>service_mode</key>
     <string>warp</string>

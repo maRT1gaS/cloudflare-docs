@@ -5,7 +5,7 @@ order: 4
 pcx-content-type: navigation
 ---
 
-import ContentTable from "../components/content-table"
+import ContentTable from '../components/content-table';
 
 # Migration guides
 

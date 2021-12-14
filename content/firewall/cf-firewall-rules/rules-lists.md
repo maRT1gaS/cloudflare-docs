@@ -23,9 +23,9 @@ Using Rules Lists has these advantages:
 
 ## Managed IP Lists: Open Proxies
 
-Use Managed IP Lists to access Cloudflare's IP threat intelligence. 
+Use Managed IP Lists to access Cloudflare's IP threat intelligence.
 
-Cloudflare scans public, open proxy lists for reachable, open proxies. After verifying the proxies, Cloudflare determines their exit IPs and creates a list of IPs you can use when writing rules via the dashboard or API. 
+Cloudflare scans public, open proxy lists for reachable, open proxies. After verifying the proxies, Cloudflare determines their exit IPs and creates a list of IPs you can use when writing rules via the dashboard or API.
 
 ## Entitlements
 
@@ -58,7 +58,8 @@ The number of Rules Lists you can create depends on the Cloudflare plans associa
 </table></TableWrap>
 
 <Aside header="Important">
-  Access to the Open Proxy List in the rule builder and <code>cf.open_proxies</code> requires a Cloudflare Enterprise plan.
+  Access to the Open Proxy List in the rule builder and{' '}
+  <code>cf.open_proxies</code> requires a Cloudflare Enterprise plan.
 </Aside>
 
 ## Managing lists

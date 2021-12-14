@@ -10,10 +10,10 @@ Adds a single rule to an existing ruleset. Use this endpoint to add a rule witho
 
 Use one of the following API endpoints:
 
-| Operation | Method + Endpoint |
-|-----------|-------------------|
+| Operation                                      | Method + Endpoint                                         |
+| ---------------------------------------------- | --------------------------------------------------------- |
 | [Add an individual rule][ar-account] (account) | `POST /accounts/{account-id}/rulesets/{ruleset-id}/rules` |
-| Add an individual rule (zone) | `POST /zones/{zone-id}/rulesets/{ruleset-id}/rules` |
+| Add an individual rule (zone)                  | `POST /zones/{zone-id}/rulesets/{ruleset-id}/rules`       |
 
 [ar-account]: https://api.cloudflare.com/#account-rulesets-add-an-individual-rule
 

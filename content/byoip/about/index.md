@@ -8,4 +8,4 @@ order: 1
 
 Review the topics below for more information about concepts related to BYOIP.
 
-<DirectoryListing path="/about"/>
+<DirectoryListing path="/about" />

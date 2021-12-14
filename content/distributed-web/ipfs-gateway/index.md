@@ -53,7 +53,7 @@ QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco
 However, the same hash could be encoded with
 [Base32](https://en.wikipedia.org/wiki/Base32) and there are a slew of other
 supported hash algorithms including [SHA-3](https://en.wikipedia.org/wiki/SHA-3)
-and [BLAKE2](https://en.wikipedia.org/wiki/BLAKE_(hash_function)).
+and [BLAKE2](<https://en.wikipedia.org/wiki/BLAKE_(hash_function)>).
 
 ### Uploading to IPFS
 

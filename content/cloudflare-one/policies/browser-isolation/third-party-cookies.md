@@ -25,8 +25,8 @@ Follow these instructions to enable third-party cookies in your browser:
 1. Open Firefox.
 1. Click **Tools** > **Options**.
 1. Click **Privacy** in the top panel.
-1. Select the checkbox labeled *Accept cookies from sites*.
-1. Select the checkbox labeled *Accept third-party cookies*.
+1. Select the checkbox labeled _Accept cookies from sites_.
+1. Select the checkbox labeled _Accept third-party cookies_.
 1. Click **OK**.
 
 ## Safari
@@ -34,8 +34,8 @@ Follow these instructions to enable third-party cookies in your browser:
 1. Open Safari.
 1. Go to **Preferences** > **Privacy**.
 1. Under the **Cookies and website data** section, un-select both:
-    * Prevent cross-site tracking
-    * Block all cookies
+   - Prevent cross-site tracking
+   - Block all cookies
 1. Close the Preferences window.
 
 ## Brave

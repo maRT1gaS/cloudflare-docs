@@ -10,9 +10,9 @@ The Cloudflare Ruleset Engine allows you to create and deploy rules and rulesets
 
 There are several elements involved in the configuration and use of the Ruleset Engine. These elements are:
 
-* **Phase** — Defines a stage in the life of a request where you can execute rulesets.
-* **Ruleset** — Defines a versioned set of rules. You deploy rulesets to a phase, where they execute.
-* **Rule** — Defines a filter and an action to perform on incoming requests that match the filter expression. A rule with an `execute` action executes a ruleset.
+- **Phase** — Defines a stage in the life of a request where you can execute rulesets.
+- **Ruleset** — Defines a versioned set of rules. You deploy rulesets to a phase, where they execute.
+- **Rule** — Defines a filter and an action to perform on incoming requests that match the filter expression. A rule with an `execute` action executes a ruleset.
 
 ## Phases
 
@@ -46,8 +46,8 @@ There are several types of rulesets. Cloudflare provides **Managed Rulesets** th
 
 The `kind` field of phase entry point rulesets has one of the following values:
 
-* `root` for phase entry point rulesets at the account level
-* `zone` for phase entry point rulesets at the zone level
+- `root` for phase entry point rulesets at the account level
+- `zone` for phase entry point rulesets at the zone level
 
 </Aside>
 

@@ -1,6 +1,6 @@
 ---
 order: 0
-title: "Guide"
+title: 'Guide'
 pcx-content-type: how-to
 ---
 
@@ -18,17 +18,21 @@ The quickest way to experiment with Cloudflare Workers is in the [Playground](ht
 
 This guide will instruct you through setting up a Cloudflare account to deploying your first Worker script.
 
---------------------------------
+---
 
 ## 1. Sign up for a Workers account
 
 Before you can start [publishing](/cli-wrangler/commands#publish) your Workers on your own domain or a free `*.workers.dev` subdomain, you must sign up for a Cloudflare Workers account.
 
-<p><Button type="primary" href="https://dash.cloudflare.com/sign-up/workers">Sign up</Button></p>
+<p>
+  <Button type="primary" href="https://dash.cloudflare.com/sign-up/workers">
+    Sign up
+  </Button>
+</p>
 
 The signup process will guide you through choosing a `*.workers.dev` subdomain and verifying your email address, both of which are required to publish.
 
---------------------------------
+---
 
 ## 2. Install the Workers CLI
 
@@ -39,6 +43,7 @@ To install [`wrangler`](https://github.com/cloudflare/wrangler), ensure you have
 ```sh
 $ npm install -g @cloudflare/wrangler
 ```
+
 or install with yarn:
 
 ```sh
@@ -52,7 +57,7 @@ $ wrangler --version
 👷 ✨  wrangler 1.19.4
 ```
 
---------------------------------
+---
 
 ## 3. Configure the Workers CLI
 
@@ -71,7 +76,7 @@ y
 
 Open the browser, log into your account, and select **Allow**. This will send an OAuth Token to Wrangler so it can deploy your scripts to Cloudflare.
 
---------------------------------
+---
 
 ## 4. Generate a new project
 
@@ -108,7 +113,7 @@ For example, to build a Workers project in TypeScript, run:
 
 To start a project from your own code — rather than a starter — use [`wrangler init`](/cli-wrangler/commands#init).
 
---------------------------------
+---
 
 ## 5. Write code
 
@@ -144,9 +149,9 @@ Below is an example of the request response workflow:
 
 2. The call to [`.respondWith()`](/runtime-apis/fetch-event#methods) lets the Workers runtime intercept the request in order to send back a custom response (in this example, the plain text “Hello worker!”).
 
-    - The `FetchEvent` handler typically culminates in a call to the method `.respondWith()` with either a [`Response`](/runtime-apis/response) or `Promise<Response>` that determines the response.
+   - The `FetchEvent` handler typically culminates in a call to the method `.respondWith()` with either a [`Response`](/runtime-apis/response) or `Promise<Response>` that determines the response.
 
-    - The `FetchEvent` object also provides [two other methods](/runtime-apis/fetch-event#methods) to handle unexpected exceptions and operations that may complete after a response is returned.
+   - The `FetchEvent` object also provides [two other methods](/runtime-apis/fetch-event#methods) to handle unexpected exceptions and operations that may complete after a response is returned.
 
 Learn more about [the `FetchEvent` lifecycle](/learning/fetch-event-lifecycle).
 
@@ -204,7 +209,7 @@ The example outlined in this guide is a starting point. There are many Workers [
 
 For inspiration, refer to [Built with Workers](https://workers.cloudflare.com/built-with) for a showcase of projects.
 
---------------------------------
+---
 
 ## 6. Preview your project
 
@@ -250,7 +255,7 @@ Running `wrangler dev` and `wrangler publish` both run `wrangler build` beforeha
 
 </Aside>
 
---------------------------------
+---
 
 ## 7. Configure your project for deployment
 
@@ -330,13 +335,13 @@ route = "example.com/*"
 
 The `route` key here is a [route pattern](/platform/routes), which can contain wildcards.
 
-If your route is configured to a hostname, you will need to add a DNS record to Cloudflare to ensure that the hostname can be resolved externally. If your Worker acts as your origin (i.e., the request terminates in a Worker), you must add a DNS record. 
+If your route is configured to a hostname, you will need to add a DNS record to Cloudflare to ensure that the hostname can be resolved externally. If your Worker acts as your origin (i.e., the request terminates in a Worker), you must add a DNS record.
 
-You may enter a placeholder `AAAA` record pointing to `100::`, which must be proxied through Cloudflare (orange-cloud in the DNS settings). This value specifically is the [reserved IPv6 discard prefix](https://tools.ietf.org/html/rfc6666) but is not the only value allowed. For example, you may also use an `A` record pointed to `192.0.2.1` or a `CNAME` pointed to any resolvable target. 
+You may enter a placeholder `AAAA` record pointing to `100::`, which must be proxied through Cloudflare (orange-cloud in the DNS settings). This value specifically is the [reserved IPv6 discard prefix](https://tools.ietf.org/html/rfc6666) but is not the only value allowed. For example, you may also use an `A` record pointed to `192.0.2.1` or a `CNAME` pointed to any resolvable target.
 
-Whichever method you choose, your record must be proxied through Cloudflare (orange-clouded) and resolve successfully. 
+Whichever method you choose, your record must be proxied through Cloudflare (orange-clouded) and resolve successfully.
 
---------------------------------
+---
 
 ## 8. Publish your project
 
@@ -353,7 +358,7 @@ header: Publish to workers.dev
 
 <Aside type="note">
 
-__Note:__ When pushing to your `*.workers.dev`subdomain for the first time, you may initially see [523 errors](https://support.cloudflare.com/hc/en-us/articles/115003011431-Troubleshooting-Cloudflare-5XX-errors#523error) while DNS is propagating. It should work after a minute or so.
+**Note:** When pushing to your `*.workers.dev`subdomain for the first time, you may initially see [523 errors](https://support.cloudflare.com/hc/en-us/articles/115003011431-Troubleshooting-Cloudflare-5XX-errors#523error) while DNS is propagating. It should work after a minute or so.
 
 </Aside>
 
@@ -372,7 +377,7 @@ For more information on environments, refer to the [Wrangler documentation](/cli
 
 You can also configure a GitHub repository to automatically deploy every time you `git push`. You can do this by either using the [Workers GitHub action](https://github.com/marketplace/actions/deploy-to-cloudflare-workers-with-wrangler), or by writing your own GitHub action and manually configuring the necessary [GitHub secrets](https://docs.github.com/en/actions/configuring-and-managing-workflows/creating-and-storing-encrypted-secrets).
 
---------------------------------
+---
 
 ## Next steps
 

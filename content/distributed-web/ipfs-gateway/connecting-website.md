@@ -23,7 +23,7 @@ guide assumes that all of the files for your website are static. Also, all links
 within your files should be relative links -- this allows your website to be
 served in all the ways that IPFS supports.
 
-We should also emphasize that your content should be in a *folder*, even if your
+We should also emphasize that your content should be in a _folder_, even if your
 website will consist of only one file. You could make that one file the
 `index.html`, or create an `index.html` that redirects/displays the one file you
 care about.
@@ -53,12 +53,14 @@ First off, if you haven’t already, download IPFS by following the instructions
 
 Once you've downloaded the IPFS software, open a terminal window and connect
 your IPFS node to the network by typing:
+
 ```
 ipfs daemon
 ```
 
 When the daemon says it’s ready, open another terminal window and add your
 content, which is the IPFS address of your content.
+
 ```
 ipfs add -r /path/to/folder-with-your-content
 ```
@@ -123,7 +125,7 @@ API](https://api.cloudflare.com/#dns-records-for-a-zone-update-dns-record). If
 your website is not on Cloudflare, and you need help finding the DNS records,
 [refer to Project Shield's guide.](https://support.projectshield.withgoogle.com/s/article/Find-your-Domain-Name-System-DNS-records?language=en_US).
 Serving your website from Cloudflare's gateway without the domain itself being
-on Cloudflare is called a *CNAME setup* (meaning that you manage the DNS records
+on Cloudflare is called a _CNAME setup_ (meaning that you manage the DNS records
 directly with your registrar). While our gateway supports CNAME setups, there's
 one significant downside that must be mentioned: You won't be able to reach our
 support team, and we won't be able to reach you about possible changes to your

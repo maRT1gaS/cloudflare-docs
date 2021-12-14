@@ -2,7 +2,7 @@
 pcx-content-type: how-to
 ---
 
-import TutorialsBeforeYouStart from "../_partials/_tutorials-before-you-start.md" 
+import TutorialsBeforeYouStart from '../_partials/_tutorials-before-you-start.md';
 
 # Deploy an Astro site
 
@@ -27,7 +27,7 @@ $ npm init astro
 
 During `init`, Astro will ask you which project type you would like to set up. Your answers will not affect the rest of this tutorial. Select an answer ideal for your project.
 
-<TutorialsBeforeYouStart/>
+<TutorialsBeforeYouStart />
 
 ## Creating a GitHub repository
 
@@ -87,7 +87,6 @@ Additionally, you will have access to [preview deployments](/platform/preview-de
 For the complete guide to deploying your first site to Cloudflare Pages, refer to the [Get started guide](/get-started).
 
 </Aside>
-
 
 ## Learn more
 

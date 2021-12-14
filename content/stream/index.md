@@ -11,11 +11,21 @@ Cloudflare Stream provides end-to-end video infrastructure at scale. Stream hand
 To get started with Stream, simply visit the Stream Dashboard in your Cloudflare account or [sign up](https://dash.cloudflare.com/sign-up/stream). Your stream videos are not attached to an domain in your Cloudflare account and you don't need a domain on Cloudflare to use Stream.
 
 <ButtonGroup>
-  <Button type="primary" href="https://dash.cloudflare.com/?to=/:account/stream">Visit the Stream dashboard</Button>
-  <Button type="secondary" href="https://api.cloudflare.com/#stream-videos-properties">View API reference</Button>
+  <Button
+    type="primary"
+    href="https://dash.cloudflare.com/?to=/:account/stream"
+  >
+    Visit the Stream dashboard
+  </Button>
+  <Button
+    type="secondary"
+    href="https://api.cloudflare.com/#stream-videos-properties"
+  >
+    View API reference
+  </Button>
 </ButtonGroup>
 
-----------
+---
 
 # Getting started
 
@@ -27,6 +37,7 @@ To make your first request to the Stream API, you must obtain these pieces of in
 1. A Cloudflare Account API Token
 
 ### Step 1: Uploading your first video
+
 Stream provides multiple ways to upload videos. For this example, we will upload an MP4 file that is stored in a storage bucket onto Stream. The MP4 file can be found here:
 
 To make your first request, simply take the cURL command below and replace the API token, and account id placeholders with your credentials.
@@ -56,8 +67,8 @@ This cURL command tells the Stream API to download the MP4 file and make it avai
       "name": "My First Stream Video"
     },
     "created": "2020-10-16T20:20:17.872170843Z",
-    "size": 9032701,
-   //...
+    "size": 9032701
+    //...
   },
   "success": true,
   "errors": [],
@@ -112,9 +123,10 @@ The `uid` of the video can be used refer to the video after uploading and can be
 <iframe
   src="https://iframe.videodelivery.net/$VIDEO_UID"
   title="Example Stream video"
-  frameBorder="0"
+  frameborder="0"
   allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-  allowFullScreen>
+  allowfullscreen
+>
 </iframe>
 ```
 
@@ -124,21 +136,23 @@ Stream player is also available as a [React](https://www.npmjs.com/package/@clou
 Update to Stream component once available
 https://github.com/cloudflare/cloudflare-docs-engine/issues/281
 -->
+
 <figure data-type="stream">
-  <div className="AspectRatio" style={{"--aspect-ratio": "calc(16 / 9)"}}>
+  <div className="AspectRatio" style={{ '--aspect-ratio': 'calc(16 / 9)' }}>
     <iframe
       className="AspectRatio--content"
       src="https://iframe.videodelivery.net/5d5bc37ffcf54c9b82e996823bffbb81?muted=true"
       title="Example Stream video"
       frameBorder="0"
       allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-      allowFullScreen></iframe>
+      allowFullScreen
+    ></iframe>
   </div>
 </figure>
 
 ### Next steps
 
- - [Securing your Stream](/viewing-videos/securing-your-stream)
- - [Displaying thumbnails to your video](/viewing-videos/securing-your-stream)
- - [Programmatically controlling the video player](/viewing-videos/using-the-player-api)
- - [Uploading without a API token](/uploading-videos/direct-creator-uploads)
+- [Securing your Stream](/viewing-videos/securing-your-stream)
+- [Displaying thumbnails to your video](/viewing-videos/securing-your-stream)
+- [Programmatically controlling the video player](/viewing-videos/using-the-player-api)
+- [Uploading without a API token](/uploading-videos/direct-creator-uploads)

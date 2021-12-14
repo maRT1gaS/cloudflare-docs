@@ -10,9 +10,9 @@ You can connect to machines over SSH using Cloudflare's Zero Trust platform.
 
 **🗺️ This walkthrough covers how to:**
 
-* Build a policy in Cloudflare Access to secure the machine
-* Connect a machine to Cloudflare's network using an SSH connection
-* Connect from a client machine
+- Build a policy in Cloudflare Access to secure the machine
+- Connect a machine to Cloudflare's network using an SSH connection
+- Connect from a client machine
 
 **⏲️ Time to complete:**
 
@@ -168,7 +168,7 @@ You can now test the SSH flow by running a command to reach the service. When th
 
 Cloudflare can render an SSH client in your browser without the need for client software or end user configuration changes.
 
-To enable, navigate to the application page of the Access section in the Cloudflare for Teams dashboard. Click **Edit** and select the Settings tab. In the **`cloudflared` settings** card, select *SSH* from the **Browser Rendering** drop-down menu.
+To enable, navigate to the application page of the Access section in the Cloudflare for Teams dashboard. Click **Edit** and select the Settings tab. In the **`cloudflared` settings** card, select _SSH_ from the **Browser Rendering** drop-down menu.
 
 ![Auto Auth](../static/documentation/applications/ssh-browser-rendering.png)
 

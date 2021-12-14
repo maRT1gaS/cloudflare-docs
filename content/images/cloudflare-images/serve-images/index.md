@@ -7,9 +7,9 @@ pcx-content-type: reference
 
 To serve images uploaded to Cloudflare Images, you need three pieces of information:
 
-* Your Images account hash.
-* Image ID.
-* Variant name.
+- Your Images account hash.
+- Image ID.
+- Variant name.
 
 Assuming you have at least one image uploaded to Images, you will find the basic URL format on your Images Dashboard:
 
@@ -49,7 +49,7 @@ Example with a custom domain:
 https://somecustomdomain.com/cdn-cgi/imagedelivery/ZWd9g1K7eljCn_KDTu_MWA/083eb7b2-5392-4565-b69e-aff66acddd00/public
 ```
 
-In this example, `:images_account_hash`, `:image_id` and `:variant_name` are the same, but the hostname and prefix path is different: 
+In this example, `:images_account_hash`, `:image_id` and `:variant_name` are the same, but the hostname and prefix path is different:
 
 - `somecustomdomain.com`: Cloudflare proxied domain under the same account as the Cloudflare Images.
 - `/cdn-cgi/imagedelivery`: Path to trigger cdn-cgi image proxy.

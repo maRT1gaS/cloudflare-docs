@@ -2,7 +2,7 @@
 pcx-content-type: concept
 ---
 
-import ChangeQueueMethod from "../_partials/_change-queueing-method.md"
+import ChangeQueueMethod from '../_partials/_change-queueing-method.md';
 
 # Queueing method
 
@@ -52,4 +52,4 @@ Use this setup for event-only endpoints or to perform application maintenance.
 
 ## Changing queueing methods
 
-<ChangeQueueMethod/>
+<ChangeQueueMethod />

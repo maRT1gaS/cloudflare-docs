@@ -16,12 +16,15 @@ Here is a breakdown of each part of the URL:
 <Definitions>
 
 - `zone`
+
   - Your domain name on Cloudflare. Unlike other third-party image resizing services, we do not use a separate domain name for an API. Every Cloudflare zone with image resizing enabled can handle resizing itself. In URLs used on your website this part can be omitted, so that URLs start with `/cdn-cgi/image/`.
 
 - `/cdn-cgi/image/`
+
   - A fixed prefix that identifies that this is a special path handled by Cloudflare's built-in Worker.
 
 - `options`
+
   - A comma-separated list of options such as `width`, `height`, and `quality`.
 
 - `source-image`
@@ -32,7 +35,7 @@ Here is a breakdown of each part of the URL:
 Here is an example of an URL with `options` set to `width=80,quality=75` and a `source-image` of `uploads/avatar1.jpg`:
 
 ```html
-<img src="/cdn-cgi/image/width=80,quality=75/uploads/avatar1.jpg">
+<img src="/cdn-cgi/image/width=80,quality=75/uploads/avatar1.jpg" />
 ```
 
 ## Options
@@ -42,29 +45,37 @@ At least one option must be specified. Options are comma-separated (spaces are n
 <Definitions>
 
 - **`width=x`** or **`w=x`**
+
   - Specifies maximum width of the image in pixels. Exact behavior depends on the `fit` mode (described below).
 
 - **`height=x`** or **`h=x`**
+
   - Specifies maximum height of the image in pixels. Exact behavior depends on the `fit` mode (described below).
 
 - **`dpr=x`**
+
   - Device Pixel Ratio. Default is `1`. Multiplier for `width`/`height` that makes it easier to specify higher-DPI sizes in `<img srcset>`.
 
 - **`fit`**
+
   - Affects interpretation of `width` and `height`. All resizing modes preserve aspect ratio. Available modes are:
 
     <Definitions>
 
     - **`fit=scale-down`**
+
       - Image will be shrunk in size to fully fit within the given `width` or `height`, but will not be enlarged.
 
     - **`fit=contain`**
+
       - Image will be resized (shrunk or enlarged) to be as large as possible within the given `width` or `height` while preserving the aspect ratio.
 
     - **`fit=cover`**
+
       - Image will be resized to exactly fill the entire area specified by `width` and `height`, and will cropped if necessary.
 
     - **`fit=crop`**
+
       - Image will be shrunk and cropped to fit within the area specified by `width` and `height`. The image will not be enlarged. For images smaller than the given dimensions it is the same as `scale-down`. For images larger than the given dimensions, it is the same as `cover`.
 
     - **`fit=pad`**
@@ -73,11 +84,13 @@ At least one option must be specified. Options are comma-separated (spaces are n
     </Definitions>
 
 - **`gravity`** or **`g`**
+
   - Cropping with `fit=cover` specifies the most important side or point in the image that should not be cropped off.
 
     <Definitions>
 
     - **`gravity=auto`**
+
       - The point will be guessed by looking for areas that stand out the most from image background.
 
     - **`gravity=side`** and **`gravity=XxY`**
@@ -86,32 +99,41 @@ At least one option must be specified. Options are comma-separated (spaces are n
     </Definitions>
 
 - **`quality=x`** or **`q=x`**
+
   - Specifies quality for images in JPEG, WebP, and AVIF formats. The quality is in 1-100 scale, but useful values are between `50` (low quality, small file size) and `90` (high quality, large file size). `85` is the default. When using the PNG format, an explicit quality setting allows use of PNG8 (palette) variant of the format.
 
 - **`format=auto`** or **`f=auto`**
+
   - Allows serving of the WebP or AVIF format to browsers that support it. If this option is not specified, a standard format like JPEG or PNG will be used.
 
 - **`anim=false`**
+
   - Reduces animations to still images. This setting is recommended to avoid large animated GIF files, or flashing images.
 
 - **`sharpen=x`**
+
   - Specifies strength of sharpening filter. The value is a floating-point number between `0` (no sharpening) and `10` (maximum). `1` is a recommended value.
 
 - **`blur=x`**
+
   - Blur radius between `1` (slight blur) and `250` (maximum). Please beware that you can't use this option to reliably obscure image content, because savvy users can modify image's URL and remove the blur option. Use Workers to control which options can be set.
 
 - **`onerror=redirect`**
+
   - In case of a fatal error that prevents the image from being resized, redirects to the unresized source image URL. This may be useful in case some images require user authentication and cannot be fetched anonymously via Worker. This option should not be used if there is a change the source images is very large. This option is ignored if the image is from another domain, but you can use it with subdomains.
 
 - **`metadata`**
+
   - Controls amount of invisible metadata (EXIF data) that should be preserved. Color profiles and EXIF rotation are applied to the image even if the metadata is discarded. Note that if the Polish feature is enabled, all metadata may have been removed already and this option may have no effect.
 
     <Definitions>
 
     - **`metadata=keep`**
+
       - Preserve most of the image metadata (including GPS location) when possible.
 
     - **`metadata=copyright`**
+
       - Discard all metadata except EXIF copyright tag. This is the default for JPEG images.
 
     - **`metadata=none`**
@@ -127,11 +149,11 @@ At least one option must be specified. Options are comma-separated (spaces are n
 
 Cloudflare Image resizing can:
 
-* Read JPEG, PNG, GIF (including animations), and WebP images. SVG is not supported (this format is inherently scalable, and doesn't need resizing).
-* Generate JPEG and PNG images, and optionally AVIF or WebP.
-* Save animations as GIF or animated WebP.
-* Support ICC color profiles in JPEG and PNG images. 
-* Preserve JPEG metadata. Metadata of other formats is discarded.
+- Read JPEG, PNG, GIF (including animations), and WebP images. SVG is not supported (this format is inherently scalable, and doesn't need resizing).
+- Generate JPEG and PNG images, and optionally AVIF or WebP.
+- Save animations as GIF or animated WebP.
+- Support ICC color profiles in JPEG and PNG images.
+- Preserve JPEG metadata. Metadata of other formats is discarded.
 
 AVIF format is supported on a best-effort basis. Images that cannot be compressed as AVIF will be served as WebP instead.
 
@@ -141,9 +163,9 @@ Ideally, image sizes should match exactly the size they are displayed on the pag
 
 If you cannot use the `<img srcset>` markup, and have to hardcode specific maximum sizes, Cloudflare recommends the following sizes:
 
-* Maximum of 1920 pixels for desktop browsers.
-* Maximum of 960 pixels for tablets.
-* Maximum of 640 pixels for mobile phones.
+- Maximum of 1920 pixels for desktop browsers.
+- Maximum of 960 pixels for tablets.
+- Maximum of 640 pixels for mobile phones.
 
 Here is an example of markup to configure a maximum size for your image:
 

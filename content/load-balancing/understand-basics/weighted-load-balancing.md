@@ -15,7 +15,7 @@ By default, all origins within a pool have a weight of **1**. Since the weight o
 
 If you want to customize the percentage of traffic sent to an origin, set the **Weight** to a number between 0 and 1 (expressed in increments of .01). Cloudflare will then send traffic to that pool based on the following formula:
 
-`% of traffic to origin`  = `origin weight` ÷ `sum of all weights in the pool`
+`% of traffic to origin` = `origin weight` ÷ `sum of all weights in the pool`
 
 According to this formula, an origin with a weight of **0** should not receive any traffic sent to that pool(though the origin will still receive health checks).
 

@@ -14,21 +14,21 @@ For hostnames with existing A, AAAA, or CNAME records, the LB record takes prece
 
 - **Scenario 1**:
 
-    - **A, AAAA, or CNAME**: `x.example.com`
-    - **LB record**: `x.example.com`
-    - **Outcome**: LB record takes precedence because it is as specific as the DNS record.
+  - **A, AAAA, or CNAME**: `x.example.com`
+  - **LB record**: `x.example.com`
+  - **Outcome**: LB record takes precedence because it is as specific as the DNS record.
 
 - **Scenario 2**:
 
-    - **A, AAAA, or CNAME**: `y.example.com`
-    - **LB record**: `*.example.com` (wildcard record)
-    - **Outcome**: DNS record takes precedence because it is more specific.
+  - **A, AAAA, or CNAME**: `y.example.com`
+  - **LB record**: `*.example.com` (wildcard record)
+  - **Outcome**: DNS record takes precedence because it is more specific.
 
 - **Scenario 3**:
 
-    - **A, AAAA, or CNAME**: `*.example.com`
-    - **LB record**: `*.example.com`
-    - **Outcome**: LB record takes precedence because it is as specific as the DNS record.
+  - **A, AAAA, or CNAME**: `*.example.com`
+  - **LB record**: `*.example.com`
+  - **Outcome**: LB record takes precedence because it is as specific as the DNS record.
 
 <Aside type="note">
 

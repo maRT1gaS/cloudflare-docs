@@ -3,11 +3,11 @@ order: 2
 pcx-content-type: concept
 ---
 
-import LBDefinition from "../_partials/_load-balancer-definition.md"
+import LBDefinition from '../_partials/_load-balancer-definition.md';
 
 # Load balancers
 
-<LBDefinition/>
+<LBDefinition />
 
 <Aside type="note">
 
@@ -26,15 +26,16 @@ An **active-passive failover** sends traffic to the servers in your active pool 
 This setup ensures uninterrupted service and helps with planned outtages, but it might lead to slower traffic overall.
 
 To set up a load balancer with **active-passive failover**:
+
 1. Create a load balancer with two origin pools (`primary` and `secondary`).
 1. In the list of origin pools, set the following order:
-    1. `primary`
-    1. `secondary`
+   1. `primary`
+   1. `secondary`
 1. For **Traffic Steering**, select [**Off**](/understand-basics/traffic-steering#off---standard-failover).
 
 With this setup, your load balancer will direct all traffic to `primary` until `primary` has fewer available origins than specified in its **Health Threshold**. Only then will your load balancer direct traffic to `secondary`.
 
-In the event that all pools are marked down, Cloudflare uses the **fallback pool**, which is the option of last resort for successfully sending traffic to an origin. Since the fallback pool is a last resort, its health is not taken into account, and Cloudflare reports  its status as **No Health**. You can select the fallback pool via the API or in the Cloudflare dashboard. For more on working with fallback pools, see [_Traffic steering_](/understand-basics/traffic-steering).
+In the event that all pools are marked down, Cloudflare uses the **fallback pool**, which is the option of last resort for successfully sending traffic to an origin. Since the fallback pool is a last resort, its health is not taken into account, and Cloudflare reports its status as **No Health**. You can select the fallback pool via the API or in the Cloudflare dashboard. For more on working with fallback pools, see [_Traffic steering_](/understand-basics/traffic-steering).
 
 ### Active - Active Failover
 
@@ -43,8 +44,9 @@ An **active-active failover** distributes traffic to servers in the same pool un
 This setup speeds up overall requests, but is more vulnerable to planned or unplanned outtages.
 
 To set up a load balancer with **active-active failover**, either:
+
 - Create a load balancer with a single origin pool (`primary`) with multiple origins (`origin-1` and `origin-2`) and set the same [**Weight**](/understand-basics/weighted-load-balancing) for each origin.
-- Create a load balancer with two origin pools (`primary` and `secondary`) and — for [**Traffic Steering**](/understand-basics/traffic-steering) — select any option except for **Off**. 
+- Create a load balancer with two origin pools (`primary` and `secondary`) and — for [**Traffic Steering**](/understand-basics/traffic-steering) — select any option except for **Off**.
 
 <Aside type='note'>
 
@@ -90,56 +92,84 @@ The Cloudflare API supports the following commands for load balancers.
 
 <table>
   <thead>
-  <tr>
-   <th><strong>Command</strong>
-   </th>
-   <th><strong>Method</strong>
-   </th>
-   <th><strong>Endpoint</strong>
-   </th>
-  </tr>
+    <tr>
+      <th>
+        <strong>Command</strong>
+      </th>
+      <th>
+        <strong>Method</strong>
+      </th>
+      <th>
+        <strong>Endpoint</strong>
+      </th>
+    </tr>
   </thead>
   <tbody>
-  <tr>
-   <td><a href="https://api.cloudflare.com/#load-balancers-create-load-balancer">Create Load Balancer</a>
-   </td>
-   <td><Code>GET</Code>
-   </td>
-   <td><Code>/zones/:identifier/load_balancers</Code>
-   </td>
-  </tr>
-  <tr>
-   <td><a href="https://api.cloudflare.com/#load-balancers-delete-load-balancer">Delete Load Balancer</a>
-   </td>
-   <td><Code>DELETE</Code>
-   </td>
-   <td><Code>/zones/:identifier/load_balancers/:identifier</Code>
-   </td>
-  </tr>
-  <tr>
-   <td><a href="https://api.cloudflare.com/#load-balancers-list-load-balancers">List Load Balancers</a>
-   </td>
-   <td><Code>GET</Code>
-   </td>
-   <td><Code>/zones/:identifier/load_balancers</Code>
-   </td>
-  </tr>
-  <tr>
-   <td><a href="https://api.cloudflare.com/#load-balancers-load-balancer-details">Load Balancer Details</a>
-   </td>
-   <td><Code>POST</Code>
-   </td>
-   <td><Code>/zones/:identifier/load_balancers/:identifier</Code>
-   </td>
-  </tr>
-  <tr>
-   <td><a href="https://api.cloudflare.com/#load-balancers-update-load-balancer">Update Load Balancer</a>
-   </td>
-   <td><Code>PUT</Code>
-   </td>
-   <td><Code>/zones/:identifier/load_balancers/:identifier</Code>
-   </td>
-  </tr>
+    <tr>
+      <td>
+        <a href="https://api.cloudflare.com/#load-balancers-create-load-balancer">
+          Create Load Balancer
+        </a>
+      </td>
+      <td>
+        <Code>GET</Code>
+      </td>
+      <td>
+        <Code>/zones/:identifier/load_balancers</Code>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="https://api.cloudflare.com/#load-balancers-delete-load-balancer">
+          Delete Load Balancer
+        </a>
+      </td>
+      <td>
+        <Code>DELETE</Code>
+      </td>
+      <td>
+        <Code>/zones/:identifier/load_balancers/:identifier</Code>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="https://api.cloudflare.com/#load-balancers-list-load-balancers">
+          List Load Balancers
+        </a>
+      </td>
+      <td>
+        <Code>GET</Code>
+      </td>
+      <td>
+        <Code>/zones/:identifier/load_balancers</Code>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="https://api.cloudflare.com/#load-balancers-load-balancer-details">
+          Load Balancer Details
+        </a>
+      </td>
+      <td>
+        <Code>POST</Code>
+      </td>
+      <td>
+        <Code>/zones/:identifier/load_balancers/:identifier</Code>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="https://api.cloudflare.com/#load-balancers-update-load-balancer">
+          Update Load Balancer
+        </a>
+      </td>
+      <td>
+        <Code>PUT</Code>
+      </td>
+      <td>
+        <Code>/zones/:identifier/load_balancers/:identifier</Code>
+      </td>
+    </tr>
   </tbody>
 </table>
 

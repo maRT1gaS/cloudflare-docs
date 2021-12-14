@@ -15,15 +15,16 @@ You can use Cloudflare Tunnel to quickly share projects you are working on with 
 
 **🗺️ This tutorial covers how to:**
 
-* Start a secure, outbound-only, connection from an application running locally on a Mac laptop
-* Give that application a hostname where users can reach the resource
-* Optionally require a simple login to reach the application with Cloudflare Access
+- Start a secure, outbound-only, connection from an application running locally on a Mac laptop
+- Give that application a hostname where users can reach the resource
+- Optionally require a simple login to reach the application with Cloudflare Access
 
 **⏲️ Time to complete:**
 
 15 minutes
 
 ## Before you start
+
 1. [Add a website to Cloudflare](https://support.cloudflare.com/hc/en-us/articles/201720164-Creating-a-Cloudflare-account-and-adding-a-website)
 2. [Change your domain nameservers to Cloudflare](https://support.cloudflare.com/hc/en-us/articles/205195708)
 3. [Enable Argo Smart Routing for your account](https://support.cloudflare.com/hc/articles/115000224552-Configuring-Argo-through-the-UI)
@@ -116,12 +117,12 @@ Before you build the rule, you'll need to follow [these instructions](/setup) to
 
 1. In the policy builder, add the subdomain of your new DNS record that represents your Cloudflare Tunnel connection.
 
-    ![App Picker](../static/secure-origin-connections/share-new-site/configure-app.png)
+   ![App Picker](../static/secure-origin-connections/share-new-site/configure-app.png)
 
-    You can then add rules to determine who can reach the site.
+   You can then add rules to determine who can reach the site.
 
-    ![App Picker](../static/secure-origin-connections/share-new-site/add-rules.png)
+   ![App Picker](../static/secure-origin-connections/share-new-site/add-rules.png)
 
 ## Additional Materials
 
-* You can use this model to [share more complex development environments](https://blog.cloudflare.com/how-argo-tunnel-engineering-uses-argo-tunnel/) with other team members.
+- You can use this model to [share more complex development environments](https://blog.cloudflare.com/how-argo-tunnel-engineering-uses-argo-tunnel/) with other team members.

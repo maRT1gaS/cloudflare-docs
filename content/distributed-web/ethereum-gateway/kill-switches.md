@@ -14,7 +14,7 @@ the smart contract that can be exploited, this can lead to the theft of
 resources from the smart contract or from other individuals.
 
 This was brought into sharp focus during the [infamous DAO
-incident](https://en.wikipedia.org/wiki/The_DAO_(organization)). The DAO smart
+incident](<https://en.wikipedia.org/wiki/The_DAO_(organization)>). The DAO smart
 contract acted as a complex, decentralized venture capital fund and held Ether
 worth $250 million at its peak collected from a group of investors. Hackers
 exploited vulnerabilities in the smart contract, stealing $50 million worth of
@@ -22,7 +22,7 @@ Ether.
 
 Because there is no way to undo transactions in Ether, there was a highly
 controversial “hard fork," where the majority of the community agreed to accept
-a block that contained an *irregular state change* that essentially drained all
+a block that contained an _irregular state change_ that essentially drained all
 DAO funds into a special “WithdrawDAO” recovery contract. By convincing enough
 miners to accept this irregular block as valid, the DAO was able to return
 investors funds. However, not everyone agreed with the chain, with those who

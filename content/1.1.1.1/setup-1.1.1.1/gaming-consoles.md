@@ -20,10 +20,10 @@ Follow these steps to configure 1.1.1.1:
 1. Set **Secondary DNS** to: `1.0.0.1`.
 1. If you are able to add more DNS servers, you can add the IPv6 addresses as well:
 
-    ```txt
-    2606:4700:4700::1111
-    2606:4700:4700::1001
-    ```
+   ```txt
+   2606:4700:4700::1111
+   2606:4700:4700::1001
+   ```
 
 1. Set **MTU Settings** to **Automatic**.
 1. Set **Proxy Server** to **Do Not Use**.
@@ -38,10 +38,10 @@ Follow these steps to configure 1.1.1.1:
 1. Set **Secondary DNS** to: `1.0.0.1`.
 1. If you have the option to add more DNS servers, you can add the IPv6 addresses as well:
 
-    ```txt
-    2606:4700:4700::1111
-    2606:4700:4700::1001
-    ```
+   ```txt
+   2606:4700:4700::1111
+   2606:4700:4700::1001
+   ```
 
 1. When you are done, you will be shown a confirmation screen. Press **B** to save.
 
@@ -59,10 +59,10 @@ The following instructions work on New Nintendo 3DS, New Nintendo 3DS XL, New Ni
 1. Set **Secondary DNS** to: `1.0.0.1`.
 1. If you are able to add more DNS servers, you can add the IPv6 addresses as well:
 
-    ```txt
-    2606:4700:4700::1111
-    2606:4700:4700::1001
-    ```
+   ```txt
+   2606:4700:4700::1111
+   2606:4700:4700::1001
+   ```
 
 1. Click **Save**.
 1. Click **OK**.

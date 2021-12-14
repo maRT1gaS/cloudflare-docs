@@ -20,9 +20,9 @@ The input format for this type is address/y where address is an IPv4 or IPv6 add
 For internal reasons, Cloudflare restricts the netmask range of 8 < netmask < 32 for IPv4 and 112 < netmask < 128 for IPv6.
 
 ### Form parameters
- 	
-* **rtkn** – Railgun token
-* **ipr** – One or more Railgun IP addresses/ranges. Use JSON array format.
+
+- **rtkn** – Railgun token
+- **ipr** – One or more Railgun IP addresses/ranges. Use JSON array format.
 
 <details>
 <summary>Example request</summary>

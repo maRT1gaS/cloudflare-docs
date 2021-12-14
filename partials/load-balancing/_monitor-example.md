@@ -1,12 +1,12 @@
 <details>
-<summary>Example monitor configuration</summary>
-<div>
-    <table style='table-layout:fixed; width:70%'>
+  <summary>Example monitor configuration</summary>
+  <div>
+    <table style="table-layout:fixed; width:70%">
       <thead>
-      <tr>
-        <th>Field</th>
-        <th style='width:30%'>Value</th>
-      </tr>
+        <tr>
+          <th>Field</th>
+          <th style="width:30%">Value</th>
+        </tr>
       </thead>
       <tbody>
         <tr>
@@ -43,5 +43,5 @@
         </tr>
       </tbody>
     </table>
-</div>
+  </div>
 </details>

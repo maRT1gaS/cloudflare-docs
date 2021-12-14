@@ -7,9 +7,9 @@ pcx-content-type: concept
 
 Debugging is a critical part of developing a new application — whether running code in the initial stages of development, or trying to understand an issue occurring in production. In this article, you will learn how to effectively debug your Workers application, as well as review some code samples to help you get started:
 
-<YouTube id="8iPmy7ePYDE"/>
+<YouTube id="8iPmy7ePYDE" />
 
---------------------------------
+---
 
 ## Local testing with `wrangler dev`
 
@@ -57,7 +57,6 @@ You can customize how `wrangler dev` works to fit your needs. Refer to [the `wra
 
 <Aside type="warning">
 
-There is a bug associated with `wrangler dev` documented in the [Known issues section](/platform/known-issues#wrangler-dev). 
+There is a bug associated with `wrangler dev` documented in the [Known issues section](/platform/known-issues#wrangler-dev).
 
 </Aside>
-

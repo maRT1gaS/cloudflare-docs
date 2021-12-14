@@ -17,7 +17,7 @@ Pairing-based cryptography is based on bilinear groups `(𝔾1,𝔾2,𝔾𝑡)`,
 
 - **Non-degeneracy:** `𝑒≠1`
 - **Computability:** There exists an efficient algorithm to compute `𝑒`.
-	drand currently uses the Barreto-Naehrig curve BN256.
+  drand currently uses the Barreto-Naehrig curve BN256.
 
 ## BLS Signatures
 

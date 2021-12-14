@@ -1,7 +1,6 @@
 ---
 title: Verify IRR entries
 pcx-content-type: reference
-
 ---
 
 # Verify IRR entries
@@ -31,6 +30,7 @@ You are strongly encouraged to verify IRR entries for the exact prefixes you'll 
 To verify your prefix and ASN route, use the tools and methods outlined in this table:
 
 <TableWrap><table>
+
   <thead>
     <tr>
       <th>Data to verify</th>

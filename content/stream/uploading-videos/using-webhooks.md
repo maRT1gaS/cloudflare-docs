@@ -113,6 +113,7 @@ If the signatures match, you can trust that the webhook was sent by Cloudflare.
 ## Examples
 
 ### Golang
+
 Using [crypto/hmac](https://golang.org/pkg/crypto/hmac/#pkg-overview):
 
 ```

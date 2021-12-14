@@ -4,47 +4,47 @@ order: 1
 pcx-content-type: reference
 ---
 
-import CipherSuitesDefinition from "../_partials/_cipher-suites-definition.md"
+import CipherSuitesDefinition from '../_partials/_cipher-suites-definition.md';
 
 # Cipher suites — Edge certificates
 
-<CipherSuitesDefinition/>
+<CipherSuitesDefinition />
 
-Cloudflare publishes a [public repository of our SSL/TLS configurations](https://github.com/cloudflare/sslconfig) on GitHub. You can find changes in the commit history. 
+Cloudflare publishes a [public repository of our SSL/TLS configurations](https://github.com/cloudflare/sslconfig) on GitHub. You can find changes in the commit history.
 
 We no longer support [RC4 cipher suites](https://blog.cloudflare.com/end-of-the-road-for-rc4/) or [SSLv3](https://blog.cloudflare.com/sslv3-support-disabled-by-default-due-to-vulnerability/).
 
---------
+---
 
 ## Supported cipher suites by protocol
 
-OpenSSL Name | TLS 1.0 | TLS 1.1 | TLS 1.2 | TLS 1.3
-------|-------------|---------------|---------------|---------------
-ECDHE-ECDSA-AES128-GCM-SHA256|❌|❌|✅|❌
-ECDHE-ECDSA-CHACHA20-POLY1305|❌|❌|✅|❌
-ECDHE-RSA-AES128-GCM-SHA256|❌|❌|✅|❌
-ECDHE-RSA-CHACHA20-POLY1305|❌|❌|✅|❌
-ECDHE-ECDSA-AES128-SHA256|❌|❌|✅|❌
-ECDHE-ECDSA-AES128-SHA|✅|✅|✅|❌
-ECDHE-RSA-AES128-SHA256|❌|❌|✅|❌
-ECDHE-RSA-AES128-SHA|✅|✅|✅|❌
-AES128-GCM-SHA256|❌|❌|✅|❌
-AES128-SHA256|❌|❌|✅|❌
-AES128-SHA|✅|✅|✅|❌
-ECDHE-ECDSA-AES256-GCM-SHA384|❌|❌|✅|❌
-ECDHE-ECDSA-AES256-SHA384|❌|❌|✅|❌
-ECDHE-RSA-AES256-GCM-SHA384|❌|❌|✅|❌
-ECDHE-RSA-AES256-SHA384|❌|❌|✅|❌
-ECDHE-RSA-AES256-SHA|✅	|✅|✅|❌
-AES256-GCM-SHA384|❌|❌|✅|❌
-AES256-SHA256|❌|❌|✅|❌
-AES256-SHA|✅|✅|✅|❌
-DES-CBC3-SHA|✅|❌|❌|❌
-AEAD-AES128-GCM-SHA256 [^1]|❌|❌|❌|✅
-AEAD-AES256-GCM-SHA384 [^1]|❌|❌|❌|✅
-AEAD-CHACHA20-POLY1305-SHA256 [^1]|❌|❌|❌|✅
+| OpenSSL Name                       | TLS 1.0 | TLS 1.1 | TLS 1.2 | TLS 1.3 |
+| ---------------------------------- | ------- | ------- | ------- | ------- |
+| ECDHE-ECDSA-AES128-GCM-SHA256      | ❌      | ❌      | ✅      | ❌      |
+| ECDHE-ECDSA-CHACHA20-POLY1305      | ❌      | ❌      | ✅      | ❌      |
+| ECDHE-RSA-AES128-GCM-SHA256        | ❌      | ❌      | ✅      | ❌      |
+| ECDHE-RSA-CHACHA20-POLY1305        | ❌      | ❌      | ✅      | ❌      |
+| ECDHE-ECDSA-AES128-SHA256          | ❌      | ❌      | ✅      | ❌      |
+| ECDHE-ECDSA-AES128-SHA             | ✅      | ✅      | ✅      | ❌      |
+| ECDHE-RSA-AES128-SHA256            | ❌      | ❌      | ✅      | ❌      |
+| ECDHE-RSA-AES128-SHA               | ✅      | ✅      | ✅      | ❌      |
+| AES128-GCM-SHA256                  | ❌      | ❌      | ✅      | ❌      |
+| AES128-SHA256                      | ❌      | ❌      | ✅      | ❌      |
+| AES128-SHA                         | ✅      | ✅      | ✅      | ❌      |
+| ECDHE-ECDSA-AES256-GCM-SHA384      | ❌      | ❌      | ✅      | ❌      |
+| ECDHE-ECDSA-AES256-SHA384          | ❌      | ❌      | ✅      | ❌      |
+| ECDHE-RSA-AES256-GCM-SHA384        | ❌      | ❌      | ✅      | ❌      |
+| ECDHE-RSA-AES256-SHA384            | ❌      | ❌      | ✅      | ❌      |
+| ECDHE-RSA-AES256-SHA               | ✅      | ✅      | ✅      | ❌      |
+| AES256-GCM-SHA384                  | ❌      | ❌      | ✅      | ❌      |
+| AES256-SHA256                      | ❌      | ❌      | ✅      | ❌      |
+| AES256-SHA                         | ✅      | ✅      | ✅      | ❌      |
+| DES-CBC3-SHA                       | ✅      | ❌      | ❌      | ❌      |
+| AEAD-AES128-GCM-SHA256 [^1]        | ❌      | ❌      | ❌      | ✅      |
+| AEAD-AES256-GCM-SHA384 [^1]        | ❌      | ❌      | ❌      | ✅      |
+| AEAD-CHACHA20-POLY1305-SHA256 [^1] | ❌      | ❌      | ❌      | ✅      |
 
---------
+---
 
 ## Disable cipher suites
 
@@ -57,7 +57,7 @@ To specify certain [cipher suites](#supported-cipher-suites-by-protocol), includ
 
 To reset to the default cipher suites, send an empty array in the `value` field.
 
---------
+---
 
 ## Matching on origin (optional)
 

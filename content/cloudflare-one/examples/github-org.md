@@ -3,7 +3,7 @@ order: 3
 type: example
 summary: Allow members of a specific GitHub organization.
 tags:
-- GitHub™ Organization
+  - GitHub™ Organization
 ---
 
 # GitHub™ Organization

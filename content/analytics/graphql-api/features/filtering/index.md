@@ -51,6 +51,7 @@ You must specify an account filter when making an account-scoped query, and you 
 <Aside type="info" header="Info">
 
 Network Analytics queries require an Account ID (`accountTag`) filter.
+
 </Aside>
 
 #### Table (data set) filter
@@ -103,8 +104,11 @@ The `like` operator is available for string comparisons and supports the `%` cha
 ```graphql
 {
   viewer {
-    zones(filter: {zoneTag: $zoneTag}) {
-      httpRequestsAdaptiveGroups(filter: {datetime_gt: "2021-06-10T00:00:00Z", clientCountryName: "GB"}, limit: 1) {
+    zones(filter: { zoneTag: $zoneTag }) {
+      httpRequestsAdaptiveGroups(
+        filter: { datetime_gt: "2021-06-10T00:00:00Z", clientCountryName: "GB" }
+        limit: 1
+      ) {
         count
       }
     }

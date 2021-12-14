@@ -4,7 +4,7 @@ order: 3
 pcx-content-type: tutorial
 ---
 
-import StaticResourcesBM from "../_partials/_static-resources-bm.md"
+import StaticResourcesBM from '../_partials/_static-resources-bm.md';
 
 # Get started with Bot Management for Enterprise
 
@@ -29,7 +29,7 @@ Our Solutions Engineering team will work with you to begin setting up the produc
 
   - [Bot score](/concepts/bot-score): Learn how Cloudflare scores bot requests.
   - [Challenge Solve Rate (CSR)](/concepts/challenge-solve-rate): Learn how to evaluate the effectiveness of Firewall rules.
-  - [Bot tags](/concepts/cloudflare-bot-tags): Learn more about *why* Cloudflare classified a request a certain way.
+  - [Bot tags](/concepts/cloudflare-bot-tags): Learn more about _why_ Cloudflare classified a request a certain way.
 
 ### Step 1 — Configure Bot Management
 
@@ -42,13 +42,14 @@ To enable this feature, go to **Firewall** > **Bots**.
 Before deploying Bot Management on live traffic, use [Bot Analytics](/bot-analytics/bm-subscription) to determine your domain's sensitivity to bot traffic.
 
 Go to **Firewall** > **Bots** and examine the following traffic segments:
+
 - **Automated traffic**: Bot scores of 1
 - **Likely automated traffic**: Bots scores of 2 through 29
 - **Other traffic groups**: Any additional large spikes in bot scores
 
-For **automated** traffic, sort through the IP addresses, ASNs, and other data points at the bottom of the page. Look for any traffic that *should not* be blocked — commonly API or mobile app traffic. Do the same for **likely automated** traffic.
+For **automated** traffic, sort through the IP addresses, ASNs, and other data points at the bottom of the page. Look for any traffic that _should not_ be blocked — commonly API or mobile app traffic. Do the same for **likely automated** traffic.
 
-Use the slider tool to identify **other traffic groups**. For example, you may find that traffic from your mobile app is routinely scored at 12. 
+Use the slider tool to identify **other traffic groups**. For example, you may find that traffic from your mobile app is routinely scored at 12.
 
 ![Bot score distribution](../images/bot-score-distribution.png)
 
@@ -70,20 +71,27 @@ New customers should give Bot Analytics a few days to gather data. You should on
 Based on your analysis of **automated** traffic, create a [Firewall Rule](https://developers.cloudflare.com/firewall/cf-firewall-rules) that **challenges** scores of 1 but still allows good, automated requests. Monitor that rule for a few days to make sure you are targeting the right traffic (user agents, IP addresses, API or mobile traffic).
 
 <Example>
-<table style='table-layout:fixed; width:100%'>
-  <thead>
-  <tr>
-    <th>Expression</th>
-    <th style='width:20%'>Action</th>
-  </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>(cf.bot_management.score eq 1) and not (cf.bot_management.verified_bot)</code></td>
-      <td><em>JS Challenge</em></td>
-    </tr>
-  </tbody>
-</table>
+  <table style="table-layout:fixed; width:100%">
+    <thead>
+      <tr>
+        <th>Expression</th>
+        <th style="width:20%">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <code>
+            (cf.bot_management.score eq 1) and not
+            (cf.bot_management.verified_bot)
+          </code>
+        </td>
+        <td>
+          <em>JS Challenge</em>
+        </td>
+      </tr>
+    </tbody>
+  </table>
 </Example>
 
 ### Step 4 — Create additional Firewall Rules
@@ -108,7 +116,7 @@ You can adjust your Firewall Rules at any point. Set aside time to review [Bot A
 
 ### Static resources
 
-<StaticResourcesBM/>
+<StaticResourcesBM />
 
 For more details, see [Static resource protection](/reference/static-resources).
 
@@ -117,4 +125,5 @@ For more details, see [Static resource protection](/reference/static-resources).
 Some automated traffic is good! To allow good bots like Google or Bing, use the **Verified Bot** field in your rules. If you see a verified bot that Cloudflare is not [currently tracking](https://developers.cloudflare.com/firewall/known-issues-and-faq#bots-currently-detected), fill out an [online application](https://docs.google.com/forms/d/e/1FAIpQLSdqYNuULEypMnp4i5pROSc-uP6x65Xub9svD27mb8JChA_-XA/viewform?usp=sf_link).
 
 ### Mobile traffic
+
 To treat mobile traffic differently, use the `user agent` or `IP address` fields when creating your Firewall Rules.

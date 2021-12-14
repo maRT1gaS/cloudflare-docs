@@ -7,13 +7,13 @@ pcx-content-type: how-to
 
 ## Signed URLs / Tokens
 
-By default, videos on  Stream can be viewed by anyone with just a video id. If you want to make your video private by default and only give access to certain users, you can use the signed URL feature. When you mark a video to require signed URL, it can no longer be accessed publicly with only the video id. Instead, the user will need a signed url token to watch or download the video.
+By default, videos on Stream can be viewed by anyone with just a video id. If you want to make your video private by default and only give access to certain users, you can use the signed URL feature. When you mark a video to require signed URL, it can no longer be accessed publicly with only the video id. Instead, the user will need a signed url token to watch or download the video.
 
 Here are some common use cases for using signed URLs:
 
-* Restricting access so only logged in members can watch a particular video
-* Let users watch your video for a limited time period (ie. 24 hours)
-* Restricting access based on geolocation
+- Restricting access so only logged in members can watch a particular video
+- Let users watch your video for a limited time period (ie. 24 hours)
+- Restricting access based on geolocation
 
 ### Making a video require signed URLs
 
@@ -26,6 +26,7 @@ curl -X POST -H "Authorization: Bearer $TOKEN" "https://api.cloudflare.com/clien
 ```
 
 Response:
+
 ```json
 ---
 highlight: [5]
@@ -46,9 +47,9 @@ highlight: [5]
 
 You can program your app to generate token in two ways:
 
-* **Using the /token endpoint to generate signed tokens:** The simplest way to create a signed url token is by calling the /token endpoint. This is recommended for testing purposes or if you are generating less than 10,000 tokens per day.
+- **Using the /token endpoint to generate signed tokens:** The simplest way to create a signed url token is by calling the /token endpoint. This is recommended for testing purposes or if you are generating less than 10,000 tokens per day.
 
-* **Using an open-source library:** If you have tens of thousands of daily users and need to generate a high-volume of tokens without calling the /token endpoint *each time*, you can create tokens yourself. This way, you do not need to call a Stream endpoint each time you need to generate a token.
+- **Using an open-source library:** If you have tens of thousands of daily users and need to generate a high-volume of tokens without calling the /token endpoint _each time_, you can create tokens yourself. This way, you do not need to call a Stream endpoint each time you need to generate a token.
 
 ## Option 1: Using the /token endpoint
 
@@ -77,7 +78,14 @@ You will see a response similar to this if the request succeeds:
 To render the video, insert the `token` value in place of the `video id`:
 
 ```html
-<iframe src="https://iframe.videodelivery.net/eyJhbGciOiJSUzI1NiIsImtpZCI6ImNkYzkzNTk4MmY4MDc1ZjJlZjk2MTA2ZDg1ZmNkODM4In0.eyJraWQiOiJjZGM5MzU5ODJmODA3NWYyZWY5NjEwNmQ4NWZjZDgzOCIsImV4cCI6IjE2MjE4ODk2NTciLCJuYmYiOiIxNjIxODgyNDU3In0.iHGMvwOh2-SuqUG7kp2GeLXyKvMavP-I2rYCni9odNwms7imW429bM2tKs3G9INms8gSc7fzm8hNEYWOhGHWRBaaCs3U9H4DRWaFOvn0sJWLBitGuF_YaZM5O6fqJPTAwhgFKdikyk9zVzHrIJ0PfBL0NsTgwDxLkJjEAEULQJpiQU1DNm0w5ctasdbw77YtDwdZ01g924Dm6jIsWolW0Ic0AevCLyVdg501Ki9hSF7kYST0egcll47jmoMMni7ujQCJI1XEAOas32DdjnMvU8vXrYbaHk1m1oXlm319rDYghOHed9kr293KM7ivtZNlhYceSzOpyAmqNFS7mearyQ" style="border: none;" height="720" width="1280" allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;" allowfullscreen="true"></iframe>
+<iframe
+  src="https://iframe.videodelivery.net/eyJhbGciOiJSUzI1NiIsImtpZCI6ImNkYzkzNTk4MmY4MDc1ZjJlZjk2MTA2ZDg1ZmNkODM4In0.eyJraWQiOiJjZGM5MzU5ODJmODA3NWYyZWY5NjEwNmQ4NWZjZDgzOCIsImV4cCI6IjE2MjE4ODk2NTciLCJuYmYiOiIxNjIxODgyNDU3In0.iHGMvwOh2-SuqUG7kp2GeLXyKvMavP-I2rYCni9odNwms7imW429bM2tKs3G9INms8gSc7fzm8hNEYWOhGHWRBaaCs3U9H4DRWaFOvn0sJWLBitGuF_YaZM5O6fqJPTAwhgFKdikyk9zVzHrIJ0PfBL0NsTgwDxLkJjEAEULQJpiQU1DNm0w5ctasdbw77YtDwdZ01g924Dm6jIsWolW0Ic0AevCLyVdg501Ki9hSF7kYST0egcll47jmoMMni7ujQCJI1XEAOas32DdjnMvU8vXrYbaHk1m1oXlm319rDYghOHed9kr293KM7ivtZNlhYceSzOpyAmqNFS7mearyQ"
+  style="border: none;"
+  height="720"
+  width="1280"
+  allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
+  allowfullscreen="true"
+></iframe>
 ```
 
 If you are using your own player, replace the video id in the manifest url with the `token` value:
@@ -90,27 +98,31 @@ If you call the `/token` endpoint without any body, it will return a token that 
 
 ```js
 addEventListener('fetch', event => {
-    event.respondWith(handleRequest(event))
-})
+  event.respondWith(handleRequest(event));
+});
 
 async function handleRequest(request) {
+  var signed_url_restrictions = {
+    //limit viewing for the next 12 hours
+    exp: Math.floor(Date.now() / 1000) + 12 * 60 * 60,
+  };
 
-    var signed_url_restrictions = {
-        //limit viewing for the next 12 hours
-        exp: Math.floor(Date.now() / 1000) + (12*60*60)
-    };
-
-    const init = {
+  const init = {
     method: 'POST',
     headers: {
-              "X-Auth-Email": "{ACCOUNT_EMAIL}",
-              "X-Auth-Key": "{ACCOUNT_KEY}",
-              "content-type": "application/json;charset=UTF-8"
+      'X-Auth-Email': '{ACCOUNT_EMAIL}',
+      'X-Auth-Key': '{ACCOUNT_KEY}',
+      'content-type': 'application/json;charset=UTF-8',
     },
-    body: JSON.stringify(signed_url_restrictions)
-  }
-  const signedurl_service_response = await fetch("https://api.cloudflare.com/client/v4/accounts/{ACCOUNT_ID}/stream/{VIDEO_ID}/token", init)
-  return new Response(JSON.stringify(await signedurl_service_response.json()), {status: 200})
+    body: JSON.stringify(signed_url_restrictions),
+  };
+  const signedurl_service_response = await fetch(
+    'https://api.cloudflare.com/client/v4/accounts/{ACCOUNT_ID}/stream/{VIDEO_ID}/token',
+    init
+  );
+  return new Response(JSON.stringify(await signedurl_service_response.json()), {
+    status: 200,
+  });
 }
 ```
 
@@ -118,36 +130,42 @@ The returned token will expire after 12 hours.
 
 Let's take this a step further and add 2 additional restrictions:
 
-* Allow the signed URL token to be used for MP4 downloads (assuming the video has downloads enabled)
-* Block users from US and Mexico from viewing or downloading the video
+- Allow the signed URL token to be used for MP4 downloads (assuming the video has downloads enabled)
+- Block users from US and Mexico from viewing or downloading the video
 
 To achieve this, we can specify additional restrictions in the `signed_url_restrictions` object in our sample code:
 
 ```js
 addEventListener('fetch', event => {
-    event.respondWith(handleRequest(event))
-})
+  event.respondWith(handleRequest(event));
+});
 
 async function handleRequest(request) {
+  var signed_url_restrictions = {
+    //limit viewing for the next 2 hours
+    exp: Math.floor(Date.now() / 1000) + 12 * 60 * 60,
+    downloadable: true,
+    accessRules: [
+      { type: 'ip.geoip.country', country: ['US', 'MX'], action: 'block' },
+    ],
+  };
 
-    var signed_url_restrictions = {
-        //limit viewing for the next 2 hours
-        exp: Math.floor(Date.now() / 1000) + (12*60*60),
-        downloadable: true,
-        accessRules:[{"type":"ip.geoip.country","country":["US","MX"],"action":"block"}]
-    };
-
-    const init = {
+  const init = {
     method: 'POST',
     headers: {
-              "X-Auth-Email": "{ACCOUNT_EMAIL}",
-              "X-Auth-Key": "{ACCOUNT_KEY}",
-              "content-type": "application/json;charset=UTF-8"
+      'X-Auth-Email': '{ACCOUNT_EMAIL}',
+      'X-Auth-Key': '{ACCOUNT_KEY}',
+      'content-type': 'application/json;charset=UTF-8',
     },
-    body: JSON.stringify(signed_url_restrictions)
-  }
-  const signedurl_service_response = await fetch("https://api.cloudflare.com/client/v4/accounts/{ACCOUNT_ID}/stream/{VIDEO_ID}/token", init)
-  return new Response(JSON.stringify(await signedurl_service_response.json()), {status: 200})
+    body: JSON.stringify(signed_url_restrictions),
+  };
+  const signedurl_service_response = await fetch(
+    'https://api.cloudflare.com/client/v4/accounts/{ACCOUNT_ID}/stream/{VIDEO_ID}/token',
+    init
+  );
+  return new Response(JSON.stringify(await signedurl_service_response.json()), {
+    status: 200,
+  });
 }
 ```
 
@@ -155,7 +173,7 @@ async function handleRequest(request) {
 
 If you are generating a high-volume of tokens, it is best to generate new tokens without needing to call the Stream API each time.
 
-### Step 1: Call the `/stream/key` endpoint *once* to obtain a key
+### Step 1: Call the `/stream/key` endpoint _once_ to obtain a key
 
 ```bash
 curl -X POST -H "Authorization: Bearer $TOKEN"  "https://api.cloudflare.com/client/v4/accounts/$ACCOUNT/stream/keys"
@@ -177,9 +195,9 @@ The response will return `pem` and `jwk` values.
 }
 ```
 
- Save these values as they won't be shown again. You will use these values later to generate the tokens. The pem and jwk fields are base64-encoded, you must decode them before using them (an example of this is shown in step 2).
+Save these values as they won't be shown again. You will use these values later to generate the tokens. The pem and jwk fields are base64-encoded, you must decode them before using them (an example of this is shown in step 2).
 
- ### Step 2: Generate tokens using the key
+### Step 2: Generate tokens using the key
 
 Once you generate the key in step 1, you can use the `pem` or `jwk` values to generate self-signing URLs on your own. Using this method, you do not need to call the Stream API each time you are creating a new token.
 
@@ -187,60 +205,61 @@ Here's an example Cloudflare Worker script which generates tokens that expire in
 
 ```js
 // Global variables
-const jwkKey = '{PRIVATE-KEY-IN-JWK-FORMAT}'
-const keyID = '$KEYID'
-const videoID = '$VIDEOID'
+const jwkKey = '{PRIVATE-KEY-IN-JWK-FORMAT}';
+const keyID = '$KEYID';
+const videoID = '$VIDEOID';
 // expiresTimeInS is the expired time in second of the video
-const expiresTimeInS = 3600
+const expiresTimeInS = 3600;
 
 // Main function
-async function streamSignedUrl () {
-  const encoder = new TextEncoder()
-  const expiresIn = Math.floor(Date.now() / 1000) + expiresTimeInS
+async function streamSignedUrl() {
+  const encoder = new TextEncoder();
+  const expiresIn = Math.floor(Date.now() / 1000) + expiresTimeInS;
   const headers = {
-    "alg": "RS256",
-    "kid": keyID
-  }
+    alg: 'RS256',
+    kid: keyID,
+  };
   const data = {
-    "sub": videoID,
-    "kid": keyID,
-    "exp": expiresIn,
-    "accessRules": [
+    sub: videoID,
+    kid: keyID,
+    exp: expiresIn,
+    accessRules: [
       {
-        "type": "ip.geoip.country",
-        "action": "allow",
-        "country": [
-          "GB"
-        ]
+        type: 'ip.geoip.country',
+        action: 'allow',
+        country: ['GB'],
       },
       {
-        "type": "any",
-        "action": "block"
-      }
-    ]
-  }
+        type: 'any',
+        action: 'block',
+      },
+    ],
+  };
 
-  const token = `${objectToBase64url(headers)}.${objectToBase64url(data)}`
+  const token = `${objectToBase64url(headers)}.${objectToBase64url(data)}`;
 
-  const jwk = JSON.parse(atob(jwkKey))
+  const jwk = JSON.parse(atob(jwkKey));
 
   const key = await crypto.subtle.importKey(
-    "jwk", jwk,
+    'jwk',
+    jwk,
     {
       name: 'RSASSA-PKCS1-v1_5',
       hash: 'SHA-256',
     },
-    false, [ "sign" ]
-  )
+    false,
+    ['sign']
+  );
 
   const signature = await crypto.subtle.sign(
-    { name: 'RSASSA-PKCS1-v1_5' }, key,
+    { name: 'RSASSA-PKCS1-v1_5' },
+    key,
     encoder.encode(token)
-  )
+  );
 
-  const signedToken = `${token}.${arrayBufferToBase64Url(signature)}`
+  const signedToken = `${token}.${arrayBufferToBase64Url(signature)}`;
 
-  return signedToken
+  return signedToken;
 }
 
 // Utilities functions
@@ -248,13 +267,13 @@ function arrayBufferToBase64Url(buffer) {
   return btoa(String.fromCharCode(...new Uint8Array(buffer)))
     .replace(/=/g, '')
     .replace(/\+/g, '-')
-    .replace(/\//g, '_')
+    .replace(/\//g, '_');
 }
 
 function objectToBase64url(payload) {
   return arrayBufferToBase64Url(
-    new TextEncoder().encode(JSON.stringify(payload)),
-  )
+    new TextEncoder().encode(JSON.stringify(payload))
+  );
 }
 ```
 
@@ -263,7 +282,14 @@ function objectToBase64url(payload) {
 If you are using the Stream Player, insert the token returned by the Worker in Step 2 in place of the video id:
 
 ```html
-<iframe src="https://iframe.videodelivery.net/eyJhbGciOiJSUzI1NiIsImtpZCI6ImNkYzkzNTk4MmY4MDc1ZjJlZjk2MTA2ZDg1ZmNkODM4In0.eyJraWQiOiJjZGM5MzU5ODJmODA3NWYyZWY5NjEwNmQ4NWZjZDgzOCIsImV4cCI6IjE2MjE4ODk2NTciLCJuYmYiOiIxNjIxODgyNDU3In0.iHGMvwOh2-SuqUG7kp2GeLXyKvMavP-I2rYCni9odNwms7imW429bM2tKs3G9INms8gSc7fzm8hNEYWOhGHWRBaaCs3U9H4DRWaFOvn0sJWLBitGuF_YaZM5O6fqJPTAwhgFKdikyk9zVzHrIJ0PfBL0NsTgwDxLkJjEAEULQJpiQU1DNm0w5ctasdbw77YtDwdZ01g924Dm6jIsWolW0Ic0AevCLyVdg501Ki9hSF7kYST0egcll47jmoMMni7ujQCJI1XEAOas32DdjnMvU8vXrYbaHk1m1oXlm319rDYghOHed9kr293KM7ivtZNlhYceSzOpyAmqNFS7mearyQ" style="border: none;" height="720" width="1280" allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;" allowfullscreen="true"></iframe>
+<iframe
+  src="https://iframe.videodelivery.net/eyJhbGciOiJSUzI1NiIsImtpZCI6ImNkYzkzNTk4MmY4MDc1ZjJlZjk2MTA2ZDg1ZmNkODM4In0.eyJraWQiOiJjZGM5MzU5ODJmODA3NWYyZWY5NjEwNmQ4NWZjZDgzOCIsImV4cCI6IjE2MjE4ODk2NTciLCJuYmYiOiIxNjIxODgyNDU3In0.iHGMvwOh2-SuqUG7kp2GeLXyKvMavP-I2rYCni9odNwms7imW429bM2tKs3G9INms8gSc7fzm8hNEYWOhGHWRBaaCs3U9H4DRWaFOvn0sJWLBitGuF_YaZM5O6fqJPTAwhgFKdikyk9zVzHrIJ0PfBL0NsTgwDxLkJjEAEULQJpiQU1DNm0w5ctasdbw77YtDwdZ01g924Dm6jIsWolW0Ic0AevCLyVdg501Ki9hSF7kYST0egcll47jmoMMni7ujQCJI1XEAOas32DdjnMvU8vXrYbaHk1m1oXlm319rDYghOHed9kr293KM7ivtZNlhYceSzOpyAmqNFS7mearyQ"
+  style="border: none;"
+  height="720"
+  width="1280"
+  allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
+  allowfullscreen="true"
+></iframe>
 ```
 
 If you are using your own player, replace the video id in the manifest url with the `token` value:
@@ -284,32 +310,33 @@ Once revoked all tokens created with that key will be invalidated.
   "messages": []
 }
 ```
+
 ## Supported Restrictions
 
 <TableWrap>
 
-| Property Name | Description |
-|------------------|-------------|
-| exp | Expiration. A unix epoch timestamp after which the token will stop working. Cannot be greater than 24 hours in the future from when the token is signed|
-| nbf | *Not Before* value. A unix epoch timestamp before which the token will not work |
-| downloadable | if true, the token can be used to download the mp4 (assuming the video has downloads enabled) |
-| accessRules | An array that specifies one or more ip and geo restrictions. accessRules are evaluated first-to-last. If a Rule matches, the associated action is applied and no further rules are evaluated. A token may have at most 5 members in the accessRules array. |
+| Property Name | Description                                                                                                                                                                                                                                                |
+| ------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| exp           | Expiration. A unix epoch timestamp after which the token will stop working. Cannot be greater than 24 hours in the future from when the token is signed                                                                                                    |
+| nbf           | _Not Before_ value. A unix epoch timestamp before which the token will not work                                                                                                                                                                            |
+| downloadable  | if true, the token can be used to download the mp4 (assuming the video has downloads enabled)                                                                                                                                                              |
+| accessRules   | An array that specifies one or more ip and geo restrictions. accessRules are evaluated first-to-last. If a Rule matches, the associated action is applied and no further rules are evaluated. A token may have at most 5 members in the accessRules array. |
+
 </TableWrap>
 
 ### accessRules Schema
 
 Each accessRule must include 2 required properties:
 
-* `type`: supported values are `any`, `ip.src` and `ip.geoip.country`
-* `action`: support values are `allow` and `block`
+- `type`: supported values are `any`, `ip.src` and `ip.geoip.country`
+- `action`: support values are `allow` and `block`
 
 Depending on the rule type, accessRules support 2 additional properties:
 
-* `country`: an array of 2-letter country codes in [ISO 3166-1 Alpha 2](https://www.iso.org/obp/ui/#search) format.
-* `ip`: an array of ip ranges. It is recommended to include both IPv4 and IPv6 variants in a rule if possible. Having only a single variant in a rule means that rule will ignore the other variant. For example, an IPv4-based rule will never be applicable to a viewer connecting from an IPv6 address. CIDRs should be preferred over specific IP addresses. Some devices, such as mobile, may change their IP over the course of a view. Video Access Control are evaluated continuously while a video is being viewed. As a result, overly strict IP rules may disrupt playback.
+- `country`: an array of 2-letter country codes in [ISO 3166-1 Alpha 2](https://www.iso.org/obp/ui/#search) format.
+- `ip`: an array of ip ranges. It is recommended to include both IPv4 and IPv6 variants in a rule if possible. Having only a single variant in a rule means that rule will ignore the other variant. For example, an IPv4-based rule will never be applicable to a viewer connecting from an IPv6 address. CIDRs should be preferred over specific IP addresses. Some devices, such as mobile, may change their IP over the course of a view. Video Access Control are evaluated continuously while a video is being viewed. As a result, overly strict IP rules may disrupt playback.
 
-
-***Example 1: Block views from a specific country***
+**_Example 1: Block views from a specific country_**
 
 ```json
 "accessRules": [
@@ -323,7 +350,7 @@ Depending on the rule type, accessRules support 2 additional properties:
 
 The first rule matches on country, US, DE, and MX here. When that rule matches, the block action will have the token considered invalid. If the first rule doesn't match, there are no further rules to evaluate. The behavior in this situation is to consider the token valid.
 
-***Example 2: Allow only views from specific country or IPs***
+**_Example 2: Allow only views from specific country or IPs_**
 
 ```json
 "accessRules": [
@@ -342,7 +369,7 @@ The first rule matches on country, US, DE, and MX here. When that rule matches, 
 		"action": "block",
 	},
 ]
-````
+```
 
 The first rule matches on country, US and MX here. When that rule matches, the allow action will have the token considered valid. If it doesn't match we continue evaluating rules
 
@@ -358,10 +385,10 @@ By default, Stream embed codes can be used on any domain. If needed, you can lim
 
 In the dashboard, you will see a text box by each video labeled `Enter allowed origin domains separated by commas`. If you click on it, you can list the domains that the Stream embed code should be able to be used on.
 
-  * `*.badtortilla.com` covers a.badtortilla.com, a.b.badtortilla.com and badtortilla.com
-  * `example.com` does not cover www.example.com or any subdomain of example.com
-  * `localhost` requires a port if it is not being served over https on port 80 or over https on port 443
-  * There's no path support - `example.com` covers example.com/*
+- `*.badtortilla.com` covers a.badtortilla.com, a.b.badtortilla.com and badtortilla.com
+- `example.com` does not cover www.example.com or any subdomain of example.com
+- `localhost` requires a port if it is not being served over https on port 80 or over https on port 443
+- There's no path support - `example.com` covers example.com/\*
 
 You can also control embed limitation programmatically using the Stream API. `uid` in the example below refers to the video id.
 

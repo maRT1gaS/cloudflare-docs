@@ -5,9 +5,9 @@ pcx-content-type: how-to
 
 # DNS record
 
-| Before you start |
-|---|
-| 1. [Create a Tunnel](/connections/connect-apps/create-tunnel) |
+| Before you start                                                   |
+| ------------------------------------------------------------------ |
+| 1. [Create a Tunnel](/connections/connect-apps/create-tunnel)      |
 | 2. [Configure the Tunnel](/connections/connect-apps/configuration) |
 
 ## Route traffic from the Cloudflare dashboard

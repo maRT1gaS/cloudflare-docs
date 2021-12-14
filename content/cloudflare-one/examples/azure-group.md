@@ -3,7 +3,7 @@ order: 3
 type: example
 summary: Allow members of an Azure Group. The ID is the group UUID (`id`) in Azure.
 tags:
-- Azure® Group
+  - Azure® Group
 ---
 
 # Azure® Group

@@ -3,13 +3,13 @@ order: 1
 pcx-content-type: concept
 ---
 
-import ACMDefinition from "../../_partials/_acm-definition.md"
+import ACMDefinition from '../../_partials/_acm-definition.md';
 
 # Advanced Certificate Manager
 
 Advanced Certificate Manager offers a flexible and customizable way to issue and manage certificates.
 
-<ACMDefinition/>
+<ACMDefinition />
 
 <Aside type="note" header="Note">
 

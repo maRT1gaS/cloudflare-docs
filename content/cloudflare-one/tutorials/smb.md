@@ -11,10 +11,12 @@ The Server Message Block (SMB) protocol allows users to access, read, and write 
 You can set up this connection by downloading and installing the Cloudflare daemon, `cloudflared`, on the machine hosting the file share and on the client machine. `cloudflared` will maintain a secure, persistent, outbound-only connection from the machine to Cloudflare. SMB traffic will then be proxied over this connection using [Cloudflare Tunnel](https://www.cloudflare.com/products/tunnel/).
 
 🗺️ This walkthrough covers how to:
+
 1. [How to connect the machine hosting the file share to Cloudflare](#host-machine)
 2. [How to connect from a client machine](#client-machine)
 
 ## Before you start
+
 1. Create a Cloudflare account
 1. [Add an active zone to Cloudflare](https://support.cloudflare.com/hc/articles/201720164-Creating-a-Cloudflare-account-and-adding-a-website)
 1. [Install the `cloudflared` daemon](/connections/connect-apps/install-and-setup/installation) on the host and client machines
@@ -69,6 +71,7 @@ Run the following command to connect the drive to Cloudflare, replacing the `smb
 ```bash
 \cloudflared.exe access tcp --hostname smb.site.com --url localhost:8445
 ```
+
 This command can be wrapped as a desktop shortcut so that end users do not need to use the command line.
 
 1. Open your SMB client and configure the client to point to `tcp:localhost:8445`. Do not input the hostname.
@@ -88,5 +91,3 @@ On the Windows machine, locate the Server process, likely called `Server` and ru
 Ensure that the machine's firewall permits egress on ports `80`, `443`, and `2244`, otherwise cloudflared will return an error.
 
 </Aside>
-
-

@@ -6,4 +6,4 @@ pcx-content-type: navigation
 
 # Command-line (Wrangler)
 
-<DirectoryListing path="/cli-wrangler"/>
+<DirectoryListing path="/cli-wrangler" />

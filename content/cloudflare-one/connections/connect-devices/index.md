@@ -7,4 +7,4 @@ pcx-content-type: navigation
 
 Configure devices to send DNS queries to Cloudflare, or proxy all traffic leaving the device through Cloudflare's network.
 
-<DirectoryListing path="/connections/connect-devices"/>
+<DirectoryListing path="/connections/connect-devices" />

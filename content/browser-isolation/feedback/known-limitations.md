@@ -6,6 +6,7 @@ order: 3
 # Known limitations
 
 ## Webpage compatibility
+
 Our Network Vector Rendering (NVR) technology allows us to deliver a secure remote computing experience without the bandwidth limitations of video streams. While we expect most websites to work perfectly, some browser features and web technologies are unsupported and will be implemented in future:
 
 - Webcam / Microphone support is unavailable.

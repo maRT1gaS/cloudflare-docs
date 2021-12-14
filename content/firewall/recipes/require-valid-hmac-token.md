@@ -38,15 +38,23 @@ The rule supplies the value of the secret key shared between the website and Clo
 
 <table>
   <thead>
-  <tr>
-    <th>Expression</th>
-    <th>Action</th>
-  </tr>
+    <tr>
+      <th>Expression</th>
+      <th>Action</th>
+    </tr>
   </thead>
   <tbody>
     <tr>
-      <td><code>http.host eq "downloads.example.com" and not is_timed_hmac_valid_v0("secretKey", http.request.uri, 10800, http.request.timestamp.sec,8)</code></td>
-      <td><em>Block</em></td>
+      <td>
+        <code>
+          http.host eq "downloads.example.com" and not
+          is_timed_hmac_valid_v0("secretKey", http.request.uri, 10800,
+          http.request.timestamp.sec,8)
+        </code>
+      </td>
+      <td>
+        <em>Block</em>
+      </td>
     </tr>
   </tbody>
 </table>

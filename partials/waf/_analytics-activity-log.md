@@ -2,7 +2,7 @@ The **Activity log** summarizes Firewall events by date to show the action taken
 
 ![Example of Activity log events](../images/analytics-activity-log.png)
 
-Firewall Events are shown by individual event rather than by request.  For example, if a single request triggers three different Firewall features, the Firewall Events will show three individual events in the **Activity log**.
+Firewall Events are shown by individual event rather than by request. For example, if a single request triggers three different Firewall features, the Firewall Events will show three individual events in the **Activity log**.
 
 Expand each event to see its details, and define filters and exclusions based on the event's field values. Click the **Filter** or **Exclude** button when hovering a field to add the field value to the filters or exclusions list of the displayed analytics. To download the event data in JSON format, click **Export event JSON**.
 

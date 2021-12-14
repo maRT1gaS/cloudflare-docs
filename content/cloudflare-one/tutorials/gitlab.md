@@ -4,16 +4,17 @@ category: 🔐 Zero Trust
 difficulty: Advanced
 pcx-content-type: tutorial
 ---
+
 # Zero Trust GitLab SSH & HTTP
 
 You can use Cloudflare Access to add Zero Trust rules to a self-hosted instance of GitLab. Combined with Cloudflare Tunnel, users can connect through HTTP and SSH and authenticate with your team's identity provider.
 
 **🗺️ This walkthrough covers how to:**
 
-* Deploy an instance of GitLab
-* Lock down all inbound connections to that instance and use Cloudflare Tunnel to set outbound connections to Cloudflare
-* Build policies with Cloudflare Access to control who can reach GitLab
-* Connect over HTTP and SSH through Cloudflare
+- Deploy an instance of GitLab
+- Lock down all inbound connections to that instance and use Cloudflare Tunnel to set outbound connections to Cloudflare
+- Build policies with Cloudflare Access to control who can reach GitLab
+- Connect over HTTP and SSH through Cloudflare
 
 **⏲️ Time to complete:**
 
@@ -125,7 +126,7 @@ Click `Next` and `Next` again on the `Setup` page - this example does not requir
 
 ## Cloudflare Tunnel
 
-Cloudflare Tunnel creates a secure, outbound-only, connection between this machine and Cloudflare's network. With an outbound-only model, you can  prevent any direct access to this machine and lock down any externally exposed points of ingress. And with that, no open firewall ports.
+Cloudflare Tunnel creates a secure, outbound-only, connection between this machine and Cloudflare's network. With an outbound-only model, you can prevent any direct access to this machine and lock down any externally exposed points of ingress. And with that, no open firewall ports.
 
 Cloudflare Tunnel is made possible through a lightweight daemon from Cloudflare called `cloudflared`. Download and then install that on the Digital Ocean machine with the two commands below.
 
@@ -270,6 +271,7 @@ Input the following values; replacing `gitlab-ssh.widgetcorp.tech` with the host
 Host gitlab-ssh.widgetcorp.tech
   ProxyCommand /usr/local/bin/cloudflared access ssh --hostname %h
 ```
+
 You can now test the SSH flow by attempting to clone the project created earlier.
 
 ```bash

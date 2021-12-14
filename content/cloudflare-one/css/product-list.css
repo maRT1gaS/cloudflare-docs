@@ -21,26 +21,26 @@
 .ProductList--link span {
   white-space: nowrap;
   font-weight: 600;
-  letter-spacing: -.03em;
+  letter-spacing: -0.03em;
   line-height: 1;
 }
 
-.ProductList--link[data-wrap-title="true"] span {
-  font-size: .9em;
+.ProductList--link[data-wrap-title='true'] span {
+  font-size: 0.9em;
   width: 9em;
   white-space: normal;
 }
 
 @media (hover: hover) {
   .ProductList--link:hover {
-    background: rgba(var(--color-rgb), .05);
+    background: rgba(var(--color-rgb), 0.05);
     color: inherit;
   }
 }
 
 .ProductList--link:active {
-  box-shadow: inset 0 .125em .125em rgba(0, 0, 0, .1);
-  background: rgba(var(--color-rgb), .05);
+  box-shadow: inset 0 0.125em 0.125em rgba(0, 0, 0, 0.1);
+  background: rgba(var(--color-rgb), 0.05);
 }
 
 .ProductList--link svg {
@@ -53,11 +53,11 @@
   vertical-align: middle;
 }
 
-[theme="dark"] .ProductList--link span {
+[theme='dark'] .ProductList--link span {
   font-weight: 500;
 }
 
-[theme="dark"] .ProductList--link svg {
+[theme='dark'] .ProductList--link svg {
   fill: #888f96;
 }
 

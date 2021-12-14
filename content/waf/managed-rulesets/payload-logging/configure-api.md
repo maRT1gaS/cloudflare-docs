@@ -16,21 +16,21 @@ To configure:
 
 1. In the configuration of the rule that executes the Managed Ruleset, include a `matched_data` object in `action_parameters` to configure payload logging.
 
-    The `matched_data` object has the following structure:
+   The `matched_data` object has the following structure:
 
-    ```json
-    ---
-    highlight: [3,4,5]
-    ---
-    "action_parameters": {
-      // ...
-      "matched_data": {
-        "public_key": "<PUBLIC_KEY_VALUE>"
-      }
-    }
-    ```
+   ```json
+   ---
+   highlight: [3,4,5]
+   ---
+   "action_parameters": {
+     // ...
+     "matched_data": {
+       "public_key": "<PUBLIC_KEY_VALUE>"
+     }
+   }
+   ```
 
-    Replace `<PUBLIC_KEY_VALUE>` with the public key you want to use for payload logging.
+   Replace `<PUBLIC_KEY_VALUE>` with the public key you want to use for payload logging.
 
 You can generate a public key [in the command line](/managed-rulesets/payload-logging/command-line/generate-key-pair) or [in the Cloudflare dashboard](/managed-rulesets/payload-logging/configure).
 

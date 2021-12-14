@@ -12,7 +12,7 @@ To use Image Resizing you first need to enable it via the Speed app on your Clou
 
   <div class="full-img">
 
-  ![Image Resizing options in Cloudflare's dashboard](../static/image-resizing.png)
+![Image Resizing options in Cloudflare's dashboard](../static/image-resizing.png)
 
   </div>
 
@@ -22,7 +22,7 @@ To use Image Resizing you first need to enable it via the Speed app on your Clou
 
 <Aside type="note" header="Note">
 
-Image Resizing defaults to resizing images from **any domain**. To prevent third parties from resizing any image at any origin, uncheck **Resize images from any origin**. When unchecked, Image Resizing will only resize images that are in the enabled zone. 
+Image Resizing defaults to resizing images from **any domain**. To prevent third parties from resizing any image at any origin, uncheck **Resize images from any origin**. When unchecked, Image Resizing will only resize images that are in the enabled zone.
 
 This restriction does not apply to image resizing requests coming from Cloudflare Workers. If you are using Image Resizing in a Worker, you need to include the appropriate logic in your Worker code.
 

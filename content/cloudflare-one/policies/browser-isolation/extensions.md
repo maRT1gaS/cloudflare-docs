@@ -18,7 +18,7 @@ Installing extensions requires that the Chrome Web Store is isolated, first crea
 ### Install an extension
 
 - Navigate to https://chrome.google.com/webstore while isolated.
-- Find and select your desired extension. 
+- Find and select your desired extension.
 - Select "Add to Chrome".
 - Approve the extension installation by selecting "Add extension".
 
@@ -32,5 +32,5 @@ Extensions may be uninstalled within the remote browser from any isolated page.
 - Right click to open the context menu and select "Show isolation toolbar"
 - Within the isolation toolbar on the bottom of the page, select the Jigsaw icon to open the extension manager.
 - Select the hamburger icon for the desired extension to open the extension controls.
-- Choose "Remove from Chromium..." 
+- Choose "Remove from Chromium..."
 - Select "Remove" to confirm extension uninstallation.

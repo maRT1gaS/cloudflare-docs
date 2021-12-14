@@ -5,9 +5,9 @@ pcx-content-type: tutorial
 
 # Connect to Secure Web Gateway with Magic WAN
 
-You can route traffic through Magic WAN and Secure Web Gateway to secure Internet browsing and SaaS application access from internal users and devices. 
+You can route traffic through Magic WAN and Secure Web Gateway to secure Internet browsing and SaaS application access from internal users and devices.
 
-In this tutorial, you will learn how to configure the GRE tunnel on-ramp to Magic WAN, which connects to Secure Web Gateway (SWG), from enterprise site routers. 
+In this tutorial, you will learn how to configure the GRE tunnel on-ramp to Magic WAN, which connects to Secure Web Gateway (SWG), from enterprise site routers.
 
 ## Prerequisites
 
@@ -36,7 +36,7 @@ Each site's private network has an on-ramp to Cloudflare's Anycast network using
 1. Log in to your [Cloudflare dashboard](https://dash.cloudflare.com) and select **Magic Transit**.
 1. Next to **GRE tunnels and static routes configuration**, click **Configure**.
 1. From **GRE tunnels**, click **Create**.
-1. On the **Add GRE tunnels** page, fill out the information for the GRE tunnels. 
+1. On the **Add GRE tunnels** page, fill out the information for the GRE tunnels.
 1. (Optional) We recommend you test your tunnel before officially adding it. To test the tunnel, click **Test tunnels**.
 1. To add multiple tunnels, click **Add GRE tunnel** for each new tunnel.
 1. When you are done, click **Add tunnels**.

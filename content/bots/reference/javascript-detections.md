@@ -1,8 +1,9 @@
 ---
-order: 
+order:
 type: overview
 pcx-content-type: reference
 ---
+
 # JavaScript detections
 
 Cloudflare's bot products include JavaScript detections via a lightweight, invisible code injection that honors Cloudflare’s [strict privacy standards](https://www.cloudflare.com/privacypolicy/). A small amount of JavaScript is injected into client devices using [Google’s Picasso fingerprinting technique](https://research.google/pubs/pub45581/). Picasso results are factored into bot scores and help Cloudflare classify traffic as automated or human.
@@ -28,5 +29,6 @@ Customers who enabled Enterprise Bot Management before June 2020 do not have Jav
 ### If you have a Content Security Policy (CSP)
 
 If you have a Content Security Policy (CSP):
+
 - Ensure that it does not block scripts served from `/cdn-cgi/bm/` or requests made to `/cdn-cgi/bm/results`. Your CSP should allow scripts served from your origin domain (`script-src self`).
 - If your CSP uses a `nonce` for script tags, Cloudflare will add these nonces to the scripts it injects by parsing your CSP response header.

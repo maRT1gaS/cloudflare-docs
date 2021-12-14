@@ -1,35 +1,35 @@
 ---
 pcx-content-type: reference
 ---
- 
+
 # Fetching bulk analytics
 
  <Aside type='note'>
 
 Currently, Stream Analytics are only available for video plays that use the Stream Player. If you are using a third-party player, you will not see analytics for video plays from third-party players.
-  
+
  </Aside>
 
 Stream has a GraphQL analytics API that can be used to get bulk analytics for all videos in your account with one HTTP request.
 
 ## Metrics available
 
-  - Number of views (number of times the video playback has been started)
-  - Time viewed in seconds
-  - Number of video buffering events
-  - Number of times quality level has changed
+- Number of views (number of times the video playback has been started)
+- Time viewed in seconds
+- Number of video buffering events
+- Number of times quality level has changed
 
 ## Filters available
 
 There is no limit on number of filters per query.
 
-  - Video UID
-  - Date/time
-  - Country
-  - Device type
-  - Device operating system
-  - Device browser
-  - Quality level (only for quality level metric)
+- Video UID
+- Date/time
+- Country
+- Device type
+- Device operating system
+- Device browser
+- Quality level (only for quality level metric)
 
 <Aside>
 
@@ -96,11 +96,11 @@ curl --request POST \
 
 The response will look something like below. Things to remember:
 
- - Each object inside videoPlaybackEventsAdaptiveGroups represents one video
- - uid property represents the video uid
- - count property shows the view count for one video during the specified date range
- - timeViewedMinutes property shows the minutes viewed per video during the specified date range
- - If a video did not have views in the date range specified, it will NOT be included in the response
+- Each object inside videoPlaybackEventsAdaptiveGroups represents one video
+- uid property represents the video uid
+- count property shows the view count for one video during the specified date range
+- timeViewedMinutes property shows the minutes viewed per video during the specified date range
+- If a video did not have views in the date range specified, it will NOT be included in the response
 
 ```javascript
 {
@@ -237,11 +237,12 @@ query {
 
 Here are the steps to implementing pagination:
 
-  1. Call the first query without uid_gt filter to get the first set of videos
-  1. Grab the last video ID from the response from the first query
-  1. Call next query by specifying uid_gt property and set it to the last video ID. This will return the next set of videos
+1. Call the first query without uid_gt filter to get the first set of videos
+1. Grab the last video ID from the response from the first query
+1. Call next query by specifying uid_gt property and set it to the last video ID. This will return the next set of videos
 
 ## Limitations
- - Only Cloudflare API keys, not API tokens can be used with the Stream GraphQL API for now
- - Maximum query interval in a single query is 31 days
- - Maximum data retention period is 90 days
+
+- Only Cloudflare API keys, not API tokens can be used with the Stream GraphQL API for now
+- Maximum query interval in a single query is 31 days
+- Maximum data retention period is 90 days

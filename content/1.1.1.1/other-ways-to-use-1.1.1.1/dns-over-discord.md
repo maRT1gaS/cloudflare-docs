@@ -25,36 +25,35 @@ If only a domain is given for the command, the bot will default to looking for '
 
 _`/dig domain: cloudflare.com`_
 
-
 ### Supported record types
 
 Discord has a limit of 25 options in slash commands, so DNS over Discord offers the 25 most common DNS record types to choose from:
 
-* A
-* AAAA
-* CAA
-* CDNSKEY
-* CDS
-* CERT
-* CNAME
-* DNSKEY
-* DS
-* HINFO
-* HTTPS
-* LOC
-* MX
-* NAPTR
-* NS
-* PTR
-* SMIMEA
-* SOA
-* SPF
-* SRV
-* SSHFP
-* SVCB
-* TLSA
-* TXT
-* URI
+- A
+- AAAA
+- CAA
+- CDNSKEY
+- CDS
+- CERT
+- CNAME
+- DNSKEY
+- DS
+- HINFO
+- HTTPS
+- LOC
+- MX
+- NAPTR
+- NS
+- PTR
+- SMIMEA
+- SOA
+- SPF
+- SRV
+- SSHFP
+- SVCB
+- TLSA
+- TXT
+- URI
 
 To query other DNS record types, or multiple record types at once, use the `/multi-dig` command.
 
@@ -78,7 +77,6 @@ When this is requested, the name and TTL columns will be excluded, with just the
 
 _`/dig domain: cloudflare.com type: AAAA short: true`_
 
-
 ### Refreshing existing results
 
 As part of the response that the DNS over Discord bot returns for dig commands, there is a button to refresh the results.
@@ -95,7 +93,6 @@ The refresh button is available on all responses to the dig command, including t
 
 _`/dig domain: cloudflare.com`_
 
-
 ## multi-dig command
 
 If you want to look up multiple DNS record types at once, use the `/multi-dig` command. This allows you to specify any supported DNS record type, and multiple types separated by a space.
@@ -110,60 +107,59 @@ If you want to look up multiple DNS record types at once, use the `/multi-dig` c
 
 _`/multi-dig domain: cloudflare.com types: A AAAA`_
 
-
 ### Supported record types
 
 When providing DNS record types for the `/multi-dig` command, Discord will not prompt you with options. Please provide a space-separated list of valid DNS record types to lookup, as any invalid options will be silently dropped. 'A' records will be used as the default if no valid types are given.
 
 The following DNS record types are supported and considered valid by the bot:
 
-* A
-* AAAA
-* AFSDB
-* APL
-* CAA
-* CDNSKEY
-* CDS
-* CERT
-* CNAME
-* CSYNC
-* DHCID
-* DLV
-* DNAME
-* DNSKEY
-* DS
-* EUI48
-* EUI64
-* HINFO
-* HIP
-* HTTPS
-* IPSECKEY
-* KEY
-* KX
-* LOC
-* MX
-* NAPTR
-* NS
-* NSEC
-* NSEC3
-* NSEC3PARAM
-* OPENPGPKEY
-* PTR
-* RP
-* SMIMEA
-* SOA
-* SPF
-* SRV
-* SSHFP
-* SVCB
-* TA
-* TKEY
-* TLSA
-* TXT
-* URI
-* ZONEMD
+- A
+- AAAA
+- AFSDB
+- APL
+- CAA
+- CDNSKEY
+- CDS
+- CERT
+- CNAME
+- CSYNC
+- DHCID
+- DLV
+- DNAME
+- DNSKEY
+- DS
+- EUI48
+- EUI64
+- HINFO
+- HIP
+- HTTPS
+- IPSECKEY
+- KEY
+- KX
+- LOC
+- MX
+- NAPTR
+- NS
+- NSEC
+- NSEC3
+- NSEC3PARAM
+- OPENPGPKEY
+- PTR
+- RP
+- SMIMEA
+- SOA
+- SPF
+- SRV
+- SSHFP
+- SVCB
+- TA
+- TKEY
+- TLSA
+- TXT
+- URI
+- ZONEMD
 
-*Use '\*' (asterisk) in place of a record type to get DNS results for all supported types.*
+_Use '\*' (asterisk) in place of a record type to get DNS results for all supported types._
 
 <div class="medium-img">
 
@@ -196,7 +192,6 @@ As with the dig command, any user can press the refresh button to refresh the di
 </div>
 
 _`/multi-dig domain: cloudflare.com types: A AAAA`_
-
 
 ## whois command
 

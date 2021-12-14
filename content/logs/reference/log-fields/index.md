@@ -15,10 +15,10 @@ Unless otherwise noted, fields are available in both Logpush v1 (Logpush prior t
 
 ## Zone-scoped data sets
 
-<DirectoryListing path="/reference/log-fields/zone"/>
+<DirectoryListing path="/reference/log-fields/zone" />
 
 ## Account-scoped data sets
 
-<DirectoryListing path="/reference/log-fields/account"/>
+<DirectoryListing path="/reference/log-fields/account" />
 
 For more information on logs available in Cloudflare for Teams, refer to [Teams logs](https://developers.cloudflare.com/cloudflare-one/analytics/logs).

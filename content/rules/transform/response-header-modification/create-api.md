@@ -11,9 +11,9 @@ Use the [Rulesets API](https://developers.cloudflare.com/ruleset-engine/rulesets
 
 When creating an HTTP Response Header Modification Rule via API, make sure you:
 
-* Set the rule action to `rewrite`.
-* Define the [header modification parameters](/transform/request-header-modification/reference/parameters) in the `action_parameters` field according to the operation to perform (set or remove header).
-* Deploy the rule to the `http_response_headers_transform` phase at the zone level.
+- Set the rule action to `rewrite`.
+- Define the [header modification parameters](/transform/request-header-modification/reference/parameters) in the `action_parameters` field according to the operation to perform (set or remove header).
+- Deploy the rule to the `http_response_headers_transform` phase at the zone level.
 
 ---
 
@@ -23,8 +23,8 @@ Follow this workflow to create an HTTP Response Header Modification Rule for a g
 
 1. If the phase ruleset does not exist, create it using the [Create ruleset](https://developers.cloudflare.com/ruleset-engine/rulesets-api/create) method with the zone-level endpoint. In the new ruleset properties, set the following values:
 
-    * **kind**: `zone`
-    * **phase**: `http_response_headers_transform`
+   - **kind**: `zone`
+   - **phase**: `http_response_headers_transform`
 
 1. Use the [Update ruleset](https://developers.cloudflare.com/ruleset-engine/rulesets-api/update) method to add an HTTP Response Header Modification Rule to the list of ruleset rules (check the examples below). Alternatively, include the rule in the [Create ruleset](https://developers.cloudflare.com/ruleset-engine/rulesets-api/create) request mentioned in the previous step.
 

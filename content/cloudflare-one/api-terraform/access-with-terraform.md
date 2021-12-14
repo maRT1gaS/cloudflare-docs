@@ -5,9 +5,9 @@ pcx-content-type: how-to
 
 # Terraform
 
-| Requirements |
-| ------------ |
-| [Terraform](https://learn.hashicorp.com/terraform/getting-started/install.html) installed on your machine |
+| Requirements                                                                                                             |
+| ------------------------------------------------------------------------------------------------------------------------ |
+| [Terraform](https://learn.hashicorp.com/terraform/getting-started/install.html) installed on your machine                |
 | The [Cloudflare provider](https://registry.terraform.io/providers/cloudflare/cloudflare/latest/docs) properly configured |
 
 [Terraform](https://learn.hashicorp.com/terraform/getting-started/install.html) is a tool for building, changing, and versioning infrastructure, and provides components and documentation for building [Cloudflare resources](https://www.terraform.io/docs/providers/cloudflare/). Listed below are examples to help you get started with building Access with Terraform. For a more generalized guide on configuring Cloudflare and Terraform, visit our [Getting Started with Terraform and Cloudflare](https://blog.cloudflare.com/getting-started-with-terraform-and-cloudflare-part-1/) blog post.
@@ -16,7 +16,7 @@ pcx-content-type: how-to
 
 1. Create an application.
 
- Here is an example configuration:
+Here is an example configuration:
 
 ```
 variable "domain" {
@@ -36,12 +36,14 @@ resource "cloudflare_access_application" "cf_app" {
 ```
 
 2. Next, we need to export our environment variables and secrets:
+
 ```
 $ export CLOUDFLARE_EMAIL=<CLOUDFLARE_EMAIL>
 $ export CLOUDFLARE_API_KEY=<CLOUDFLARE_API_KEY>
 ```
 
 3. Now we can run a `terraform plan` which will output any proposed changes. Make sure to review the plan carefully:
+
 ```
 $ terraform plan
 
@@ -78,6 +80,7 @@ can't guarantee that exactly these actions will be performed if
 ```
 
 4. Apply these changes using the `apply` command, once they look accurate and you're comfortable moving forward:
+
 ```
 $ terraform apply --auto-approve
 
@@ -90,6 +93,7 @@ Apply complete! Resources: 1 added, 0 changed, 0 destroyed.
 ## Create a policy
 
 After you've created an application, you can start creating policies and attaching them to applications:
+
 ```
 resource "cloudflare_access_policy" "cf_policy" {
   application_id = cloudflare_access_application.cf_app.id
@@ -103,9 +107,11 @@ resource "cloudflare_access_policy" "cf_policy" {
   }
 }
 ```
+
 To do so:
 
 1. Run a `terraform plan`:
+
 ```
 $ terraform plan
 
@@ -149,6 +155,7 @@ can't guarantee that exactly these actions will be performed if
 ```
 
 2. Next, apply these changes using the `apply` command, once they look accurate and you're comfortable moving forward:
+
 ```
 $ terraform apply --auto-approve
 ```
@@ -156,6 +163,7 @@ $ terraform apply --auto-approve
 ### Configuring an identity provider
 
 The example below shows how you can configure an identity provider and attach it to a policy:
+
 ```
 resource "cloudflare_access_identity_provider" "github_oauth" {
   account_id = <CLOUDFLARE_ACCOUNT_ID>
@@ -183,4 +191,5 @@ resource "cloudflare_access_policy" "cf_policy" {
   }
 }
 ```
+
 These are the basics to get up and running with Access and Terraform. See our [API documentation](https://api.cloudflare.com/#access-organizations-properties) for other endpoints that can be managed via Terraform.

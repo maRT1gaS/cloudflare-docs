@@ -52,12 +52,14 @@ The following routes will be generated based on the file structure, mapping the 
 ### Path segments
 
 In the [example above](/platform/functions#functions-routing):
-* A `*` denotes a placeholder for a single path segment (for example, `/todos/123`).
-* A `**` matches one or more path segments (for example, `/todos/123/dates/confirm`).
+
+- A `*` denotes a placeholder for a single path segment (for example, `/todos/123`).
+- A `**` matches one or more path segments (for example, `/todos/123/dates/confirm`).
 
 When naming your files:
-* `[name]` is a placeholder for a single path segment.
-* `[[name]]` matches any depth of route below this point.
+
+- `[name]` is a placeholder for a single path segment.
+- `[[name]]` matches any depth of route below this point.
 
 <Aside type="note" header="Route specificity">
 
@@ -83,7 +85,7 @@ export async function onRequest(context) {
     data, // arbitrary space for passing data between middlewares
   } = context;
 
-  return new Response("Hello, world!");
+  return new Response('Hello, world!');
 }
 ```
 
@@ -91,13 +93,12 @@ When migrating from a [Module Worker](https://developers.cloudflare.com/workers/
 
 In the previous example, an `onRequest` function was exported. This is a generic name because it generically handles all HTTP requests. However, to react to specific HTTP request methods, you may use the method name as a suffix to the exported function. For example, a handler that should only receive `GET` requests should be named `onRequestGet`. The following other handlers are supported:
 
-* `onRequestPost`
-* `onRequestPut`
-* `onRequestPatch`
-* `onRequestDelete`
-* `onRequestHead`
-* `onRequestOptions`
-
+- `onRequestPost`
+- `onRequestPut`
+- `onRequestPatch`
+- `onRequestDelete`
+- `onRequestHead`
+- `onRequestOptions`
 
 These are the requests you export to write your first function. For example, you can write a function to output "Hello World" when it hits a `/functions/hello-world.js` file:
 
@@ -127,15 +128,15 @@ export const onRequestPut = onRequestPost;
 Additionally, an exported handler may be an array of function handlers. This allows you to easily compose Functions as a group, which may include a mix of shared and/or one-off behaviors:
 
 ```js
-import { extraLogging } from 'middlewares.ts'
+import { extraLogging } from 'middlewares.ts';
 
 export const onRequest = [
   extraLogging,
 
   async ({ request }) => {
     // ...
-  }
-]
+  },
+];
 ```
 
 ## Adding middleware
@@ -144,7 +145,7 @@ Middleware are reusable chunks of logic that can be executed before and/or after
 
 ### Exporting middleware
 
-Middleware files are similar to standard Function files. You may export an `onRequest`  handler or any of its method-specific variants. Additionally, like Functions files, you may export an array of Functions as your middleware handler.
+Middleware files are similar to standard Function files. You may export an `onRequest` handler or any of its method-specific variants. Additionally, like Functions files, you may export an array of Functions as your middleware handler.
 
 In your `_middleware.{js|ts}` files, you can define a middleware function that handles errors for all your Functions and export it to all the `onRequest` methods. This means the Functions defined within this file will be called on each function request declared in the directory that the middleware lives in. For example:
 
@@ -230,10 +231,10 @@ Within Pages, middleware functions have access to a `context.next` function whic
 async function errorHandler(context) {
   try {
     // wait for the next function to finish
-    return await context.next()
+    return await context.next();
   } catch (err) {
     // catch and report and errors when running the next function
-    return new Response(`${err.message}\n${err.stack}`, { status: 500 })
+    return new Response(`${err.message}\n${err.stack}`, { status: 500 });
   }
 }
 
@@ -273,7 +274,7 @@ While bringing your Workers to Pages, bindings are a big part of what makes your
 
 ### KV namespace
 
-Workers KV is Cloudflare's globally replicated key-value storage solution. Within Pages, you can choose from the list of KV namespaces that you created from **Account Home** > **Pages** > **your Pages project** > **Settings** > **Functions** > **KV namespace bindings**. Select **Add binding** and input a **Variable name** and select a *KV namespace* from the list of your existing Workers KV namespaces. You will need to repeat this for both the **Production** and **Preview** environments.
+Workers KV is Cloudflare's globally replicated key-value storage solution. Within Pages, you can choose from the list of KV namespaces that you created from **Account Home** > **Pages** > **your Pages project** > **Settings** > **Functions** > **KV namespace bindings**. Select **Add binding** and input a **Variable name** and select a _KV namespace_ from the list of your existing Workers KV namespaces. You will need to repeat this for both the **Production** and **Preview** environments.
 
 ![KV-Binding](KV-functions.png)
 
@@ -281,7 +282,7 @@ Workers KV is Cloudflare's globally replicated key-value storage solution. Withi
 
 Durable Objects are Cloudflare's strongly consistent coordination primitive that power capabilities such as connecting WebSockets, handling state, and building applications. As with Workers KV, you first have to [create the Durable Object](https://developers.cloudflare.com/workers/learning/using-durable-objects#uploading-a-durable-object-worker). You can then configure it as a binding to your Pages project.
 
-Go to **Account Home** > **Pages** > **your Pages project** > **Settings** > **Functions** > **Durable Object bindings**. Select **Add binding** and input a **Variable name** and select a *Durable Object namespace* from the list of your existing Durable Objects. You will need to repeat this for both the **Production** and **Preview** environments.
+Go to **Account Home** > **Pages** > **your Pages project** > **Settings** > **Functions** > **Durable Object bindings**. Select **Add binding** and input a **Variable name** and select a _Durable Object namespace_ from the list of your existing Durable Objects. You will need to repeat this for both the **Production** and **Preview** environments.
 
 ![DO-Binding](DO-functions.png)
 

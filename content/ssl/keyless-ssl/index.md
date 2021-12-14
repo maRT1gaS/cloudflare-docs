@@ -3,11 +3,11 @@ order: 5
 pcx-content-type: landing-page
 ---
 
-import KeylessSSLDefinition from "../_partials/_keyless-ssl-definition.md"
+import KeylessSSLDefinition from '../_partials/_keyless-ssl-definition.md';
 
 # Keyless SSL
 
-<KeylessSSLDefinition/>
+<KeylessSSLDefinition />
 
 Prior to configuring Keyless SSL, we suggest you read our [technical ‘deep dive’](https://blog.cloudflare.com/keyless-ssl-the-nitty-gritty-technical-details/) on how the technology works and where your infrastructure sits within the scope of the TLS handshake.
 

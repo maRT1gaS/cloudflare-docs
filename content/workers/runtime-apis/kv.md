@@ -12,7 +12,7 @@ Learn more about [How KV works](/learning/how-kv-works).
 
 To use Workers KV you must create a KV namespace and add a [binding](/runtime-apis/kv#kv-bindings) to your Worker. See the [instructions for Wrangler KV commands](/cli-wrangler/commands#kv) or the KV page of the [Workers dashboard](https://dash.cloudflare.com/?to=/:account/workers/kv/namespaces)
 
---------------------------------
+---
 
 ## Methods
 
@@ -21,18 +21,19 @@ To use Workers KV you must create a KV namespace and add a [binding](/runtime-ap
 To create a new key-value pair, or to update the value for a particular key, you can call the `put` method on any namespace you’ve bound to your script. The basic form of this method looks like this:
 
 ```js
-await NAMESPACE.put(key, value)
+await NAMESPACE.put(key, value);
 ```
 
 #### Parameters
 
 <Definitions>
 
-  - `key` <Type>string</Type>
-    - The key to associate with the value. A key cannot be empty, `.` or `..`. All other keys are valid.
+- `key` <Type>string</Type>
 
-  - `value` <Type>string</Type> | <Type>ReadableStream</Type> | <Type>ArrayBuffer</Type>
-    -  The value to store. The type is inferred.
+  - The key to associate with the value. A key cannot be empty, `.` or `..`. All other keys are valid.
+
+- `value` <Type>string</Type> | <Type>ReadableStream</Type> | <Type>ArrayBuffer</Type>
+  - The value to store. The type is inferred.
 
 </Definitions>
 
@@ -111,17 +112,17 @@ Note that `get` may return stale values -- if a given key has recently been read
 Here’s an example of reading a key from within a Worker:
 
 ```js
-addEventListener("fetch", event => {
-  event.respondWith(handleRequest(event.request))
-})
+addEventListener('fetch', event => {
+  event.respondWith(handleRequest(event.request));
+});
 
 async function handleRequest(request) {
-  const value = await NAMESPACE.get("first-key")
+  const value = await NAMESPACE.get('first-key');
   if (value === null) {
-    return new Response("Value not found", {status: 404})
+    return new Response('Value not found', { status: 404 });
   }
 
-  return new Response(value)
+  return new Response(value);
 }
 ```
 
@@ -188,14 +189,14 @@ You can also [delete key-value pairs from the command line with Wrangler](/cli-w
 You can use a list operation to see all of the keys that live in a given namespace. Here’s a basic example:
 
 ```js
-addEventListener("fetch", event => {
-  event.respondWith(handleRequest(event.request))
-})
+addEventListener('fetch', event => {
+  event.respondWith(handleRequest(event.request));
+});
 
 async function handleRequest(request) {
-  const value = await NAMESPACE.list()
+  const value = await NAMESPACE.list();
 
-  return new Response(value.keys)
+  return new Response(value.keys);
 }
 ```
 
@@ -211,17 +212,23 @@ The `list` method has this signature (in TypeScript):
 
 All arguments are optional:
 
-* `prefix` is a string that represents a prefix you can use to filter all keys.
-* `limit` is the maximum number of keys returned. The default is 1000, which is the maximum. It is unlikely that you will want to change this default, but it is included for completeness.
-* `cursor` is a string used for paginating responses. See below for more.
+- `prefix` is a string that represents a prefix you can use to filter all keys.
+- `limit` is the maximum number of keys returned. The default is 1000, which is the maximum. It is unlikely that you will want to change this default, but it is included for completeness.
+- `cursor` is a string used for paginating responses. See below for more.
 
 The `.list` method returns a promise which resolves with an object that looks like this:
 
 ```json
 {
-  keys: [{ name: "foo", expiration: 1234, metadata: {someMetadataKey: "someMetadataValue"}}],
-  list_complete: false,
-  cursor: "6Ck1la0VxJ0djhidm1MdX2FyD"
+  "keys": [
+    {
+      "name": "foo",
+      "expiration": 1234,
+      "metadata": { "someMetadataKey": "someMetadataValue" }
+    }
+  ],
+  "list_complete": false,
+  "cursor": "6Ck1la0VxJ0djhidm1MdX2FyD"
 }
 ```
 
@@ -236,14 +243,14 @@ Note that if your values fit in [the metadata size limit](/platform/limits#kv-li
 You can also list all of the keys starting with a particular prefix. For example, say you’ve structured your keys with a user, a user id, and then some key names, separated by colons (e.g. ` user:1:<key>`). You could get the keys for user number one by doing this:
 
 ```js
-addEventListener("fetch", event => {
-  event.respondWith(handleRequest(event.request))
-})
+addEventListener('fetch', event => {
+  event.respondWith(handleRequest(event.request));
+});
 
 async function handleRequest(request) {
-  const value = await NAMESPACE.list({"prefix": "user:1:"})
+  const value = await NAMESPACE.list({ prefix: 'user:1:' });
 
-  return new Response(value.keys)
+  return new Response(value.keys);
 }
 ```
 
@@ -258,15 +265,16 @@ Keys are always returned in lexicographically sorted order according to their UT
 If you have more keys than the `limit` value, only that many will be returned. Additionally, the `list_complete` key will be set to `false`, and a `cursor` will also be returned. In this case, you can call `list` again with the `cursor` value to get the next set of keys:
 
 ```js
-const value = await NAMESPACE.list()
+const value = await NAMESPACE.list();
 
-const cursor = value.cursor
+const cursor = value.cursor;
 
-const next_value = await NAMESPACE.list({"cursor": cursor})
+const next_value = await NAMESPACE.list({ cursor: cursor });
 ```
+
 ## KV bindings
 
-### Referencing KV from Workers 
+### Referencing KV from Workers
 
 A KV namespace is a key-value database that is replicated to Cloudflare's edge. To connect to a KV namespace from within a Worker, you must define a binding that points to the namespace's ID.
 
@@ -283,7 +291,7 @@ name = "worker"
 
 # ...
 
-kv_namespaces = [ 
+kv_namespaces = [
   { binding = "TODO", id = "06779da6940b431db6e566b4846d64db" }
 ]
 ```
@@ -300,6 +308,7 @@ addEventListener('fetch', async event => {
   event.respondWith(new Response(value));
 });
 ```
+
 <Aside>
   
 You can create a namespace <a href="https://developers.cloudflare.com/workers/cli-wrangler/commands#getting-started">using Wrangler</a> or in the <a href="https://dash.cloudflare.com/">Workers dashboard</a> on the KV page. For the dashboard, you can bind the namespace to your Worker by clicking "Settings" and adding a binding under "KV Namespace Bindings".
@@ -313,13 +322,13 @@ The docs above assume you're using the original service worker syntax, where bin
 ```js
 export class DurableObject {
   constructor(state, env) {
-    this.state = state
-    this.env = env
+    this.state = state;
+    this.env = env;
   }
 
   async fetch(request) {
-    const valueFromKV = await this.env.NAMESPACE.get('someKey')
-    return new Response(valueFromKV)
+    const valueFromKV = await this.env.NAMESPACE.get('someKey');
+    return new Response(valueFromKV);
   }
 }
 ```

@@ -3,7 +3,7 @@ order: 3
 type: example
 summary: Allow an IP range.
 tags:
-- IP range
+  - IP range
 ---
 
 # IP range

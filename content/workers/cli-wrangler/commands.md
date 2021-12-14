@@ -7,7 +7,7 @@ pcx-content-type: configuration
 
 Complete list of all commands available for [`wrangler`](https://github.com/cloudflare/wrangler), the Workers CLI.
 
---------------------------------
+---
 
 ## generate
 
@@ -22,12 +22,15 @@ Default values indicated by <Type>=value</Type>.
 <Definitions>
 
 - `$NAME` <Type>=worker</Type> <PropMeta>optional</PropMeta>
+
   - The name of the Workers project. This is both the directory name and `name` property in the generated `wrangler.toml` [configuration](/cli-wrangler/configuration) file.
 
 - `$TEMPLATE` <Type>=https://github.com/cloudflare/worker-template</Type> <PropMeta>optional</PropMeta>
+
   - The GitHub URL of the [repository to use as the template](https://github.com/cloudflare/worker-template) for generating the project.
 
 - `--type=$TYPE` <Type>=webpack</Type> <PropMeta>optional</PropMeta>
+
   - The type of project; one of `webpack`, `javascript`, or `rust`.
 
 - `--site` <PropMeta>optional</PropMeta>
@@ -35,7 +38,7 @@ Default values indicated by <Type>=value</Type>.
 
 </Definitions>
 
---------------------------------
+---
 
 ## init
 
@@ -50,9 +53,11 @@ Default values indicated by <Type>=value</Type>.
 <Definitions>
 
 - `$NAME` <Type>=(Name of working directory)</Type> <PropMeta>optional</PropMeta>
+
   - The name of the Workers project. This is both the directory name and `name` property in the generated `wrangler.toml` [configuration](/cli-wrangler/configuration) file.
 
 - `--type=$TYPE` <Type>=webpack</Type> <PropMeta>optional</PropMeta>
+
   - The type of project; one of `webpack`, `javascript`, or `rust`.
 
 - `--site` <PropMeta>optional</PropMeta>
@@ -60,11 +65,11 @@ Default values indicated by <Type>=value</Type>.
 
 </Definitions>
 
---------------------------------
+---
 
 ## build
 
-Build your project (if applicable). This command looks at your `wrangler.toml` file and reacts to the [`"type"` value](/cli-wrangler/configuration#keys) specified. 
+Build your project (if applicable). This command looks at your `wrangler.toml` file and reacts to the [`"type"` value](/cli-wrangler/configuration#keys) specified.
 
 When using `type = "webpack"`, Wrangler will build the Worker using its internal webpack installation. When using `type = "javascript"` , the [`build.command`](/cli-wrangler/configuration#build-1), if defined, will run.
 
@@ -79,7 +84,7 @@ $ wrangler build [--env $ENVIRONMENT_NAME]
 
 </Definitions>
 
---------------------------------
+---
 
 ## login
 
@@ -97,17 +102,17 @@ All of the arguments and flags to this command are optional:
   - List all the available OAuth scopes with descriptions.
 - `--scopes $SCOPES` <PropMeta>optional</PropMeta>
   - Allows to choose your set of OAuth scopes. The set of scopes must be entered in a whitespace-separated list,
-    for example, `$ wrangler login --scopes account:read user:read`. 
+    for example, `$ wrangler login --scopes account:read user:read`.
 
 </Definitions>
 
-`wrangler login` uses all the available scopes by default if no flags are provided. 
+`wrangler login` uses all the available scopes by default if no flags are provided.
 
---------------------------------
+---
 
 ## logout
 
-Remove Wrangler's authorization for accessing your account. This command will invalidate your current OAuth token and delete the configuration file, if present. 
+Remove Wrangler's authorization for accessing your account. This command will invalidate your current OAuth token and delete the configuration file, if present.
 
 ```sh
 $ wrangler logout
@@ -117,7 +122,7 @@ This command only invalidates OAuth tokens acquired through the `wrangler login`
 
 If you wish to delete your API token, log into the Cloudflare dashboard and go to **Overview** > **Get your API token** in the right side menu > select the three-dot menu on your Wrangler token and select **Delete** if you wish to delete your API token.
 
---------------------------------
+---
 
 ## config
 
@@ -136,7 +141,7 @@ $ wrangler config [--api-key]
 
 You can also use environment variables to authenticate, or `wrangler login` to authorize with OAuth tokens.
 
---------------------------------
+---
 
 ## publish
 
@@ -158,9 +163,11 @@ To use this command, the following fields are required in your `wrangler.toml` f
 <Definitions>
 
 - `name` <Type>string</Type>
+
   - The name of the Workers project. This is both the directory name and `name` property in the generated `wrangler.toml` [configuration](/cli-wrangler/configuration) file.
 
 - `type` <Type>string</Type>
+
   - The type of project; one of `webpack`, `javascript`, or `rust`.
 
 - `account_id` <Type>string</Type>
@@ -192,9 +199,11 @@ To publish to your own domain, specify these three fields in your `wrangler.toml
 <Definitions>
 
 - `zone_id` <Type>string</Type>
+
   - The Cloudflare zone ID, for example, `zone_id = "b6558acaf2b4cad1f2b51c5236a6b972"`, which can be found in the [Cloudflare dashboard](https://dash.cloudflare.com).
 
 - `route` <Type>string</Type>
+
   - The route you would like to publish to, for example, `route = "example.com/my-worker/*"`.
 
 - `routes` <Type>Array</Type>
@@ -212,7 +221,7 @@ Make sure to use only `route` or `routes`, not both.
 
 To publish your code to multiple domains, refer to the [documentation for environments](/platform/environments).
 
---------------------------------
+---
 
 ## dev
 
@@ -225,18 +234,23 @@ $ wrangler dev [--env $ENVIRONMENT_NAME] [--ip <ip>] [--port <port>] [--host <ho
 <Definitions>
 
 - `--env` <PropMeta>optional</PropMeta>
+
   - If defined, Wrangler will load the matching environment's configuration. Refer to [Environments](/platform/environments) for more information.
 
 - `--ip` <PropMeta>optional</PropMeta>
+
   - The IP to listen on, defaults to `127.0.0.1`.
 
 - `--port` <PropMeta>optional</PropMeta>
+
   - The port to listen on, defaults to `8787`.
 
 - `--host` <PropMeta>optional</PropMeta>
+
   - The host to forward requests to, defaults to the zone of the project or to `tutorial.cloudflareworkers.com` if unauthenticated.
 
 - `--local-protocol` <PropMeta>optional</PropMeta>
+
   - The protocol to listen to requests on, defaults to `http`.
 
 - `--upstream-protocol` <PropMeta>optional</PropMeta>
@@ -259,8 +273,7 @@ $ wrangler dev
 
 With `wrangler dev` running, you can send HTTP requests to `localhost:8787` and your Worker should execute as expected. You will also see `console.log` messages and exceptions appearing in your terminal. If either of these things do not happen, or you think the output is incorrect, [file an issue](https://github.com/cloudflare/wrangler).
 
-
---------------------------------
+---
 
 ## tail
 
@@ -280,7 +293,7 @@ $ wrangler tail [--format $FORMAT] [--status $STATUS] [OPTIONS]
   - Filter by HTTP header.
 - `--method $METHOD`
   - Filter by HTTP method.
-- `--sampling-rate $RATE` 
+- `--sampling-rate $RATE`
   - Add a percentage of requests to log sampling rate.
 - `--search $SEARCH`
   - Filter by a text match in `console.log` messages.
@@ -297,7 +310,7 @@ Like all Wrangler commands, run `wrangler tail` from your Worker’s root direct
 
 </Aside>
 
---------------------------------
+---
 
 ## preview
 
@@ -312,12 +325,15 @@ Default values indicated by <Type>=value</Type>.
 <Definitions>
 
 - `--env $ENVIRONMENT_NAME` <PropMeta>optional</PropMeta>
+
   - If defined, Wrangler will load the matching environment's configuration. Refer to [Environments](/platform/environments) for more information.
 
 - `--watch` <PropMeta>recommended</PropMeta>
+
   - When enabled, any changes to the Worker project will continually update the preview service with the newest version of your project. By default, `wrangler preview` will only bundle your project a single time.
 
 - `$METHOD` <Type>="GET"</Type> <PropMeta>optional</PropMeta>
+
   - The type of request to preview your Worker with (`GET`, `POST`).
 
 - `$BODY` <Type>="Null"</Type> <PropMeta>optional</PropMeta>
@@ -359,7 +375,7 @@ Another option is to install [wsl-open](https://github.com/4U6U57/wsl-open#stand
 
 If you are using WSL 2, you will need to install `wsl-open` following their [standalone method](https://github.com/4U6U57/wsl-open#standalone) rather than through `npm`. This is because their npm package has not yet been updated with WSL 2 support.
 
---------------------------------
+---
 
 ## `route`
 
@@ -389,6 +405,7 @@ Default values indicated by <Type>=value</Type>.
 <Definitions>
 
 - `$ID` <PropMeta>required</PropMeta>
+
   - The hash of the route ID to delete.
 
 - `--env $ENVIRONMENT_NAME` <PropMeta>optional</PropMeta>
@@ -396,7 +413,7 @@ Default values indicated by <Type>=value</Type>.
 
 </Definitions>
 
---------------------------------
+---
 
 ## subdomain
 
@@ -406,7 +423,7 @@ Create or change your [`*.workers.dev`](https://workers.dev) subdomain.
 $ wrangler subdomain <name>
 ```
 
---------------------------------
+---
 
 ## secret
 
@@ -430,6 +447,7 @@ $ echo "-----BEGIN PRIVATE KEY-----\nM...==\n-----END PRIVATE KEY-----\n" | wran
 <Definitions>
 
 - `name`
+
   - The variable name to be accessible in the script.
 
 - `--env $ENVIRONMENT_NAME` <PropMeta>optional</PropMeta>
@@ -448,6 +466,7 @@ $ wrangler secret delete <name> --env ENVIRONMENT_NAME
 <Definitions>
 
 - `name`
+
   - The variable name to be accessible in the script.
 
 - `--env $ENVIRONMENT_NAME` <PropMeta>optional</PropMeta>
@@ -470,7 +489,7 @@ $ wrangler secret list --env ENVIRONMENT_NAME
 
 </Definitions>
 
---------------------------------
+---
 
 ## kv
 
@@ -499,7 +518,7 @@ kv_namespaces = [
 Successfull operations will print a new configuration block that should be copied into your `wrangler.toml` file. Add the output to the existing `kv_namespaces` configuration if already present. You can now access the binding from within a Worker:
 
 ```js
-let value = await MY_KV.get("my-key")
+let value = await MY_KV.get('my-key');
 ```
 
 To write a value to your KV namespace using Wrangler, run the `wrangler kv:key put` subcommand.
@@ -518,7 +537,7 @@ $ wrangler kv:key put --namespace-id=e29b263ab50e42ce9b637fa8370175e8 "key" "val
 
 Additionally, KV namespaces can be used with environments. This is useful for when you have code that refers to
 a KV binding like `MY_KV`, and you want to be able to have these bindings point to different namespaces (like
-one for staging and one for production). 
+one for staging and one for production).
 
 A `wrangler.toml` file with two environments:
 
@@ -549,17 +568,17 @@ Most `kv` commands require you to specify a namespace. A namespace can be specif
 
 1. With a `--binding`:
 
-    ```sh
-    $ wrangler kv:key get --binding=MY_KV "my key"
-    ```
+   ```sh
+   $ wrangler kv:key get --binding=MY_KV "my key"
+   ```
 
-    - This can be combined with `--preview` flag to interact with a preview namespace instead of a production namespace.
+   - This can be combined with `--preview` flag to interact with a preview namespace instead of a production namespace.
 
 1. With a `--namespace-id`:
 
-    ```sh
-    $ wrangler kv:key get --namespace-id=06779da6940b431db6e566b4846d64db "my key"
-    ```
+   ```sh
+   $ wrangler kv:key get --namespace-id=06779da6940b431db6e566b4846d64db "my key"
+   ```
 
 Most `kv` subcommands also allow you to specify an environment with the optional `--env` flag. This allows you to publish Workers running the same code but with different namespaces. For example, you could use separate staging and production namespaces for KV data in your `wrangler.toml` file:
 
@@ -602,9 +621,11 @@ $ wrangler kv:namespace create $NAME [--env=$ENVIRONMENT_NAME] [--preview]
 <Definitions>
 
 - `$NAME`
+
   - The name of the new namespace.
 
 - `--env $ENVIRONMENT_NAME` <PropMeta>optional</PropMeta>
+
   - If defined, the changes will only apply to the specified environment. Refer to [Environments](/platform/environments) for more information.
 
 - `--preview` <PropMeta>optional</PropMeta>
@@ -670,12 +691,15 @@ $ wrangler kv:namespace delete --binding= [--namespace-id=]
 <Definitions>
 
 - `--binding` <PropMeta>required (if no <Code>--namespace-id</Code>)</PropMeta>
+
   - The name of the namespace to delete.
 
 - `--namespace-id` <PropMeta>required (if no <Code>--binding</Code>)</PropMeta>
+
   - The ID of the namespace to delete.
 
 - `--env $ENVIRONMENT_NAME` <PropMeta>optional</PropMeta>
+
   - If defined, the changes will only apply to the specified environment. Refer to [Environments](/platform/environments) for more information.
 
 - `--preview` <PropMeta>optional</PropMeta>
@@ -715,27 +739,35 @@ $ wrangler kv:key put --binding= [--namespace-id=] $KEY $VALUE
 <Definitions>
 
 - `$KEY` <PropMeta>required</PropMeta>
+
   - The key to write to.
 
 - `$VALUE` <PropMeta>required</PropMeta>
+
   - The value to write.
 
 - `--binding` <PropMeta>required (if no <Code>--namespace-id</Code>)</PropMeta>
+
   - The name of the namespace to write to.
 
 - `--namespace-id` <PropMeta>required (if no <Code>--binding</Code>)</PropMeta>
+
   - The ID of the namespace to write to.
 
 - `--env $ENVIRONMENT_NAME` <PropMeta>optional</PropMeta>
+
   - If defined, the changes will only apply to the specified environment. Refer to [Environments](/platform/environments) for more information.
 
 - `--preview` <PropMeta>optional</PropMeta>
+
   - Interact with a preview namespace instead of production. Pass this to the `wrangler.toml` file’s `kv_namespaces.preview_id` instead of `kv_namespaces.id`.
 
 - `--ttl` <PropMeta>optional</PropMeta>
+
   - The lifetime (in number of seconds) the document should exist before expiring. Must be at least `60` seconds. This option takes precedence over the `expiration` option.
 
 - `--expiration` <PropMeta>optional</PropMeta>
+
   - The timestamp, in UNIX seconds, indicating when the key-value pair should expire.
 
 - `--path` <PropMeta>optional</PropMeta>
@@ -776,12 +808,15 @@ $ wrangler kv:key list --binding= [--namespace-id=] [--prefix] [--env]
 <Definitions>
 
 - `--binding` <PropMeta>required (if no <Code>--namespace-id</Code>)</PropMeta>
+
   - The name of the namespace to list.
 
 - `--namespace-id` <PropMeta>required (if no <Code>--binding</Code>)</PropMeta>
+
   - The ID of the namespace to list.
 
 - `--env $ENVIRONMENT_NAME` <PropMeta>optional</PropMeta>
+
   - If defined, the changes will only apply to the specified environment. Refer to [Environments](/platform/environments) for more information.
 
 - `--prefix` <PropMeta>optional</PropMeta>
@@ -817,15 +852,19 @@ $ wrangler kv:key get --binding= [--env=] [--preview] [--namespace-id=] "$KEY"
 <Definitions>
 
 - `$KEY` <PropMeta>required</PropMeta>
+
   - The key value to get.
 
 - `--binding` <PropMeta>required (if no <Code>--namespace-id</Code>)</PropMeta>
+
   - The name of the namespace to get from.
 
 - `--namespace-id` <PropMeta>required (if no <Code>--binding</Code>)</PropMeta>
+
   - The ID of the namespace to get from.
 
 - `--env $ENVIRONMENT_NAME` <PropMeta>optional</PropMeta>
+
   - If defined, the operation will only apply to the specified environment. Refer to [Environments](/platform/environments) for more information.
 
 - `--preview` <PropMeta>optional</PropMeta>
@@ -851,15 +890,19 @@ $ wrangler kv:key delete --binding= [--env=] [--preview] [--namespace-id=] "$KEY
 <Definitions>
 
 - `$KEY` <PropMeta>required</PropMeta>
+
   - The key value to delete.
 
 - `--binding` <PropMeta>required (if no <Code>--namespace-id</Code>)</PropMeta>
+
   - The name of the namespace to delete from.
 
 - `--namespace-id` <PropMeta>required (if no <Code>--binding</Code>)</PropMeta>
+
   - The id of the namespace to delete from.
 
 - `--env` <PropMeta>optional</PropMeta>
+
   - Perform on a specific environment specified as `$ENVIRONMENT_NAME`.
 
 - `--preview` <PropMeta>optional</PropMeta>
@@ -890,15 +933,19 @@ $ wrangler kv:bulk put --binding= [--env=] [--preview] [--namespace-id=] $FILENA
 <Definitions>
 
 - `$FILENAME` <PropMeta>required</PropMeta>
+
   - The file to write to the namespace
 
 - `--binding` <PropMeta>required (if no <Code>--namespace-id</Code>)</PropMeta>
+
   - The name of the namespace to put to.
 
 - `--namespace-id` <PropMeta>required (if no <Code>--binding</Code>)</PropMeta>
+
   - The id of the namespace to put to.
 
 - `--env $ENVIRONMENT_NAME` <PropMeta>optional</PropMeta>
+
   - If defined, the changes will only apply to the specified environment. Refer to [Environments](/platform/environments) for more information.
 
 - `--preview` <PropMeta>optional</PropMeta>
@@ -935,16 +982,20 @@ The schema below is the full schema for key-value entries uploaded via the bulk 
 <Definitions>
 
 - `key` <Type>string</Type> <PropMeta>required</PropMeta>
+
   - The key’s name. The name may be 512 bytes maximum. All printable, non-whitespace characters are valid.
 
 - `value` <Type>string</Type> <PropMeta>required</PropMeta>
+
   - The UTF-8 encoded string to be stored, up to 10 MB in length.
 
 - `expiration` <Type>int</Type> <PropMeta>optional</PropMeta>
+
   - The time, measured in number of seconds since the UNIX epoch, at which the key should expire.
 
 - `expiration_ttl` <Type>int</Type> <PropMeta>optional</PropMeta>
-  - The number of seconds the document should exist before expiring. Must be at least `60` seconds. 
+
+  - The number of seconds the document should exist before expiring. Must be at least `60` seconds.
 
 - `base64` <Type>bool</Type> <PropMeta>optional</PropMeta>
   - When true, the server will decode the value as base64 before storing it. This is useful for writing values that would otherwise be invalid JSON strings, such as images. Defaults to `false`.
@@ -972,15 +1023,19 @@ $ wrangler kv:bulk delete --binding= [--env=] [--preview] [--namespace-id=] $FIL
 <Definitions>
 
 - `$FILENAME` <PropMeta>required</PropMeta>
+
   - The file with key-value pairs to delete.
 
 - `--binding` <PropMeta>required (if no <Code>--namespace-id</Code>)</PropMeta>
+
   - The name of the namespace to delete from.
 
 - `--namespace-id` <PropMeta>required (if no <Code>--binding</Code>)</PropMeta>
+
   - The ID of the namespace to delete from.
 
 - `--env $ENVIRONMENT_NAME` <PropMeta>optional</PropMeta>
+
   - If defined, the changes will only apply to the specified environment. Refer to [Environments](/platform/environments) for more information.
 
 - `--preview` <PropMeta>optional</PropMeta>
@@ -1002,6 +1057,7 @@ This command takes a JSON file as an argument with a list of key-value pairs to 
 <Definitions>
 
 - `key` <Type>string</Type> <PropMeta>required</PropMeta>
+
   - The key’s name. The name may be at most 512 bytes. All printable, non-whitespace characters are valid.
 
 - `value` <Type>string</Type> <PropMeta>required</PropMeta>
@@ -1019,7 +1075,7 @@ y
 ✨  Success
 ```
 
---------------------------------
+---
 
 ## --help
 

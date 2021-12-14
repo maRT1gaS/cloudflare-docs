@@ -25,8 +25,8 @@ Expression:<br />
 
 Rule characteristics:
 
-* _Data center ID_ (included by default when creating the rule in the dashboard)
-* _IP Address_
+- _Data center ID_ (included by default when creating the rule in the dashboard)
+- _IP Address_
 
 </Example>
 
@@ -41,9 +41,9 @@ Expression:<br />
 
 Rule characteristics:
 
-* _Data center ID_ (included by default when creating the rule in the dashboard)
-* _IP Address_
-* _HTTP Header_ > `x-api-key`
+- _Data center ID_ (included by default when creating the rule in the dashboard)
+- _IP Address_
+- _HTTP Header_ > `x-api-key`
 
 </Example>
 
@@ -58,9 +58,9 @@ Expression:<br />
 
 Rule characteristics:
 
-* _Data center ID_ (included by default when creating the rule in the dashboard)
-* _IP Address_
-* _HTTP Header_ > `user-agent`
+- _Data center ID_ (included by default when creating the rule in the dashboard)
+- _IP Address_
+- _HTTP Header_ > `user-agent`
 
 Mitigation expression:<br/>
 `(http.host eq "mystore1.com" or http.host eq "mystore2.com")`

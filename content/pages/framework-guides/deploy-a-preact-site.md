@@ -2,7 +2,7 @@
 pcx-content-type: how-to
 ---
 
-import TutorialsBeforeYouStart from "../_partials/_tutorials-before-you-start.md" 
+import TutorialsBeforeYouStart from '../_partials/_tutorials-before-you-start.md';
 
 # Deploy a Preact site
 
@@ -20,7 +20,7 @@ $ npm init wmr your-project-name
 $ cd your-project-name
 ```
 
-<TutorialsBeforeYouStart/>
+<TutorialsBeforeYouStart />
 
 ## Creating a GitHub repository
 

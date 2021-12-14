@@ -7,7 +7,7 @@ pcx-content-type: configuration
 ## Constructor
 
 ```js
-let response = new Response(body, init)
+let response = new Response(body, init);
 ```
 
 ### Parameters
@@ -18,11 +18,21 @@ let response = new Response(body, init)
 
   - An object that defines the body text for the response. Can be `null` or any one of the following types:
 
-    - <TypeLink href="https://developer.mozilla.org/en-US/docs/Web/API/BufferSource">BufferSource</TypeLink> &nbsp;
-    - <TypeLink href="https://developer.mozilla.org/en-US/docs/Web/API/FormData">FormData</TypeLink> &nbsp;
-    - <TypeLink href="https://developer.mozilla.org/en-US/docs/Web/API/ReadableStream">ReadableStream</TypeLink> &nbsp;
-    - <TypeLink href="https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams">URLSearchParams</TypeLink> &nbsp;
-    - <TypeLink href="https://developer.mozilla.org/en-US/docs/Web/API/USVString">USVString</TypeLink>    &nbsp;
+    - <TypeLink href="https://developer.mozilla.org/en-US/docs/Web/API/BufferSource">
+        BufferSource
+      </TypeLink> &nbsp;
+    - <TypeLink href="https://developer.mozilla.org/en-US/docs/Web/API/FormData">
+        FormData
+      </TypeLink> &nbsp;
+    - <TypeLink href="https://developer.mozilla.org/en-US/docs/Web/API/ReadableStream">
+        ReadableStream
+      </TypeLink> &nbsp;
+    - <TypeLink href="https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams">
+        URLSearchParams
+      </TypeLink> &nbsp;
+    - <TypeLink href="https://developer.mozilla.org/en-US/docs/Web/API/USVString">
+        USVString
+      </TypeLink> &nbsp;
 
 - `init` <PropMeta>optional</PropMeta>
 
@@ -31,16 +41,19 @@ let response = new Response(body, init)
 </Definitions>
 
 Valid options for the `options` object include:
+
 <Definitions>
 
-  - `status` <Type>int</Type>
-    - The status code for the response, such as `200`.
+- `status` <Type>int</Type>
 
-  - `statusText` <Type>string</Type>
-    - The status message associated with the status code, like, `OK`.
+  - The status code for the response, such as `200`.
 
-  - `headers` <TypeLink href="/runtime-apis/request#parameters">Headers</TypeLink> | <TypeLink href="https://developer.mozilla.org/en-US/docs/Web/API/ByteString">ByteString</TypeLink>
-    - Any headers to add to your response that are contained within a [`Headers`](/runtime-apis/request#parameters) object or object literal of [`ByteString`](https://developer.mozilla.org/en-US/docs/Web/API/ByteString) key/value pairs.
+- `statusText` <Type>string</Type>
+
+  - The status message associated with the status code, like, `OK`.
+
+- `headers` <TypeLink href="/runtime-apis/request#parameters">Headers</TypeLink> | <TypeLink href="https://developer.mozilla.org/en-US/docs/Web/API/ByteString">ByteString</TypeLink>
+  - Any headers to add to your response that are contained within a [`Headers`](/runtime-apis/request#parameters) object or object literal of [`ByteString`](https://developer.mozilla.org/en-US/docs/Web/API/ByteString) key/value pairs.
 
 </Definitions>
 
@@ -68,6 +81,7 @@ Valid options for the `options` object include:
   - The URL of the response. The value is the final URL obtained after any redirects.
 
 <!-- What type is this? WebSocket? -->
+
 - `webSocket`
   - This is present in successful WebSocket handshake responses. For example, if a client sends a WebSocket upgrade request to an origin and a worker intercepts the request and then forwards it to the origin and the origin replies with a successful WebSocket upgrade response, the Worker sees `response.webSocket`. This establishes a WebSocket connection proxied through a Worker. Note that you cannot intercept data flowing over a WebSocket connection.
 
@@ -80,6 +94,7 @@ Valid options for the `options` object include:
 <Definitions>
 
 - `clone()` <TypeLink href="#response">Response</TypeLink>
+
   - Creates a clone of a [`Response`](#response) object.
 
 - `redirect()` <TypeLink href="#response">Response</TypeLink>
@@ -93,25 +108,33 @@ Valid options for the `options` object include:
 
 <Definitions>
 
-- <Code>arrayBuffer()</Code> <TypeLink href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer">Promise{`<ArrayBuffer>`}</TypeLink>
+- <Code>arrayBuffer()</Code> <TypeLink href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer">
+    Promise{`<ArrayBuffer>`}
+  </TypeLink>
 
   - Takes a [`Response`](#response) stream, reads it to completion, and returns a promise that resolves with an [`ArrayBuffer`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer).
 
-- <Code>formData()</Code> <TypeLink href="https://developer.mozilla.org/en-US/docs/Web/API/FormData">Promise{`<FormData>`}</TypeLink>
+- <Code>formData()</Code> <TypeLink href="https://developer.mozilla.org/en-US/docs/Web/API/FormData">
+    Promise{`<FormData>`}
+  </TypeLink>
 
   - Takes a [`Response`](#response) stream, reads it to completion, and returns a promise that resolves with a [`FormData`](https://developer.mozilla.org/en-US/docs/Web/API/FormData) object.
 
-- <Code>json()</Code> <TypeLink href="https://developer.mozilla.org/en-US/docs/Web/">Promise{`<JSON>`}</TypeLink>
+- <Code>json()</Code> <TypeLink href="https://developer.mozilla.org/en-US/docs/Web/">
+    Promise{`<JSON>`}
+  </TypeLink>
 
   - Takes a [`Response`](#response) stream, reads it to completion, and returns a promise that resolves with the result of parsing the body text as [`JSON`](https://developer.mozilla.org/en-US/docs/Web/)
 
-- <Code>text()</Code> <TypeLink href="https://developer.mozilla.org/en-US/docs/Web/API/USVString">Promise{`<USVString>`}</TypeLink>
+- <Code>text()</Code> <TypeLink href="https://developer.mozilla.org/en-US/docs/Web/API/USVString">
+    Promise{`<USVString>`}
+  </TypeLink>
 
   - Takes a [`Response`](#response) stream, reads it to completion, and returns a promise that resolves with a [`USVString`](https://developer.mozilla.org/en-US/docs/Web/API/USVString) (text).
 
 </Definitions>
 
---------------------------------
+---
 
 ## Additional information
 

@@ -6,4 +6,4 @@ pcx-content-type: navigation
 
 # Best practices
 
-<DirectoryListing path="/best-practices"/>
+<DirectoryListing path="/best-practices" />

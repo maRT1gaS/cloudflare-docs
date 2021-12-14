@@ -3,11 +3,11 @@ order: 1
 pcx-content-type: concept
 ---
 
-import MonitorDefinition from "../_partials/_monitor-definition.md"
+import MonitorDefinition from '../_partials/_monitor-definition.md';
 
 # Monitors
 
-<MonitorDefinition/>
+<MonitorDefinition />
 
 ![Dynamic load balancing involves pools, origins, monitors, and health checks](../static/images/load-balancer-components.png)
 
@@ -48,41 +48,95 @@ The Cloudflare API supports the following commands for monitors. Examples are gi
 <table>
   <thead>
     <tr>
-      <th><Strong>Command</Strong></th>
-      <th><Strong>Method</Strong></th>
-      <th><Strong>Endpoint</Strong></th>
+      <th>
+        <Strong>Command</Strong>
+      </th>
+      <th>
+        <Strong>Method</Strong>
+      </th>
+      <th>
+        <Strong>Endpoint</Strong>
+      </th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td><a href="https://api.cloudflare.com/#load-balancer-monitors-create-monitor">Create Monitor</a></td>
-      <td><Code>POST</Code></td>
-      <td><Code>user/load_balancers/monitors</Code></td>
+      <td>
+        <a href="https://api.cloudflare.com/#load-balancer-monitors-create-monitor">
+          Create Monitor
+        </a>
+      </td>
+      <td>
+        <Code>POST</Code>
+      </td>
+      <td>
+        <Code>user/load_balancers/monitors</Code>
+      </td>
     </tr>
     <tr>
-      <td><a href="https://api.cloudflare.com/#load-balancer-monitors-delete-monitor">Delete Monitor</a></td>
-      <td><Code>DELETE</Code></td>
-      <td><Code>user/load_balancers/monitors</Code></td>
+      <td>
+        <a href="https://api.cloudflare.com/#load-balancer-monitors-delete-monitor">
+          Delete Monitor
+        </a>
+      </td>
+      <td>
+        <Code>DELETE</Code>
+      </td>
+      <td>
+        <Code>user/load_balancers/monitors</Code>
+      </td>
     </tr>
     <tr>
-      <td><a href="https://api.cloudflare.com/#load-balancer-monitors-list-monitors">List Monitors</a></td>
-      <td><Code>GET</Code></td>
-      <td><Code>user/load_balancers/monitors</Code></td>
+      <td>
+        <a href="https://api.cloudflare.com/#load-balancer-monitors-list-monitors">
+          List Monitors
+        </a>
+      </td>
+      <td>
+        <Code>GET</Code>
+      </td>
+      <td>
+        <Code>user/load_balancers/monitors</Code>
+      </td>
     </tr>
     <tr>
-      <td><a href="https://api.cloudflare.com/#load-balancer-monitors-monitor-details">Monitor Details</a></td>
-      <td><Code>GET</Code></td>
-      <td><Code>user/load_balancers/monitors/:identifier</Code></td>
+      <td>
+        <a href="https://api.cloudflare.com/#load-balancer-monitors-monitor-details">
+          Monitor Details
+        </a>
+      </td>
+      <td>
+        <Code>GET</Code>
+      </td>
+      <td>
+        <Code>user/load_balancers/monitors/:identifier</Code>
+      </td>
     </tr>
     <tr>
-      <td><a href="https://api.cloudflare.com/#load-balancer-monitors-update-monitor">Update Monitor</a></td>
-      <td><Code>PUT</Code></td>
-      <td><Code>user/load_balancers/monitors</Code></td>
+      <td>
+        <a href="https://api.cloudflare.com/#load-balancer-monitors-update-monitor">
+          Update Monitor
+        </a>
+      </td>
+      <td>
+        <Code>PUT</Code>
+      </td>
+      <td>
+        <Code>user/load_balancers/monitors</Code>
+      </td>
     </tr>
-     <tr>
-      <td><a href="https://api.cloudflare.com/#load-balancer-monitors-preview-monitor">Preview Monitor</a></td>
-      <td><Code>POST</Code></td>
-      <td><Code>user/load_balancers/monitors/:identifier/preview</Code></td>
+    <tr>
+      <td>
+        <a href="https://api.cloudflare.com/#load-balancer-monitors-preview-monitor">
+          Preview Monitor
+        </a>
+      </td>
+      <td>
+        <Code>POST</Code>
+      </td>
+      <td>
+        <Code>user/load_balancers/monitors/:identifier/preview</Code>
+      </td>
     </tr>
   </tbody>
 </table>

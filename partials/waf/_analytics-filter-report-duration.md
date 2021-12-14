@@ -10,9 +10,9 @@ To manually add a filter:
 
 Take the following into account when entering filter values:
 
-* Do not add quotes around values.
-* Do not enter the `AS` prefix when entering ASN numbers. For example, enter `1423` instead of `AS1423`.
-* Wildcards are not supported.
+- Do not add quotes around values.
+- Do not enter the `AS` prefix when entering ASN numbers. For example, enter `1423` instead of `AS1423`.
+- Wildcards are not supported.
 
 ### Adjust report duration
 

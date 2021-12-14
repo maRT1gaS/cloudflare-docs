@@ -10,12 +10,12 @@ You can use the API to update **basic properties** of a ruleset (currently only 
 
 Use one of the following API endpoints:
 
-| Operation | Method + Endpoint |
-|-----------|-------------------|
-| [Update account ruleset][ur-account] | `PUT /accounts/{account-id}/rulesets/{ruleset-id}` |
-| [Update zone ruleset][ur-zone] | `PUT /zones/{zone-id}/rulesets/{ruleset-id}` |
+| Operation                                         | Method + Endpoint                                                    |
+| ------------------------------------------------- | -------------------------------------------------------------------- |
+| [Update account ruleset][ur-account]              | `PUT /accounts/{account-id}/rulesets/{ruleset-id}`                   |
+| [Update zone ruleset][ur-zone]                    | `PUT /zones/{zone-id}/rulesets/{ruleset-id}`                         |
 | [Update account entry point ruleset][uep-account] | `PUT /accounts/{account-id}/rulesets/phases/{phase-name}/entrypoint` |
-| [Update zone entry point ruleset][uep-zone] | `PUT /zones/{zone-id}/rulesets/phases/{phase-name}/entrypoint` |
+| [Update zone entry point ruleset][uep-zone]       | `PUT /zones/{zone-id}/rulesets/phases/{phase-name}/entrypoint`       |
 
 [ur-account]: https://api.cloudflare.com/#account-rulesets-update-account-ruleset
 [ur-zone]: https://api.cloudflare.com/#zone-rulesets-update-a-zone-ruleset
@@ -186,7 +186,7 @@ curl -X PUT \
 -H "X-Auth-Email: user@example.com" \
 -H "X-Auth-Key: REDACTED" \
 "https://api.cloudflare.com/client/v4/zones/{zone-id}/rulesets/{ruleset-id}" \
--d '{ 
+-d '{
   "description": "My updated phase entry point"
 }'
 ```

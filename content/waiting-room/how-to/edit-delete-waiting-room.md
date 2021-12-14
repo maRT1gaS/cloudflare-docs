@@ -22,7 +22,7 @@ For details about updating an active waiting room, see <a href="/reference/best-
 1. Click **Settings**.
 1. Edit the settings. For a description of settings, refer to [Configuration settings](/reference/configuration-settings/).
 1. Click **Next**. If you have access to [customized templates](../customize-waiting-room), you could also adjust the template.
-9. Once you get to **Review**, click **Save**.
+1. Once you get to **Review**, click **Save**.
 
 ### Delete a waiting room
 

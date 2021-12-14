@@ -7,11 +7,11 @@ pcx-content-type: how-to
 
 You can connect applications to Cloudflare for Teams over a number of different protocols.
 
-* [Connect through Access using a CLI](/tutorials/cli)
-* [Connect through Access over RDP](/tutorials/rdp)
-* [Connect through Access over SSH](/tutorials/ssh)
-* [Connect through Access using kubectl](/tutorials/kubectl)
-* [Connect through Access over SMB](/tutorials/smb)
+- [Connect through Access using a CLI](/tutorials/cli)
+- [Connect through Access over RDP](/tutorials/rdp)
+- [Connect through Access over SSH](/tutorials/ssh)
+- [Connect through Access using kubectl](/tutorials/kubectl)
+- [Connect through Access over SMB](/tutorials/smb)
 
 ## Rendering in the browser
 
@@ -23,7 +23,7 @@ You can connect applications to Cloudflare for Teams over a number of different 
 
 Cloudflare can render certain non-web applications in your browser without the need for client software or end-user configuration changes. Cloudflare currently supports rendering a terminal for SSH and VNC connections in a user's browser.
 
-To enable this setting, follow the instructions [here](/tutorials/ssh) to connect a machine available over SSH to Cloudflare. Next, navigate to the application page of the Access section in the Cloudflare for Teams dashboard. Click **Edit** and select the Settings tab. In the **`cloudflared` settings** card, select *SSH* from the **Browser Rendering** drop-down menu.
+To enable this setting, follow the instructions [here](/tutorials/ssh) to connect a machine available over SSH to Cloudflare. Next, navigate to the application page of the Access section in the Cloudflare for Teams dashboard. Click **Edit** and select the Settings tab. In the **`cloudflared` settings** card, select _SSH_ from the **Browser Rendering** drop-down menu.
 
 ![Auto Auth](../../static/documentation/applications/ssh-browser-rendering.png)
 
@@ -39,14 +39,14 @@ This should only be enabled if a [service token](/identity/service-auth/service-
 
 <TableWrap>
 
-| Before you start |
-| ------------------- |
+| Before you start                                                             |
+| ---------------------------------------------------------------------------- |
 | Ensure you have an automated service relying on `cloudflared` authentication |
-| Ensure you have an active IdP session when logging in through `cloudflared` |
+| Ensure you have an active IdP session when logging in through `cloudflared`  |
 
 </TableWrap>
 
-When you log into Access through `cloudflared`, your browser prompts you to allow access by 
+When you log into Access through `cloudflared`, your browser prompts you to allow access by
 displaying this page:
 
 ![Access browser page](../static/documentation/applications/non-http/access-page.png)

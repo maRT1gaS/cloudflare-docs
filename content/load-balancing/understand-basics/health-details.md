@@ -5,9 +5,9 @@ pcx-content-type: concept
 
 # How origins and pools become unhealthy
 
-When we talk about dynamic load balancing, that means your load balancer only directs requests to servers that can handle the traffic. 
+When we talk about dynamic load balancing, that means your load balancer only directs requests to servers that can handle the traffic.
 
-But how does your load balancer *know* which servers can handle the traffic? We determine that through a system of monitors, health checks, and origin pools.
+But how does your load balancer _know_ which servers can handle the traffic? We determine that through a system of monitors, health checks, and origin pools.
 
 ---
 
@@ -32,7 +32,7 @@ A health check will fail if one of the following conditions are met:
 - The health check exceeds the duration specified in the monitor's **Timeout** field (and does so more than the specified number of **Retries**).
 - The origin does not return the **Expected codes** or **Response body** specified in the monitor's configuration.
 
-Because we want our health checks to be as accurate as possible, we send them from three separate data centers for each of the options in a pool's **Health Check Regions**. 
+Because we want our health checks to be as accurate as possible, we send them from three separate data centers for each of the options in a pool's **Health Check Regions**.
 
 ![Health checks come from three data centers within each selected region.](../static/images/health-check-component.png)
 
@@ -62,10 +62,10 @@ When an [individual origin becomes unhealthy](#how-an-origin-becomes-unhealthy),
 
 When a pool reaches **Critical** health, your load balancer will begin diverting traffic according to its [Steering Policy](/understand-basics/traffic-steering):
 
-- **Off**: 
+- **Off**:
 
-    - If the active pool becomes unhealthy, traffic goes to the next pool in order. 
-    - If an inactive pool becomes unhealthy, traffic continues to go to the active pool (but would skip over the unhealthy pool in the failover order).
+  - If the active pool becomes unhealthy, traffic goes to the next pool in order.
+  - If an inactive pool becomes unhealthy, traffic continues to go to the active pool (but would skip over the unhealthy pool in the failover order).
 
 - **All other methods**: Traffic is distributed across all remaining pools according to the steering policy.
 

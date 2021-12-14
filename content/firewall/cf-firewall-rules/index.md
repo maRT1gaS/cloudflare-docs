@@ -34,7 +34,10 @@ The **Rules List** gives you a snapshot of recent activity and allows you to man
 
 The **Rules List** displays each rule's **CSR** (Challenge Solve Rate), which is the percentage of issued challenges that were solved. This metric applies to rules configured with _Challenge (Captcha)_ or _JS Challenge_ actions, and it is calculated as follows:
 
-<p><var>CSR</var> = <var>number of challenges solved</var> / <var>number of challenges issued</var></p>
+<p>
+  <var>CSR</var> = <var>number of challenges solved</var> /{' '}
+  <var>number of challenges issued</var>
+</p>
 
 Hover over the CSR to reveal the number of issued and solved CAPTCHA challenges:
 
@@ -44,8 +47,8 @@ A low CSR means that Cloudflare is issuing a low number of CAPTCHA challenges to
 
 You should aim for a low Challenge Solve Rate. Review the CSR of your CAPTCHA rules periodically and adjust them if necessary:
 
-* If the rate is higher than expected, for example regarding a Bot Management rule, consider relaxing the rule criteria so that you issue fewer challenges to human visitors.
-* If the rate is 0%, no CAPTCHA challenges are being solved. This means that you have no human visitors whose requests match the rule filter. Consider changing the rule action to _Block_.
+- If the rate is higher than expected, for example regarding a Bot Management rule, consider relaxing the rule criteria so that you issue fewer challenges to human visitors.
+- If the rate is 0%, no CAPTCHA challenges are being solved. This means that you have no human visitors whose requests match the rule filter. Consider changing the rule action to _Block_.
 
 <Aside type="warning" header="Important">
 
@@ -78,51 +81,74 @@ Cloudflare Firewall Rules is available to all customers. Keep in mind that the n
 This table outlines the Firewall Rules features and entitlements available with each customer plan:
 
 <TableWrap>
-<table>
-<thead>
-<tr>
-  <td></td>
-  <td colspan="4" style="text-align:center"><strong>Cloudflare plan</strong></td>
-</tr>
-<tr>
-  <td><strong>Feature</strong></td>
-  <td><strong>Free</strong></td>
-  <td><strong>Pro</strong></td>
-  <td><strong>Business</strong></td>
-  <td><strong>Enterprise</strong></td>
-</tr>
-</thead>
-<tbody>
-<tr>
-  <td>Active rules</td>
-  <td>5</td>
-  <td>20</td>
-  <td>100</td>
-  <td>1000</td>
-</tr>
-<tr>
-  <td>Supported actions</td>
-  <td>All except <em>Log</em></td>
-  <td>All except <em>Log</em></td>
-  <td>All except <em>Log</em></td>
-  <td>All</td>
-</tr>
-<tr>
-  <td>Regular expression support</td>
-  <td>No</td>
-  <td>No</td>
-  <td>Yes</td>
-  <td>Yes</td>
-</tr>
-<tr>
-  <td>Number of <a href='https://developers.cloudflare.com/firewall/cf-firewall-rules/rules-lists'>Rules Lists</a></td>
-  <td>1</td>
-  <td>10</td>
-  <td>10</td>
-  <td>10</td>
-</tr>
-</tbody>
-</table>
+  <table>
+    <thead>
+      <tr>
+        <td></td>
+        <td colspan="4" style="text-align:center">
+          <strong>Cloudflare plan</strong>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <strong>Feature</strong>
+        </td>
+        <td>
+          <strong>Free</strong>
+        </td>
+        <td>
+          <strong>Pro</strong>
+        </td>
+        <td>
+          <strong>Business</strong>
+        </td>
+        <td>
+          <strong>Enterprise</strong>
+        </td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Active rules</td>
+        <td>5</td>
+        <td>20</td>
+        <td>100</td>
+        <td>1000</td>
+      </tr>
+      <tr>
+        <td>Supported actions</td>
+        <td>
+          All except <em>Log</em>
+        </td>
+        <td>
+          All except <em>Log</em>
+        </td>
+        <td>
+          All except <em>Log</em>
+        </td>
+        <td>All</td>
+      </tr>
+      <tr>
+        <td>Regular expression support</td>
+        <td>No</td>
+        <td>No</td>
+        <td>Yes</td>
+        <td>Yes</td>
+      </tr>
+      <tr>
+        <td>
+          Number of{' '}
+          <a href="https://developers.cloudflare.com/firewall/cf-firewall-rules/rules-lists">
+            Rules Lists
+          </a>
+        </td>
+        <td>1</td>
+        <td>10</td>
+        <td>10</td>
+        <td>10</td>
+      </tr>
+    </tbody>
+  </table>
 </TableWrap>
 
 ## Get started
@@ -133,6 +159,6 @@ To get started building your own firewall rules, see [_Manage Firewall Rules in 
 
 Those eager to dive straight into the technical details can refer to these topics:
 
-* [_Common use cases_](https://developers.cloudflare.com/firewall/recipes)
-* [_Firewall Rules language_](https://developers.cloudflare.com/firewall/cf-firewall-language)
-* [_Manage rules via the APIs_](https://developers.cloudflare.com/firewall/api/)
+- [_Common use cases_](https://developers.cloudflare.com/firewall/recipes)
+- [_Firewall Rules language_](https://developers.cloudflare.com/firewall/cf-firewall-language)
+- [_Manage rules via the APIs_](https://developers.cloudflare.com/firewall/api/)

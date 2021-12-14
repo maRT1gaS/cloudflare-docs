@@ -37,7 +37,7 @@ To edit an expression in the editor:
 
 To switch from the editor to the Expression Builder, click **Use expression builder**.
 
-   ![Expression Editor](../images/firewall-rules-expressions-editor-3.png)
+![Expression Editor](../images/firewall-rules-expressions-editor-3.png)
 
 In general, you can switch back and forth between the Expression Builder and the Expression Editor. However, if you use parentheses to nest expressions in the editor, you will not be able to switch to the Expression Builder, because the builder does not support nested expressions.
 

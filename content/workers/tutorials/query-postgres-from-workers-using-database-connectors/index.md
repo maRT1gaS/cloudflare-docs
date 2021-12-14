@@ -1,13 +1,13 @@
 ---
 updated: 2021-11-15
 difficulty: Beginner
-content_type: "📝 Tutorial"
+content_type: '📝 Tutorial'
 pcx-content-type: tutorial
 ---
 
 # Query Postgres from Workers using a database connector
 
-<TutorialsBeforeYouStart/>
+<TutorialsBeforeYouStart />
 
 ## Overview
 
@@ -35,7 +35,7 @@ $ cd worker-template-postgres
 
 ## Cloudflare Tunnel authentication
 
-To create and manage secure Cloudflare Tunnels, you first need to authenticate `cloudflared` CLI. 
+To create and manage secure Cloudflare Tunnels, you first need to authenticate `cloudflared` CLI.
 Skip this step if you already have authenticated `cloudflared` locally.
 
 ```sh
@@ -43,8 +43,9 @@ $ docker run -v ~/.cloudflared:/etc/cloudflared cloudflare/cloudflared:2021.11.0
 ```
 
 Running this command will:
-* Prompt you to select your Cloudflare account and hostname.
-* Download credentials and allow `cloudflared` to create Tunnels and DNS records.
+
+- Prompt you to select your Cloudflare account and hostname.
+- Download credentials and allow `cloudflared` to create Tunnels and DNS records.
 
 ## Start and prepare Postgres database
 
@@ -56,7 +57,8 @@ Cloudflare Tunnel will be accessible from the Internet once you run the followin
 
 </Aside>
 
-You can find a prepared `docker-compose` file that does not require any changes in `scripts/postgres` with the following services: 
+You can find a prepared `docker-compose` file that does not require any changes in `scripts/postgres` with the following services:
+
 1. **postgres**
 1. **pgbouncer** - Placed in front of Postgres to provide connection pooling.
 1. **cloudflared** - Allows your applications to connect securely, through a encrypted tunnel, without opening any local ports.
@@ -71,8 +73,8 @@ $ docker compose up
 # Alternative: Run `docker compose up -D` to start docker-compose detached
 ```
 
-`docker-compose` will spin up and configure all the services for you, including the creation of the Tunnel's DNS record. 
-The DNS record will point to the Cloudflare Tunnel, which keeps a secure connection between a local instance of `cloudflared` and the Cloudflare network. 
+`docker-compose` will spin up and configure all the services for you, including the creation of the Tunnel's DNS record.
+The DNS record will point to the Cloudflare Tunnel, which keeps a secure connection between a local instance of `cloudflared` and the Cloudflare network.
 
 ### Import example dataset
 
@@ -115,42 +117,44 @@ The template script includes a simple query to select a number (`SELECT 42;`) th
 // Query the database.
 
 // Parse the URL, and get the 'pagila-table' query parameter (which may not exist)
-const url = new URL(request.url)
-const pagilaTable = url.searchParams.get("pagila-table")
+const url = new URL(request.url);
+const pagilaTable = url.searchParams.get('pagila-table');
 
-let result
+let result;
 // if pagilaTable is defined, run a query on the Pagila dataset
-if ([
-  "actor",
-  "address",
-  "category",
-  "city",
-  "country",
-  "customer",
-  "film",
-  "film_actor",
-  "film_category",
-  "inventory",
-  "language",
-  "payment",
-  "payment_p2020_01",
-  "payment_p2020_02",
-  "payment_p2020_03",
-  "payment_p2020_04",
-  "payment_p2020_05",
-  "payment_p2020_06",
-  "rental",
-  "staff",
-  "store",
-].includes(pagilaTable)) {
-  result = await client.queryObject(`SELECT * FROM ${pagilaTable};`)
+if (
+  [
+    'actor',
+    'address',
+    'category',
+    'city',
+    'country',
+    'customer',
+    'film',
+    'film_actor',
+    'film_category',
+    'inventory',
+    'language',
+    'payment',
+    'payment_p2020_01',
+    'payment_p2020_02',
+    'payment_p2020_03',
+    'payment_p2020_04',
+    'payment_p2020_05',
+    'payment_p2020_06',
+    'rental',
+    'staff',
+    'store',
+  ].includes(pagilaTable)
+) {
+  result = await client.queryObject(`SELECT * FROM ${pagilaTable};`);
 } else {
-  const param = 42
-  result = await client.queryObject(`SELECT ${param} as answer;`)
+  const param = 42;
+  result = await client.queryObject(`SELECT ${param} as answer;`);
 }
 
 // Return result from database.
-return new Response(JSON.stringify(result))
+return new Response(JSON.stringify(result));
 ```
 
 ## Worker deployment

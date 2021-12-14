@@ -6,8 +6,8 @@ pcx-content-type: faq
 
 # Frequently asked questions about Cloudflare Stream
 
-* [Stream](#stream)
-* [Stream Live](#stream-live)
+- [Stream](#stream)
+- [Stream Live](#stream-live)
 
 ## Stream
 
@@ -17,7 +17,7 @@ Cloudflare decides on which bitrate, resolution, and codec is best for you. We d
 
 ### Can I download original video files from Stream?
 
-You cannot download the *exact* input file that you uploaded. However, depending on your use case, you can use the [Downloadable Videos](https://developers.cloudflare.com/stream/viewing-videos/download-videos) feature to get encoded MP4s for use cases like offline viewing.
+You cannot download the _exact_ input file that you uploaded. However, depending on your use case, you can use the [Downloadable Videos](https://developers.cloudflare.com/stream/viewing-videos/download-videos) feature to get encoded MP4s for use cases like offline viewing.
 
 ### Is there a limit to the amount of videos I can upload?
 
@@ -59,13 +59,13 @@ You can embed the Stream player on the following platforms:
 
 <TableWrap>
 
-Browser         | Version
-----------------|-----------------------------------
-Chrome          | Supported since Chrome version 88+
-Firefox         | Supported since Firefox version 87+
-Edge            | Supported since Edge 89+
-Safari          | Supported since Safari version 14+
-Opera           | Supported since Opera version 75+
+| Browser | Version                             |
+| ------- | ----------------------------------- |
+| Chrome  | Supported since Chrome version 88+  |
+| Firefox | Supported since Firefox version 87+ |
+| Edge    | Supported since Edge 89+            |
+| Safari  | Supported since Safari version 14+  |
+| Opera   | Supported since Opera version 75+   |
 
 </TableWrap>
 
@@ -77,12 +77,12 @@ Cloudflare Stream is not available on Chromium, as Chromium does not support H.2
 
 <TableWrap>
 
-Mobile Platform   | Version
-------------------|-----------------------------------------------------------------------------------
-Chrome on Android | Supported on Chrome 90
-UC Browser on Android | Supported on version 12.12+
-Samsung Internet | Supported on 13+
-Safari on iOS    | Supported on iOS 13.4+. Speed selector supported when not in fullscreen.
+| Mobile Platform       | Version                                                                  |
+| --------------------- | ------------------------------------------------------------------------ |
+| Chrome on Android     | Supported on Chrome 90                                                   |
+| UC Browser on Android | Supported on version 12.12+                                              |
+| Samsung Internet      | Supported on 13+                                                         |
+| Safari on iOS         | Supported on iOS 13.4+. Speed selector supported when not in fullscreen. |
 
 </TableWrap>
 
@@ -90,24 +90,24 @@ Safari on iOS    | Supported on iOS 13.4+. Speed selector supported when not in 
 
 If you are producing a brand new file for Cloudflare Stream, we recommend you use the following settings:
 
- - MP4 containers, AAC audio codec, H264 video codec, 30 or below frames per second
- - moov atom should be at the front of the file (Fast Start)
- - H264 progressive scan (no interlacing)
- - H264 high profile
- - Closed GOP
- - Content should be encoded and uploaded in the same frame rate it was recorded
- - Mono or Stereo audio (Stream will mix audio tracks with more than 2 channels down to stereo)
+- MP4 containers, AAC audio codec, H264 video codec, 30 or below frames per second
+- moov atom should be at the front of the file (Fast Start)
+- H264 progressive scan (no interlacing)
+- H264 high profile
+- Closed GOP
+- Content should be encoded and uploaded in the same frame rate it was recorded
+- Mono or Stereo audio (Stream will mix audio tracks with more than 2 channels down to stereo)
 
 Below are bitrate recommendations for encoding new videos for Stream:
 
 <TableWrap>
 
-Resolution  |  Recommended bitrate
-------------|---------
-1080p  |	8 Mbps
-720p  |	4.8 Mbps
-480p  |	2.4 Mbps
-360p | 1 Mbps
+| Resolution | Recommended bitrate |
+| ---------- | ------------------- |
+| 1080p      | 8 Mbps              |
+| 720p       | 4.8 Mbps            |
+| 480p       | 2.4 Mbps            |
+| 360p       | 1 Mbps              |
 
 </TableWrap>
 
@@ -125,8 +125,8 @@ As long as you have a Cloudflare Stream subscription, you can use all the featur
 
 Stream Live billing works the same way as Stream On-demand:
 
-* You pay $5 per 1000 minutes of recorded video.
-* You pay $1 per 1000 minutes of delivered video.
+- You pay $5 per 1000 minutes of recorded video.
+- You pay $1 per 1000 minutes of delivered video.
 
 All Stream Live videos are automatically recorded. There is no additional cost for encoding and packaging live videos.
 
@@ -134,9 +134,9 @@ All Stream Live videos are automatically recorded. There is no additional cost f
 
 Some limits apply to the Stream Live Beta:
 
-* You can create up to 1000 live inputs per account.
-* You can configure up to 50 outputs per live input.
-* You should use a maximum recommended bitrate of 12000 kbps.
+- You can create up to 1000 live inputs per account.
+- You can configure up to 50 outputs per live input.
+- You should use a maximum recommended bitrate of 12000 kbps.
 
 If your use case requires the limits to be increased, please contact support.
 

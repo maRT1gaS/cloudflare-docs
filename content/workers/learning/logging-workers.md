@@ -15,22 +15,22 @@ Any `console.log` statements within your Worker will appear within `wrangler tai
 
 ```js
 addEventListener('fetch', event => {
-  event.respondWith(handleRequest(event.request))
-})
+  event.respondWith(handleRequest(event.request));
+});
 
 /**
  * Respond with hello worker text
  * @param {Request} request
  */
 async function handleRequest(request) {
-  const { cf } = request
-  const { city, country } = cf
+  const { cf } = request;
+  const { city, country } = cf;
 
   console.log(`Request came from city: ${city} in country: ${country}`);
 
   return new Response('Hello worker!', {
     headers: { 'content-type': 'text/plain' },
-  })
+  });
 }
 ```
 
@@ -94,7 +94,7 @@ Note that:
 - Logs from any [Durable Objects](/learning/using-durable-objects) your Worker is using will show up in the dashboard.
 - A maximum of 10 clients can view a Worker's logs at one time. This can be a combination of either dashboard sessions or `wrangler tail` calls.
 
---------------------------------
+---
 
 ## Identifying and handling errors and exceptions
 
@@ -105,7 +105,7 @@ When a Worker running in production has an error that prevents it from returning
 <TableWrap>
 
 | Error code | Meaning                                                                                                  |
-| ---------- | ---------------------------------------------------------------------------------------------------------|
+| ---------- | -------------------------------------------------------------------------------------------------------- |
 | 1101       | Worker threw a JavaScript exception.                                                                     |
 | 1102       | Worker exceeded [CPU time limit](/platform/limits).                                                      |
 | 1015       | Your client IP is being rate limited.                                                                    |
@@ -137,23 +137,23 @@ A Worker can make HTTP requests to any HTTP service on the public Internet. You 
 When using an external logging strategy, remember that outstanding asynchronous tasks are canceled as soon as a Worker finishes sending its main response body to the client. To ensure that a logging subrequest completes, pass the request promise to [`event.waitUntil()`](https://developer.mozilla.org/en-US/docs/Web/API/ExtendableEvent/waitUntil). For example:
 
 ```js
-addEventListener("fetch", event => {
-  event.respondWith(handleEvent(event))
-})
+addEventListener('fetch', event => {
+  event.respondWith(handleEvent(event));
+});
 
 async function handleEvent(event) {
   // ...
 
   // Without event.waitUntil(), the `postLog` function may or may not complete.
-  event.waitUntil(postLog(stack))
-  return fetch(event.request)
+  event.waitUntil(postLog(stack));
+  return fetch(event.request);
 }
 
 function postLog(data) {
-  return fetch("https://log-service.example.com/", {
-    method: "POST",
+  return fetch('https://log-service.example.com/', {
+    method: 'POST',
     body: data,
-  })
+  });
 }
 ```
 
@@ -162,14 +162,14 @@ function postLog(data) {
 By using [`event.passThroughOnException`](/runtime-apis/fetch-event#methods), a Workers application will forward requests to your origin if an exception is thrown during the Worker's execution. This allows you to add logging, tracking, or other features with Workers, without degrading your application's functionality.
 
 ```js
-addEventListener("fetch", event => {
-  event.passThroughOnException()
-  event.respondWith(handleRequest(event.request))
-})
+addEventListener('fetch', event => {
+  event.passThroughOnException();
+  event.respondWith(handleRequest(event.request));
+});
 
 async function handleRequest(request) {
   // An error here will return the origin response, as if the Worker wasn’t present.
   // ...
-  return fetch(request)
+  return fetch(request);
 }
 ```

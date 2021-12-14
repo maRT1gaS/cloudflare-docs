@@ -6,8 +6,8 @@ order: 230
 
 # Order and priority
 
-import firewallRulesOrderAndPriority2 from '../images/firewall-rules-order-and-priority-2.gif'
-import firewallRulesOrderAndPriority3 from '../images/firewall-rules-order-and-priority-3.gif'
+import firewallRulesOrderAndPriority2 from '../images/firewall-rules-order-and-priority-2.gif';
+import firewallRulesOrderAndPriority3 from '../images/firewall-rules-order-and-priority-3.gif';
 
 ## Overview
 
@@ -65,7 +65,7 @@ Firewall Rules does not impose default priorities, and you are not required to s
 
 ## Working with priority ordering
 
-Cloudflare has designed priority ordering to be extremely flexible. This flexibility is particularly useful for managing large rulesets programmatically via the Cloudflare API. Use the Update Firewall Rules command to set the `priority` property. See [_Cloudflare API v4 Documentation: Firewall Rules_](https://api.cloudflare.com/#firewall-rules-properties)_ for details.
+Cloudflare has designed priority ordering to be extremely flexible. This flexibility is particularly useful for managing large rulesets programmatically via the Cloudflare API. Use the Update Firewall Rules command to set the `priority` property. See [_Cloudflare API v4 Documentation: Firewall Rules_](https://api.cloudflare.com/#firewall-rules-properties)\_ for details.
 
 While your priority numbering scheme can be arbitrary, keep the following in mind:
 

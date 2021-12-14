@@ -4,15 +4,15 @@ title: iOS
 pcx-content-type: how-to
 ---
 
-import CaptivePortals from "../_partials/_captive-portals.md"
+import CaptivePortals from '../_partials/_captive-portals.md';
 
 # Set up 1.1.1.1 for Families - iOS
 
-[1.1.1.1: Faster Internet](https://apps.apple.com/us/app/1-1-1-1-faster-internet/id1423538627) is the preferred method of setting up 1.1.1.1 for Families in iOS devices. It allows you to automatically configure your phone to use 1.1.1.1 for Families on any network you connect to, and solves iOS inability of using an alternative DNS resolver in cellular connections. 
+[1.1.1.1: Faster Internet](https://apps.apple.com/us/app/1-1-1-1-faster-internet/id1423538627) is the preferred method of setting up 1.1.1.1 for Families in iOS devices. It allows you to automatically configure your phone to use 1.1.1.1 for Families on any network you connect to, and solves iOS inability of using an alternative DNS resolver in cellular connections.
 
 The app also allows you to enable encryption for DNS queries to the 1.1.1.1 DNS resolver or enable [WARP mode](https://developers.cloudflare.com/warp-client/), which keeps all your HTTP traffic private and secure, including your DNS queries to 1.1.1.1.
 
-You can select between these two options in 1.1.1.1: Faster Internet's settings. By default, 1.1.1.1:Faster Internet is configured to WARP mode. 
+You can select between these two options in 1.1.1.1: Faster Internet's settings. By default, 1.1.1.1:Faster Internet is configured to WARP mode.
 
 ### Set up 1.1.1.1: Faster Internet
 
@@ -24,7 +24,7 @@ You can select between these two options in 1.1.1.1: Faster Internet's settings.
 1. Select **Advanced** > **Connection options**.
 1. In **DNS settings** > **1.1.1.1 for Families**, select the option you want to use.
 
-Your connection to the Internet and your DNS queries are now private and protected. Alternatively, you may want to only encrypt your DNS queries and leave the remaining traffic unencrypted. If this is the case: 
+Your connection to the Internet and your DNS queries are now private and protected. Alternatively, you may want to only encrypt your DNS queries and leave the remaining traffic unencrypted. If this is the case:
 
 1. Open 1.1.1.1: Faster Internet.
 1. Toggle the WARP button and choose **Switch to DNS only mode**. If the WARP toggle is disconnected, tap the **menu button**.
@@ -52,10 +52,10 @@ If you configure 1.1.1.1 for Families manually, you will have to do it for every
 1. Take note of any IP addresses you might have and save them in a safe place in case you need to use them later.
 1. Remove any IP addresses that may be already listed and in their place add:
 
-    ```txt
-    1.1.1.2
-    1.0.0.2
-    ```
+   ```txt
+   1.1.1.2
+   1.0.0.2
+   ```
 
 1. Select **Save**.
 
@@ -69,11 +69,11 @@ If you configure 1.1.1.1 for Families manually, you will have to do it for every
 1. Take note of any IP addresses you might have and save them in a safe place in case you need to use them later.
 1. Remove any IP addresses that may be already listed and in their place add:
 
-    ```txt
-    1.1.1.3
-    1.0.0.3
-    ```
+   ```txt
+   1.1.1.3
+   1.0.0.3
+   ```
 
 1. Select **Save**.
 
-<CaptivePortals/>
+<CaptivePortals />

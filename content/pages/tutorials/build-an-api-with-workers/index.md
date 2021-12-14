@@ -395,7 +395,7 @@ export default Post;
 
 ### Publishing with Cloudflare Pages
 
-Publishing your project with Cloudflare Pages is an easy, two-step process: first, push your project to GitHub, and then in the Cloudflare Pages dashboard, set up a new project based on that GitHub repository. 
+Publishing your project with Cloudflare Pages is an easy, two-step process: first, push your project to GitHub, and then in the Cloudflare Pages dashboard, set up a new project based on that GitHub repository.
 
 Pages will deploy a new version of your site each time you publish and will set up preview deployments whenever you open a new pull request.
 
@@ -433,4 +433,4 @@ In this tutorial, you built a full blog application by combining a front end dep
 
 If you enjoyed this tutorial, refer to the [headless CMS tutorial] to learn how to build a blog using Nuxt.js and Sanity.io.
 
-[headless CMS tutorial]:/tutorials/build-a-blog-using-nuxt-and-sanity
+[headless cms tutorial]: /tutorials/build-a-blog-using-nuxt-and-sanity

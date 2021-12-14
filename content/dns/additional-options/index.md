@@ -5,4 +5,4 @@ pcx-content-type: navigation
 
 # Additional options
 
-<DirectoryListing path="/additional-options"/>
+<DirectoryListing path="/additional-options" />

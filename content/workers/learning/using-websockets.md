@@ -35,7 +35,9 @@ A client can make a WebSocket request in the browser by instantiating a new inst
 
 ```js
 // In client-side JavaScript, connect to your Workers function using WebSockets:
-const websocket = new WebSocket("wss://example-websocket.signalnerve.workers.dev")
+const websocket = new WebSocket(
+  'wss://example-websocket.signalnerve.workers.dev'
+);
 ```
 
 <Aside type="note">
@@ -48,9 +50,9 @@ When an incoming WebSocket request reaches the Workers function, it will contain
 
 ```js
 async function handleRequest(request) {
-  const upgradeHeader = request.headers.get("Upgrade")
-  if (!upgradeHeader || upgradeHeader !== "websocket") {
-    return new Response("Expected Upgrade: websocket", { status: 426 })
+  const upgradeHeader = request.headers.get('Upgrade');
+  if (!upgradeHeader || upgradeHeader !== 'websocket') {
+    return new Response('Expected Upgrade: websocket', { status: 426 });
   }
 }
 ```
@@ -59,18 +61,19 @@ After you have appropriately checked for the `Upgrade` header, you can create a 
 
 ```js
 async function handleRequest(request) {
-  const upgradeHeader = request.headers.get("Upgrade")
-  if (!upgradeHeader || upgradeHeader !== "websocket") {
-    return new Response("Expected Upgrade: websocket", { status: 426 })
+  const upgradeHeader = request.headers.get('Upgrade');
+  if (!upgradeHeader || upgradeHeader !== 'websocket') {
+    return new Response('Expected Upgrade: websocket', { status: 426 });
   }
 
-  const webSocketPair = new WebSocketPair()
-  const client = webSocketPair[0], server = webSocketPair[1]
+  const webSocketPair = new WebSocketPair();
+  const client = webSocketPair[0],
+    server = webSocketPair[1];
 
   return new Response(null, {
     status: 101,
-    webSocket: client
-  })
+    webSocket: client,
+  });
 }
 ```
 
@@ -80,20 +83,20 @@ In order to begin communicating with the `client` WebSocket in your Worker, call
 
 ```js
 async function handleRequest(request) {
-  const upgradeHeader = request.headers.get("Upgrade")
-  if (!upgradeHeader || upgradeHeader !== "websocket") {
-    return new Response("Expected Upgrade: websocket", { status: 426 })
+  const upgradeHeader = request.headers.get('Upgrade');
+  if (!upgradeHeader || upgradeHeader !== 'websocket') {
+    return new Response('Expected Upgrade: websocket', { status: 426 });
   }
 
-  const webSocketPair = new WebSocketPair()
-  const [client, server] = Object.values(webSocketPair)
+  const webSocketPair = new WebSocketPair();
+  const [client, server] = Object.values(webSocketPair);
 
-  server.accept()
+  server.accept();
 
   return new Response(null, {
     status: 101,
-    webSocket: client
-  })
+    webSocket: client,
+  });
 }
 ```
 
@@ -101,23 +104,23 @@ WebSockets emit a number of [Events](/runtime-apis/websockets#events) that can b
 
 ```js
 async function handleRequest(request) {
-  const upgradeHeader = request.headers.get("Upgrade")
-  if (!upgradeHeader || upgradeHeader !== "websocket") {
-    return new Response("Expected Upgrade: websocket", { status: 426 })
+  const upgradeHeader = request.headers.get('Upgrade');
+  if (!upgradeHeader || upgradeHeader !== 'websocket') {
+    return new Response('Expected Upgrade: websocket', { status: 426 });
   }
 
-  const webSocketPair = new WebSocketPair()
-  const [client, server] = Object.values(webSocketPair)
+  const webSocketPair = new WebSocketPair();
+  const [client, server] = Object.values(webSocketPair);
 
-  server.accept()
-  server.addEventListener("message", event => {
-    console.log(event.data)
-  })
+  server.accept();
+  server.addEventListener('message', event => {
+    console.log(event.data);
+  });
 
   return new Response(null, {
     status: 101,
-    webSocket: client
-  })
+    webSocket: client,
+  });
 }
 ```
 
@@ -126,30 +129,32 @@ async function handleRequest(request) {
 Writing WebSocket clients that communicate with your Workers function is a two-step process: first, create the WebSocket instance, and then attach event listeners to it:
 
 ```js
-const websocket = new WebSocket("wss://websocket-example.signalnerve.workers.dev")
-websocket.addEventListener("message", event => {
-  console.log("Message received from server")
-  console.log(event.data)
-})
+const websocket = new WebSocket(
+  'wss://websocket-example.signalnerve.workers.dev'
+);
+websocket.addEventListener('message', event => {
+  console.log('Message received from server');
+  console.log(event.data);
+});
 ```
 
 WebSocket clients can send messages back to the server using the [`send`](/runtime-apis/websockets#send) function:
 
 ```js
-websocket.send("MESSAGE")
+websocket.send('MESSAGE');
 ```
 
 When the WebSocket interaction is complete, the client can close the connection using [`close`](/runtime-apis/websockets#close):
 
 ```js
-websocket.close()
+websocket.close();
 ```
 
 For an example of this in practice, refer to the [`websocket-template`](https://github.com/cloudflare/websocket-template) to get started with WebSockets.
 
 ## Writing a WebSocket client
 
-A Worker can also establish a WebSocket connection to a remote server. 
+A Worker can also establish a WebSocket connection to a remote server.
 
 Cloudflare does not currently support the client implementation described above within a Worker. Instead, WebSockets are established by making a fetch request to a URL with the `Upgrade` header set.
 
@@ -160,8 +165,8 @@ async function websocket(url) {
   // of the WebSocket protocol, like the Sec-WebSocket-Key header.
   let resp = await fetch(url, {
     headers: {
-      "Upgrade": "websocket"
-    }
+      Upgrade: 'websocket',
+    },
   });
 
   // If the WebSocket handshake completed successfully, then the
@@ -176,8 +181,8 @@ async function websocket(url) {
   ws.accept();
 
   // Now you can send and receive messages like before.
-  ws.send("hello");
-  ws.addEventListener("message", msg => {
+  ws.send('hello');
+  ws.addEventListener('message', msg => {
     console.log(msg.data);
   });
 }

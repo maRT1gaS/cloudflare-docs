@@ -260,7 +260,9 @@
   color: inherit;
   background: inherit;
 }
-.algolia-autocomplete .algolia-docsearch-suggestion--text .algolia-docsearch-suggestion--highlight {
+.algolia-autocomplete
+  .algolia-docsearch-suggestion--text
+  .algolia-docsearch-suggestion--highlight {
   padding: 0 0 1px;
   background: inherit;
   box-shadow: inset 0 -2px 0 0 rgba(69, 142, 225, 0.8);
@@ -358,13 +360,17 @@
   border-radius: 3px;
   font-family: Menlo, Monaco, Consolas, Courier New, monospace;
 }
-.algolia-autocomplete .algolia-docsearch-suggestion code .algolia-docsearch-suggestion--highlight {
+.algolia-autocomplete
+  .algolia-docsearch-suggestion
+  code
+  .algolia-docsearch-suggestion--highlight {
   background: none;
 }
 .algolia-autocomplete
   .algolia-docsearch-suggestion.algolia-docsearch-suggestion__main
   .algolia-docsearch-suggestion--category-header,
-.algolia-autocomplete .algolia-docsearch-suggestion.algolia-docsearch-suggestion__secondary {
+.algolia-autocomplete
+  .algolia-docsearch-suggestion.algolia-docsearch-suggestion__secondary {
   display: block;
 }
 @media (min-width: 768px) {
@@ -398,7 +404,9 @@
     .algolia-docsearch-suggestion--subcategory-column:after {
     content: '|';
   }
-  .algolia-autocomplete .algolia-docsearch-suggestion .algolia-docsearch-suggestion--content {
+  .algolia-autocomplete
+    .algolia-docsearch-suggestion
+    .algolia-docsearch-suggestion--content {
     display: inline-block;
     width: auto;
     text-align: left;
@@ -416,21 +424,29 @@
   padding: 8px;
   margin: 0;
 }
-.algolia-autocomplete .suggestion-layout-simple .algolia-docsearch-suggestion--content {
+.algolia-autocomplete
+  .suggestion-layout-simple
+  .algolia-docsearch-suggestion--content {
   width: 100%;
   padding: 0;
 }
-.algolia-autocomplete .suggestion-layout-simple .algolia-docsearch-suggestion--content:before {
+.algolia-autocomplete
+  .suggestion-layout-simple
+  .algolia-docsearch-suggestion--content:before {
   display: none;
 }
-.algolia-autocomplete .suggestion-layout-simple .algolia-docsearch-suggestion--category-header {
+.algolia-autocomplete
+  .suggestion-layout-simple
+  .algolia-docsearch-suggestion--category-header {
   margin: 0;
   padding: 0;
   display: block;
   width: 100%;
   border: none;
 }
-.algolia-autocomplete .suggestion-layout-simple .algolia-docsearch-suggestion--category-header-lvl0,
+.algolia-autocomplete
+  .suggestion-layout-simple
+  .algolia-docsearch-suggestion--category-header-lvl0,
 .algolia-autocomplete
   .suggestion-layout-simple
   .algolia-docsearch-suggestion--category-header-lvl1 {
@@ -446,29 +462,41 @@
   height: 10px;
   display: inline-block;
 }
-.algolia-autocomplete .suggestion-layout-simple .algolia-docsearch-suggestion--wrapper {
+.algolia-autocomplete
+  .suggestion-layout-simple
+  .algolia-docsearch-suggestion--wrapper {
   width: 100%;
   float: left;
   margin: 0;
   padding: 0;
 }
-.algolia-autocomplete .suggestion-layout-simple .algolia-docsearch-suggestion--duplicate-content,
-.algolia-autocomplete .suggestion-layout-simple .algolia-docsearch-suggestion--subcategory-inline {
+.algolia-autocomplete
+  .suggestion-layout-simple
+  .algolia-docsearch-suggestion--duplicate-content,
+.algolia-autocomplete
+  .suggestion-layout-simple
+  .algolia-docsearch-suggestion--subcategory-inline {
   display: none !important;
 }
-.algolia-autocomplete .suggestion-layout-simple .algolia-docsearch-suggestion--title {
+.algolia-autocomplete
+  .suggestion-layout-simple
+  .algolia-docsearch-suggestion--title {
   margin: 0;
   color: #458ee1;
   font-size: 0.9em;
   font-weight: 400;
 }
-.algolia-autocomplete .suggestion-layout-simple .algolia-docsearch-suggestion--title:before {
+.algolia-autocomplete
+  .suggestion-layout-simple
+  .algolia-docsearch-suggestion--title:before {
   content: '#';
   font-weight: 700;
   color: #458ee1;
   display: inline-block;
 }
-.algolia-autocomplete .suggestion-layout-simple .algolia-docsearch-suggestion--text {
+.algolia-autocomplete
+  .suggestion-layout-simple
+  .algolia-docsearch-suggestion--text {
   margin: 4px 0 0;
   display: block;
   line-height: 1.4em;

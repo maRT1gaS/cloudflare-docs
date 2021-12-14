@@ -1,22 +1,23 @@
 ---
 updated: 2020-06-01
 difficulty: Beginner
-content_type: "📝 Tutorial"
+content_type: '📝 Tutorial'
 pcx-content-type: tutorial
 ---
 
-import TutorialsBeforeYouStart from "../../_partials/_tutorials-before-you-start.md"
+import TutorialsBeforeYouStart from '../../_partials/_tutorials-before-you-start.md';
 
 <!-- Use non-breaking hyphens &#8209; instead of - to improve layout -->
+
 # Deploy a React app with create&#8209;react&#8209;app
 
-<TutorialsBeforeYouStart/>
+<TutorialsBeforeYouStart />
 
 ## Overview
 
 In this tutorial, you will use [Wrangler](https://github.com/cloudflare/wrangler) and [Cloudflare Workers](https://workers.cloudflare.com) to deploy and serve a static site. With the rise of architectures like [JAMStack](https://jamstack.org/), static sites have become a simple, streamlined way to combine highly-available static assets with performant backend code, especially when deployed in a serverless model. With Workers, your application will be distributed to over 200+ locations around the world, and served directly from Cloudflare’s CDN at the server closest to your users.
 
-<YouTube id="6YC3MgVwCGA"/>
+<YouTube id="6YC3MgVwCGA" />
 
 If you just want to review the code used in this tutorial, the final version of the codebase is [available on GitHub](https://github.com/signalnerve/react-workers-template). You can take that code, customize it, and deploy it for use in your own projects.
 
@@ -49,7 +50,7 @@ $ cd my-static-site
 $ wrangler init --site
 ```
 
-The `init --site` command will provide the scaffolding necessary to deploy your React application. For the majority of static sites, you should not need to change the Workers script. By default, the script will look at an incoming request, and will serve a corresponding asset from [Workers KV](https://www.cloudflare.com/products/workers-kv/) based on that route. 
+The `init --site` command will provide the scaffolding necessary to deploy your React application. For the majority of static sites, you should not need to change the Workers script. By default, the script will look at an incoming request, and will serve a corresponding asset from [Workers KV](https://www.cloudflare.com/products/workers-kv/) based on that route.
 
 For example, if you deploy a static site at `mystaticsite.com`, requesting `mystaticsite.com/about.html` will look for a file in KV called `about.html`, and serve it back to the client. In addition, if the asset being returned from KV is cacheable, it will automatically be cached with Cloudflare’s CDN, making subsequent requests even faster.
 

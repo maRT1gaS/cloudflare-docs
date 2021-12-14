@@ -51,7 +51,7 @@ Set the waiting room's queueing method to [**Reject**](/reference/queueing-metho
 
 ## Set up a "lottery"
 
-Set up a "lottery" system to reward all users who enter into the queue prior to your event start time. 
+Set up a "lottery" system to reward all users who enter into the queue prior to your event start time.
 
 Users who reach your application **during the prequeue period** are [randomly assigned](/reference/queueing-methods#random) a place in line when the event starts. If the event uses [FIFO ordering](/reference/queueing-methods#first-in-first-out-fifo), users who reach your application **after the prequeue period** are assigned places after users from the prequeue.
 
@@ -74,12 +74,12 @@ To edit an event, use a [PATCH request](https://api.cloudflare.com/#waiting-room
 
 You can disable an event by setting its `suspended` parameter to `true`.
 
-Additionally, events will not become active if a waiting room itself is **Disabled**. 
+Additionally, events will not become active if a waiting room itself is **Disabled**.
 
 ## Other API commands
 
-Function | Command 
----------|---------
-[Get event details](https://api.cloudflare.com/#waiting-room-event-details) | `GET`
-[List scheduled events](https://api.cloudflare.com/#waiting-room-list-events) | `GET`
-[Delete event](https://api.cloudflare.com/#waiting-room-delete-event) | `DELETE`
+| Function                                                                      | Command  |
+| ----------------------------------------------------------------------------- | -------- |
+| [Get event details](https://api.cloudflare.com/#waiting-room-event-details)   | `GET`    |
+| [List scheduled events](https://api.cloudflare.com/#waiting-room-list-events) | `GET`    |
+| [Delete event](https://api.cloudflare.com/#waiting-room-delete-event)         | `DELETE` |

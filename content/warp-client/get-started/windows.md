@@ -6,7 +6,7 @@ pcx-content-type: how-to
 
 # Windows desktop client
 
-1. [Download __Cloudflare_WARP_Release-x64.msi__](https://www.cloudflarewarp.com/Cloudflare_WARP_Release-x64.msi).
+1. [Download **Cloudflare_WARP_Release-x64.msi**](https://www.cloudflarewarp.com/Cloudflare_WARP_Release-x64.msi).
 1. Navigate to the **Downloads** folder.
 1. Open `Cloudflare_WARP_Release-x64.msi`.
 1. Follow the instructions in the installer to complete installation. Cloudflare WARP will automatically launch and appear in your menu bar with the Cloudflare logo.
@@ -19,8 +19,8 @@ pcx-content-type: how-to
 
 This is the main GUI application that you interact with. You can find it in:
 
-* The **Start** menu > **Cloudflare**.
-* On your disk, in `C:\Program Files\Cloudflare\Cloudflare WARP\Cloudflare WARP.exe`.
+- The **Start** menu > **Cloudflare**.
+- On your disk, in `C:\Program Files\Cloudflare\Cloudflare WARP\Cloudflare WARP.exe`.
 
 ### Cloudflare WARP service
 
@@ -30,8 +30,8 @@ This is the Windows service that is responsible for establishing the wireguard t
 
 The Windows application places log files in two locations based on what part of the application is logging information. These logs are included during feedback submission when you check **Feedback** > **Share debug information**. You can find the logs for:
 
-* **WARP Service**: `C:\ProgramData\Cloudflare`.
-* **Application GUI Logs**: `C:\Users\<your username>\AppData\Local\Cloudflare`.
+- **WARP Service**: `C:\ProgramData\Cloudflare`.
+- **Application GUI Logs**: `C:\Users\<your username>\AppData\Local\Cloudflare`.
 
 ## How to remove the application
 

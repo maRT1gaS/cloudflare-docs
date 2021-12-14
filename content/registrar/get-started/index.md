@@ -7,4 +7,4 @@ pcx-content-type: navigation
 
 To transfer your domain to Cloudflare, complete the following tasks:
 
-<DirectoryListing path="/get-started"/>
+<DirectoryListing path="/get-started" />

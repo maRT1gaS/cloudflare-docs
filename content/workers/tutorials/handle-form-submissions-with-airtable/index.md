@@ -1,15 +1,15 @@
 ---
 updated: 2021-06-17
 difficulty: Beginner
-content_type: "📝 Tutorial"
+content_type: '📝 Tutorial'
 pcx-content-type: tutorial
 ---
 
-import TutorialsBeforeYouStart from "../../_partials/_tutorials-before-you-start.md"
+import TutorialsBeforeYouStart from '../../_partials/_tutorials-before-you-start.md';
 
 # Handle form submissions with Airtable
 
-<TutorialsBeforeYouStart/>
+<TutorialsBeforeYouStart />
 
 ## Overview
 
@@ -19,7 +19,7 @@ In this tutorial, we'll use Workers and [Airtable](https://airtable.com) to pers
 
 ![Example GIF of complete Airtable and serverless function integration](./example.gif)
 
-[The source for this project can be found on GitHub](https://github.com/cloudflare/workers-airtable-form)—note that this codebase includes both a front-end component (built with [React](https://reactjs.org) and [Tailwind CSS](https://tailwindcss.com)), as well as a serverless function for handling the interaction with Airtable. 
+[The source for this project can be found on GitHub](https://github.com/cloudflare/workers-airtable-form)—note that this codebase includes both a front-end component (built with [React](https://reactjs.org) and [Tailwind CSS](https://tailwindcss.com)), as well as a serverless function for handling the interaction with Airtable.
 
 **[The front-end portion of this site](https://airtable-form-example.pages.dev) does not require any specific React experience.** It uses a basic HTML5 form, showing that you can use Workers to handle any kind of form, whether entirely in HTML, or client-side, JS-heavy forms, such as with React or other front-end frameworks.
 
@@ -40,7 +40,7 @@ If you're unfamiliar with HTML5 forms, the Mozilla Developer Network's ["Web For
 
 </Aside>
 
-To pass data _inside_ of the form, you can use `input` tags. `input` tags have a `type`, which specifies how the `input` should render, and what kind of data it contains. When an `input` has a `name` attribute, the `form` will submit that data to the provided `action` URL, matching that `name` attribute. 
+To pass data _inside_ of the form, you can use `input` tags. `input` tags have a `type`, which specifies how the `input` should render, and what kind of data it contains. When an `input` has a `name` attribute, the `form` will submit that data to the provided `action` URL, matching that `name` attribute.
 
 <Aside>
 
@@ -56,16 +56,14 @@ The `form` used in the example front-end UI builds on these basics, adding some 
 
 ![The completed form in the front-end user interface](./ui.png)
 
-The code for this form can be [found on GitHub](https://github.com/cloudflare/workers-airtable-form/blob/main/frontend/src/Form.js). Of particular note is the `form` action, which has a placeholder for our serverless function URL, and the `method` attribute, which tells the form to submit using an [HTTP POST](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/POST). 
+The code for this form can be [found on GitHub](https://github.com/cloudflare/workers-airtable-form/blob/main/frontend/src/Form.js). Of particular note is the `form` action, which has a placeholder for our serverless function URL, and the `method` attribute, which tells the form to submit using an [HTTP POST](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/POST).
 
 Some sample code is provided as an example below, including the first `input`, to show that the `name` is set to the value `first_name`, as well as the standard `button` with `type="submit"`:
 
 ```html
 <form action="SERVERLESS_FN_URL" method="POST" class="...">
   <div>
-    <label for="first_name" class="...">
-      First name
-    </label>
+    <label for="first_name" class="..."> First name </label>
     <div class="...">
       <input
         type="text"
@@ -81,13 +79,11 @@ Some sample code is provided as an example below, including the first `input`, t
 
   <!-- Rest of form -->
 
-  <button type="submit" class="...">
-    Submit
-  </button>
+  <button type="submit" class="...">Submit</button>
 </form>
 ```
 
-If you'd like to follow along with this example, you can directly copy the `form` code from the [`Form` component](https://github.com/cloudflare/workers-airtable-form/blob/main/frontend/src/Form.js) into your own project, or use the codebase and plug in your own serverless function, following the next section in the tutorial. 
+If you'd like to follow along with this example, you can directly copy the `form` code from the [`Form` component](https://github.com/cloudflare/workers-airtable-form/blob/main/frontend/src/Form.js) into your own project, or use the codebase and plug in your own serverless function, following the next section in the tutorial.
 
 ## Create a serverless function
 
@@ -165,7 +161,7 @@ Further down the page, you'll begin to see example requests, showing you how to 
 
 ![An example request in Airtable's API documentation, with the Airtable API key highlighted](./api-key.png)
 
-To make this API key available in your codebase, you can use the `wrangler secret` command. The `secret` command encrypts and stores environment variables for use in your function, without revealing them to users. 
+To make this API key available in your codebase, you can use the `wrangler secret` command. The `secret` command encrypts and stores environment variables for use in your function, without revealing them to users.
 
 Run `wrangler secret put`, passing `AIRTABLE_API_KEY` as the name of your secret:
 
@@ -179,7 +175,6 @@ Enter the secret text you would like assigned to the variable AIRTABLE_API_KEY o
 🌀  Creating the secret for script name airtable-form-handler
 ✨  Success! Uploaded secret AIRTABLE_API_KEY.
 ```
-
 
 Before we continue, let's review the keys that we should have from Airtable:
 
@@ -239,8 +234,8 @@ const submitHandler = async request => {
   } = Object.fromEntries(body)
 
   // The keys in "fields" are case-sensitive, and
-  // should exactly match the field names you set up 
-  // in your Airtable table, such as "First Name". 
+  // should exactly match the field names you set up
+  // in your Airtable table, such as "First Name".
   const reqBody = {
     fields: {
       "First Name": first_name,
@@ -257,7 +252,7 @@ const submitHandler = async request => {
 }
 ```
 
-While the majority of this function is concerned with parsing the request _body_ (the data being sent as part of the request), there are two important things to note. First, if the HTTP method sent to this function _isn't_ `POST`, we'll return a new response with the status code of [`405 Method Not Allowed`](https://httpstatuses.com/405). 
+While the majority of this function is concerned with parsing the request _body_ (the data being sent as part of the request), there are two important things to note. First, if the HTTP method sent to this function _isn't_ `POST`, we'll return a new response with the status code of [`405 Method Not Allowed`](https://httpstatuses.com/405).
 
 The variable `reqBody` represents a collection of _fields_, which are key-value pairs for each column in our Airtable table. By formatting `reqBody` as an object with a collection of fields, we're creating a new record in our table with a value for each field.
 
@@ -314,8 +309,13 @@ $ wrangler publish
 You'll notice that your function is deployed to a unique URL—for instance, `https://workers-airtable-form.cloudflare.workers.dev`. This represents the first part of your front-end form's `action` attribute—the second part is the _path_ for our form handler, which is `/submit`. In your front-end UI, configure your `form` tag as seen below:
 
 ```html
-<form action="https://workers-airtable-form.cloudflare.workers.dev/submit" method="POST" class="...">
-<!-- The rest of your HTML form -->
+<form
+  action="https://workers-airtable-form.cloudflare.workers.dev/submit"
+  method="POST"
+  class="..."
+>
+  <!-- The rest of your HTML form -->
+</form>
 ```
 
 Once you've deployed your new form (we recommend [Cloudflare Pages](https://pages.dev) for that), you should be able to submit a new form submission, and see the value show up immediately in Airtable:

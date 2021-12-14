@@ -17,18 +17,18 @@ Do the following:
 
 1. Open a terminal and navigate to the local folder containing the `matched-data-cli` tool.
 
-    ```sh
-    ~ $ cd matched-data-cli
-    ```
+   ```sh
+   ~ $ cd matched-data-cli
+   ```
 
 1. Run the following command:
 
-    ```sh
-    ~/matched-data-cli $ ./matched-data-cli generate-key-pair
-    {
-      "private_key": "uBS5eBttHrqkdY41kbZPdvYnNz8Vj0TvKIUpjB1y/GA=",
-      "public_key": "Ycig/Zr/pZmklmFUN99nr+taURlYItL91g+NcHGYpB8="
-    }
-    ```
+   ```sh
+   ~/matched-data-cli $ ./matched-data-cli generate-key-pair
+   {
+     "private_key": "uBS5eBttHrqkdY41kbZPdvYnNz8Vj0TvKIUpjB1y/GA=",
+     "public_key": "Ycig/Zr/pZmklmFUN99nr+taURlYItL91g+NcHGYpB8="
+   }
+   ```
 
 After generating the key pair, copy the public key value and enter it in the [payload logging configuration](/managed-rulesets/payload-logging/configure).

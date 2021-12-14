@@ -19,21 +19,21 @@ Once you have a site generated, follow these steps:
 
 1. Run this Wrangler command in the root of your project’s directory:
 
-  ```sh
-  $ wrangler init --site my-static-site
-  ```
+```sh
+$ wrangler init --site my-static-site
+```
 
-  This command creates a few things: `wrangler.toml` and a `workers-site` directory.
+This command creates a few things: `wrangler.toml` and a `workers-site` directory.
 
 2. Add your site’s build directory to the `wrangler.toml`:
 
-  ```toml
-  [site]
-  bucket = "./public" # <-- Add your build directory name here!
-  entry-point = "workers-site"
-  ```
+```toml
+[site]
+bucket = "./public" # <-- Add your build directory name here!
+entry-point = "workers-site"
+```
 
-  The default directories for the most popular static site generators are listed below:
+The default directories for the most popular static site generators are listed below:
 
     - Hugo: `public`
     - Gatsby: `public`
@@ -44,27 +44,27 @@ Once you have a site generated, follow these steps:
 
 4. You can preview your site by running:
 
-  ```sh
-  $ wrangler dev
-  ```
+```sh
+$ wrangler dev
+```
 
 5. Decide where you would like to publish your site to: [a workers.dev subdomain](/get-started/guide#configure-for-deploying-to-workersdev) or your [personal domain](/get-started/guide#optional-configure-for-deploying-to-a-registered-domain) registered with Cloudflare.
 
-  Then, update your `wrangler.toml`:
+Then, update your `wrangler.toml`:
 
-  **Personal Domain**: Add your `zone_id` and a `route`.
+**Personal Domain**: Add your `zone_id` and a `route`.
 
-  ```toml
-  zone_id = "42ef.."
-  route = "example.com/*"
-  ```
+```toml
+zone_id = "42ef.."
+route = "example.com/*"
+```
 
-  **workers.dev**: Set `workers_dev` to true. This is the default.
+**workers.dev**: Set `workers_dev` to true. This is the default.
 
-  Learn more about [configuring your project](/get-started/guide#6-configure-your-project-for-deployment).
+Learn more about [configuring your project](/get-started/guide#6-configure-your-project-for-deployment).
 
 6. Run:
 
-  ```sh
-  $ wrangler publish
-  ```
+```sh
+$ wrangler publish
+```

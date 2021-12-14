@@ -24,19 +24,19 @@ addEventListener("fetch", event => {
 You may also want to construct a `Request` yourself when you need to modify a request object, because a `FetchEvent`’s `request` property is immutable.
 
 ```js
-addEventListener("fetch", event => {
-  const request = event.request
-  const url = "https://example.com"
+addEventListener('fetch', event => {
+  const request = event.request;
+  const url = 'https://example.com';
 
   const modifiedRequest = new Request(url, {
     body: request.body,
     headers: request.headers,
     method: request.method,
-    redirect: request.redirect
-  })
+    redirect: request.redirect,
+  });
 
   // ...
-})
+});
 ```
 
 The global `fetch` method itself invokes the `Request` constructor. The [`RequestInit`](#requestinit) and [`RequestInitCfProperties`](#requestinitcfproperties) types defined below also describe the valid parameters that can be passed to `fetch`.
@@ -89,16 +89,17 @@ let request = new Request(input [, init])
 
 - `redirect` <Type>string</Type> <PropMeta>optional</PropMeta>
 
-  - The redirect mode to use: `follow`, `error`, or `manual`. The default  for a new `Request` object is `follow`. Note, however, that the incoming `Request` property of a `FetchEvent` will have redirect mode `manual`.
+  - The redirect mode to use: `follow`, `error`, or `manual`. The default for a new `Request` object is `follow`. Note, however, that the incoming `Request` property of a `FetchEvent` will have redirect mode `manual`.
 
 </Definitions>
 
 #### `RequestInitCfProperties`
+
 An object containing Cloudflare-specific properties that can be set on the `Request` object. For example:
 
 ```js
 // Disable ScrapeShield for this request.
-fetch(event.request, { cf: { scrapeShield: false } })
+fetch(event.request, { cf: { scrapeShield: false } });
 ```
 
 Invalid or incorrectly-named keys in the `cf` object will be silently ignored. Consider using TypeScript and [`@cloudflare/workers-types`](https://github.com/cloudflare/workers-types) to ensure proper use of the `cf` object.
@@ -119,7 +120,7 @@ Invalid or incorrectly-named keys in the `cf` object will be silently ignored. C
 
 - `cacheTtl` <Type>number</Type> <PropMeta>optional</PropMeta>
 
-  - This option forces Cloudflare to cache the response for this request, regardless of what headers are seen on the response. This is equivalent to setting two page rules: [“Edge Cache TTL”](https://support.cloudflare.com/hc/en-us/articles/200168376-What-does-edge-cache-expire-TTL-mean-) and [“Cache Level” (to “Cache Everything”)](https://support.cloudflare.com/hc/en-us/articles/200172266). The value must be zero or a positive number. A value of `0` indicates that the cache asset expires immediately. 
+  - This option forces Cloudflare to cache the response for this request, regardless of what headers are seen on the response. This is equivalent to setting two page rules: [“Edge Cache TTL”](https://support.cloudflare.com/hc/en-us/articles/200168376-What-does-edge-cache-expire-TTL-mean-) and [“Cache Level” (to “Cache Everything”)](https://support.cloudflare.com/hc/en-us/articles/200172266). The value must be zero or a positive number. A value of `0` indicates that the cache asset expires immediately.
 
 - `cacheTtlByStatus` <Type>{ [key: string]: number }</Type> <PropMeta>optional</PropMeta>
 
@@ -147,7 +148,7 @@ Invalid or incorrectly-named keys in the `cf` object will be silently ignored. C
 
 </Definitions>
 
---------------------------------
+---
 
 ## Properties
 
@@ -281,7 +282,7 @@ The `request.cf` object is not available in the Cloudflare Workers dashboard or 
 
 </Aside>
 
---------------------------------
+---
 
 ## Methods
 
@@ -313,7 +314,7 @@ These methods are only available on an instance of a `Request` object or through
 
 </Definitions>
 
---------------------------------
+---
 
 ## The request context
 
@@ -322,10 +323,10 @@ The `Request` context is the context of the `"fetch"` event callback. It is impo
 The request context is available inside of the [`FetchEvent` handler](/runtime-apis/fetch-event/):
 
 ```js
-addEventListener("fetch", event => {
+addEventListener('fetch', event => {
   // Request context available here
-  event.respondWith(/*...*/)
-})
+  event.respondWith(/*...*/);
+});
 ```
 
 ### When passing a promise to fetch event `.respondWith()`
@@ -333,15 +334,15 @@ addEventListener("fetch", event => {
 If you pass a Response promise to the fetch event [`.respondWith()`](/runtime-apis/fetch-event/#methods) method, the request context is active during any asynchronous tasks which run before the Response promise has settled. You can pass the event to an async handler, for example:
 
 ```js
-addEventListener("fetch", event => {
-  event.respondWith(eventHandler(event))
-})
+addEventListener('fetch', event => {
+  event.respondWith(eventHandler(event));
+});
 
 // No request context available here
 
-async function eventHandler(event){
+async function eventHandler(event) {
   // Request context available here
-  return new Response("Hello, Workers!")
+  return new Response('Hello, Workers!');
 }
 ```
 
@@ -357,7 +358,7 @@ async function eventHandler(event){..}
 This code snippet will throw during script startup, and the `"fetch"` event
 listener will never be registered.
 
---------------------------------
+---
 
 ## See also
 

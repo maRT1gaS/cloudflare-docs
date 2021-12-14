@@ -8,4 +8,4 @@ order: 5
 
 This section contains reference information on HTTP Request Header Modification Rules.
 
-<DirectoryListing path="/transform/request-header-modification/reference"/>
+<DirectoryListing path="/transform/request-header-modification/reference" />

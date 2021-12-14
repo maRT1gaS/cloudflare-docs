@@ -8,4 +8,4 @@ pcx-content-type: navigation
 
 For more on Cloudflare SSL/TLS, see these articles:
 
-<DirectoryListing path="/ssl-tls"/>
+<DirectoryListing path="/ssl-tls" />

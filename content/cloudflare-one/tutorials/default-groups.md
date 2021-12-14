@@ -12,9 +12,9 @@ Before you build the rule, you'll need to follow [these instructions](/setup) to
 
 **🗺️ This walkthrough covers how to:**
 
-* Build a Zero Trust rule once and set it as the default for your account
-* Use that rule when adding an application to Cloudflare Access
-* Combine that default rule with other rules for additional customization
+- Build a Zero Trust rule once and set it as the default for your account
+- Use that rule when adding an application to Cloudflare Access
+- Combine that default rule with other rules for additional customization
 
 **⏲️ Time to complete:**
 
@@ -44,17 +44,17 @@ You can now use this group in any new or existing application. To add to a new a
 
 1. Click **Add an application**.
 
-    ![Add App](../static/zero-trust-security/default-groups/add-app.png)
+   ![Add App](../static/zero-trust-security/default-groups/add-app.png)
 
-    Groups can be used in both self-hosted and external SaaS applications. This example uses a self-hosted application.
+   Groups can be used in both self-hosted and external SaaS applications. This example uses a self-hosted application.
 
 1. In the next page, give the application a name and set the subdomain or URL where the Access policy will apply.
 
-    ![Define App](../static/zero-trust-security/default-groups/define-app.png)
+   ![Define App](../static/zero-trust-security/default-groups/define-app.png)
 
 1. Lower on the page, you can also choose which identity providers can be used to authenticate for this specific application. In this example, the employees will use Okta while contractors will login with GitHub.
 
-    ![ID Options](../static/zero-trust-security/default-groups/id-options.png)
+   ![ID Options](../static/zero-trust-security/default-groups/id-options.png)
 
 1. On the next page, Access will already have toggled the default rule to apply to the application.
 

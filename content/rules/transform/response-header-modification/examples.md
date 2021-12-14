@@ -7,9 +7,9 @@ order: 4
 
 The following examples illustrate how to perform response header modifications with Transform Rules:
 
-* [Add an HTTP response header with a static value](#add-an-http-response-header-with-a-static-value)
-* [Add an HTTP response header with the current bot score](#add-an-http-response-header-with-the-current-bot-score)
-* [Remove an HTTP response header](#remove-an-http-response-header)
+- [Add an HTTP response header with a static value](#add-an-http-response-header-with-a-static-value)
+- [Add an HTTP response header with the current bot score](#add-an-http-response-header-with-the-current-bot-score)
+- [Remove an HTTP response header](#remove-an-http-response-header)
 
 ## Add an HTTP response header with a static value
 

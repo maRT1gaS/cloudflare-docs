@@ -11,9 +11,9 @@ In this tutorial we will cover how to configure a Zero Trust Private Network in 
 
 **🗺️ This tutorial covers how to:**
 
-* Create device enrollment rules and connect a device to Teams
-* Connect your private network server to Cloudflare's edge using Cloudflare Tunnels
-* Create identity-aware network policies
+- Create device enrollment rules and connect a device to Teams
+- Connect your private network server to Cloudflare's edge using Cloudflare Tunnels
+- Create identity-aware network policies
 
 **⏲️Time to complete:**
 
@@ -21,9 +21,9 @@ In this tutorial we will cover how to configure a Zero Trust Private Network in 
 
 <Aside header="Prerequisites">
 
-* A Teams account setup
-* The [WARP client](/connections/connect-devices/warp) installed on a device and enrolled in a Cloudflare for Teams instance
-* Admin access to server with Internet access
+- A Teams account setup
+- The [WARP client](/connections/connect-devices/warp) installed on a device and enrolled in a Cloudflare for Teams instance
+- Admin access to server with Internet access
 
 </Aside>
 
@@ -35,16 +35,15 @@ The first step is to enroll your devices into the WARP client. The WARP client i
 
 1. Define [device enrollment rules](/connections/connect-devices/warp/warp-settings#device-enrollment-permissions) under **Settings > Devices > Device enrollment permissions > Manage**.
 
- In this example, we require that users have a hard key inserted and are connecting from the United States.
+In this example, we require that users have a hard key inserted and are connecting from the United States.
 
- ![Device enrollment rules](../static/zero-trust-security/ztna/device-enrollment-rules.png)
- 
+![Device enrollment rules](../static/zero-trust-security/ztna/device-enrollment-rules.png)
+
 1. Enroll your device into your Teams account. To do that, click the WARP icon in your navigation bar, open **Settings** and select **Account > Login** with Cloudflare for Teams.
 
-  ![WARP preferences](../static/zero-trust-security/ztna/warp-preferences.png)
+![WARP preferences](../static/zero-trust-security/ztna/warp-preferences.png)
 
 1. Enable the WARP client on the device to forward traffic to Cloudflare.
-
 
 ## Server configuration
 
@@ -57,41 +56,40 @@ Next, you will need to configure your private network server to connect to Cloud
 1. [Install `cloudflared`](/connections/connect-apps/install-and-setup/installation) on the server.
 
 1. Authenticate `cloudflared` on the server by running the following command, then follow the prompt to authenticate via URL provided.
- 
- ```sh
- $ cloudflared tunnel login
- ```
+
+```sh
+$ cloudflared tunnel login
+```
 
 1. Next, create a tunnel for the device:
 
- ```sh
- $ cloudflared tunnel create <TUNNEL NAME>
- ```
+```sh
+$ cloudflared tunnel create <TUNNEL NAME>
+```
 
 1. Create a YAML config file for the tunnel with the following configuration:
 
- ```txt
- tunnel: <YOUR TUNNEL ID>
- credentials-file: /root/.cloudflared/<YOUR TUNNEL ID>.json
- warp-routing:
-   enabled: true
- ```
- 
+```txt
+tunnel: <YOUR TUNNEL ID>
+credentials-file: /root/.cloudflared/<YOUR TUNNEL ID>.json
+warp-routing:
+  enabled: true
+```
+
  <Aside>
  Tunnel ID can be found by running <code>cloudflared tunnel list</code>.
 
-   ![Tunnel ID](../static/zero-trust-security/ztna/tunnel-id.png)
- 
+![Tunnel ID](../static/zero-trust-security/ztna/tunnel-id.png)
+
  </Aside>
 
 1. Now run the tunnel:
 
- ```sh
- $ cloudflared tunnel run <TUNNEL NAME>
- ```
+```sh
+$ cloudflared tunnel run <TUNNEL NAME>
+```
 
-   ![Run the Tunnel](../static/zero-trust-security/ztna/run-tunnel.png)
-
+![Run the Tunnel](../static/zero-trust-security/ztna/run-tunnel.png)
 
 ## Network configuration
 
@@ -99,12 +97,12 @@ Finally, you will need to establish the private RFC 1918 IP address or range tha
 
 1. Route the private IP addresses of your server’s network to Cloudflare, where:
 
-  * `10.0.0.0/8` is the IP or CIDR range of your server
-  * `8e343b13-a087-48ea-825f-9783931ff2a5` is your tunnel ID
- 
- ```sh
- $ cloudflared tunnel route ip add 10.0.0.0/8 8e343b13-a087-48ea-825f-9783931ff2a5
- ```
+- `10.0.0.0/8` is the IP or CIDR range of your server
+- `8e343b13-a087-48ea-825f-9783931ff2a5` is your tunnel ID
+
+```sh
+$ cloudflared tunnel route ip add 10.0.0.0/8 8e343b13-a087-48ea-825f-9783931ff2a5
+```
 
 1. Open your Teams dashboard to the **Gateway > Policies** tab.
 
@@ -121,5 +119,3 @@ Finally, you will need to establish the private RFC 1918 IP address or range tha
 1. Verify that you do not have the desired target private IP range in the Split Tunnel configuration menu. This menu can be found at **Settings > Network > Split Tunnels**.
 
 Your setup is now complete. For more in-depth information on how identity-aware network policies work, read our [dedicated documentation page](/policies/filtering/network-policies).
-
-

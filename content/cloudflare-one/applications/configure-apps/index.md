@@ -3,7 +3,6 @@ order: 0
 pcx-content-type: navigation
 ---
 
-
 # Add web applications
 
 With Teams, you can protect two types of web applications: SaaS and self-hosted.
@@ -14,5 +13,4 @@ With Teams, you can protect two types of web applications: SaaS and self-hosted.
 
 **Dashboard SSO applications** are a special type of SaaS application that manages SSO settings for the Cloudflare dashboard and has limited permissions for customer edits.
 
-<DirectoryListing path="/applications/configure-apps"/>
-
+<DirectoryListing path="/applications/configure-apps" />

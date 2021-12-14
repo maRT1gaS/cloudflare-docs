@@ -1,6 +1,6 @@
 ---
 title: Probe construction
-order: 
+order:
 pcx-content-type: concept
 ---
 
@@ -25,6 +25,7 @@ To avoid control plane policies enforced by the origin network, tunnel health ch
   <div class="special-class" markdown="1">
 
 ![Magic Transit Tunnel health check packets](../static/tunnel-health-check-packets.png)
+
 </div>
 </details>
 
@@ -72,7 +73,9 @@ Tunnels in a **Degraded** state transition to **Healthy** when the failure rate 
 Magic Transit’s tunnel health check system allows a tunnel to quickly transition from **Healthy** to **Degraded** or **Down**, but tunnel transition occurs slowly from **Degraded** or **Down** to **Healthy**. This scenario is referred to as hysteresis — which is when a system's output depends on its history of past inputs — and dampens changes to tunnel routing caused by flapping and other intermittent network failures.
 
 <Aside type="note" header="Note">
-Cloudflare always attempts to send traffic over available tunnel routes with the highest priority, even when all configured tunnels are in an unhealthy state.
+  Cloudflare always attempts to send traffic over available tunnel routes with
+  the highest priority, even when all configured tunnels are in an unhealthy
+  state.
 </Aside>
 
 ## Example

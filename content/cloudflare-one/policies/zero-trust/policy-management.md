@@ -21,11 +21,11 @@ To create a Zero Trust policy for an existing application:
 
 1. Click **Add a Rule**.
 
-  ![Add rule](../../static/documentation/policies/add-rule.png)
+![Add rule](../../static/documentation/policies/add-rule.png)
 
 1. Select a **Rule name**. This name will identify your policy in the list of application policies.
 
-1. Select a **[Rule action](/policies/zero-trust#actions)**. 
+1. Select a **[Rule action](/policies/zero-trust#actions)**.
 
 1. Configure as many **[Rules](/policies/zero-trust#rules)** as needed.
 
@@ -43,7 +43,7 @@ To make any changes to an application’s policies:
 
 1. Click **Edit**. This will automatically redirect you to the app’s **Rules** section.
 
-  ![Policies section](../../static/documentation/policies/policies-section.png)
+![Policies section](../../static/documentation/policies/policies-section.png)
 
 1. Once in the **Policies** section, you can edit the **Rule name**, the **Rule action**, and any rules you had configured.
 

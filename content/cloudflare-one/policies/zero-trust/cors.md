@@ -11,21 +11,21 @@ When you protect a site with Cloudflare Access, Cloudflare checks every HTTP req
 
 This has implications for CORS configurations, including:
 
-* OPTIONS requests are not sent with cookies from the browser, by design. This cannot be changed. When Cloudflare sees the OPTIONS request being sent to a protected domain, without a cookie, Cloudflare Access blocks the request.
-* Any cross-site request that fails to include the Cloudflare Access token will be returned to the login page. The login page itself will not allow cross-site requests.
-* Cross-origin requests that do not send OPTIONS requests, but do provide the Cloudflare Access cookie, will require the origin to set its own CORS headers.
+- OPTIONS requests are not sent with cookies from the browser, by design. This cannot be changed. When Cloudflare sees the OPTIONS request being sent to a protected domain, without a cookie, Cloudflare Access blocks the request.
+- Any cross-site request that fails to include the Cloudflare Access token will be returned to the login page. The login page itself will not allow cross-site requests.
+- Cross-origin requests that do not send OPTIONS requests, but do provide the Cloudflare Access cookie, will require the origin to set its own CORS headers.
 
 To handle CORS headers for the policy protecting the path that requires CORS, navigate to the bottom of the _Create Access Policy_ window and expand the **Advanced settings** section and configure the settings.
 
-![Advanced Settings CORS section](../../static/documentation/policies/cors-config.png "Create Policy window Advanced Settings CORS Settings")
+![Advanced Settings CORS section](../../static/documentation/policies/cors-config.png 'Create Policy window Advanced Settings CORS Settings')
 
 ## Access and CORS
 
 <Aside type='Warning' header='Important'>
 
-* Safari, in particular Safari 13.1, handles cookies in a unique format. In some cases, this can cause CORS to fail. This will be dependent on Apple releasing a patch for handling cookies. This is known to impact macOS 10.15.4 when running Safari 13.1 (15609.1.20.111.8).
+- Safari, in particular Safari 13.1, handles cookies in a unique format. In some cases, this can cause CORS to fail. This will be dependent on Apple releasing a patch for handling cookies. This is known to impact macOS 10.15.4 when running Safari 13.1 (15609.1.20.111.8).
 
-* Do not troubleshoot CORS in Incognito mode, as this will cause disruptions with Access due to `CF-Authorization` being blocked as a third-party cookie on cross origin requests"
+- Do not troubleshoot CORS in Incognito mode, as this will cause disruptions with Access due to `CF-Authorization` being blocked as a third-party cookie on cross origin requests"
 
 </Aside>
 
@@ -36,18 +36,18 @@ When the user's browser requests `app2.hostname.com`, the cookie will not be pre
 During this entire flow, the browser itself will check CORS headers. As part of that behavior, the browser will make the `Origin` header null once a 302 has occurred. Cloudflare Access honors all redirects, however, the final redirect of a login will be made to the original domain. Since the `Origin` header is still null, unless the configuration allows all origins, the request will now fail due to the browser's CORS issue. A refresh will resolve this for the user.
 
 This can be addressed with the following settings:
-* Use the `allow-all-origins` configuration.
-* Allow `null` as an allowed origin.
 
+- Use the `allow-all-origins` configuration.
+- Allow `null` as an allowed origin.
 
 ## List of CORS settings
 
-* **Access-Control-Allow-Credentials** allows CORS headers or methods to use the user’s credentials to reach the protected application or path.
-* **Access-Control-Max-Age (seconds)** allows you to set a maximum time for caching the results of a CORS request.
-* **Access-Control-Allow-Origins** lets you list the fully qualified domain name (FQDN) that makes the CORS request. You can add multiple FQDNs or select **Allow all origins** to permit any FQDN.
+- **Access-Control-Allow-Credentials** allows CORS headers or methods to use the user’s credentials to reach the protected application or path.
+- **Access-Control-Max-Age (seconds)** allows you to set a maximum time for caching the results of a CORS request.
+- **Access-Control-Allow-Origins** lets you list the fully qualified domain name (FQDN) that makes the CORS request. You can add multiple FQDNs or select **Allow all origins** to permit any FQDN.
 
-* **Access-Control-Allow-Methods** allows you to permit all method types (for example, POST or GET requests).
-* **Access-Control-Allow Headers** allow you to permit all HTTP headers or HTTP headers you define that meet the criteria defined in the **Access-Control-Allow-Origins** or **Access-Control-Allow-Methods** sections.
+- **Access-Control-Allow-Methods** allows you to permit all method types (for example, POST or GET requests).
+- **Access-Control-Allow Headers** allow you to permit all HTTP headers or HTTP headers you define that meet the criteria defined in the **Access-Control-Allow-Origins** or **Access-Control-Allow-Methods** sections.
 
 ### CORS requests that do not require OPTIONS (Simple Requests)
 
@@ -95,6 +95,7 @@ In general, we recommend the following steps when troubleshooting CORS issues:
 2. Ensure that the application has set `credentials: 'same-origin'` in all fetch or XHR requests.
 3. If you are using the [cross-origin setting](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/crossorigin) on script tags, these must be set to "use-credentials".
 
-<Aside type='Warning' header='CORS is failing on the same domain'>
-CORS checks do not occur on the same domain. If this error occurs, it is likely the user flow is making a sub-request without the cookie.
+<Aside type="Warning" header="CORS is failing on the same domain">
+  CORS checks do not occur on the same domain. If this error occurs, it is
+  likely the user flow is making a sub-request without the cookie.
 </Aside>

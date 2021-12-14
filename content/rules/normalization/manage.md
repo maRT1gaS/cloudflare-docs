@@ -24,17 +24,19 @@ Do the following:
 
 The Cloudflare dashboard provides two components to manage URL Normalization:
 
-* **Normalize incoming URLs** - Configures the URLs of all incoming traffic to Cloudflare:
-    * When set to _On_ (default), all incoming URLs are normalized before they pass to subsequent Cloudflare features that can receive a URL as input, such as Page Rules, Firewall Rules, Workers and Access.
-    * When set to _Off_, incoming URLs are not normalized before passing to subsequent Cloudflare features.
+- **Normalize incoming URLs** - Configures the URLs of all incoming traffic to Cloudflare:
 
-* **Normalize URLs to origin** - Configures URLs that are sent to the origin:
-    * When set to _On_, requests sent to the origin are normalized.
-    * When set to _Off_ (default), requests sent to the origin are not modified.
-   
+  - When set to _On_ (default), all incoming URLs are normalized before they pass to subsequent Cloudflare features that can receive a URL as input, such as Page Rules, Firewall Rules, Workers and Access.
+  - When set to _Off_, incoming URLs are not normalized before passing to subsequent Cloudflare features.
+
+- **Normalize URLs to origin** - Configures URLs that are sent to the origin:
+
+  - When set to _On_, requests sent to the origin are normalized.
+  - When set to _Off_ (default), requests sent to the origin are not modified.
+
     <Aside type="note" header="Note">
 
-    You can only view and enable this option when **Normalize incoming URLs** is also enabled.
+  You can only view and enable this option when **Normalize incoming URLs** is also enabled.
 
     </Aside>
 
@@ -42,13 +44,13 @@ The table below shows how URL Normalization settings affect incoming URLs before
 
 <TableWrap>
 
-Incoming URL | Normalize incoming URLs | Normalize URLs to origin | URL passed to Cloudflare edge | URL passed to origin
----|---|---|---|---
-`www.example.com/hello`   | _On_  | _Off_ | `www.example.com/hello`   | `www.example.com/hello`
-`www.example.com/hello`   | _On_  | _On_  | `www.example.com/hello`   | `www.example.com/hello`
-`www.example.com/hello`   | _Off_ | _Off_ | `www.example.com/hello`   | `www.example.com/hello`
-`www.example.com/%68ello` | _On_  | _Off_ | `www.example.com/hello`   | `www.example.com/%68ello`
-`www.example.com/%68ello` | _On_  | _On_  | `www.example.com/hello`   | `www.example.com/hello`
-`www.example.com/%68ello` | _Off_ | _Off_ | `www.example.com/%68ello` | `www.example.com/%68ello`
+| Incoming URL              | Normalize incoming URLs | Normalize URLs to origin | URL passed to Cloudflare edge | URL passed to origin      |
+| ------------------------- | ----------------------- | ------------------------ | ----------------------------- | ------------------------- |
+| `www.example.com/hello`   | _On_                    | _Off_                    | `www.example.com/hello`       | `www.example.com/hello`   |
+| `www.example.com/hello`   | _On_                    | _On_                     | `www.example.com/hello`       | `www.example.com/hello`   |
+| `www.example.com/hello`   | _Off_                   | _Off_                    | `www.example.com/hello`       | `www.example.com/hello`   |
+| `www.example.com/%68ello` | _On_                    | _Off_                    | `www.example.com/hello`       | `www.example.com/%68ello` |
+| `www.example.com/%68ello` | _On_                    | _On_                     | `www.example.com/hello`       | `www.example.com/hello`   |
+| `www.example.com/%68ello` | _Off_                   | _Off_                    | `www.example.com/%68ello`     | `www.example.com/%68ello` |
 
 </TableWrap>

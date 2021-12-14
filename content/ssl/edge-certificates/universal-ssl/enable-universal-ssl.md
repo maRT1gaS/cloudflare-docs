@@ -21,8 +21,8 @@ For non-authoritative or partial domains (domains on a CNAME setup), Universal S
 - Provisioned once the DNS record is [proxied through Cloudflare](https://support.cloudflare.com/hc/articles/360020348832#h_836723523521544131668686) (orange-clouded).
 - Validated:
 
-    - Immediately if you add [Domain Control Validation (DCV)](../changing-dcv-method) records to your authoritative DNS.
-    - After a brief period of downtime if you **do not** add DCV records (once your traffic is proxied).
+  - Immediately if you add [Domain Control Validation (DCV)](../changing-dcv-method) records to your authoritative DNS.
+  - After a brief period of downtime if you **do not** add DCV records (once your traffic is proxied).
 
 ## Disable Universal SSL
 
@@ -38,14 +38,14 @@ If you disable Universal SSL, you may experience errors with the following scena
 
 - **Enabled features**:
 
-    - [HTTP Strict Transport Security (HSTS)](../../http-strict-transport-security)
-    - [Always Use HTTPS](/edge-certificates/additional-options/always-use-https)
-    - [Opportunistic Encryption](/edge-certificates/additional-options/opportunistic-encryption)
+  - [HTTP Strict Transport Security (HSTS)](../../http-strict-transport-security)
+  - [Always Use HTTPS](/edge-certificates/additional-options/always-use-https)
+  - [Opportunistic Encryption](/edge-certificates/additional-options/opportunistic-encryption)
 
 - **Other setups**:
 
-    - [Page rules](https://support.cloudflare.com/hc/articles/218411427) that redirect traffic to HTTPS
-    - HTTP to HTTPS redirects at your origin web server
+  - [Page rules](https://support.cloudflare.com/hc/articles/218411427) that redirect traffic to HTTPS
+  - HTTP to HTTPS redirects at your origin web server
 
 ### Disable Universal SSL
 

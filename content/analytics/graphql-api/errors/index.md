@@ -14,18 +14,14 @@ All responses contain an `errors` array, which will be `null` if there are no er
 - `timestamp`: UTC datetime when the error occurred
 
 ## Example
+
 ```json
 {
   "data": null,
   "errors": [
     {
       "message": "cannot request data older than 2678400s",
-      "path": [
-        "viewer",
-        "zones",
-        "0",
-        "firewallEventsAdaptiveGroups"
-      ],
+      "path": ["viewer", "zones", "0", "firewallEventsAdaptiveGroups"],
       "extensions": {
         "timestamp": "2019-12-09T21:27:19.195060142Z"
       }

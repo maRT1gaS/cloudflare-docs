@@ -6,4 +6,4 @@ pcx-content-type: navigation
 
 # Get started with Cloudflare bot solutions
 
-<DirectoryListing path="/get-started"/>
+<DirectoryListing path="/get-started" />

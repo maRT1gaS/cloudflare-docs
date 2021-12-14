@@ -7,9 +7,9 @@ pcx-content-type: faq
 
 Below you will find answers to our most commonly asked questions regarding Cloudflare Image Optimization, namely the differences between Cloudflare Images. If you cannot find the answer you are looking for, refer to the [community page](https://community.cloudflare.com/) for possible solutions to your query.
 
-* [Cloudflare Images](#cloudflare-images-faq)
-* [Cloudflare Image Resizing](#cloudflare-image-resizing-faq)
-* [Polish](#polish-faq)
+- [Cloudflare Images](#cloudflare-images-faq)
+- [Cloudflare Image Resizing](#cloudflare-image-resizing-faq)
+- [Polish](#polish-faq)
 
 ## Cloudflare Images FAQ
 

@@ -7,4 +7,4 @@ pcx-content-type: navigation
 
 Cloudflare for Teams can secure the networks that connect out to the Internet as well as the networks that your team needs to reach over a secure connection.
 
-<DirectoryListing path="connections/connect-networks"/>
+<DirectoryListing path="connections/connect-networks" />

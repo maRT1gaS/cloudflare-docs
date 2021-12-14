@@ -26,7 +26,7 @@ pcx-content-type: concept
 
 URLs have a limit of 16 KB.
 
-Request headers observe a total limit of 32 KB, but each header is limited to 16 KB. 
+Request headers observe a total limit of 32 KB, but each header is limited to 16 KB.
 
 Cloudflare has network-wide limits on the request body size. This limit is tied to your Cloudflare Account's plan, which is separate from your Workers plan. When the request body size of your POST/PUT/PATCH requests exceed your plan's limit, the request is rejected with a `(413) Request entity too large` error.
 
@@ -51,12 +51,12 @@ Cloudflare does not enforce response limits, but cache limits for [Cloudflare's 
 
 <TableWrap>
 
-| Feature                     | Free                                                 | Bundled Usage Model                         | Unbound Usage Model                       |
-| --------------------------- | ---------------------------------------------------- | ------------------------------------------- | ----------------------------------------- |
-| [Request](#request)         | 100,000&nbsp;requests/day<br/>1000&nbsp;requests/min | none                                        | none                                      |
-| [Worker memory](#memory)    | 128 MB                                               | 128 MB                                      | 128 MB                                    |
-| [CPU runtime](#cpu-runtime) | 10 ms                                                | 50 ms HTTP request <br/> 50 ms Cron trigger | 30 s HTTP request <br/> 15 min Cron Trigger |                                           |
-| [Duration](#duration)       |                                                      |                                             | No limit* |
+| Feature                     | Free                                                 | Bundled Usage Model                         | Unbound Usage Model                         |
+| --------------------------- | ---------------------------------------------------- | ------------------------------------------- | ------------------------------------------- | --- |
+| [Request](#request)         | 100,000&nbsp;requests/day<br/>1000&nbsp;requests/min | none                                        | none                                        |
+| [Worker memory](#memory)    | 128 MB                                               | 128 MB                                      | 128 MB                                      |
+| [CPU runtime](#cpu-runtime) | 10 ms                                                | 50 ms HTTP request <br/> 50 ms Cron trigger | 30 s HTTP request <br/> 15 min Cron Trigger |     |
+| [Duration](#duration)       |                                                      |                                             | No limit\*                                  |
 
 </TableWrap>
 
@@ -102,11 +102,11 @@ Refer to [KV pricing](/platform/pricing#workers-kv) to review the specific KV op
 
 <TableWrap>
 
-| Feature                               | Free   | Bundled |
-| ------------------------------------- | ------ | ------- |
-| [Max object size](#cache-api)         | 512 MB | 512 MB  |
-| [Calls/request](#cache-api)           | 50     | 50      |
-| [Storage/request](#cache-api)         | 5 GB   | 5 GB    |
+| Feature                       | Free   | Bundled |
+| ----------------------------- | ------ | ------- |
+| [Max object size](#cache-api) | 512 MB | 512 MB  |
+| [Calls/request](#cache-api)   | 50     | 50      |
+| [Storage/request](#cache-api) | 5 GB   | 5 GB    |
 
 </TableWrap>
 
@@ -114,15 +114,15 @@ Refer to [KV pricing](/platform/pricing#workers-kv) to review the specific KV op
 
 <TableWrap>
 
-| Feature                                 | Limit
-| --------------------------------------- | ------
-| [Number of objects](#durable-objects)   | unlimited
-| [Storage per account](#durable-objects) | 10 GB (can be raised by contacting Cloudflare)
-| [Storage per class](#durable-objects)   | unlimited
-| [Storage per object](#durable-objects)  | unlimited
-| [Key size](#durable-objects)            | 2048 bytes
-| [Value size](#durable-objects)          | 32 KiB
-| [CPU per request](#durable-objects)     | 30s
+| Feature                                 | Limit                                          |
+| --------------------------------------- | ---------------------------------------------- |
+| [Number of objects](#durable-objects)   | unlimited                                      |
+| [Storage per account](#durable-objects) | 10 GB (can be raised by contacting Cloudflare) |
+| [Storage per class](#durable-objects)   | unlimited                                      |
+| [Storage per object](#durable-objects)  | unlimited                                      |
+| [Key size](#durable-objects)            | 2048 bytes                                     |
+| [Value size](#durable-objects)          | 32 KiB                                         |
+| [CPU per request](#durable-objects)     | 30s                                            |
 
 </TableWrap>
 
@@ -158,7 +158,7 @@ Routes in fail closed mode will display a Cloudflare `1027` error page to visito
 
 Only one Workers instance runs on each of the many global Cloudflare network edge servers. Each Workers instance can consume up to 128 MB of memory. Use [global variables](/runtime-apis/web-standards) to persist data between requests on individual nodes; note however, that nodes are occasionally evicted from memory.
 
-If a Worker processes a request that pushes the Worker over the 128MB limit, the Cloudflare Workers runtime may cancel one or more requests. To view these errors, as well as CPU limit overages, go to [**Workers**](https://dash.cloudflare.com/?to=/:account/workers) on the Cloudflare dashboard > **Manage Workers** > select the Worker you would like to investigate > scroll down to **Invocation Statuses** and examine *Exceeded Resources*. 
+If a Worker processes a request that pushes the Worker over the 128MB limit, the Cloudflare Workers runtime may cancel one or more requests. To view these errors, as well as CPU limit overages, go to [**Workers**](https://dash.cloudflare.com/?to=/:account/workers) on the Cloudflare dashboard > **Manage Workers** > select the Worker you would like to investigate > scroll down to **Invocation Statuses** and examine _Exceeded Resources_.
 
 Use the [TransformStream API](/runtime-apis/streams/transformstream) to stream responses if you are concerned about memory usage. This avoids loading an entire response into memory.
 
@@ -286,6 +286,6 @@ The size of chunked response bodies (`Transfer-Encoding: chunked`) is not known 
 
 - 30s of CPU time per request, including websocket messages
 
-Durable Objects scale well across Objects, but each object is inherently single-threaded.  A baseline of 100 req/sec is a good floor estimate of the request rate an individual Object can handle, though this will vary with workload. 
+Durable Objects scale well across Objects, but each object is inherently single-threaded. A baseline of 100 req/sec is a good floor estimate of the request rate an individual Object can handle, though this will vary with workload.
 
 Durable Objects have been built such that the number of objects in the system do not need to be limited. You can create and run as many separate objects as you want. The main limit to your usage of Durable Objects is the total storage limit per account - if you need more storage, contact your account team.

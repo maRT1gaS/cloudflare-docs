@@ -51,6 +51,7 @@ curl \
 ```
 
 The returned values represent the total number of packets and bits received during the five minute interval for a particular rule. The result will be in JSON (as requested), so piping the output to `jq` will make it easier to read, e.g.,:
+
 ```
 curl \
   -X POST \

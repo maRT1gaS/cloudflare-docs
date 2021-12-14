@@ -12,6 +12,7 @@ The example below was tested using [IBM Cloud HSM 7.0](https://console.bluemix.n
 ## Before you start
 
 Make sure that you have:
+
 - Initialized [your device](https://console.bluemix.net/docs/infrastructure/hardware-security-modules/initialize_hsm.html#initializing-the-ibm-cloud-hsm)
 - Installed the [SafeNet client software](https://cpl.thalesgroup.com/node/11350)
 
@@ -58,8 +59,8 @@ LunaCM v7.1.0-379. Copyright (c) 2006-2017 SafeNet.
 
     Slot Id ->              0
     Label ->
-    Serial Number ->        XXXXXXXXXXXXX  
-    Model ->                LunaSA 7.0.0  
+    Serial Number ->        XXXXXXXXXXXXX
+    Model ->                LunaSA 7.0.0
     Firmware Version ->     7.0.1
     Configuration ->        Luna User Partition With SO (PW) Signing With Cloning Mode
     Slot Description ->     Net Token Slot
@@ -83,7 +84,7 @@ lunacm:>partition init -label KeylessSSL -domain cloudflare
 Command Result : No Error
 ```
 
---------
+---
 
 ## 2. Generate RSA and ECDSA key pairs and certificate signing requests (CSRs)
 
@@ -116,13 +117,13 @@ Please enter password for token in slot 0 : ********
 Using "CKM_ECDSA_SHA256" Mechanism
 ```
 
---------
+---
 
 ## 3. Obtain and upload signed certificates from your Certificate Authority (CA)
 
 Provide the CSRs created in the previous step to your organization’s preferred CA, demonstrate control of your domain as requested, and then download the signed SSL certificates. Follow the instructions provided in [Uploading “Keyless” SSL Certificates](/keyless-ssl/configuration#step-2--upload-keyless-ssl-certificates).
 
---------
+---
 
 ## 4. Modify your gokeyless config file and restart the service
 
@@ -132,7 +133,7 @@ Open `/etc/keyless/gokeyless.yaml` and immediately after:
 
 ```yaml
 private_key_stores:
-- dir: /etc/keyless/keys
+  - dir: /etc/keyless/keys
 ```
 
 add:

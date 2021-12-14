@@ -14,8 +14,8 @@ The following API calls can be used to determine details and the status or one o
 Assign a Railgun to a domain
 
 ### Form parameters
- 	
-* **host_key** – Host API key
+
+- **host_key** – Host API key
 
 <details>
 <summary>Example request</summary>
@@ -118,8 +118,8 @@ Content-Type: application/json
 Assign a Railgun to a domain
 
 ### Query parameters
- 	
-* **host_key** – Host API key
+
+- **host_key** – Host API key
 
 <details>
 <summary>Example request</summary>
@@ -222,8 +222,8 @@ List all active Railgun connections for a domain.
 
 ### Form parameters
 
-* **email** – User account email
-* **tkn** – User API token
+- **email** – User account email
+- **tkn** – User API token
 
 <details>
 <summary>Example request</summary>
@@ -280,9 +280,9 @@ Content-Type: application/json
 List all active Railgun connections for a domain.
 
 ### Form parameters
- 	
-* **email** – User account email
-* **tkn** – User API token
+
+- **email** – User account email
+- **tkn** – User API token
 
 <details>
 <summary>Example request</summary>

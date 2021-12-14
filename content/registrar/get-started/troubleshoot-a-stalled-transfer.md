@@ -21,11 +21,12 @@ You have reapplied the registrar lock at your current registrar since requesting
 <summary>Transfer rejected</summary>
 <div>
 
-Your transfer has been rejected by your previous registrar. There are several reasons for this to happen: 
-* You actively rejected the transfer request in the email you received from your registrar or on your registrar’s interface.
-* Your registrar determines the domain is not eligible for transfer.
-* Some registrars allow customers to enable a setting to reject all transfer requests.
-* In some instances, registrars may reject the transfer if they suspect malicious behavior.
+Your transfer has been rejected by your previous registrar. There are several reasons for this to happen:
+
+- You actively rejected the transfer request in the email you received from your registrar or on your registrar’s interface.
+- Your registrar determines the domain is not eligible for transfer.
+- Some registrars allow customers to enable a setting to reject all transfer requests.
+- In some instances, registrars may reject the transfer if they suspect malicious behavior.
 
 You will need to restart the transfer and approve the request or contact your current registrar to solve this issue.
 

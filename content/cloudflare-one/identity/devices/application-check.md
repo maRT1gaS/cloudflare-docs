@@ -9,9 +9,9 @@ pcx-content-type: how-to
 <summary>Feature availability</summary>
 <div>
 
-| Operating Systems | [WARP mode required](/connections/connect-devices/warp#warp-client-modes) | [Teams plans](https://www.cloudflare.com/teams-pricing/) |
-| ----------------- | --------- | ---- |
-| macOS, Windows, Linux | WARP with Gateway | All plans | 
+| Operating Systems     | [WARP mode required](/connections/connect-devices/warp#warp-client-modes) | [Teams plans](https://www.cloudflare.com/teams-pricing/) |
+| --------------------- | ------------------------------------------------------------------------- | -------------------------------------------------------- |
+| macOS, Windows, Linux | WARP with Gateway                                                         | All plans                                                |
 
 </div>
 </details>
@@ -32,13 +32,13 @@ To enable Application Check:
 1. Enter a descriptive name for the check.
 1. Select your operating system.
 1. Enter a file path (for example, `c:\my folder\myfile.exe`).
-1. Next, you can choose to enter a [**Signing certificate thumbprint**](#determine-the-signing-thumbprint). 
+1. Next, you can choose to enter a [**Signing certificate thumbprint**](#determine-the-signing-thumbprint).
 
-    Adding this information will enable the check to ensure that the application was signed by the expected software developer. 
+   Adding this information will enable the check to ensure that the application was signed by the expected software developer.
 
-1. You can also opt to enter a [**SHA-256** value](#determine-the-sha-256-value). 
+1. You can also opt to enter a [**SHA-256** value](#determine-the-sha-256-value).
 
-    This enables the check to ensure the integrity of the binary file on the device.
+   This enables the check to ensure the integrity of the binary file on the device.
 
 1. Click **Save**.
 
@@ -52,24 +52,24 @@ The process to determine the signing thumbprint of an application varies dependi
 
 1. Create a directory.
 
-    ```sh
-    $ ~/Desktop % mkdir tmp
+   ```sh
+   $ ~/Desktop % mkdir tmp
 
-    $ ~/Desktop % cd tmp
-    ```
+   $ ~/Desktop % cd tmp
+   ```
 
 1. Run the following command to extract certificates for the WARP application:
 
-    ```sh
-    $ ~/Desktop/tmp % codesign -d --extract-certificates "/Applications/Cloudflare WARP.app/Contents/Resources/CloudflareWARP" Executable=/Applications/Cloudflare WARP.app/Contents/Resources/CloudflareWARP
-    ```
+   ```sh
+   $ ~/Desktop/tmp % codesign -d --extract-certificates "/Applications/Cloudflare WARP.app/Contents/Resources/CloudflareWARP" Executable=/Applications/Cloudflare WARP.app/Contents/Resources/CloudflareWARP
+   ```
 
 1. Next, run the following commant to extract the SHA1 thumbprint:
 
-    ```sh
-    $ ~/Desktop/tmp % openssl x509 -inform DER -in codesign0 -fingerprint -sha1 -noout | tr -d :                              
-    SHA1 Fingerprint=FE2C359D79D4CEAE6BDF7EFB507326C6B4E2436E
-    ```
+   ```sh
+   $ ~/Desktop/tmp % openssl x509 -inform DER -in codesign0 -fingerprint -sha1 -noout | tr -d :
+   SHA1 Fingerprint=FE2C359D79D4CEAE6BDF7EFB507326C6B4E2436E
+   ```
 
 ### On Windows
 
@@ -82,7 +82,7 @@ Get-AuthenticodeSignature -FilePath c:\myfile.exe
 
 ## Determine the SHA-256 value
 
-The SHA-256 value almost always changes between versions of a file/application. 
+The SHA-256 value almost always changes between versions of a file/application.
 
 ### On macOS
 

@@ -17,7 +17,7 @@ Environments are different contexts that your code runs in. The Workers platform
 
 These environments are utilized with the `--env` or `-e` flag on `wrangler build`, `wrangler dev`, `wrangler preview`, `wrangler publish`, and `wrangler secret`.
 
---------------------------------
+---
 
 ## Usage
 
@@ -66,7 +66,7 @@ name = "your-worker-dev"
 route = "your-custom-route"
 ```
 
---------------------------------
+---
 
 ## Examples
 
@@ -99,7 +99,7 @@ To deploy this Worker, run the `wrangler publish` command in your terminal:
 ✨  Successfully published your script to example.com/*
 ```
 
-#### Publishing to *.workers.dev
+#### Publishing to \*.workers.dev
 
 Your `*.workers.dev` subdomain allows you to deploy Workers scripts [without attaching a custom domain as a Cloudflare zone](https://blog.cloudflare.com/announcing-workers-dev/). To claim a `*.workers.dev` subdomain, such as `my-subdomain.workers.dev`, select the **Workers** icon on your account home, or **Workers** then **Manage Workers** on your zone's dashboard, and begin setup on the right side of the Workers dashboard under **Your subdomain**.
 
@@ -188,9 +188,9 @@ Any defined [environment variables](/platform/environment-variables) (the [`vars
 With this configuration, the `ENVIRONMENT` variable can be used to call specific code depending on the given environment:
 
 ```js
-if (ENVIRONMENT === "staging") {
+if (ENVIRONMENT === 'staging') {
   // staging-specific code
-} else if (ENVIRONMENT === "production") {
+} else if (ENVIRONMENT === 'production') {
   // production-specific code
 }
 ```
@@ -267,7 +267,7 @@ With this configuration, deploy each environment by attaching a `--env` or `-e` 
 ✨  Successfully published your script to https://my-worker.<your-subdomain>.workers.dev
 ```
 
---------------------------------
+---
 
 ## Custom webpack configurations
 
@@ -295,7 +295,7 @@ Your default `wrangler build`, `wrangler preview`, and `wrangler publish` comman
 
 The build commands `wrangler build -e production`, `wrangler preview -e production`, and `wrangler publish -e production` would all use your `webpack.config.js` file.
 
---------------------------------
+---
 
 ## Invalid configurations
 
@@ -364,7 +364,7 @@ workers_dev = true
 route = "staging.example.com/*"
 ```
 
-Wrangler will fail to deploy when both  `workers_dev = true` and `route` (or `routes`) are defined. If you are trying to deploy to a `*.workers.dev` domain, remove the `route` or `routes` value.
+Wrangler will fail to deploy when both `workers_dev = true` and `route` (or `routes`) are defined. If you are trying to deploy to a `*.workers.dev` domain, remove the `route` or `routes` value.
 
 ```sh
 ~/my-worker $ wrangler publish

@@ -10,7 +10,7 @@ Cloudflare supports two types of network interconnect: Private network interconn
 
 ## Private network interconnect
 
-Private network interconnects (PNI) are available at any of our [private peering facilities](https://www.peeringdb.com/net/4224). 
+Private network interconnects (PNI) are available at any of our [private peering facilities](https://www.peeringdb.com/net/4224).
 
 Choose a PNI if you are co-located with a Cloudflare data center. We also recommend a PNI if:
 

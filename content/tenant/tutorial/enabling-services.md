@@ -1,5 +1,5 @@
 ---
-title: "3: Enabling services"
+title: '3: Enabling services'
 order: 2
 pcx-content-type: tutorial
 ---
@@ -22,10 +22,10 @@ curl -X POST https://api.cloudflare.com/client/v4/zones \
 -H 'x-auth-email: <x-auth-email>' \
 -H 'x-auth-key: <x-auth-key>' \
 -d '{
-   "name": "example.com", 
-   "account": { 
-      "id": "<customer account id>" 
-   } 
+   "name": "example.com",
+   "account": {
+      "id": "<customer account id>"
+   }
 }'
 ```
 
@@ -51,9 +51,9 @@ curl -X POST https://api.cloudflare.com/client/v4/zones/<zone id>/subscription \
 
 Allowed rate plans are:
 
-* `PARTNERS_PRO`
-* `PARTNERS_BIZ`
-* `PARTNERS_ENT`
+- `PARTNERS_PRO`
+- `PARTNERS_BIZ`
+- `PARTNERS_ENT`
 
 These are the same plans that customers buy in the dashboard. Additionally, depending on your agreement there may be additional services you can select including `dedicated_certificates`, `dedicated_certificates_custom`, `page_rules`, etc. These are specified as `component_values` in the subscriptions creation request.
 
@@ -61,13 +61,13 @@ An example `POST` body for such a request may look like:
 
 ```json
 {
-  "rate_plan":{
-    "id":"PARTNERS_BIZ"
+  "rate_plan": {
+    "id": "PARTNERS_BIZ"
   },
-  "component_values":[
+  "component_values": [
     {
-      "name":"dedicated_certificates_custom",
-      "value":1
+      "name": "dedicated_certificates_custom",
+      "value": 1
     }
   ]
 }
@@ -86,19 +86,23 @@ curl -X POST https://api.cloudflare.com/client/v4/accounts/<account id>/subscrip
 -H 'Content-Type: application/json' \
 -H 'x-auth-email: <x-auth-email>' \
 -H 'x-auth-key: <x-auth-key>' \
--d '{ 
+-d '{
    "rate_plan": {
       "id": "<rate plan name>"
-   } 
+   }
 }'
 ```
 
 Once you have added the necessary features, you or your customer can move on to configuring the various services and fine-tuning settings.
 
---------------------------------
+---
 
 ## Continue the tutorial
 
 Learn how to modify zone settings and other services.
 
-<p><Button type="primary" href="/tutorial/service-configuration">Step 4: Service configuration</Button></p>
+<p>
+  <Button type="primary" href="/tutorial/service-configuration">
+    Step 4: Service configuration
+  </Button>
+</p>

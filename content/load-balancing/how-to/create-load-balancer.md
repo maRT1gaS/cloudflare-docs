@@ -3,25 +3,25 @@ order: 3
 pcx-content-type: how-to
 ---
 
-import LBDefinition from "../_partials/_load-balancer-definition.md"
-import LBCreate from "../_partials/_load-balancer-create.md"
-import LBCreateAPI from "../_partials/_load-balancer-create-api.md"
+import LBDefinition from '../_partials/_load-balancer-definition.md';
+import LBCreate from '../_partials/_load-balancer-create.md';
+import LBCreateAPI from '../_partials/_load-balancer-create-api.md';
 
 # Create a load balancer
 
-<LBDefinition/>
+<LBDefinition />
 
 For more details about load balancers, refer to [Load balancers](/understand-basics/load-balancers).
 
 ## Via the dashboard
 
-<LBCreate/>
+<LBCreate />
 
 ---
 
 ## Via the API
 
-<LBCreateAPI/>
+<LBCreateAPI />
 
 ## Sharing your load balancer with other sites
 

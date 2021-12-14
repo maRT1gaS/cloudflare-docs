@@ -11,16 +11,17 @@ A `WritableStream` is the `writable` property of a [`TransformStream`](/runtime-
 A typical way to write to a `WritableStream` is to simply pipe a [`ReadableStream`](/runtime-apis/streams/readablestream) to it.
 
 ```js
-readableStream.pipeTo(writableStream)
-  .then(() => console.log("All data successfully written!"))
-  .catch(e => console.error("Something went wrong!", e))
+readableStream
+  .pipeTo(writableStream)
+  .then(() => console.log('All data successfully written!'))
+  .catch(e => console.error('Something went wrong!', e));
 ```
 
 To write to a `WritableStream` directly, you must use its writer.
 
 ```js
-const writer = writableStream.getWriter()
-writer.write(data)
+const writer = writableStream.getWriter();
+writer.write(data);
 ```
 
 See the [WritableStreamDefaultWriter](/runtime-apis/streams/writablestreamdefaultwriter) documentation for further detail.
@@ -39,7 +40,10 @@ See the [WritableStreamDefaultWriter](/runtime-apis/streams/writablestreamdefaul
 
 <Definitions>
 
-- <Code>abort(reason<ParamType>string</ParamType><PropMeta>optional</PropMeta>)</Code> <Type>Promise&lt;void></Type>
+- <Code>
+    abort(reason<ParamType>string</ParamType>
+    <PropMeta>optional</PropMeta>)
+  </Code> <Type>Promise&lt;void></Type>
 
   - Aborts the stream. This method returns a promise that fulfills with a response `undefined`. `reason` is an optional human-readable string indicating the reason for cancellation. `reason` will be passed to the underlying sink’s abort algorithm. If this writable stream is one side of a [TransformStream](/runtime-apis/streams/transformstream), then its abort algorithm causes the transform’s readable side to become errored with `reason`.
 

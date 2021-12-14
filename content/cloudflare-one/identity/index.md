@@ -13,9 +13,9 @@ You can simultaneously configure an OTP and an identity provider to allow users 
 
 Additionally, Cloudflare for Teams can integrate with [endpoint protection providers](/identity/devices) to check requests for device posture. This allows you to configure security policies that rely on additional signals from endpoint security providers to allow or deny connections to your applications.
 
-<DirectoryListing path="/identity"/>
+<DirectoryListing path="/identity" />
 
 ## Related tutorials
 
-* [Require U2F keys with Okta](/tutorials/okta-u2f)
-* [Troubleshoot user login details](/tutorials/user-diagnostics)
+- [Require U2F keys with Okta](/tutorials/okta-u2f)
+- [Troubleshoot user login details](/tutorials/user-diagnostics)

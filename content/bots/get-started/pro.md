@@ -4,8 +4,8 @@ order: 1
 pcx-content-type: how-to
 ---
 
-import EnableSteps from "../_partials/_get-started-pro-biz-steps.md"
-import RulesetEngine from "../_partials/_bfm-ruleset-engine.md"
+import EnableSteps from '../_partials/_get-started-pro-biz-steps.md';
+import RulesetEngine from '../_partials/_bfm-ruleset-engine.md';
 
 # Get started with Super Bot Fight Mode (Pro)
 
@@ -18,7 +18,7 @@ Super Bot Fight Mode is included in your Pro subscription. When enabled, the pro
 
 ## Enable Super Bot Fight Mode
 
-<EnableSteps/>
+<EnableSteps />
 
 ## Analytics
 
@@ -36,4 +36,4 @@ You can see bot-related actions by going to **Firewall** > **Overview**. Any req
 
 ## Ruleset Engine
 
-<RulesetEngine/>
+<RulesetEngine />

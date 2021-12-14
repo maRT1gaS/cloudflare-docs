@@ -5,8 +5,8 @@ order: 2
 pcx-content-type: navigation
 ---
 
-import DocsCodeExamplesOverview from "../../components/docs-code-examples-overview"
+import DocsCodeExamplesOverview from '../../components/docs-code-examples-overview';
 
 # Examples
 
-<DocsCodeExamplesOverview/>
+<DocsCodeExamplesOverview />

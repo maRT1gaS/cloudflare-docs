@@ -14,7 +14,7 @@ User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (
 Accept: image/jpg
 ```
 
-The default Cache Key constructed from this request combines aspects such as Cloudflare Zone ID, scheme, hostname, and path into a Cache Key similar to  `1234:https://www.example.com/foo.jpg`. Zone ID and Path are always included in the Cache Key and cannot be modified.
+The default Cache Key constructed from this request combines aspects such as Cloudflare Zone ID, scheme, hostname, and path into a Cache Key similar to `1234:https://www.example.com/foo.jpg`. Zone ID and Path are always included in the Cache Key and cannot be modified.
 
 <Aside type="warning" header="Warning">
 
@@ -51,21 +51,21 @@ The following fields control the Cache Key Template.
 
 ### Query String
 
-The query string controls which URL query string parameters go into the Cache Key. You can `include` specific query string parameters or `exclude` them using the respective fields. When you include a query string parameter, the `value` of the query string parameter is used in the Cache Key. 
+The query string controls which URL query string parameters go into the Cache Key. You can `include` specific query string parameters or `exclude` them using the respective fields. When you include a query string parameter, the `value` of the query string parameter is used in the Cache Key.
 
 #### Example
 
 If you include the query string foo in a URL like `https://www.example.com/?foo=bar`, then bar appears in the Cache Key. Exactly one of `include` or `exclude` is expected.
 
-#### Usage notes 
+#### Usage notes
 
-- To include all query string parameters (the default behavior), use include: "*"
-- To ignore query strings, use exclude: "*"
-- To include most query string parameters but exclude a few, use the exclude field which assumes  the other query string parameters are included.
+- To include all query string parameters (the default behavior), use include: "\*"
+- To ignore query strings, use exclude: "\*"
+- To include most query string parameters but exclude a few, use the exclude field which assumes the other query string parameters are included.
 
 ### Headers
 
-Headers control which headers go into the Cache Key. Similar to Query String, you can include specific headers or exclude default headers. 
+Headers control which headers go into the Cache Key. Similar to Query String, you can include specific headers or exclude default headers.
 
 When you include a header, the header value is included in the Cache Key. For example, if an HTTP request contains an HTTP header like `X-Auth-API-key: 12345`, and you include the `X-Auth-API-Key header` in your Cache Key Template, then `12345` appears in the Cache Key.
 
@@ -100,6 +100,7 @@ Currently, you can only exclude the `Origin` header. The `Origin` header is alwa
 ### Host
 
 Host determines which host header to include in the Cache Key.
+
 - If `resolved: false`, Cloudflare includes the `Host` header in the HTTP request sent to the origin.
 - If `resolved: true`, Cloudflare includes the `Host` header that was resolved to get the `origin IP` for the request. In this scenario, the `Host` header may be different from the header actually sent if the [Cloudflare Resolve Override](https://support.cloudflare.com/hc/articles/206190798) feature is used.
 
@@ -113,7 +114,8 @@ You cannot include cookies specific to Cloudflare. Cloudflare cookies are prefix
 
 #### User features
 
-User feature fields add features about the end-user (client) into the Cache Key. 
+User feature fields add features about the end-user (client) into the Cache Key.
+
 - `device_type` classifies a request as `mobile`, `desktop`, or `tablet` based on the User Agent
 - `geo` includes the client’s country, derived from the IP address
 - `lang` includes the first language code contained in the `Accept-Language` header sent by the client

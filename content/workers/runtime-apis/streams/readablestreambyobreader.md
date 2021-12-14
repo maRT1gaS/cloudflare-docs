@@ -2,6 +2,7 @@
 title: ReadableStream BYOBReader
 pcx-content-type: configuration
 ---
+
 <!-- The space in the title was introduced to create a pleasing line-break in the title in the sidebar. -->
 
 # ReadableStreamBYOBReader
@@ -17,15 +18,19 @@ An instance of `ReadableStreamBYOBReader` is functionally identical to [`Readabl
 A `ReadableStreamBYOBReader` is not instantiated via its constructor. Rather, it is retrieved from a [`ReadableStream`](/runtime-apis/streams/readablestream):
 
 ```js
-const { readable, writable } = new TransformStream()
-const reader = readable.getReader({ mode: "byob" })
+const { readable, writable } = new TransformStream();
+const reader = readable.getReader({ mode: 'byob' });
 ```
 
 ## Methods
 
 <Definitions>
 
-- <Code>read(buffer<ParamType>ArrayBufferView</ParamType>)</Code> <TypeLink href="https://streams.spec.whatwg.org/#dictdef-readablestreambyobreadresult">Promise&lt;ReadableStreamBYOBReadResult></TypeLink>
+- <Code>
+    read(buffer<ParamType>ArrayBufferView</ParamType>)
+  </Code> <TypeLink href="https://streams.spec.whatwg.org/#dictdef-readablestreambyobreadresult">
+    Promise&lt;ReadableStreamBYOBReadResult>
+  </TypeLink>
 
   - Returns a promise with the next available chunk of data read into a passed-in buffer.
 
@@ -35,11 +40,11 @@ const reader = readable.getReader({ mode: "byob" })
 
   <Aside type="warning" header="Warning">
 
-  `read` provides no control over the minimum number of bytes that should be read into the buffer. Even if you allocate a 1MiB buffer, the kernel is perfectly within its rights to fulfill this read with a single byte, whether or not an EOF immediately follows.
+`read` provides no control over the minimum number of bytes that should be read into the buffer. Even if you allocate a 1MiB buffer, the kernel is perfectly within its rights to fulfill this read with a single byte, whether or not an EOF immediately follows.
 
-  In practice, we have found that `read` typically fills only 1% of the provided buffer.
+In practice, we have found that `read` typically fills only 1% of the provided buffer.
 
-  Workers team is considering implementing or proposing a change to the Streams API to allow users to specify `minBytes` that should be read into the buffer before resolving the read.
+Workers team is considering implementing or proposing a change to the Streams API to allow users to specify `minBytes` that should be read into the buffer before resolving the read.
 
   </Aside>
 

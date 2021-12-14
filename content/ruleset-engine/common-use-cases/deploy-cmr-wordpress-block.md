@@ -14,8 +14,8 @@ Follow the steps below to create a rule that executes a Managed Ruleset and defi
 
 The example below uses the [Update ruleset](/rulesets-api/update) operation to perform the two steps in a single `PUT` request.
 
-* Add a rule to the ruleset of the `http_request_firewall_managed` phase that applies the **Cloudflare Managed Ruleset**.
-* Override rules with the `wordpress` tag to set the action to `block`. All other rules use the default action provided by the ruleset issuer.
+- Add a rule to the ruleset of the `http_request_firewall_managed` phase that applies the **Cloudflare Managed Ruleset**.
+- Override rules with the `wordpress` tag to set the action to `block`. All other rules use the default action provided by the ruleset issuer.
 
 <details>
 <summary>Example: Use tag overrides to set WordPress rules to Block at the zone level</summary>

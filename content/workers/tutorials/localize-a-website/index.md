@@ -1,15 +1,15 @@
 ---
 updated: 2020-08-03
 difficulty: Intermediate
-content_type: "📝 Tutorial"
+content_type: '📝 Tutorial'
 pcx-content-type: tutorial
 ---
 
-import TutorialsBeforeYouStart from "../../_partials/_tutorials-before-you-start.md"
+import TutorialsBeforeYouStart from '../../_partials/_tutorials-before-you-start.md';
 
 # Localize a website with HTMLRewriter
 
-<TutorialsBeforeYouStart/>
+<TutorialsBeforeYouStart />
 
 ## Overview
 
@@ -42,7 +42,19 @@ The `--site` flag tells Wrangler that you want to build a [Workers Sites](/platf
 
 The newly generated `i18n-example` project will contain two folders: `public`, which is our static HTML, and `workers-site`:
 
-<pre class="CodeBlock CodeBlock-scrolls-horizontally" language="sh"><code><u><b class="CodeBlock--token-directory">~/i18n-example</b> <b class="CodeBlock--token-prompt">$</b> </u>ls<br/><u><b class="CodeBlock--token-value">public    workers-site  wrangler.toml</b></u></code></pre>
+<pre class="CodeBlock CodeBlock-scrolls-horizontally" language="sh">
+  <code>
+    <u>
+      <b class="CodeBlock--token-directory">~/i18n-example</b>{' '}
+      <b class="CodeBlock--token-prompt">$</b>{' '}
+    </u>
+    ls
+    <br />
+    <u>
+      <b class="CodeBlock--token-value">public workers-site wrangler.toml</b>
+    </u>
+  </code>
+</pre>
 
 Inside of the `public` directory, replace the default generated HTML code with the HTML5 UP template seen in the demo screenshot: you can download a [release](https://github.com/signalnerve/i18n-example-workers/archive/v1.0.zip) (ZIP link) of the code for this project and copy the `public` folder to your own project to get started.
 
@@ -62,16 +74,13 @@ What is unique about this page is the addition of [data attributes](https://deve
 ---
 filename: public/index.html
 ---
+
 <!-- source clipped from i18n-example site -->
 
 <div class="inner">
   <h1 data-i18n-key="headline">Example Site</h1>
-  <p data-i18n-key="subtitle">
-    This is my example site. Depending o...
-  </p>
-  <p data-i18n-key="disclaimer">
-    Disclaimer: the initial translations...
-  </p>
+  <p data-i18n-key="subtitle">This is my example site. Depending o...</p>
+  <p data-i18n-key="disclaimer">Disclaimer: the initial translations...</p>
 </div>
 ```
 
@@ -159,10 +168,10 @@ To review that everything looks as expected, use the preview functionality built
 
 You can expand on this simple translation functionality to provide country-specific translations, based on the incoming request’s `Accept-Language` header. By taking this header, parsing it, and passing the parsed language into our `ElementHandler`, you can retrieve a translated string in our user’s home language, provided that it’s defined in `strings`.
 
-To implement this: 
+To implement this:
 
-1. Update the `strings` object, adding a second layer of key-value pairs and allowing strings to be looked up in the format `strings[country][key]`. 
-2. Pass a `countryStrings` object into our `ElementHandler`, so that it can be used during the parsing process. 
+1. Update the `strings` object, adding a second layer of key-value pairs and allowing strings to be looked up in the format `strings[country][key]`.
+2. Pass a `countryStrings` object into our `ElementHandler`, so that it can be used during the parsing process.
 3. Grab the `Accept-Language` header from an incoming request, parse it, and pass the parsed language to `ElementHandler`.
 
 To parse the `Accept-Language` header, install the [`accept-language-parser`](https://www.npmjs.com/package/accept-language-parser) NPM package:

@@ -28,9 +28,9 @@ You can only define overrides for the Network-layer DDoS Attack Protection Manag
 
 The following `PUT` example creates a new phase ruleset (or updates the existing one) for the `ddos_l4` phase at the account level. The request includes several overrides to adjust the default behavior of the Network-layer DDoS Attack Protection Managed Ruleset. These overrides are the following:
 
-* All rules of the Network-layer DDoS Attack Protection Managed Ruleset will have their sensitivity set to `medium`.
-* All rules tagged with the tag `{tag-name}` will have their sensitivity set to `low`.
-* The rule with ID `{rule-id}` will use the `block` action.
+- All rules of the Network-layer DDoS Attack Protection Managed Ruleset will have their sensitivity set to `medium`.
+- All rules tagged with the tag `{tag-name}` will have their sensitivity set to `low`.
+- The rule with ID `{rule-id}` will use the `block` action.
 
 The overrides apply to all packets matching the rule expression: `ip.dst in { 1.1.1.0/24 }`.
 

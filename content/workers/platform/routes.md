@@ -31,7 +31,7 @@ You may enter a placeholder AAAA record pointing to [100::](https://datatracker.
 
 \* _A zone that you have registered with some registrar (not workers.dev) and setup Cloudflare to serve as [a reverse proxy](https://www.cloudflare.com/learning/cdn/glossary/reverse-proxy/)._
 
-## Routes with *.workers.dev
+## Routes with \*.workers.dev
 
 Cloudflare Workers accounts come with a `*.workers.dev` subdomain that is configurable in the Cloudflare dashboard. Your `*.workers.dev` subdomain allows you to deploy Workers scripts [without attaching a custom domain as a Cloudflare zone](https://blog.cloudflare.com/announcing-workers-dev/).
 

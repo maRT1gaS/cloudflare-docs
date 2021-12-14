@@ -6,10 +6,9 @@ pcx-content-type: tutorial
 
 # Potential problems
 
-If you notice consistent 523, 524 or other error responses, please check the [System Status Map](https://www.cloudflarestatus.com/) and [contact support](https://support.cloudflare.com/) as needed. Railgun will fall-back to direct HTTP requests if our endpoints can’t contact your Railgun daemon, but consistent error responses may indicate a system or origin server problem. When contacting support, please provide a screenshot of ```http://www.yourdomain.com/cdn-cgi/trace``` if you are able, or a [traceroute](https://support.cloudflare.com/hc/en-us/articles/200169336-How-do-I-run-a-traceroute-) to your domain so we know which datacenter your requests are hitting. You can then [pause](https://support.cloudflare.com/hc/en-us/articles/200169176-How-do-I-temporarily-deactivate-Cloudflare-) Cloudflare via the website to disable the service and resume normal website traffic.
+If you notice consistent 523, 524 or other error responses, please check the [System Status Map](https://www.cloudflarestatus.com/) and [contact support](https://support.cloudflare.com/) as needed. Railgun will fall-back to direct HTTP requests if our endpoints can’t contact your Railgun daemon, but consistent error responses may indicate a system or origin server problem. When contacting support, please provide a screenshot of `http://www.yourdomain.com/cdn-cgi/trace` if you are able, or a [traceroute](https://support.cloudflare.com/hc/en-us/articles/200169336-How-do-I-run-a-traceroute-) to your domain so we know which datacenter your requests are hitting. You can then [pause](https://support.cloudflare.com/hc/en-us/articles/200169176-How-do-I-temporarily-deactivate-Cloudflare-) Cloudflare via the website to disable the service and resume normal website traffic.
 
 Railgun does not perform DNS queries when it receives a request for maximum efficiency and to prevent tampering. This means that the daemon is unaware of NAT routing or firewalls. NAT does not allow for addressing a public interface from within the associated LAN and Railgun requests will timeout and produce 502 errors. **This can be corrected by setting up a static IP mapping.** You can set that either through the hosts file for your system (usually at the path /etc/hosts) or through the `railgun-nat.conf` file in the same directory as the `railgun.conf` file. Please contact support if you require assistance with the NAT configuration file.
-
 
 ## Common issues
 
@@ -54,7 +53,7 @@ You should confirm that memcached is running, is accepting connections, and conf
 
 `rg-diag` is installed alongside Railgun, and allows you to decode the `Cf-Railgun` header. Example:
 
-```sh
+````sh
 $ bin/rg-diag -decode="151df128a1 2.05 0.009465 0031 5360"
 
 Compression ratio 2.05%
@@ -63,3 +62,4 @@ Railgun Flag map.file used to change IP
 Railgun Flag rg-sender sent dictionary
 Railgun Flag rg-listener found dictionary
 ```****
+````

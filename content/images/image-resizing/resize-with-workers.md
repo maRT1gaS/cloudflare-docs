@@ -9,9 +9,9 @@ There are two ways of using Image Resizing. One is the [default URL scheme](/ima
 
 Here are a few examples of the flexibility Workers give you:
 
-* **Use a custom URL scheme**. Instead of specifying pixel dimensions in image URLs, use preset names such as `thumbnail` and `large`.
-* **Hide the actual location of the original image**. You can store images in an external S3 bucket or a hidden folder on your server without exposing that information in URLs.
-* **Implement content negotiation**. This is useful to adapt image sizes, formats and quality dynamically based on the device and condition of the network.
+- **Use a custom URL scheme**. Instead of specifying pixel dimensions in image URLs, use preset names such as `thumbnail` and `large`.
+- **Hide the actual location of the original image**. You can store images in an external S3 bucket or a hidden folder on your server without exposing that information in URLs.
+- **Implement content negotiation**. This is useful to adapt image sizes, formats and quality dynamically based on the device and condition of the network.
 
 The resizing feature is accessed via the [options](https://developers.cloudflare.com/workers/runtime-apis/request#requestinitcfproperties) of a `fetch()` [subrequest inside a Worker](https://developers.cloudflare.com/workers/runtime-apis/fetch).
 
@@ -22,29 +22,37 @@ The `fetch()` function accepts parameters in the second argument inside the `{cf
 <Definitions>
 
 - **`width`**
+
   - Maximum width in image pixels. The value must be an integer.
 
 - **`height`**
+
   - Maximum height in image pixels.
 
 - **`dpr`**
+
   - Device Pixel Ratio. Default is `1`. Multiplier for `width`/`height` that makes it easier to specify higher-DPI sizes in `<img srcset>`.
 
 - **`fit`**
+
   - Resizing mode as a string. It affects interpretation of `width` and `height`:
 
     <Definitions>
 
     - **`scale-down`**
+
       - Similar to `contain`, but the image is never enlarged. If the image is larger than given `width` or `height`, it will be resized. Otherwise its original size will be kept.
 
     - **`contain`**
+
       - Resizes to the maximum size that fits within the given `width` and `height`. If only a single dimension is given (for example, only `width`), the image will be shrunk or enlarged to exactly match that dimension. Aspect ratio is always preserved.
 
     - **`cover`**
+
       - Resizes (shrinks or enlarges) to fill the entire area of `width` and `height`. If the image has an aspect ratio different from the ratio of `width` and `height`, it will be cropped to fit.
 
     - **`crop`**
+
       - The image will shrunk and cropped to fit within the area specified by `width` and `height`. The image will not be enlarged. For images smaller than the given dimensions it is the same as `scale-down`. For images larger than the given dimensions, it is the same as `cover`. See also `trim`.
 
     - **`pad`**
@@ -63,14 +71,17 @@ The `fetch()` function accepts parameters in the second argument inside the `{cf
     - An object `{x, y}` containing focal point coordinates in the original image expressed as <em>fractions</em> ranging from `0.0` (top or left) to `1.0` (bottom or right), with `0.5` being the center. `{fit: "cover", gravity: {x:0.5, y:0.2}}` will crop each side to preserve as much as possible around a point at 20% of the height of the source image.
 
 - **`trim`**
+
   - An object with four properties `{left, top, right, bottom}` that specify a number of pixels to cut off on each side. Allows removal of borders or cutting out a specific fragment of an image. Trimming is performed before resizing or rotation. Takes `dpr` into account.
 
 - **`quality`**
+
   - Quality setting from 1-100 (useful values are in 60-90 range). Lower values make images look worse, but load faster. The default is `85`. Quality `100` will generate very large image files, and is not recommended.
 
   In case of PNG images, an explicit quality setting enables use of 8-bit (palette) variant of the format, using [pngquant](https://pngquant.org)'s quality scale. Images that cannot meet the requested quality with 256 colors will fall back to 24-bit PNG format or JPEG if they are opaque.
 
 - **`format`**
+
   - Output format to generate. It can be:
 
     - **`avif`** — generate images in AVIF format if possible (with WebP as a fallback).
@@ -82,17 +93,21 @@ The `fetch()` function accepts parameters in the second argument inside the `{cf
     To automatically serve WebP or AVIF formats to browsers that support them, check if the `Accept` header contains `image/webp` or `image/avif`, and set the format option accordingly.
 
 - **`anim`**
+
   - Whether to preserve animation frames from input files. Default is `true`. Setting it to `false` reduces animations to still images. This setting is recommended when enlarging images or processing arbitrary user content, because large GIF animations can weigh tens or even hundreds of megabytes. It is also useful to set `anim:false` when using `format:"json"` to get the response quicker without the number of frames.
 
 - **`metadata`**
+
   - What EXIF data should be preserved in the output image. Note that EXIF rotation and embedded color profiles are always applied ("baked in" into the image), and are not affected by this option. Note that if the Polish feature is enabled, all metadata may have been removed already and this option may have no effect.
 
     <Definitions>
 
     - **`keep`**
+
       - Preserve most of EXIF metadata, including GPS location if present.
 
     - **`copyright`**
+
       - Only keep the copyright tag, and discard everything else. This is the default behavior for JPEG files.
 
     - **`none`**
@@ -101,12 +116,15 @@ The `fetch()` function accepts parameters in the second argument inside the `{cf
     </Definitions>
 
 - **`background`**
+
   - Background color to add underneath the image. Applies only to images with transparency (for example, PNG). Accepts any CSS color, such as `#RRGGBB` and `rgba(…)`.
 
 - **`rotate`**
+
   - Number of degrees (`90`, `180`, or `270`) to rotate the image by. `width` and `height` options refer to axes after rotation.
 
 - **`sharpen`**
+
   - Strength of sharpening filter to apply to the image. Floating-point number between `0` (no sharpening, default) and `10` (maximum). `1.0` is a recommended value for downscaled images.
 
 - **`blur`**
@@ -120,12 +138,12 @@ In your worker, where you would fetch the image using `fetch(request)`, add opti
 fetch(imageURL, {
   cf: {
     image: {
-      fit: "scale-down",
+      fit: 'scale-down',
       width: 800,
-      height: 600
-    }
-  }
-})
+      height: 600,
+    },
+  },
+});
 ```
 
 These typings are also available in [our Workers TypeScript definitions library](https://github.com/cloudflare/workers-types).
@@ -177,12 +195,13 @@ When an image cannot be resized — for example, because the image does not exis
 By default, the error will be forwarded to the browser, but you can decide how to handle errors. For example, you can redirect the browser to the original, unresized image instead:
 
 ```js
-const response = await fetch(imageURL, options)
+const response = await fetch(imageURL, options);
 
-if (response.ok || response.redirected) { // fetch() may respond with status 304
-  return response
+if (response.ok || response.redirected) {
+  // fetch() may respond with status 304
+  return response;
 } else {
-  return response.redirect(imageURL, 307)
+  return response.redirect(imageURL, 307);
 }
 ```
 
@@ -191,12 +210,12 @@ Keep in mind that if the original images on your server are very large, it may b
 You can also replace failed images with a placeholder image:
 
 ```js
-const response = await fetch(imageURL, options)
+const response = await fetch(imageURL, options);
 if (response.ok || response.redirected) {
-  return response
+  return response;
 } else {
   // Change to a URL on your server
-  return fetch("https://img.example.com/blank-placeholder.png")
+  return fetch('https://img.example.com/blank-placeholder.png');
 }
 ```
 
@@ -205,9 +224,9 @@ if (response.ok || response.redirected) {
 Assuming you [set up a Worker](https://developers.cloudflare.com/workers/learning/getting-started) on `https://example.com/image-resizing` to handle URLs like `https://example.com/image-resizing?width=80&image=https://example.com/uploads/avatar1.jpg`:
 
 ```js
-addEventListener("fetch", event => {
-  event.respondWith(handleRequest(event.request))
-})
+addEventListener('fetch', event => {
+  event.respondWith(handleRequest(event.request));
+});
 
 /**
  * Fetch and log a request
@@ -215,20 +234,24 @@ addEventListener("fetch", event => {
  */
 async function handleRequest(request) {
   // Parse request URL to get access to query string
-  let url = new URL(request.url)
+  let url = new URL(request.url);
 
   // Cloudflare-specific options are in the cf object.
-  let options = { cf: { image: {} } }
+  let options = { cf: { image: {} } };
 
   // Copy parameters from query string to request options.
   // You can implement various different parameters here.
-  if (url.searchParams.has("fit")) options.cf.image.fit = url.searchParams.get("fit")
-  if (url.searchParams.has("width")) options.cf.image.width = url.searchParams.get("width")
-  if (url.searchParams.has("height")) options.cf.image.height = url.searchParams.get("height")
-  if (url.searchParams.has("quality")) options.cf.image.quality = url.searchParams.get("quality")
+  if (url.searchParams.has('fit'))
+    options.cf.image.fit = url.searchParams.get('fit');
+  if (url.searchParams.has('width'))
+    options.cf.image.width = url.searchParams.get('width');
+  if (url.searchParams.has('height'))
+    options.cf.image.height = url.searchParams.get('height');
+  if (url.searchParams.has('quality'))
+    options.cf.image.quality = url.searchParams.get('quality');
 
   // Your Worker is responsible for automatic format negotiation. Check the Accept header.
-  const accept = request.headers.get("Accept");
+  const accept = request.headers.get('Accept');
   if (/image\/avif/.test(accept)) {
     options.cf.image.format = 'avif';
   } else if (/image\/webp/.test(accept)) {
@@ -238,34 +261,36 @@ async function handleRequest(request) {
   // Get URL of the original (full size) image to resize.
   // You could adjust the URL here, e.g., prefix it with a fixed address of your server,
   // so that user-visible URLs are shorter and cleaner.
-  const imageURL = url.searchParams.get("image")
-  if (!imageURL) return new Response('Missing "image" value', { status: 400 })
+  const imageURL = url.searchParams.get('image');
+  if (!imageURL) return new Response('Missing "image" value', { status: 400 });
 
   try {
     // TODO: Customize validation logic
-    const { hostname, pathname } = new URL(imageURL)
+    const { hostname, pathname } = new URL(imageURL);
 
     // Optionally, only allow URLs with JPEG, PNG, GIF, or WebP file extensions
     // @see https://developers.cloudflare.com/images/url-format#supported-formats-and-limitations
     if (!/\.(jpe?g|png|gif|webp)$/i.test(pathname)) {
-      return new Response('Disallowed file extension', { status: 400 })
+      return new Response('Disallowed file extension', { status: 400 });
     }
 
     // Demo: Only accept "example.com" images
     if (hostname !== 'example.com') {
-      return new Response('Must use "example.com" source images', { status: 403 })
+      return new Response('Must use "example.com" source images', {
+        status: 403,
+      });
     }
   } catch (err) {
-    return new Response('Invalid "image" value', { status: 400 })
+    return new Response('Invalid "image" value', { status: 400 });
   }
 
   // Build a request that passes through request headers
   const imageRequest = new Request(imageURL, {
-    headers: request.headers
-  })
+    headers: request.headers,
+  });
 
   // Returning fetch() with resizing options will pass through response with the resized image.
-  return fetch(imageRequest, options)
+  return fetch(imageRequest, options);
 }
 ```
 

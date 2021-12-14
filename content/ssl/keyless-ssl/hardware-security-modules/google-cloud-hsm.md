@@ -12,6 +12,7 @@ This tutorial uses [Google Cloud HSM](https://cloud.google.com/kms/docs/hsm) —
 ## Before you start
 
 Make sure that you have:
+
 - Set up your [Google Cloud project](https://cloud.google.com/kms/docs/quickstart#before-you-begin)
 
 ---
@@ -42,7 +43,9 @@ Create a key, including the following information:
   <tbody>
     <tr>
       <td>Key ring</td>
-      <td>The key ring you created in <b>Step 2</b></td>
+      <td>
+        The key ring you created in <b>Step 2</b>
+      </td>
     </tr>
     <tr>
       <td>Protection level</td>

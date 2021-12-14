@@ -3,7 +3,7 @@ order: 3
 type: example
 summary: Allow a specific country.
 tags:
-- Country Code
+  - Country Code
 ---
 
 # Country Code

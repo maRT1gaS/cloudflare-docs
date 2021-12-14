@@ -1,5 +1,5 @@
 ---
-order: 
+order:
 pcx-content-type: tutorial
 ---
 
@@ -22,6 +22,6 @@ If you have feedback, [let us know](https://community.cloudflare.com/c/security/
 
 You can now proxy traffic through Cloudflare without additional configuration. As you run traffic through Cloudflare, you will see the last minute of traffic from **Spectrum** in the dashboard.
 
-## View traffic 
+## View traffic
 
 To view traffic running through Cloudflare, click **Spectrum** from your dashboard.

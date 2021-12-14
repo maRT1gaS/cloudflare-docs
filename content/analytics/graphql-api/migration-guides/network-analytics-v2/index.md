@@ -18,18 +18,18 @@ The following table compares the features of NAv1 and NAv2:
 
 <TableWrap>
 
-| Feature | NAv1 | NAv2 |
-|---------|------|------|
-| Sampling rate | 1/8,192 packets | Varies between 1/100 and 1/10,000 packets,<br/> depending on the mitigation service |
-| Sampling method | Core Sample Enrichment | [Edge Sample Enrichment](/graphql-api/migration-guides/network-analytics-v2/about#edge-sample-enrichment) |
-| Historical data retention method | Aggregated roll-ups | [Adaptive Bitrate](/graphql-api/migration-guides/network-analytics-v2/about#adaptive-bitrate-sampling) |
-| Retention period | 1-min roll-ups: 30 days<br/>1-hour roll-ups: 6 months<br/>1-day roll-ups: 1 year<br/>Attack roll-ups: 1 year | All nodes: 90 days |
-| Attack mitigation systems | dosd and gatebot | dosd, gatebot, flowtrackd\*, and Magic Firewall\* |
-| Examples of new fields | n/a | Rule ID<br/>GRE tunnel ID<br/>Packet size |
+| Feature                          | NAv1                                                                                                         | NAv2                                                                                                      |
+| -------------------------------- | ------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------- |
+| Sampling rate                    | 1/8,192 packets                                                                                              | Varies between 1/100 and 1/10,000 packets,<br/> depending on the mitigation service                       |
+| Sampling method                  | Core Sample Enrichment                                                                                       | [Edge Sample Enrichment](/graphql-api/migration-guides/network-analytics-v2/about#edge-sample-enrichment) |
+| Historical data retention method | Aggregated roll-ups                                                                                          | [Adaptive Bitrate](/graphql-api/migration-guides/network-analytics-v2/about#adaptive-bitrate-sampling)    |
+| Retention period                 | 1-min roll-ups: 30 days<br/>1-hour roll-ups: 6 months<br/>1-day roll-ups: 1 year<br/>Attack roll-ups: 1 year | All nodes: 90 days                                                                                        |
+| Attack mitigation systems        | dosd and gatebot                                                                                             | dosd, gatebot, flowtrackd\*, and Magic Firewall\*                                                         |
+| Examples of new fields           | n/a                                                                                                          | Rule ID<br/>GRE tunnel ID<br/>Packet size                                                                 |
 
 </TableWrap>
 
-_* Applicable only for Magic Transit customers._
+_\* Applicable only for Magic Transit customers._
 
 <Aside type="note">
 
@@ -43,10 +43,10 @@ NAv2 uses the same API endpoint but makes use of new nodes. While NAv1 has three
 
 <TableWrap>
 
-| Node type      | NAv1 | NAv2 for Magic Transit | NAv2 for Spectrum |
-|----------------|------|------------------------|-------------------|
-| Main node(s)   | `ipFlows1mGroups`<br/>`ipFlows1hGroups`<br/>`ipFlows1dGroups` | `magicTransitNetworkAnalyticsAdaptiveGroups` | `spectrumNetworkAnalyticsAdaptiveGroups` |
-| Attack node(s) | `ipFlows1mAttacksGroups` | `dosdNetworkAnalyticsAdaptiveGroups`<br/> `dosdAttackAnalyticsAdaptiveGroups`<br/> `flowtrackdNetworkAnalyticsAdaptiveGroups`<br/> `magicFirewallNetworkAnalyticsAdaptiveGroups` | `dosdNetworkAnalyticsAdaptiveGroups`<br/> `dosdAttackAnalyticsAdaptiveGroups` |
+| Node type      | NAv1                                                          | NAv2 for Magic Transit                                                                                                                                                           | NAv2 for Spectrum                                                             |
+| -------------- | ------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| Main node(s)   | `ipFlows1mGroups`<br/>`ipFlows1hGroups`<br/>`ipFlows1dGroups` | `magicTransitNetworkAnalyticsAdaptiveGroups`                                                                                                                                     | `spectrumNetworkAnalyticsAdaptiveGroups`                                      |
+| Attack node(s) | `ipFlows1mAttacksGroups`                                      | `dosdNetworkAnalyticsAdaptiveGroups`<br/> `dosdAttackAnalyticsAdaptiveGroups`<br/> `flowtrackdNetworkAnalyticsAdaptiveGroups`<br/> `magicFirewallNetworkAnalyticsAdaptiveGroups` | `dosdNetworkAnalyticsAdaptiveGroups`<br/> `dosdAttackAnalyticsAdaptiveGroups` |
 
 </TableWrap>
 
@@ -64,20 +64,18 @@ The following example queries the top 20 logs of traffic dropped by mitigation s
 
 ```graphql
 {
-  viewer
-  {
-    accounts(filter: {accountTag: "<REDACTED>"})
-    {
+  viewer {
+    accounts(filter: { accountTag: "<REDACTED>" }) {
       magicTransitNetworkAnalyticsAdaptiveGroups(
         filter: {
-          datetime_gt: "2021-10-01T00:00:00Z",
-          datetime_lt: "2021-10-05T00:00:00Z",
-          outcome_like: "drop",
+          datetime_gt: "2021-10-01T00:00:00Z"
+          datetime_lt: "2021-10-05T00:00:00Z"
+          outcome_like: "drop"
           mitigationSystem_neq: "magic-firewall"
-        },
-        limit: 20,
-        orderBy: [ipDestinationAddress_ASC])
-      {
+        }
+        limit: 20
+        orderBy: [ipDestinationAddress_ASC]
+      ) {
         dimensions {
           outcome
           mitigationSystem

@@ -32,15 +32,22 @@ Because the [action](/cf-firewall-rules/actions) is _Block_, only requests that 
 
 <table>
   <thead>
-  <tr>
-    <th>Expression</th>
-    <th>Action</th>
-  </tr>
+    <tr>
+      <th>Expression</th>
+      <th>Action</th>
+    </tr>
   </thead>
   <tbody>
     <tr>
-      <td><code>(http.host in {'{'}"orangeclouded.com" "api.orangeclouded.com"{'}'} and not cf.tls_client_auth.cert_verified)</code></td>
-      <td><em>Block</em></td>
+      <td>
+        <code>
+          (http.host in {'{'}"orangeclouded.com" "api.orangeclouded.com"{'}'}{' '}
+          and not cf.tls_client_auth.cert_verified)
+        </code>
+      </td>
+      <td>
+        <em>Block</em>
+      </td>
     </tr>
   </tbody>
 </table>

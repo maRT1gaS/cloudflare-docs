@@ -8,7 +8,7 @@ pcx-content-type: how-to
 <Aside type="note" header="Note">
 
 Creating custom cache keys is limited to Enterprise users only.
-    
+
 </Aside>
 
 1. Log in to your Cloudflare account.
@@ -17,13 +17,12 @@ Creating custom cache keys is limited to Enterprise users only.
 1. Click **Create Page Rule**.
 1. Under **If the URL matches**, enter the URL to match.
 1. Under **Then the settings are**, choose **Custom Cache Ke**y from the dropdown.
-1. Click the appropriate *Query String* setting.
+1. Click the appropriate _Query String_ setting.
 1. (Optional) Click Advanced and enter appropriate settings for:
-    - `Headers`
-    - `Cookie`
-    - `Host`
-    - `User Features`
+   - `Headers`
+   - `Cookie`
+   - `Host`
+   - `User Features`
 1. Choose a save option:
-    - **Save as Draft** to save the rule and leave it disabled. Note that disabled rules count towards the number of rules allowed for your domain.
-    - **Save and Deploy **to save the rule and enable it immediately.
-
+   - **Save as Draft** to save the rule and leave it disabled. Note that disabled rules count towards the number of rules allowed for your domain.
+   - **Save and Deploy **to save the rule and enable it immediately.

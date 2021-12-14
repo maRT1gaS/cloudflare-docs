@@ -9,7 +9,7 @@ pcx-content-type: how-to
 
 In Cloudflare’s system, you have a User that can have multiple Accounts and Zones. As a result, your User is configured globally on your machine via a single Cloudflare Token. Your Account(s) and Zone(s) will be configured per project, but will use your Cloudflare Token to authenticate all API calls. A configuration file is created in a `.wrangler` directory in your computer’s home directory.
 
---------------------------------
+---
 
 ### Using commands
 
@@ -39,7 +39,7 @@ You can also specify or override the target Zone ID by defining the `CF_ZONE_ID`
 
 Defining environment variables inline will override the default credentials stored in `wrangler config` or in your `wrangler.toml` file.
 
---------------------------------
+---
 
 ## Generate Tokens
 
@@ -62,7 +62,7 @@ Defining environment variables inline will override the default credentials stor
 
 </Aside>
 
---------------------------------
+---
 
 ## Use Tokens
 

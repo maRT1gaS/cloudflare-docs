@@ -40,7 +40,7 @@ To create the connection between WordPress and Cloudflare, you will create an AP
 ## Create the API token from Cloudflare
 
 1. Open your Cloudflare dashboard.
-1. Select **My Profile** from the top of the page. 
+1. Select **My Profile** from the top of the page.
 1. Select **API Tokens** > **Create Token**.
 1. Locate **WordPress** from the list and select **Use template**.
 1. Select **Continue to summary** at the bottom of the page.

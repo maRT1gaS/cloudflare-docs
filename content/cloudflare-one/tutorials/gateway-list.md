@@ -9,21 +9,19 @@ pcx-content-type: tutorial
 
 You can upload and manage lists of objects to use in Gateway rules. These lists can include:
 
-|Object|Example|
-|---|---|
-|Hostname|`foo.app.com`|
-|URL|`https://foo.app.com/admin`|
-|Email| `user@cloudflare.com` |
-
+| Object   | Example                     |
+| -------- | --------------------------- |
+| Hostname | `foo.app.com`               |
+| URL      | `https://foo.app.com/admin` |
+| Email    | `user@cloudflare.com`       |
 
 You can then use these lists in Gateway policies to block, allow, isolate or exclude from decryption.
 
-
 **🗺️ This walkthrough covers how to:**
 
-* Upload a CSV of hostnames into a list
-* Manage the list in the Teams dashboard
-* Use the list in a Gateway policy
+- Upload a CSV of hostnames into a list
+- Manage the list in the Teams dashboard
+- Use the list in a Gateway policy
 
 **⏲️ Time to complete:**
 
@@ -41,7 +39,7 @@ You can manually create a list or upload a CSV to Cloudflare for Teams.
 
 1. Name the list and choose its type. A list can only include objects of the same type. You can add an optional comment. Next, click **select a file** and then **Create**.
 
-    ![List Add](../static/secure-web-gateway/gateway-list/list-create.png)
+   ![List Add](../static/secure-web-gateway/gateway-list/list-create.png)
 
 The list will begin to upload and confirm if successful.
 

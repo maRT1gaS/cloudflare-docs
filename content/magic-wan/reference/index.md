@@ -1,5 +1,5 @@
 ---
-order: 
+order:
 pcx-content-type: navigation
 ---
 
@@ -7,4 +7,4 @@ pcx-content-type: navigation
 
 Review different configuration examples for GRE tunnels and scoping along with region codes.
 
-<DirectoryListing path="/reference"/>
+<DirectoryListing path="/reference" />

@@ -10,7 +10,7 @@ Cloudflare Network Interconnect (CNI) allows you to connect your network infrast
 
 ![Cloudflare Network Interconnect docs home illustration](./static/home.png)
 
-## CNI benefits 
+## CNI benefits
 
 Use CNI with other products in Cloudflare's suite for additional benefits.
 
@@ -26,24 +26,69 @@ Use CNI with other products in Cloudflare's suite for additional benefits.
   </thead>
   <tbody>
     <tr>
-      <td><span style="white-space: nowrap"><a href="https://www.cloudflare.com/teams/access/">Access</a></span></td>
-      <td><p>Replaces corporate VPNs with the Cloudflare network.</p></td>
-      <td><p>Securely connects your employees to your network no matter where they are when you bring your Multiprotocol Label Switching (MPLS) network to meet Cloudflare's.</p></td>
+      <td>
+        <span style="white-space: nowrap">
+          <a href="https://www.cloudflare.com/teams/access/">Access</a>
+        </span>
+      </td>
+      <td>
+        <p>Replaces corporate VPNs with the Cloudflare network.</p>
+      </td>
+      <td>
+        <p>
+          Securely connects your employees to your network no matter where they
+          are when you bring your Multiprotocol Label Switching (MPLS) network
+          to meet Cloudflare's.
+        </p>
+      </td>
     </tr>
     <tr>
-      <td><span style="white-space: nowrap"><a href="https://www.cloudflare.com/cdn/">CDN</a></span></td>
-      <td><p>Places content closer to visitors, improving site performance.</p></td>
-      <td><p>Improves cache fill performance and reduces cost.</p></td>
+      <td>
+        <span style="white-space: nowrap">
+          <a href="https://www.cloudflare.com/cdn/">CDN</a>
+        </span>
+      </td>
+      <td>
+        <p>Places content closer to visitors, improving site performance.</p>
+      </td>
+      <td>
+        <p>Improves cache fill performance and reduces cost.</p>
+      </td>
     </tr>
     <tr>
-      <td><span style="white-space: nowrap"><a href='https://www.cloudflare.com/magic-transit/'>Magic Transit</a></span></td>
-      <td><p>Protects data center and branch networks from unwanted and malicious traffic.</p></td>
-      <td><p>Decreases jitter, drives throughput improvements, and hardens infrastructure to attack.</p></td>
+      <td>
+        <span style="white-space: nowrap">
+          <a href="https://www.cloudflare.com/magic-transit/">Magic Transit</a>
+        </span>
+      </td>
+      <td>
+        <p>
+          Protects data center and branch networks from unwanted and malicious
+          traffic.
+        </p>
+      </td>
+      <td>
+        <p>
+          Decreases jitter, drives throughput improvements, and hardens
+          infrastructure to attack.
+        </p>
+      </td>
     </tr>
     <tr>
-      <td><span style="white-space: nowrap"><a href='https://workers.cloudflare.com/'>Workers</a></span></td>
-      <td><p>Serverless compute platform.</p></td>
-      <td><p>Provides a secure connection to serverless cloud compute that does not traverse the public Internet.</p></td>
+      <td>
+        <span style="white-space: nowrap">
+          <a href="https://workers.cloudflare.com/">Workers</a>
+        </span>
+      </td>
+      <td>
+        <p>Serverless compute platform.</p>
+      </td>
+      <td>
+        <p>
+          Provides a secure connection to serverless cloud compute that does not
+          traverse the public Internet.
+        </p>
+      </td>
     </tr>
   </tbody>
 </table>

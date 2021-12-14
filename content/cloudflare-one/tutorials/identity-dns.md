@@ -12,8 +12,8 @@ To apply these types of rules, you will need to deploy Cloudflare's agent on the
 
 **🗺️ This walkthrough covers how to:**
 
-* Build a DNS filtering rule that applies to a group of users
-* Use DNS filtering rule precedence to allow some users to reach a destination
+- Build a DNS filtering rule that applies to a group of users
+- Use DNS filtering rule precedence to allow some users to reach a destination
 
 **⏲️ Time to complete:**
 

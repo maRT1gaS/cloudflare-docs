@@ -25,7 +25,7 @@ Alternatively, more modern FTP server software supports [FTP extensions](https:/
 
 ## What Does and Does Not Work
 
-Spectrum is able to protect servers serving FTP traffic in *passive mode only*. Active mode is not supported due to the fact that the origin server sees the Spectrum IP as being the client instead of the actual client IP. When the client issues a PORT command with their own IP, the FTP server rejects because the two addresses do not match.
+Spectrum is able to protect servers serving FTP traffic in _passive mode only_. Active mode is not supported due to the fact that the origin server sees the Spectrum IP as being the client instead of the actual client IP. When the client issues a PORT command with their own IP, the FTP server rejects because the two addresses do not match.
 
 Passive mode in combination with EPSV works out of the box with no origin-side configuration required. Note that the client must also support EPSV for this to work. Traditional passive mode with PASV is possible with minimal origin-side configuration (see below, Protecting an FTP server with Spectrum)
 

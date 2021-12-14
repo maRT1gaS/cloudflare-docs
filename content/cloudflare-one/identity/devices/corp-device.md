@@ -9,9 +9,9 @@ pcx-content-type: how-to
 <summary>Feature availability</summary>
 <div>
 
-| Operating Systems | [WARP mode required](/connections/connect-devices/warp#warp-client-modes) | [Teams plans](https://www.cloudflare.com/teams-pricing/) |
-| ----------------- | --------- | ---- |
-| macOS, Windows, Linux | WARP with Gateway | All plans | 
+| Operating Systems     | [WARP mode required](/connections/connect-devices/warp#warp-client-modes) | [Teams plans](https://www.cloudflare.com/teams-pricing/) |
+| --------------------- | ------------------------------------------------------------------------- | -------------------------------------------------------- |
+| macOS, Windows, Linux | WARP with Gateway                                                         | All plans                                                |
 
 </div>
 </details>
@@ -44,13 +44,13 @@ In order for your users to be able to authenticate, you must [deploy the WARP ag
 
 1. Click **Save**.
 
-  Once saved, the serial number list will appear in your list view.
+Once saved, the serial number list will appear in your list view.
 
-   ![List](../../static/zero-trust-security/corp-device/list-saved.png)
+![List](../../static/zero-trust-security/corp-device/list-saved.png)
 
 Now you can create or update an existing Access policy to require that any device requesting access belongs to your list of serial numbers.
 
-To do that: 
+To do that:
 
 1. Navigate to **Access > Applications**.
 
@@ -68,7 +68,6 @@ To do that:
 
 1. Choose the list of devices to require and click **Save rule**.
 
-  ![Add Require](../../static/zero-trust-security/corp-device/add-require.png)
+![Add Require](../../static/zero-trust-security/corp-device/add-require.png)
 
 Once saved, any device attempting to reach the application will need to connect from a device that uses Cloudflare WARP and presents a serial number in the list created.
-

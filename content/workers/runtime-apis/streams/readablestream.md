@@ -22,16 +22,23 @@ cannot be created directly using the `ReadableStream` constructor.
 
 <Definitions>
 
-- <Code>pipeTo(destination<ParamType>WritableStream</ParamType>, options<ParamType>PipeToOptions</ParamType>)</Code> <Type>Promise&lt;void></Type>
+- <Code>
+    pipeTo(destination<ParamType>WritableStream</ParamType>, options
+    <ParamType>PipeToOptions</ParamType>)
+  </Code> <Type>Promise&lt;void></Type>
 
   - Pipes the readable stream to a given writable stream `destination` and returns a promise that is fulfilled when the `write` operation succeeds or rejects it if the operation fails.
 
-- <Code>getReader(options<ParamType>Object</ParamType>)</Code> <TypeLink href="/runtime-apis/streams/readablestreamdefaultreader">ReadableStreamDefaultReader</TypeLink>
+- <Code>
+    getReader(options<ParamType>Object</ParamType>)
+  </Code> <TypeLink href="/runtime-apis/streams/readablestreamdefaultreader">
+    ReadableStreamDefaultReader
+  </TypeLink>
 
-  - Gets an instance of `ReadableStreamDefaultReader` and locks the `ReadableStream` to that reader instance. This method accepts an object argument indicating _options_.  The only supported option is `mode`, which can be set to `byob` to create a [`ReadableStreamBYOBReader`](/runtime-apis/streams/readablestreambyobreader), as shown here:
+  - Gets an instance of `ReadableStreamDefaultReader` and locks the `ReadableStream` to that reader instance. This method accepts an object argument indicating _options_. The only supported option is `mode`, which can be set to `byob` to create a [`ReadableStreamBYOBReader`](/runtime-apis/streams/readablestreambyobreader), as shown here:
 
     ```js
-    let reader = readable.getReader({ mode: "byob" })
+    let reader = readable.getReader({ mode: 'byob' });
     ```
 
 </Definitions>

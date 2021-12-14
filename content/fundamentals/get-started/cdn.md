@@ -21,7 +21,7 @@ There are many reasons to use [Cloudflare’s CDN](https://www.cloudflare.com/fe
 
 - **DDoS Protection**: [Distributed Denial of Service (DDoS)](https://www.cloudflare.com/ddos/) attacks disrupt websites by flooding their infrastructure with traffic. Cloudflare’s CDN has a network capacity 15 times bigger than the largest DDoS attack ever recorded and handles modern DDoS to ensure your website stays online.
 
-## Cache 
+## Cache
 
 Cloudflare makes customer websites faster by storing a copy of the website’s content on the servers of our globally distributed data centers.
 

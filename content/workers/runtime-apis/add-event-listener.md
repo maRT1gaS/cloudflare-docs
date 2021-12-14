@@ -26,9 +26,11 @@ This function defines triggers for a Worker script to execute. There are current
 <Definitions>
 
 - `type` <Type>string</Type>
+
   - Currently the only types supported are `"fetch"` and `"scheduled"`.
 
 - `listener` <Type>function</Type>
+
   - The function to handle incoming events to the Worker script. The listener is passed a single argument:
 
     <Definitions>
@@ -46,17 +48,15 @@ This function defines triggers for a Worker script to execute. There are current
 ### Fetch Listener
 
 ```js
-addEventListener("fetch", event => {
-  event.respondWith(
-    new Response("Hello world")
-  )
-})
+addEventListener('fetch', event => {
+  event.respondWith(new Response('Hello world'));
+});
 ```
 
 ### Scheduled Listener
 
 ```js
-addEventListener("scheduled", event => {
-  event.waitUntil(handleScheduled(event))
-})
+addEventListener('scheduled', event => {
+  event.waitUntil(handleScheduled(event));
+});
 ```

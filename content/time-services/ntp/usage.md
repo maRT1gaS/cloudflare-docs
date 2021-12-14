@@ -6,7 +6,7 @@ order: 0
 
 # Using Cloudflare's Time Service
 
-Cloudflare offers a free public time service that allows you to use our anycast network of 180+ locations to synchronize time from our closest server. To use our NTP server, change the time configuration in your device to point to ```time.cloudflare.com```.
+Cloudflare offers a free public time service that allows you to use our anycast network of 180+ locations to synchronize time from our closest server. To use our NTP server, change the time configuration in your device to point to `time.cloudflare.com`.
 
 We do not implement leap smearing: NTP includes a Leap Indicator field [spec](https://tools.ietf.org/html/rfc5905#section-7.3) and the kernel will apply the leap second correction at the appropriate time. This is the behavior servers
 in pool.ntp.org share. Using servers that smear time along with servers that do not may lead to unpredictable and anomalous results.

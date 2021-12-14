@@ -6,8 +6,9 @@ pcx-content-type: reference
 # Access Audit logs
 
 Cloudflare Access generates two types of audit logs:
-* **[Authentication audit logs](#authentication-audit-logs)** maintain a record of authentication events.
-* **[Per-request audit logs](#per-request-audit-logs)** record HTTP requests to protected URI paths.
+
+- **[Authentication audit logs](#authentication-audit-logs)** maintain a record of authentication events.
+- **[Per-request audit logs](#per-request-audit-logs)** record HTTP requests to protected URI paths.
 
 ## Authentication Audit Logs
 
@@ -19,12 +20,12 @@ Access retains authentication logs for 6 months.
 
 ### Where to find Access Audit Logs
 
-Access audit logs are available in the Logs section of the Cloudflare for Teams dashboard. 
+Access audit logs are available in the Logs section of the Cloudflare for Teams dashboard.
 Access provides the following view types of the logs:
 
-* **User**: all unique users with at least one successful login during the current calendar month.
-* **Access Audit Log**: Changes made to Access policies across the account.
-* **Access Requests**: All authentication attempts. Details include the identity provider or login method and the IP address of the user.
+- **User**: all unique users with at least one successful login during the current calendar month.
+- **Access Audit Log**: Changes made to Access policies across the account.
+- **Access Requests**: All authentication attempts. Details include the identity provider or login method and the IP address of the user.
 
 ```
 https://api.cloudflare.com/client/v4/accounts/<account_id>/access/logs/access_requests?direction=desc&limit=15&page=1
@@ -32,19 +33,19 @@ https://api.cloudflare.com/client/v4/accounts/<account_id>/access/logs/access_re
 
 Access authentication logs contain the following fields:
 
-| Field | Description |
-|-------|-------------|
-| **user_email** |  The email address of the authenticating user |
-| **ip_address** |  The IP address of the authenticating user |
-| **app_uid** | The unique identifier for the protected application |
-| **add_domain** |  The URL of the protected application |
-| **action** | The event that occurred, such as a login attempt |
-| **allowed** | The result of the authentication event. |
-| **created_at** | The event timestamp. |
-| **connection**  | The IdP used to authenticate. |
-| **country** | The country associated with the user’s IP address |
-| **ray_id** | A unique identifier for every request through Cloudflare |
-| **app_type** | Specifies if the app is self-hosted or SaaS |
+| Field          | Description                                              |
+| -------------- | -------------------------------------------------------- |
+| **user_email** | The email address of the authenticating user             |
+| **ip_address** | The IP address of the authenticating user                |
+| **app_uid**    | The unique identifier for the protected application      |
+| **add_domain** | The URL of the protected application                     |
+| **action**     | The event that occurred, such as a login attempt         |
+| **allowed**    | The result of the authentication event.                  |
+| **created_at** | The event timestamp.                                     |
+| **connection** | The IdP used to authenticate.                            |
+| **country**    | The country associated with the user’s IP address        |
+| **ray_id**     | A unique identifier for every request through Cloudflare |
+| **app_type**   | Specifies if the app is self-hosted or SaaS              |
 
 ### Access Requests Audit API endpoint
 
@@ -56,12 +57,12 @@ GET accounts/:identifier/access/logs/access_requests
 
 #### Optional fields
 
-| Name /type | Description/example | Constraints |
-| ---------- | ------------------- | ----------- |
-| limit (number) | Limit the number of results `25` | - |
-| direction (string) | Change the direction of the chronological sorting. `"desc"` | default value: `desc`, valid values: `desc`, `asc` |
-| since (date-time string) | 	The time on which to begin query `"2020-07-01T05:20:00Z"` | read only |
-| until (date-time string)	| The time on which to end qeury `"2020-10-01T05:20:00Z"` | read only |
+| Name /type               | Description/example                                         | Constraints                                        |
+| ------------------------ | ----------------------------------------------------------- | -------------------------------------------------- |
+| limit (number)           | Limit the number of results `25`                            | -                                                  |
+| direction (string)       | Change the direction of the chronological sorting. `"desc"` | default value: `desc`, valid values: `desc`, `asc` |
+| since (date-time string) | The time on which to begin query `"2020-07-01T05:20:00Z"`   | read only                                          |
+| until (date-time string) | The time on which to end qeury `"2020-10-01T05:20:00Z"`     | read only                                          |
 
 #### cURL (example)
 
@@ -101,7 +102,7 @@ Users who have authenticated through Access have access to authorized URL paths 
 
 A video guide is also available:
 
-<StreamVideo id="19987899aa95453b6bbdb7e6b4431223"/>
+<StreamVideo id="19987899aa95453b6bbdb7e6b4431223" />
 
 ### Cloudflare logging
 

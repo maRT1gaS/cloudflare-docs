@@ -15,8 +15,8 @@ This tutorial skips inspection for additional applications beyond those in the l
 
 **🗺️ This walkthrough covers how to:**
 
-* Build a `Do not inspect` policy using Cloudflare's list of certificate pinned resources
-* Configure that policies precedence in your Gateway configuration
+- Build a `Do not inspect` policy using Cloudflare's list of certificate pinned resources
+- Configure that policies precedence in your Gateway configuration
 
 **⏲️ Time to complete:**
 
@@ -33,15 +33,15 @@ This tutorial skips inspection for additional applications beyond those in the l
 
 1. Name the policy and, optionally, provide a description.
 
-    ![Name Policy](../static/secure-web-gateway/exempt-cert-pinning/name-policy.png)
+   ![Name Policy](../static/secure-web-gateway/exempt-cert-pinning/name-policy.png)
 
 1. Under **Selector** choose **Application**. Select **in** in the **Operator field**. This example uses Microsoft 365, categorized as Productivity.
 
-    ![Selctor](../static/secure-web-gateway/exempt-cert-pinning/select-microsoft.png)
+   ![Selctor](../static/secure-web-gateway/exempt-cert-pinning/select-microsoft.png)
 
 1. Scroll to the bottom of the page and select **Do Not Inspect** and click **Create rule**.
 
-    ![Action](../static/secure-web-gateway/exempt-cert-pinning/select-action.png)
+   ![Action](../static/secure-web-gateway/exempt-cert-pinning/select-action.png)
 
 ## Change rule precedence
 

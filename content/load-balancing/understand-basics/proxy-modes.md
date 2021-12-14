@@ -6,6 +6,7 @@ pcx-content-type: concept
 # Proxy status
 
 You can load balance your traffic at different levels of the networking stack, including:
+
 - [Layer 7 or HTTP/HTTPS traffic](#layer-7-load-balancing-orange-clouded) (most common)
 - [DNS-only](#dns-only-load-balancing-gray-clouded)
 - [Layer 4 or TCP traffic](#layer-4-load-balancing)
@@ -23,6 +24,7 @@ Cloudflare performs layer 7 load balancing when traffic to your hostname is **pr
 ### Benefits
 
 In comparison to [DNS-only load balancing](#dns-only-load-balancing-gray-clouded), layer 7 load balancing:
+
 - Protects origin servers from DDoS attacks by hiding their IP addresses.
 - Offers faster failover and more accurate routing, which can otherwise be affected by DNS caching.
 - Integrates with other Cloudflare features such as caching, Workers, WAF, etc.
@@ -43,6 +45,7 @@ Cloudflare performs DNS-only load balancing when traffic to your hostname is **n
 ### Limitations
 
 In comparison to [layer 7 load balancing](#layer-7-load-balancing-orange-clouded), DNS-only load balancing:
+
 - Does not hide the IP addresses of your origin servers, leaving them vulnerable to DDoS attacks.
 - Performs slower failover and less accurate routing, because it has to rely on DNS resolvers and cache settings.
 - Cannot integrate with other Cloudflare features such as caching, Workers, WAF, etc.

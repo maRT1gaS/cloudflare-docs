@@ -1,15 +1,15 @@
 ---
 updated: 2020-07-25
 difficulty: Beginner
-content_type: "📝 Tutorial"
+content_type: '📝 Tutorial'
 pcx-content-type: tutorial
 ---
 
-import TutorialsBeforeYouStart from "../../_partials/_tutorials-before-you-start.md"
+import TutorialsBeforeYouStart from '../../_partials/_tutorials-before-you-start.md';
 
 # Authorize users with Auth0
 
-<TutorialsBeforeYouStart/>
+<TutorialsBeforeYouStart />
 
 ## Overview
 
@@ -57,7 +57,10 @@ In a traditional application that is attached to a database, the authorization t
 
 [![Auth0 Flow](./media/auth0-flow.png)](https://auth0.com/docs/flows/concepts/auth-code)
 
-<small>Auth0 Flow Diagram courtesy of <a href="https://auth0.com/docs/flows/concepts/auth-code">Auth0</a></small>
+<small>
+  Auth0 Flow Diagram courtesy of{' '}
+  <a href="https://auth0.com/docs/flows/concepts/auth-code">Auth0</a>
+</small>
 
 ### Authenticating a user
 
@@ -739,6 +742,7 @@ An example logout HTML page could look like this:
 ---
 filename: public/logout/index.html
 ---
+
 <h1>You’re logged out</h1>
 <div><a href="/">Log back in</a></div>
 ```

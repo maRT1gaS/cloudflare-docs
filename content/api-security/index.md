@@ -14,6 +14,7 @@ Cloudflare offers a range of products to help identify and address API vulnerabi
 APIs have become the [backbone of popular web services](https://blog.postman.com/intro-to-apis-history-of-apis/), helping the Internet become more accessible and useful.
 
 As APIs have become more prevalent, however, so have their problems:
+
 - Many companies have [thousands of APIs](products/api-discovery), including ones they do not even know about.
 - To support a large base of users, many APIs are protected by a [negative security model](products/api-shield) that makes them vulnerable to credential-stuffing attacks and automated scanning tools.
 - With so many endpoints and users, it’s difficult to recognize brute-force attacks against [specific endpoints](products/volumetric-abuse-detection).
@@ -22,11 +23,13 @@ As APIs have become more prevalent, however, so have their problems:
 ## Features
 
 Cloudflare offers the following features to help learn about and secure your APIs:
-<DirectoryListing path="/products"/>
+
+<DirectoryListing path="/products" />
 
 For additional details, see our [blog post](https://blog.cloudflare.com/api-abuse-detection/).
 
 ## Availability
-Cloudflare API Security products are available to Enterprise customers only. 
+
+Cloudflare API Security products are available to Enterprise customers only.
 
 Additionally, API Discovery, Volumetric Abuse Detection, and Sequential Abuse Detection are currently enabled by request. If you are interested in using these products, contact your account team.

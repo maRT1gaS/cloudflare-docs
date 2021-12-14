@@ -27,7 +27,7 @@ Once enabled, the SSL/TLS Recommender runs an origin scan using the user agent `
 
 Based on this initial scan, the Recommender may decide that you could use a stronger [SSL encryption mode](/origin-configuration/ssl-modes). It will never recommend a weaker option than what is currently configured.
 
-If so, it will send the zone owner an email with the recommended option and add a *Recommended by Cloudflare* tag to that option on the **SSL/TLS** page. You are not required to use this recommendation. 
+If so, it will send the zone owner an email with the recommended option and add a _Recommended by Cloudflare_ tag to that option on the **SSL/TLS** page. You are not required to use this recommendation.
 
 Recommender will run future scans periodically and send notifications if new recommendations become available.
 
@@ -39,7 +39,7 @@ If you do not receive an email, keep your current **SSL encryption mode**.
 
 ## Limitations
 
-The SSL/TLS Recommender is not intended to resolve issues with website or domain functionality. It will not be able to complete its scan and show the *Recommended by Cloudflare* tag if:
+The SSL/TLS Recommender is not intended to resolve issues with website or domain functionality. It will not be able to complete its scan and show the _Recommended by Cloudflare_ tag if:
 
 - Your domain is not functional.
 - You block all bots.

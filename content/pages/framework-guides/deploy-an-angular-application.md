@@ -2,7 +2,7 @@
 pcx-content-type: how-to
 ---
 
-import TutorialsBeforeYouStart from "../_partials/_tutorials-before-you-start.md"
+import TutorialsBeforeYouStart from '../_partials/_tutorials-before-you-start.md';
 
 # Deploy an Angular application
 
@@ -38,7 +38,7 @@ $ cd my-angular-app
 
 With both approaches, the Angular CLI will prompt you for customization choices. Your answers will not affect the rest of this tutorial. Choose the option that is ideal for your project.
 
-<TutorialsBeforeYouStart/>
+<TutorialsBeforeYouStart />
 
 ## Creating a GitHub repository
 
@@ -109,14 +109,13 @@ After completing configuration, click the **Save and Deploy** button.
 
 You will see your first deploy pipeline in progress. Pages installs all dependencies – including Angular CLI – and builds the project as specified.
 
-
 <Aside type="note">
 
 For the complete guide to deploying your first site to Cloudflare Pages, refer to the [Get started guide](/get-started).
 
 </Aside>
 
-After deploying your site, you will receive a unique subdomain for your project on `*.pages.dev`. 
+After deploying your site, you will receive a unique subdomain for your project on `*.pages.dev`.
 
 Cloudflare Pages will automatically rebuild your project and deploy it on every new pushed commit.
 

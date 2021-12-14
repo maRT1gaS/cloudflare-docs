@@ -15,7 +15,7 @@ If you configured Cloudflare through other means, for example, by logging into t
 
 ## cf-terraforming
 
-The goal with [cf-terraforming](https://github.com/cloudflare/cf-terraforming) is to help existing Cloudflare customers get started with Terraform. Currently, cf-terraforming helps to generate the terraform config state by fetching all the resources of a specified type from the account and/or domain of your choosing. 
+The goal with [cf-terraforming](https://github.com/cloudflare/cf-terraforming) is to help existing Cloudflare customers get started with Terraform. Currently, cf-terraforming helps to generate the terraform config state by fetching all the resources of a specified type from the account and/or domain of your choosing.
 
 First, `go get` cf-terraforming with `GO111MODULE=on go get -u github.com/cloudflare/cf-terraforming/...`
 
@@ -24,7 +24,9 @@ You can use `cf-terraforming` or `cf-terraforming -h` to view the help file, but
 1. Your Cloudflare user email - `--email` or `-e`
 2. Your Cloudflare API token - `--token` or `-t`
 3. The account and/or zone to pull resources from - `--account`/`--zone` or `-a`/`-z`
-  * Specifying an account will generate configuration for all resources from all zones in that account.
+
+- Specifying an account will generate configuration for all resources from all zones in that account.
+
 4. The Cloudflare resources to generate config
 
 The list of supported resources is available in the [Terraform README](https://github.com/cloudflare/cf-terraforming#supported-resources).
@@ -54,6 +56,7 @@ Start by making a call to Cf-Terraforming to enumerate the Terraform configurati
 <Aside type="note" header="Note">
 
 The command below assumes you run the tool from `{GOPATH}/src/github.com/cloudflare/cf-terraforming`. If pulled with `go get` and if `$GOPATH/bin` is in your `$PATH` you should be able to just run the tool with `$ cf-terraforming <parameters>`.
+
 ```
 $ go run cmd/cf-terraforming/main.go --email $CLOUDFLARE_EMAIL --token $CLOUDFLARE_API_TOKEN -z 1109d899a5ff5fd74bc01e581693685a --resource-type cloudflare_record > importing-example.tf
 ```

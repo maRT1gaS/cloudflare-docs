@@ -7,4 +7,4 @@ pcx-content-type: navigation
 
 Review the content below for more information about Magic Firewall.
 
-<DirectoryListing path="/reference"/>
+<DirectoryListing path="/reference" />

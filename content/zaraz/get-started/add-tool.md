@@ -21,8 +21,8 @@ You can add new third-party tools and load them into your website through the Cl
 
 Your tool is now configured. The Event you have created will load the tool into your website when the conditions you set are met. Every Event includes:
 
-* **Event Name**. The name of the event that will be used internally by Cloudflare Zaraz.
-* **Trigger**. A set of rules that trigger an event, like `pageviews`.
-* **Additional fields**. (When applicable) Configure the type of data you wish to send to the new tool.
+- **Event Name**. The name of the event that will be used internally by Cloudflare Zaraz.
+- **Trigger**. A set of rules that trigger an event, like `pageviews`.
+- **Additional fields**. (When applicable) Configure the type of data you wish to send to the new tool.
 
 If you go back to the main Cloudflare Zaraz page, you will see your tool listed under **Third-party tools**, and the name of the Event associated with it. In this page you can also click the **Active** toggle to enable or disable your tool.
