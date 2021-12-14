@@ -25,9 +25,8 @@ A typical query against the Cloudflare GraphQL schema is made up of five compone
 
 The following example shows the format for a firewall query:
 
-```code
-
-query{
+```graphql
+query {
   viewer {
       zones(filter: {...}) {
          firewallEventsAdaptive( limit: 10, orderBy: [...], filter: {...} ) {
@@ -55,7 +54,7 @@ query
       firewallEventsAdaptive(
           filter: {
             datetime_gt: "2020-08-03T02:07:05Z",
-            datetime_lt: "2020-08-03T17:07:05Z" 
+            datetime_lt: "2020-08-03T17:07:05Z"
           },
           limit: 2,
           orderBy: [datetime_DESC, rayName_DESC])

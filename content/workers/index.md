@@ -5,8 +5,6 @@ type: overview
 pcx-content-type: landing-page
 ---
 
-<ContentColumn>
-
 # Cloudflare Workers documentation
 
 Cloudflare Workers provides a [serverless](https://www.cloudflare.com/learning/serverless/what-is-serverless/) execution environment that allows you to create entirely new applications or augment existing ones without configuring or maintaining infrastructure.
@@ -25,6 +23,7 @@ To install [`wrangler`](https://github.com/cloudflare/wrangler), ensure you have
 ```sh
 $ npm install -g @cloudflare/wrangler
 ```
+
 or install with yarn:
 
 ```sh
@@ -68,12 +67,10 @@ async function handleRequest(request) {
 ## Community
 [Explore third-party packages](https://workers.cloudflare.com/works) that work on Workers, submitted by Cloudflare users.
 
-[Connect with the Workers community on Discord](https://discord.gg/cloudflaredev) to ask questions, show off what you are building, and discuss the platform with other developers. 
+[Connect with the Workers community on Discord](https://discord.gg/cloudflaredev) to ask questions, show off what you are building, and discuss the platform with other developers.
 
 [Follow @CloudflareDev on Twitter](https://twitter.com/cloudflaredev) to learn about product announcements, new tutorials, and what is new in Cloudflare Workers.
 
 --------------------------------
 
 These docs are built with the [Cloudflare Docs Engine](https://developers.cloudflare.com/docs-engine/).
-
-</ContentColumn>

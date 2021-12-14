@@ -13,7 +13,7 @@ Here are some common use cases for using signed URLs:
 
 * Restricting access so only logged in members can watch a particular video
 * Let users watch your video for a limited time period (ie. 24 hours)
-* Restricting access based on geolocation 
+* Restricting access based on geolocation
 
 ### Making a video require signed URLs
 
@@ -28,10 +28,8 @@ curl -X POST -H "Authorization: Bearer $TOKEN" "https://api.cloudflare.com/clien
 Response:
 ```json
 ---
-highlight: [8]
+highlight: [5]
 ---
-
-
 {
   "result": {
     "uid": "$VIDEOID",
@@ -42,7 +40,6 @@ highlight: [8]
   "errors": [],
   "messages": []
 }
-
 ```
 
 ## Two Ways to Generate Signed Tokens
@@ -79,10 +76,8 @@ You will see a response similar to this if the request succeeds:
 
 To render the video, insert the `token` value in place of the `video id`:
 
-```HTML
-
+```html
 <iframe src="https://iframe.videodelivery.net/eyJhbGciOiJSUzI1NiIsImtpZCI6ImNkYzkzNTk4MmY4MDc1ZjJlZjk2MTA2ZDg1ZmNkODM4In0.eyJraWQiOiJjZGM5MzU5ODJmODA3NWYyZWY5NjEwNmQ4NWZjZDgzOCIsImV4cCI6IjE2MjE4ODk2NTciLCJuYmYiOiIxNjIxODgyNDU3In0.iHGMvwOh2-SuqUG7kp2GeLXyKvMavP-I2rYCni9odNwms7imW429bM2tKs3G9INms8gSc7fzm8hNEYWOhGHWRBaaCs3U9H4DRWaFOvn0sJWLBitGuF_YaZM5O6fqJPTAwhgFKdikyk9zVzHrIJ0PfBL0NsTgwDxLkJjEAEULQJpiQU1DNm0w5ctasdbw77YtDwdZ01g924Dm6jIsWolW0Ic0AevCLyVdg501Ki9hSF7kYST0egcll47jmoMMni7ujQCJI1XEAOas32DdjnMvU8vXrYbaHk1m1oXlm319rDYghOHed9kr293KM7ivtZNlhYceSzOpyAmqNFS7mearyQ" style="border: none;" height="720" width="1280" allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;" allowfullscreen="true"></iframe>
-
 ```
 
 If you are using your own player, replace the video id in the manifest url with the `token` value:
@@ -93,7 +88,7 @@ If you are using your own player, replace the video id in the manifest url with 
 
 If you call the `/token` endpoint without any body, it will return a token that expires in one hour. Let's say you want to let a user watch a particular video for the next 12 hours. Here's how you'd do it with a Cloudflare Worker:
 
-```JavaScript
+```js
 addEventListener('fetch', event => {
     event.respondWith(handleRequest(event))
 })
@@ -102,7 +97,7 @@ async function handleRequest(request) {
 
     var signed_url_restrictions = {
         //limit viewing for the next 12 hours
-        exp: Math.floor(Date.now() / 1000) + (12*60*60) 
+        exp: Math.floor(Date.now() / 1000) + (12*60*60)
     };
 
     const init = {
@@ -119,7 +114,7 @@ async function handleRequest(request) {
 }
 ```
 
-The returned token will expire after 12 hours. 
+The returned token will expire after 12 hours.
 
 Let's take this a step further and add 2 additional restrictions:
 
@@ -128,8 +123,7 @@ Let's take this a step further and add 2 additional restrictions:
 
 To achieve this, we can specify additional restrictions in the `signed_url_restrictions` object in our sample code:
 
-```JavaScript
-
+```js
 addEventListener('fetch', event => {
     event.respondWith(handleRequest(event))
 })
@@ -157,9 +151,9 @@ async function handleRequest(request) {
 }
 ```
 
-## Option 2: Generating signed tokens without calling the `/token` endpoint 
+## Option 2: Generating signed tokens without calling the `/token` endpoint
 
-If you are generating a high-volume of tokens, it is best to generate new tokens without needing to call the Stream API each time. 
+If you are generating a high-volume of tokens, it is best to generate new tokens without needing to call the Stream API each time.
 
 ### Step 1: Call the `/stream/key` endpoint *once* to obtain a key
 
@@ -182,16 +176,16 @@ The response will return `pem` and `jwk` values.
   "messages": []
 }
 ```
- 
- Save these values as they won't be shown again. You will use these values later to generate the tokens. The pem and jwk fields are base64-encoded, you must decode them before using them (an example of this is shown in step 2). 
- 
+
+ Save these values as they won't be shown again. You will use these values later to generate the tokens. The pem and jwk fields are base64-encoded, you must decode them before using them (an example of this is shown in step 2).
+
  ### Step 2: Generate tokens using the key
- 
+
 Once you generate the key in step 1, you can use the `pem` or `jwk` values to generate self-signing URLs on your own. Using this method, you do not need to call the Stream API each time you are creating a new token.
 
 Here's an example Cloudflare Worker script which generates tokens that expire in 60 minutes and only work for users accessing the video from UK. In lines 2 and 3, you will configure the `id` and `jwk` values from step 1:
 
-```JavaScript
+```js
 // Global variables
 const jwkKey = '{PRIVATE-KEY-IN-JWK-FORMAT}'
 const keyID = '$KEYID'
@@ -264,14 +258,12 @@ function objectToBase64url(payload) {
 }
 ```
 
-### Step 3: Rendering the video 
+### Step 3: Rendering the video
 
 If you are using the Stream Player, insert the token returned by the Worker in Step 2 in place of the video id:
 
-```HTML
-
+```html
 <iframe src="https://iframe.videodelivery.net/eyJhbGciOiJSUzI1NiIsImtpZCI6ImNkYzkzNTk4MmY4MDc1ZjJlZjk2MTA2ZDg1ZmNkODM4In0.eyJraWQiOiJjZGM5MzU5ODJmODA3NWYyZWY5NjEwNmQ4NWZjZDgzOCIsImV4cCI6IjE2MjE4ODk2NTciLCJuYmYiOiIxNjIxODgyNDU3In0.iHGMvwOh2-SuqUG7kp2GeLXyKvMavP-I2rYCni9odNwms7imW429bM2tKs3G9INms8gSc7fzm8hNEYWOhGHWRBaaCs3U9H4DRWaFOvn0sJWLBitGuF_YaZM5O6fqJPTAwhgFKdikyk9zVzHrIJ0PfBL0NsTgwDxLkJjEAEULQJpiQU1DNm0w5ctasdbw77YtDwdZ01g924Dm6jIsWolW0Ic0AevCLyVdg501Ki9hSF7kYST0egcll47jmoMMni7ujQCJI1XEAOas32DdjnMvU8vXrYbaHk1m1oXlm319rDYghOHed9kr293KM7ivtZNlhYceSzOpyAmqNFS7mearyQ" style="border: none;" height="720" width="1280" allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;" allowfullscreen="true"></iframe>
-
 ```
 
 If you are using your own player, replace the video id in the manifest url with the `token` value:
@@ -283,9 +275,8 @@ If you are using your own player, replace the video id in the manifest url with 
 You can create up to 1,000 keys and rotate them at your convenience.
 Once revoked all tokens created with that key will be invalidated.
 
-```javascript
+```js
 // curl -X DELETE -H "Authorization: Bearer $TOKEN"  "https://api.cloudflare.com/client/v4/accounts/$ACCOUNT/stream/keys/$KEYID"
-
 {
   "result": "Revoked",
   "success": true,
@@ -319,8 +310,8 @@ Depending on the rule type, accessRules support 2 additional properties:
 
 
 ***Example 1: Block views from a specific country***
-```
-...
+
+```json
 "accessRules": [
 	{
 		"type": "ip.geoip.country",
@@ -334,7 +325,7 @@ The first rule matches on country, US, DE, and MX here. When that rule matches, 
 
 ***Example 2: Allow only views from specific country or IPs***
 
-```...
+```json
 "accessRules": [
 	{
 		"type": "ip.geoip.country",
@@ -379,10 +370,8 @@ curl -X POST \
 -H "Authorization: Bearer $TOKEN" \
 -d "{\"uid\": \"$VIDEOID\", \"allowedOrigins\": [\"example.com\"]}" \
 https://api.cloudflare.com/client/v4/accounts/$ACCOUNT/stream/$VIDEOID
-
 ```
 
 ### Signed URLs
 
 Combining signed URLs with embedding restrictions allows you to strongly control how your videos are viewed. This lets you serve only trusted users while preventing the signed URL from being hosted on an unknown site.
-
