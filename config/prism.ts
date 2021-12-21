@@ -102,6 +102,27 @@ interface Node {
 
 type Line = Node[];
 
+const ESCAPE = /[&"<>]/g;
+const CHARS = {
+  '"': '&quot;',
+  '&': '&amp;',
+  '<': '&lt',
+  '>': '&gt',
+};
+
+// @see lukeed/tempura
+function toEscape(value: string) {
+  let tmp = 0;
+  let out = '';
+  let last = (ESCAPE.lastIndex = 0);
+  while (ESCAPE.test(value)) {
+    tmp = ESCAPE.lastIndex - 1;
+    out += value.substring(last, tmp) + CHARS[value[tmp] as keyof typeof CHARS];
+    last = tmp + 1;
+  }
+  return out + value.substring(last);
+}
+
 function normalize(tokens: (Token | string)[]) {
   let line: Line = [];
   let lines: Line[] = [];
@@ -127,7 +148,7 @@ function normalize(tokens: (Token | string)[]) {
         line = [];
       } else if (item.includes('\n')) {
         item.split(/\r?\n/g).forEach((txt, idx) => {
-          let content = txt || '\n';
+          let content = txt ? toEscape(txt) : '\n';
           if (idx > 0) {
             lines.push(line);
             line = [];
@@ -135,7 +156,8 @@ function normalize(tokens: (Token | string)[]) {
           line.push({ types, content });
         });
       } else {
-        line.push({ types, content: item });
+        let content = toEscape(item);
+        line.push({ types, content });
       }
     } else if (item) {
       if (types) types += ' ';
