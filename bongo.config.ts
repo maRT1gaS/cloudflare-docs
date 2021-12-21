@@ -1,6 +1,6 @@
 import { define } from 'bongo';
 import { markdown } from '@bongo/markdown';
-import { highlight } from './config/prism.mjs';
+import { highlight } from './config/prism';
 
 export default define({
   $site: {
