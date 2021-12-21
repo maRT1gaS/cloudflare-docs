@@ -11,10 +11,10 @@
     "lint": "prettier . --check"
   },
   "devDependencies": {
-    "@bongo/markdown": "0.0.5",
+    "@bongo/markdown": "0.0.6",
     "@types/node": "16.11.12",
-    "bongo": "npm:@lukeed/bongo@0.0.5",
     "@types/prismjs": "1.16.6",
+    "bongo": "npm:@lukeed/bongo@0.0.6",
     "prettier": "2.5.1",
     "prismjs": "1.25.0"
   }
