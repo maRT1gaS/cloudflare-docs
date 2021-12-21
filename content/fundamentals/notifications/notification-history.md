@@ -19,7 +19,7 @@ GET accounts/:identifier/alerting/v3/history
 
 Example:
 
-```sh
+```curl
 $ curl -X GET "https://api.cloudflare.com/client/v4/accounts/9a7806061c88ada191ed06f989cc3dac/alerting/v3/history?page=1&per_page=25" \
      -H "X-Auth-Email: user@example.com" \
      -H "X-Auth-Key: c2547eb745079dac9320b638f5e225cf483cc5cfdda41" \

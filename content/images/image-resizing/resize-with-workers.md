@@ -241,14 +241,10 @@ async function handleRequest(request) {
 
   // Copy parameters from query string to request options.
   // You can implement various different parameters here.
-  if (url.searchParams.has('fit'))
-    options.cf.image.fit = url.searchParams.get('fit');
-  if (url.searchParams.has('width'))
-    options.cf.image.width = url.searchParams.get('width');
-  if (url.searchParams.has('height'))
-    options.cf.image.height = url.searchParams.get('height');
-  if (url.searchParams.has('quality'))
-    options.cf.image.quality = url.searchParams.get('quality');
+  if (url.searchParams.has('fit')) options.cf.image.fit = url.searchParams.get('fit');
+  if (url.searchParams.has('width')) options.cf.image.width = url.searchParams.get('width');
+  if (url.searchParams.has('height')) options.cf.image.height = url.searchParams.get('height');
+  if (url.searchParams.has('quality')) options.cf.image.quality = url.searchParams.get('quality');
 
   // Your Worker is responsible for automatic format negotiation. Check the Accept header.
   const accept = request.headers.get('Accept');

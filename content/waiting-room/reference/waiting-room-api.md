@@ -33,9 +33,7 @@ For help with endpoints and pagination, see [_Getting Started: Endpoints_](https
   <tbody>
     <tr>
       <td>
-        <a href="https://api.cloudflare.com/#waiting-room-list-waiting_rooms">
-          List Waiting Rooms
-        </a>
+        <a href="https://api.cloudflare.com/#waiting-room-list-waiting_rooms">List Waiting Rooms</a>
       </td>
       <td>
         <code>GET&nbsp;zones/{'{:zone_identifier}'}/waiting_rooms</code>
@@ -95,9 +93,7 @@ For help with endpoints and pagination, see [_Getting Started: Endpoints_](https
     </tr>
     <tr>
       <td>
-        <a href="https://api.cloudflare.com/#waiting-room-patch-waiting-room">
-          Patch Waiting Room
-        </a>
+        <a href="https://api.cloudflare.com/#waiting-room-patch-waiting-room">Patch Waiting Room</a>
       </td>
       <td>
         <code>
@@ -136,12 +132,12 @@ For help with endpoints and pagination, see [_Getting Started: Endpoints_](https
       <td>
         <ul>
           <li>
-            Returns <code>queueing</code> if the queue is activated (clients are
-            put in the waiting room).
+            Returns <code>queueing</code> if the queue is activated (clients are put in the waiting
+            room).
           </li>
           <li>
-            Returns <code>not_queueing</code> if the queue is not activated or
-            if the waiting room is suspended.
+            Returns <code>not_queueing</code> if the queue is not activated or if the waiting room
+            is suspended.
           </li>
         </ul>
       </td>

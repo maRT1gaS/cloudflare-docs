@@ -36,8 +36,8 @@ proxy-fallback.saasprovider.com CNAME proxy-fallback.saasprovider.com.cdn.cloudf
 ```
 
 <Aside type="warning" header="Warning:">
-  To prevent unresolvable CNAME loops, only 10 consecutive CNAMES are followed
-  to find the appropriate Custom Hostname CNAME. The final CNAME must contain{' '}
+  To prevent unresolvable CNAME loops, only 10 consecutive CNAMES are followed to find the
+  appropriate Custom Hostname CNAME. The final CNAME must contain{' '}
   <code class="InlineCode">[zone_name].cdn.cloudflare.net</code>.
 </Aside>
 
@@ -80,9 +80,7 @@ Each API call to [create a Custom Hostname](https://api.cloudflare.com/#custom-h
 }
 ```
 
-<Aside header="Note">
-  Once you activate a Custom Hostname, you can remove the TXT record.
-</Aside>
+<Aside header="Note">Once you activate a Custom Hostname, you can remove the TXT record.</Aside>
 
 ## HTTP
 
@@ -161,8 +159,7 @@ Various hostname verification errors include:
       </tr>
       <tr>
         <td style="width:50%; word-wrap:break-word; white-space:normal">
-          Fallback origin is initializing, pending_deployment, pending_deletion,
-          or deleted
+          Fallback origin is initializing, pending_deployment, pending_deletion, or deleted
         </td>
         <td>Fallback is not active.</td>
       </tr>
@@ -171,28 +168,25 @@ Various hostname verification errors include:
           Custom hostname does not CNAME to this zone
         </td>
         <td>
-          Zone does not have apex proxying entitlement and custom hostname does
-          not CNAME to zone.
+          Zone does not have apex proxying entitlement and custom hostname does not CNAME to zone.
         </td>
       </tr>
       <tr>
         <td style="width:50%; word-wrap:break-word; white-space:normal">
-          None of the A or AAAA records are owned by this account and the
-          pre-generated ownership verification token was not found
+          None of the A or AAAA records are owned by this account and the pre-generated ownership
+          verification token was not found
         </td>
         <td>
-          Account has apex proxying enabled but the custom hostname failed the
-          hostname validation check on the A record.
+          Account has apex proxying enabled but the custom hostname failed the hostname validation
+          check on the A record.
         </td>
       </tr>
       <tr>
         <td style="width:50%; word-wrap:break-word; white-space:normal">
-          This account and the pre-generated ownership verification token was
-          not found
+          This account and the pre-generated ownership verification token was not found
         </td>
         <td>
-          Hostname does not CNAME to zone or none of the A/AAAA records match
-          reserved IPs for zone.
+          Hostname does not CNAME to zone or none of the A/AAAA records match reserved IPs for zone.
         </td>
       </tr>
     </tbody>
@@ -218,38 +212,33 @@ Applicable hostname verification status includes:
       </tr>
       <tr>
         <td>Active</td>
-        <td>
-          Custom hostname has completed hostname verification and is active.
-        </td>
+        <td>Custom hostname has completed hostname verification and is active.</td>
       </tr>
       <tr>
         <td>Active re-deploying</td>
-        <td>
-          Customer hostname is active and the changes have been processed.
-        </td>
+        <td>Customer hostname is active and the changes have been processed.</td>
       </tr>
       <tr>
         <td>Blocked</td>
         <td>
-          Custom hostname cannot be added to Cloudflare at this time. If you are
-          an Enterprise customer, please contact your Customer Success Manager.
-          Otherwise, please email abusereply@cloudflare.com with the name of the
-          web property and a detailed explanation of your association with this
-          web property.
+          Custom hostname cannot be added to Cloudflare at this time. If you are an Enterprise
+          customer, please contact your Customer Success Manager. Otherwise, please email
+          abusereply@cloudflare.com with the name of the web property and a detailed explanation of
+          your association with this web property.
         </td>
       </tr>
       <tr>
         <td>Moved</td>
         <td>
-          Custom hostname is not active after <em>Pending</em> for the entirety
-          of the Validation Backoff Schedule.
+          Custom hostname is not active after <em>Pending</em> for the entirety of the Validation
+          Backoff Schedule.
         </td>
       </tr>
       <tr>
         <td>Deleted</td>
         <td>
-          Custom hostname was deleted from the zone. Occurs when status is{' '}
-          <em>Moved</em> for more than 7 days.
+          Custom hostname was deleted from the zone. Occurs when status is <em>Moved</em> for more
+          than 7 days.
         </td>
       </tr>
     </tbody>

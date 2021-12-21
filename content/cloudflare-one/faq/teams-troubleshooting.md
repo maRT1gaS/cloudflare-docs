@@ -69,10 +69,7 @@ Safari is more susceptible to presenting this error. See [workaround](/connectio
 ## I see `Error 400 admin_policy_enforced` when using GSuite as an identity provider.
 
 <div class="small-img">
-  <img
-    alt="Google Error 400"
-    src="../static/documentation/faq/google-error-400.png"
-  />
+  <img alt="Google Error 400" src="../static/documentation/faq/google-error-400.png" />
 </div>
 
 This is due to a Google policy change requiring you to set your Google Admin console to trust your applications:

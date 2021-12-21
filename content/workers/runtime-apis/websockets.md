@@ -40,8 +40,8 @@ let [client, server] = Object.values(new WebSocketPair());
 <Definitions>
 
 - <Code>
-    addEventListener(event<ParamType>WebSocketEvent</ParamType>,
-    callbackFunction<ParamType>Function</ParamType>)
+    addEventListener(event<ParamType>WebSocketEvent</ParamType>, callbackFunction
+    <ParamType>Function</ParamType>)
   </Code>
 
   - Add callback functions to be executed when an event has occurred on the WebSocket.
@@ -57,8 +57,7 @@ let [client, server] = Object.values(new WebSocketPair());
   - The WebSocket event (refer to [Events](/runtime-apis/websockets#events) to listen to.
 
 - <Code>
-    callbackFunction(message<TypeLink href="#message">Message</TypeLink>){' '}
-    <Type>Function</Type>
+    callbackFunction(message<TypeLink href="#message">Message</TypeLink>) <Type>Function</Type>
   </Code>
 
   - A function to be called when the Websocket responds to a specific event.
@@ -68,8 +67,7 @@ let [client, server] = Object.values(new WebSocketPair());
 ### close
 
 - <Code>
-    close(code<ParamType>number</ParamType>, reason<ParamType>string</ParamType>
-    )
+    close(code<ParamType>number</ParamType>, reason<ParamType>string</ParamType>)
   </Code>
 
   Close the WebSocket connection.

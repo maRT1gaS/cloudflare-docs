@@ -23,9 +23,7 @@ order: 986
     <td>100242</td>
     <td>
       Block Citrix Netscaler ADC -{' '}
-      <a href="https://nvd.nist.gov/vuln/detail/CVE-2019-19781">
-        CVE-2019-19781
-      </a>
+      <a href="https://nvd.nist.gov/vuln/detail/CVE-2019-19781">CVE-2019-19781</a>
     </td>
     <td>N/A</td>
     <td>Block</td>

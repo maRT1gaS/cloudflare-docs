@@ -58,8 +58,8 @@ This table summarizes the object properties:
           <Type>Object</Type>
         </td>
         <td>
-          A <a href="/api/cf-filters/json-object">Cloudflare Filter object</a>{' '}
-          that contains an expression for evaluating this rule.
+          A <a href="/api/cf-filters/json-object">Cloudflare Filter object</a> that contains an
+          expression for evaluating this rule.
         </td>
         <td></td>
       </tr>
@@ -69,10 +69,7 @@ This table summarizes the object properties:
           <br />
           <Type>String</Type>
         </td>
-        <td>
-          The action to take when a request satisfies the filter expression for
-          this rule.
-        </td>
+        <td>The action to take when a request satisfies the filter expression for this rule.</td>
         <td>
           <em>
             log
@@ -97,9 +94,8 @@ This table summarizes the object properties:
           <Type>Number</Type>
         </td>
         <td>
-          Determines the order of evaluation for the rule relative to others.
-          Lower values indicate greater priority. Rules without a value are
-          evaluated last. For guidance, see{' '}
+          Determines the order of evaluation for the rule relative to others. Lower values indicate
+          greater priority. Rules without a value are evaluated last. For guidance, see{' '}
           <a href="#avoiding-priority-conflicts">
             <em>Avoiding priority conflicts</em>
           </a>
@@ -117,8 +113,8 @@ This table summarizes the object properties:
           <Type>Boolean</Type>
         </td>
         <td>
-          Returns <code class="InlineCode">true</code> when the rule is not
-          active. Use <code>ref</code> to enable/disable the rule.
+          Returns <code class="InlineCode">true</code> when the rule is not active. Use{' '}
+          <code>ref</code> to enable/disable the rule.
         </td>
         <td>
           Default: <code class="InlineCode">false</code>

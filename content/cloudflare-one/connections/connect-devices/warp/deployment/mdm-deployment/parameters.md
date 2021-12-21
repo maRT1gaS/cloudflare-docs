@@ -98,9 +98,9 @@ This parameter replaces the old `enabled` property, which can no longer be used 
 - `1-1440` Turn switch back on automatically after the specified number of minutes.
 
 <Aside>
-  This parameter replaces the old `enabled` property, which can no longer be
-  used in conjunction with the new `switch_locked` and `auto_connect`. If you
-  want to use these parameters, you must remove `enabled`.
+  This parameter replaces the old `enabled` property, which can no longer be used in conjunction
+  with the new `switch_locked` and `auto_connect`. If you want to use these parameters, you must
+  remove `enabled`.
 </Aside>
 
 ### `support_url`
@@ -119,8 +119,8 @@ This parameter replaces the old `enabled` property, which can no longer be used 
 ## Authentication with service tokens
 
 <Aside>
-  Devices that connect to Cloudflare for Teams with Service Token authentication
-  are not subject to identity based rules.
+  Devices that connect to Cloudflare for Teams with Service Token authentication are not subject to
+  identity based rules.
 </Aside>
 
 Instead of requiring users to authenticate with their credentials, you can deploy the WARP client with a pre-generated [Service Token](/identity/service-auth/service-tokens).

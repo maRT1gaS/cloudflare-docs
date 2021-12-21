@@ -41,8 +41,7 @@ The Cloudflare Firewall Rules language supports these transformation functions:
     <br />
 
     <code class="InlineCode" style="width:100%">
-      any(url_decode(http.request.body.form.values[*])[*] contains "an xss
-      attack")
+      any(url_decode(http.request.body.form.values[*])[*] contains "an xss attack")
     </code>
 
 - <code>
@@ -70,9 +69,7 @@ The Cloudflare Firewall Rules language supports these transformation functions:
   - <em>Example:</em>
     <br />
 
-    <code class="InlineCode">
-      concat("String1"," ","String",2) == "String1 String2"
-    </code>
+    <code class="InlineCode">concat("String1"," ","String",2) == "String1 String2"</code>
 
 - <code>
     ends_with(source<ParamType>String</ParamType>, substring
@@ -154,9 +151,7 @@ The Cloudflare Firewall Rules language supports these transformation functions:
   - <em>Example:</em>
     <br />
 
-    <code class="InlineCode">
-      remove_bytes(http.host, "\x2e\x77") == "cloudflarecom"
-    </code>
+    <code class="InlineCode">remove_bytes(http.host, "\x2e\x77") == "cloudflarecom"</code>
 
 - <code>
     starts_with(source<ParamType>String</ParamType>, substring
@@ -210,19 +205,17 @@ The Cloudflare Firewall Rules language supports these transformation functions:
 
   - Decodes a URL formatted string, as in the following:
 
-    - <code class="InlineCode">%20</code> and <code class="InlineCode">+</code> decode
-      to space characters <code class="InlineCode"> </code>
-
-    - <code class="InlineCode">%E4%BD</code> decodes to <code class="InlineCode">
-        ä½{' '}
+    - <code class="InlineCode">%20</code> and <code class="InlineCode">+</code> decode to space characters <code class="InlineCode">
+        {' '}
       </code>
+
+    - <code class="InlineCode">%E4%BD</code> decodes to <code class="InlineCode">ä½ </code>
 
   - <em>Example:</em>
     <br />
 
     <code class="InlineCode">
-      any(url_decode(http.request.body.form.values[*])[*] contains "an xss
-      attack")
+      any(url_decode(http.request.body.form.values[*])[*] contains "an xss attack")
     </code>
 
 </Definitions>
@@ -340,8 +333,7 @@ and is composed of these parentheses-delimited expressions:
         <code>(.*)</code>
       </td>
       <td>
-        The <em>separator</em> between message and timestamp, commonly a
-        parameter name
+        The <em>separator</em> between message and timestamp, commonly a parameter name
       </td>
       <td valign="top">
         <code class="InlineCode">&verify=</code>
@@ -352,8 +344,7 @@ and is composed of these parentheses-delimited expressions:
         <code>(\d{'{10}'})</code>
       </td>
       <td>
-        The 10-digit Unix <em>timestamp</em> when the MAC was issued, expressed
-        in seconds
+        The 10-digit Unix <em>timestamp</em> when the MAC was issued, expressed in seconds
       </td>
       <td valign="top">
         <code class="InlineCode">1484063137</code>
@@ -365,15 +356,13 @@ and is composed of these parentheses-delimited expressions:
       </td>
       <td>
         <p>
-          A base64-encoded version of the <em>MAC</em>. When you do not set the
-          value of the <em>urlSafe</em> argument in the HMAC validation function
-          to <code class="InlineCode">'s'</code>, you must URL encode the base64
-          value for <em>mac</em>.
+          A base64-encoded version of the <em>MAC</em>. When you do not set the value of the{' '}
+          <em>urlSafe</em> argument in the HMAC validation function to{' '}
+          <code class="InlineCode">'s'</code>, you must URL encode the base64 value for <em>mac</em>.
         </p>
         <p>
-          When the base64 MAC encoding is URL-safe, the value for <em>mac</em>{' '}
-          contains 43 bytes. Otherwise, the value will be 44 bytes or more,
-          because of URL encoding.
+          When the base64 MAC encoding is URL-safe, the value for <em>mac</em> contains 43 bytes.
+          Otherwise, the value will be 44 bytes or more, because of URL encoding.
         </p>
       </td>
       <td valign="top">

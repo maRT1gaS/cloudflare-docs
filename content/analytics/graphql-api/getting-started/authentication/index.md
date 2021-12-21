@@ -23,15 +23,12 @@ This table outlines the differences between Cloudflare API keys and tokens:
   <tbody>
     <tr>
       <td>
-        <a href="https://developers.cloudflare.com/api/tokens/create">
-          API Tokens
-        </a>
+        <a href="https://developers.cloudflare.com/api/tokens/create">API Tokens</a>
       </td>
       <td>
-        Cloudflare recommends API Tokens as the preferred way to interact with
-        Cloudflare APIs. You can configure the scope of tokens to limit access
-        to account and zone resources, and you can define the Cloudflare APIs to
-        which the token authorizes access.
+        Cloudflare recommends API Tokens as the preferred way to interact with Cloudflare APIs. You
+        can configure the scope of tokens to limit access to account and zone resources, and you can
+        define the Cloudflare APIs to which the token authorizes access.
       </td>
     </tr>
     <tr>
@@ -40,12 +37,12 @@ This table outlines the differences between Cloudflare API keys and tokens:
       </td>
       <td>
         <p>
-          Unique to each Cloudflare user and used only for authentication. API
-          keys do not authorize access to accounts or zones.
+          Unique to each Cloudflare user and used only for authentication. API keys do not authorize
+          access to accounts or zones.
         </p>
         <p>
-          Use the Global API Key for authentication. Only use the Origin CA Key
-          when you create origin certificates through the API.
+          Use the Global API Key for authentication. Only use the Origin CA Key when you create
+          origin certificates through the API.
         </p>
       </td>
     </tr>

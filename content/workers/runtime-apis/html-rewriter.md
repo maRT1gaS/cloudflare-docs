@@ -15,9 +15,7 @@ The `HTMLRewriter` class should be instantiated once in your Workers script, wit
 ## Constructor
 
 ```js
-new HTMLRewriter()
-  .on('*', new ElementHandler())
-  .onDocument(new DocumentHandler());
+new HTMLRewriter().on('*', new ElementHandler()).onDocument(new DocumentHandler());
 ```
 
 ---
@@ -111,9 +109,7 @@ class UserElementHandler {
 async function handleRequest(req) {
   const res = await fetch(req);
 
-  return new HTMLRewriter()
-    .on('div:user_info', new UserElementHandler())
-    .transform(res);
+  return new HTMLRewriter().on('div:user_info', new UserElementHandler()).transform(res);
 }
 ```
 

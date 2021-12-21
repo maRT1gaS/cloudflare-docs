@@ -79,9 +79,9 @@ All the following settings can be applied to websites through Applications, List
 ### Disable keyboard
 
 <Aside>
-  Mouse input remains available (to allow users to navigate a website by
-  following hyperlinks and scrolling). This does not prevent user input into
-  third party virtual keyboards within a remote webpage.
+  Mouse input remains available (to allow users to navigate a website by following hyperlinks and
+  scrolling). This does not prevent user input into third party virtual keyboards within a remote
+  webpage.
 </Aside>
 
 - **Behavior**. Prohibits users from performing keyboard input into the remote page.
@@ -90,11 +90,10 @@ All the following settings can be applied to websites through Applications, List
 ### Disable upload
 
 <Aside>
-  This option does not prevent files being uploaded to websites from third party
-  cloud file managers or files downloaded into the remote browser download bar
-  from other isolated websites. To prevent files being uploaded from the remote
-  browser into an isolated website use HTTP Policies to block by Upload Mime
-  Type.
+  This option does not prevent files being uploaded to websites from third party cloud file managers
+  or files downloaded into the remote browser download bar from other isolated websites. To prevent
+  files being uploaded from the remote browser into an isolated website use HTTP Policies to block
+  by Upload Mime Type.
 </Aside>
 
 - **Behavior**. Prohibits users from uploading files from their local machine into a remote web page.
@@ -103,9 +102,8 @@ All the following settings can be applied to websites through Applications, List
 ### Disable download
 
 <Aside>
-  This option does not prevent files from being downloaded into the remote
-  browser. To prevent files being downloaded into the remote browser use HTTP
-  Policies to block by Download Mime Type.
+  This option does not prevent files from being downloaded into the remote browser. To prevent files
+  being downloaded into the remote browser use HTTP Policies to block by Download Mime Type.
 </Aside>
 
 - **Behavior**. Prohibits users from exporting files from the remote browser to their local machine.

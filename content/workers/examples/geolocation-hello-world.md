@@ -21,8 +21,7 @@ addEventListener('fetch', event => {
 
 async function handleRequest(request) {
   let html_content = '';
-  let html_style =
-    'body{padding:6em; font-family: sans-serif;} h1{color:#f6821f}';
+  let html_style = 'body{padding:6em; font-family: sans-serif;} h1{color:#f6821f}';
 
   html_content += '<p> Colo: ' + request.cf.colo + '</p>';
   html_content += '<p> Country: ' + request.cf.country + '</p>';

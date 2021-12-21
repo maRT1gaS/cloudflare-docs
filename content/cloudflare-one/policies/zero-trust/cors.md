@@ -96,6 +96,6 @@ In general, we recommend the following steps when troubleshooting CORS issues:
 3. If you are using the [cross-origin setting](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/crossorigin) on script tags, these must be set to "use-credentials".
 
 <Aside type="Warning" header="CORS is failing on the same domain">
-  CORS checks do not occur on the same domain. If this error occurs, it is
-  likely the user flow is making a sub-request without the cookie.
+  CORS checks do not occur on the same domain. If this error occurs, it is likely the user flow is
+  making a sub-request without the cookie.
 </Aside>

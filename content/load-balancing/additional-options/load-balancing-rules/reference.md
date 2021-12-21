@@ -33,8 +33,8 @@ Regardless of whether your traffic is proxied, you have access to the following 
       </td>
       <td>
         <p>
-          The client TCP IP address, which may be adjusted to reflect the actual
-          address of the client by using HTTP headers such as
+          The client TCP IP address, which may be adjusted to reflect the actual address of the
+          client by using HTTP headers such as
           <code class="InlineCode">X-Forwarded-For</code> or <code class="InlineCode">
             X-Real-IP
           </code>.
@@ -55,11 +55,8 @@ Regardless of whether your traffic is proxied, you have access to the following 
       </td>
       <td>
         <p>
-          The{' '}
-          <a href="/understand-basics/traffic-steering#geo-steering">
-            region name
-          </a>{' '}
-          of the data center processing the request.
+          The <a href="/understand-basics/traffic-steering#geo-steering">region name</a> of the data
+          center processing the request.
         </p>
       </td>
     </tr>
@@ -120,9 +117,7 @@ Cloudflare Load Balancers support the following unproxied fields:
       <td>
         <p>
           The numeric value of the{' '}
-          <a href="https://en.wikipedia.org/wiki/List_of_DNS_record_types">
-            DNS query type
-          </a>
+          <a href="https://en.wikipedia.org/wiki/List_of_DNS_record_types">DNS query type</a>
         </p>
         <p>Example Values:</p>
         <ul>

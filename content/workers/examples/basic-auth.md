@@ -37,10 +37,7 @@ async function handleRequest(request) {
 
   // In the case of a "Basic" authentication, the exchange
   // MUST happen over an HTTPS (TLS) connection to be secure.
-  if (
-    'https:' !== protocol ||
-    'https' !== request.headers.get('x-forwarded-proto')
-  ) {
+  if ('https:' !== protocol || 'https' !== request.headers.get('x-forwarded-proto')) {
     throw new BadRequestException('Please use a HTTPS connection.');
   }
 

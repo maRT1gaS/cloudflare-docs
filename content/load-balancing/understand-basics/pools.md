@@ -60,9 +60,7 @@ The Cloudflare API supports the following commands for pools. Examples are given
   <tbody>
     <tr>
       <td>
-        <a href="https://api.cloudflare.com/#load-balancer-pools-create-pool">
-          Create Pool
-        </a>
+        <a href="https://api.cloudflare.com/#load-balancer-pools-create-pool">Create Pool</a>
       </td>
       <td>
         <code class="InlineCode">POST</code>
@@ -73,9 +71,7 @@ The Cloudflare API supports the following commands for pools. Examples are given
     </tr>
     <tr>
       <td>
-        <a href="https://api.cloudflare.com/#load-balancer-pools-delete-pool">
-          Delete Pool
-        </a>
+        <a href="https://api.cloudflare.com/#load-balancer-pools-delete-pool">Delete Pool</a>
       </td>
       <td>
         <code class="InlineCode">DELETE</code>
@@ -86,9 +82,7 @@ The Cloudflare API supports the following commands for pools. Examples are given
     </tr>
     <tr>
       <td>
-        <a href="https://api.cloudflare.com/#load-balancer-pools-list-pools">
-          List Pools
-        </a>
+        <a href="https://api.cloudflare.com/#load-balancer-pools-list-pools">List Pools</a>
       </td>
       <td>
         <code class="InlineCode">GET</code>
@@ -99,9 +93,7 @@ The Cloudflare API supports the following commands for pools. Examples are given
     </tr>
     <tr>
       <td>
-        <a href="https://api.cloudflare.com/#load-balancer-pools-pool-details">
-          Pool Details
-        </a>
+        <a href="https://api.cloudflare.com/#load-balancer-pools-pool-details">Pool Details</a>
       </td>
       <td>
         <code class="InlineCode">GET</code>
@@ -120,16 +112,12 @@ The Cloudflare API supports the following commands for pools. Examples are given
         <code class="InlineCode">GET</code>
       </td>
       <td>
-        <code class="InlineCode">
-          user/load_balancers/pools/:identifier/health
-        </code>
+        <code class="InlineCode">user/load_balancers/pools/:identifier/health</code>
       </td>
     </tr>
     <tr>
       <td>
-        <a href="https://api.cloudflare.com/#load-balancer-pools-update-pool">
-          Update Pool
-        </a>
+        <a href="https://api.cloudflare.com/#load-balancer-pools-update-pool">Update Pool</a>
       </td>
       <td>
         <code class="InlineCode">PUT</code>
@@ -140,17 +128,13 @@ The Cloudflare API supports the following commands for pools. Examples are given
     </tr>
     <tr>
       <td>
-        <a href="https://api.cloudflare.com/#load-balancer-pools-preview-pool">
-          Preview Pool
-        </a>
+        <a href="https://api.cloudflare.com/#load-balancer-pools-preview-pool">Preview Pool</a>
       </td>
       <td>
         <code class="InlineCode">POST</code>
       </td>
       <td>
-        <code class="InlineCode">
-          user/load_balancers/pools/:identifier/preview
-        </code>
+        <code class="InlineCode">user/load_balancers/pools/:identifier/preview</code>
       </td>
     </tr>
     <tr>
@@ -163,9 +147,7 @@ The Cloudflare API supports the following commands for pools. Examples are given
         <code class="InlineCode">GET</code>
       </td>
       <td>
-        <code class="InlineCode">
-          user/load_balancers/pools/:identifier/references
-        </code>
+        <code class="InlineCode">user/load_balancers/pools/:identifier/references</code>
       </td>
     </tr>
   </tbody>

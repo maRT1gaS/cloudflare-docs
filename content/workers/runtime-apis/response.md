@@ -21,9 +21,7 @@ let response = new Response(body, init);
     - <TypeLink href="https://developer.mozilla.org/en-US/docs/Web/API/BufferSource">
         BufferSource
       </TypeLink> &nbsp;
-    - <TypeLink href="https://developer.mozilla.org/en-US/docs/Web/API/FormData">
-        FormData
-      </TypeLink> &nbsp;
+    - <TypeLink href="https://developer.mozilla.org/en-US/docs/Web/API/FormData">FormData</TypeLink> &nbsp;
     - <TypeLink href="https://developer.mozilla.org/en-US/docs/Web/API/ReadableStream">
         ReadableStream
       </TypeLink> &nbsp;

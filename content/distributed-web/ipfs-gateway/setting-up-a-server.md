@@ -22,8 +22,8 @@ pinning service and your own server for higher availability.
   a [NUC](https://www.intel.com/content/www/us/en/products/boards-kits/nuc.html)
   or [Raspberry Pi](https://www.raspberrypi.org/) running on your home network
   will work.<br />
-  <u>Recommended Minimum Requirements:</u>- 2 gigabytes of RAM - 10 gigabytes of
-  disk space - 1 terabyte of bandwidth per month
+  <u>Recommended Minimum Requirements:</u>- 2 gigabytes of RAM - 10 gigabytes of disk space - 1
+  terabyte of bandwidth per month
 
 ## Installing IPFS
 

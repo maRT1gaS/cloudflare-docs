@@ -28,9 +28,7 @@ async function handleRequest(request) {
 
     return fetch(request);
   } catch (err) {
-    console.error(
-      'request.cf does not exist in the previewer, only in production'
-    );
+    console.error('request.cf does not exist in the previewer, only in production');
     return new Response('Error in workers script' + err.message, {
       status: 500,
     });

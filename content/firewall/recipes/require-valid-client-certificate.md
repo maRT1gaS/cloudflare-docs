@@ -41,8 +41,8 @@ Because the [action](/cf-firewall-rules/actions) is _Block_, only requests that 
     <tr>
       <td>
         <code>
-          (http.host in {'{'}"orangeclouded.com" "api.orangeclouded.com"{'}'}{' '}
-          and not cf.tls_client_auth.cert_verified)
+          (http.host in {'{'}"orangeclouded.com" "api.orangeclouded.com"{'}'} and not
+          cf.tls_client_auth.cert_verified)
         </code>
       </td>
       <td>

@@ -57,8 +57,8 @@ This table summarizes the object properties:
         <td>
           <p>Maximum length: 50 characters.</p>
           <p>
-            Only alphanumeric and underscore (<code class="InlineCode">_</code>)
-            characters are valid.
+            Only alphanumeric and underscore (<code class="InlineCode">_</code>) characters are
+            valid.
           </p>
           <p>
             A valid name satisfies this regular expression:{' '}
@@ -111,8 +111,8 @@ This table summarizes the object properties:
           <Type>String</Type>
         </td>
         <td>
-          The <a href="https://tools.ietf.org/html/rfc3339">RFC 3339</a>{' '}
-          timestamp the list was created
+          The <a href="https://tools.ietf.org/html/rfc3339">RFC 3339</a> timestamp the list was
+          created
         </td>
         <td>Read only</td>
       </tr>
@@ -123,8 +123,8 @@ This table summarizes the object properties:
           <Type>String</Type>
         </td>
         <td>
-          The <a href="https://tools.ietf.org/html/rfc3339">RFC 3339</a>{' '}
-          timestamp when the list was last modified
+          The <a href="https://tools.ietf.org/html/rfc3339">RFC 3339</a> timestamp when the list was
+          last modified
         </td>
         <td>Read only</td>
       </tr>
@@ -205,8 +205,8 @@ The JSON object properties for a list item are defined as follows:
           <Type>String</Type>
         </td>
         <td>
-          The <a href="https://tools.ietf.org/html/rfc3339">RFC 3339</a>{' '}
-          timestamp when the list was created.
+          The <a href="https://tools.ietf.org/html/rfc3339">RFC 3339</a> timestamp when the list was
+          created.
         </td>
         <td>Read only</td>
       </tr>
@@ -217,8 +217,8 @@ The JSON object properties for a list item are defined as follows:
           <Type>String</Type>
         </td>
         <td>
-          The <a href="https://tools.ietf.org/html/rfc3339">RFC 3339</a>{' '}
-          timestamp when the item was last modified.
+          The <a href="https://tools.ietf.org/html/rfc3339">RFC 3339</a> timestamp when the item was
+          last modified.
         </td>
         <td>Read only</td>
       </tr>

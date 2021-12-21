@@ -90,10 +90,7 @@ async function handleScheduled(request) {
   let to_delete = [];
 
   deployments.result.forEach(function (deploy) {
-    if (
-      (Date.now() - new Date(deploy.created_on)) / 86400000 >
-      expiration_days
-    ) {
+    if ((Date.now() - new Date(deploy.created_on)) / 86400000 > expiration_days) {
       to_delete.push(deploy.id);
     }
   });

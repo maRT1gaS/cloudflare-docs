@@ -38,40 +38,27 @@ The Cloudflare Rules Lists API supports the operations outlined below. Visit the
     <tbody>
       <tr>
         <td>
-          <a href="https://api.cloudflare.com/#rules-lists-create-list">
-            Create List
-          </a>
+          <a href="https://api.cloudflare.com/#rules-lists-create-list">Create List</a>
         </td>
         <td>
-          <code class="InlineCode">
-            POST accounts/{'{account_id}'}/rules/lists
-          </code>
+          <code class="InlineCode">POST accounts/{'{account_id}'}/rules/lists</code>
+        </td>
+        <td style="width:25%; word-wrap:break-word; white-space:normal">Creates an empty list.</td>
+      </tr>
+      <tr>
+        <td>
+          <a href="https://api.cloudflare.com/#rules-lists-list-lists">List Lists</a>
+        </td>
+        <td>
+          <code class="InlineCode">GET accounts/{'{account_id}'}/rules/lists</code>
         </td>
         <td style="width:25%; word-wrap:break-word; white-space:normal">
-          Creates an empty list.
+          Fetch all lists for the account. (This request does not fetch the items in the lists.)
         </td>
       </tr>
       <tr>
         <td>
-          <a href="https://api.cloudflare.com/#rules-lists-list-lists">
-            List Lists
-          </a>
-        </td>
-        <td>
-          <code class="InlineCode">
-            GET accounts/{'{account_id}'}/rules/lists
-          </code>
-        </td>
-        <td style="width:25%; word-wrap:break-word; white-space:normal">
-          Fetch all lists for the account. (This request does not fetch the
-          items in the lists.)
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a href="https://api.cloudflare.com/#rules-lists-get-list">
-            Get List
-          </a>
+          <a href="https://api.cloudflare.com/#rules-lists-get-list">Get List</a>
         </td>
         <td>
           <code class="InlineCode">
@@ -79,15 +66,13 @@ The Cloudflare Rules Lists API supports the operations outlined below. Visit the
           </code>
         </td>
         <td style="width:25%; word-wrap:break-word; white-space:normal">
-          Fetches a list by its <code class="InlineCode">id</code>. (This
-          request does not display the items in the list.)
+          Fetches a list by its <code class="InlineCode">id</code>. (This request does not display
+          the items in the list.)
         </td>
       </tr>
       <tr>
         <td>
-          <a href="https://api.cloudflare.com/#rules-lists-update-list">
-            Update List
-          </a>
+          <a href="https://api.cloudflare.com/#rules-lists-update-list">Update List</a>
         </td>
         <td>
           <code class="InlineCode">
@@ -96,10 +81,9 @@ The Cloudflare Rules Lists API supports the operations outlined below. Visit the
         </td>
         <td style="width:25%; word-wrap:break-word; white-space:normal">
           <p>
-            Updates the <code class="InlineCode">description</code> of a list.
-            You cannot edit the <code class="InlineCode">name</code> or{' '}
-            <code class="InlineCode">kind</code>, and you cannot update items in
-            a list.
+            Updates the <code class="InlineCode">description</code> of a list. You cannot edit the{' '}
+            <code class="InlineCode">name</code> or <code class="InlineCode">kind</code>, and you
+            cannot update items in a list.
           </p>
           <p>
             To update an item in a list, use the{' '}
@@ -112,9 +96,7 @@ The Cloudflare Rules Lists API supports the operations outlined below. Visit the
       </tr>
       <tr>
         <td>
-          <a href="https://api.cloudflare.com/#rules-lists-delete-list">
-            Delete List
-          </a>
+          <a href="https://api.cloudflare.com/#rules-lists-delete-list">Delete List</a>
         </td>
         <td>
           <code class="InlineCode">
@@ -149,9 +131,7 @@ When you make requests to a list while a bulk operation on that list is in progr
     <tbody>
       <tr>
         <td>
-          <a href="https://api.cloudflare.com/#rules-lists-list-list-items">
-            List Items
-          </a>
+          <a href="https://api.cloudflare.com/#rules-lists-list-list-items">List Items</a>
         </td>
         <td>
           <code class="InlineCode">
@@ -166,9 +146,7 @@ When you make requests to a list while a bulk operation on that list is in progr
       </tr>
       <tr>
         <td>
-          <a href="https://api.cloudflare.com/#rules-lists-get-list-item">
-            Get List Item
-          </a>
+          <a href="https://api.cloudflare.com/#rules-lists-get-list-item">Get List Item</a>
         </td>
         <td>
           <code class="InlineCode">
@@ -182,9 +160,7 @@ When you make requests to a list while a bulk operation on that list is in progr
       </tr>
       <tr>
         <td>
-          <a href="https://api.cloudflare.com/#rules-lists-create-list-items">
-            Create List Items
-          </a>
+          <a href="https://api.cloudflare.com/#rules-lists-create-list-items">Create List Items</a>
         </td>
         <td>
           <code class="InlineCode">
@@ -193,17 +169,12 @@ When you make requests to a list while a bulk operation on that list is in progr
         </td>
         <td>
           <p>Appends a new item or items to a list.</p>
+          <p>Replaces entries that already exist in the list, does not delete any items.</p>
           <p>
-            Replaces entries that already exist in the list, does not delete any
-            items.
+            Overwrites the <code class="InlineCode">comment</code> of the original item.
           </p>
           <p>
-            Overwrites the <code class="InlineCode">comment</code> of the
-            original item.
-          </p>
-          <p>
-            The response includes an{' '}
-            <code class="InlineCode">operation_id</code>.
+            The response includes an <code class="InlineCode">operation_id</code>.
           </p>
         </td>
       </tr>
@@ -224,20 +195,17 @@ When you make requests to a list while a bulk operation on that list is in progr
             <code class="InlineCode">items</code>.
           </p>
           <p>
-            When <code class="InlineCode">items</code> is empty, deletes{' '}
-            <strong>all</strong> items in the list.
+            When <code class="InlineCode">items</code> is empty, deletes <strong>all</strong> items
+            in the list.
           </p>
           <p>
-            The response includes an{' '}
-            <code class="InlineCode">operation_id</code>.
+            The response includes an <code class="InlineCode">operation_id</code>.
           </p>
         </td>
       </tr>
       <tr>
         <td>
-          <a href="https://api.cloudflare.com/#rules-lists-delete-list-items">
-            Delete List Items
-          </a>
+          <a href="https://api.cloudflare.com/#rules-lists-delete-list-items">Delete List Items</a>
         </td>
         <td>
           <code class="InlineCode">
@@ -247,8 +215,7 @@ When you make requests to a list while a bulk operation on that list is in progr
         <td>
           <p>Deletes specified list items.</p>
           <p>
-            The response includes an{' '}
-            <code class="InlineCode">operation_id</code>.
+            The response includes an <code class="InlineCode">operation_id</code>.
           </p>
         </td>
       </tr>

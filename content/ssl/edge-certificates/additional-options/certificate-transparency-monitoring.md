@@ -45,9 +45,9 @@ Features vary by plan:
 To stop receiving alerts, switch the toggle to **Off** or remove your emails from the feature card.
 
 <Aside type="note" header="Note:">
-  CT monitoring does not detect phishing attempts. For example, for{' '}
-  <code>cloudflare.com</code>, an alert would not trigger for a certificate
-  issued for <code>cloudf1are.com</code> or <code>cloud-flare.com</code>.
+  CT monitoring does not detect phishing attempts. For example, for <code>cloudflare.com</code>, an
+  alert would not trigger for a certificate issued for <code>cloudf1are.com</code> or{' '}
+  <code>cloud-flare.com</code>.
 </Aside>
 
 ---

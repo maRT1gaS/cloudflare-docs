@@ -134,9 +134,7 @@ function handleOptions(request) {
       ...corsHeaders,
       // Allow all future content Request headers to go back to browser
       // such as Authorization (Bearer) or X-Client-Name-Version
-      'Access-Control-Allow-Headers': request.headers.get(
-        'Access-Control-Request-Headers'
-      ),
+      'Access-Control-Allow-Headers': request.headers.get('Access-Control-Request-Headers'),
     };
 
     return new Response(null, {
@@ -160,11 +158,7 @@ addEventListener('fetch', event => {
     if (request.method === 'OPTIONS') {
       // Handle CORS preflight requests
       event.respondWith(handleOptions(request));
-    } else if (
-      request.method === 'GET' ||
-      request.method === 'HEAD' ||
-      request.method === 'POST'
-    ) {
+    } else if (request.method === 'GET' || request.method === 'HEAD' || request.method === 'POST') {
       // Handle requests to the API server
       event.respondWith(handleRequest(request));
     } else {

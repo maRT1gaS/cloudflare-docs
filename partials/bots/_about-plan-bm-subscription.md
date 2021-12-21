@@ -28,18 +28,14 @@
       <td>
         <b>Type of bots detected</b>
       </td>
-      <td>
-        Simple and sophisticated bots, headless browsers, and domain-specific
-        anomalies
-      </td>
+      <td>Simple and sophisticated bots, headless browsers, and domain-specific anomalies</td>
     </tr>
     <tr>
       <td>
         <b>Actions</b>
       </td>
       <td>
-        Customer chooses from several options, including block, CAPTCHA
-        challenge, and JS challenge
+        Customer chooses from several options, including block, CAPTCHA challenge, and JS challenge
       </td>
     </tr>
     <tr>
@@ -56,8 +52,7 @@
       </td>
       <td>
         Ability to restrict by path, IP address, and more. Access to{' '}
-        <code class="InlineCode">bot score</code> field in Firewall, Workers,
-        and Logs
+        <code class="InlineCode">bot score</code> field in Firewall, Workers, and Logs
       </td>
     </tr>
   </tbody>

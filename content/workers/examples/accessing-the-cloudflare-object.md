@@ -37,8 +37,4 @@ addEventListener('fetch', event => {
   <a href={props.frontmatter.demo}>Open demo</a>
 </p>
 
-<Demo
-  src={props.frontmatter.demo}
-  title={props.frontmatter.summary}
-  height="395"
-/>
+<Demo src={props.frontmatter.demo} title={props.frontmatter.summary} height="395" />

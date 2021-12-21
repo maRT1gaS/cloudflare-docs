@@ -101,11 +101,7 @@ console.log(`Request headers: ${requestHeaders}`);
 [ES2019 provides `Object.fromEntries`](https://github.com/tc39/proposal-object-from-entries), so it's just a simple call to convert the headers into an object:
 
 ```js
-let requestHeaders = JSON.stringify(
-  Object.fromEntries(request.headers),
-  null,
-  2
-);
+let requestHeaders = JSON.stringify(Object.fromEntries(request.headers), null, 2);
 console.log(`Request headers: ${requestHeaders}`);
 ```
 

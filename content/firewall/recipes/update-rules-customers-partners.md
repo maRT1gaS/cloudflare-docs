@@ -103,8 +103,7 @@ This example:
     <tr>
       <td>
         <code>
-          (ip.src eq 1.1.1.1 and http.host eq "example.com" and
-          cf.bot_management.score gt 30)
+          (ip.src eq 1.1.1.1 and http.host eq "example.com" and cf.bot_management.score gt 30)
         </code>
       </td>
       <td>

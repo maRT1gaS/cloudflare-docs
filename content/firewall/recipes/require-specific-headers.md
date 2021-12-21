@@ -23,9 +23,8 @@ When the X-CSRF-Token header is missing, Cloudflare blocks the request:
     <tr>
       <td>
         <code>
-          not any(lower(http.request.headers.names[*])[*] contains
-          "x-csrf-token") and (http.request.full_uri eq
-          "https://www.example.com/somepath")
+          not any(lower(http.request.headers.names[*])[*] contains "x-csrf-token") and
+          (http.request.full_uri eq "https://www.example.com/somepath")
         </code>
       </td>
       <td>

@@ -36,9 +36,8 @@ Use CNI with other products in Cloudflare's suite for additional benefits.
       </td>
       <td>
         <p>
-          Securely connects your employees to your network no matter where they
-          are when you bring your Multiprotocol Label Switching (MPLS) network
-          to meet Cloudflare's.
+          Securely connects your employees to your network no matter where they are when you bring
+          your Multiprotocol Label Switching (MPLS) network to meet Cloudflare's.
         </p>
       </td>
     </tr>
@@ -62,15 +61,11 @@ Use CNI with other products in Cloudflare's suite for additional benefits.
         </span>
       </td>
       <td>
-        <p>
-          Protects data center and branch networks from unwanted and malicious
-          traffic.
-        </p>
+        <p>Protects data center and branch networks from unwanted and malicious traffic.</p>
       </td>
       <td>
         <p>
-          Decreases jitter, drives throughput improvements, and hardens
-          infrastructure to attack.
+          Decreases jitter, drives throughput improvements, and hardens infrastructure to attack.
         </p>
       </td>
     </tr>
@@ -85,8 +80,8 @@ Use CNI with other products in Cloudflare's suite for additional benefits.
       </td>
       <td>
         <p>
-          Provides a secure connection to serverless cloud compute that does not
-          traverse the public Internet.
+          Provides a secure connection to serverless cloud compute that does not traverse the public
+          Internet.
         </p>
       </td>
     </tr>

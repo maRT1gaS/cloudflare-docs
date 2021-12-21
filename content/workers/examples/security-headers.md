@@ -62,10 +62,7 @@ async function addHeaders(req) {
 
   const tlsVersion = req.cf.tlsVersion;
   // This sets the headers for HTML responses:
-  if (
-    newHeaders.has('Content-Type') &&
-    !newHeaders.get('Content-Type').includes('text/html')
-  ) {
+  if (newHeaders.has('Content-Type') && !newHeaders.get('Content-Type').includes('text/html')) {
     return new Response(response.body, {
       status: response.status,
       statusText: response.statusText,

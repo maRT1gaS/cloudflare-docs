@@ -34,8 +34,7 @@ Use the following API commands to manage advanced certificates. If you are using
     <tr>
       <td>
         <a href="https://api.cloudflare.com/#certificate-packs-restart-validation-for-advanced-certificate-manager-certificate-pack">
-          Restart validation for an Advanced Certificate Manager certificate
-          pack
+          Restart validation for an Advanced Certificate Manager certificate pack
         </a>
       </td>
       <td>
@@ -73,8 +72,7 @@ Use the following API commands to manage advanced certificates. If you are using
         <Code>zones/:zone/ssl/certificate_packs?status=all</Code>
       </td>
       <td>
-        This API call returns all certificate packs for a domain (Universal,
-        Custom, and Advanced).
+        This API call returns all certificate packs for a domain (Universal, Custom, and Advanced).
       </td>
     </tr>
     <tr>
@@ -104,8 +102,7 @@ Use the following API commands to manage advanced certificates. If you are using
         <Code>zones/:zone/settings/ciphers</Code>
       </td>
       <td>
-        To restore default settings, send a blank array in the{' '}
-        <code>value</code> parameter.
+        To restore default settings, send a blank array in the <code>value</code> parameter.
       </td>
       <td></td>
     </tr>

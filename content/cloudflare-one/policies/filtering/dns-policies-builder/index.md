@@ -19,10 +19,9 @@ Build a DNS policy by configuring the following elements:
 - [Actions](#actions)
 
 <Aside>
-  Unless a more specific selector is configured in a policy (e.g.,{' '}
-  <code>user email</code> or <code>source IP address</code> for a registered
-  location), then the policy will be evaluated against all DNS queries that
-  reach Gateway from your organization.
+  Unless a more specific selector is configured in a policy (e.g., <code>user email</code> or{' '}
+  <code>source IP address</code> for a registered location), then the policy will be evaluated
+  against all DNS queries that reach Gateway from your organization.
 </Aside>
 
 ## Expressions

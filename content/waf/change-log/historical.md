@@ -939,9 +939,7 @@ summary: Changes that were completed before the change log was made publicly ava
     <td>100155</td>
     <td>
       PHPCMS - Dangerous File Upload -{' '}
-      <a href="https://nvd.nist.gov/vuln/detail/CVE-2018-14399">
-        CVE-2018-14399
-      </a>
+      <a href="https://nvd.nist.gov/vuln/detail/CVE-2018-14399">CVE-2018-14399</a>
     </td>
     <td>2019-06-03</td>
     <td>2019-06-10</td>
@@ -950,9 +948,7 @@ summary: Changes that were completed before the change log was made publicly ava
   </tr>
   <tr>
     <td>9002140A</td>
-    <td>
-      New OWASP rules to allow requests from the WordPress's Gutenberg editor
-    </td>
+    <td>New OWASP rules to allow requests from the WordPress's Gutenberg editor</td>
     <td>2019-05-28</td>
     <td>2019-06-03</td>
     <td>N/A</td>
@@ -960,9 +956,7 @@ summary: Changes that were completed before the change log was made publicly ava
   </tr>
   <tr>
     <td>9002140B</td>
-    <td>
-      New OWASP rules to allow requests from the WordPress's Gutenberg editor
-    </td>
+    <td>New OWASP rules to allow requests from the WordPress's Gutenberg editor</td>
     <td>2019-05-28</td>
     <td>2019-06-03</td>
     <td>N/A</td>
@@ -980,8 +974,7 @@ summary: Changes that were completed before the change log was made publicly ava
     <td>100157</td>
     <td>
       Microsoft SharePoint Deserialization -{' '}
-      <a href="https://nvd.nist.gov/vuln/detail/CVE-2019-0604">CVE-2019-0604</a>{' '}
-      (Strict)
+      <a href="https://nvd.nist.gov/vuln/detail/CVE-2019-0604">CVE-2019-0604</a> (Strict)
     </td>
     <td>2019-05-20</td>
     <td>2019-05-28</td>
@@ -1035,8 +1028,7 @@ summary: Changes that were completed before the change log was made publicly ava
     <td>100154</td>
     <td>
       WordPress Social Warfare RCE/XSS (
-      <a href="https://nvd.nist.gov/vuln/detail/CVE-2019-9978">CVE-2019-9978</a>
-      )
+      <a href="https://nvd.nist.gov/vuln/detail/CVE-2019-9978">CVE-2019-9978</a>)
     </td>
     <td>2019-05-07</td>
     <td>2019-05-13</td>
@@ -1103,12 +1095,8 @@ summary: Changes that were completed before the change log was made publicly ava
     <td>100153</td>
     <td>
       Block Oracle WebLogic{' '}
-      <a href="https://nvd.nist.gov/vuln/detail/CVE-2019-2725">CVE-2019-2725</a>
-      ,{' '}
-      <a href="https://nvd.nist.gov/vuln/detail/CVE-2017-10271">
-        CVE-2017-10271
-      </a>
-      ,{' '}
+      <a href="https://nvd.nist.gov/vuln/detail/CVE-2019-2725">CVE-2019-2725</a>,{' '}
+      <a href="https://nvd.nist.gov/vuln/detail/CVE-2017-10271">CVE-2017-10271</a>,{' '}
       <a href="https://nvd.nist.gov/vuln/detail/CVE-2017-3506">CVE-2017-3506</a>
     </td>
     <td>2019-04-29</td>
@@ -1183,10 +1171,7 @@ summary: Changes that were completed before the change log was made publicly ava
   <tr>
     <td>100152</td>
     <td>
-      Joomla{' '}
-      <a href="https://nvd.nist.gov/vuln/detail/CVE-2019-10945">
-        CVE-2019-10945
-      </a>
+      Joomla <a href="https://nvd.nist.gov/vuln/detail/CVE-2019-10945">CVE-2019-10945</a>
     </td>
     <td>2019-04-22</td>
     <td>2019-04-29</td>
@@ -1276,10 +1261,7 @@ summary: Changes that were completed before the change log was made publicly ava
   <tr>
     <td>100150</td>
     <td>
-      Block{' '}
-      <a href="https://nvd.nist.gov/vuln/detail/CVE-2019-10842">
-        CVE-2019-10842
-      </a>
+      Block <a href="https://nvd.nist.gov/vuln/detail/CVE-2019-10842">CVE-2019-10842</a>
     </td>
     <td>2019-04-15</td>
     <td>2019-04-22</td>
@@ -1557,10 +1539,8 @@ summary: Changes that were completed before the change log was made publicly ava
     <td>100005</td>
     <td>
       Merge LFI 100005_BETA into 100005. Mitigates{' '}
-      <a href="https://nvd.nist.gov/vuln/detail/CVE-2018-9126">CVE-2018-9126</a>
-      ,{' '}
-      <a href="https://nvd.nist.gov/vuln/detail/CVE-2011-1892">CVE-2011-1892</a>
-      .
+      <a href="https://nvd.nist.gov/vuln/detail/CVE-2018-9126">CVE-2018-9126</a>,{' '}
+      <a href="https://nvd.nist.gov/vuln/detail/CVE-2011-1892">CVE-2011-1892</a>.
     </td>
     <td>2019-03-25</td>
     <td>2019-04-01</td>
@@ -1620,10 +1600,7 @@ summary: Changes that were completed before the change log was made publicly ava
   </tr>
   <tr>
     <td>100021CB</td>
-    <td>
-      Improves XSS event detection using alternate syntax `, brackets, and
-      parenthesis.
-    </td>
+    <td>Improves XSS event detection using alternate syntax `, brackets, and parenthesis.</td>
     <td>2019-03-11</td>
     <td>2019-03-18</td>
     <td>Log</td>
@@ -1696,9 +1673,7 @@ summary: Changes that were completed before the change log was made publicly ava
   <tr>
     <td>WP0031</td>
     <td>
-      WordPress RCE -{' '}
-      <a href="https://nvd.nist.gov/vuln/detail/CVE-2019-8942">CVE-2019-8942</a>
-      ,{' '}
+      WordPress RCE - <a href="https://nvd.nist.gov/vuln/detail/CVE-2019-8942">CVE-2019-8942</a>,{' '}
       <a href="https://nvd.nist.gov/vuln/detail/CVE-2019-8943">CVE-2019-8943</a>
     </td>
     <td>2019-03-04</td>
@@ -1829,9 +1804,7 @@ summary: Changes that were completed before the change log was made publicly ava
   <tr>
     <td>100054</td>
     <td>
-      Block{' '}
-      <a href="https://nvd.nist.gov/vuln/detail/CVE-2017-5638">CVE-2017-5638</a>{' '}
-      RCE attempts
+      Block <a href="https://nvd.nist.gov/vuln/detail/CVE-2017-5638">CVE-2017-5638</a> RCE attempts
     </td>
     <td>2019-01-28</td>
     <td>2019-02-04</td>
@@ -1857,8 +1830,7 @@ summary: Changes that were completed before the change log was made publicly ava
   <tr>
     <td>PHP100012</td>
     <td>
-      Detect{' '}
-      <a href="https://nvd.nist.gov/vuln/detail/CVE-2017-9841">CVE-2017-9841</a>
+      Detect <a href="https://nvd.nist.gov/vuln/detail/CVE-2017-9841">CVE-2017-9841</a>
     </td>
     <td>2019-01-21</td>
     <td>2019-01-28</td>
@@ -2004,9 +1976,8 @@ summary: Changes that were completed before the change log was made publicly ava
   <tr>
     <td>100116</td>
     <td>
-      For{' '}
-      <a href="https://nvd.nist.gov/vuln/detail/CVE-2018-9206">CVE-2018-9206</a>
-      , vulnerable jQuery File Uploader
+      For <a href="https://nvd.nist.gov/vuln/detail/CVE-2018-9206">CVE-2018-9206</a>, vulnerable
+      jQuery File Uploader
     </td>
     <td>2018-11-05</td>
     <td>2018-11-19</td>
@@ -2016,9 +1987,8 @@ summary: Changes that were completed before the change log was made publicly ava
   <tr>
     <td>100117</td>
     <td>
-      For{' '}
-      <a href="https://nvd.nist.gov/vuln/detail/CVE-2018-9206">CVE-2018-9206</a>
-      , vulnerable jQuery File Uploader
+      For <a href="https://nvd.nist.gov/vuln/detail/CVE-2018-9206">CVE-2018-9206</a>, vulnerable
+      jQuery File Uploader
     </td>
     <td>2018-11-05</td>
     <td>2018-11-19</td>
@@ -2395,10 +2365,7 @@ summary: Changes that were completed before the change log was made publicly ava
   </tr>
   <tr>
     <td>WP0025B</td>
-    <td>
-      Reducing the false positives WP0025B caused in the Gutenberg WordPress
-      editor.
-    </td>
+    <td>Reducing the false positives WP0025B caused in the Gutenberg WordPress editor.</td>
     <td>2018-08-06</td>
     <td>2018-08-08</td>
     <td>Block</td>
@@ -2406,10 +2373,7 @@ summary: Changes that were completed before the change log was made publicly ava
   </tr>
   <tr>
     <td>WP0025D</td>
-    <td>
-      Reducing the false positives WP0025B caused in the Gutenberg WordPress
-      editor.
-    </td>
+    <td>Reducing the false positives WP0025B caused in the Gutenberg WordPress editor.</td>
     <td>2018-08-06</td>
     <td>2018-08-08</td>
     <td>Block</td>
@@ -2417,9 +2381,7 @@ summary: Changes that were completed before the change log was made publicly ava
   </tr>
   <tr>
     <td>D0006</td>
-    <td>
-      These attempt to address SA-CORE-2018-005 by matching certain headers.
-    </td>
+    <td>These attempt to address SA-CORE-2018-005 by matching certain headers.</td>
     <td>Emergency release, 2019-08-03</td>
     <td>2019-08-03</td>
     <td>N/A</td>
@@ -2427,9 +2389,7 @@ summary: Changes that were completed before the change log was made publicly ava
   </tr>
   <tr>
     <td>D0007</td>
-    <td>
-      These attempt to address SA-CORE-2018-005 by matching certain headers.
-    </td>
+    <td>These attempt to address SA-CORE-2018-005 by matching certain headers.</td>
     <td>Emergency release, 2019-08-03</td>
     <td>2019-08-03</td>
     <td>N/A</td>
@@ -2437,9 +2397,7 @@ summary: Changes that were completed before the change log was made publicly ava
   </tr>
   <tr>
     <td>D0008</td>
-    <td>
-      These attempt to address SA-CORE-2018-005 by matching certain headers.
-    </td>
+    <td>These attempt to address SA-CORE-2018-005 by matching certain headers.</td>
     <td>Emergency release, 2019-08-03</td>
     <td>2019-08-03</td>
     <td>N/A</td>
@@ -2447,9 +2405,7 @@ summary: Changes that were completed before the change log was made publicly ava
   </tr>
   <tr>
     <td>D0009</td>
-    <td>
-      These attempt to address SA-CORE-2018-005 by matching certain headers.
-    </td>
+    <td>These attempt to address SA-CORE-2018-005 by matching certain headers.</td>
     <td>Emergency release, 2019-08-03</td>
     <td>2019-08-03</td>
     <td>N/A</td>
@@ -2457,9 +2413,7 @@ summary: Changes that were completed before the change log was made publicly ava
   </tr>
   <tr>
     <td>D0010</td>
-    <td>
-      These attempt to address SA-CORE-2018-005 by matching certain headers.
-    </td>
+    <td>These attempt to address SA-CORE-2018-005 by matching certain headers.</td>
     <td>Emergency release, 2019-08-03</td>
     <td>2019-08-03</td>
     <td>N/A</td>
@@ -2467,9 +2421,7 @@ summary: Changes that were completed before the change log was made publicly ava
   </tr>
   <tr>
     <td>D0011</td>
-    <td>
-      These attempt to address SA-CORE-2018-005 by matching certain headers.
-    </td>
+    <td>These attempt to address SA-CORE-2018-005 by matching certain headers.</td>
     <td>Emergency release, 2019-08-03</td>
     <td>2019-08-03</td>
     <td>N/A</td>
@@ -2477,9 +2429,7 @@ summary: Changes that were completed before the change log was made publicly ava
   </tr>
   <tr>
     <td>D0012</td>
-    <td>
-      These attempt to address SA-CORE-2018-005 by matching certain headers.
-    </td>
+    <td>These attempt to address SA-CORE-2018-005 by matching certain headers.</td>
     <td>Emergency release, 2019-08-03</td>
     <td>2019-08-03</td>
     <td>N/A</td>
@@ -2487,9 +2437,7 @@ summary: Changes that were completed before the change log was made publicly ava
   </tr>
   <tr>
     <td>D0013</td>
-    <td>
-      These attempt to address SA-CORE-2018-005 by matching certain headers.
-    </td>
+    <td>These attempt to address SA-CORE-2018-005 by matching certain headers.</td>
     <td>Emergency release, 2019-08-03</td>
     <td>2019-08-03</td>
     <td>N/A</td>
@@ -2497,9 +2445,7 @@ summary: Changes that were completed before the change log was made publicly ava
   </tr>
   <tr>
     <td>D0014</td>
-    <td>
-      These attempt to address SA-CORE-2018-005 by matching certain headers.
-    </td>
+    <td>These attempt to address SA-CORE-2018-005 by matching certain headers.</td>
     <td>Emergency release, 2019-08-03</td>
     <td>2019-08-03</td>
     <td>N/A</td>
@@ -2507,10 +2453,7 @@ summary: Changes that were completed before the change log was made publicly ava
   </tr>
   <tr>
     <td>100038</td>
-    <td>
-      Blocks requests to /server_status, which g ives away information on how a
-      server works.
-    </td>
+    <td>Blocks requests to /server_status, which g ives away information on how a server works.</td>
     <td>2018-08-30</td>
     <td>2018-08-06</td>
     <td>Log</td>

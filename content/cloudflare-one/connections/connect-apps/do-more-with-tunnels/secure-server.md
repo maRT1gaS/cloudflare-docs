@@ -49,9 +49,9 @@ $ sudo iptables -A INPUT -p tcp --dport ssh -j ACCEPT
 5. Drop all other ingress traffic.
 
 <Aside header="Warning:">
-  Be very careful with the following command because if you didn't preserve the
-  current SSH connection or allow new SSH connections, you would be logged out
-  and unable to SSH back into the system again.
+  Be very careful with the following command because if you didn't preserve the current SSH
+  connection or allow new SSH connections, you would be logged out and unable to SSH back into the
+  system again.
 </Aside>
 
 ```sh

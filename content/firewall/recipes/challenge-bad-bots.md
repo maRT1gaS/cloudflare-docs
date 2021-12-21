@@ -42,10 +42,7 @@ When a request is definitely automated (score of 1) or likely automated (scores 
   <tbody>
     <tr>
       <td>
-        <code>
-          (cf.bot_management.score lt 30) and not
-          (cf.bot_management.verified_bot)
-        </code>
+        <code>(cf.bot_management.score lt 30) and not (cf.bot_management.verified_bot)</code>
       </td>
       <td>
         <em>Block</em>
@@ -71,9 +68,8 @@ This example offers the same protection as the browser-only rule, but allows aut
     <tr>
       <td>
         <code>
-          (cf.bot_management.score lt 30) and not
-          (cf.bot_management.verified_bot) and not (http.request.uri.path
-          contains "/api")
+          (cf.bot_management.score lt 30) and not (cf.bot_management.verified_bot) and not
+          (http.request.uri.path contains "/api")
         </code>
       </td>
       <td>
@@ -99,10 +95,7 @@ The following rules would block definitely automated mobile traffic, but only ch
   <tbody>
     <tr>
       <td>
-        <code>
-          (cf.bot_management.score lt 2) and (http.user_agent contains "App_Name
-          2.0")
-        </code>
+        <code>(cf.bot_management.score lt 2) and (http.user_agent contains "App_Name 2.0")</code>
       </td>
       <td>
         <em>Block</em>
@@ -110,10 +103,7 @@ The following rules would block definitely automated mobile traffic, but only ch
     </tr>
     <tr>
       <td>
-        <code>
-          (cf.bot_management.score lt 30) and (http.user_agent contains
-          "App_Name 2.0")
-        </code>
+        <code>(cf.bot_management.score lt 30) and (http.user_agent contains "App_Name 2.0")</code>
       </td>
       <td>
         <em>Challenge</em>

@@ -50,10 +50,7 @@ async function handleRequest() {
     },
   };
   const responses = await Promise.all([fetch(url1, init), fetch(url2, init)]);
-  const results = await Promise.all([
-    gatherResponse(responses[0]),
-    gatherResponse(responses[1]),
-  ]);
+  const results = await Promise.all([gatherResponse(responses[0]), gatherResponse(responses[1])]);
   return new Response(results.join(), init);
 }
 

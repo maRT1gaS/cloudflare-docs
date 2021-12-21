@@ -55,34 +55,24 @@ The Cloudflare Rulesets API supports the operations outlined below. Visit the as
   <tbody style="vertical-align:top">
     <tr>
       <td>
-        <a href="/rulesets-api/view/#list-existing-rulesets">
-          List existing rulesets
-        </a>
+        <a href="/rulesets-api/view/#list-existing-rulesets">List existing rulesets</a>
       </td>
       <td>
         <code>GET</code>
       </td>
       <td>
-        <p>
-          Returns the list of existing rulesets at the account level or at the
-          zone level.
-        </p>
+        <p>Returns the list of existing rulesets at the account level or at the zone level.</p>
       </td>
     </tr>
     <tr>
       <td>
-        <a href="/rulesets-api/view/#view-a-specific-ruleset">
-          View a specific ruleset
-        </a>
+        <a href="/rulesets-api/view/#view-a-specific-ruleset">View a specific ruleset</a>
       </td>
       <td>
         <code>GET</code>
       </td>
       <td>
-        <p>
-          Returns the properties of the most recent version of a specific
-          ruleset.
-        </p>
+        <p>Returns the properties of the most recent version of a specific ruleset.</p>
       </td>
     </tr>
     <tr>
@@ -108,10 +98,7 @@ The Cloudflare Rulesets API supports the operations outlined below. Visit the as
         <code>GET</code>
       </td>
       <td>
-        <p>
-          Returns the configuration of a specific version of a ruleset,
-          including its rules.
-        </p>
+        <p>Returns the configuration of a specific version of a ruleset, including its rules.</p>
       </td>
     </tr>
     <tr>
@@ -124,10 +111,7 @@ The Cloudflare Rulesets API supports the operations outlined below. Visit the as
         <code>GET</code>
       </td>
       <td>
-        <p>
-          Returns a list of all the rules in a Managed Ruleset with a specific
-          tag.
-        </p>
+        <p>Returns a list of all the rules in a Managed Ruleset with a specific tag.</p>
       </td>
     </tr>
   </tbody>
@@ -178,8 +162,7 @@ The Cloudflare Rulesets API supports the operations outlined below. Visit the as
       </td>
       <td>
         <p>
-          Updates the basic properties of a ruleset and the list of rules in the
-          ruleset.
+          Updates the basic properties of a ruleset and the list of rules in the ruleset.
           <br />
           Allows you to configure the execution of Managed Rulesets.
         </p>
@@ -196,8 +179,8 @@ The Cloudflare Rulesets API supports the operations outlined below. Visit the as
         <p>
           Adds a single rule to an existing ruleset.
           <br />
-          Allows you to add a single rule without having to include all the
-          existing ruleset rules in the request.
+          Allows you to add a single rule without having to include all the existing ruleset rules
+          in the request.
         </p>
       </td>
     </tr>
@@ -254,9 +237,7 @@ The Cloudflare Rulesets API supports the operations outlined below. Visit the as
     </tr>
     <tr>
       <td>
-        <a href="/rulesets-api/delete#delete-ruleset-version">
-          Delete ruleset version
-        </a>
+        <a href="/rulesets-api/delete#delete-ruleset-version">Delete ruleset version</a>
       </td>
       <td>
         <code>DELETE</code>

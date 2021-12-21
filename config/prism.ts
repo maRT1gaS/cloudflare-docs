@@ -62,10 +62,7 @@ const transformations: Record<string, any> = {
   js: {
     'keyword': {
       to: 'declaration-keyword',
-      for: new Set([
-        'const', 'let', 'var', 'async', 'await',
-        'function', 'class'
-      ]),
+      for: new Set(['const', 'let', 'var', 'async', 'await', 'function', 'class']),
     },
     'punctuation': {
       to: 'operator',
@@ -73,9 +70,7 @@ const transformations: Record<string, any> = {
     },
     'class-name': {
       to: 'api',
-      for: new Set([
-        'HTMLRewriter', 'Request', 'Response', 'URL', 'Error'
-      ]),
+      for: new Set(['HTMLRewriter', 'Request', 'Response', 'URL', 'Error']),
     },
     'function': {
       to: 'builtin',
@@ -107,7 +102,7 @@ interface Node {
 
 type Line = Node[];
 
-function normalize(tokens: (Token|string)[]) {
+function normalize(tokens: (Token | string)[]) {
   let line: Line = [];
   let lines: Line[] = [];
 
@@ -205,7 +200,7 @@ export function highlight(code: string, lang: string, attrs: string): string {
     row = '<span class="CodeBlock--row">';
     row += '<span class="CodeBlock--row-indicator"></span>';
     row += '<div class="CodeBlock--row-content">';
-    for (let j=0; j < line.length; j++) {
+    for (let j = 0; j < line.length; j++) {
       row += '<span class="' + line[j].types + '">' + line[j].content + '</span>';
     }
     output += row + '</div></span>';

@@ -74,8 +74,7 @@ The output of the `CF-Cache-Status header` shows whether or not a resource is ca
         MISS
       </td>
       <td colspan="5" rowspan="1">
-        The resource was not found in Cloudflare’s cache and was served from the
-        origin web server.
+        The resource was not found in Cloudflare’s cache and was served from the origin web server.
       </td>
     </tr>
     <tr>
@@ -91,8 +90,8 @@ The output of the `CF-Cache-Status header` shows whether or not a resource is ca
         EXPIRED
       </td>
       <td colspan="5" rowspan="1">
-        The resource was found in Cloudflare’s cache but was expired and served
-        from the origin web server.
+        The resource was found in Cloudflare’s cache but was expired and served from the origin web
+        server.
       </td>
     </tr>
     <tr>
@@ -100,8 +99,8 @@ The output of the `CF-Cache-Status header` shows whether or not a resource is ca
         STALE
       </td>
       <td colspan="5" rowspan="1">
-        The resource was served from Cloudflare’s cache but was expired.
-        Cloudflare could not contact the origin to retrieve an updated resource.
+        The resource was served from Cloudflare’s cache but was expired. Cloudflare could not
+        contact the origin to retrieve an updated resource.
       </td>
     </tr>
     <tr>
@@ -109,13 +108,11 @@ The output of the `CF-Cache-Status header` shows whether or not a resource is ca
         BYPASS
       </td>
       <td colspan="5" rowspan="1">
-        The origin server instructed Cloudflare to bypass cache via a
-        Cache-Control header set to <code>no-cache</code>, <code>private</code>,
-        or <code>max-age=0</code> even though Cloudflare originally preferred to
-        cache the asset. BYPASS is returned when enabling{' '}
-        <a href="/about/cache-control">Origin Cache-Control</a>. Cloudflare also
-        sets BYPASS when your origin web server sends cookies in the response
-        header.
+        The origin server instructed Cloudflare to bypass cache via a Cache-Control header set to{' '}
+        <code>no-cache</code>, <code>private</code>, or <code>max-age=0</code> even though
+        Cloudflare originally preferred to cache the asset. BYPASS is returned when enabling{' '}
+        <a href="/about/cache-control">Origin Cache-Control</a>. Cloudflare also sets BYPASS when
+        your origin web server sends cookies in the response header.
       </td>
     </tr>
     <tr>
@@ -123,9 +120,8 @@ The output of the `CF-Cache-Status header` shows whether or not a resource is ca
         REVALIDATED
       </td>
       <td colspan="5" rowspan="1">
-        The resource is served from Cloudflare’s cache but is stale. The
-        resource was revalidated by either an <code>If-Modified-Since</code>{' '}
-        header or an <code>If-None-Match header</code>.
+        The resource is served from Cloudflare’s cache but is stale. The resource was revalidated by
+        either an <code>If-Modified-Since</code> header or an <code>If-None-Match header</code>.
       </td>
     </tr>
     <tr>
@@ -133,9 +129,8 @@ The output of the `CF-Cache-Status header` shows whether or not a resource is ca
         UPDATING
       </td>
       <td colspan="5" rowspan="1">
-        The resource was served from Cloudflare’s cache and was expired, but the
-        origin web server is updating the resource. UPDATING is typically only
-        seen for very popular cached resources.
+        The resource was served from Cloudflare’s cache and was expired, but the origin web server
+        is updating the resource. UPDATING is typically only seen for very popular cached resources.
       </td>
     </tr>
     <tr>
@@ -143,11 +138,10 @@ The output of the `CF-Cache-Status header` shows whether or not a resource is ca
         DYNAMIC
       </td>
       <td colspan="5" rowspan="1">
-        Cloudflare does not consider the asset eligible to cache and your
-        Cloudflare settings do not explicitly instruct Cloudflare to cache the
-        asset. Instead, the asset was requested from the origin web server. Use{' '}
-        <a href="/how-to/create-page-rules">Page Rules</a> to implement custom
-        caching options.
+        Cloudflare does not consider the asset eligible to cache and your Cloudflare settings do not
+        explicitly instruct Cloudflare to cache the asset. Instead, the asset was requested from the
+        origin web server. Use <a href="/how-to/create-page-rules">Page Rules</a> to implement
+        custom caching options.
       </td>
     </tr>
   </tbody>

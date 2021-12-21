@@ -45,9 +45,8 @@ For this tutorial, you will need:
    [Additional Attributes](http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname) can also be synchronized with Zendesk.
 
    <Aside>
-     This step is optional. If the name is not provided, Zendesk will [use the
-     user’s email address as their
-     name](https://support.zendesk.com/hc/en-us/articles/203663676#topic_dzb_gl5_2v))
+     This step is optional. If the name is not provided, Zendesk will [use the user’s email address
+     as their name](https://support.zendesk.com/hc/en-us/articles/203663676#topic_dzb_gl5_2v))
    </Aside>
 
    ![Zendesk attributes](../static/zero-trust-security/zendesk-sso-saas/zendesk-attributes.png)

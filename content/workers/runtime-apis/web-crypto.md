@@ -59,9 +59,7 @@ These methods are all accessed via `crypto.subtle`, which is also [documented in
 
 <Definitions>
 
-- <Code>encrypt(algorithm, key, data)</Code> <Type>
-    Promise&lt;ArrayBuffer>
-  </Type>
+- <Code>encrypt(algorithm, key, data)</Code> <Type>Promise&lt;ArrayBuffer></Type>
 
   - Returns a Promise that fulfills with the encrypted data corresponding to the clear text,
     algorithm, and key given as parameters.
@@ -81,9 +79,7 @@ These methods are all accessed via `crypto.subtle`, which is also [documented in
         data<ParamType>BufferSource</ParamType>
       </Code>
 
-- <Code>decrypt(algorithm, key, data)</Code> <Type>
-    Promise&lt;ArrayBuffer>
-  </Type>
+- <Code>decrypt(algorithm, key, data)</Code> <Type>Promise&lt;ArrayBuffer></Type>
 
   - Returns a Promise that fulfills with the clear data corresponding to the ciphertext, algorithm,
     and key given as parameters.
@@ -123,9 +119,7 @@ These methods are all accessed via `crypto.subtle`, which is also [documented in
         data<ParamType>ArrayBuffer</ParamType>
       </Code>
 
-- <Code>verify(algorithm, key, signature, data)</Code> <Type>
-    Promise&lt;ArrayBuffer>
-  </Type>
+- <Code>verify(algorithm, key, signature, data)</Code> <Type>Promise&lt;ArrayBuffer></Type>
 
   - Returns a Promise that fulfills with a Boolean value indicating if the signature given as a
     parameter matches the text, algorithm, and key that are also given as parameters.
@@ -201,9 +195,9 @@ These methods are all accessed via `crypto.subtle`, which is also [documented in
 
       - An Array of strings indicating the [possible usages of the new key](https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/generateKey#Syntax).
 
-- <Code>
-    deriveKey(algorithm, baseKey, derivedKeyAlgorithm, extractable, keyUsages)
-  </Code> <Type>Promise&lt;CryptoKey></Type>
+- <Code>deriveKey(algorithm, baseKey, derivedKeyAlgorithm, extractable, keyUsages)</Code> <Type>
+    Promise&lt;CryptoKey>
+  </Type>
 
   - Returns a Promise that fulfills with a newly generated `CryptoKey` derived from the base key
     and specific algorithm given as parameters.
@@ -234,9 +228,7 @@ These methods are all accessed via `crypto.subtle`, which is also [documented in
 
       - An Array of strings indicating the [possible usages of the new key](https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/deriveKey#Syntax)
 
-- <Code>deriveBits(algorithm, baseKey, length)</Code> <Type>
-    Promise&lt;ArrayBuffer>
-  </Type>
+- <Code>deriveBits(algorithm, baseKey, length)</Code> <Type>Promise&lt;ArrayBuffer></Type>
 
   - Returns a Promise that fulfills with a newly generated buffer of pseudo-random bits derived from
     the base key and specific algorithm given as parameters. It returns a
@@ -314,9 +306,7 @@ These methods are all accessed via `crypto.subtle`, which is also [documented in
         key<ParamType>CryptoKey</ParamType>
       </Code>
 
-- <Code>wrapKey(format, key, wrappingKey, wrapAlgo)</Code> <Type>
-    Promise&lt;ArrayBuffer>
-  </Type>
+- <Code>wrapKey(format, key, wrappingKey, wrapAlgo)</Code> <Type>Promise&lt;ArrayBuffer></Type>
 
   - Transform a `CryptoKey` into a portable format, and then encrypt it with another key. This
     renders the `CryptoKey` suitable for storage or transmission in untrusted environments.
@@ -422,18 +412,17 @@ A checkmark (✓) indicates that this feature is believed to be fully supported 
 
 **Footnotes:**
 
-1. <a name="footnote-1"></a> Non-standard EdDSA is supported for the Ed25519 curve.
-   Since this algorithm is non-standard, a few things to keep in mind while using
-   it:
+1. <a name="footnote-1"></a> Non-standard EdDSA is supported for the Ed25519 curve. Since this algorithm
+   is non-standard, a few things to keep in mind while using it:
 
 - Use <Code>NODE-ED25519</Code> as the algorithm and namedCurve parameters.
 - Unlike NodeJS, we will not support "raw" import of private keys.
 - Since this algorithm is non-standard, the implementation may change over time. While we cannot guarantee it at this time, we will strive to maintain backward compatabilityand compatability with NodeJS's behavior.
   Any notable compatability notes will be communicated in release notes and via this developer document.
 
-2. <a name="footnote-2"></a> MD5 is not part of the WebCrypto standard, but is supported
-   in Cloudflare Workers for interacting with legacy systems that require MD5. MD5
-   is considered a weak algorithm. Do not rely upon MD5 for security.
+2. <a name="footnote-2"></a> MD5 is not part of the WebCrypto standard, but is supported in Cloudflare
+   Workers for interacting with legacy systems that require MD5. MD5 is considered a weak algorithm.
+   Do not rely upon MD5 for security.
 
 ---
 

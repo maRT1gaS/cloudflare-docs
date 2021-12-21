@@ -201,8 +201,7 @@ Access to the `matches` operator requires a Cloudflare Business or Enterprise pl
         <td>&#10060;</td>
         <td>
           <code class="InlineCode">
-            http.request.uri.path <strong>matches</strong>{' '}
-            "^/articles/200[7-8]/$"
+            http.request.uri.path <strong>matches</strong> "^/articles/200[7-8]/$"
           </code>
         </td>
       </tr>
@@ -269,8 +268,7 @@ Each logical operator has an [order of precedence](#order-of-precedence). The or
         </td>
         <td>
           <code class="InlineCode">
-            <strong>not</strong> ( http.host eq "www.cloudflare.com" and ip.src
-            in 93.184.216.0/24 )
+            <strong>not</strong> ( http.host eq "www.cloudflare.com" and ip.src in 93.184.216.0/24 )
           </code>
         </td>
         <td>1</td>
@@ -285,8 +283,7 @@ Each logical operator has an [order of precedence](#order-of-precedence). The or
         </td>
         <td>
           <code class="InlineCode">
-            http.host eq "www.cloudflare.com" <strong>and</strong> ip.src in
-            93.184.216.0/24
+            http.host eq "www.cloudflare.com" <strong>and</strong> ip.src in 93.184.216.0/24
           </code>
         </td>
         <td>2</td>
@@ -305,8 +302,7 @@ Each logical operator has an [order of precedence](#order-of-precedence). The or
         </td>
         <td>
           <code class="InlineCode">
-            http.host eq "www.cloudflare.com" <strong>xor</strong> ip.src in
-            93.184.216.0/24
+            http.host eq "www.cloudflare.com" <strong>xor</strong> ip.src in 93.184.216.0/24
           </code>
         </td>
         <td>3</td>
@@ -321,8 +317,7 @@ Each logical operator has an [order of precedence](#order-of-precedence). The or
         </td>
         <td>
           <code class="InlineCode">
-            http.host eq "www.cloudflare.com" <strong>or</strong> ip.src in
-            93.184.216.0/24
+            http.host eq "www.cloudflare.com" <strong>or</strong> ip.src in 93.184.216.0/24
           </code>
         </td>
         <td>4</td>

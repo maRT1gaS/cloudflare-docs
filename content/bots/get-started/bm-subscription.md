@@ -81,10 +81,7 @@ Based on your analysis of **automated** traffic, create a [Firewall Rule](https:
     <tbody>
       <tr>
         <td>
-          <code>
-            (cf.bot_management.score eq 1) and not
-            (cf.bot_management.verified_bot)
-          </code>
+          <code>(cf.bot_management.score eq 1) and not (cf.bot_management.verified_bot)</code>
         </td>
         <td>
           <em>JS Challenge</em>

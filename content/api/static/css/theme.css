@@ -250,8 +250,8 @@ template {
 body {
   background: #fff;
   color: #242425;
-  font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto,
-    Oxygen, Ubuntu, 'Helvetica Neue', Arial, sans-serif;
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
+    'Helvetica Neue', Arial, sans-serif;
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -398,8 +398,7 @@ body {
 }
 .button:hover:active,
 .button.active {
-  box-shadow: inset 0 0.125em 0.375em rgba(0, 0, 0, 0.125),
-    inset 0 0 0 999em rgba(0, 0, 0, 0.125);
+  box-shadow: inset 0 0.125em 0.375em rgba(0, 0, 0, 0.125), inset 0 0 0 999em rgba(0, 0, 0, 0.125);
 }
 .button:focus {
   outline: none;
@@ -1357,8 +1356,7 @@ input[type='time']:focus,
 input[type='week']:focus,
 select[multiple='multiple']:focus {
   border-color: #2053ab;
-  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06),
-    0 0 5px rgba(0, 169, 218, 0.7);
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06), 0 0 5px rgba(0, 169, 218, 0.7);
 }
 .logo-title-wrapper {
   padding: 1rem;
@@ -1564,9 +1562,7 @@ select[multiple='multiple']:focus {
   .algolia-docsearch-suggestion--highlight {
   box-shadow: inset 0 -2px 0 0 #f38020;
 }
-#sidebar
-  .algolia-autocomplete
-  .algolia-docsearch-suggestion--subcategory-column {
+#sidebar .algolia-autocomplete .algolia-docsearch-suggestion--subcategory-column {
   color: #222;
 }
 #sidebar .ds-dropdown-menu {
@@ -1584,24 +1580,15 @@ select[multiple='multiple']:focus {
 #sidebar .ds-dropdown-menu [class^='ds-dataset-'] {
   border: none;
 }
-#sidebar
-  .ds-dropdown-menu
-  .ds-suggestion
-  .algolia-docsearch-suggestion--subcategory-column::before,
-#sidebar
-  .ds-dropdown-menu
-  .ds-suggestion
-  .algolia-docsearch-suggestion--content::before {
+#sidebar .ds-dropdown-menu .ds-suggestion .algolia-docsearch-suggestion--subcategory-column::before,
+#sidebar .ds-dropdown-menu .ds-suggestion .algolia-docsearch-suggestion--content::before {
   background: #d9d9d9;
 }
 #sidebar
   .ds-dropdown-menu
   .ds-suggestion.ds-cursor
   .algolia-docsearch-suggestion--subcategory-column::before,
-#sidebar
-  .ds-dropdown-menu
-  .ds-suggestion.ds-cursor
-  .algolia-docsearch-suggestion--content::before {
+#sidebar .ds-dropdown-menu .ds-suggestion.ds-cursor .algolia-docsearch-suggestion--content::before {
   background: #fbc99e;
 }
 #sidebar

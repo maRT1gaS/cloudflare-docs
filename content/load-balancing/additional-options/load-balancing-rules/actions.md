@@ -31,9 +31,7 @@ This table lists the actions available for Load Balancing rules. For a walkthrou
       <td>
         <em>N/A</em>
       </td>
-      <td>
-        Respond to the request with an HTTP status code and an optional message.
-      </td>
+      <td>Respond to the request with an HTTP status code and an optional message.</td>
     </tr>
     <tr>
       <td>
@@ -43,10 +41,8 @@ This table lists the actions available for Load Balancing rules. For a walkthrou
         <em>Session affinity</em>
       </td>
       <td>
-        Set the{' '}
-        <a href="/understand-basics/session-affinity">session affinity</a> for
-        the request. You can customize cookie behavior and session time-to-live
-        (TTL).
+        Set the <a href="/understand-basics/session-affinity">session affinity</a> for the request.
+        You can customize cookie behavior and session time-to-live (TTL).
       </td>
     </tr>
     <tr>
@@ -66,9 +62,8 @@ This table lists the actions available for Load Balancing rules. For a walkthrou
         <em>Steering policy</em>
       </td>
       <td>
-        Update the{' '}
-        <a href="/understand-basics/traffic-steering">steering policy</a>{' '}
-        associated with your load balancer.
+        Update the <a href="/understand-basics/traffic-steering">steering policy</a> associated with
+        your load balancer.
       </td>
     </tr>
     <tr>
@@ -79,9 +74,8 @@ This table lists the actions available for Load Balancing rules. For a walkthrou
         <em>Fallback pool</em>
       </td>
       <td>
-        Update the{' '}
-        <a href="/understand-basics/traffic-steering">fallback pools</a>{' '}
-        associated with your load balancer.
+        Update the <a href="/understand-basics/traffic-steering">fallback pools</a> associated with
+        your load balancer.
       </td>
     </tr>
     <tr>
@@ -92,8 +86,8 @@ This table lists the actions available for Load Balancing rules. For a walkthrou
         <em>Origin pools</em>
       </td>
       <td>
-        Update the <a href="/understand-basics/pools">origin pools</a>{' '}
-        associated with your load balancer.
+        Update the <a href="/understand-basics/pools">origin pools</a> associated with your load
+        balancer.
       </td>
     </tr>
     <tr>
@@ -104,10 +98,7 @@ This table lists the actions available for Load Balancing rules. For a walkthrou
         <em>Region pools</em>
       </td>
       <td>
-        Update the{' '}
-        <a href="/understand-basics/traffic-steering#geo-steering">
-          region pools
-        </a>{' '}
+        Update the <a href="/understand-basics/traffic-steering#geo-steering">region pools</a>{' '}
         associated with your load balancer.
       </td>
     </tr>
@@ -119,8 +110,8 @@ This table lists the actions available for Load Balancing rules. For a walkthrou
         <em>Terminates</em>
       </td>
       <td>
-        Stop processing Load Balancing rules and apply the current load
-        balancing logic to the request.
+        Stop processing Load Balancing rules and apply the current load balancing logic to the
+        request.
       </td>
     </tr>
   </tbody>

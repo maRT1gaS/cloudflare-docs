@@ -16,9 +16,7 @@
       <td>
         <b>Availability</b>
       </td>
-      <td>
-        All Business customers and Enterprise customers without Bot Management*
-      </td>
+      <td>All Business customers and Enterprise customers without Bot Management*</td>
     </tr>
     <tr>
       <td>

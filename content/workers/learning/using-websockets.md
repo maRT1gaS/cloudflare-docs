@@ -35,9 +35,7 @@ A client can make a WebSocket request in the browser by instantiating a new inst
 
 ```js
 // In client-side JavaScript, connect to your Workers function using WebSockets:
-const websocket = new WebSocket(
-  'wss://example-websocket.signalnerve.workers.dev'
-);
+const websocket = new WebSocket('wss://example-websocket.signalnerve.workers.dev');
 ```
 
 <Aside type="note">
@@ -129,9 +127,7 @@ async function handleRequest(request) {
 Writing WebSocket clients that communicate with your Workers function is a two-step process: first, create the WebSocket instance, and then attach event listeners to it:
 
 ```js
-const websocket = new WebSocket(
-  'wss://websocket-example.signalnerve.workers.dev'
-);
+const websocket = new WebSocket('wss://websocket-example.signalnerve.workers.dev');
 websocket.addEventListener('message', event => {
   console.log('Message received from server');
   console.log(event.data);

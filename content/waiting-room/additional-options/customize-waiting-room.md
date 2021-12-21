@@ -59,12 +59,10 @@ The following content in the `<main>` section of the template HTML code displays
 ```html
 <h2 id="time-remaining">
   <noscript>
-    {{#waitTimeKnown}}Your estimated wait time is
-    {{waitTimeFormatted}}...{{/waitTimeKnown}}
-    {{^waitTimeKnown}}{{#queueIsFull}}The estimated wait time is greater than a
-    day. You will automatically be placed in the queue once space is
-    available.{{/queueIsFull}} {{^queueIsFull}}Your estimated wait time is
-    unavailable.{{/queueIsFull}}{{/waitTimeKnown}}
+    {{#waitTimeKnown}}Your estimated wait time is {{waitTimeFormatted}}...{{/waitTimeKnown}}
+    {{^waitTimeKnown}}{{#queueIsFull}}The estimated wait time is greater than a day. You will
+    automatically be placed in the queue once space is available.{{/queueIsFull}}
+    {{^queueIsFull}}Your estimated wait time is unavailable.{{/queueIsFull}}{{/waitTimeKnown}}
   </noscript>
 </h2>
 ```

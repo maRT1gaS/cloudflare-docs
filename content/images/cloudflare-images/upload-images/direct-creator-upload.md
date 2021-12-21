@@ -36,11 +36,7 @@ Your backend endpoint should return the `uploadURL` property to the client enabl
 ```html
 <html>
   <body>
-    <form
-      action="INSERT_UPLOAD_URL_HERE"
-      method="post"
-      enctype="multipart/form-data"
-    >
+    <form action="INSERT_UPLOAD_URL_HERE" method="post" enctype="multipart/form-data">
       <input type="file" id="myFile" name="file" />
       <input type="submit" />
     </form>

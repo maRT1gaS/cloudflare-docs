@@ -145,9 +145,7 @@ async function handleRequest(request) {
     //limit viewing for the next 2 hours
     exp: Math.floor(Date.now() / 1000) + 12 * 60 * 60,
     downloadable: true,
-    accessRules: [
-      { type: 'ip.geoip.country', country: ['US', 'MX'], action: 'block' },
-    ],
+    accessRules: [{ type: 'ip.geoip.country', country: ['US', 'MX'], action: 'block' }],
   };
 
   const init = {
@@ -271,9 +269,7 @@ function arrayBufferToBase64Url(buffer) {
 }
 
 function objectToBase64url(payload) {
-  return arrayBufferToBase64Url(
-    new TextEncoder().encode(JSON.stringify(payload))
-  );
+  return arrayBufferToBase64Url(new TextEncoder().encode(JSON.stringify(payload)));
 }
 ```
 

@@ -37,10 +37,7 @@ The following parameters are required:
       </td>
       <td>A human-readable name for the ruleset.</td>
       <td>String</td>
-      <td>
-        The name is immutable. You cannot change it over the lifetime of the
-        ruleset.
-      </td>
+      <td>The name is immutable. You cannot change it over the lifetime of the ruleset.</td>
     </tr>
     <tr>
       <td>
@@ -64,12 +61,10 @@ The following parameters are required:
               <em>custom</em> - creates a custom ruleset
             </li>
             <li>
-              <em>root</em> - creates a phase entry point ruleset at the account
-              level
+              <em>root</em> - creates a phase entry point ruleset at the account level
             </li>
             <li>
-              <em>zone</em> - creates a phase entry point ruleset at the zone
-              level
+              <em>zone</em> - creates a phase entry point ruleset at the zone level
             </li>
           </ul>
         </p>
@@ -82,8 +77,8 @@ The following parameters are required:
       <td>The name of the phase where the ruleset will be created.</td>
       <td>String</td>
       <td>
-        Check the specific Cloudflare product documentation for more information
-        on the phases where you can create rulesets for that product.
+        Check the specific Cloudflare product documentation for more information on the phases where
+        you can create rulesets for that product.
       </td>
     </tr>
   </tbody>

@@ -33,9 +33,7 @@ let encoder = new TextEncoder();
 
 - <Code>
     encode(input
-    <TypeLink href="https://developer.mozilla.org/en-US/docs/Web/API/USVString">
-      USVString
-    </TypeLink>)
+    <TypeLink href="https://developer.mozilla.org/en-US/docs/Web/API/USVString">USVString</TypeLink>)
   </Code> <TypeLink href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array">
     Uint8Array
   </TypeLink>

@@ -37,10 +37,7 @@ class AttributeRewriter {
   element(element) {
     const attribute = element.getAttribute(this.attributeName);
     if (attribute) {
-      element.setAttribute(
-        this.attributeName,
-        attribute.replace(OLD_URL, NEW_URL)
-      );
+      element.setAttribute(this.attributeName, attribute.replace(OLD_URL, NEW_URL));
     }
   }
 }

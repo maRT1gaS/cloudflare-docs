@@ -29,8 +29,8 @@ The `not` operator matches HTTP referrals that are not from partner sites, and t
     <tr>
       <td>
         <code>
-          not (http.referer contains "example.com" or http.referer eq
-          "www.example.net" or http.referer eq "www.cloudflare.com")
+          not (http.referer contains "example.com" or http.referer eq "www.example.net" or
+          http.referer eq "www.cloudflare.com")
         </code>
       </td>
       <td>

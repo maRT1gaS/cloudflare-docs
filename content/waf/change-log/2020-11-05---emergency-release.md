@@ -22,8 +22,7 @@ order: 951
     <td>Cloudflare Specials</td>
     <td>100501</td>
     <td>
-      Oracle WebLogic - Deserialization - CVE:CVE-2020-14882,
-      CVE:CVE-2020-14883, CVE:CVE-2020-14750
+      Oracle WebLogic - Deserialization - CVE:CVE-2020-14882, CVE:CVE-2020-14883, CVE:CVE-2020-14750
     </td>
     <td>N/A</td>
     <td>Block</td>

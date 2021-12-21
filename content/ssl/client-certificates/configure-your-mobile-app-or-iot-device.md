@@ -46,10 +46,9 @@ async function addTemperature(request) {
       await setCache(cacheKey, JSON.stringify(data));
       return new Response('', { status: 201 });
     } else {
-      return new Response(
-        'Unable to parse temperature and/or timestamp from JSON POST body',
-        { status: 400 }
-      );
+      return new Response('Unable to parse temperature and/or timestamp from JSON POST body', {
+        status: 400,
+      });
     }
   } catch (err) {
     return new Response(err, { status: 500 });
@@ -73,9 +72,7 @@ async function getTemperatures(request) {
     });
   } else {
     data = JSON.parse(cache);
-    const retval = JSON.stringify(
-      data.temperatures.sort(compareTimestamps).splice(0, 5)
-    );
+    const retval = JSON.stringify(data.temperatures.sort(compareTimestamps).splice(0, 5));
     return new Response(retval, {
       status: 200,
       headers: { 'content-type': 'application/json' },

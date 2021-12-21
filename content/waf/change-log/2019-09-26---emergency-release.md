@@ -22,10 +22,7 @@ order: 999
     <td>Cloudflare Specials</td>
     <td>100166</td>
     <td>
-      Block vBulletin{' '}
-      <a href="https://nvd.nist.gov/vuln/detail/CVE-2019-16759">
-        CVE-2019-16759
-      </a>
+      Block vBulletin <a href="https://nvd.nist.gov/vuln/detail/CVE-2019-16759">CVE-2019-16759</a>
     </td>
     <td>None</td>
     <td>Block</td>

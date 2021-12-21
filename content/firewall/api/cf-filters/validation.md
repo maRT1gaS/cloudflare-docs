@@ -25,9 +25,7 @@ The Cloudflare Filters API supports an endpoint for validating expressions.
         <td>
           <code class="InlineCode">GET /filters/validate-expr</code>
         </td>
-        <td>
-          Allows testing and validating expressions without changing anything
-        </td>
+        <td>Allows testing and validating expressions without changing anything</td>
       </tr>
       <tr>
         <td style="width:25%; word-wrap:break-word; white-space:normal">
@@ -36,9 +34,7 @@ The Cloudflare Filters API supports an endpoint for validating expressions.
         <td>
           <code class="InlineCode">POST /filters/validate-expr</code>
         </td>
-        <td>
-          Allows testing and validating expressions without changing anything
-        </td>
+        <td>Allows testing and validating expressions without changing anything</td>
       </tr>
     </tbody>
   </table>

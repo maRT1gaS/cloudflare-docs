@@ -63,9 +63,7 @@ You can customize a variety of options for your waiting rooms.
         <code>host</code>
       </td>
       <td>Yes</td>
-      <td>
-        Host name for which the waiting room will be applied (no wildcards).
-      </td>
+      <td>Host name for which the waiting room will be applied (no wildcards).</td>
       <td>
         Do not include <code>http://</code> or <code>https://</code>.
       </td>
@@ -77,13 +75,12 @@ You can customize a variety of options for your waiting rooms.
       </td>
       <td>No</td>
       <td>
-        Case-sensitive path of the waiting room. The waiting room will be
-        enabled for all subpaths. Wildcards and query parameters are not
-        supported.
+        Case-sensitive path of the waiting room. The waiting room will be enabled for all subpaths.
+        Wildcards and query parameters are not supported.
       </td>
       <td>
-        If your server does not allow letter casing, use numbers in your{' '}
-        <code>path</code> or redirect traffic with a Page Rule.
+        If your server does not allow letter casing, use numbers in your <code>path</code> or
+        redirect traffic with a Page Rule.
       </td>
     </tr>
     <tr>
@@ -93,12 +90,12 @@ You can customize a variety of options for your waiting rooms.
       </td>
       <td>Yes</td>
       <td>
-        The maximum number of active sessions allowed in <code>host/path</code>{' '}
-        at a given time (must be greater than 200).
+        The maximum number of active sessions allowed in <code>host/path</code> at a given time
+        (must be greater than 200).
       </td>
       <td>
-        Set to 75% of origin traffic capacity and adjust as needed. Adjustments
-        may affect estimated wait time shown to end users.
+        Set to 75% of origin traffic capacity and adjust as needed. Adjustments may affect estimated
+        wait time shown to end users.
       </td>
     </tr>
     <tr>
@@ -108,14 +105,11 @@ You can customize a variety of options for your waiting rooms.
       </td>
       <td>Yes</td>
       <td>
-        A <a href="#new-users-per-minute">threshold</a> of users per minute that
-        can be allowed into <code>host/path</code>, greater than 200 and less
-        than or equal to <strong>total active users</strong>.
+        A <a href="#new-users-per-minute">threshold</a> of users per minute that can be allowed into{' '}
+        <code>host/path</code>, greater than 200 and less than or equal to{' '}
+        <strong>total active users</strong>.
       </td>
-      <td>
-        Set to 100% of peak traffic to ensure users are only queued when
-        necessary
-      </td>
+      <td>Set to 100% of peak traffic to ensure users are only queued when necessary</td>
     </tr>
     <tr>
       <td>Session duration</td>
@@ -124,10 +118,9 @@ You can customize a variety of options for your waiting rooms.
       </td>
       <td>No</td>
       <td>
-        The amount of time in minutes (between 1 and 30) that a user who left{' '}
-        <code>host/path</code> can come{' '}
-        <a href="#session-duration">directly back</a> without having to go into
-        the waiting room. Defaults to 5 minutes.
+        The amount of time in minutes (between 1 and 30) that a user who left <code>host/path</code>{' '}
+        can come <a href="#session-duration">directly back</a> without having to go into the waiting
+        room. Defaults to 5 minutes.
       </td>
       <td></td>
     </tr>
@@ -147,9 +140,9 @@ You can customize a variety of options for your waiting rooms.
       </td>
       <td>No</td>
       <td>
-        Only available to Enterprise customers with purchase. If true, users
-        only have <code>session duration</code> minutes to browse your site. If
-        false, a user's session cookie is renewed on every request.
+        Only available to Enterprise customers with purchase. If true, users only have{' '}
+        <code>session duration</code> minutes to browse your site. If false, a user's session cookie
+        is renewed on every request.
       </td>
       <td></td>
     </tr>

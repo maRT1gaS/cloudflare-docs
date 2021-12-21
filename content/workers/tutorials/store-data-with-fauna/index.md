@@ -752,9 +752,7 @@ router.add('GET', '/products/:productId', async (request, response) => {
   try {
     const productId = request.params.productId;
 
-    const result = await faunaClient.query(
-      Get(Ref(Collection('Products'), productId))
-    );
+    const result = await faunaClient.query(Get(Ref(Collection('Products'), productId)));
 
     response.send(200, result);
   } catch (error) {
@@ -767,9 +765,7 @@ router.add('DELETE', '/products/:productId', async (request, response) => {
   try {
     const productId = request.params.productId;
 
-    const result = await faunaClient.query(
-      Delete(Ref(Collection('Products'), productId))
-    );
+    const result = await faunaClient.query(Delete(Ref(Collection('Products'), productId)));
 
     response.send(200, result);
   } catch (error) {
@@ -778,39 +774,32 @@ router.add('DELETE', '/products/:productId', async (request, response) => {
   }
 });
 
-router.add(
-  'PATCH',
-  '/products/:productId/add-quantity',
-  async (request, response) => {
-    try {
-      const productId = request.params.productId;
-      const { quantity } = await request.body();
+router.add('PATCH', '/products/:productId/add-quantity', async (request, response) => {
+  try {
+    const productId = request.params.productId;
+    const { quantity } = await request.body();
 
-      const result = await faunaClient.query(
-        Let(
-          {
-            productRef: Ref(Collection('Products'), productId),
-            productDocument: Get(Var('productRef')),
-            currentQuantity: Select(
-              ['data', 'quantity'],
-              Var('productDocument')
-            ),
+    const result = await faunaClient.query(
+      Let(
+        {
+          productRef: Ref(Collection('Products'), productId),
+          productDocument: Get(Var('productRef')),
+          currentQuantity: Select(['data', 'quantity'], Var('productDocument')),
+        },
+        Update(Var('productRef'), {
+          data: {
+            quantity: Add(Var('currentQuantity'), quantity),
           },
-          Update(Var('productRef'), {
-            data: {
-              quantity: Add(Var('currentQuantity'), quantity),
-            },
-          })
-        )
-      );
+        })
+      )
+    );
 
-      response.send(200, result);
-    } catch (error) {
-      const faunaError = getFaunaError(error);
-      response.send(faunaError.status, faunaError);
-    }
+    response.send(200, result);
+  } catch (error) {
+    const faunaError = getFaunaError(error);
+    response.send(faunaError.status, faunaError);
   }
-);
+});
 
 listen(router.run);
 ```

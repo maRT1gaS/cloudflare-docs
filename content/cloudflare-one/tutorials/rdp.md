@@ -229,9 +229,7 @@ At this point the shortcut will appear on the desktop, and users can launch with
 
 ### MacOS
 
-<Aside type="note">
-  Before you start, make sure you download an RDP client for macOS.
-</Aside>
+<Aside type="note">Before you start, make sure you download an RDP client for macOS.</Aside>
 
 MacOS users can save a command shortcut that will launch the RDP flow.
 

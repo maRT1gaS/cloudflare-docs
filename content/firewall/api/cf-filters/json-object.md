@@ -65,8 +65,8 @@ This table summarizes the object properties:
           <Type>Boolean</Type>
         </td>
         <td>
-          Returns <code class="InlineCode">true</code> when the filter is not
-          active. Use <code>ref</code> to enable/disable the filter.
+          Returns <code class="InlineCode">true</code> when the filter is not active. Use{' '}
+          <code>ref</code> to enable/disable the filter.
         </td>
         <td>
           Default: <code class="InlineCode">false</code>

@@ -78,8 +78,7 @@ The table below lists a **sample** of known bots that Firewall Rules currently d
         </td>
         <td>
           <p>
-            Applebot is the web crawler for Apple, for products like Siri and
-            Spotlight Suggestions
+            Applebot is the web crawler for Apple, for products like Siri and Spotlight Suggestions
           </p>
         </td>
       </tr>
@@ -332,9 +331,7 @@ Block Amazon Web Services (AWS) and Google Cloud Platform (GCP) because of large
       </tr>
       <tr>
         <td colspan="2">
-          <strong>
-            Rule that excludes known bots that Cloudflare validates
-          </strong>
+          <strong>Rule that excludes known bots that Cloudflare validates</strong>
         </td>
       </tr>
       <tr>

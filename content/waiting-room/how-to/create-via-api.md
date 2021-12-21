@@ -7,8 +7,7 @@ pcx-content-type: how-to
 # Create a waiting room via the API
 
 <Aside>
-  For additional context on creating a waiting room, see{' '}
-  <a href="/get-started">Get started</a>.
+  For additional context on creating a waiting room, see <a href="/get-started">Get started</a>.
 </Aside>
 
 Create a waiting room by appending the following endpoint in the [Waiting Room API](https://api.cloudflare.com/#waiting-room-create-waiting-room) to the Cloudflare API base URL.

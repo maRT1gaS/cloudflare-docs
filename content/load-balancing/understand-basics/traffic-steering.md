@@ -110,8 +110,7 @@ To add coordinates when creating or editing a pool:
 1. Select **Save**.
 
 <Aside type="warning" header="Warning:">
-  For accurate proximity steering, add GPS coordinates to all pools within the
-  same load balancer.
+  For accurate proximity steering, add GPS coordinates to all pools within the same load balancer.
 </Aside>
 
 ## Random steering

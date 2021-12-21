@@ -71,9 +71,7 @@ function arrayBufferToBase64Url(buffer) {
 }
 
 function objectToBase64url(payload) {
-  return arrayBufferToBase64Url(
-    new TextEncoder().encode(JSON.stringify(payload))
-  );
+  return arrayBufferToBase64Url(new TextEncoder().encode(JSON.stringify(payload)));
 }
 
 const someHtml = token => {

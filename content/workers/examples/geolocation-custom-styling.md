@@ -162,9 +162,7 @@ async function handleRequest(request) {
   }`;
 
   const timezone = request.cf.timezone;
-  let localized_date = new Date(
-    new Date().toLocaleString('en-US', { timeZone: timezone })
-  );
+  let localized_date = new Date(new Date().toLocaleString('en-US', { timeZone: timezone }));
   let hour = localized_date.getHours();
   let minutes = localized_date.getMinutes();
 

@@ -50,8 +50,7 @@ The table lists the properties of a ruleset object.
         <code>id</code>
       </td>
       <td>
-        Represents the unique Cloudflare-generated identifier for a given
-        version of a ruleset.
+        Represents the unique Cloudflare-generated identifier for a given version of a ruleset.
       </td>
       <td>32-character UUIDv4 string</td>
       <td>Unique, read-only</td>
@@ -62,10 +61,7 @@ The table lists the properties of a ruleset object.
       </td>
       <td>A human-readable name for the ruleset.</td>
       <td>String</td>
-      <td>
-        The name is immutable. You cannot change the name over the lifetime of
-        the ruleset.
-      </td>
+      <td>The name is immutable. You cannot change the name over the lifetime of the ruleset.</td>
     </tr>
     <tr>
       <td>
@@ -109,8 +105,8 @@ The table lists the properties of a ruleset object.
       </td>
       <td>The version of the ruleset.</td>
       <td>
-        Integer value starting at <code>1</code> and incremented by{' '}
-        <code>1</code> each time the ruleset is modified
+        Integer value starting at <code>1</code> and incremented by <code>1</code> each time the
+        ruleset is modified
       </td>
       <td>Read-only</td>
     </tr>
@@ -178,10 +174,7 @@ The JSON object properties for a rule are defined as follows:
       <td>
         <code>id</code>
       </td>
-      <td>
-        Represents the unique Cloudflare-generated identifier for a given
-        version of a rule.
-      </td>
+      <td>Represents the unique Cloudflare-generated identifier for a given version of a rule.</td>
       <td>32-character UUIDv4 string</td>
       <td>Unique, read-only</td>
     </tr>
@@ -191,34 +184,26 @@ The JSON object properties for a rule are defined as follows:
       </td>
       <td>The version of the rule.</td>
       <td>
-        Integer value starting at <code>1</code> and incremented by{' '}
-        <code>1</code> each time the ruleset is modified
+        Integer value starting at <code>1</code> and incremented by <code>1</code> each time the
+        ruleset is modified
       </td>
-      <td>
-        Read-only. Changing the order of a rule in a ruleset does not change its
-        version.
-      </td>
+      <td>Read-only. Changing the order of a rule in a ruleset does not change its version.</td>
     </tr>
     <tr>
       <td>
         <code>action</code>
       </td>
-      <td>
-        Defines what happens when there’s a match for the rule expression.
-      </td>
+      <td>Defines what happens when there’s a match for the rule expression.</td>
       <td>String</td>
-      <td>
-        The available actions depend on the phase where the rule's ruleset is
-        executed.
-      </td>
+      <td>The available actions depend on the phase where the rule's ruleset is executed.</td>
     </tr>
     <tr>
       <td>
         <code>categories</code>
       </td>
       <td>
-        Tags associated with the current rule. You can define overrides that
-        affect rules with a given tag.
+        Tags associated with the current rule. You can define overrides that affect rules with a
+        given tag.
       </td>
       <td>Array of strings</td>
       <td>Read-only. Only available in rules of Managed Rulesets.</td>
@@ -230,8 +215,8 @@ The JSON object properties for a rule are defined as follows:
       <td>Criteria defining when there is a match for the current rule.</td>
       <td>String</td>
       <td>
-        The fields and functions you can use in a rule expression depend on the
-        phase where the rule's ruleset is executed.
+        The fields and functions you can use in a rule expression depend on the phase where the
+        rule's ruleset is executed.
       </td>
     </tr>
     <tr>

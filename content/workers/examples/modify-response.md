@@ -51,9 +51,7 @@ async function handleRequest(request) {
   if (src != null) {
     response.headers.set(headerNameDst, src);
     console.log(
-      `Response header "${headerNameDst}" was set to "${response.headers.get(
-        headerNameDst
-      )}"`
+      `Response header "${headerNameDst}" was set to "${response.headers.get(headerNameDst)}"`
     );
   }
   return response;

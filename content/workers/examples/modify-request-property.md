@@ -51,10 +51,7 @@ async function handleRequest(request) {
   // Best practice is to always use the original request to construct the new request
   // to clone all the attributes. Applying the URL also requires a constructor
   // since once a Request has been constructed, its URL is immutable.
-  const newRequest = new Request(
-    url.toString(),
-    new Request(request, newRequestInit)
-  );
+  const newRequest = new Request(url.toString(), new Request(request, newRequestInit));
 
   // Set headers using method
   newRequest.headers.set('X-Example', 'bar');

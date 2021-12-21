@@ -49,18 +49,12 @@ Typically, the markup of websites, or the body a JSON API response, does not cha
       </td>
       <td>
         <ul>
-          <li>
-            Memcache &gt;= 1.4 with at least 512 MB of storage (&gt;1 GB
-            recommended)
-          </li>
+          <li>Memcache &gt;= 1.4 with at least 512 MB of storage (&gt;1 GB recommended)</li>
         </ul>
       </td>
       <td>
         <ul>
-          <li>
-            Memcache &gt;= 1.4 with at least 1 GB of storage (&gt;2 GB
-            recommended)
-          </li>
+          <li>Memcache &gt;= 1.4 with at least 1 GB of storage (&gt;2 GB recommended)</li>
         </ul>
       </td>
     </tr>
@@ -85,8 +79,7 @@ Typically, the markup of websites, or the body a JSON API response, does not cha
       <td>
         <ul>
           <li>
-            Port 2408 open to traffic from our{' '}
-            <a href="https://www.cloudflare.com/ips">IPs</a>
+            Port 2408 open to traffic from our <a href="https://www.cloudflare.com/ips">IPs</a>
           </li>
         </ul>
       </td>

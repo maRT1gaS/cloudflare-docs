@@ -21,9 +21,7 @@ order: 945
   <tr>
     <td>Cloudflare Specials</td>
     <td>100181</td>
-    <td>
-      Microsoft Exchange - Code Injection - CVE-2021-26858 - CVE-2021-27065
-    </td>
+    <td>Microsoft Exchange - Code Injection - CVE-2021-26858 - CVE-2021-27065</td>
     <td>N/A</td>
     <td>Block</td>
   </tr>

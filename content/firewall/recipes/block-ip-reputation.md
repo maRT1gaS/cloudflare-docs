@@ -21,8 +21,7 @@ This example also blocks requests based on country code ([ISO 3166-1 Alpha 2](ht
     <tr>
       <td>
         <code>
-          (ip.geoip.country in {'{'}"CN" "TW" "US" "GB"{'}'}) or cf.threat_score
-          > 0
+          (ip.geoip.country in {'{'}"CN" "TW" "US" "GB"{'}'}) or cf.threat_score > 0
         </code>
       </td>
       <td>

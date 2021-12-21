@@ -88,9 +88,7 @@ The Cloudflare API supports the following commands for monitors. Examples are gi
     </tr>
     <tr>
       <td>
-        <a href="https://api.cloudflare.com/#load-balancer-monitors-list-monitors">
-          List Monitors
-        </a>
+        <a href="https://api.cloudflare.com/#load-balancer-monitors-list-monitors">List Monitors</a>
       </td>
       <td>
         <Code>GET</Code>

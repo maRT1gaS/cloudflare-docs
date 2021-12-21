@@ -46,9 +46,7 @@ async function eventHandler(event) {
 
 <Definitions>
 
-- <Code>fetch()</Code> <TypeLink href="/runtime-apis/response">
-    Promise{`<Response>`}
-  </TypeLink>
+- <Code>fetch()</Code> <TypeLink href="/runtime-apis/response">Promise{`<Response>`}</TypeLink>
 
   - Fetch returns a promise to a Response.
 

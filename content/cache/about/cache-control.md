@@ -128,9 +128,8 @@ The table below lists directives and their behaviors when Origin Cache-Control i
         Will not cache at all
       </td>
       <td colspan="5" rowspan="1">
-        Caches if headers mentioned in <code>no-cache=#headers</code> do not
-        exist. Always revalidates if any header mentioned in{' '}
-        <code>no-cache=#headers</code> is present.
+        Caches if headers mentioned in <code>no-cache=#headers</code> do not exist. Always
+        revalidates if any header mentioned in <code>no-cache=#headers</code> is present.
       </td>
     </tr>
     <tr>
@@ -141,8 +140,8 @@ The table below lists directives and their behaviors when Origin Cache-Control i
         Will not cache at all
       </td>
       <td colspan="5" rowspan="1">
-        Does not cache <code>#headers</code> values mentioned in{' '}
-        <code>Private=#headers</code> directive.
+        Does not cache <code>#headers</code> values mentioned in <code>Private=#headers</code>{' '}
+        directive.
       </td>
     </tr>
     <tr>
@@ -224,8 +223,8 @@ Certain scenarios also affect Origin Cache-Control behavior when it is enabled o
         Content may be cached
       </td>
       <td colspan="5" rowspan="1">
-        Content is cached only <code>if must-revalidate</code>,{' '}
-        <code>public</code>, or <code>s-maxage</code> is also present
+        Content is cached only <code>if must-revalidate</code>, <code>public</code>, or{' '}
+        <code>s-maxage</code> is also present
       </td>
     </tr>
     <tr>
@@ -241,8 +240,7 @@ Certain scenarios also affect Origin Cache-Control behavior when it is enabled o
     </tr>
     <tr>
       <td colspan="5" rowspan="1">
-        Origin response has <code>Set-Cookie</code> header and default cache
-        level is used
+        Origin response has <code>Set-Cookie</code> header and default cache level is used
       </td>
       <td colspan="5" rowspan="1">
         Content may be cached with stripped <code>set-cookie</code> header
@@ -291,19 +289,14 @@ Review the examples below to learn which directives to use with the Cache-Contro
 </details>
 
 <details>
-  <summary>
-    Cache assets in client and proxy caches, but prefer revalidation when served
-  </summary>
+  <summary>Cache assets in client and proxy caches, but prefer revalidation when served</summary>
   <div>
     <code>Cache-Control: public, no-cache</code>
   </div>
 </details>
 
 <details>
-  <summary>
-    Cache assets in proxy caches but REQUIRE revalidation by the proxy when
-    served
-  </summary>
+  <summary>Cache assets in proxy caches but REQUIRE revalidation by the proxy when served</summary>
   <div>
     <code>Cache-Control: public, no-cache, proxy-revalidate</code> or{' '}
     <code>Cache-Control: public, s-maxage=0</code>
@@ -311,10 +304,7 @@ Review the examples below to learn which directives to use with the Cache-Contro
 </details>
 
 <details>
-  <summary>
-    Cache assets in proxy caches, but REQUIRE revalidation by any cache when
-    served
-  </summary>
+  <summary>Cache assets in proxy caches, but REQUIRE revalidation by any cache when served</summary>
   <div>
     <code>Cache-Control: public, no-cache, must-revalidate</code>
   </div>
@@ -346,8 +336,7 @@ With this configuration, Cloudflare attempts to revalidate the content with the 
 
 <details>
   <summary>
-    Cache assets for different amounts of time on Cloudflare and in visitor
-    browsers
+    Cache assets for different amounts of time on Cloudflare and in visitor browsers
   </summary>
   <div>
     <code>Cache-Control: public, max-age=7200, s-maxage=3600</code>

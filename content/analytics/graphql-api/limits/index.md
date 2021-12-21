@@ -134,10 +134,7 @@ Queries must explicitly specify the upper bound of records to return, using the 
     zones(filter: { zoneTag: $zoneTag }) {
       firewallEventsAdaptiveGroups(
         limit: 100
-        filter: {
-          datetime_geq: "2019-10-16T21:08:00Z"
-          datetime_lt: "2019-10-16T21:12:00Z"
-        }
+        filter: { datetime_geq: "2019-10-16T21:08:00Z", datetime_lt: "2019-10-16T21:12:00Z" }
         orderBy: [datetime_ASC]
       ) {
         count

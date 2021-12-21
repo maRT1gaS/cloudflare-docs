@@ -26,10 +26,7 @@ async function handleRequest(request) {
   const newResponse = new Response(response.body, response);
 
   // Add a custom header with a value
-  newResponse.headers.append(
-    'x-workers-hello',
-    'Hello from Cloudflare Workers'
-  );
+  newResponse.headers.append('x-workers-hello', 'Hello from Cloudflare Workers');
 
   // Delete headers
   newResponse.headers.delete('x-header-to-delete');

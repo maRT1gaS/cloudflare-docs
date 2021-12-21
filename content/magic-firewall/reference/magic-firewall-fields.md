@@ -48,8 +48,8 @@ pcx-content-type: reference
         </p>
       </td>
       <td>
-        The raw ICMP packet as a list of bytes. It should be used in conjunction
-        with the bit_slice function when other structured fields are lacking.
+        The raw ICMP packet as a list of bytes. It should be used in conjunction with the bit_slice
+        function when other structured fields are lacking.
       </td>
     </tr>
     <tr>
@@ -97,8 +97,8 @@ pcx-content-type: reference
         </p>
       </td>
       <td>
-        The raw IP packet as a list of bytes. It should be used in conjunction
-        with the bit_slice function when other structured fields are lacking.
+        The raw IP packet as a list of bytes. It should be used in conjunction with the bit_slice
+        function when other structured fields are lacking.
       </td>
     </tr>
     <tr>
@@ -124,21 +124,15 @@ pcx-content-type: reference
         </p>
       </td>
       <td>
-        Represents the 2-letter country code associated with the client IP
-        address in{' '}
-        <a href="https://www.iso.org/obp/ui/#search/code/">
-          ISO 3166-1 Alpha 2
-        </a>{' '}
-        format.
+        Represents the 2-letter country code associated with the client IP address in{' '}
+        <a href="https://www.iso.org/obp/ui/#search/code/">ISO 3166-1 Alpha 2</a> format.
         <br />
         Example value:
         <code class="InlineCode">GB</code>
         <p>
           For more information on the ISO 3166-1 Alpha 2 format, see{' '}
-          <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">
-            ISO 3166-1 Alpha 2
-          </a>{' '}
-          on Wikipedia.
+          <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">ISO 3166-1 Alpha 2</a> on
+          Wikipedia.
         </p>
       </td>
     </tr>
@@ -179,10 +173,7 @@ pcx-content-type: reference
         </p>
       </td>
       <td>
-        The first byte of{' '}
-        <a href="https://en.wikipedia.org/wiki/IPv4#Options">
-          IP options field
-        </a>
+        The first byte of <a href="https://en.wikipedia.org/wiki/IPv4#Options">IP options field</a>
         , if the options field is set. <br />
         Example value:
         <code class="InlineCode">25</code>
@@ -233,8 +224,8 @@ pcx-content-type: reference
         </p>
       </td>
       <td>
-        The raw TCP packet as a list of bytes. It should be used in conjunction
-        with the bit_slice function when other structured fields are lacking.
+        The raw TCP packet as a list of bytes. It should be used in conjunction with the bit_slice
+        function when other structured fields are lacking.
       </td>
     </tr>
     <tr>
@@ -345,9 +336,7 @@ pcx-content-type: reference
           <Type>Number</Type>
         </p>
       </td>
-      <td>
-        Destination port number of the IP packet. Only applies to TCP packets.
-      </td>
+      <td>Destination port number of the IP packet. Only applies to TCP packets.</td>
     </tr>
     <tr>
       <td>
@@ -358,8 +347,8 @@ pcx-content-type: reference
         </p>
       </td>
       <td>
-        The raw UDP packet as a list of bytes. It should be used in conjunction
-        with the bit_slice function when other structured fields are lacking.
+        The raw UDP packet as a list of bytes. It should be used in conjunction with the bit_slice
+        function when other structured fields are lacking.
       </td>
     </tr>
     <tr>
@@ -370,9 +359,7 @@ pcx-content-type: reference
           <Type>Number</Type>
         </p>
       </td>
-      <td>
-        Destination port number of the IP packet. Only applies to UDP packets.
-      </td>
+      <td>Destination port number of the IP packet. Only applies to UDP packets.</td>
     </tr>
     <tr>
       <td>

@@ -8,8 +8,8 @@ pcx-content-type: tutorial
 Follow this tutorial to ensure your Waiting Room queues and admits users as expected.
 
 <Aside type="warning" header="Warning:">
-  This tutorial uses an open-sourced load testing tool that is not created or
-  supported by Cloudflare.
+  This tutorial uses an open-sourced load testing tool that is not created or supported by
+  Cloudflare.
 </Aside>
 
 ---
@@ -92,8 +92,8 @@ Once the script finishes running, it creates a CSV file with the following field
   <div>
     <ul>
       <li>
-        <strong>job</strong>: The fixed string will either be{' '}
-        <strong>main</strong> for phase 1 or <strong>post</strong> for phase 2
+        <strong>job</strong>: The fixed string will either be <strong>main</strong> for phase 1 or{' '}
+        <strong>post</strong> for phase 2
       </li>
       <li>
         <strong>status</strong>: Status of the last response of the session:
@@ -103,33 +103,30 @@ Once the script finishes running, it creates a CSV file with the following field
           0: curl command received an HTTP status code of <code>200</code>
         </li>
         <li>
-          1: curl command did not receive any HTTP status codes, which typically
-          means the curl command itself failed
+          1: curl command did not receive any HTTP status codes, which typically means the curl
+          command itself failed
         </li>
         <li>
-          2: curl command received an HTTP status code of something other than{' '}
-          <code>200</code>
+          2: curl command received an HTTP status code of something other than <code>200</code>
         </li>
       </ul>
       <li>
-        <strong>wait_time</strong>: Number of seconds the user waited in the
-        waiting room
+        <strong>wait_time</strong>: Number of seconds the user waited in the waiting room
       </li>
       <li>
-        <strong>wr_cnt_before</strong>: Number of users in the waiting room when
-        the session first started
+        <strong>wr_cnt_before</strong>: Number of users in the waiting room when the session first
+        started
       </li>
       <li>
-        <strong>wr_cnt_after</strong>: Number of users in the waiting room when
-        the session made it past the waiting room
+        <strong>wr_cnt_after</strong>: Number of users in the waiting room when the session made it
+        past the waiting room
       </li>
       <li>
-        <strong>start_time</strong>: Time when the session first started (in
-        UNIX epoch seconds)
+        <strong>start_time</strong>: Time when the session first started (in UNIX epoch seconds)
       </li>
       <li>
-        <strong>end_time</strong>: Time when the session made it past the
-        waiting room (in UNIX epoch seconds)
+        <strong>end_time</strong>: Time when the session made it past the waiting room (in UNIX
+        epoch seconds)
       </li>
     </ul>
   </div>

@@ -35,8 +35,7 @@ The **Rules List** gives you a snapshot of recent activity and allows you to man
 The **Rules List** displays each rule's **CSR** (Challenge Solve Rate), which is the percentage of issued challenges that were solved. This metric applies to rules configured with _Challenge (Captcha)_ or _JS Challenge_ actions, and it is calculated as follows:
 
 <p>
-  <var>CSR</var> = <var>number of challenges solved</var> /{' '}
-  <var>number of challenges issued</var>
+  <var>CSR</var> = <var>number of challenges solved</var> / <var>number of challenges issued</var>
 </p>
 
 Hover over the CSR to reveal the number of issued and solved CAPTCHA challenges:

@@ -167,8 +167,8 @@ Each method is implicitly wrapped inside a transaction, such that its results ar
     **Supported options:** Same as `get(key, options)`, above.
 
 - <Code>
-    put(key<ParamType>string</ParamType>, value<ParamType>any</ParamType>,
-    options<ParamType>Object</ParamType>
+    put(key<ParamType>string</ParamType>, value<ParamType>any</ParamType>, options
+    <ParamType>Object</ParamType>
     <PropMeta>optional</PropMeta>)
   </Code> <Type>Promise</Type>
 

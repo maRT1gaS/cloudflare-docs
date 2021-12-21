@@ -8,8 +8,7 @@ pcx-content-type: how-to
 You can monitor the status of your waiting rooms using the [dashboard](#status-in-the-dashboard) or the [API](#status-in-the-api).
 
 <Aside>
-  Future work will create a separate area of application analytics for
-  Cloudflare Waiting Rooms.
+  Future work will create a separate area of application analytics for Cloudflare Waiting Rooms.
 </Aside>
 
 ## Status in the dashboard

@@ -18,9 +18,7 @@ const KEY = 'YOUR_KEY_FROM_IMAGES_DASHBOARD';
 const EXPIRATION = 60 * 60 * 24; // 1 day
 
 const bufferToHex = buffer =>
-  [...new Uint8Array(buffer)]
-    .map(x => x.toString(16).padStart(2, '0'))
-    .join('');
+  [...new Uint8Array(buffer)].map(x => x.toString(16).padStart(2, '0')).join('');
 
 async function generateSignedUrl(url) {
   // `url` is a full imagedelivery.net URL
@@ -46,11 +44,7 @@ async function generateSignedUrl(url) {
   // e.g. /cheeW4oKsx5ljh8e8BoL2A/bc27a117-9509-446b-8c69-c81bfeac0a01/mobile?exp=1631289275
 
   // Generate the signature
-  const mac = await crypto.subtle.sign(
-    'HMAC',
-    key,
-    encoder.encode(stringToSign)
-  );
+  const mac = await crypto.subtle.sign('HMAC', key, encoder.encode(stringToSign));
   const sig = bufferToHex(new Uint8Array(mac).buffer);
 
   // And attach it to the `url`
@@ -62,9 +56,7 @@ async function generateSignedUrl(url) {
 addEventListener('fetch', event => {
   const url = new URL(event.request.url);
   const imageDeliveryURL = new URL(
-    url.pathname
-      .slice(1)
-      .replace('https:/imagedelivery.net', 'https://imagedelivery.net')
+    url.pathname.slice(1).replace('https:/imagedelivery.net', 'https://imagedelivery.net')
   );
   event.respondWith(generateSignedUrl(imageDeliveryURL));
 });
