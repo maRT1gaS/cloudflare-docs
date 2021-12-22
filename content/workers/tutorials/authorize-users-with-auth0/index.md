@@ -159,6 +159,8 @@ async function handleEvent(event) {
     // END OF AUTHORIZATION CODE BLOCK
 
     // BEGINNING OF WORKERS SITES
+  } catch (e) {
+    // ...
   }
 }
 ```
@@ -182,6 +184,8 @@ async function handleEvent(event) {
     // END OF REDIRECT CODE BLOCK
 
     // BEGINNING OF WORKERS SITES
+  } catch (e) {
+    // ...
   }
 }
 ```
@@ -212,6 +216,8 @@ async function handleEvent(event) {
     // END OF HANDLE AUTH REDIRECT CODE BLOCK
 
     // BEGINNING OF REDIRECT CODE BLOCK
+  } catch (e) {
+    // ...
   }
 }
 ```
@@ -480,6 +486,8 @@ async function handleEvent(event) {
     // END OF HANDLE AUTH REDIRECT CODE BLOCK
 
     // BEGINNING OF WORKERS SITES
+  } catch (e) {
+    // ...
   }
 }
 ```
@@ -665,8 +673,9 @@ async function handleEvent(event) {
       .on("head", hydrateState(authorization.userInfo))
       .transform(response)
     // END OF STATE HYDRATION CODE BLOCK
+  } catch (e) {
+    // ...
   }
-  // ...
 }
 ```
 
@@ -700,7 +709,7 @@ export const logout = event => {
 filename: workers-site/index.js
 highlight: [1, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17]
 ---
-import { ..., logout } from "./auth0.js"
+import { logout } from "./auth0.js"
 
 async function handleEvent(event) {
   try {
@@ -719,6 +728,8 @@ async function handleEvent(event) {
     // END OF LOGOUT CODE BLOCK
 
     // BEGINNING OF STATE HYDRATION CODE BLOCK
+  } catch (e) {
+    // ...
   }
 }
 ```
@@ -794,6 +805,8 @@ async function handleEvent(event) {
     response = await fetch(request)
     // END OF WORKERS SITES
     // ↳ this can now be thought of as "END OF ORIGIN REQUEST"
+  } catch (e) {
+    // ...
   }
 }
 ```

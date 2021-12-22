@@ -22,10 +22,13 @@ To configure:
    ---
    highlight: [3,4,5]
    ---
-   "action_parameters": {
+   {
      // ...
-     "matched_data": {
-       "public_key": "<PUBLIC_KEY_VALUE>"
+     "action_parameters": {
+       // ...
+       "matched_data": {
+         "public_key": "<PUBLIC_KEY_VALUE>"
+       }
      }
    }
    ```
@@ -38,7 +41,7 @@ You can generate a public key [in the command line](/managed-rulesets/payload-lo
 
 The following example updates rule `{rule-id-1}` that executes the Cloudflare Managed Ruleset for zone `{zone-id}`, configuring payload logging with the provided public key.
 
-```json
+```curl
 ---
 header: Request
 highlight: [9,10,11]

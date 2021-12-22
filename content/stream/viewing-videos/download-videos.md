@@ -97,23 +97,23 @@ For more details about using signed URLs with videos, please see [the documentat
 highlight: [6]
 ---
 {
-    "sub": $VIDEOID,
-    "kid": $KEYID,
-    "exp": 1537460365,
-    "nbf": 1537453165,
-    "downloadable": true,
-    "accessRules": [
-      {
-        "type": "ip.geoip.country",
-        "action": "allow",
-        "country": [
-          "GB"
-        ]
-      },
-      {
-        "type": "any",
-        "action": "block"
-      }
-    ]
-  }
+  "sub": "$VIDEOID",
+  "kid": "$KEYID",
+  "exp": 1537460365,
+  "nbf": 1537453165,
+  "downloadable": true,
+  "accessRules": [
+    {
+      "type": "ip.geoip.country",
+      "action": "allow",
+      "country": [
+        "GB"
+      ]
+    },
+    {
+      "type": "any",
+      "action": "block"
+    }
+  ]
+}
 ```

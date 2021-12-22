@@ -36,7 +36,7 @@ Follow this workflow to create an HTTP Response Header Modification Rule for a g
 
 The following example sets the rules of an existing phase ruleset (`{ruleset-id}`) to a single HTTP Response Header Modification Rule — adding an HTTP response header with a static value — using the [Update ruleset](https://developers.cloudflare.com/ruleset-engine/rulesets-api/update) method:
 
-```json
+```sh
 ---
 header: Request
 ---
@@ -113,7 +113,7 @@ header: Response
 
 The following example sets the rules of an existing phase ruleset (`{ruleset-id}`) to a single HTTP Response Header Modification Rule — adding an HTTP response header with a dynamic value — using the [Update ruleset](https://developers.cloudflare.com/ruleset-engine/rulesets-api/update) method:
 
-```json
+```curl
 ---
 header: Request
 ---
@@ -190,7 +190,7 @@ header: Response
 
 The following example sets the rules of an existing phase ruleset (`{ruleset-id}`) to a single HTTP Response Header Modification Rule — removing an HTTP response header — using the [Update ruleset](https://developers.cloudflare.com/ruleset-engine/rulesets-api/update) method:
 
-```json
+```curl
 ---
 header: Request
 ---

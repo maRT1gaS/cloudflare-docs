@@ -34,7 +34,7 @@ highlight: [5]
 {
   "result": {
     "uid": "$VIDEOID",
-    ...
+    // ...
     "requireSignedURLS": true
   },
   "success": true,

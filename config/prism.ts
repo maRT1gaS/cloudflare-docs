@@ -1,4 +1,6 @@
 import Prism from 'prismjs';
+import { format } from './prettier';
+
 import type { Token, TokenStream } from 'prismjs';
 
 globalThis.Prism = Prism;
@@ -49,12 +51,18 @@ Prism.languages.sh = {
 // Prism language aliases
 const langs: Record<string, string> = {
   tf: 'hcl', // terraform -> hashicorp config lang
+  rs: 'rust',
   shell: 'sh',
   curl: 'bash',
+  gql: 'graphql',
   svelte: 'html',
   javascript: 'js',
   typescript: 'ts',
+  plaintext: 'txt',
+  text: 'txt',
+  py: 'python',
   vue: 'html',
+  rb: 'ruby',
 };
 
 // Custom token transforms
@@ -132,6 +140,7 @@ function normalize(tokens: (Token | string)[]) {
       item.forEach(x => loop(types, x));
     } else if (typeof item === 'string') {
       types = types || 'CodeBlock--token-plain';
+
       if (item === '') {
         // ignore
       } else if (item === '\n') {
@@ -147,8 +156,10 @@ function normalize(tokens: (Token | string)[]) {
 
         line = [];
       } else if (item.includes('\n')) {
-        item.split(/\r?\n/g).forEach((txt, idx) => {
+        item.split(/\r?\n/g).forEach((txt, idx, arr) => {
+          if (!txt && !idx && idx < arr.length) return;
           let content = txt ? toEscape(txt) : '\n';
+
           if (idx > 0) {
             lines.push(line);
             line = [];
@@ -198,6 +209,21 @@ export function highlight(code: string, lang: string, attrs: string): string {
   // TODO: parse content/attrs for `theme: dark` frontmatter
   // TODO: highlight, theme, filename, header
   // @see https://github.com/cloudflare/cloudflare-docs-engine/blob/dcaabff937e789145259417376e329d96a0d9e2f/src/components/mdx/code-block.js#L76
+
+  if (code.substring(0, 3) === '---') {
+    let index = code.indexOf('---', 3);
+    if (index > 3) {
+      code = code.substring(index + 3).replace(/^(\r?\n)+/, '');
+      // NOTE: prettier ignores snippets with frontmatter.. doesnt understand
+      try {
+        code = format(code, lang.toLowerCase());
+      } catch (err) {
+        console.error(err.stack || err);
+        console.log('~>', { lang, code });
+        throw err;
+      }
+    }
+  }
 
   // tokenize & build custom string output
   let tokens = Prism.tokenize(code, grammar);

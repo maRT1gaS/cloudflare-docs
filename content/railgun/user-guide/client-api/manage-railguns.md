@@ -45,7 +45,7 @@ name=my-railgun
 <summary>Example response</summary>
 <div>
 
-```json
+```txt
 HTTP/1.1 200 OK
 Content-Type: application/json
 
@@ -103,7 +103,7 @@ name=my-railgun
 <summary>Example response</summary>
 <div>
 
-```json
+```txt
 HTTP/1.1 200 OK
 Content-Type: application/json
 
@@ -159,7 +159,7 @@ rtkn=7h8i9j0k1l2m3n4o5p6q7r8id9h0j1l
 <summary>Example response</summary>
 <div>
 
-```json
+```txt
 HTTP/1.1 200 OK
 Content-Type: application/json
 
@@ -212,7 +212,7 @@ rtkn=7h8i9j0k1l2m3n4o5p6q7r8id9h0j1l
 <summary>Example response</summary>
 <div>
 
-```json
+```txt
 HTTP/1.1 200 OK
 Content-Type: application/json
 

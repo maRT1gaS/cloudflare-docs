@@ -56,7 +56,7 @@ If you do not already have a certificate for signing SAML assertions, you can us
 
    To configure all of the above using just the CLI, run the following:
 
-   ```json
+   ```txt
    add authentication samlIdPProfile samlProf_CloudflareAccess \
        -samlIdPCertName SAML_Signing \
        -assertionConsumerServiceURL "https://<your-team-name>.cloudflareaccess.com/cdn-cgi/access/callback" \

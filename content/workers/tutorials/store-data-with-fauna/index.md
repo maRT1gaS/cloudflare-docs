@@ -309,9 +309,9 @@ Fauna returns the created document:
 ---
 header: Newly created document
 ---
-{
+let newDoc = {
   ref: Ref(Collection("Products"), "<document_id>"),
-  ts: <timestamp>,
+  ts: 1640000000000000,
   data: {
     serialNumber: "A48432348",
     title: "Gaming Console",
@@ -319,7 +319,6 @@ header: Newly created document
     quantity: 0
   }
 }
-
 ```
 
 - **ref** - A [reference][fql-reference] to the newly created document.
@@ -426,7 +425,7 @@ When the delete operation is successful, Fauna returns the deleted document and 
 
 Before deploying your Worker, test it locally by using Wrangler's [dev][wrangler-dev] command:
 
-```js
+```sh
 ---
 header: Testing your Worker locally
 ---

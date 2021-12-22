@@ -22,7 +22,7 @@ You can use other API methods depending on the type of operation:
 
 The following request adds two rules to a custom ruleset. These will be the only two rules in the ruleset.
 
-```json
+```curl
 ---
 header: Request
 ---
@@ -95,7 +95,7 @@ To update one or more rules in a custom ruleset, use the [Update ruleset](/rules
 
 The following request edits one rule in a custom ruleset and updates the execution order of the rules.
 
-```json
+```curl
 ---
 header: Request
 ---

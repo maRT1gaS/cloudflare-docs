@@ -36,7 +36,7 @@ Use this API method to set the rules of a ruleset. You must include all the rule
 <summary>Request</summary>
 <div>
 
-```json
+```curl
 curl -X PUT \
 -H "X-Auth-Email: user@example.com" \
 -H "X-Auth-Key: REDACTED" \
@@ -103,7 +103,7 @@ The following example deploys a Managed Ruleset to the zone-level `http_request_
 <summary>Request</summary>
 <div>
 
-```json
+```curl
 curl -X PUT \
 -H "X-Auth-Email: user@example.com" \
 -H "X-Auth-Key: REDACTED" \
@@ -181,7 +181,7 @@ You cannot update the description or the rules in a Managed Ruleset. You can onl
 <summary>Request</summary>
 <div>
 
-```json
+```curl
 curl -X PUT \
 -H "X-Auth-Email: user@example.com" \
 -H "X-Auth-Key: REDACTED" \

@@ -16,7 +16,7 @@ Creating a zone is no different the Client V4 API, but be sure to specify the cu
 
 Example - Create Zone
 
-```json
+```curl
 curl -X POST https://api.cloudflare.com/client/v4/zones \
 -H 'Content-Type: application/json' \
 -H 'x-auth-email: <x-auth-email>' \
@@ -37,7 +37,7 @@ Now that you have a zone provisioned for the customer, you can add the appropria
 
 Example - Create Zone Subscription
 
-```json
+```curl
 curl -X POST https://api.cloudflare.com/client/v4/zones/<zone id>/subscription \
 -H 'Content-Type: application/json' \
 -H 'x-auth-email: <x-auth-email>' \
@@ -81,7 +81,7 @@ Depending on your agreement, you may be allowed to resell other add-on services.
 
 Example - Create Account Subscription
 
-```json
+```curl
 curl -X POST https://api.cloudflare.com/client/v4/accounts/<account id>/subscriptions \
 -H 'Content-Type: application/json' \
 -H 'x-auth-email: <x-auth-email>' \

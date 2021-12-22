@@ -30,7 +30,7 @@ The following `PUT` example creates a new phase ruleset (or updates the existing
 - All rules tagged with `{tag-name}` will have a sensitivity level of `low`.
 - The rule with ID `{managed-ruleset-rule-id}` will use the `block` action.
 
-```json
+```sh
 curl -X PUT \
 -H "X-Auth-Email: user@cloudflare.com" \
 -H "X-Auth-Key: REDACTED"

@@ -24,7 +24,7 @@ To create a Rate Limiting rule, add a rule with a `ratelimit` field to the `http
 
 Add any existing rules in the ruleset to the request by including their rule ID in the `rules` field of the request body. Rate limiting rules must appear at the end of the rules list.
 
-```json
+```curl
 ---
 header: Request
 ---

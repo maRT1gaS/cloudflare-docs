@@ -28,7 +28,7 @@ To create a Custom Firewall rule, add a rule to the `http_request_firewall_custo
 <summary>Example: Add new Custom Firewall rule using the Update ruleset API method</summary>
 <div>
 
-```json
+```curl
 ---
 header: Request
 ---

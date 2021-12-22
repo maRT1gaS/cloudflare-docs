@@ -45,7 +45,7 @@ If you are embedding a waiting room in an iFrame, specify the following values o
 <summary>Request</summary>
 <div>
 
-```json
+```curl
 curl -X POST "https://api.cloudflare.com/client/v4/zones/{zone-id}/waiting_rooms" \
      -H "X-Auth-Email: user@example.com" \
      -H "X-Auth-Key: xxxxxxxx" \

@@ -20,7 +20,7 @@ The example below uses the [Update ruleset](/rulesets-api/update) operation to e
 <summary>Example: Use an override to set the sensitivity of an HTTP DDoS rule at the zone level</summary>
 <div>
 
-```json
+```curl
 curl -X PUT \
 -H "X-Auth-Email: user@cloudflare.com" \
 -H "X-Auth-Key: REDACTED" \

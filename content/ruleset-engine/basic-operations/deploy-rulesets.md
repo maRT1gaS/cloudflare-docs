@@ -24,7 +24,7 @@ To apply a rule to every request in a phase at the **zone** level, set the rule 
 
 The following example deploys a Managed Ruleset to the `http_request_firewall_managed` phase of a given zone (`{zone-id}`) by adding a rule that executes the Managed Ruleset.
 
-```json
+```curl
 ---
 header: Request
 ---

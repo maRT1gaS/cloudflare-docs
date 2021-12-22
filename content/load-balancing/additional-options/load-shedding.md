@@ -70,7 +70,7 @@ To enable load shedding for a specific pool via the API, [update the values](htt
 <summary>Example request</summary>
 <div>
 
-```json
+```curl
 ---
 header: Request
 ---
@@ -80,10 +80,10 @@ curl -X PATCH "https://api.cloudflare.com/client/v4/accounts/{account-id}/load_b
      -H "Content-Type: application/json" \
      --data-binary '{
          "load_shedding": {
-             "default_percent": 20,
-             "default_policy": "random",
-             "session_percent": 0,
-             "session_policy": "hash"
+           "default_percent": 20,
+           "default_policy": "random",
+           "session_percent": 0,
+           "session_policy": "hash"
          }
      }'
 ```

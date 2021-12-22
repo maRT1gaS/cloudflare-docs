@@ -72,7 +72,7 @@ The following request adds a rule that executes a Managed Ruleset in the `http_r
 <summary>Example: Execute a Managed Ruleset with overrides in a phase at the zone level</summary>
 <div>
 
-```json
+```curl
 curl -X PUT \
 -H "X-Auth-Email: user@cloudflare.com" \
 -H "X-Auth-Key: REDACTED" \
@@ -102,7 +102,7 @@ curl -X PUT \
 <summary>Example: Execute a Managed Ruleset with overrides in a phase at the account level</summary>
 <div>
 
-```json
+```curl
 curl -X PUT \
 -H "X-Auth-Email: user@cloudflare.com" \
 -H "X-Auth-Key: REDACTED" \

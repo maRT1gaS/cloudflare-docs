@@ -25,7 +25,7 @@ The following example:
 - Replaces `date` with `datetime`
 - Uses the new `sampleInterval` field
 
-```json
+```gql
 query {
   viewer {
     zones(filter: { zoneTag: "your Zone ID" }) {

@@ -121,7 +121,7 @@ highlight: [9]
 const signedHeaders = generatedSignedHeaders();
 
 fetch(private_url, {
-  headers: signedHeaders
+  headers: signedHeaders,
   cf: {
     image: {
       format: "auto",

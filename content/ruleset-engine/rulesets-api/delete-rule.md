@@ -27,7 +27,7 @@ The following example deletes rule `{rule-id-1}` belonging to ruleset `{ruleset-
 <summary>Request</summary>
 <div>
 
-```json
+```curl
 curl -X DELETE \
   -H "X-Auth-Email: user@example.com" \
   -H "X-Auth-Key: REDACTED" \

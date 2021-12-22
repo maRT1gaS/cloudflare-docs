@@ -94,7 +94,7 @@ The following example request creates a custom ruleset in the `http_request_fire
 <summary>Request</summary>
 <div>
 
-```json
+```curl
 curl -X POST \
 -H "X-Auth-Email: user@example.com" \
 -H "X-Auth-Key: REDACTED" \
@@ -163,7 +163,7 @@ You do not have to use this method to create a phase entry point ruleset — Clo
 <summary>Request</summary>
 <div>
 
-```json
+```curl
 curl -X POST \
 -H "X-Auth-Email: user@example.com" \
 -H "X-Auth-Key: REDACTED" \

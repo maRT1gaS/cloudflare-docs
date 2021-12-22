@@ -41,7 +41,7 @@ tkn=a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5pp
 <summary>Example response</summary>
 <div>
 
-```json
+```txt
 HTTP/1.1 200 OK
 Content-Type: application/json
 
@@ -146,7 +146,7 @@ tkn=a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5pp
 <summary>Example response</summary>
 <div>
 
-```json
+```txt
 HTTP/1.1 200 OK
 Content-Type: application/json
 
@@ -252,7 +252,7 @@ z=example.com
 <summary>Example response</summary>
 <div>
 
-```json
+```txt
 HTTP/1.1 200 OK
 Content-Type: application/json
 
@@ -312,7 +312,7 @@ z=example.com
 <summary>Example response</summary>
 <div>
 
-```json
+```txt
 HTTP/1.1 200 OK
 Content-Type: application/json
 

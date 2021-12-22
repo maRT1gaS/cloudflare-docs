@@ -25,7 +25,7 @@ In this example:
 - `"enabled": false` defines an override at the ruleset level to disable all rules in the Managed Ruleset.
 - `"rules": [{"id": "{rule-id-1}", "action": "block", "enabled": true}, {"id": "{rule-id-2}", "action": "log", "enabled": true}]` defines a list of overrides at the rule level to enable two individual rules.
 
-```json
+```curl
 curl -X PUT \
 -H "X-Auth-Email: user@cloudflare.com" \
 -H "X-Auth-Key: REDACTED" \
@@ -73,7 +73,7 @@ In this example:
 - `"enabled": false` defines an override at the ruleset level to disable all rules in the Managed Ruleset.
 - `"rules": [{"id": "{rule-id-1}", "action": "block", "enabled": true}, {"id": "{rule-id-2}", "action": "log", "enabled": true}]` defines a list of overrides at the rule level to enable two individual rules.
 
-```json
+```curl
 curl -X PUT \
 -H "X-Auth-Email: user@cloudflare.com" \
 -H "X-Auth-Key: REDACTED" \

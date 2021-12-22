@@ -41,7 +41,7 @@ query {
 
 The following query searches data from a zone for firewall events that occurred during a time interval. It sorts the results, limits the amount of results returned, and displays a set of fields for each firewall event.
 
-```json
+```graphql
 ---
 header: Query Firewall events for a specific time interval
 ---
@@ -116,7 +116,7 @@ header: Query response from firewallEventsAdaptive
 
 This example query employs a broad range of GraphQL functionality. The example queries two data sets for the specified zone simultaneously, applies filters and aggregations, and sets a limit on the number of records returned. (Note that you must include the `limit` argument, which can be equal or up to 10,000.)
 
-```json
+```gql
 ---
 header: Query two data sets simultaneously
 ---

@@ -119,12 +119,12 @@ With the `generate` function filled out, you can call it within `handleRequest` 
 ```js
 ---
 filename: "index.js"
-highlight: [4]
+highlight: [3]
 ---
 function handleRequest(request) {
-  // ...
   if (request.method === "POST") {
     return generate(request)
+  }
   // ...
 }
 ```

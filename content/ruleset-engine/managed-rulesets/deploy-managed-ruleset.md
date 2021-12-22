@@ -21,7 +21,7 @@ Use the following workflow to deploy a Managed Ruleset to a phase at the account
 
 The following example deploys a Managed Ruleset to the `http_request_firewall_managed` phase of your account (`{account-id}`) by creating a rule that executes the Managed Ruleset. The rules in the Managed Ruleset are executed when the zone name matches one of `example.com` or `anotherexample.com`.
 
-```json
+```curl
 ---
 header: Request
 ---
@@ -92,7 +92,7 @@ Use the following workflow to deploy a Managed Ruleset to a phase at the zone le
 
 The following example deploys a Managed Ruleset to the `http_request_firewall_managed` phase of a given zone (`{zone-id}`) by creating a rule that executes the Managed Ruleset.
 
-```json
+```curl
 ---
 header: Request
 ---

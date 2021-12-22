@@ -14,7 +14,7 @@ Before you begin:
 
 Issue a `PUT` request that adds a rule to execute the custom ruleset when the zone name matches `example.com`.
 
-```json
+```curl
 ---
 header: Request
 ---

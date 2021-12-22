@@ -67,7 +67,7 @@ To create and deploy a custom ruleset, follow the workflow described in [Work wi
 
 The following `POST` example creates a new custom ruleset with a rule that checks for exposed credentials. The rule has a match if both the rule expression and the `exposed_credential_check` result are `true`.
 
-```json
+```curl
 curl -X POST \
 -H "X-Auth-Email: user@cloudflare.com" \
 -H "X-Auth-Key: REDACTED" \

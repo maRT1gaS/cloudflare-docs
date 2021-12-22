@@ -21,7 +21,7 @@ You can use filters as an argument on the following resources:
 
 Allows querying zone-related data by zone ID (`zoneTag`).
 
-```graphql
+```gql
 zones(filter: {zoneTag: "your Zone ID"}) {
     ...
 }

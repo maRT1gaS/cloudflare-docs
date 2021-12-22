@@ -103,7 +103,8 @@ import { PostgrestClient } from '@supabase/postgrest-js'
 const client = new PostgrestClient(POSTGREST_ENDPOINT)
 
 addEventListener('fetch', event => {
-// ... Rest of code
+  // Rest of code...
+});
 ```
 
 With a new client set up, you will make your first request from inside the Workers function to your PostgREST endpoint. To do this, you will select data from a table inside of your database, using the `from` and `select` functions in `postgrest-js`. The below example uses the `users` table, and selects everything inside of it, though if you are bringing your own PostgreSQL setup to this tutorial, adjust the code accordingly. Replace the default code in `handleRequest` with the below code:
@@ -112,7 +113,7 @@ With a new client set up, you will make your first request from inside the Worke
 ---
 filename: index.js
 ---
-// ... Rest of code
+// Rest of code...
 
 async function handleRequest(request) {
   const { data, error } = await client
@@ -263,7 +264,7 @@ The second planned route is `GET /users/:id`, which returns a single user based 
 ---
 filename: index.js
 ---
-router.get('/users/:id', async ({ params } => {
+router.get('/users/:id', async ({ params }) => {
   const { id } = params
   console.log(id) // e.g. 5, if requested URL is /users/5
 })

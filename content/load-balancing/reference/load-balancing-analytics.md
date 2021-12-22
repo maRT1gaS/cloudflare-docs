@@ -108,7 +108,7 @@ header: Response (truncated)
                                 "selectedPoolName": "us-east"
                             }
                         },
-                        ...
+                        // ...
                     ]
                 }
             ]
@@ -190,7 +190,7 @@ header: Response (truncated)
                             ],
                             "selectedPoolName": "asia-ne"
                         },
-                    ...
+                      // ...
                     ]
                 }
             ]

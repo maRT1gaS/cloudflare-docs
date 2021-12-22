@@ -23,7 +23,7 @@ The example below uses the [Update ruleset](/rulesets-api/update) endpoint to de
 <summary>Example: Enable only Joomla rules using category overrides at the zone level</summary>
 <div>
 
-```json
+```curl
 curl -X PUT \
 -H "X-Auth-Email: user@cloudflare.com" \
 -H "X-Auth-Key: REDACTED" \
@@ -62,7 +62,7 @@ curl -X PUT \
 <summary>Example: Enable only Joomla rules using category overrides at the account level</summary>
 <div>
 
-```json
+```curl
 curl -X PUT \
 -H "X-Auth-Email: user@cloudflare.com" \
 -H "X-Auth-Key: REDACTED" \
@@ -105,7 +105,7 @@ The example below uses a `PUT` request to add two overrides to the rule that exe
 <summary>Example: Add more than one category override at the zone level</summary>
 <div>
 
-```json
+```curl
 curl -X PUT \
 -H "X-Auth-Email: user@cloudflare.com" \
 -H "X-Auth-Key: REDACTED" \
@@ -144,7 +144,7 @@ curl -X PUT \
 <summary>Example: Add more than one category override at the account level</summary>
 <div>
 
-```json
+```curl
 curl -X PUT \
 -H "X-Auth-Email: user@cloudflare.com" \
 -H "X-Auth-Key: REDACTED" \

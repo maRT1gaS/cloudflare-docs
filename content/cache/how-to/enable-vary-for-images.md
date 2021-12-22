@@ -9,7 +9,7 @@ Vary for Images is enabled through Cloudflare’s API by creating a variants rul
 
 ## Create a variants rule
 
-```json
+```sh
 curl -X PATCH
 "https://api.cloudflare.com/client/v4/zones/023e105f4ecef8ad9ca31a8372d0 c353/cache/variants" \
 -H "X-Auth-Email: user@example.com" \
@@ -21,7 +21,7 @@ curl -X PATCH
 
 ## Modify to only allow WebP variants
 
-```json
+```sh
 curl -X PATCH
 "https://api.cloudflare.com/client/v4/zones/023e105f4ecef8ad9ca31a8372d0 c353/cache/variants" \
 -H "X-Auth-Email: user@example.com" \
@@ -33,7 +33,7 @@ curl -X PATCH
 
 ## Delete the rule
 
-```json
+```sh
 curl -X DELETE
 "https://api.cloudflare.com/client/v4/zones/023e105f4ecef8ad9ca31a8372d0c353/cache/variants" \
 -H "X-Auth-Email: user@example.com" \
@@ -42,7 +42,7 @@ curl -X DELETE
 
 ## Get the rule
 
-```json
+```sh
 curl -X GET
 "https://api.cloudflare.com/client/v4/zones/023e105f4ecef8ad9ca31a8372d0c353/cache/variants" \
 -H "X-Auth-Email: user@example.com" \

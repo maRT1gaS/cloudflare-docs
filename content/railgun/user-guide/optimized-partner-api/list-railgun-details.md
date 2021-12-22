@@ -40,7 +40,7 @@ host_key=e111dff66d1fddfda6a888c9992d4366
 <summary>Example response</summary>
 <div>
 
-```json
+```txt
 HTTP/1.1 200 OK
 Content-Type: application/json
 
@@ -143,7 +143,7 @@ host_key=e111dff66d1fddfda6a888c9992d4366
 <summary>Example response</summary>
 <div>
 
-```json
+```txt
 HTTP/1.1 200 OK
 Content-Type: application/json
 
@@ -248,7 +248,7 @@ z=example.com
 <summary>Example response</summary>
 <div>
 
-```json
+```txt
 HTTP/1.1 200 OK
 Content-Type: application/json
 
@@ -307,7 +307,7 @@ z=example.com
 <summary>Example response</summary>
 <div>
 
-```json
+```txt
 HTTP/1.1 200 OK
 Content-Type: application/json
 

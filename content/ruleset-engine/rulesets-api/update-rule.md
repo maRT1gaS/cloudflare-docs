@@ -28,7 +28,7 @@ To update the definition of a rule, include the new rule definition in the reque
 <summary>Request</summary>
 <div>
 
-```json
+```curl
 curl -X PATCH \
 -H "X-Auth-Email: user@example.com" \
 -H "X-Auth-Key: REDACTED" \
@@ -125,7 +125,7 @@ The following examples build upon the following (abbreviated) ruleset:
 
 The following request with the `position` field places rule `{rule-id-2}` as the first rule:
 
-```json
+```curl
 ---
 header: Request
 ---
@@ -148,7 +148,7 @@ In this case, the new rule order would be:
 
 The following request with the `position` field places rule `{rule-id-2}` after rule 3:
 
-```json
+```curl
 ---
 header: Request
 ---
@@ -171,7 +171,7 @@ In this case, the new rule order would be:
 
 The following request with the `position` field places rule `{rule-id-1}` in position 3, becoming the third rule in the ruleset:
 
-```json
+```curl
 ---
 header: Request
 ---

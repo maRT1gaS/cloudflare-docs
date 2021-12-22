@@ -13,6 +13,7 @@
   "devDependencies": {
     "@bongo/markdown": "0.0.6",
     "@types/node": "16.11.12",
+    "@types/prettier": "2.4.2",
     "@types/prismjs": "1.16.6",
     "bongo": "npm:@lukeed/bongo@0.0.6",
     "prettier": "2.5.1",

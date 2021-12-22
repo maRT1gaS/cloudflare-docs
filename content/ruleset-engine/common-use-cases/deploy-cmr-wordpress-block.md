@@ -21,7 +21,7 @@ The example below uses the [Update ruleset](/rulesets-api/update) operation to p
 <summary>Example: Use tag overrides to set WordPress rules to Block at the zone level</summary>
 <div>
 
-```json
+```curl
 curl -X PUT \
 -H "X-Auth-Email: user@cloudflare.com" \
 -H "X-Auth-Key: REDACTED" \
@@ -54,7 +54,7 @@ curl -X PUT \
 <summary>Example: Use tag overrides to set WordPress rules to Block at the account level</summary>
 <div>
 
-```json
+```curl
 curl -X PUT \
 -H "X-Auth-Email: user@cloudflare.com" \
 -H "X-Auth-Key: REDACTED" \

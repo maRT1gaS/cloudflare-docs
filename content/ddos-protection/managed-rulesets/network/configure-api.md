@@ -34,7 +34,7 @@ The following `PUT` example creates a new phase ruleset (or updates the existing
 
 The overrides apply to all packets matching the rule expression: `ip.dst in { 1.1.1.0/24 }`.
 
-```json
+```sh
 curl -X PUT \
 -H "X-Auth-Email: user@cloudflare.com" \
 -H "X-Auth-Key: REDACTED"

@@ -30,7 +30,7 @@ In this example:
 - `"categories": [{"category": "wordpress", "action": "log", "enabled": true}, {"category": "drupal", "action": "log", "enabled": true}]` defines an override at the tag level to enable rules tagged with `wordpress` or `drupal` and sets their action to `log`.
 - `"rules": [{"id": "{rule-id}", "action": "block", "enabled": true}]` defines an override at the rule level that enables one individual rule and sets the action to `block`.
 
-```json
+```curl
 curl -X PUT \
 "https://api.cloudflare.com/client/v4/zones/{zone-id}/rulesets/phases/http_request_firewall_managed/entrypoint" \
 -d '{
@@ -82,7 +82,7 @@ In this example:
 - `"categories": [{"category": "wordpress", "action": "log", "enabled": true}, {"category": "drupal", "action": "log", "enabled": true}]` defines an override at the tag level to enable rules tagged with `wordpress` or `drupal` and sets their action to `log`.
 - `"rules": [{"id": "{rule-id}", "action": "block", "enabled": true}]` defines an override at the rule level that enables one individual rule and sets the action to `block`.
 
-```json
+```curl
 curl -X PUT \
 "https://api.cloudflare.com/client/v4/accounts/{account-id}/rulesets/phases/http_request_firewall_managed/entrypoint" \
 -d '{

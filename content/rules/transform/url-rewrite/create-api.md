@@ -36,7 +36,7 @@ Follow this workflow to create a URL Rewrite Rule for a given zone via API:
 
 The following example sets the rules of an existing phase ruleset (`{ruleset-id}`) to a single URL Rewrite Rule — performing a static rewrite of the URI path — using the [Update ruleset](https://developers.cloudflare.com/ruleset-engine/rulesets-api/update) method:
 
-```json
+```curl
 ---
 header: Request
 ---
@@ -111,7 +111,7 @@ header: Response
 
 The following example sets the rules of an existing phase ruleset (`{ruleset-id}`) to a single URL Rewrite Rule — performing a dynamic rewrite of the URI path — using the [Update ruleset](https://developers.cloudflare.com/ruleset-engine/rulesets-api/update) method:
 
-```json
+```curl
 ---
 header: Request
 ---

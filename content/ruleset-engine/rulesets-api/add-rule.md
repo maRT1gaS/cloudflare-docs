@@ -29,7 +29,7 @@ The following example adds a rule to ruleset `{ruleset-id}` of zone `{zone-id}`.
 <summary>Request</summary>
 <div>
 
-```json
+```curl
 curl -X POST \
 -H "X-Auth-Email: user@example.com" \
 -H "X-Auth-Key: REDACTED" \

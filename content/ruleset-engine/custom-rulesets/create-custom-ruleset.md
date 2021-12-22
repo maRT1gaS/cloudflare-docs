@@ -9,7 +9,7 @@ order: 761
 
 The following `POST` request creates a new custom ruleset. Set the `kind` field to `custom` and specify the name of the phase where you want to create the custom ruleset in the `phase` field.
 
-```json
+```curl
 ---
 header: Request
 ---

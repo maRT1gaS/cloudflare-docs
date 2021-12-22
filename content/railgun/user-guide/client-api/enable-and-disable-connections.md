@@ -47,7 +47,7 @@ z=example.com
 <summary>Example response</summary>
 <div>
 
-```json
+```txt
 HTTP/1.1 200 OK
 Content-Type: application/json
 
@@ -104,7 +104,7 @@ z=example.com
 <summary>Example response</summary>
 <div>
 
-```json
+```txt
 HTTP/1.1 200 OK
 Content-Type: application/json
 
@@ -159,7 +159,7 @@ z=example.com
 <summary>Example response</summary>
 <div>
 
-```json
+```txt
 HTTP/1.1 200 OK
 Content-Type: application/json
 
@@ -214,7 +214,7 @@ z=example.com
 <summary>Example response</summary>
 <div>
 
-```json
+```txt
 HTTP/1.1 200 OK
 Content-Type: application/json
 
@@ -269,7 +269,7 @@ z=example.com
 <summary>Example response</summary>
 <div>
 
-```json
+```txt
 HTTP/1.1 200 OK
 Content-Type: application/json
 
@@ -324,7 +324,7 @@ z=example.com
 <summary>Example response</summary>
 <div>
 
-```json
+```txt
 HTTP/1.1 200 OK
 Content-Type: application/json
 
@@ -379,7 +379,7 @@ z=example.com
 <summary>Example response</summary>
 <div>
 
-```json
+```txt
 HTTP/1.1 200 OK
 Content-Type: application/json
 
@@ -434,7 +434,7 @@ z=example.com
 <summary>Example response</summary>
 <div>
 
-```json
+```txt
 HTTP/1.1 200 OK
 Content-Type: application/json
 
