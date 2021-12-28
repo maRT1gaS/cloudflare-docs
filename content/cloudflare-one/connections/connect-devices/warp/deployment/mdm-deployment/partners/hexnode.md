@@ -75,18 +75,18 @@ To set up Cloudflare for Teams on macOS using Hexnode:
         <?xml version="1.0" encoding="UTF-8"?>
         <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
         <plist version="1.0">
-        <dict>
-        <key>organization</key>
-        <string>organizationname</string>
-        <key>auto_connect</key>
-        <integer>1</integer>
-        <key>switch_locked</key>
-        <false />
-        <key>service_mode</key>
-        <string>warp</string>
-        <key>support_url</key>
-        <string>https://support.example.com</string>
-        </dict>
+          <dict>
+            <key>organization</key>
+            <string>organizationname</string>
+            <key>auto_connect</key>
+            <integer>1</integer>
+            <key>switch_locked</key>
+            <false />
+            <key>service_mode</key>
+            <string>warp</string>
+            <key>support_url</key>
+            <string>https://support.example.com</string>
+          </dict>
         </plist>
         ```
 
@@ -120,16 +120,16 @@ To set up Cloudflare for Teams on iOS using Hexnode:
 
    ```xml
    <dict>
-   <key>organization</key>
-   <string>yourorganization</string>
-   <key>auto_connect</key>
-   <integer>1</integer>
-   <key>switch_locked</key>
-   <false />
-   <key>service_mode</key>
-   <string>warp</string>
-   <key>support_url</key
-   <string>https://support.example.com</string>
+     <key>organization</key>
+     <string>yourorganization</string>
+     <key>auto_connect</key>
+     <integer>1</integer>
+     <key>switch_locked</key>
+     <false />
+     <key>service_mode</key>
+     <string>warp</string>
+     <key>support_url</key>
+     <string>https://support.example.com</string>
    </dict>
    ```
 

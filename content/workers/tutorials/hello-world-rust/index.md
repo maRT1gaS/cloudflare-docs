@@ -96,7 +96,7 @@ pub fn parse() -> String {
 
 Update your `worker/worker.js` to use the new code:
 
-```javascript
+```js
 addEventListener('fetch', event => {
   event.respondWith(handleRequest(event.request));
 });

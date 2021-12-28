@@ -38,10 +38,7 @@ header: Account and query time interval settings
 {
   "accountTag": "{account-id}",
   "filter": {
-    "AND":[
-      {"date_geq": "2020-01-19"},
-      {"date_leq": "2020-01-20"}
-    ]
+    "AND": [{ "date_geq": "2020-01-19" }, { "date_leq": "2020-01-20" }]
   }
 }
 ```
@@ -155,86 +152,74 @@ The table below lists the start and end time attributes that are valid for query
 
 Use the following query to build the timeseries graph in network analytics:
 
-```gql
+```graphql
 ---
 header: Timeseries graph
 ---
-query ipFlowTimeseries(
-    $accountTag: string
-    $filter: AccountIpFlows1mGroupsFilter_InputObject
-  ) {
-    viewer {
-      accounts(filter: { accountTag: $accountTag }) {
-        ipFlows1mGroups(
-          limit: 1000
-          filter: $filter
-          orderBy: datetimeMinute_ASC
-        ) {
-          dimensions {
-            timestamp: datetimeMinute
-            attackMitigationType
-            attackId
-          }
-          sum {
-            bits
-            packets
-          }
+query ipFlowTimeseries($accountTag: string, $filter: AccountIpFlows1mGroupsFilter_InputObject) {
+  viewer {
+    accounts(filter: { accountTag: $accountTag }) {
+      ipFlows1mGroups(limit: 1000, filter: $filter, orderBy: datetimeMinute_ASC) {
+        dimensions {
+          timestamp: datetimeMinute
+          attackMitigationType
+          attackId
+        }
+        sum {
+          bits
+          packets
         }
       }
     }
   }
+}
 ```
 
 ## Activity log
 
 This query returns an activity log summarizing minute-wise rollups of attack traffic in IP flows. The query groups the data by the fields listed in the `dimensions` object.
 
-```gql
+```graphql
 ---
 header: Activity log query
 ---
 query ipFlowEventLog(
-    $accountTag: string
-    $filter: AccountIpFlows1mAttacksGroupsFilter_InputObject
-  ) {
-    viewer {
-      accounts(filter: { accountTag: $accountTag }) {
-        ipFlows1mAttacksGroups(
-          limit: 10
-          filter: $filter
-          orderBy: [min_datetimeMinute_ASC]
-        ) {
-          dimensions {
-            attackId
-            attackDestinationIP
-            attackDestinationPort
-            attackMitigationType
-            attackSourcePort
-            attackType
-          }
-          avg {
-            bitsPerSecond
-            packetsPerSecond
-          }
-          min {
-            datetimeMinute
-            bitsPerSecond
-            packetsPerSecond
-          }
-          max {
-            datetimeMinute
-            bitsPerSecond
-            packetsPerSecond
-          }
-          sum {
-            bits
-            packets
-          }
+  $accountTag: string
+  $filter: AccountIpFlows1mAttacksGroupsFilter_InputObject
+) {
+  viewer {
+    accounts(filter: { accountTag: $accountTag }) {
+      ipFlows1mAttacksGroups(limit: 10, filter: $filter, orderBy: [min_datetimeMinute_ASC]) {
+        dimensions {
+          attackId
+          attackDestinationIP
+          attackDestinationPort
+          attackMitigationType
+          attackSourcePort
+          attackType
+        }
+        avg {
+          bitsPerSecond
+          packetsPerSecond
+        }
+        min {
+          datetimeMinute
+          bitsPerSecond
+          packetsPerSecond
+        }
+        max {
+          datetimeMinute
+          bitsPerSecond
+          packetsPerSecond
+        }
+        sum {
+          bits
+          packets
         }
       }
     }
   }
-
+}
 ```
 
 ## Top N cards - source
@@ -242,19 +227,19 @@ query ipFlowEventLog(
 This query returns data about the top source IPs.
 The `limit` parameter controls the amount of records returned for each node. In the following code, the highlighted lines indicate where you configure `limit`.
 
-```gql
+```graphql
 ---
 header: Top N Cards query
 highlight: [9,22,35,47,60,72]
 ---
 query GetTopNBySource(
-    $accountTag: string
-    $filter: AccountIpFlows1mGroupsFilter_InputObject
-    $portFilter: AccountIpFlows1mGroupsFilter_InputObject
-  ) {
-    viewer {
-      accounts(filter: { accountTag: $accountTag }) {
-        topNPorts: ipFlows1mGroups(
+  $accountTag: string
+  $filter: AccountIpFlows1mGroupsFilter_InputObject
+  $portFilter: AccountIpFlows1mGroupsFilter_InputObject
+) {
+  viewer {
+    accounts(filter: { accountTag: $accountTag }) {
+      topNPorts: ipFlows1mGroups(
         limit: 5
         filter: $portFilter
         orderBy: [sum_bits_DESC] # or: [sum_packets_DESC]
@@ -280,7 +265,7 @@ query GetTopNBySource(
           description: sourceIPASNDescription
         }
       }
-        topNIPs: ipFlows1mGroups(
+      topNIPs: ipFlows1mGroups(
         limit: 5
         filter: $filter
         orderBy: [sum_bits_DESC] # or: [sum_packets_DESC]
@@ -292,93 +277,92 @@ query GetTopNBySource(
           metric: sourceIP
         }
       }
-        topNColos: ipFlows1mGroups(
-          limit: 10
-          filter: $filter
-          orderBy: [sum_bits_DESC] # or: [sum_packets_DESC]
-        ) {
-          sum {
-            count: bits # or: packets
-          }
-          dimensions {
-            metric: coloCity
-            coloCode
-          }
+      topNColos: ipFlows1mGroups(
+        limit: 10
+        filter: $filter
+        orderBy: [sum_bits_DESC] # or: [sum_packets_DESC]
+      ) {
+        sum {
+          count: bits # or: packets
         }
-        topNCountries: ipFlows1mGroups(
-          limit: 10
-          filter: $filter
-          orderBy: [sum_bits_DESC] # or: [sum_packets_DESC]
-        ) {
-          sum {
-            count: bits # or: packets
-          }
-          dimensions {
-            metric: coloCountry
-          }
+        dimensions {
+          metric: coloCity
+          coloCode
         }
-        topNIPVersions: ipFlows1mGroups(
-          limit: 2
-          filter: $filter
-          orderBy: [sum_bits_DESC] # or: [sum_packets_DESC]
-        ) {
-          sum {
-            count: bits # or: packets
-          }
-          dimensions {
-            metric: ipVersion
-          }
+      }
+      topNCountries: ipFlows1mGroups(
+        limit: 10
+        filter: $filter
+        orderBy: [sum_bits_DESC] # or: [sum_packets_DESC]
+      ) {
+        sum {
+          count: bits # or: packets
+        }
+        dimensions {
+          metric: coloCountry
+        }
+      }
+      topNIPVersions: ipFlows1mGroups(
+        limit: 2
+        filter: $filter
+        orderBy: [sum_bits_DESC] # or: [sum_packets_DESC]
+      ) {
+        sum {
+          count: bits # or: packets
+        }
+        dimensions {
+          metric: ipVersion
         }
       }
     }
   }
-
+}
 ```
 
 ## Top N cards - destination
 
 This query returns data about the top destination IPs. The `limit` parameter controls the amount of records returned. In the following code, the highlighted lines indicate that the query returns the five highest results.
 
-```gql
+```graphql
 ---
 header: Top N Cards - Destination
 highlight: [10,22]
 ---
 query GetTopNByDestination(
-    $accountTag: string
-    $filter: AccountIpFlows1mGroupsFilter_InputObject
-    $portFilter: AccountIpFlows1mGroupsFilter_InputObject
-  ) {
-    viewer {
-      accounts(filter: { accountTag: $accountTag }) {
-        topNIPs: ipFlows1mGroups(
-          filter: $filter
-          limit: 5
-          orderBy: [sum_bits_DESC] # or: [sum_packets_DESC]
-        ) {
-          sum {
-            count: bits # or: packets
-          }
-          dimensions {
-            metric: destinationIP
-          }
+  $accountTag: string
+  $filter: AccountIpFlows1mGroupsFilter_InputObject
+  $portFilter: AccountIpFlows1mGroupsFilter_InputObject
+) {
+  viewer {
+    accounts(filter: { accountTag: $accountTag }) {
+      topNIPs: ipFlows1mGroups(
+        filter: $filter
+        limit: 5
+        orderBy: [sum_bits_DESC] # or: [sum_packets_DESC]
+      ) {
+        sum {
+          count: bits # or: packets
         }
-        topNPorts: ipFlows1mGroups(
-          filter: $portFilter
-          limit: 5
-          orderBy: [sum_bits_DESC] # or: [sum_packets_DESC]
-        ) {
-          sum {
-            count: bits # or: packets
-          }
-          dimensions {
-            metric: destinationPort
-            ipProtocol
-          }
+        dimensions {
+          metric: destinationIP
+        }
+      }
+      topNPorts: ipFlows1mGroups(
+        filter: $portFilter
+        limit: 5
+        orderBy: [sum_bits_DESC] # or: [sum_packets_DESC]
+      ) {
+        sum {
+          count: bits # or: packets
+        }
+        dimensions {
+          metric: destinationPort
+          ipProtocol
         }
       }
     }
   }
+}
 ```
 
 ## TCP Flags
@@ -391,31 +375,28 @@ Add the following line to the filter to indicate that you want to view TCP data:
 { "ipProtocol": "TCP" }
 ```
 
-```gql
+```graphql
 ---
 header: TCP Flags query
 ---
-query GetTCPFlags(
-    $accountTag: string
-    $filter: AccountIpFlows1mGroupsFilter_InputObject
-  ) {
-    viewer {
-      accounts(filter: { accountTag: $accountTag }) {
-        tcpFlags: ipFlows1mGroups(
-          filter: $filter
-          limit: 8
-          orderBy: [sum_bits_DESC] # or: [sum_packets_DESC]
-        ) {
-          sum {
-            count: bits # or: packets
-          }
-          dimensions {
-            tcpFlags
-          }
+query GetTCPFlags($accountTag: string, $filter: AccountIpFlows1mGroupsFilter_InputObject) {
+  viewer {
+    accounts(filter: { accountTag: $accountTag }) {
+      tcpFlags: ipFlows1mGroups(
+        filter: $filter
+        limit: 8
+        orderBy: [sum_bits_DESC] # or: [sum_packets_DESC]
+      ) {
+        sum {
+          count: bits # or: packets
+        }
+        dimensions {
+          tcpFlags
         }
       }
     }
   }
+}
 ```
 
 ## Executive summary
@@ -425,13 +406,13 @@ Use different queries, depending on the time interval you want to examine and wh
 
 If the time interval is absolute, for example March 25th 09:00 to March 25th 17:00, then execute a query for attacks within those times. [Use the appropriate query node](#parameters-and-filters), for example `ipFlows1dGroups`, for the time interval.
 
-```gql
+```graphql
 ---
 header: GetPreviousAttacks query - fetch previous attacks
 ---
 query GetPreviousAttacks($accountTag: string, $filter: filter) {
   viewer {
-    accounts(filter: {accountTag: $accountTag}) {
+    accounts(filter: { accountTag: $accountTag }) {
       # Use any valid "Query node" value
       ipFlows1dGroups(limit: 1000, filter: $filter) {
         dimensions {
@@ -450,44 +431,44 @@ query GetPreviousAttacks($accountTag: string, $filter: filter) {
 If the time interval is relative to the current time, for example the last 24 hours or the last 30 minutes, then make a query to the `ipFlows1mGroup` node to check whether there were attacks in the past five minutes. Attacks within the past five minutes are classed as ongoing: the Activity Log displays `Present`.
 The query response lists the `attackID` values of ongoing attacks.
 
-```gql
+```graphql
 ---
 header: GetOngoingAttackIds query - check for ongoing attacks
 ---
 query GetOngoingAttackIds($accountTag: string, $filter: filter) {
-    viewer {
-      accounts(filter: { accountTag: $accountTag }) {
-        ipFlows1mGroups(limit: 1000, filter: $filter) {
-          dimensions {
-            attackId
-          }
+  viewer {
+    accounts(filter: { accountTag: $accountTag }) {
+      ipFlows1mGroups(limit: 1000, filter: $filter) {
+        dimensions {
+          attackId
         }
       }
     }
   }
+}
 ```
 
 If there are ongoing attacks, query the `ipFlows1mAttacksGroups` node, filtering with the `attackID` values from the previous query. The query below returns the maximum bit and packet rates.
 
-```gql
+```graphql
 ---
 header: GetOngoingAttacks query - fetch data for ongoing attacks
 ---
 query GetOngoingAttacks($accountTag: string, $filter: filter) {
-    viewer {
-      accounts(filter: { accountTag: $accountTag }) {
-        ipFlows1mAttacksGroups(limit: 1000, filter: $filter) {
-          dimensions {
-            attackId
-          }
-          max {
-            bitsPerSecond
-            packetsPerSecond
-          }
+  viewer {
+    accounts(filter: { accountTag: $accountTag }) {
+      ipFlows1mAttacksGroups(limit: 1000, filter: $filter) {
+        dimensions {
+          attackId
+        }
+        max {
+          bitsPerSecond
+          packetsPerSecond
         }
       }
     }
   }
+}
 ```
 
 If there are no ongoing attacks, use the `GetPreviousAttacks` query to display data for attacks within an absolute time interval.

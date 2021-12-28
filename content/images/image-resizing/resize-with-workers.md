@@ -167,15 +167,15 @@ To perform resizing and optimizations, the Worker must be able to fetch the orig
 You must detect which requests must go directly to the origin server. When the `image-resizing` string is present in the `Via` header, it means that it is a request coming from another Worker and should be directed to the origin server:
 
 ```js
-addEventListener("fetch", event => {
+addEventListener('fetch', event => {
   // If this request is coming from image resizing worker,
   // avoid causing an infinite loop by resizing it again:
-  if (/image-resizing/.test(event.request.headers.get("via"))) {
-    return fetch(event.request)
+  if (/image-resizing/.test(event.request.headers.get('via'))) {
+    return fetch(event.request);
   }
 
   // Now you can safely use image resizing here
-}
+});
 ```
 
 ## Lack of preview in the Dashboard

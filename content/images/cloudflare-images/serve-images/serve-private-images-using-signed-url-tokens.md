@@ -13,7 +13,7 @@ If an image is marked to require a signed URL, it cannot be accessed without a t
 
 2. Next, use the key to generate an expiring tokenized URL. Here is an example Worker script that takes in a regular URL without a signed token and returns a tokenized URL that expires after one day:
 
-```javascript
+```js
 const KEY = 'YOUR_KEY_FROM_IMAGES_DASHBOARD';
 const EXPIRATION = 60 * 60 * 24; // 1 day
 

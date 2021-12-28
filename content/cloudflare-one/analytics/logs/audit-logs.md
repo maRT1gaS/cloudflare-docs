@@ -125,7 +125,7 @@ Cloudflare Logpush can be used to gather and send specific request headers from 
    "EdgeResponseBytes": 4600,
    "EdgeResponseStatus": 200,
    "EdgeStartTimestamp": "2019-11-10T09:51:07Z",
-   "RayID": "5y1250bcjd621y99"
+   "RayID": "5y1250bcjd621y99",
    "RequestHeaders":{"cf-access-user":"srhea"},
 }
 {

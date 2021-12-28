@@ -14,11 +14,10 @@ The most common way you will encounter a `Request` object is as a property of an
 ---
 highlight: [2]
 ---
-addEventListener("fetch", event => {
-  let request = event.request // Request object
-
+addEventListener('fetch', event => {
+  let request = event.request; // Request object
   // ...
-})
+});
 ```
 
 You may also want to construct a `Request` yourself when you need to modify a request object, because a `FetchEvent`’s `request` property is immutable.
@@ -50,7 +49,7 @@ Review [Understanding the FetchEvent Lifecycle](/learning/fetch-event-lifecycle)
 ## Constructor
 
 ```js
-let request = new Request(input [, init])
+let request = new Request(input, init);
 ```
 
 ### Parameters
@@ -351,12 +350,13 @@ async function eventHandler(event) {
 Any attempt to use APIs such as `fetch()` or access the `Request` context during script startup will throw an exception:
 
 ```js
-const promise = fetch("https://example.com/") // Error
-async function eventHandler(event){..}
+const promise = fetch('https://example.com/'); // Error
+async function eventHandler(event) {
+  // ...
+}
 ```
 
-This code snippet will throw during script startup, and the `"fetch"` event
-listener will never be registered.
+This code snippet will throw during script startup, and the `"fetch"` event listener will never be registered.
 
 ---
 

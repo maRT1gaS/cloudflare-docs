@@ -54,26 +54,20 @@ Here is how you would get the view count and minutes viewed for the videos in yo
 1. It is important that you change the $ACCOUNT_ID with your account ID and the date range
 1. The body of the query should contain the following GraphQL Query:
 
-```javascript
+```graphql
 query {
   viewer {
-    accounts(filter:{
-      accountTag:"$ACCOUNT_ID"
-
-    }) {
+    accounts(filter: { accountTag: "$ACCOUNT_ID" }) {
       videoPlaybackEventsAdaptiveGroups(
-        filter: {
-          date_geq: "2020-09-01"
-          date_lt: "2020-09-25"
-        }
-        orderBy:[uid_ASC]
+        filter: { date_geq: "2020-09-01", date_lt: "2020-09-25" }
+        orderBy: [uid_ASC]
         limit: 1000
       ) {
         count
         sum {
           timeViewedMinutes
         }
-        dimensions{
+        dimensions {
           uid
         }
       }
@@ -84,8 +78,8 @@ query {
 
 Here is the exact cURL request:
 
-```
-curl --request POST \
+```sh
+$ curl --request POST \
 --url https://api.cloudflare.com/client/v4/graphql \
 --header 'content-type: application/json' \
 --header 'Authorization: Bearer $TOKEN' \
@@ -102,7 +96,7 @@ The response will look something like below. Things to remember:
 - timeViewedMinutes property shows the minutes viewed per video during the specified date range
 - If a video did not have views in the date range specified, it will NOT be included in the response
 
-```javascript
+```json
 {
   "data": {
     "viewer": {
@@ -197,7 +191,6 @@ The response will look something like below. Things to remember:
   },
   "errors": null
 }
-
 ```
 
 ## Pagination
@@ -206,27 +199,24 @@ GraphQL API supports seek pagination: using filters, you can specify the last vi
 
 The query below will return data for 2 videos that follow video id `5646153f8dea17f44d542a42e76cfd`:
 
-```javascript
+```graphql
 query {
   viewer {
-    accounts(filter:{
-      accountTag:"6c04ee5623f70a112c8f488e4c7a2409"
-
-    }) {
+    accounts(filter: { accountTag: "6c04ee5623f70a112c8f488e4c7a2409" }) {
       videoPlaybackEventsAdaptiveGroups(
         filter: {
           date_geq: "2020-09-01"
           date_lt: "2020-09-25"
-          uid_gt:"5646153f8dea17f44d542a42e76cfd"
+          uid_gt: "5646153f8dea17f44d542a42e76cfd"
         }
-        orderBy:[uid_ASC]
+        orderBy: [uid_ASC]
         limit: 2
       ) {
         count
         sum {
           timeViewedMinutes
         }
-        dimensions{
+        dimensions {
           uid
         }
       }

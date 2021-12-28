@@ -94,7 +94,7 @@ The example query below demonstrates how to retrieve account limits for the `bro
 
 ### Response
 
-```graphql
+```json
 {
   "data": {
     "viewer": {

@@ -132,14 +132,14 @@ When a request is received on one of Cloudflare’s edge servers for a URL match
 ---
 filename: ~/my-worker/index.js
 ---
-addEventListener("fetch", event => {
-  event.respondWith(handleRequest(event.request))
-})
+addEventListener('fetch', event => {
+  event.respondWith(handleRequest(event.request));
+});
 
 async function handleRequest(request) {
-  return new Response("Hello worker!", {
-    headers: { "content-type": "text/plain" }
-  })
+  return new Response('Hello worker!', {
+    headers: { 'content-type': 'text/plain' },
+  });
 }
 ```
 
@@ -168,16 +168,16 @@ Use standard JavaScript branching logic, such as `if`/`else` or `switch` stateme
 filename: ~/my-worker/index.js
 highlight: [7, 8, 9, 10, 11]
 ---
-addEventListener("fetch", event => {
-  event.respondWith(handleRequest(event.request))
-})
+addEventListener('fetch', event => {
+  event.respondWith(handleRequest(event.request));
+});
 
 async function handleRequest(request) {
-  let response
-  if (request.method === "POST") {
-    response = await generate(request)
+  let response;
+  if (request.method === 'POST') {
+    response = await generate(request);
   } else {
-    response = new Response("Expected POST", { status: 500 })
+    response = new Response('Expected POST', { status: 500 });
   }
   // ...
 }

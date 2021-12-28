@@ -306,5 +306,7 @@ curl -s -X GET https://api.cloudflare.com/client/v4/zones/<ZONE_ID>/logpush/jobs
       "last_complete": "2019-09-24T21:15:00Z",
       "last_error": null,
       "error_message": null
-    },
+    }
+  ]
+}
 ```

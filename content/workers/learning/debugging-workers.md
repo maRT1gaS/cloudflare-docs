@@ -38,10 +38,10 @@ To help you further debug your code, `wrangler dev` also supports `console.log` 
 ---
 filename: index.js
 ---
-addEventListener("fetch", event => {
-  console.log(`Received new request: ${event.request.url}`)
-  event.respondWith(handleEvent(event))
-})
+addEventListener('fetch', event => {
+  console.log(`Received new request: ${event.request.url}`);
+  event.respondWith(handleEvent(event));
+});
 ```
 
 ```sh

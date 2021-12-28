@@ -60,15 +60,15 @@ curl -X GET "https://example.com/waitingroom" \
 header: Response
 ---
 {
-    "cfWaitingRoom": {
-        "inWaitingRoom": true,
-        "waitTime": 5,
-        "waitTimeKnown": true,
-        "waitTimeFormatted": "5 minutes",
-        "queueIsFull": false,
-        "queueAll": false,
-        "lastUpdated": "2021-08-03T23:46:00.000Z",
-        "refreshIntervalSeconds": 20
-    }
+  "cfWaitingRoom": {
+    "inWaitingRoom": true,
+    "waitTime": 5,
+    "waitTimeKnown": true,
+    "waitTimeFormatted": "5 minutes",
+    "queueIsFull": false,
+    "queueAll": false,
+    "lastUpdated": "2021-08-03T23:46:00.000Z",
+    "refreshIntervalSeconds": 20
+  }
 }
 ```

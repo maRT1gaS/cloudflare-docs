@@ -155,22 +155,19 @@ filename: functions/_middleware.js
 ---
 const errorHandler = async ({ next }) => {
   try {
-    return await next()
+    return await next();
   } catch (err) {
-    return new Response(`${err.message}\n${err.stack}`, { status: 500 })
+    return new Response(`${err.message}\n${err.stack}`, { status: 500 });
   }
-}
+};
 
 const hello = async ({ next }) => {
-  const response = await next()
-  response.headers.set('X-Hello', 'Hello from functions Middleware!')
-  return response
-}
+  const response = await next();
+  response.headers.set('X-Hello', 'Hello from functions Middleware!');
+  return response;
+};
 
-export const onRequest = [
-  errorHandler,
-  hello
-]
+export const onRequest = [errorHandler, hello];
 ```
 
 In the function above, you can see that the `errorHandler` and `hello` Functions are exported to all requests so that if this middleware is in the base of the `/functions` directory it will run on all Functions defined in that directory. And if the middleware is defined in a subdirectory such as `/functions/todos/_middleware.ts` it will only run on all requests in that directory.
@@ -186,14 +183,9 @@ filename: functions/hello/_middleware.js
 import { errorHandler } from '../shared';
 import { hello } from '../custom';
 
-export const onRequest = [
-  errorHandler
-]
+export const onRequest = [errorHandler];
 
-export const onRequestGet = [
-  errorHandler,
-  hello
-]
+export const onRequestGet = [errorHandler, hello];
 ```
 
 ### Middleware routing
@@ -256,14 +248,14 @@ export async function onRequest(context) {
   let res;
 
   try {
-    context.data.timestamp = Date.now()
+    context.data.timestamp = Date.now();
     res = await context.next();
   } catch (err) {
-    res = new Response('Oops!', { status: 500 })
+    res = new Response('Oops!', { status: 500 });
   } finally {
-    let delta = Date.now() - context.data.timestamp
-    res.headers.set('x-response-timing', delta)
-    return res
+    let delta = Date.now() - context.data.timestamp;
+    res.headers.set('x-response-timing', delta);
+    return res;
   }
 }
 ```
@@ -318,8 +310,8 @@ export default {
     // Otherwise, serve the static assets.
     // Without this, the Worker will error and no assets will be served.
     return env.ASSETS.fetch(request);
-  }
-}
+  },
+};
 ```
 
 <Aside type="warning">

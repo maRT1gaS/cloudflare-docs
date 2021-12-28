@@ -392,7 +392,7 @@ For more information, see [HMAC Validation: Overview](#overview).
 
 Consider the case where the MessageMAC is contained entirely within a single field, as in this example URI path:
 
-```http
+```txt
 /download/cat.jpg?verify=1484063787-IaLGSmELTvlhfd0ItdN6PhhHTFhzx73EX8uy%2FcSDiIU%3D
 ```
 

@@ -161,7 +161,7 @@ Windows offers two options to install the certificate, each having a different i
 
 2. Right-click on the certificate file.
 
-3. Click **Open**.  
+3. Click **Open**.
    If you see a Security Warning window, click **Open**.
 
 4. The **Certificate** window will appear. Click **Install Certificate**.
@@ -326,8 +326,8 @@ export REQUESTS_CA_BUNDLE=${CERT_PATH}
 
 1. Run the following command:
 
-```git
-git config -l
+```sh
+$ git config -l
 ```
 
 1. This will output:
@@ -354,8 +354,8 @@ credential.helper=manager
 
 1. The `http.sslcainfo` defines the CA Certificate store. Update this to append the Cloudflare certificate to the CA bundle by running this command:
 
-```git
-gc .\Cloudflare_CA.crt | ac $(git config --get http.sslcainfo)
+```sh
+$ gc .\Cloudflare_CA.crt | ac $(git config --get http.sslcainfo)
 ```
 
 #### Git on Mac

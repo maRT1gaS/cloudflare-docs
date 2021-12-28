@@ -24,8 +24,7 @@ To use a Rules List in the [Expression Editor](/cf-dashboard/expression-preview-
 This expression filters requests from IP addresses that are in a Rules List named _office_network_:
 
 ```sql
-
-(ip.src in $office_network)
+ip.src in $office_network;
 ```
 
 Note that names for Rules Lists can only include lowercase letters, numbers, and the underscore (`_`) character.

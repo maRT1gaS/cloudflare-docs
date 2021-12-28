@@ -73,7 +73,7 @@ filename: worker.mjs
 highlight: [5]
 ---
 export default {
-  fetch(req, env, ctx)  {
+  fetch(req, env, ctx) {
     // Send a non-blocking POST request.
     // ~> Completes before the Worker exits.
     ctx.waitUntil(
@@ -82,13 +82,13 @@ export default {
         body: JSON.stringify({
           url: req.url,
           // ...
-        })
+        }),
       })
     );
 
     return new Response('OK');
-  }
-}
+  },
+};
 ```
 
 The same functionality can be achieved in a Durable Object, simply by omitting the call to `ctx.waitUntil()` for the POST request. The request will complete before the Durable Object exits:
@@ -108,7 +108,7 @@ export class Example {
       body: JSON.stringify({
         url: req.url,
         // ...
-      })
+      }),
     });
 
     return new Response('OK');

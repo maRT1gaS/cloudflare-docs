@@ -57,18 +57,18 @@ On top of protecting the original image URL, you can also validate that only cer
 
 ```js
 async function handleRequest(request) {
-  const imageURL = … // detail omitted in this example, see the previous example
+  const imageURL = '...'; // detail omitted in this example, see the previous example
 
-  const requestURL = new URL(request.url)
+  const requestURL = new URL(request.url);
   const resizingOptions = {
-    width: requestURL.searchParams.get("width"),
-  }
+    width: requestURL.searchParams.get('width'),
+  };
   // If someone tries to manipulate your image URLs to reveal higher-resolution images,
   // you can catch that and refuse to serve the request (or enforce a smaller size, etc.)
   if (resizingOptions.width > 1000) {
-    throw Error("We don’t allow viewing images larger than 1000 pixels wide")
+    throw Error('We don’t allow viewing images larger than 1000 pixels wide');
   }
-  return fetch(imageURL, {cf:{image:resizingOptions}})
+  return fetch(imageURL, { cf: { image: resizingOptions } });
 }
 ```
 
@@ -124,11 +124,11 @@ fetch(private_url, {
   headers: signedHeaders,
   cf: {
     image: {
-      format: "auto",
-      "origin-auth": "share-publicly"
-     }
-  }
-})
+      'format': 'auto',
+      'origin-auth': 'share-publicly',
+    },
+  },
+});
 ```
 
 When using this code, the following headers are passed through to the origin, and allow your request to be successful:

@@ -44,18 +44,18 @@ Note the `status` field indicates whether the video processing finished successf
 
 ### Example POST request body sent in response to successful encoding
 
-```javascript
+```json
 {
-    "uid": "dd5d531a12de0c724bd1275a3b2bc9c6",
-    "readyToStream": true,
-    "status": {
-      "state": "ready"
-    },
-    "meta": {},
-    "created": "2019-01-01T01:00:00.474936Z",
-    "modified": "2019-01-01T01:02:21.076571Z",
-    // ...
-  }
+  "uid": "dd5d531a12de0c724bd1275a3b2bc9c6",
+  "readyToStream": true,
+  "status": {
+    "state": "ready"
+  },
+  "meta": {},
+  "created": "2019-01-01T01:00:00.474936Z",
+  "modified": "2019-01-01T01:02:21.076571Z"
+  // ...
+}
 ```
 
 ## Verify webhook authenticity

@@ -23,11 +23,14 @@ To remove an HTTP request header, set the following parameter in the `action_par
 The full syntax of the `action_parameters` field to define a static HTTP request header value is the following:
 
 ```json
-"action_parameters": {
-  "headers": {
-    "<HEADER_NAME>": {
-      "operation": "set",
-      "value": "<URI_PATH_VALUE>"
+{
+  // ...
+  "action_parameters": {
+    "headers": {
+      "<HEADER_NAME>": {
+        "operation": "set",
+        "value": "<URI_PATH_VALUE>"
+      }
     }
   }
 }
@@ -38,11 +41,14 @@ The full syntax of the `action_parameters` field to define a static HTTP request
 The full syntax of the `action_parameters` field to define a dynamic HTTP request header value using an expression is the following:
 
 ```json
-"action_parameters": {
-  "headers": {
-    "<HEADER_NAME>": {
-      "operation": "set",
-      "expression": "<EXPRESSION>"
+{
+  // ...
+  "action_parameters": {
+    "headers": {
+      "<HEADER_NAME>": {
+        "operation": "set",
+        "expression": "<EXPRESSION>"
+      }
     }
   }
 }
@@ -59,10 +65,13 @@ Check the [available fields and functions](/transform/request-header-modificatio
 The full syntax of the `action_parameters` field to remove an HTTP request header is the following:
 
 ```json
-"action_parameters": {
-  "headers": {
-    "<HEADER_NAME>": {
-      "operation": "remove"
+{
+  // ...
+  "action_parameters": {
+    "headers": {
+      "<HEADER_NAME>": {
+        "operation": "remove"
+      }
     }
   }
 }
@@ -73,14 +82,17 @@ The full syntax of the `action_parameters` field to remove an HTTP request heade
 The same rule can modify different HTTP request headers using different operations (set or remove a header). For example, a single rule can set the value of a header and remove a different header. The syntax of such a rule could be the following:
 
 ```json
-"action_parameters": {
-  "headers": {
-    "<HEADER_NAME_1>": {
-      "operation": "set",
-      "value": "<HEADER_VALUE_1>"
-    },
-    "<HEADER_NAME_2>": {
-      "operation": "remove"
+{
+  // ...
+  "action_parameters": {
+    "headers": {
+      "<HEADER_NAME_1>": {
+        "operation": "set",
+        "value": "<HEADER_VALUE_1>"
+      },
+      "<HEADER_NAME_2>": {
+        "operation": "remove"
+      }
     }
   }
 }

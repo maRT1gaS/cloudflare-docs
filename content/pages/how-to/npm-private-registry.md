@@ -48,9 +48,9 @@ By default, `npm` looks for an environment variable named `NPM_TOKEN` and becaus
 
 ## Custom registry endpoints
 
-When multiple registries are in use, a project will need to define its own root-level [`.npmrc`](https://docs.npmjs.com/cli/v7/configuring-npm/npmrc) configuration file. An example `.npmrc` file may look like this:
+When multiple registries are in use, a project will need to define its own root-level [`.npmrc`](https://docs.npmjs.com/cli/v7/configuring-npm/npmrc) configuration file\. An example `.npmrc` file may look like this:
 
-```ini
+```txt
 @foobar:registry=https://npm.pkg.github.com
 //registry.npmjs.org/:_authToken=${TOKEN_FOR_NPM}
 //npm.pkg.github.com/:_authToken=${TOKEN_FOR_GITHUB}
@@ -83,11 +83,11 @@ In the event that your local development no longer works with your new `.npmrc` 
 
 4. In your `package.json` file, create a new `"preinstall"` script, which will rename the `.npmrc.pages` file to `.npmrc` only during the Pages build process:
 
-   ```js
+   ```json
    // package.json
    {
      "scripts": {
-       "preinstall": "node is-pages && mv .npmrc.pages .npmrc || echo \"Not Pages\"",
+       "preinstall": "node is-pages && mv .npmrc.pages .npmrc || echo \"Not Pages\""
        // your existing scripts
      }
    }

@@ -249,16 +249,12 @@ header: Response
         "id": "{rule-2-id}",
         "version": "1",
         "action": "block",
-        "categories": [
-          "broken-access-control",
-          "cve-2018-12895",
-          "wordpress"
-        ],
+        "categories": ["broken-access-control", "cve-2018-12895", "wordpress"],
         "description": "Wordpress - Broken Access Control - CVE:CVE-2018-12895",
         "last_updated": "2021-03-18T14:42:40.972022Z",
         "ref": "{rule-2-ref}",
         "enabled": true
-      },
+      }
       // (...)
     ],
     "last_updated": "2021-03-18T14:42:40.972022Z",

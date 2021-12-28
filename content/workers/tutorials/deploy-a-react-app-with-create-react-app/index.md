@@ -60,8 +60,8 @@ To serve a single page application, update `workers-site/index.js` with the foll
 import { getAssetFromKV, serveSinglePageApp } from '@cloudflare/kv-asset-handler';
 
 async function handleEvent(event) {
-   ...
-   const asset = await getAssetFromKV(event, { mapRequestToAsset: serveSinglePageApp });
+  // ...
+  const asset = await getAssetFromKV(event, { mapRequestToAsset: serveSinglePageApp });
 }
 ```
 
@@ -109,9 +109,9 @@ Like all Workers scripts, the static site feature begins by listening for incomi
 ---
 filename: index.js
 ---
-addEventListener("fetch", event => {
-  event.respondWith(handleRequest(event.request))
-})
+addEventListener('fetch', event => {
+  event.respondWith(handleRequest(event.request));
+});
 ```
 
 When the script receives an incoming [`Request`](https://developer.mozilla.org/en-US/docs/Web/API/Request), it looks at the `pathname`, such as `/workers`, and looks up an associated file uploaded to Workers KV. If that file is found, a new [`Response`](https://developer.mozilla.org/en-US/docs/Web/API/Response) is generated, with a matching [MIME type](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types) in the `Content-Type` header of the response — for example, if the path `/workers.jpg` is requested, a new response is returned with the header `Content-type: image/jpeg`.

@@ -15,11 +15,7 @@
     "removeComments": true,
     "sourceMap": false,
     "checkJs": true,
-    "noEmit": true,
+    "noEmit": true
   },
-  "include": [
-    "assets",
-    "partials",
-    "config"
-  ]
+  "include": ["bin", "assets", "partials", "config"]
 }

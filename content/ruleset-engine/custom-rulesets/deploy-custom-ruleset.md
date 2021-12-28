@@ -60,7 +60,7 @@ header: Response
         "id": "{phase-rule-id}",
         "version": "1",
         "action": "execute",
-        "description":"Execute custom ruleset",
+        "description": "Execute custom ruleset",
         "action_parameters": {
           "id": "{custom-ruleset-id}",
           "version": "latest"

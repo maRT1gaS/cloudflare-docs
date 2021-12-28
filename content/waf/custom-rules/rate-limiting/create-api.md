@@ -71,11 +71,7 @@ header: Response
         "version": "1",
         "action": "block",
         "ratelimit": {
-          "characteristics": [
-            "cf.colo.id",
-            "http.request.headers[\"x-api-key\"]",
-            "ip.src"
-          ],
+          "characteristics": ["cf.colo.id", "http.request.headers[\"x-api-key\"]", "ip.src"],
           "period": 60,
           "requests_per_period": 100,
           "mitigation_timeout": 600,

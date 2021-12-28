@@ -29,7 +29,7 @@ To recap the basics of HTML5 forms, a `form` element generally contains an `acti
 
 ```html
 <form action="/new_submission">
-  <input type="text" name="first_name" id="first_name"></input>
+  <input type="text" name="first_name" id="first_name" />
   <button type="submit">Submit</button>
 </form>
 ```
@@ -193,19 +193,19 @@ In `index.js`, begin by setting up a simple Workers handler that can respond to 
 filename: index.js
 ---
 addEventListener('fetch', event => {
-  event.respondWith(handleRequest(event.request))
-})
+  event.respondWith(handleRequest(event.request));
+});
 
-const FORM_URL = "https://airtable-form-example.pages.dev"
+const FORM_URL = 'https://airtable-form-example.pages.dev';
 
 async function handleRequest(request) {
-  const url = new URL(request.url)
+  const url = new URL(request.url);
 
-  if (url.pathname === "/submit") {
-    return submitHandler(request)
+  if (url.pathname === '/submit') {
+    return submitHandler(request);
   }
 
-  return Response.redirect(FORM_URL)
+  return Response.redirect(FORM_URL);
 }
 ```
 
@@ -216,40 +216,33 @@ The `submitHandler` has two functions—first, it will parse the form data comin
 filename: index.js
 ---
 const submitHandler = async request => {
-  if (request.method !== "POST") {
-    return new Response("Method Not Allowed", {
-      status: 405
-    })
+  if (request.method !== 'POST') {
+    return new Response('Method Not Allowed', {
+      status: 405,
+    });
   }
 
   const body = await request.formData();
 
-  const {
-    first_name,
-    last_name,
-    email,
-    phone,
-    subject,
-    message
-  } = Object.fromEntries(body)
+  const { first_name, last_name, email, phone, subject, message } = Object.fromEntries(body);
 
   // The keys in "fields" are case-sensitive, and
   // should exactly match the field names you set up
   // in your Airtable table, such as "First Name".
   const reqBody = {
     fields: {
-      "First Name": first_name,
-      "Last Name": last_name,
-      "Email": email,
-      "Phone Number": phone,
-      "Subject": subject,
-      "Message": message
-    }
-  }
+      'First Name': first_name,
+      'Last Name': last_name,
+      'Email': email,
+      'Phone Number': phone,
+      'Subject': subject,
+      'Message': message,
+    },
+  };
 
-  await createAirtableRecord(reqBody)
-  return Response.redirect(FORM_URL)
-}
+  await createAirtableRecord(reqBody);
+  return Response.redirect(FORM_URL);
+};
 ```
 
 While the majority of this function is concerned with parsing the request _body_ (the data being sent as part of the request), there are two important things to note. First, if the HTTP method sent to this function _isn't_ `POST`, we'll return a new response with the status code of [`405 Method Not Allowed`](https://httpstatuses.com/405).
@@ -265,15 +258,18 @@ The `createAirtableRecord` function accepts a `body` parameter, which conforms t
 filename: index.js
 ---
 const createAirtableRecord = body => {
-  return fetch(`https://api.airtable.com/v0/${AIRTABLE_BASE_ID}/${encodeURIComponent(AIRTABLE_TABLE_NAME)}`, {
-    method: 'POST',
-    body: JSON.stringify(body),
-    headers: {
-      Authorization: `Bearer ${AIRTABLE_API_KEY}`,
-      'Content-type': `application/json`
+  return fetch(
+    `https://api.airtable.com/v0/${AIRTABLE_BASE_ID}/${encodeURIComponent(AIRTABLE_TABLE_NAME)}`,
+    {
+      method: 'POST',
+      body: JSON.stringify(body),
+      headers: {
+        'Authorization': `Bearer ${AIRTABLE_API_KEY}`,
+        'Content-type': `application/json`,
+      },
     }
-  })
-}
+  );
+};
 ```
 
 To make an authenticated request to Airtable, we need to provide three constants that represent data about our Airtable account, base, and table name. We've already set `AIRTABLE_API_KEY` using `wrangler secret`, since it's a value that should be encrypted. The _Airtable base ID_ and _table name_ are values that can be publicly shared in places like GitHub. We can use Wrangler's `vars` feature to pass public environment variables from `wrangler.toml`. Add a `vars` table at the end of your `wrangler.toml` file, as seen below:

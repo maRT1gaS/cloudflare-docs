@@ -42,7 +42,7 @@ To start managing existing Cloudflare resources in Terraform, for example, DNS r
 
 If you do not have a Terraform configuration file defined, you need the provider blocked defined as follows:
 
-```tf
+```hcl
 provider 'cloudflare' {
  # Cloudflare email saved in $CLOUDFLARE_EMAIL
  # Cloudflare API token saved in $CLOUDFLARE_API_TOKEN
@@ -65,7 +65,7 @@ $ go run cmd/cf-terraforming/main.go --email $CLOUDFLARE_EMAIL --token $CLOUDFLA
 
 If output to standard out, the result should look like the example below. In this case, you directly imported the configuration into your Terraform configuration file `importing-state.tf`.
 
-```tf
+```hcl
 resource "cloudflare_record" "mitigateddos_net_mitigateddos_net" {
     zone_id = var.zone_id
     name    = "@"

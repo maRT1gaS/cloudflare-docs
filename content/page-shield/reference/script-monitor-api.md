@@ -149,7 +149,7 @@ header: Response
       "hash": "9245aad577e846dd9b990b1b32425a3fae4aad8b8a28441a8b80084b6bb75a45",
       "js_integrity_score": 50,
       "fetched_at": "2021-11-18T03:58:07Z"
-    },
+    }
     // (...)
   ],
   "success": true,
@@ -188,7 +188,7 @@ curl -X GET "https://dash.cloudflare.com/api/v4/zones/{:zone_id}/script_monitor/
 header: Response
 ---
 {
- "result": {
+  "result": {
     "script_id": "8337233faec2357ff84465a919534e4d",
     "script_url": "https://malicious.example.com/badscript.js",
     "added_at": "2021-11-18T10:51:10.09615Z",
@@ -214,9 +214,9 @@ header: Response
       }
     ]
   },
- "success": true,
- "errors": [],
- "messages": []
+  "success": true,
+  "errors": [],
+  "messages": []
 }
 ```
 

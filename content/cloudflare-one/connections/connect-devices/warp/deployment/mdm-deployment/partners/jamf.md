@@ -14,18 +14,18 @@ Here is an example plist file with the accepted arguments:
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-    <dict>
-        <key>organization</key>
-        <string>yourorganization</string>
-        <key>auto_connect</key>
-        <integer>1</integer>
-        <key>switch_locked</key>
-        <false />
-        <key>service_mode</key>
-        <string>warp</string>
-        <key>support_url</key>
-        <string>https://support.example.com</string>
-    </dict>
+  <dict>
+    <key>organization</key>
+    <string>yourorganization</string>
+    <key>auto_connect</key>
+    <integer>1</integer>
+    <key>switch_locked</key>
+    <false />
+    <key>service_mode</key>
+    <string>warp</string>
+    <key>support_url</key>
+    <string>https://support.example.com</string>
+  </dict>
 </plist>
 ```
 
@@ -35,9 +35,9 @@ Here is an example `.mobileconfig` file with the accepted arguments:
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-    <dict>
+  <dict>
     <key>PayloadContent</key>
-    <array/>
+    <array />
     <key>PayloadDisplayName</key>
     <string>Cloudflare WARP</string>
     <key>PayloadIdentifier</key>
@@ -45,59 +45,58 @@ Here is an example `.mobileconfig` file with the accepted arguments:
     <key>PayloadOrganization</key>
     <string>Cloudflare, Ltd.</string>
     <key>PayloadRemovalDisallowed</key>
-    <false/>
+    <false />
     <key>PayloadType</key>
     <string>Configuration</string>
     <key>PayloadUUID</key>
     <string>F5046847-2B1C-4DA0-A872-F6E040B1B20E</string>
     <key>PayloadVersion</key>
     <integer>1</integer>
+    <key>PayloadContent</key>
+    <array>
+      <dict>
+        <key>PayloadDisplayName</key>
+        <string>Custom</string>
+        <key>PayloadIdentifier</key>
+        <string>com.cloudflare.warp</string>
+        <key>PayloadOrganization</key>
+        <string>Cloudflare Ltd.</string>
+        <key>PayloadType</key>
+        <string>com.apple.ManagedClient.preferences</string>
+        <key>PayloadUUID</key>
+        <string>C2575334-358E-4925-8B29-30B4348D31E3</string>
+        <key>PayloadVersion</key>
+        <integer>1</integer>
+        <key>PayloadEnabled</key>
+        <true />
         <key>PayloadContent</key>
-        <array>
-            <dict>
-                <key>PayloadDisplayName</key>
-                <string>Custom</string>
-                <key>PayloadIdentifier</key>
-                <string>com.cloudflare.warp</string>
-                <key>PayloadOrganization</key>
-                <string>Cloudflare Ltd.</string>
-                <key>PayloadType</key>
-                <string>com.apple.ManagedClient.preferences</string>
-                <key>PayloadUUID</key>
-                <string>C2575334-358E-4925-8B29-30B4348D31E3</string>
-                <key>PayloadVersion</key>
-                <integer>1</integer>
-                <key>PayloadEnabled</key>
-                <true/>
-                <key>PayloadContent</key>
+        <dict>
+          <key>com.cloudflare.warp</key>
+          <dict>
+            <key>Forced</key>
+            <array>
+              <dict>
+                <key>mcx_preference_settings</key>
                 <dict>
-                    <key>com.cloudflare.warp</key>
-                    <dict>
-                        <key>Forced</key>
-                        <array>
-                            <dict>
-                                <key>mcx_preference_settings</key>
-                                <dict>
-                                    <key>organization</key>
-                                    <string>yourorganization</string>
-                                    <key>auto_connect</key>
-                                    <integer>1</integer>
-                                    <key>switch_locked</key>
-                                    <false />
-                                    <key>service_mode</key>
-                                    <string>warp</string>
-                                    <key>support_url</key>
-                                    <string>https://support.example.com</string>
-                                </dict>
-                            </dict>
-                        </array>
-                    </dict>
+                  <key>organization</key>
+                  <string>yourorganization</string>
+                  <key>auto_connect</key>
+                  <integer>1</integer>
+                  <key>switch_locked</key>
+                  <false />
+                  <key>service_mode</key>
+                  <string>warp</string>
+                  <key>support_url</key>
+                  <string>https://support.example.com</string>
                 </dict>
-            </dict>
-        </array>
-    </dict>
+              </dict>
+            </array>
+          </dict>
+        </dict>
+      </dict>
+    </array>
+  </dict>
 </plist>
-
 ```
 
 For a description of each argument and what it means, see [deployment parameters](/connections/connect-devices/warp/deployment/mdm-deployment/parameters).
@@ -159,16 +158,16 @@ To proceed with the installation, here is an example of the XML code you will ne
 
 ```xml
 <dict>
-    <key>organization</key>
-    <string>yourorganization</string>
-    <key>auto_connect</key>
-    <integer>1</integer>
-    <key>switch_locked</key>
-    <false />
-    <key>service_mode</key>
-    <string>warp</string>
-    <key>support_url</key>
-    <string>https://support.example.com</string>
+  <key>organization</key>
+  <string>yourorganization</string>
+  <key>auto_connect</key>
+  <integer>1</integer>
+  <key>switch_locked</key>
+  <false />
+  <key>service_mode</key>
+  <string>warp</string>
+  <key>support_url</key>
+  <string>https://support.example.com</string>
 </dict>
 ```
 

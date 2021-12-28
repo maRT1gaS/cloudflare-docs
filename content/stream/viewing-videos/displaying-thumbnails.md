@@ -24,7 +24,7 @@ Using the `poster` query parameter in the embed URL, you can set a thumbnail to 
 ```html
 <iframe
   src="https://iframe.videodelivery.net/5d5bc37ffcf54c9b82e996823bffbb81?poster=https%3A%2F%2Fvideodelivery.net%2F5d5bc37ffcf54c9b82e996823bffbb81%2Fthumbnails%2Fthumbnail.jpg%3Ftime%3D68s%26height%3D270"
-  style="border: none;"
+  style="border: none"
   height="720"
   width="1280"
   allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"

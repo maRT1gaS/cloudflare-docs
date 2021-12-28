@@ -42,7 +42,7 @@ Read more about [installing `wrangler`](/cli-wrangler/install-update).
 
 View this Hello World example in the Workers playground:
 
-```javascript
+```js
 addEventListener('fetch', event => {
   event.respondWith(handleRequest(event.request));
 });

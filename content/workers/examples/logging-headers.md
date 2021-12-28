@@ -101,20 +101,21 @@ console.log(`Request headers: ${requestHeaders}`);
 [ES2019 provides `Object.fromEntries`](https://github.com/tc39/proposal-object-from-entries), so it's just a simple call to convert the headers into an object:
 
 ```js
-let requestHeaders = JSON.stringify(Object.fromEntries(request.headers), null, 2);
+let headers = Object.fromEntries(request.headers);
+let requestHeaders = JSON.stringify(headers, null, 2);
 console.log(`Request headers: ${requestHeaders}`);
 ```
 
 This results in something like:
 
 ```js
-Request headers: {
-  "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8",
-  "accept-encoding": "gzip",
-  "accept-language": "en-US,en;q=0.9",
-  "cf-ipcountry": "US",
-  // ...
-}"
+//=> Request headers: {
+//=>   "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8",
+//=>   "accept-encoding": "gzip",
+//=>   "accept-language": "en-US,en;q=0.9",
+//=>   "cf-ipcountry": "US",
+//=>   ...
+//=> }
 ```
 
 </ContentColumn>

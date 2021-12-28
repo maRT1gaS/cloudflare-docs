@@ -149,28 +149,21 @@ With the Module Worker format, `waitUntil` is moved and available on the `contex
 filename: service-worker.js
 ---
 // Format: Service Worker
-addEventListener("fetch", event => {
-  event.respondWith(
-    handler(event)
-  )
-})
+addEventListener('fetch', event => {
+  event.respondWith(handler(event));
+});
 
 async function handler(event) {
   // Forward / Proxy original request
-  let res = await fetch(event.request)
+  let res = await fetch(event.request);
 
   // Add custom header(s)
-  res = new Response(res.body, res)
-  res.headers.set("x-foo", "bar")
+  res = new Response(res.body, res);
+  res.headers.set('x-foo', 'bar');
 
   // Cache the response
   // NOTE: Does NOT block / wait
-  event.waitUntil(
-    caches.default.put(
-      event.request,
-      res.clone()
-    )
-  )
+  event.waitUntil(caches.default.put(event.request, res.clone()));
 
   // Done
   return res;
@@ -185,25 +178,20 @@ filename: module-worker.mjs
 export default {
   async fetch(request, env, context) {
     // Forward / Proxy original request
-    let res = await fetch(request)
+    let res = await fetch(request);
 
     // Add custom header(s)
-    res = new Response(res.body, res)
-    res.headers.set("x-foo", "bar")
+    res = new Response(res.body, res);
+    res.headers.set('x-foo', 'bar');
 
     // Cache the response
     // NOTE: Does NOT block / wait
-    context.waitUntil(
-      caches.default.put(
-        request,
-        res.clone()
-      )
-    )
+    context.waitUntil(caches.default.put(request, res.clone()));
 
     // Done
     return res;
-  }
-}
+  },
+};
 ```
 
 ### `passThroughOnException`
@@ -221,11 +209,11 @@ With the Module Worker format, `passThroughOnException` is available on the `con
 filename: service-worker.js
 ---
 // Format: Service Worker
-addEventListener("fetch", event => {
+addEventListener('fetch', event => {
   // Proxy to origin on unhandled/uncaught exceptions
-  event.passThroughOnException()
-  throw new Error("Oops")
-})
+  event.passThroughOnException();
+  throw new Error('Oops');
+});
 ```
 
 ```js
@@ -236,8 +224,8 @@ filename: module-worker.mjs
 export default {
   async fetch(request, env, context) {
     // Proxy to origin on unhandled/uncaught exceptions
-    context.passThroughOnException()
-    throw new Error("Oops")
-  }
-}
+    context.passThroughOnException();
+    throw new Error('Oops');
+  },
+};
 ```

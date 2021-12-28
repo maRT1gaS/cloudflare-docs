@@ -1,11 +1,19 @@
 <div id="docs-content" data-reach-skip-nav-content=""></div>
 
 <div class="DocsContent" page-type="document">
-	<article class="DocsMarkdown">
-		{{{ $page.content }}}
-	</article>
+  <div class="DocsContent--breadcrumbs">
+    <ul class="Breadcrumbs">
+      <li class="Breadcrumbs--item">
+        <a class="Link Link-without-underline Link-is-juicy" href="/pages/how-to">How to</a>
+      </li>
+    </ul>
+  </div>
+
+  <article class="DocsMarkdown">
+    {{{ $page.content }}}
+  </article>
 </div>
 
 <aside>
-	layouts/single.hbs
+  layouts/single.hbs
 </aside>

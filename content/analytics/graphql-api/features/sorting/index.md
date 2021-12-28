@@ -19,8 +19,7 @@ Ordering within nested structures is not supported.
 
 ### Raw data sorting
 
-```javascript
-
+```graphql
 firewallEventsAdaptive (orderBy: [clientCountryName_ASC]) {
     clientCountryName
 }
@@ -28,8 +27,7 @@ firewallEventsAdaptive (orderBy: [clientCountryName_ASC]) {
 
 ### Raw data sorting using multiple fields
 
-```javascript
-
+```graphql
 firewallEventsAdaptive (orderBy: [clientCountryName_ASC, datetime_DESC]) {
     clientCountryName
     datetime
@@ -38,8 +36,7 @@ firewallEventsAdaptive (orderBy: [clientCountryName_ASC, datetime_DESC]) {
 
 ### Group sorting by aggregation function
 
-```javascript
-
+```graphql
 httpRequests1hGroups (orderBy: [sum_bytes_DESC]){
     sum {
         bytes

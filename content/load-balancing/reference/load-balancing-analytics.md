@@ -68,21 +68,21 @@ header: Query
 ---
 {
   viewer {
-    zones(filter: {zoneTag: "your Zone ID"}) {
-         loadBalancingRequestsAdaptiveGroups(
-            limit: 100,
-            filter: {
-                datetime_geq: "2021-06-26T00:00:00Z",
-                datetime_leq: "2021-06-26T03:00:00Z",
-                lbName:"lb.example.com"
-            },
-            orderBy: [datetimeFifteenMinutes_DESC]
-        ) {
-          count
-          dimensions {
-            datetimeFifteenMinutes
-            coloCode
-            selectedPoolName
+    zones(filter: { zoneTag: "your Zone ID" }) {
+      loadBalancingRequestsAdaptiveGroups(
+        limit: 100
+        filter: {
+          datetime_geq: "2021-06-26T00:00:00Z"
+          datetime_leq: "2021-06-26T03:00:00Z"
+          lbName: "lb.example.com"
+        }
+        orderBy: [datetimeFifteenMinutes_DESC]
+      ) {
+        count
+        dimensions {
+          datetimeFifteenMinutes
+          coloCode
+          selectedPoolName
         }
       }
     }
@@ -95,25 +95,25 @@ header: Query
 header: Response (truncated)
 ---
 {
-    "data": {
-        "viewer": {
-            "zones": [
-                {
-                    "loadBalancingRequestsAdaptiveGroups": [
-                        {
-                            "count": 4,
-                            "dimensions": {
-                                "coloCode": "IAD",
-                                "datetimeFifteenMinutes": "2021-06-26T00:45:00Z",
-                                "selectedPoolName": "us-east"
-                            }
-                        },
-                        // ...
-                    ]
-                }
-            ]
+  "data": {
+    "viewer": {
+      "zones": [
+        {
+          "loadBalancingRequestsAdaptiveGroups": [
+            {
+              "count": 4,
+              "dimensions": {
+                "coloCode": "IAD",
+                "datetimeFifteenMinutes": "2021-06-26T00:45:00Z",
+                "selectedPoolName": "us-east"
+              }
+            }
+            // ...
+          ]
         }
+      ]
     }
+  }
 }
 ```
 
@@ -133,17 +133,17 @@ header: Query
 ---
 {
   viewer {
-    zones(filter: {zoneTag: "your Zone ID"}) {
-         loadBalancingRequestsAdapative(
-            limit: 100,
-            filter: {
-                datetime_geq: "2021-06-26T00:00:00Z",
-                datetime_leq: "2021-06-26T03:00:00Z",
-                lbName:"lb.example.com",
-                coloCode: "SIN"
-            },
-            orderBy: [datetime_DESC]
-        ) {
+    zones(filter: { zoneTag: "your Zone ID" }) {
+      loadBalancingRequestsAdapative(
+        limit: 100
+        filter: {
+          datetime_geq: "2021-06-26T00:00:00Z"
+          datetime_leq: "2021-06-26T03:00:00Z"
+          lbName: "lb.example.com"
+          coloCode: "SIN"
+        }
+        orderBy: [datetime_DESC]
+      ) {
         selectedPoolName
         pools {
           poolName
@@ -162,40 +162,40 @@ header: Query
 header: Response (truncated)
 ---
 {
-    "data": {
-        "viewer": {
-            "zones": [
+  "data": {
+    "viewer": {
+      "zones": [
+        {
+          "loadBalancingRequestsAdaptive": [
+            {
+              "pools": [
                 {
-                    "loadBalancingRequestsAdaptive": [
-                        {
-                            "pools": [
-                                {
-                                    "avgRttMs": 67,
-                                    "healthCheckEnabled": 1,
-                                    "healthy": 1,
-                                    "poolName": "asia-ne"
-                                },
-                                {
-                                    "avgRttMs": 156,
-                                    "healthCheckEnabled": 1,
-                                    "healthy": 1,
-                                    "poolName": "us-east_and_asia-ne"
-                                },
-                                {
-                                    "avgRttMs": 237,
-                                    "healthCheckEnabled": 1,
-                                    "healthy": 1,
-                                    "poolName": "us-east"
-                                },
-                            ],
-                            "selectedPoolName": "asia-ne"
-                        },
-                      // ...
-                    ]
+                  "avgRttMs": 67,
+                  "healthCheckEnabled": 1,
+                  "healthy": 1,
+                  "poolName": "asia-ne"
+                },
+                {
+                  "avgRttMs": 156,
+                  "healthCheckEnabled": 1,
+                  "healthy": 1,
+                  "poolName": "us-east_and_asia-ne"
+                },
+                {
+                  "avgRttMs": 237,
+                  "healthCheckEnabled": 1,
+                  "healthy": 1,
+                  "poolName": "us-east"
                 }
-            ]
+              ],
+              "selectedPoolName": "asia-ne"
+            }
+            // ...
+          ]
         }
+      ]
     }
+  }
 }
 ```
 

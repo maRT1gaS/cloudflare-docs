@@ -21,8 +21,8 @@ Since video ids are effectively public within signed URLs, you will need to turn
 
 Restricting viewing can be done by updating the video's metadata.
 
-```bash
-curl -X POST -H "Authorization: Bearer $TOKEN" "https://api.cloudflare.com/client/v4/accounts/$ACCOUNT/stream/$VIDEOID" -H "Content-Type: application/json" -d "{\"uid\": \"$VIDEOID\", \"requireSignedURLs\": true }"
+```sh
+$ curl -X POST -H "Authorization: Bearer $TOKEN" "https://api.cloudflare.com/client/v4/accounts/$ACCOUNT/stream/$VIDEOID" -H "Content-Type: application/json" -d "{\"uid\": \"$VIDEOID\", \"requireSignedURLs\": true }"
 ```
 
 Response:
@@ -55,8 +55,8 @@ You can program your app to generate token in two ways:
 
 You can call the `/token` endpoint for any video that is marked private to get a signed url token which expires in one hour:
 
-```bash
-curl \
+```sh
+$ curl \
 -X POST \
 -H "Authorization: Bearer $TOKEN" \
 https://api.cloudflare.com/client/v4/accounts/$ACCOUNT/stream/$VIDEOID/token
@@ -80,7 +80,7 @@ To render the video, insert the `token` value in place of the `video id`:
 ```html
 <iframe
   src="https://iframe.videodelivery.net/eyJhbGciOiJSUzI1NiIsImtpZCI6ImNkYzkzNTk4MmY4MDc1ZjJlZjk2MTA2ZDg1ZmNkODM4In0.eyJraWQiOiJjZGM5MzU5ODJmODA3NWYyZWY5NjEwNmQ4NWZjZDgzOCIsImV4cCI6IjE2MjE4ODk2NTciLCJuYmYiOiIxNjIxODgyNDU3In0.iHGMvwOh2-SuqUG7kp2GeLXyKvMavP-I2rYCni9odNwms7imW429bM2tKs3G9INms8gSc7fzm8hNEYWOhGHWRBaaCs3U9H4DRWaFOvn0sJWLBitGuF_YaZM5O6fqJPTAwhgFKdikyk9zVzHrIJ0PfBL0NsTgwDxLkJjEAEULQJpiQU1DNm0w5ctasdbw77YtDwdZ01g924Dm6jIsWolW0Ic0AevCLyVdg501Ki9hSF7kYST0egcll47jmoMMni7ujQCJI1XEAOas32DdjnMvU8vXrYbaHk1m1oXlm319rDYghOHed9kr293KM7ivtZNlhYceSzOpyAmqNFS7mearyQ"
-  style="border: none;"
+  style="border: none"
   height="720"
   width="1280"
   allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
@@ -173,8 +173,8 @@ If you are generating a high-volume of tokens, it is best to generate new tokens
 
 ### Step 1: Call the `/stream/key` endpoint _once_ to obtain a key
 
-```bash
-curl -X POST -H "Authorization: Bearer $TOKEN"  "https://api.cloudflare.com/client/v4/accounts/$ACCOUNT/stream/keys"
+```sh
+$ curl -X POST -H "Authorization: Bearer $TOKEN"  "https://api.cloudflare.com/client/v4/accounts/$ACCOUNT/stream/keys"
 ```
 
 The response will return `pem` and `jwk` values.
@@ -280,7 +280,7 @@ If you are using the Stream Player, insert the token returned by the Worker in S
 ```html
 <iframe
   src="https://iframe.videodelivery.net/eyJhbGciOiJSUzI1NiIsImtpZCI6ImNkYzkzNTk4MmY4MDc1ZjJlZjk2MTA2ZDg1ZmNkODM4In0.eyJraWQiOiJjZGM5MzU5ODJmODA3NWYyZWY5NjEwNmQ4NWZjZDgzOCIsImV4cCI6IjE2MjE4ODk2NTciLCJuYmYiOiIxNjIxODgyNDU3In0.iHGMvwOh2-SuqUG7kp2GeLXyKvMavP-I2rYCni9odNwms7imW429bM2tKs3G9INms8gSc7fzm8hNEYWOhGHWRBaaCs3U9H4DRWaFOvn0sJWLBitGuF_YaZM5O6fqJPTAwhgFKdikyk9zVzHrIJ0PfBL0NsTgwDxLkJjEAEULQJpiQU1DNm0w5ctasdbw77YtDwdZ01g924Dm6jIsWolW0Ic0AevCLyVdg501Ki9hSF7kYST0egcll47jmoMMni7ujQCJI1XEAOas32DdjnMvU8vXrYbaHk1m1oXlm319rDYghOHed9kr293KM7ivtZNlhYceSzOpyAmqNFS7mearyQ"
-  style="border: none;"
+  style="border: none"
   height="720"
   width="1280"
   allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
@@ -297,7 +297,7 @@ If you are using your own player, replace the video id in the manifest url with 
 You can create up to 1,000 keys and rotate them at your convenience.
 Once revoked all tokens created with that key will be invalidated.
 
-```js
+```json
 // curl -X DELETE -H "Authorization: Bearer $TOKEN"  "https://api.cloudflare.com/client/v4/accounts/$ACCOUNT/stream/keys/$KEYID"
 {
   "result": "Revoked",
@@ -335,13 +335,15 @@ Depending on the rule type, accessRules support 2 additional properties:
 **_Example 1: Block views from a specific country_**
 
 ```json
-"accessRules": [
-	{
-		"type": "ip.geoip.country",
-		"action": "block",
-		"country": ["US", "DE", "MX"],
-	},
-]
+{
+  "accessRules": [
+    {
+      "type": "ip.geoip.country",
+      "action": "block",
+      "country": ["US", "DE", "MX"]
+    }
+  ]
+}
 ```
 
 The first rule matches on country, US, DE, and MX here. When that rule matches, the block action will have the token considered invalid. If the first rule doesn't match, there are no further rules to evaluate. The behavior in this situation is to consider the token valid.
@@ -349,22 +351,24 @@ The first rule matches on country, US, DE, and MX here. When that rule matches, 
 **_Example 2: Allow only views from specific country or IPs_**
 
 ```json
-"accessRules": [
-	{
-		"type": "ip.geoip.country",
-		"country": ["US", "MX"],
-		"action": "allow",
-	},
-	{
-		"type": "ip.src",
-		"ip": ["93.184.216.0/24", "2400:cb00::/32"],
-		"action": "allow",
-	},
-	{
-		"type": "any",
-		"action": "block",
-	},
-]
+{
+  "accessRules": [
+    {
+      "type": "ip.geoip.country",
+      "country": ["US", "MX"],
+      "action": "allow"
+    },
+    {
+      "type": "ip.src",
+      "ip": ["93.184.216.0/24", "2400:cb00::/32"],
+      "action": "allow"
+    },
+    {
+      "type": "any",
+      "action": "block"
+    }
+  ]
+}
 ```
 
 The first rule matches on country, US and MX here. When that rule matches, the allow action will have the token considered valid. If it doesn't match we continue evaluating rules
@@ -389,7 +393,7 @@ In the dashboard, you will see a text box by each video labeled `Enter allowed o
 You can also control embed limitation programmatically using the Stream API. `uid` in the example below refers to the video id.
 
 ```sh
-curl -X POST \
+$ curl -X POST \
 -H "Authorization: Bearer $TOKEN" \
 -d "{\"uid\": \"$VIDEOID\", \"allowedOrigins\": [\"example.com\"]}" \
 https://api.cloudflare.com/client/v4/accounts/$ACCOUNT/stream/$VIDEOID

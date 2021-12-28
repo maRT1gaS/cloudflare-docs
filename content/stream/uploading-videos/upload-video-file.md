@@ -164,7 +164,6 @@ func main() {
 
 	uploader.Upload()
 }
-
 ```
 
 You can also get the progress of the upload if you're running the upload in a goroutine.
@@ -196,7 +195,7 @@ Set up an index.js and configure:
 - API endpoint with your Cloudflare Account ID
 - Request headers to include a API token
 
-```javascript
+```js
 var fs = require('fs');
 var tus = require('tus-js-client');
 

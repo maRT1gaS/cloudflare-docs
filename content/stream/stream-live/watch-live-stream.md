@@ -148,7 +148,7 @@ This is what a response looks like:
 ```json
 {
   "result": [
-...
+    // ...
     {
       "uid": "2ba59740c897a197df70814fd5ad991",
       "thumbnail": "https://videodelivery.net/2ba59740c897a197df70814fd5ad991/thumbnails/thumbnail.jpg",

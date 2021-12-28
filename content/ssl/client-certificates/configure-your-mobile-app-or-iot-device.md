@@ -118,22 +118,22 @@ $ curl -v -H "Content-Type: application/json" -d '{"temperature":'''$TEMPERATURE
 
 A GET request to the `temps` endpoint returns the most recent readings, including the one submitted in the example above:
 
-```json
+```sh
 $ curl -s https://shield.upinatoms.com/temps | jq .
-[
-  {
-    "temperature": 36.3,
-    "time": "2020-09-28T02:57:49Z"
-  },
-  {
-    "temperature": 36.7,
-    "time": "2020-09-28T02:54:56Z"
-  },
-  {
-    "temperature": 36.2,
-    "time": "2020-09-28T02:33:08Z"
-  }
-]
+# [
+#   {
+#     "temperature": 36.3,
+#     "time": "2020-09-28T02:57:49Z"
+#   },
+#   {
+#     "temperature": 36.7,
+#     "time": "2020-09-28T02:54:56Z"
+#   },
+#   {
+#     "temperature": 36.2,
+#     "time": "2020-09-28T02:33:08Z"
+#   }
+# ]
 ```
 
 ---

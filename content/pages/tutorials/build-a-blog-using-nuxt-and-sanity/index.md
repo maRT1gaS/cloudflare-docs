@@ -118,9 +118,7 @@ Finally, add `@nuxtjs/sanity` as a **build module** in your Nuxt configuration:
 filename: nuxt.config.js
 ---
 {
-  buildModules: [
-    "@nuxtjs/sanity/module"
-  ]
+  buildModules: ['@nuxtjs/sanity/module'];
 }
 ```
 
@@ -132,7 +130,7 @@ With Sanity configured in your application, you can begin using it to render you
 
 To begin, update the `index` page, which will be rendered when you visit the root route (`/`). In `pages/index.vue`:
 
-```vue
+```html
 ---
 filename: pages/index.vue
 ---
@@ -197,8 +195,8 @@ If you have not used Sanity before, you will probably be unfamiliar with GROQ, t
 ---
 header: A basic GROQ query
 ---
-const query = groq`*[_type == "post"]`
-const posts = await $sanity.fetch(query)
+const query = groq`*[_type == "post"]`;
+const posts = await $sanity.fetch(query);
 ```
 
 ### Setting up the blog post page
@@ -207,7 +205,7 @@ Our `index` page renders a link for each blog post in our dataset, using the `sl
 
 Nuxt has built-in support for these kind of pages, by creating a new file in `pages` in the format `_slug.vue`. In the `asyncData` function of your page, you can then use the `params` argument to reference the slug:
 
-```vue
+```html
 ---
 filename: pages/_slug.vue
 ---
@@ -223,7 +221,7 @@ filename: pages/_slug.vue
 
 With that in mind, you can build `pages/_slug.vue` to take the incoming `slug` value, make a query to Sanity to find the matching blog post, and render the `post` title for the blog post:
 
-```vue
+```html
 ---
 filename: pages/_slug.vue
 ---
@@ -288,9 +286,9 @@ After the package is installed, create `plugins/sanity-blocks.js`, which will im
 ---
 filename: plugins/sanity-blocks.js
 ---
-import Vue from "vue";
-import BlockContent from "sanity-blocks-vue-component";
-Vue.component("block-content", BlockContent);
+import Vue from 'vue';
+import BlockContent from 'sanity-blocks-vue-component';
+Vue.component('block-content', BlockContent);
 ```
 
 In your Nuxt configuration, `nuxt.config.js`, import that file as part of the `plugins` directive:
@@ -300,13 +298,13 @@ In your Nuxt configuration, `nuxt.config.js`, import that file as part of the `p
 filename: nuxt.config.js
 ---
 {
-  plugins: ["@/plugins/sanity-blocks.js"]
+  plugins: ['@/plugins/sanity-blocks.js'];
 }
 ```
 
 In `pages/_slug.vue`, you can now use the `<block-content>` component to render your content. This takes the format of a custom HTML component, and takes three arguments: `:blocks`, which indicates what to render (in our case, `child`), `v-for`, which accepts an iterator of where to get `child` from (in our case, `post.body`), and `:key`, which helps Vue [keep track of state rendering](https://vuejs.org/v2/guide/list.html#Maintaining-State) by providing a unique value for each post: that is, the `_id` value.
 
-```vue
+```html
 ---
 filename: pages/_slug.vue
 highlight: [6]
@@ -355,7 +353,7 @@ highlight: [6]
 
 In `pages/index.vue`, you can use the `block-content` component to render a summary of the content, by taking the first block in your blog post content and rendering it:
 
-```vue
+```html
 ---
 filename: pages/index.vue
 highlight: [11, 12, 13, 39]

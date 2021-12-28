@@ -197,9 +197,9 @@ Replace the contents of your `index.js` file with the skeleton of your API:
 ---
 header: index.js (skeleton)
 ---
-import {Router, listen} from 'worktop';
+import { Router, listen } from 'worktop';
 import faunadb from 'faunadb';
-import {getFaunaError} from './utils.js';
+import { getFaunaError } from './utils.js';
 
 const router = new Router();
 
@@ -207,7 +207,22 @@ const faunaClient = new faunadb.Client({
   secret: FAUNA_SECRET,
 });
 
-const {Create, Collection, Match, Index, Get, Ref, Paginate, Sum, Delete, Add, Select, Let, Var, Update} = faunadb.query;
+const {
+  Create,
+  Collection,
+  Match,
+  Index,
+  Get,
+  Ref,
+  Paginate,
+  Sum,
+  Delete,
+  Add,
+  Select,
+  Let,
+  Var,
+  Update,
+} = faunadb.query;
 
 router.add('GET', '/', async (request, response) => {
   response.send(200, 'hello world');
@@ -239,24 +254,21 @@ header: Creating product documents
 ---
 router.add('POST', '/products', async (request, response) => {
   try {
-    const {serialNumber, title, weightLbs} = await request.body();
+    const { serialNumber, title, weightLbs } = await request.body();
 
     const result = await faunaClient.query(
-      Create(
-        Collection('Products'),
-        {
-          data: {
-            serialNumber,
-            title,
-            weightLbs,
-            quantity: 0
-          }
-        }
-      )
+      Create(Collection('Products'), {
+        data: {
+          serialNumber,
+          title,
+          weightLbs,
+          quantity: 0,
+        },
+      })
     );
 
     response.send(200, {
-      productId: result.ref.id
+      productId: result.ref.id,
     });
   } catch (error) {
     const faunaError = getFaunaError(error);
@@ -271,17 +283,14 @@ This route applies an FQL query written in JavaScript that creates a new documen
 ---
 header: Create query in FQL inside JavaScript
 ---
-Create(
-  Collection('Products'),
-  {
-    data: {
-      serialNumber,
-      title,
-      weightLbs,
-      quantity: 0
-    }
-  }
-)
+Create(Collection('Products'), {
+  data: {
+    serialNumber,
+    title,
+    weightLbs,
+    quantity: 0,
+  },
+});
 ```
 
 To see what a document looks like, navigate to the **Shell** tab in the Fauna dashboard and run the following query:
@@ -290,17 +299,14 @@ To see what a document looks like, navigate to the **Shell** tab in the Fauna da
 ---
 header: Create query in pure FQL
 ---
-Create(
-  Collection('Products'),
-  {
-    data: {
-      serialNumber: "A48432348",
-      title: "Gaming Console",
-      weightLbs: 5,
-      quantity: 0
-    }
-  }
-)
+Create(Collection('Products'), {
+  data: {
+    serialNumber: 'A48432348',
+    title: 'Gaming Console',
+    weightLbs: 5,
+    quantity: 0,
+  },
+});
 ```
 
 Fauna returns the created document:
@@ -310,15 +316,15 @@ Fauna returns the created document:
 header: Newly created document
 ---
 let newDoc = {
-  ref: Ref(Collection("Products"), "<document_id>"),
+  ref: Ref(Collection('Products'), '<document_id>'),
   ts: 1640000000000000,
   data: {
-    serialNumber: "A48432348",
-    title: "Gaming Console",
+    serialNumber: 'A48432348',
+    title: 'Gaming Console',
     weightLbs: 5,
-    quantity: 0
-  }
-}
+    quantity: 0,
+  },
+};
 ```
 
 - **ref** - A [reference][fql-reference] to the newly created document.
@@ -332,7 +338,7 @@ Examining the route you create, when the query is successful, the ID of the newl
 header: Returning the new document ID
 ---
 response.send(200, {
-  productId: result.ref.id
+  productId: result.ref.id,
 });
 ```
 
@@ -360,12 +366,9 @@ router.add('GET', '/products/:productId', async (request, response) => {
   try {
     const productId = request.params.productId;
 
-    const result = await faunaClient.query(
-      Get(Ref(Collection('Products'), productId))
-    );
+    const result = await faunaClient.query(Get(Ref(Collection('Products'), productId)));
 
     response.send(200, result);
-
   } catch (error) {
     const faunaError = getFaunaError(error);
     response.send(faunaError.status, faunaError);
@@ -379,7 +382,7 @@ The FQL query uses the [Get][fql-get] function to retrieve a full document from 
 ---
 header: Retrieving a document by ID in FQL inside JavaScript
 ---
-Get(Ref(Collection('Products'), productId))
+Get(Ref(Collection('Products'), productId));
 ```
 
 If the document exists, return it in the response body:
@@ -405,9 +408,7 @@ router.add('DELETE', '/products/:productId', async (request, response) => {
   try {
     const productId = request.params.productId;
 
-    const result = await faunaClient.query(
-      Delete(Ref(Collection('Products'), productId))
-    );
+    const result = await faunaClient.query(Delete(Ref(Collection('Products'), productId)));
 
     response.send(200, result);
   } catch (error) {
@@ -483,12 +484,20 @@ The response should be the new document serialized to JSON:
 header: Read product response
 ---
 {
-  "ref": {"@ref":{"id":"<document_id>","collection":{"@ref":{"id":"Products","collection":{"@ref":{"id":"collections"}}}}}},"ts":1617887459975000,
+  "ref": {
+    "@ref": {
+      "id": "<document_id>",
+      "collection": {
+        "@ref": { "id": "Products", "collection": { "@ref": { "id": "collections" } } }
+      }
+    }
+  },
+  "ts": 1617887459975000,
   "data": {
     "serialNumber": "H56N33834",
     "title": "Bluetooth Headphones",
-    "weightLbs":0.5,
-    "quantity":0
+    "weightLbs": 0.5,
+    "quantity": 0
   }
 }
 ```
@@ -521,26 +530,20 @@ header: Updating inventory quantity
 router.add('PATCH', '/products/:productId/add-quantity', async (request, response) => {
   try {
     const productId = request.params.productId;
-    const {quantity} = await request.body();
+    const { quantity } = await request.body();
 
     const result = await faunaClient.query(
       Let(
         {
           productRef: Ref(Collection('Products'), productId),
           productDocument: Get(Var('productRef')),
-          currentQuantity: Select(['data', 'quantity'], Var('productDocument'))
+          currentQuantity: Select(['data', 'quantity'], Var('productDocument')),
         },
-        Update(
-          Var('productRef'),
-          {
-            data: {
-              quantity: Add(
-                Var('currentQuantity'),
-                quantity
-              )
-            }
-          }
-        )
+        Update(Var('productRef'), {
+          data: {
+            quantity: Add(Var('currentQuantity'), quantity),
+          },
+        })
       )
     );
 
@@ -562,20 +565,14 @@ Let(
   {
     productRef: Ref(Collection('Products'), productId),
     productDocument: Get(Var('productRef')),
-    currentQuantity: Select(['data', 'quantity'], Var('productDocument'))
+    currentQuantity: Select(['data', 'quantity'], Var('productDocument')),
   },
-  Update(
-    Var('productRef'),
-    {
-      data: {
-        quantity: Add(
-          Var('currentQuantity'),
-          quantity
-        )
-      }
-    }
-  )
-)
+  Update(Var('productRef'), {
+    data: {
+      quantity: Add(Var('currentQuantity'), quantity),
+    },
+  })
+);
 ```
 
 This query uses the FQL [Let][fql-let] function to set some variables for use later in the query:
@@ -592,17 +589,11 @@ After declaring the variables, `Let` accepts an FQL expression as a second param
 ---
 header: Updating a product document
 ---
-Update(
-  Var('productRef'),
-  {
-    data: {
-      quantity: Add(
-        Var('currentQuantity'),
-        quantity
-      )
-    }
-  }
-)
+Update(Var('productRef'), {
+  data: {
+    quantity: Add(Var('currentQuantity'), quantity),
+  },
+});
 ```
 
 The FQL [Update][fql-update] function only updates the provided properties of a document. In this example, only the `quantity` property is updated.
@@ -635,7 +626,14 @@ The response should be the entire full updated document with five additional ite
 header: Update product response
 ---
 {
-  "ref": {"@ref":{"id":"<document_id>","collection":{"@ref":{"id":"Products","collection":{"@ref":{"id":"collections"}}}}}},
+  "ref": {
+    "@ref": {
+      "id": "<document_id>",
+      "collection": {
+        "@ref": { "id": "Products", "collection": { "@ref": { "id": "collections" } } }
+      }
+    }
+  },
   "ts": 1617890383200000,
   "data": {
     "serialNumber": "H56N33834",

@@ -80,11 +80,11 @@ You can now access this KV namespace as the variable `KV_FROM_RUST` in JS. To re
 filename: worker/worker.js
 ---
 addEventListener('fetch', event => {
-  event.respondWith(handleRequest(event.request))
-})
+  event.respondWith(handleRequest(event.request));
+});
 
 const { handle } = wasm_bindgen;
-const instance =  wasm_bindgen(wasm);
+const instance = wasm_bindgen(wasm);
 
 /**
  * Fetch and log a request

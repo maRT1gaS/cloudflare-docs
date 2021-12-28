@@ -22,12 +22,14 @@ The locations of these files can be found in the [Stream API for each video](htt
 The `playback` object contains entries for all available playback methods
 
 ```json
-//...
-"playback": {
+{
+  //...
+  "playback": {
     "hls": "https://videodelivery.net/5d5bc37ffcf54c9b82e996823bffbb81/manifest/video.m3u8",
     "dash": "https://videodelivery.net/5d5bc37ffcf54c9b82e996823bffbb81/manifest/video.mpd"
+  }
+  //...
 }
-//...
 ```
 
 ### Recommendations

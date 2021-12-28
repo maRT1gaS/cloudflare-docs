@@ -23,7 +23,7 @@ $ wrangler generate my-worker
 
 Open the `index.js` file in your project's directory and replace the content with:
 
-```javascript
+```js
 addEventListener('fetch', event => {
   event.respondWith(handleRequest(event.request));
 });

@@ -30,15 +30,15 @@ It is not currently possible to send fetch requests to other Workers (Worker to 
 ---
 highlight: [8]
 ---
-addEventListener("fetch", event => {
+addEventListener('fetch', event => {
   // NOTE: can’t use fetch here, as we’re not in an async scope yet
-  event.respondWith(eventHandler(event))
-})
+  event.respondWith(eventHandler(event));
+});
 
 async function eventHandler(event) {
   // fetch can be awaited here since `event.respondWith()` waits for the Promise it receives to settle
-  const resp = await fetch(event.request)
-  return resp
+  const resp = await fetch(event.request);
+  return resp;
 }
 ```
 

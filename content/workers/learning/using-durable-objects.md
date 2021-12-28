@@ -101,21 +101,21 @@ This is shown in the [Counter example](#example---counter) below, which is parti
 
 ```js
 export class Counter {
-    constructor(state, env) {
-        this.state = state;
-        // `blockConcurrencyWhile()` ensures no requests are delivered until
-        // initialization completes.
-        this.state.blockConcurrencyWhile(async () => {
-            let stored = await this.state.storage.get("value");
-            // After initialization, future reads do not need to access storage.
-            this.value = stored || 0;
-        })
-    }
+  constructor(state, env) {
+    this.state = state;
+    // `blockConcurrencyWhile()` ensures no requests are delivered until
+    // initialization completes.
+    this.state.blockConcurrencyWhile(async () => {
+      let stored = await this.state.storage.get('value');
+      // After initialization, future reads do not need to access storage.
+      this.value = stored || 0;
+    });
+  }
 
-    // Handle HTTP requests from clients.
-    async fetch(request) {
-        ...
-    }
+  // Handle HTTP requests from clients.
+  async fetch(request) {
+    // ...
+  }
 }
 ```
 
@@ -307,7 +307,7 @@ in the surrounding inline array are acceptable.
 ### Durable Object migrations through Wrangler CLI
 
 <Aside type="warning" header="Deprecation Notice">
-    
+
 While CLI migrations initially served a way to quickly migrate Durable Objects, this method is now deprecated and will be removed in a future release.
 
 </Aside>

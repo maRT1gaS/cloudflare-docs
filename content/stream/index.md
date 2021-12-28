@@ -100,8 +100,8 @@ highlight: [6]
       "name": "My First Stream Video"
     },
     "created": "2020-10-16T20:20:17.872170843Z",
-    "size": 9032701,
-   //...
+    "size": 9032701
+    //...
   },
   "success": true,
   "errors": [],

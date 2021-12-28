@@ -106,9 +106,7 @@ highlight: [6]
     {
       "type": "ip.geoip.country",
       "action": "allow",
-      "country": [
-        "GB"
-      ]
+      "country": ["GB"]
     },
     {
       "type": "any",

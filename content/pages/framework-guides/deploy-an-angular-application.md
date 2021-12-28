@@ -76,7 +76,7 @@ Angular CLI expects to build and manage multiple projects by default.
 
 When you generated a new project, you called it `"my-angular-app"` which means that Angular CLI created an `angular.json` file with a `"my-angular-app"` configuration key under the `"projects"` block. The CLI does this to prepare your workspace for new projects and configurations to be added at any point in time. It should look similar to this:
 
-```js
+```json
 // angular.json
 {
   // ...
@@ -89,7 +89,7 @@ When you generated a new project, you called it `"my-angular-app"` which means t
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "outputPath": "dist/my-angular-app",
-            "index": "src/index.html",
+            "index": "src/index.html"
             // ...
           }
         }

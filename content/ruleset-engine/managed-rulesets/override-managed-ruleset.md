@@ -25,28 +25,31 @@ To apply an override for a Managed Ruleset:
 - Specify the `overrides` in the `action_parameters` of the rule that executes your Managed Ruleset.
 
 ```json
-"action_parameters": {
-  "id": "{ruleset-id}",
-  "overrides": {
-    // ruleset overrides
-    "property-to-modify": "value",
-    "property-to-modify": "value",
-    // tag overrides
-    "categories": [
-      {
-        "category": "{tag-name}",
-        "property-to-modify": "value",
-        "property-to-modify": "value"
-      }
-    ],
-    // rule overrides
-    "rules": [
-      {
-        "id": "{rule-id}",
-        "property-to-modify": "value",
-        "property-to-modify": "value"
-      }
-    ]
+{
+  // ...
+  "action_parameters": {
+    "id": "{ruleset-id}",
+    "overrides": {
+      // ruleset overrides
+      "property-to-modify": "value",
+      "property-to-modify": "value",
+      // tag overrides
+      "categories": [
+        {
+          "category": "{tag-name}",
+          "property-to-modify": "value",
+          "property-to-modify": "value"
+        }
+      ],
+      // rule overrides
+      "rules": [
+        {
+          "id": "{rule-id}",
+          "property-to-modify": "value",
+          "property-to-modify": "value"
+        }
+      ]
+    }
   }
 }
 ```

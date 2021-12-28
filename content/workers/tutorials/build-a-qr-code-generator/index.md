@@ -43,16 +43,16 @@ All Cloudflare Workers applications start by listening for `fetch` events, which
 ---
 filename: "index.js"
 ---
-addEventListener("fetch", event => {
-  event.respondWith(handleRequest(event.request))
-})
+addEventListener('fetch', event => {
+  event.respondWith(handleRequest(event.request));
+});
 
 /**
  * Fetch and log a request
  * @param {Request} request
  */
 function handleRequest(request) {
-  return new Response("Hello worker!")
+  return new Response('Hello worker!');
 }
 ```
 
@@ -76,8 +76,8 @@ filename: "index.js"
 highlight: [2, 3, 4]
 ---
 function handleRequest(request) {
-  if (request.method === "POST") {
-    return new Response("Hello worker!")
+  if (request.method === 'POST') {
+    return new Response('Hello worker!');
   }
 }
 ```
@@ -90,10 +90,10 @@ filename: "index.js"
 highlight: [5]
 ---
 function handleRequest(request) {
-  if (request.method === "POST") {
-    return new Response("Hello worker!")
+  if (request.method === 'POST') {
+    return new Response('Hello worker!');
   }
-  return new Response("Expected POST", { status: 405 })
+  return new Response('Expected POST', { status: 405 });
 }
 ```
 
@@ -106,7 +106,7 @@ highlight: [1, 2, 3]
 ---
 async function generate(request) {
   // TODO: Include QR code generation
-  return new Response("Hello worker!")
+  return new Response('Hello worker!');
 }
 
 async function handleRequest(request) {
@@ -122,8 +122,8 @@ filename: "index.js"
 highlight: [3]
 ---
 function handleRequest(request) {
-  if (request.method === "POST") {
-    return generate(request)
+  if (request.method === 'POST') {
+    return generate(request);
   }
   // ...
 }
@@ -159,11 +159,11 @@ In `index.js`, require the `qr-image` package as the variable `qr`. In the `gene
 filename: "index.js"
 highlight: [1, 2, 3, 4, 5, 6]
 ---
-const qr = require("qr-image")
+const qr = require('qr-image');
 
 async function generate(request) {
-  const { text } = await request.json()
-  const qr_png = qr.imageSync(text || "https://workers.dev")
+  const { text } = await request.json();
+  const qr_png = qr.imageSync(text || 'https://workers.dev');
 }
 ```
 
@@ -175,10 +175,10 @@ filename: "index.js"
 highlight: [3, 5]
 ---
 async function generate(request) {
-  const { text } = await request.json()
-  const headers = { "Content-Type": "image/png" }
-  const qr_png = qr.imageSync(text || "https://workers.dev")
-  return new Response(qr_png, { headers })
+  const { text } = await request.json();
+  const headers = { 'Content-Type': 'image/png' };
+  const qr_png = qr.imageSync(text || 'https://workers.dev');
+  return new Response(qr_png, { headers });
 }
 ```
 
@@ -206,17 +206,17 @@ const landing = `
     })
   }
 </script>
-`
+`;
 
 function handleRequest(request) {
-  if (request.method === "POST") {
-    return generate(request)
+  if (request.method === 'POST') {
+    return generate(request);
   }
   return new Response(landing, {
     headers: {
-      "Content-Type": "text/html"
-    }
-  })
+      'Content-Type': 'text/html',
+    },
+  });
 }
 ```
 
@@ -228,13 +228,13 @@ With the above steps complete, your serverless function is ready. The full versi
 ---
 filename: "index.js"
 ---
-const qr = require("qr-image")
+const qr = require('qr-image');
 
 async function generate(request) {
-  const { text } = await request.json()
-  const headers = { "Content-Type": "image/png" }
-  const qr_png = qr.imageSync(text || "https://workers.dev")
-  return new Response(qr_png, { headers })
+  const { text } = await request.json();
+  const headers = { 'Content-Type': 'image/png' };
+  const qr_png = qr.imageSync(text || 'https://workers.dev');
+  return new Response(qr_png, { headers });
 }
 
 const landing = `
@@ -252,22 +252,22 @@ const landing = `
     })
   }
 </script>
-`
+`;
 
 function handleRequest(request) {
-  if (request.method === "POST") {
-    return generate(request)
+  if (request.method === 'POST') {
+    return generate(request);
   }
   return new Response(landing, {
     headers: {
-      "Content-Type": "text/html"
-    }
-  })
+      'Content-Type': 'text/html',
+    },
+  });
 }
 
-addEventListener("fetch", event => {
-  event.respondWith(handleRequest(event.request))
-})
+addEventListener('fetch', event => {
+  event.respondWith(handleRequest(event.request));
+});
 ```
 
 ## Publish

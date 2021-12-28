@@ -103,31 +103,27 @@ With the deprecation of the `httpRequests1mByColoGroups` and `httpRequests1dByCo
 
 ```graphql
 {
-    viewer {
-        zones(filter: {zoneTag: $zoneTag}) {
-            series: httpRequestsAdaptiveGroups(
-                limit: 5,
-                orderBy: [ count_DESC ],
-                filter: {
-                    datetime_geq: $start
-                    datetime_lt: $end
-                    requestSource: 'eyeball'
-                }
-            ) {
-                count
-                avg {
-                    sampleInterval
-                }
-                sum {
-                    visits
-                    edgeResponseBytes
-                }
-                dimensions {
-                    coloCode
-                }
-            }
+  viewer {
+    zones(filter: { zoneTag: $zoneTag }) {
+      series: httpRequestsAdaptiveGroups(
+        limit: 5
+        orderBy: [count_DESC]
+        filter: { datetime_geq: $start, datetime_lt: $end, requestSource: "eyeball" }
+      ) {
+        count
+        avg {
+          sampleInterval
         }
+        sum {
+          visits
+          edgeResponseBytes
+        }
+        dimensions {
+          coloCode
+        }
+      }
     }
+  }
 }
 ```
 

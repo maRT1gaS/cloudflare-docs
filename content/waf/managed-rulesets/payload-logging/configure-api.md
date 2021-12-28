@@ -20,7 +20,7 @@ To configure:
 
    ```json
    ---
-   highlight: [3,4,5]
+   highlight: [5,6,7]
    ---
    {
      // ...
@@ -93,7 +93,7 @@ header: Response
         "last_updated": "2021-06-28T18:08:14.003361Z",
         "ref": "{ruleset-ref-1}",
         "enabled": true
-      },
+      }
       // ...
     ],
     "last_updated": "2021-06-28T18:08:14.003361Z",

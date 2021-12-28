@@ -10,7 +10,7 @@ pcx-content-type: reference
 
 Image Resizing can be used automatically with Next.js' [`next/image` component](https://nextjs.org/docs/api-reference/next/image). With a [custom loader](https://nextjs.org/docs/api-reference/next/image#loader) which applies Cloudflare Image Resizing, `next/image` will set an optimal width and quality for a given client.
 
-```javascript
+```js
 import Image from 'next/image';
 
 const normalizeSrc = src => {

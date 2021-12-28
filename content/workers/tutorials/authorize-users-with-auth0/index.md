@@ -74,28 +74,31 @@ const auth0 = {
   clientId: AUTH0_CLIENT_ID,
   clientSecret: AUTH0_CLIENT_SECRET,
   callbackUrl: AUTH0_CALLBACK_URL,
-}
+};
 
-const redirectUrl = state => `${auth0.domain}/authorize?response_type=code&client_id=${auth0.clientId}&redirect_uri=${auth0.callbackUrl}&scope=openid%20profile%20email&state=${encodeURIComponent(state)}`
+const redirectUrl = state =>
+  `${auth0.domain}/authorize?response_type=code&client_id=${auth0.clientId}&redirect_uri=${
+    auth0.callbackUrl
+  }&scope=openid%20profile%20email&state=${encodeURIComponent(state)}`;
 
-const generateStateParam = () => "stub"
+const generateStateParam = () => 'stub';
 
 const verify = async event => {
   // Verify a user based on an auth cookie and Workers KV data
-  return { accessToken: "123" }
-}
+  return { accessToken: '123' };
+};
 
 // Returns an array with the format
 //   [authorized, context]
 export const authorize = async event => {
-  const authorization = await verify(event)
+  const authorization = await verify(event);
   if (authorization.accessToken) {
-    return [true, { authorization }]
+    return [true, { authorization }];
   } else {
-    const state = await generateStateParam()
-    return [false, { redirectUrl: redirectUrl(state) }]
+    const state = await generateStateParam();
+    return [false, { redirectUrl: redirectUrl(state) }];
   }
-}
+};
 ```
 
 The `auth0` object wraps several secrets, which are encrypted values that can be defined and used by your script. In the [**Publish** section](/tutorials/authorize-users-with-auth0#publish) of this tutorial, you will define these secrets using the [`wrangler secret`](/cli-wrangler/commands#secret) command.
@@ -113,26 +116,26 @@ In `workers-site/index.js`, import the `authorize` function from `./auth0.js` an
 filename: workers-site/index.js
 highlight: [1, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22]
 ---
-import { authorize } from "./auth0"
+import { authorize } from './auth0';
 
-addEventListener("fetch", event => event.respondWith(handleEvent(event)))
+addEventListener('fetch', event => event.respondWith(handleEvent(event)));
 
 async function handleEvent(event) {
-  let request = event.request
-  let response = new Response(null)
-  const url = new URL(request.url)
+  let request = event.request;
+  let response = new Response(null);
+  const url = new URL(request.url);
 
   try {
-    const [authorized, { authorization, redirectUrl }] = await authorize(event)
+    const [authorized, { authorization, redirectUrl }] = await authorize(event);
 
     // BEGINNING OF WORKERS SITES
     // Make sure to not touch this code for the majority of the tutorial.
-    response = getAssetFromKV(event)
+    response = getAssetFromKV(event);
     // END OF WORKERS SITES
 
-    return response
+    return response;
   } catch (e) {
-    return new Response(e.message || e.toString(), { status: 500 })
+    return new Response(e.message || e.toString(), { status: 500 });
   }
 }
 ```
@@ -148,13 +151,13 @@ highlight: [3, 4, 5, 6, 7, 8, 9, 10, 11]
 ---
 async function handleEvent(event) {
   try {
-    const [authorized, { authorization, redirectUrl }] = await authorize(event)
+    const [authorized, { authorization, redirectUrl }] = await authorize(event);
     if (authorized && authorization.accessToken) {
       request = new Request(request, {
         headers: {
           Authorization: `Bearer ${authorization.accessToken}`,
         },
-      })
+      });
     }
     // END OF AUTHORIZATION CODE BLOCK
 
@@ -174,12 +177,12 @@ highlight: [6, 7, 8, 9, 10]
 ---
 async function handleEvent(event) {
   try {
-    const [authorized, { authorization, redirectUrl }] = await authorize(event)
+    const [authorized, { authorization, redirectUrl }] = await authorize(event);
     // END OF AUTHORIZATION CODE BLOCK
 
     // BEGINNING OF REDIRECT CODE BLOCK
     if (!authorized) {
-      return Response.redirect(redirectUrl)
+      return Response.redirect(redirectUrl);
     }
     // END OF REDIRECT CODE BLOCK
 
@@ -205,13 +208,13 @@ To begin, add a new block of code to `handleEvent`, which will parse the request
 filename: workers-site/index.js
 highlight: [1, 5, 6, 7, 8, 9]
 ---
-import { authorize, handleRedirect } from "./auth0"
+import { authorize, handleRedirect } from './auth0';
 
 async function handleEvent(event) {
   try {
     // BEGINNING OF HANDLE AUTH REDIRECT CODE BLOCK
-    if (url.pathname === "/auth") {
-      const authorizedResponse = await handleRedirect(event)
+    if (url.pathname === '/auth') {
+      const authorizedResponse = await handleRedirect(event);
     }
     // END OF HANDLE AUTH REDIRECT CODE BLOCK
 
@@ -229,24 +232,24 @@ The `handleRedirect` function, which you will export from `workers-site/auth0.js
 filename: workers-site/auth0.js
 ---
 export const handleRedirect = async event => {
-  const url = new URL(event.request.url)
+  const url = new URL(event.request.url);
 
-  const state = url.searchParams.get("state")
+  const state = url.searchParams.get('state');
   if (!state) {
-    return null
+    return null;
   }
 
-  const storedState = await AUTH_STORE.get(`state-${state}`)
+  const storedState = await AUTH_STORE.get(`state-${state}`);
   if (!storedState) {
-    return null
+    return null;
   }
 
-  const code = url.searchParams.get("code")
+  const code = url.searchParams.get('code');
   if (code) {
-    return exchangeCode(code)
+    return exchangeCode(code);
   }
-  return {}
-}
+  return {};
+};
 ```
 
 Define `exchangeCode`, which will take the `code` parameter, and make a request back to Auth0, exchanging it for an access token:
@@ -257,22 +260,22 @@ filename: workers-site/auth0.js
 ---
 const exchangeCode = async code => {
   const body = JSON.stringify({
-    grant_type: "authorization_code",
+    grant_type: 'authorization_code',
     client_id: auth0.clientId,
     client_secret: auth0.clientSecret,
     code,
     redirect_uri: auth0.callbackUrl,
-  })
+  });
 
   // We’ll define persistAuth in the next section
   return persistAuth(
-    await fetch(AUTH0_DOMAIN + "/oauth/token", {
-      method: "POST",
-      headers: { "content-type": "application/json" },
+    await fetch(AUTH0_DOMAIN + '/oauth/token', {
+      method: 'POST',
+      headers: { 'content-type': 'application/json' },
       body,
     })
-  )
-}
+  );
+};
 ```
 
 ### Persisting authorization data in Workers KV
@@ -284,14 +287,14 @@ Next define the `persistAuth` function to handle the request and parse the appro
 filename: workers-site/auth0.js
 ---
 const persistAuth = async exchange => {
-  const body = await exchange.json()
+  const body = await exchange.json();
 
   if (body.error) {
-    throw new Error(body.error)
+    throw new Error(body.error);
   }
 
-  console.log(body) // { access_token: "...", id_token: "...", ... }
-}
+  console.log(body); // { access_token: "...", id_token: "...", ... }
+};
 ```
 
 The `body` object — assuming no errors — will contain an `access_token`, `id_token`, and [other fields](https://auth0.com/docs/flows/guides/auth-code/add-login-auth-code#request-tokens) that you should persist inside of Workers KV, a key-value store that we can access inside of our Workers scripts. When you store data inside Workers KV, you need to persist it using a key. The `id_token` field, which is returned by Auth0, is a [JSON Web Token](https://jwt.io) that contains a `sub` field, a unique identifier for each user. Decode the JSON Web Token and parse it into an object:
@@ -302,43 +305,40 @@ filename: workers-site/auth0.js
 highlight: [37]
 ---
 // https://github.com/pose/webcrypto-jwt/blob/master/workers-site/index.js
-const decodeJWT = function(token) {
-  var output = token
-    .split(".")[1]
-    .replace(/-/g, "+")
-    .replace(/_/g, "/")
+const decodeJWT = function (token) {
+  var output = token.split('.')[1].replace(/-/g, '+').replace(/_/g, '/');
   switch (output.length % 4) {
     case 0:
-      break
+      break;
     case 2:
-      output += "=="
-      break
+      output += '==';
+      break;
     case 3:
-      output += "="
-      break
+      output += '=';
+      break;
     default:
-      throw "Illegal base64url string!"
+      throw 'Illegal base64url string!';
   }
 
-  const result = atob(output)
+  const result = atob(output);
 
   try {
-    return decodeURIComponent(escape(result))
+    return decodeURIComponent(escape(result));
   } catch (err) {
-    console.log(err)
-    return result
+    console.log(err);
+    return result;
   }
-}
+};
 
 const persistAuth = async exchange => {
-  const body = await exchange.json()
+  const body = await exchange.json();
 
   if (body.error) {
-    throw new Error(body.error)
+    throw new Error(body.error);
   }
 
-  const decoded = JSON.parse(decodeJWT(body.id_token))
-}
+  const decoded = JSON.parse(decodeJWT(body.id_token));
+};
 ```
 
 To ensure that the ID token you have received is valid, you should do a number of checks on the decoded token object, as per the [OpenID Connect Core 1.0 spec](https://openid.net/specs/openid-connect-core-1_0.html#IDTokenValidation). Update the `persistAuth` function to validate the token — if it is not valid, return an object indicating that the response is invalid:
@@ -350,17 +350,17 @@ highlight: [1, 2, 3, 9, 10, 11, 12]
 ---
 const validateToken = token => {
   // Stubbed function
-}
+};
 
 const persistAuth = async exchange => {
   // Previous code
 
-  const decoded = JSON.parse(decodeJWT(body.id_token))
-  const validToken = validateToken(decoded)
+  const decoded = JSON.parse(decodeJWT(body.id_token));
+  const validToken = validateToken(decoded);
   if (!validToken) {
-    return { status: 401 }
+    return { status: 401 };
   }
-}
+};
 ```
 
 Inside of `validateToken` examine fields inside of the decoded token, ensuring that:
@@ -378,43 +378,41 @@ filename: workers-site/auth0.js
 ---
 const validateToken = token => {
   try {
-    const dateInSecs = d => Math.ceil(Number(d) / 1000)
-    const date = new Date()
+    const dateInSecs = d => Math.ceil(Number(d) / 1000);
+    const date = new Date();
 
-    let iss = token.iss
+    let iss = token.iss;
 
     // ISS can include a trailing slash but should otherwise be identical to
     // the AUTH0_DOMAIN, so we should remove the trailing slash if it exists
-    iss = iss.endsWith("/") ? iss.slice(0, -1) : iss
+    iss = iss.endsWith('/') ? iss.slice(0, -1) : iss;
 
     if (iss !== AUTH0_DOMAIN) {
-      throw new Error(
-        `Token iss value (${iss}) doesn’t match AUTH0_DOMAIN (${AUTH0_DOMAIN})`,
-      )
+      throw new Error(`Token iss value (${iss}) doesn’t match AUTH0_DOMAIN (${AUTH0_DOMAIN})`);
     }
 
     if (token.aud !== AUTH0_CLIENT_ID) {
       throw new Error(
-        `Token aud value (${token.aud}) doesn’t match AUTH0_CLIENT_ID (${AUTH0_CLIENT_ID})`,
-      )
+        `Token aud value (${token.aud}) doesn’t match AUTH0_CLIENT_ID (${AUTH0_CLIENT_ID})`
+      );
     }
 
     if (token.exp < dateInSecs(date)) {
-      throw new Error(`Token exp value is before current time`)
+      throw new Error(`Token exp value is before current time`);
     }
 
     // Token should have been issued within the last day
-    date.setDate(date.getDate() - 1)
+    date.setDate(date.getDate() - 1);
     if (token.iat < dateInSecs(date)) {
-      throw new Error(`Token was issued before one day ago and is now invalid`)
+      throw new Error(`Token was issued before one day ago and is now invalid`);
     }
 
-    return true
+    return true;
   } catch (err) {
-    console.log(err.message)
-    return false
+    console.log(err.message);
+    return false;
   }
-}
+};
 ```
 
 With the decoded JWT available and validated, you can hash and salt the `sub` value and use it as a unique identifier for the current user. To do this, use the [Web Crypto API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Crypto_API) available inside the Workers runtime. Combine the `SALT` value, a secret that you will set later in the tutorial, with the `sub` value. By creating a SHA-256 digest of these combined strings, you can then use it as the key for storing the user’s JWT in Workers KV:
@@ -427,13 +425,13 @@ highlight: [4, 5, 6, 7, 8, 9]
 const persistAuth = async exchange => {
   // ...
 
-  const text = new TextEncoder().encode(`${SALT}-${decoded.sub}`)
-  const digest = await crypto.subtle.digest({ name: "SHA-256" }, text)
-  const digestArray = new Uint8Array(digest)
-  const id = btoa(String.fromCharCode.apply(null, digestArray))
+  const text = new TextEncoder().encode(`${SALT}-${decoded.sub}`);
+  const digest = await crypto.subtle.digest({ name: 'SHA-256' }, text);
+  const digestArray = new Uint8Array(digest);
+  const id = btoa(String.fromCharCode.apply(null, digestArray));
 
-  await AUTH_STORE.put(id, JSON.stringify(body))
-}
+  await AUTH_STORE.put(id, JSON.stringify(body));
+};
 ```
 
 Once the user’s authentication data has been stored in KV, you need to associate the user with that data. To do this, set a cookie, setting the value to the encrypted `id` string you just defined.
@@ -445,21 +443,21 @@ This cookie will be used as you fill out the `verify` function defined earlier i
 filename: workers-site/auth0.js
 highlight: [1, 6, 7, 8, 9, 10, 11, 12, 13, 14]
 ---
-const cookieKey = "AUTH0-AUTH"
+const cookieKey = 'AUTH0-AUTH';
 
 const persistAuth = async exchange => {
   // previous code
 
-  const date = new Date()
-  date.setDate(date.getDate() + 1)
+  const date = new Date();
+  date.setDate(date.getDate() + 1);
 
   const headers = {
-    Location: "/",
-    "Set-cookie": `${cookieKey}=${id}; Secure; HttpOnly; SameSite=Lax; Expires=${date.toUTCString()}`,
-  }
+    'Location': '/',
+    'Set-cookie': `${cookieKey}=${id}; Secure; HttpOnly; SameSite=Lax; Expires=${date.toUTCString()}`,
+  };
 
-  return { headers, status: 302 }
-}
+  return { headers, status: 302 };
+};
 ```
 
 With our authorization logic defined, you can finally wrap up the corresponding code in `workers-site/index.js`. Knowing that the `handleRedirect` function will pass back an object with `Response` options, you can make a new `Response` object, passing in the information from the existing `response`, and adding the new headers and status code from `handleRedirect`. This will redirect the user to the app’s root path, setting a cookie to indicate that they are authorized for future requests:
@@ -472,16 +470,16 @@ highlight: [3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
 async function handleEvent(event) {
   try {
     // BEGINNING OF HANDLE AUTH REDIRECT CODE BLOCK
-    if (url.pathname === "/auth") {
-      const authorizedResponse = await handleRedirect(event)
+    if (url.pathname === '/auth') {
+      const authorizedResponse = await handleRedirect(event);
       if (!authorizedResponse) {
-        return new Response("Unauthorized", { status: 401 })
+        return new Response('Unauthorized', { status: 401 });
       }
       response = new Response(response.body, {
         response,
         ...authorizedResponse,
-      })
-      return response
+      });
+      return response;
     }
     // END OF HANDLE AUTH REDIRECT CODE BLOCK
 
@@ -513,11 +511,11 @@ The application will use Workers KV to persist this random data for one day (86,
 filename: workers-site/auth0.js
 ---
 const generateStateParam = async () => {
-  const resp = await fetch("https://csprng.xyz/v1/api")
-  const { Data: state } = await resp.json()
-  await AUTH_STORE.put(`state-${state}`, true, { expirationTtl: 86400 })
-  return state
-}
+  const resp = await fetch('https://csprng.xyz/v1/api');
+  const { Data: state } = await resp.json();
+  await AUTH_STORE.put(`state-${state}`, true, { expirationTtl: 86400 });
+  return state;
+};
 ```
 
 ## Verifying the token and retrieving user info
@@ -540,17 +538,17 @@ In `workers-site/auth0.js`, you can begin to write the contents of the `verify` 
 filename: workers-site/auth0.js
 highlight: [1, 4, 5, 6, 7, 8, 9, 10]
 ---
-import cookie from "cookie"
+import cookie from 'cookie';
 
 const verify = async event => {
-  const cookieHeader = event.request.headers.get("Cookie")
+  const cookieHeader = event.request.headers.get('Cookie');
   if (cookieHeader && cookieHeader.includes(cookieKey)) {
-    const cookies = cookie.parse(cookieHeader)
-    if (!cookies[cookieKey]) return {}
-    const sub = cookies[cookieKey]
+    const cookies = cookie.parse(cookieHeader);
+    if (!cookies[cookieKey]) return {};
+    const sub = cookies[cookieKey];
   }
-  return {}
-}
+  return {};
+};
 ```
 
 With the unique ID `sub` parsed from the `Cookie` header, use it to retrieve the user information you previously stored in KV. First, do a lookup to Workers KV using the `sub` field as a key — if it is not found, throw an `Error`. Next, take that data from Workers KV and attempt to parse it as JSON — if that fails, another `Error` will be thrown:
@@ -561,27 +559,27 @@ filename: workers-site/auth0.js
 highlight: [8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
 ---
 const verify = async event => {
-  const cookieHeader = event.request.headers.get("Cookie")
+  const cookieHeader = event.request.headers.get('Cookie');
   if (cookieHeader && cookieHeader.includes(cookieKey)) {
-    const cookies = cookie.parse(cookieHeader)
-    if (!cookies[cookieKey]) return {}
-    const sub = cookies[cookieKey]
+    const cookies = cookie.parse(cookieHeader);
+    if (!cookies[cookieKey]) return {};
+    const sub = cookies[cookieKey];
 
-    const kvData = await AUTH_STORE.get(sub)
+    const kvData = await AUTH_STORE.get(sub);
     if (!kvData) {
-      throw new Error("Unable to find authorization data")
+      throw new Error('Unable to find authorization data');
     }
 
-    let kvStored
+    let kvStored;
     try {
-      kvStored = JSON.parse(kvData)
+      kvStored = JSON.parse(kvData);
     } catch (err) {
-      throw new Error("Unable to parse auth information from Workers KV")
+      throw new Error('Unable to parse auth information from Workers KV');
     }
 
-    const { access_token: accessToken, id_token: idToken } = kvStored
+    const { access_token: accessToken, id_token: idToken } = kvStored;
   }
-}
+};
 ```
 
 Finally, decode the `idToken` stored in KV. This includes the `profile` and `email` scopes you requested from Auth0 when the user logged in, which you will return as `userInfo`, along with `accessToken` and `idToken`:
@@ -592,30 +590,30 @@ filename: workers-site/auth0.js
 highlight: [20, 21, 22, 24]
 ---
 const verify = async event => {
-  const cookieHeader = event.request.headers.get("Cookie")
+  const cookieHeader = event.request.headers.get('Cookie');
   if (cookieHeader && cookieHeader.includes(cookieKey)) {
-    const cookies = cookie.parse(cookieHeader)
-    if (!cookies[cookieKey]) return {}
-    const sub = cookies[cookieKey]
+    const cookies = cookie.parse(cookieHeader);
+    if (!cookies[cookieKey]) return {};
+    const sub = cookies[cookieKey];
 
-    const kvData = await AUTH_STORE.get(sub)
+    const kvData = await AUTH_STORE.get(sub);
     if (!kvData) {
-      throw new Error("Unable to find authorization data")
+      throw new Error('Unable to find authorization data');
     }
 
-    let kvStored
+    let kvStored;
     try {
-      kvStored = JSON.parse(kvData)
+      kvStored = JSON.parse(kvData);
     } catch (err) {
-      throw new Error("Unable to parse auth information from Workers KV")
+      throw new Error('Unable to parse auth information from Workers KV');
     }
 
-    const { access_token: accessToken, id_token: idToken } = kvStored
-    const userInfo = JSON.parse(decodeJWT(idToken))
-    return { accessToken, idToken, userInfo }
+    const { access_token: accessToken, id_token: idToken } = kvStored;
+    const userInfo = JSON.parse(decodeJWT(idToken));
+    return { accessToken, idToken, userInfo };
   }
-  return {}
-}
+  return {};
+};
 ```
 
 As a summary, this `verify` function will now correctly verify your application’s users based on the `Cookie` field and make any authorization information available as part of the `authorization` object:
@@ -625,14 +623,14 @@ As a summary, this `verify` function will now correctly verify your application�
 filename: workers-site/auth0.js
 ---
 export const authorize = async event => {
-  const authorization = await verify(event)
+  const authorization = await verify(event);
   if (authorization.accessToken) {
-    return [true, { authorization }]
+    return [true, { authorization }];
   } else {
-    const state = await generateStateParam()
-    return [false, { redirectUrl: redirectUrl(state) }]
+    const state = await generateStateParam();
+    return [false, { redirectUrl: redirectUrl(state) }];
   }
-}
+};
 ```
 
 By implementing this function, you have now completed the authorization/authentication portion of the tutorial. Your application will authorize any incoming users, redirecting them to Auth0 and verifying their access tokens before they are allowed to see your Workers Site content. To configure your deployment and publish the application, you can go to the [**Publish** section](/tutorials/authorize-users-with-auth0#publish), but in the next few portions of the tutorial you will focus on some of the more interesting aspects of this project; for example, accessing user information within your application, “edge state hydration”, logging out users, and making the application more production-ready with some improvements and customizations.
@@ -652,26 +650,24 @@ highlight: [1, 2, 3, 4, 5, 6, 7, 19, 20, 21, 22, 23]
 ---
 const hydrateState = (state = {}) => ({
   element: head => {
-    const jsonState = JSON.stringify(state)
-    const scriptTag = `<script id="edge_state" type="application/json">${jsonState}</script>`
-    head.append(scriptTag, { html: true })
+    const jsonState = JSON.stringify(state);
+    const scriptTag = `<script id="edge_state" type="application/json">${jsonState}</script>`;
+    head.append(scriptTag, { html: true });
   },
-})
+});
 
 async function handleEvent(event) {
   try {
     // BEGINNING OF WORKERS SITES
     // Note the addition of the `await` keyword
-    response = await getAssetFromKV(event)
+    response = await getAssetFromKV(event);
     // END OF WORKERS SITES
 
     // Remove the line of code below
     // return response
 
     // BEGINNING OF STATE HYDRATION CODE BLOCK
-    return new HTMLRewriter()
-      .on("head", hydrateState(authorization.userInfo))
-      .transform(response)
+    return new HTMLRewriter().on('head', hydrateState(authorization.userInfo)).transform(response);
     // END OF STATE HYDRATION CODE BLOCK
   } catch (e) {
     // ...
@@ -692,16 +688,16 @@ While a user’s authentication cookie expires after a day, you may want to offe
 filename: workers-site/auth0.js
 ---
 export const logout = event => {
-  const cookieHeader = event.request.headers.get("Cookie")
+  const cookieHeader = event.request.headers.get('Cookie');
   if (cookieHeader && cookieHeader.includes(cookieKey)) {
     return {
       headers: {
-        "Set-cookie": `${cookieKey}=""; SameSite=Lax; Secure;`,
+        'Set-cookie': `${cookieKey}=""; SameSite=Lax; Secure;`,
       },
-    }
+    };
   }
-  return {}
-}
+  return {};
+};
 ```
 
 ```js
@@ -709,21 +705,21 @@ export const logout = event => {
 filename: workers-site/index.js
 highlight: [1, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17]
 ---
-import { logout } from "./auth0.js"
+import { logout } from './auth0.js';
 
 async function handleEvent(event) {
   try {
     // END OF WORKERS SITES CODE BLOCK
 
     // BEGINNING OF LOGOUT CODE BLOCK
-    if (url.pathname === "/logout") {
-      const { headers } = logout(event)
+    if (url.pathname === '/logout') {
+      const { headers } = logout(event);
       return headers
         ? new Response(response.body, {
             ...response,
-            headers: Object.assign({}, response.headers, headers)
+            headers: Object.assign({}, response.headers, headers),
           })
-        : Response.redirect(url.origin)
+        : Response.redirect(url.origin);
     }
     // END OF LOGOUT CODE BLOCK
 
@@ -764,18 +760,18 @@ When the user refreshes the page, they will be identified as an unauthorized use
 filename: workers-site/auth0.js
 ---
 export const logout = event => {
-  const cookieHeader = event.request.headers.get("Cookie")
+  const cookieHeader = event.request.headers.get('Cookie');
   if (cookieHeader && cookieHeader.includes(cookieKey)) {
     return {
       headers: {
-        "Location": "/",
-        "Set-cookie": `${cookieKey}="";`
+        'Location': '/',
+        'Set-cookie': `${cookieKey}="";`,
       },
-      status: 302
-    }
+      status: 302,
+    };
   }
-  return {}
-}
+  return {};
+};
 ```
 
 #### Deploying to origin/originless
@@ -802,7 +798,7 @@ async function handleEvent(event) {
     // response = await getAssetFromKV(event)
 
     // With a fetch request to your origin
-    response = await fetch(request)
+    response = await fetch(request);
     // END OF WORKERS SITES
     // ↳ this can now be thought of as "END OF ORIGIN REQUEST"
   } catch (e) {
@@ -909,7 +905,7 @@ Due to an issue with Wrangler’s publishing feature, you will need to publish y
 ---
 filename: workers-site/auth0.js
 ---
-let AUTH0_DOMAIN, AUTH0_CLIENT_ID, AUTH0_CLIENT_SECRET, AUTH0_CALLBACK_URL, SALT
+let AUTH0_DOMAIN, AUTH0_CLIENT_ID, AUTH0_CLIENT_SECRET, AUTH0_CALLBACK_URL, SALT;
 ```
 
 With these constants stubbed, you can publish your application:

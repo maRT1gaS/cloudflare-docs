@@ -93,18 +93,18 @@ The above commands will download the SQL schema and dataset files from Pagila's 
 
 In `src/index.ts`, replace `https://dev.example.com` with your Cloudflare Tunnel hostname, ensuring that it is prefixed with the `https://` protocol:
 
-```javascript
+```js
 ---
 filename: src/index.ts
 highlight: [4]
 ---
 const client = new Client({
-    user: 'postgres',
-    database: 'postgres',
-    hostname: 'https://REPLACE_WITH_TUNNEL_HOSTNAME',
-    password: '',
-    port: 5432,
-})
+  user: 'postgres',
+  database: 'postgres',
+  hostname: 'https://REPLACE_WITH_TUNNEL_HOSTNAME',
+  password: '',
+  port: 5432,
+});
 ```
 
 At this point, you can deploy your Worker and make a request to it to verify that your database connection is working.
@@ -113,7 +113,7 @@ At this point, you can deploy your Worker and make a request to it to verify tha
 
 The template script includes a simple query to select a number (`SELECT 42;`) that is executed in the database. Edit the script to query the imported Pagila dataset if the `pagila-table` query parameter is present.
 
-```javascript
+```js
 // Query the database.
 
 // Parse the URL, and get the 'pagila-table' query parameter (which may not exist)
