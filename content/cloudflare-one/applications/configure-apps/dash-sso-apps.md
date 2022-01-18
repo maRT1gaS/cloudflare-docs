@@ -7,11 +7,11 @@ pcx-content-type: how-to
 
 By adding a **Dashboard SSO application** to your Cloudflare Teams account, you can enforce single sign-on (SSO) to the Cloudflare dashboard with the identity provider (IdP) of your choice.
 
-<Aside type="note">
+<bongo:aside type="note">
 
 Dashboard SSO is only available to Enterprise customers.
 
-</Aside>
+</bongo:aside>
 
 ## Set up dashboard SSO
 

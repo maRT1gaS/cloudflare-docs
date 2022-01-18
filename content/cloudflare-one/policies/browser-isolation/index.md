@@ -5,11 +5,11 @@ pcx-content-type: concept
 
 # Browser Isolation
 
-<Aside type="note">
+<bongo:aside type="note">
 
 Browser Isolation is available as an add-on to Teams Standard and Enterprise plans. See our [payment plans](https://www.cloudflare.com/teams-pricing/) for more information.
 
-</Aside>
+</bongo:aside>
 
 Cloudflare Browser Isolation complements the Teams Secure Web Gateway and Zero Trust Network Access solutions by executing active webpage content in a secure isolated browser. Executing active content remotely from the endpoint protects users from zero-day attacks and malware. In addition to protecting endpoints, Browser Isolation also protects users from phishing attacks by preventing user input on risky websites and controlling data transmission to sensitive web applications.
 
@@ -44,13 +44,13 @@ If instead you need to isolate **specific hostnames**, you can list the domains 
 | -------- | -------- | ---------------------------- | ------- |
 | Host     | In       | `example.com`, `example.net` | Isolate |
 
-<Aside type='note' header='Isolate identity providers for applications'>
+<bongo:aside type='note' header='Isolate identity providers for applications'>
 
 Existing cookies and sessions from non-isolated browsing are not sent to the remote browser. Websites that implement single sign on using third-party cookies will also need to be isolated.
 
 For example, if `example.com` authenticates using Google Workspace, you will also need to isolate the top level <a href="https://support.google.com/a/answer/9012184">Google Workspace URLs</a>.
 
-</Aside>
+</bongo:aside>
 
 ## Do Not Isolate policies
 
@@ -82,7 +82,7 @@ All the following settings can be applied to websites through Applications, List
   Mouse input remains available (to allow users to navigate a website by following hyperlinks and
   scrolling). This does not prevent user input into third party virtual keyboards within a remote
   webpage.
-</Aside>
+</bongo:aside>
 
 - **Behavior**. Prohibits users from performing keyboard input into the remote page.
 - **Use Case**. Prevent users inputting sensitive information into unknown/untrusted websites.
@@ -94,7 +94,7 @@ All the following settings can be applied to websites through Applications, List
   or files downloaded into the remote browser download bar from other isolated websites. To prevent
   files being uploaded from the remote browser into an isolated website use HTTP Policies to block
   by Upload Mime Type.
-</Aside>
+</bongo:aside>
 
 - **Behavior**. Prohibits users from uploading files from their local machine into a remote web page.
 - **Use Case**. Protect sensitive data from being exfiltrated to unknown/untrusted websites.
@@ -104,7 +104,7 @@ All the following settings can be applied to websites through Applications, List
 <Aside>
   This option does not prevent files from being downloaded into the remote browser. To prevent files
   being downloaded into the remote browser use HTTP Policies to block by Download Mime Type.
-</Aside>
+</bongo:aside>
 
 - **Behavior**. Prohibits users from exporting files from the remote browser to their local machine.
 - **Use Cases**. Protect users from downloading files from unknown/untrusted sources, and protect sensitive content in self-hosted or SaaS applications from data loss.

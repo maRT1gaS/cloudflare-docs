@@ -211,11 +211,11 @@ To publish to your own domain, specify these three fields in your `wrangler.toml
 
 </Definitions>
 
-<Aside type="note">
+<bongo:aside type="note">
 
 Make sure to use only `route` or `routes`, not both.
 
-</Aside>
+</bongo:aside>
 
 ### Publishing the same code to multiple domains
 
@@ -304,11 +304,11 @@ After starting `wrangler tail` in a directory with a project, you will receive a
 
 Like all Wrangler commands, run `wrangler tail` from your Worker’s root directory (the directory with your `wrangler.toml` file).
 
-<Aside type="warning" header="Legacy issues with existing cloudflared configuration">
+<bongo:aside type="warning" header="Legacy issues with existing cloudflared configuration">
 
 `wrangler tail` versions older than version 1.19.0 use `cloudflared` to run. Cloudflare recommends [updating to the latest wrangler version](/cli-wrangler/install-update#update) to avoid any issues.
 
-</Aside>
+</bongo:aside>
 
 ---
 

@@ -17,8 +17,8 @@ To upgrade your key server:
 1. upstart/sysvinit: `/etc/init.d/gokeyless restart`
 1. Confirm that HTTPS connections are working as expected.
 
-<Aside type="warning">
+<bongo:aside type="warning">
 
 If you are running a [high availability configuration](/keyless-ssl/reference/high-availability), upgrade one server at a time as new TLS connections will fail to terminate at Cloudflare’s edge without a functioning key server.
 
-</Aside>
+</bongo:aside>

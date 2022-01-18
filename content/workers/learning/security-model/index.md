@@ -196,7 +196,7 @@ The values of `start` and `end` will always be exactly the same. The attacker ca
 
 This is a measure we actually implemented in mid-2017, long before Spectre was announced (and before we knew about it). We implemented this measure because we were worried about timing side channels in general. Side channels have been a concern of the Workers team from day one, and we have designed our system from the ground up with this concern in mind.
 
-</Aside>
+</bongo:aside>
 
 Related to our taming of `Date`, we also do not permit multi-threading or shared memory in Workers. Everything related to the processing of one event happens on the same thread — otherwise, it would be possible to “race” threads in order to ”MacGyver” an implicit timer. We don’t even allow multiple Workers operating on the same request to run concurrently. For example, if you have installed a Cloudflare App on your zone which is implemented using Workers, and your zone itself also uses Workers, then a request to your zone may actually be processed by two Workers in sequence. These run in the same thread.
 
@@ -206,7 +206,7 @@ So, we have prevented code execution time from being measured _locally_. However
 
 Some people have suggested that if a serverless platform like Workers were to completely reset an application’s state between requests, so that every request “starts fresh”, this would make attacks harder. That is, imagine that a Worker’s global variables were reset after every request, meaning you cannot store state in globals in one request and then read that state in the next. Then, doesn’t that mean the attack has to start over from scratch for every request? If each request is limited to, say, 50ms of CPU time, does that mean that a Spectre attack isn’t possible, because there’s not enough time to carry it out? Unfortunately, it’s not so simple. State doesn’t have to be stored in the Worker; it could instead be stored in a conspiring client. The server can return its state to the client in each response, and the client can send it back to the server in the next request.
 
-</Aside>
+</bongo:aside>
 
 But is an attack based on remote timers really feasible in practice? **In adversarial testing, with help from leading Spectre experts, we have not been able to develop an attack that actually works in production.**
 

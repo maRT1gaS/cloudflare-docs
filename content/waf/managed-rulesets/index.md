@@ -31,14 +31,14 @@ Cloudflare provides the following Managed Rulesets in the WAF:
   </tbody>
 </table></TableWrap>
 
-<Aside type='note' header='Note'>
+<bongo:aside type='note' header='Note'>
 
 The Cloudflare OWASP Core Ruleset is designed to work as a single entity to calculate threat scores and execute actions based on the score. When a scoring rule in the ruleset matches a request, the threat score increases.
 The final rule in the OWASP ruleset triggers an action based on a threshold for the threat score.
 You can configure the ruleset by overriding the threat score threshold in the final rule.
 You can also activate or deactivate scoring rules by overriding the paranoia level categories.
 
-</Aside>
+</bongo:aside>
 
 The following rulesets run in the response phase:
 

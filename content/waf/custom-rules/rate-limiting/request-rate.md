@@ -6,11 +6,11 @@ type: overview
 
 # Determining the request rate
 
-<Aside type='warning'>
+<bongo:aside type='warning'>
 
 This feature is only available for selected customers on an Enterprise plan.
 
-</Aside>
+</bongo:aside>
 
 Cloudflare keeps separate request counters for Rate Limiting rules for each value combination of the rule characteristics.
 
@@ -21,11 +21,11 @@ For example, consider a rule configured with the following characteristics:
 
 In this case, two incoming requests with the **same** value for the HTTP header `X-API-Key` with **different** IP addresses are counted separately, since the value combination is different. Additionally, counters are not shared across data centers.
 
-<Aside type='warning' header='Important'>
+<bongo:aside type='warning' header='Important'>
 
 The Cloudflare **data center ID** is a mandatory characteristic of every Rate Limiting rule. This characteristic does not appear in the rule configuration in the dashboard, but you must include it when [creating Rate Limiting rules via API](/custom-rules/rate-limiting/create-api).
 
-</Aside>
+</bongo:aside>
 
 ## Example
 

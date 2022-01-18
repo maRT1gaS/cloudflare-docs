@@ -13,7 +13,7 @@ Some services you run may require knowledge of the true client IP. In those case
 
 This feature requires an Enterprise plan. If you would like to upgrade, contact your account team.
 
-</Aside>
+</bongo:aside>
 
 ## Enable Proxy Protocol v1 for TCP
 

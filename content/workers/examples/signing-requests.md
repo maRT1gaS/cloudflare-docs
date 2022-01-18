@@ -107,7 +107,7 @@ Typically, signed requests are delivered to the user in some out-of-band way, su
 
 **Note:** Signed requests expire after one minute. We recommend choosing expiration durations dynamically, depending on the path or a query parameter.
 
-</Aside>
+</bongo:aside>
 
 For request URLs beginning with `/generate/`, we replace `/generate/` with `/verify/`, sign the resulting path with its timestamp, and return the full, signed URL in the response body.
 

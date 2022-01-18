@@ -19,11 +19,11 @@ You can adjust the behavior of the rules in the Managed Ruleset by modifying the
 - The performed **action** when an attack is detected
 - The **sensitivity level** of attack detection mechanisms
 
-<Aside type="note" header="Note">
+<bongo:aside type="note" header="Note">
 
 Certain actions or sensitivity levels may not be available to all Cloudflare plans.
 
-</Aside>
+</bongo:aside>
 
 To adjust rule behavior, do one of the following:
 

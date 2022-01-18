@@ -135,11 +135,11 @@ recommended course.
 
 ## Make It All Secure
 
-<Aside type="warning">
+<bongo:aside type="warning">
 
 During the Private Beta, self-provisioning of SSL certificates is not available.
 
-</Aside>
+</bongo:aside>
 
 Now your content is on IPFS and your website is connected to Cloudflare's
 gateway. There's just one more step to make this secure. If you've followed all

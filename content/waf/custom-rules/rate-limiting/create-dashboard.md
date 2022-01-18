@@ -6,11 +6,11 @@ type: overview
 
 # Create Rate Limiting rules in the dashboard
 
-<Aside type='warning'>
+<bongo:aside type='warning'>
 
 This feature is only available for selected customers on an Enterprise plan.
 
-</Aside>
+</bongo:aside>
 
 Create Rate Limiting rules under the **Custom Rules** tab in the **Firewall** app.
 

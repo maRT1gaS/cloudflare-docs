@@ -47,10 +47,10 @@ When EDNS is enabled, the DNS Firewall gives out the geographically correct answ
 1. The DNS Firewall will cache the answer from the origin, but only for that `/24`.
 1. `1.2.9.0/24` now asks the same DNS question and the answer is again returned from the origin instead of the cache.
 
-<Aside type="note">
+<bongo:aside type="note">
 
 EDNS limits the effectiveness of the DNS cache.
 
-</Aside>
+</bongo:aside>
 </div>
 </details>

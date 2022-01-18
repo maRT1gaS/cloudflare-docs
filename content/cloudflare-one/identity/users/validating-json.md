@@ -28,7 +28,7 @@ You can use the JWT created by Cloudflare Access to validate requests on your or
 
 Install [`lokey`](https://github.com/jpf/lokey) and [`jq`](https://stedolan.github.io/jq/download/).
 
-</Aside>
+</bongo:aside>
 
 1. Run this command:
 

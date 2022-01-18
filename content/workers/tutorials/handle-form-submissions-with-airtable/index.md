@@ -38,7 +38,7 @@ To recap the basics of HTML5 forms, a `form` element generally contains an `acti
 
 If you're unfamiliar with HTML5 forms, the Mozilla Developer Network's ["Web Forms - Working with user data"](https://developer.mozilla.org/en-US/docs/Learn/Forms) is a great beginner's guide.
 
-</Aside>
+</bongo:aside>
 
 To pass data _inside_ of the form, you can use `input` tags. `input` tags have a `type`, which specifies how the `input` should render, and what kind of data it contains. When an `input` has a `name` attribute, the `form` will submit that data to the provided `action` URL, matching that `name` attribute.
 
@@ -48,7 +48,7 @@ The `id` attribute, while not required for the `input` to be submitted as part o
 
 Additionally, the `id` attribute is often set alongside the `name` attribute to enable styling via CSS.
 
-</Aside>
+</bongo:aside>
 
 For example, if I fill in the `first_name` `input` with the text "Kristian", submitting the `form` via the "Submit" `button` will submit data to the URL `/new_submission` with the data `first_name=Hello`.
 
@@ -103,7 +103,7 @@ $ cd airtable-form-handler
 
 If you've chosen to work with the [sample codebase on GitHub](https://github.com/cloudflare/workers-airtable-form), you can find a sample function in the `worker` directory.
 
-</Aside>
+</bongo:aside>
 
 In `wrangler.toml`, add your Cloudflare account ID:
 
@@ -111,7 +111,7 @@ In `wrangler.toml`, add your Cloudflare account ID:
 
 [Check out our Quick Start guide](https://developers.cloudflare.com/workers/get-started/guide#7-configure-your-project-for-deployment) if you're unsure where to find your Cloudflare Account ID.
 
-</Aside>
+</bongo:aside>
 
 ```toml
 ---

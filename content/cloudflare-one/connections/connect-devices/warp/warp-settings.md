@@ -5,11 +5,11 @@ pcx-content-type: reference
 
 # WARP settings
 
-<Aside type="note">
+<bongo:aside type="note">
 
 If you are deploying [WARP in Managed mode](/connections/connect-devices/warp/deployment/mdm-deployment), refer to this [list of parameters](/connections/connect-devices/warp/deployment/mdm-deployment/parameters) instead. Any settings you configure on the Teams Dashboard will be overridden by an MDM deployment. To ensure Dashboard settings are applied as intended, remove the corresponding parameters from your MDM deployment.
 
-</Aside>
+</bongo:aside>
 
 To manage WARP settings and device connectivity preferences, navigate to **Settings** > **Devices** on the Teams Dashboard.
 
@@ -26,11 +26,11 @@ To manage WARP settings and device connectivity preferences, navigate to **Setti
 </div>
 </details>
 
-<Aside type='note'>
-  
+<bongo:aside type='note'>
+
 This feature needs the <b>Switch Locked</b> feature to be set to <b>True</b>. You can enable the feature via MDM or under <b>Settings</b> > <b>Devices</b> on the Teams dashboard.
 
-</Aside>
+</bongo:aside>
 
 When this toggle is **enabled**, you can provide end users with an one-time password that will allow them to toggle off the WARP client in case they need to work around a temporary network issue (for example, an incompatible public Wi-Fi, or a firewall at a customer site blocking the connection).
 

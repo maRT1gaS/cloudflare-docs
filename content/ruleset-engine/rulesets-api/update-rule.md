@@ -104,7 +104,7 @@ To reorder a rule in a list of ruleset rules, include a `position` field in the 
 
 You can only use one of the arguments `before`, `after`, and `index` at a time.
 
-</Aside>
+</bongo:aside>
 
 Reorder a rule without changing its definition by including only the `position` field in the `PATCH` request body. You can also update a rule definition and reorder it in the same `PATCH` request by including both the `rule` field and the `position` field.
 

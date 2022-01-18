@@ -30,7 +30,7 @@ You can define a configuration that affects an entire Managed Ruleset, or config
 
 Currently, you can only create and deploy custom rulesets via API.
 
-</Aside>
+</bongo:aside>
 
 You can [create custom rulesets](https://developers.cloudflare.com/ruleset-engine/custom-rulesets/create-custom-ruleset) with your own WAF rules that you can later [deploy to a phase entry point](/managed-rulesets/deploy-api#deploying-custom-rulesets).
 
@@ -61,7 +61,7 @@ When you deploy a Managed Ruleset in the dashboard using the **WAF** tab of the 
 
 When you deploy a Managed Ruleset using **Firewall Rulesets** in the dashboard at the account level, you are deploying that ruleset to the `http_request_firewall_managed` phase of the account.
 
-</Aside>
+</bongo:aside>
 
 To deploy your own WAF rules, create a custom ruleset and add any custom rules to this ruleset. Next, deploy the custom ruleset to a supported phase.
 
@@ -71,7 +71,7 @@ You can **create** and **deploy** custom rulesets to the `http_request_firewall_
 
 Currently, creating and deploying custom rulesets is only available via API.
 
-</Aside>
+</bongo:aside>
 
 To learn more about phases, refer to [Phases](https://developers.cloudflare.com/ruleset-engine/#phases) in the Ruleset Engine documentation.
 

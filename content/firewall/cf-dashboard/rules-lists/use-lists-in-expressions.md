@@ -35,8 +35,8 @@ To create a new rule via API using the Cloudflare Open Proxies Managed List use 
 
 `(ip.src in $cf.open_proxies)`
 
-<Aside type='warning' header='Important'>
+<bongo:aside type='warning' header='Important'>
 
 Access to the Open Proxy List requires a Cloudflare Enterprise plan.
 
-</Aside>
+</bongo:aside>

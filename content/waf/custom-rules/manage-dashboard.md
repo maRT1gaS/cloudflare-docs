@@ -7,11 +7,11 @@ pcx-content-type: how-to
 
 You can manage Custom Rules under the **Custom Rules** tab in the **Firewall** app.
 
-<Aside type='warning' header='Important'>
+<bongo:aside type='warning' header='Important'>
 
 This feature is only available for selected customers on an Enterprise plan.
 
-</Aside>
+</bongo:aside>
 
 The Custom Rules interface allows you to:
 

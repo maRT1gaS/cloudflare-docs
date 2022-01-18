@@ -68,7 +68,7 @@ In the settings (Gateway → Policies → Settings) page, click the toggle to en
     filtered connection
   </a>{' '}
   for open websites.
-</Aside>
+</bongo:aside>
 
 ## Start browsing
 

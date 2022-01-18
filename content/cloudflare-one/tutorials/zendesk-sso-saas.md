@@ -17,7 +17,7 @@ For this tutorial, you will need:
 - An integrated identity provider (IdP)
 - Admin access to your Zendesk account
 
-</Aside>
+</bongo:aside>
 
 **⏲️ Time to complete:**
 
@@ -47,7 +47,7 @@ For this tutorial, you will need:
    <Aside>
      This step is optional. If the name is not provided, Zendesk will [use the user’s email address
      as their name](https://support.zendesk.com/hc/en-us/articles/203663676#topic_dzb_gl5_2v))
-   </Aside>
+   </bongo:aside>
 
    ![Zendesk attributes](../static/zero-trust-security/zendesk-sso-saas/zendesk-attributes.png)
 
@@ -70,7 +70,7 @@ For this tutorial, you will need:
    1. Set the algorithm to SHA256.
    1. Copy the Formatted Fingerprint Value.
 
-   </Aside>
+   </bongo:aside>
 
    ![Zendesk fingerprint](../static/zero-trust-security/zendesk-sso-saas/zendesk-fingerprint.png)
 

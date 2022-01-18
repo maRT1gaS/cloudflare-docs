@@ -7,11 +7,11 @@ pcx-content-type: how-to
 
 In the list of scripts displayed in the Script Monitor dashboard, the detected scripts that are considered malicious appear at the top of the list, so that you can quickly identify those scripts, review them, and take action.
 
-<Aside type="note">
+<bongo:aside type="note">
 
 This feature is only available to Enterprise customers with a paid add-on.
 
-</Aside>
+</bongo:aside>
 
 To review the scripts considered malicious:
 

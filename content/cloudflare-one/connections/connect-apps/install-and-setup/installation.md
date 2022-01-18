@@ -47,7 +47,7 @@ Alternatively, [download the latest Darwin amd64 release directly](https://githu
 
 Instances of `cloudflared` do not automatically update on Windows. You will need to perform manual updates.
 
-</Aside>
+</bongo:aside>
 
 ## Docker
 

@@ -24,7 +24,7 @@ https://api.cloudflare.com/client/v4/accounts/$ACCOUNT/stream
 
 Note that cURL `-F` flag automatically configures the content-type header and maps `skiing.mp4` to a form input called `file`.
 
-</Aside>
+</bongo:aside>
 
 ## Resumable uploads with tus (for large files)
 
@@ -41,7 +41,7 @@ Important: Cloudflare Stream requires a minimum chunk size of 5,242,880 bytes wh
 We recommend increasing the chunk size to 52,428,800 bytes for better performance when the client connection is expected to be reliable.
 Maximum chunk size can be 209,715,200 bytes.
 
-</Aside>
+</bongo:aside>
 
 <Aside>
 
@@ -49,7 +49,7 @@ Important: Cloudflare Stream requires a chunk size divisible by 256KiB (256x1024
 
 The final chunk of an upload or uploads that fit within a single chunk are exempt from this requirement.
 
-</Aside>
+</bongo:aside>
 
 ### Specifying upload options
 

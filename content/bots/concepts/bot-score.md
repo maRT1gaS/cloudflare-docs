@@ -11,11 +11,11 @@ A bot score is a score from _1_ to _99_ that indicates how likely that request c
 
 Bot scores are available to be used in Firewall fields and with Workers to customize application behavior. For more details, refer to [Bot Management variables](/reference/bot-management-variables).
 
-<Aside type="note" header="Note:">
+<bongo:aside type="note" header="Note:">
 
 Granular bot scores are only available to Enterprise customers who have purchased Bot Management. All other customers can only access this information through [bot groupings](#bot-groupings) in Bot Analytics.
 
-</Aside>
+</bongo:aside>
 
 ## Bot groupings
 
@@ -28,11 +28,11 @@ Customers with a Pro plan or higher can automatically see bot traffic divided in
 
 ## How Cloudflare generates bot scores
 
-<Aside type="note" header="Note:">
+<bongo:aside type="note" header="Note:">
 
 The following detection engines only apply to Enterprise Bot Management. For specific details about the engines included in your plan, refer to [Plans](/plans).
 
-</Aside>
+</bongo:aside>
 
 <BMBotDetectionEngines />
 

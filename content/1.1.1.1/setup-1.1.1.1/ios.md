@@ -31,11 +31,11 @@ You are now using encryption only for your DNS queries.
 
 ## Configure 1.1.1.1 manually
 
-<Aside type="note">
+<bongo:aside type="note">
 
 If you configure 1.1.1.1 manually, you will have to do it for every WiFi network your device connects to. This method doesn't work for cellular connections.
 
-</Aside>
+</bongo:aside>
 
 1. Go to **Settings** > **Wi-Fi**.
 1. Select the **'i'** icon next to the WiFi network you are connected to.

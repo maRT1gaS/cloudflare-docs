@@ -4,11 +4,11 @@ pcx-content-type: reference
 
 # Fetching bulk analytics
 
- <Aside type='note'>
+ <bongo:aside type='note'>
 
 Currently, Stream Analytics are only available for video plays that use the Stream Player. If you are using a third-party player, you will not see analytics for video plays from third-party players.
 
- </Aside>
+ </bongo:aside>
 
 Stream has a GraphQL analytics API that can be used to get bulk analytics for all videos in your account with one HTTP request.
 
@@ -35,7 +35,7 @@ There is no limit on number of filters per query.
 
 View analytics is collected only when the Stream player is used. If you use a third party player, view metrics will not appear as part of these metrics.
 
-</Aside>
+</bongo:aside>
 
 <Aside>
 
@@ -43,7 +43,7 @@ Docs on this page is in progress. We have provided an example below where you ca
 
 Please refer to [Cloudflare GraphQL analytics for HTTP requests](https://developers.cloudflare.com/analytics/graphql-api/getting-started) for further details on how to set up a GraphQL client for testing.
 
-</Aside>
+</bongo:aside>
 
 ## Example usage
 

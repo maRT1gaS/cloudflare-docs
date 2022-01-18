@@ -8,10 +8,10 @@ pcx-content-type: interim
 
 Use Origin Certificate Authority (CA) certificates to encrypt traffic between Cloudflare and your origin web server and reduce origin bandwidth consumption. Once deployed, these certificates are compatible with [Strict SSL mode](/origin-configuration/ssl-modes#strict).
 
-<Aside type="note">
+<bongo:aside type="note">
   For more background information on Origin CA certificates, see the{' '}
   <a href="https://blog.cloudflare.com/cloudflare-ca-encryption-origin/">introductory blog post</a>.
-</Aside>
+</bongo:aside>
 
 ---
 
@@ -37,10 +37,10 @@ To create an Origin CA certificate in the dashboard:
 1. Copy the signed **Origin Certificate** and **Private Key** into separate files. For security reasons, you cannot see the **Private Key** after you exit this screen.
 1. Click **OK**.
 
-<Aside type="note">
+<bongo:aside type="note">
   For details about working with certificates programmatically, see{' '}
   <a href="#api-calls">API calls</a>.
-</Aside>
+</bongo:aside>
 
 ### 2. Install Origin CA certificate on origin server
 

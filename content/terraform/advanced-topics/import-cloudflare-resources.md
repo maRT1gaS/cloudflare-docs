@@ -53,7 +53,7 @@ Remember to keep your credentials saved in environment variables or terraform au
 
 Start by making a call to Cf-Terraforming to enumerate the Terraform configuration for the DNS records for the zone we want to manage with Terraform.
 
-<Aside type="note" header="Note">
+<bongo:aside type="note" header="Note">
 
 The command below assumes you run the tool from `{GOPATH}/src/github.com/cloudflare/cf-terraforming`. If pulled with `go get` and if `$GOPATH/bin` is in your `$PATH` you should be able to just run the tool with `$ cf-terraforming <parameters>`.
 
@@ -61,7 +61,7 @@ The command below assumes you run the tool from `{GOPATH}/src/github.com/cloudfl
 $ go run cmd/cf-terraforming/main.go --email $CLOUDFLARE_EMAIL --token $CLOUDFLARE_API_TOKEN -z 1109d899a5ff5fd74bc01e581693685a --resource-type cloudflare_record > importing-example.tf
 ```
 
-</Aside>
+</bongo:aside>
 
 If output to standard out, the result should look like the example below. In this case, you directly imported the configuration into your Terraform configuration file `importing-state.tf`.
 
@@ -190,11 +190,11 @@ Plan: 4 to add, 0 to change, 0 to destroy.
 
 Soon cf-terraforming will also allow you to import tfstate for the same resources you imported during configuration. For now, use the standard Terraform `import` call to get the proper Terraform state imported. Below, each resourceis imported individually, specifying the name of the resource and the `zoneName/resourceID` returned by api.cloudflare.com.
 
-<Aside type="note" header="Tip">
+<bongo:aside type="note" header="Tip">
 
 If you run cf-terraforming with `-v` to stdout, we will log the resource IDs in Cloudflare, which can help with running Terraform `import`.
 
-</Aside>
+</bongo:aside>
 
 ```sh
 $ terraform import cloudflare_record.mitigateddos_net_mitigateddos_net mitigateddos.net/6702ceac85496311b1fa86a4ecc2fd47

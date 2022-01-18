@@ -14,13 +14,13 @@ For authentication instructions, see [_Getting Started: Requests_](https://api.c
 
 For help with endpoints and pagination, see [_Getting Started: Endpoints_](https://api.cloudflare.com/#getting-started-endpoints).
 
-<Aside type='warning' header='Important'>
+<bongo:aside type='warning' header='Important'>
 
 The Rules Lists endpoints require a value for _{account_id}_.
 
 To retrieve a list of accounts to which you have access, use the [List Accounts](https://api.cloudflare.com/#accounts-list-accounts) operation and note the IDs of the accounts you want to manage.
 
-</Aside>
+</bongo:aside>
 
 The Cloudflare Rules Lists API supports the operations outlined below. Visit the associated links for examples.
 

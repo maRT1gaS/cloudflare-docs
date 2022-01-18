@@ -7,11 +7,11 @@ pcx-content-type: concept
 
 Cloudflare’s Content Delivery Network (CDN) is a geographically distributed group of servers that ensure fast delivery of Internet content, including HTML pages, JavaScript files, stylesheets, and images. Caching static resources at Cloudflare reduces your server load and bandwidth, with no extra charges for bandwidth spikes.
 
-<Aside type="note" header="Note:">
+<bongo:aside type="note" header="Note:">
 
 Cloudflare does not require an extra CDN subdomain or hostname, and you do not need to change your URLs.
 
-</Aside>
+</bongo:aside>
 
 There are many reasons to use [Cloudflare’s CDN](https://www.cloudflare.com/features-cdn) for your site:
 

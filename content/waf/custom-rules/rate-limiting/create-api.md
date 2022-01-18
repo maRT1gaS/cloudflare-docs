@@ -6,11 +6,11 @@ type: overview
 
 # Create Rate Limiting rules via API
 
-<Aside type='warning'>
+<bongo:aside type='warning'>
 
 This feature is only available for selected customers on an Enterprise plan.
 
-</Aside>
+</bongo:aside>
 
 Use the [Rulesets API](https://developers.cloudflare.com/ruleset-engine/rulesets-api) to create a Rate Limiting rule via API.
 

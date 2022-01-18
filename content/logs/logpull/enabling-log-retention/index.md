@@ -14,11 +14,11 @@ There are two endpoints for managing log retention:
 - `GET /logs/control/retention/flag` - returns whether retention is on
 - `POST /logs/control/retention/flag` - turns retention on or off
 
-<Aside type="note" header="Note">
+<bongo:aside type="note" header="Note">
 
 To make a `POST` call, you must have a Cloudflare account role with "edit" permissions, such as Super Administrator, Administrator, or Log Share.
 
-</Aside>
+</bongo:aside>
 
 ## Example API requests using cURL
 

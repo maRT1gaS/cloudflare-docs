@@ -95,11 +95,11 @@ There are three types of keys in a `wrangler.toml` file:
 
   - Specifies how `wrangler build` will build your project. There are three options: `javascript`, `webpack`, and `rust`. `javascript` checks for a build command specified in the `[build]` section, `webpack` builds your project using webpack v4, and `rust` compiles the Rust in your project to WebAssembly.
 
-<Aside type="note">
+<bongo:aside type="note">
 
 Cloudflare will continue to support `rust` and `webpack` project types, but recommends using the `javascript` project type and specifying a custom [`build`](#build) section.
 
-</Aside>
+</bongo:aside>
 
 - `account_id` <Type>inherited</Type> <PropMeta>required</PropMeta>
 
@@ -184,11 +184,11 @@ Alternatively, you can define `vars` using an inline table format. This style sh
 vars = { FOO = "some value", BAR = "some other string" }
 ```
 
-<Aside type="note">
+<bongo:aside type="note">
 
 Secrets should be handled using the [`wrangler secret`](/cli-wrangler/commands#secret) command.
 
-</Aside>
+</bongo:aside>
 
 ### kv_namespaces
 
@@ -244,13 +244,13 @@ let value = await FOO.get('keyname');
 
 </Definitions>
 
-<Aside type="note">
+<bongo:aside type="note">
 
 Creating your KV namespaces can be handled using Wrangler’s [KV Commands](/cli-wrangler/commands#kv).
 
 You can also define your `kv_namespaces` using an [alternative TOML syntax](https://github.com/toml-lang/toml/blob/master/toml.md#user-content-table).
 
-</Aside>
+</bongo:aside>
 
 ### site
 
@@ -441,11 +441,11 @@ format = "service-worker"
 
 </Definitions>
 
-<Aside type="note">
+<bongo:aside type="note">
 
 Ensure the `main` field in your `package.json` references the Worker script you want to publish.
 
-</Aside>
+</bongo:aside>
 
 #### Modules
 
@@ -455,11 +455,11 @@ Module Workers `export` their event handlers instead of using `addEventListener`
 
 Modules receive all bindings (KV Namespaces, Environment Variables, and Secrets) as arguments to the exported handlers. With the Service Worker format, these bindings are available as global variables.
 
-<Aside type="note">
+<bongo:aside type="note">
 
 Refer to the [`FetchEvent` documentation](https://developers.cloudflare.com/workers/runtime-apis/fetch-event) to learn more about the differences between the Service Worker and Module worker formats.
 
-</Aside>
+</bongo:aside>
 
 An uploaded module may `import` other uploaded ES Modules. If using the CommonJS format, you may `require` other uploaded CommonJS modules.
 
@@ -523,11 +523,11 @@ main = "./worker.mjs"
 
   - The relative path of the main module from `dir`, including the `./` prefix. The main module must be an ES module. For projects with a build script, this usually refers to the output of your JavaScript bundler.
 
-<Aside type="note">
+<bongo:aside type="note">
 
 If your project is written using CommonJS modules, you will need to re-export your handlers and Durable Object classes using an ES module shim. Refer to the [modules-webpack-commonjs](https://github.com/cloudflare/modules-webpack-commonjs) template as an example.
 
-</Aside>
+</bongo:aside>
 
 - `rules` <PropMeta>optional</PropMeta>
 

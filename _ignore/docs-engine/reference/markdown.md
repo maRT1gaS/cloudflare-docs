@@ -34,7 +34,7 @@ Learn how to use [`<Asides/>`](/reference/markdown#asides).
 
 __Tip:__ If you’d like to take advantage of Gatsby’s routing, but you want more control over the presentation of the link, use `<Link/>` directly. For example, this could be used to implement a custom link button.
 
-</Aside>
+</bongo:aside>
 
 --------------------------------
 
@@ -110,14 +110,14 @@ Asides are used for displaying notes and warnings. They render as an `<aside/>` 
 
 __Note:__ This is a note.
 
-</Aside>
+</bongo:aside>
 
 ```md
 <Aside>
 
 __Note:__ This is a note.
 
-</Aside>
+</bongo:aside>
 ```
 
 You can use any MDX inside the component.
@@ -126,18 +126,18 @@ By default, an `Aside` will be of type `"note"`, meaning it will show in the fri
 
 You can also optionally specify a `header`.
 
-<Aside type="warning" header="Warning">
+<bongo:aside type="warning" header="Warning">
 
 This is a warning.
 
-</Aside>
+</bongo:aside>
 
 ```md
-<Aside type="warning" header="Warning">
+<bongo:aside type="warning" header="Warning">
 
 This is a warning.
 
-</Aside>
+</bongo:aside>
 ```
 
 --------------------------------
@@ -176,7 +176,7 @@ When writing reference documentation, there are four MDX components that you use
 
 __Note:__ You may also use `<Definitions/>` for definition lists that are not specifically for code (read: defining properties or methods), however depending on your use case, it may be more appropriate to simply use `<dl/>`, `<dt/>` and `<dd/>`.
 
-</Aside>
+</bongo:aside>
 
 Here are some self-exemplifying definitions:
 
@@ -515,11 +515,11 @@ When commands require a specific working directory, add that directory before th
 
 #### Advanced usage
 
-<Aside type="warning">
+<bongo:aside type="warning">
 
 __Warning:__ This usage is experimental and should be avoided.
 
-</Aside>
+</bongo:aside>
 
 Custom tokenization can also be achieved by manually applying tokens. For example:
 

@@ -21,7 +21,7 @@ View the content of the matched rule payload in the dashboard by entering your p
 
    The private key is not sent to a Cloudflare server. The decryption occurs entirely in the browser.
 
-   </Aside>
+   </bongo:aside>
 
 If the private key you entered decrypts the encrypted payload successfully, the **Payload match** card displays the payload content in clear text.
 

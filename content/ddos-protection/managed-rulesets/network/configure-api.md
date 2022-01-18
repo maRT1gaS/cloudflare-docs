@@ -22,7 +22,7 @@ The Network-layer DDoS Attack Protection Managed Ruleset is always enabled. You 
 
 You can only define overrides for the Network-layer DDoS Attack Protection Managed Ruleset at the account level.
 
-</Aside>
+</bongo:aside>
 
 ## Example
 

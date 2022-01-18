@@ -26,8 +26,8 @@ If you **do not** use Cloudflare for your authoritative nameservers (a CNAME set
   </Button>
 </ButtonGroup>
 
-<Aside type="note">
+<bongo:aside type="note">
 
 For sites that require an SSL certificate prior to migrating traffic to Cloudflare or need to disable certain cipher suites, purchase an <a href="../advanced-certificate-manager">advanced certificate</a> or upload a <a href="../custom-certificates">Custom SSL certificate</a> before proxying traffic to Cloudflare.
 
-</Aside>
+</bongo:aside>

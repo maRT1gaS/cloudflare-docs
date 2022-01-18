@@ -28,7 +28,7 @@ API calls for delegations can be found at [Prefix Delegations](https://api.cloud
 
 The dashboard only supports delegation of an entire prefix. If you want to delegate less than the entire prefix, use the API.
 
-</Aside>
+</bongo:aside>
 
 ## Spectrum
 

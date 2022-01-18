@@ -63,11 +63,11 @@ To set up S3-compatible endpoints:
 
 See below for detailed instructions.
 
-<Aside type="note" header="Note">
+<bongo:aside type="note" header="Note">
 
 Unlike Logpush jobs to Amazon S3, there is no ownership challenge with S3-compatible APIs.
 
-</Aside>
+</bongo:aside>
 
 <EnableReadPermissions />
 
@@ -82,11 +82,11 @@ To create a job, make a `POST` request to the Logpush jobs endpoint with the fol
 "s3://<BUCKET-NAME>/<BUCKET-PATH>?region=<REGION>&access-key-id=<ACCESS-KEY-ID>&secret-access-key=<SECRET-ACCESS-KEY>&endpoint=<ENDPOINT-URL>"
 ```
 
-<Aside type="note" header="Note">
+<bongo:aside type="note" header="Note">
 
 `<ENDPOINT-URL>` is the url without the bucket name or path. Example: `endpoint=sfo2.digitaloceanspaces.com`
 
-</Aside>
+</bongo:aside>
 
 - `dataset` - the category of logs you want to receive; either `http_requests` (default), `spectrum_events` or `firewall_events`
 - `logpull_options` (optional) - To configure fields, sample rate, and timestamp format, see [Logpush API options](/get-started/logpush-configuration-api/understanding-logpush-api#options)

@@ -11,7 +11,7 @@ Spectrum is a global TCP and UDP proxy running on Cloudflare's edge nodes. It do
 
 Some of these features require an Enterprise plan. If you would like to upgrade, contact your account team.
 
-</Aside>
+</bongo:aside>
 
 ## IP addresses
 

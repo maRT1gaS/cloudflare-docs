@@ -5,7 +5,7 @@ pcx-content-type: how-to
 
 # Native OS
 
-<Aside type="Warning" header="Warning">
+<bongo:aside type="Warning" header="Warning">
 
 Enrolling devices using static IP addresses may prevent users from connecting to some of the public Wi-Fi networks that use captive portals. If users are experiencing connectivity issues related to captive portals, they should:
 
@@ -15,7 +15,7 @@ Enrolling devices using static IP addresses may prevent users from connecting to
 
 Alternatively, you can look into using the [WARP client](/connections/connect-devices) to connect your devices to Teams.
 
-</Aside>
+</bongo:aside>
 
 ## Linux
 
@@ -26,7 +26,7 @@ Alternatively, you can look into using the [WARP client](/connections/connect-de
 1. Click **System** > **Preferences** > **Network Connections**.
 2. Click on the **Wireless** tab, then choose the Wi-Fi network you are currently connected to.
 3. Click **Edit**.
-4. Click **IPv4**.  
+4. Click **IPv4**.
    Remove any IP addresses that may already be listed.
 5. Add the following IP addresses:
    - **172.64.36.1**

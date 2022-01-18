@@ -16,7 +16,7 @@ While the WARP client is disconnected your Internet traffic does not route throu
     isolation policies
   </a>
   .
-</Aside>
+</bongo:aside>
 
 ## macOS
 

@@ -14,7 +14,7 @@ You can manipulate the headers included in the HTTP response through HTTP Respon
 
 To modify HTTP headers in the **request**, refer to [HTTP Request Header Modification Rules](/transform/request-header-modification).
 
-<Aside type='warning' header='Important'>
+<bongo:aside type='warning' header='Important'>
 
 - The response header values are calculated using the field values from the corresponding HTTP request. For example, the value of `ip.src.country` will be the country of the website visitor, not the origin where the response was sent from.
 
@@ -24,7 +24,7 @@ To modify HTTP headers in the **request**, refer to [HTTP Request Header Modific
 
 - Currently, there is a limited number of HTTP response headers that you cannot modify. Cloudflare may remove restrictions for some of these HTTP response headers when presented with valid use cases. [Create a post in the community](https://community.cloudflare.com) for consideration.
 
-</Aside>
+</bongo:aside>
 
 To create an HTTP Response Header Modification Rule, refer to the following pages:
 

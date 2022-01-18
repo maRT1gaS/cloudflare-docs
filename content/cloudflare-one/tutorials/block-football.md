@@ -72,7 +72,7 @@ Click **Create policy** to save the rule.
 
 The policy created will apply to any traffic sent to Gateway where HTTP filtering is applied. If you want to only apply one rule in this policy to specific groups of users, you can split this polity into two and add selectors that specific groups of users.
 
-</Aside>
+</bongo:aside>
 
 Once saved, the policy should now appear in your policy list.
 

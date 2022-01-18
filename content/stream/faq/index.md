@@ -25,11 +25,11 @@ You cannot download the _exact_ input file that you uploaded. However, depending
 
 - By default, you can have up to 120 videos in the `inprogress`, `queued` or `downloading` state at the same time. Videos in the `error`, `ready` or `pendingupload` state do not count toward this limit. If you need the concurrency limit raised, please [contact Cloudflare support](https://support.cloudflare.com/hc/articles/200172476) explaining your use case and why you would like the limit raised.
 
-<Aside type="note">
+<bongo:aside type="note">
 
 The limit to the number of videos only applies to videos being uploaded to Cloudflare Stream. This limit is not related to the number of end users streaming videos.
 
-</Aside>
+</bongo:aside>
 
 - An account cannot upload videos if the total video duration exceeds the video storage capacity purchased.
 
@@ -69,11 +69,11 @@ You can embed the Stream player on the following platforms:
 
 </TableWrap>
 
-<Aside type="note" header="Note">
+<bongo:aside type="note" header="Note">
 
 Cloudflare Stream is not available on Chromium, as Chromium does not support H.264 videos.
 
-</Aside>
+</bongo:aside>
 
 <TableWrap>
 

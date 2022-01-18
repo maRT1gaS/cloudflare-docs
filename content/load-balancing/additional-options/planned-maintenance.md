@@ -11,11 +11,11 @@ To take servers out of rotation gradually (important for session-based load bala
 
 To direct traffic away from your origin server immediately, [adjust settings on the pool or monitor](#immediate-rotation).
 
-<Aside type="note">
+<bongo:aside type="note">
 
 If you want to divert traffic from an origin to prevent it from becoming unhealthy, use [Load Shedding](/additional-options/load-shedding) instead.
 
-</Aside>
+</bongo:aside>
 
 ## Before you begin
 
@@ -25,11 +25,11 @@ If a pool falls below its **Health Threshold**, it will be considered **Unhealth
 
 ## Gradual rotation
 
-<Aside type="note">
+<bongo:aside type="note">
 
 Origin drain is only available for [proxied load balancers (orange-clouded)](/understand-basics/proxy-modes).
 
-</Aside>
+</bongo:aside>
 
 With [session-based load balancing](/understand-basics/session-affinity), it is important to direct all requests from a particular end user to a specific origin server. Otherwise, information about the user session — such as items in their shopping cart — may be lost and lead to negative business outcomes.
 

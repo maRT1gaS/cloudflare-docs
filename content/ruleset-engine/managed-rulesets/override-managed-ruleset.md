@@ -61,11 +61,11 @@ You can override the following rule properties:
 - `"action"` (`"block"`, `"challenge"`, `"log"`)
 - `"enabled"` (`true`, `false`)
 
-<Aside type="note" header="Note">
+<bongo:aside type="note" header="Note">
 
 Some Managed Rulesets may have additional override requirements, or they may allow you to override other rule properties. Check each Cloudflare product’s documentation for details.
 
-</Aside>
+</bongo:aside>
 
 ## Examples
 

@@ -11,7 +11,7 @@ Enabling Spectrum for FTP is not straightforward due to the implementation of th
 
 This feature requires an Enterprise plan. If you would like to upgrade, contact your account team.
 
-</Aside>
+</bongo:aside>
 
 ## How FTP Operates
 

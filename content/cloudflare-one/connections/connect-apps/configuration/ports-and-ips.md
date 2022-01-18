@@ -16,7 +16,7 @@ Users can implement a positive security model with Cloudflare Tunnel by restrict
 
 Opening port 443 for connections to `update.cloudflare.com` is optional. Failure to do so will prompt a log error, but `cloudflared` will still run correctly.
 
-</Aside>
+</bongo:aside>
 
 Below the output of `dig` commands towards the above hostnames:
 

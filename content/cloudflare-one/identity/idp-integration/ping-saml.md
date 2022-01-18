@@ -24,7 +24,7 @@ To set up PingIdentity (SAML) as your identity provider:
 
    There is an additional setting for PingFederate prior to 9.0.
 
-   </Aside>
+   </bongo:aside>
 
 1. In the **Signature Policy** tab, disable the option to **Always Sign Assertion**.
 1. Leave the option enabled for **Sign Response As Required**.

@@ -25,13 +25,13 @@ The easiest way to begin using APO is directly from Cloudflare’s WordPress plu
 1. Locate the Cloudflare plugin and select **Install now**.
 1. After the plugin finishes installing, select **Activate**. The Cloudflare plugin now displays in your Plugins list.
 
-<Aside type="warning">
+<bongo:aside type="warning">
 
 Cloudflare recommends turning off plugins such as WP Rocket Cache Plugin, W3 Total Cache, or similar plugins when first setting up APO. After confirming APO is working, we recommend testing whether turning on the plugins listed above improves results or causes unexpected behavior. In many cases, using APO along with other caching plugins can cause unexpected results.
 
 We also recommend clearing the server cache for the WP Rocket Cache plugin, W3 Total Cache, or similar plugins after APO activation.
 
-</Aside>
+</bongo:aside>
 
 ## Activate APO
 
@@ -51,7 +51,7 @@ To create the connection between WordPress and Cloudflare, you will create an AP
 
 Copy and paste your API token into a document saved on your computer to easily reference it again.
 
-</Aside>
+</bongo:aside>
 
 ## Add your API token to WordPress
 

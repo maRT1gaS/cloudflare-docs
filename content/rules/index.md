@@ -11,8 +11,8 @@ With Rules, you can manage the following types of rules:
 
 - [**Transform Rules**](/transform) — Allow you to adjust the URI path, query string, and HTTP headers of requests and responses at the edge.
 
-<Aside type='note' header='Note'>
+<bongo:aside type='note' header='Note'>
 
 You can manage Firewall Rules and Managed Rules in the **Firewall** app.
 
-</Aside>
+</bongo:aside>

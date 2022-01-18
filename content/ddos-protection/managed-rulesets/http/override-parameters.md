@@ -57,7 +57,7 @@ You cannot configure the rule action to _Log_ for rules with the `gatebot` tag o
 
 However, you can use the _Log_ action in the global ruleset configuration. In this case, any rule with the `gatebot` tag or whose `id` starts with `GB` will ignore the ruleset configuration and use the default action as defined in the Managed Ruleset.
 
-</Aside>
+</bongo:aside>
 
 ## Sensitivity Level
 

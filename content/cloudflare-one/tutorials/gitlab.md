@@ -209,7 +209,7 @@ cloudflared tunnel run
 
 This command should be run as a `systemd` service for long-term use; if it terminates, GitLab will be unavailable.
 
-</Aside>
+</bongo:aside>
 
 ### Configure DNS records
 
@@ -249,7 +249,7 @@ GitLab will create a new project and repository.
 
 To pull or push code, you must also add an SSH key to your profile in GitLab.
 
-</Aside>
+</bongo:aside>
 
 ### Configuring SSH
 

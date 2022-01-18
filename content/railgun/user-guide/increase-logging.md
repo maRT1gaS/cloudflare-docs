@@ -17,7 +17,7 @@ In order to increase logging, the `log.level` within `railgun.conf` should be se
 $ service railgun restart
 ```
 
-</Aside>
+</bongo:aside>
 
 The log files for Railgun can be found in the following locations for each supported operating system:
 

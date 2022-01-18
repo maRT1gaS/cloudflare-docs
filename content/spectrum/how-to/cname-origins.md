@@ -7,11 +7,11 @@ pcx-content-type: tutorial
 
 The API supports specifying an origin by hostname, which is useful when setting up Spectrum in front of a load balancer, like an AWS ELB that offers a hostname instead of a static IP.
 
-<Aside type="note" header="Note">
+<bongo:aside type="note" header="Note">
 
 This feature requires an Enterprise plan. If you would like to upgrade, contact your account team.
 
-</Aside>
+</bongo:aside>
 
 ## 1. Create a [CNAME Record](https://www.cloudflare.com/learning/dns/dns-records/dns-cname-record/)
 

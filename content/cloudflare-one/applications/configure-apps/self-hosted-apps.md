@@ -12,7 +12,7 @@ pcx-content-type: how-to
 - **<a href="https://support.cloudflare.com/hc/articles/201720164-Creating-a-Cloudflare-account-and-adding-a-website">Add a website to Cloudflare</a>**
 - **<a href="https://support.cloudflare.com/hc/articles/205195708">Change your domain nameservers to Cloudflare</a>**
 
-</Aside>
+</bongo:aside>
 
 Cloudflare Access allows you to securely publish internal tools and applications to the Internet, by providing an authentication layer using your existing identity providers to control who has access to your applications.
 
@@ -41,7 +41,7 @@ You are now ready to start configuring your app.
   prompted to authenticate with the configured provider. If you want users to be prompted to
   authenticate every time they reach your application, select{' '}
   <code>No duration, expires immediately</code>.
-</Aside>
+</bongo:aside>
 
 ![Set application name](../../static/documentation/applications/applications-name-session.png)
 
@@ -53,7 +53,7 @@ You are now ready to start configuring your app.
   When specifying an application domain, you can use wildcards to protect multiple parts of an
   application that share a root path. For more information on how to use wildcards, see the
   instructions in the <a href="/policies/zero-trust/app-paths">Application paths</a> page.
-</Aside>
+</bongo:aside>
 
 1. Scroll down to the **Application visibility** card.
 
@@ -64,7 +64,7 @@ You are now ready to start configuring your app.
      If you're having issues specifying a custom logo, check that the image is served from an HTTPS
      endpoint. For example, <code>http://www.example.com/upload/logo.png</code> will not work.
      However, <code>https://www.example.com/upload/logo.png</code> will.
-   </Aside>
+   </bongo:aside>
 
 1. Next, scroll down to the **Identity Providers** card to select the identity providers you want to enable for your app.
 

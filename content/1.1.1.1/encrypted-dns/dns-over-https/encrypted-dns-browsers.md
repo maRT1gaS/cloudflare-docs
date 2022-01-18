@@ -17,11 +17,11 @@ There are several browsers compatible with DNS over HTTPS (DoH). This protocol l
 
 ## Google Chrome
 
-<Aside type="note">
+<bongo:aside type="note">
 
 This setting may already be enabled by default.
 
-</Aside>
+</bongo:aside>
 
 1. Click on the three-dot menu in your browser window.
 1. Select **Settings**.
@@ -32,11 +32,11 @@ Your browser infers the DNS over HTTPS provider you want based on your system DN
 
 ## Microsoft Edge
 
-<Aside type="note">
+<bongo:aside type="note">
 
 This setting may already be enabled default.
 
-</Aside>
+</bongo:aside>
 
 1. Go to `edge://settings/privacy`.
 1. Scroll down to the **Security** section.

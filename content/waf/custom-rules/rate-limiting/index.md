@@ -5,11 +5,11 @@ order: 2
 
 # Rate Limiting rules
 
-<Aside type='warning'>
+<bongo:aside type='warning'>
 
 This feature is only available for selected customers on an Enterprise plan. Contact your Cloudflare Customer Success Manager if you want to get access.
 
-</Aside>
+</bongo:aside>
 
 Rate Limiting rules allow you to define rate limits for incoming requests matching an expression, as well as actions to take when those rate limits are reached.
 

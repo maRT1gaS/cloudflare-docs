@@ -62,7 +62,7 @@ To learn more about the optional `include` and `exclude` fields, visit [Ignoring
 
 **Note:** if your project uses [environments](/platform/environments), make sure to place `site` at the top level config.
 
-</Aside>
+</bongo:aside>
 
 Example of a `wrangler.toml`:
 

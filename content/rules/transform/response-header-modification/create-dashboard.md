@@ -22,11 +22,11 @@ Create HTTP Response Header Modification Rules in the **Transform Rules** tab un
 
 1. Under **When incoming requests match**, define the [rule expression](https://developers.cloudflare.com/firewall/cf-dashboard/create-edit-delete-rules#expression-builder-and-editor).
 
-   <Aside type='note'>
+   <bongo:aside type='note'>
 
    Check the [available fields and functions](/transform/response-header-modification/reference/fields-functions).
 
-   </Aside>
+   </bongo:aside>
 
 1. For **Modify response header**, select one of the following options:
 
@@ -42,11 +42,11 @@ Create HTTP Response Header Modification Rules in the **Transform Rules** tab un
 
    ![HTTP response header modification examples](../../static/transform/response-header-modification-example.png)
 
-   <Aside type='note'>
+   <bongo:aside type='note'>
 
    You can modify up to 30 HTTP response headers in a single rule.
 
-   </Aside>
+   </bongo:aside>
 
 1. To save and deploy your rule, click **Deploy**. If you are not ready to deploy your rule, click **Save as Draft**.
 

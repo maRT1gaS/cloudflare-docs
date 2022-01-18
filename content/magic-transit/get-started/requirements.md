@@ -22,11 +22,11 @@ The routers at your GRE tunnel endpoints must meet the following requirements to
 
 Draft a [Letter of Authorization (LOA)](https://developers.cloudflare.com/byoip/loa) that identifies the prefixes you want to advertise and gives Cloudflare permission to announce them. The LOA is required by Cloudflare's transit providers so they can accept the routes Cloudflare advertises on your behalf. See this [LOA template](https://developers.cloudflare.com/byoip/loa/loa-template) for an example.
 
-<Aside type="note" header="Note">
+<bongo:aside type="note" header="Note">
 
 The Letter of Authorization must be a PDF. Transit providers may reject the LOA if it is a JPG or PNG.
 
-</Aside>
+</bongo:aside>
 
 ## Verify Internet Routing Registry entries
 
@@ -42,11 +42,11 @@ Cloudflare uses GRE tunnels to deliver packets from our edge to your data center
 
 You must set the MSS value to 1436 bytes at your physical egress interfaces — not the GRE tunnel interfaces — to accommodate the additional header data.
 
-<Aside type="warning" header="Important">
+<bongo:aside type="warning" header="Important">
 
 If you are using IPsec inside GRE, set the MSS clamp at the IPsec tunnel interface and subtract 24 bytes from your current MSS value, which may be 1360 bytes or lower. This is because the physical interface will see IPsec-encrypted packets, not TCP packets, and MSS clamping will not apply to those.
 
-</Aside>
+</bongo:aside>
 
 <table>
   <thead>
@@ -115,8 +115,8 @@ Local MSS: 1436
 Remote MSS: 1436
 ```
 
-<Aside type='warning' header='Important'>
+<bongo:aside type='warning' header='Important'>
 
 If you do not have a publicly available TCP endpoint Cloudflare can use to verify your MSS settings, you must provide a screenshot of the cURL command results, similar to the one above.
 
-</Aside>
+</bongo:aside>

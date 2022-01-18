@@ -13,7 +13,7 @@ This means that when enabling Full SSL (Strict) in the dashboard while Railgun i
 
 **Note**: This error condition will only occur if `validate.cert` is enabled (for example, set to **1**) from the `railgun.conf` file.
 
-</Aside>
+</bongo:aside>
 
 Here is an example of the error generated when `validate.cert = 1`, the origin uses an Origin CA leaf, and the Origin CA roots are not in the trust store for Railgun specified by `ca.bundle`:
 
@@ -32,4 +32,4 @@ By default, `railgun.conf` defines the Listener's trust store as (for Debian/Ubu
 
 **Note**: As a reminder, the Listener will need to be restarted after making changes to the configuration file.
 
-</Aside>
+</bongo:aside>

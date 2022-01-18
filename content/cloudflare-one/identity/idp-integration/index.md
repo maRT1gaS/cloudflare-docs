@@ -13,7 +13,7 @@ Adding an identity provider as a login method requires configuration both on the
 
 Cloudflare Access supports social identity providers that do not require administrator accounts, open source providers, and corporate providers. Cloudflare also supports using signed AuthN requests with SAML providers.
 
-</Aside>
+</bongo:aside>
 
 ## Set up IdPs on the Teams dashboard
 

@@ -93,10 +93,10 @@ last-modified:  2018-03-16T16:58:06Z
 source:         APNIC
 ```
 
-<Aside type="note" header="Note:">
+<bongo:aside type="note" header="Note:">
 
 WHOIS output also shows the RPKI entry information for prefix IP addresses. When your WHOIS output only contains an RPKI entry, you must add the IRR entry.
 
 For more information, see [best practices for IRR entry updates](/best-practices/irr-entries).
 
-</Aside>
+</bongo:aside>

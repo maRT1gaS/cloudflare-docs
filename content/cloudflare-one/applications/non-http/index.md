@@ -15,11 +15,11 @@ You can connect applications to Cloudflare for Teams over a number of different 
 
 ## Rendering in the browser
 
-<Aside type='note'>
-  
+<bongo:aside type='note'>
+
   SSH and browser-rendered applications can be set for domains and subdomains, but cannot be set for paths.
 
-</Aside>
+</bongo:aside>
 
 Cloudflare can render certain non-web applications in your browser without the need for client software or end-user configuration changes. Cloudflare currently supports rendering a terminal for SSH and VNC connections in a user's browser.
 
@@ -35,7 +35,7 @@ Once enabled, when users authenticate and visit the URL of the application, Clou
 
 This should only be enabled if a [service token](/identity/service-auth/service-tokens) cannot be used for your automated service.
 
-</Aside>
+</bongo:aside>
 
 <TableWrap>
 

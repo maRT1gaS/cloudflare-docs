@@ -11,11 +11,11 @@ import CSRDefinition from '../../_partials/_csr-definition.md';
 
 A CSR contains information about your domain: your organization name and address, the common name (domain name), and Subject Alternative Names (SANs).
 
-<Aside type="note">
+<bongo:aside type="note">
 
 At the moment, CSRs are only available to Enterprise customers who have purchased an account-level subscription for [Advanced Certificate Manager](/edge-certificates/advanced-certificate-manager).
 
-</Aside>
+</bongo:aside>
 
 ## Types of CSRs
 
@@ -42,8 +42,8 @@ To use a CSR:
 1. Obtain a certificate from the Certificate Authority (CA) of your choice using your CSR.
 1. When you [upload the custom certificate](/edge-certificates/custom-certificates/uploading) to Cloudflare, select an **Encoding mode** of **Certificate Signing Request (CSR)** and enter the associated value.
 
-   <Aside type="note">
+   <bongo:aside type="note">
 
    You will not see the option to adjust your **Encoding Mode** until after you have created a CSR associated with the specific zone or your account.
 
-   </Aside>
+   </bongo:aside>

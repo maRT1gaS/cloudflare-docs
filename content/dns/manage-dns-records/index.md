@@ -7,11 +7,11 @@ pcx-content-type: how-to
 
 DNS records help communicate information about your domain to visitors and other web services.
 
-<Aside type="note" header="Note:">
+<bongo:aside type="note" header="Note:">
 
 For more background about different types of DNS records, refer to the [Learning Center](https://www.cloudflare.com/learning/dns/dns-records/).
 
-</Aside>
+</bongo:aside>
 
 ---
 
@@ -19,11 +19,11 @@ For more background about different types of DNS records, refer to the [Learning
 
 When you add a new domain to Cloudflare, Cloudflare automatically scans for common records and adds them to your account's **DNS** page. If you want to bulk import your own records, refer to [import DNS records](import-and-export).
 
-<Aside type="note">
+<bongo:aside type="note">
 
 If your domain is added to Cloudflare by a hosting partners, manage your DNS records via the hosting partner.
 
-</Aside>
+</bongo:aside>
 
 ### Using the dashboard
 

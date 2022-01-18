@@ -40,11 +40,11 @@ addEventListener('fetch', event => {
 
 The global `fetch` method itself invokes the `Request` constructor. The [`RequestInit`](#requestinit) and [`RequestInitCfProperties`](#requestinitcfproperties) types defined below also describe the valid parameters that can be passed to `fetch`.
 
-<Aside header="Learn more">
+<bongo:aside header="Learn more">
 
 Review [Understanding the FetchEvent Lifecycle](/learning/fetch-event-lifecycle) for a deeper understanding of these fundamental Workers concepts.
 
-</Aside>
+</bongo:aside>
 
 ## Constructor
 
@@ -279,7 +279,7 @@ All plans have access to:
 
 The `request.cf` object is not available in the Cloudflare Workers dashboard or Playground preview editor.
 
-</Aside>
+</bongo:aside>
 
 ---
 

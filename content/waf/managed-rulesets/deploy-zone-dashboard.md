@@ -29,11 +29,11 @@ Configure a Managed Ruleset to:
 
 To skip one or more rules or WAF Managed Rulesets, [add a WAF exception](/managed-rulesets/waf-exceptions).
 
-<Aside type="note">
+<bongo:aside type="note">
 
 Some Managed Rulesets may not allow custom configuration, depending on your Cloudflare plan.
 
-</Aside>
+</bongo:aside>
 
 ### Configure field values for all the rules
 
@@ -119,6 +119,6 @@ Do the following:
 
    Select **Apply to new rules** if you want to apply your configurations to any new rules with the select tag.
 
-   </Aside>
+   </bongo:aside>
 
 1. Click **Save**.

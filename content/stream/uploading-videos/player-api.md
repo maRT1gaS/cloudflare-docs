@@ -26,7 +26,7 @@ Multiple attributes can be used together, added one after each other like this:
 
     In addition, some browsers now prevent videos with audio from playing automatically. You may add the `mute` attribute to allow your videos to autoplay. For more information, go [here](https://webkit.org/blog/6784/new-video-policies-for-ios/).
 
-    </Aside>
+    </bongo:aside>
 
 - `controls` <Type>boolean</Type>
 
@@ -52,7 +52,7 @@ Multiple attributes can be used together, added one after each other like this:
 
     The `<video>` element does not force the browser to follow the value of this attribute; it is a mere hint. Even though the `preload="none"` option is a valid HTML5 attribute, Stream player will always load some metadata to initialize the player. The amount of data loaded in this case is negligible.
 
-    </Aside>
+    </bongo:aside>
 
 - `poster` <Type>string</Type>
 

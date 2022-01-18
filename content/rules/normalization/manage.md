@@ -34,11 +34,11 @@ The Cloudflare dashboard provides two components to manage URL Normalization:
   - When set to _On_, requests sent to the origin are normalized.
   - When set to _Off_ (default), requests sent to the origin are not modified.
 
-    <Aside type="note" header="Note">
+    <bongo:aside type="note" header="Note">
 
   You can only view and enable this option when **Normalize incoming URLs** is also enabled.
 
-    </Aside>
+    </bongo:aside>
 
 The table below shows how URL Normalization settings affect incoming URLs before they pass to other Cloudflare features and to origin.
 

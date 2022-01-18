@@ -7,11 +7,11 @@ pcx-content-type: tutorial
 
 To use Cloudflare for your authoritative DNS, update the administration settings at your current registrar.
 
-<Aside type="note" header="Note:">
+<bongo:aside type="note" header="Note:">
 
 If you are using [Cloudflare Registrar](https://developers.cloudflare.com/registrar), you do not need to update your authoritative nameservers. Registrar uses Cloudflare for authoritative DNS by default.
 
-</Aside>
+</bongo:aside>
 
 ---
 

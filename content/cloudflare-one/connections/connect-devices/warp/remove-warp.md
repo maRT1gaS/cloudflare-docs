@@ -25,7 +25,7 @@ $ ./uninstall.sh
 
 You may be prompted to provide your credentials while removing the application.
 
-</Aside>
+</bongo:aside>
 
 ## iOS and Android
 

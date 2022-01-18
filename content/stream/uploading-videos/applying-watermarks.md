@@ -71,7 +71,7 @@ To create, list, delete, or get information about the profile, you will need you
 
     Note that `center` will ignore the `padding` parameter.
 
-    </Aside>
+    </bongo:aside>
 
 </Definitions>
 

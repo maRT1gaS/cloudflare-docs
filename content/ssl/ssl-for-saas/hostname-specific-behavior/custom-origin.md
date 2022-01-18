@@ -48,11 +48,11 @@ Choose how your custom hostname populates the SNI value with SNI rewrites:
   - If wildcards are not enabled and a request comes to `example.com`, choose whether to set the SNI as `example.com` or `www.example.com`.
   - If wildcards are enabled, you set the SNI to `example.com`, and a request comes to `www.example.com`, then the SNI is `example.com`.
 
-<Aside type="note">
+<bongo:aside type="note">
 
 Currently, SNI Rewrite is not supported for **wildcard** custom hostnames. Subdomains covered by a wildcard Custom Hostname send the custom origin server name as the SNI value.
 
-</Aside>
+</bongo:aside>
 
 ### Set an SNI rewrite
 

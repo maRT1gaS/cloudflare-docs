@@ -11,11 +11,11 @@ import CAADefinition from '../../_partials/_caa-records-definition.md';
 
 For additional security, set up [Certificate Transparency Monitoring](/edge-certificates/additional-options/certificate-transparency-monitoring) as well.
 
-<Aside type="note" header="Note">
+<bongo:aside type="note" header="Note">
 
 For more technical details about CAA records, refer to the [introductory blog post](https://blog.cloudflare.com/caa-of-the-wild/).
 
-</Aside>
+</bongo:aside>
 
 ## Who should create CAA records?
 

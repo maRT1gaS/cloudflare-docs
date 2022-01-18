@@ -10,12 +10,12 @@ pcx-content-type: reference
 
 Cloudflare partners with multiple network fabric providers to offer as many connectivity options and locations as possible. During the [configure the cross-connect](/set-up-cni/configure-cross-connect) step, you'll initiate a connection from your chosen provider's admin portal.
 
-<Aside type='note'>
+<bongo:aside type='note'>
 
 You can read more about the partner program on our website. See
 the [Cloudflare Network Interconnect Partner Program](https://www.cloudflare.com/network-interconnect-partnerships/).
 
-</Aside>
+</bongo:aside>
 
 - [Console Connect](/partners/console-connect)
 - [Equinix Fabric](/partners/equinix-fabric)
@@ -25,11 +25,11 @@ the [Cloudflare Network Interconnect Partner Program](https://www.cloudflare.com
 - Epsilon Infiny (_coming soon_)
 - Zayo (_coming soon_)
 
-<Aside type='note'>
+<bongo:aside type='note'>
 
 If you can't find a Cloudflare port close to your infrastructure from your fabric provider's dashboard, contact interconnection@cloudflare.com to request a port closer to your location under the _Interconnect Anywhere_ program.
 
-</Aside>
+</bongo:aside>
 
 ## Physical Interconnection
 

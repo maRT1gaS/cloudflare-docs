@@ -21,11 +21,11 @@ To redirect traffic for all subdomains and hosts in your domain:
 1. Navigate to **SSL/TLS** > **Edge Certificates**.
 1. For **Always Use HTTPS**, switch the toggle to **On**.
 
-<Aside type="note">
+<bongo:aside type="note">
 
 The _Always Use HTTPS_ action will only appear if your zone has an active Cloudflare SSL certificate.
 
-</Aside>
+</bongo:aside>
 
 ### Page Rules
 

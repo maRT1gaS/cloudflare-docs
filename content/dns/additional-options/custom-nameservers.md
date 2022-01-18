@@ -22,11 +22,11 @@ Cloudflare domains on Business or Enterprise plans can set Custom Nameservers at
 
 Once you configure account-level custom nameservers, these nameservers can be applied and used by any zones in that account.
 
-<Aside type="note">
+<bongo:aside type="note">
 
 When using [subdomain support](https://support.cloudflare.com/hc/articles/360026440252), a parent and child zone cannot share the same nameserver names.
 
-</Aside>
+</bongo:aside>
 
 ### Cloudflare DNS
 

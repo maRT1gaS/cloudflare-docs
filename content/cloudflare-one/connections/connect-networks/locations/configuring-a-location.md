@@ -25,7 +25,7 @@ If any of the above apply to your case, click **Delete** to the right of the IPv
 
 If you're using an Enterprise plan, you'll be able to manually change the IPv4 address.
 
-   </Aside>
+   </bongo:aside>
 
 ![Add location](../../../static/documentation/connections/add-location.png)
 

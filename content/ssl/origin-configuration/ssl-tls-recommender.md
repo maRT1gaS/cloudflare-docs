@@ -7,11 +7,11 @@ pcx-content-type: concept
 
 The **SSL/TLS Recommender** helps you choose which [Encryption mode](/origin-configuration/ssl-modes) is best for your application.
 
-<Aside type="note">
+<bongo:aside type="note">
 
 For more background, refer to the [introductory blog post](https://blog.cloudflare.com/ssl-tls-recommender).
 
-</Aside>
+</bongo:aside>
 
 ## Enable SSL/TLS recommendations
 
@@ -31,11 +31,11 @@ If so, it will send the zone owner an email with the recommended option and add 
 
 Recommender will run future scans periodically and send notifications if new recommendations become available.
 
-<Aside type="note">
+<bongo:aside type="note">
 
 If you do not receive an email, keep your current **SSL encryption mode**.
 
-</Aside>
+</bongo:aside>
 
 ## Limitations
 

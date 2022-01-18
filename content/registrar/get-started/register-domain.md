@@ -10,22 +10,22 @@ pcx-content-type: how-to
 
 1. Click **Purchase** on the domain you wish to register. In rare instances, a domain that is not available for registration may appear in the search results. After clicking **Purchase**, a definitive availability check will be performed to confirm that the domain is actually available for registration.
 
-  <Aside type="note">
+  <bongo:aside type="note">
 
 Currently, Cloudflare cannot register premium domains (domains that have non-standard pricing) and Internationalized Domain Names (IDNs).
 
-  </Aside>
+  </bongo:aside>
 
-1. Select the term (number of years) you wish to register the domain for and click **Continue**. Most top-level domains (TLDs) can be registered for a maximum of ten years. Some TLDs may have different term limits and these will be reflected in the drop-down options.  
+1. Select the term (number of years) you wish to register the domain for and click **Continue**. Most top-level domains (TLDs) can be registered for a maximum of ten years. Some TLDs may have different term limits and these will be reflected in the drop-down options.
    The expiration date and price will update automatically based on the term selected. The **Renew On** date is the date that the system will attempt to auto-renew the domain. All registrations have Auto-renew turned on by default; however, you may disable this option at any time.
 
 1. Enter the contact details for the domain. These details will be used to create all of the required contacts (Registrant, Admin, Technical, and Billing), and may be updated after registration is completed. The following data fields have specific requirements:
 
-  <Aside type="note">
+  <bongo:aside type="note">
 
 At this time, you can only use ASCII characters for contact data. If the default contact has non-ASCII characters, you will need to update the domain contact details before proceeding. Cloudflare recommends that you update your default contact information to include ASCII characters only.
 
-  </Aside>
+  </bongo:aside>
 
   <TableWrap>
 
@@ -48,13 +48,13 @@ At this time, you can only use ASCII characters for contact data. If the default
 
 After entering the contact information click **Continue**. If any of the contact information is missing or not properly validated, an error message will appear and you will need to correct the data before proceeding.
 
-  <Aside type="note">
+  <bongo:aside type="note">
 
 If you have previously registered or transferred a domain name, the form will be filled in advance with the information from your default contact. If not, you will need to fill out the form.
 
 It is important that you provide complete and accurate contact information. If you do not follow this recommendation, the domain registration may be suspended and/or canceled.
 
-  </Aside>
+  </bongo:aside>
 
 1. The billing information will use the billing profile you have with Cloudflare, if one already exists. If there is no billing profile, you will need to enter your payment information.
 

@@ -9,7 +9,7 @@ You can monitor the status of your waiting rooms using the [dashboard](#status-i
 
 <Aside>
   Future work will create a separate area of application analytics for Cloudflare Waiting Rooms.
-</Aside>
+</bongo:aside>
 
 ## Status in the dashboard
 

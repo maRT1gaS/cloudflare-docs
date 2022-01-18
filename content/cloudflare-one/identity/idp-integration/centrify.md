@@ -50,7 +50,7 @@ These steps help you set up Centrify as your identity provider:
 
    Do not use the forward slash from the <strong>Settings</strong> tab.
 
-   </Aside>
+   </bongo:aside>
 
 1. Navigate to the **User Access** tab.
 1. Select the roles to grant access to your application.

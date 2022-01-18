@@ -17,7 +17,7 @@ You can create and configure Cloudflare Tunnel connections to [support multiple 
 
 If you are migrating from "classic" Cloudflare Tunnel deployments to the new, persistent, model you can [follow the instructions](/tutorials/migrate-lb-tunnel) to migrate without downtime.
 
-</Aside>
+</bongo:aside>
 
 **🗺️ This tutorial covers how to:**
 

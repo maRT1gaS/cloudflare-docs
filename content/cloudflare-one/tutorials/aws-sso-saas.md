@@ -17,7 +17,7 @@ For this tutorial, you will need:
 - An integrated IdP
 - Admin access to an AWS account
 
-</Aside>
+</bongo:aside>
 
 **⏲️ Time to complete:**
 
@@ -89,7 +89,7 @@ For this tutorial, you will need:
    1. Wrap the value in `-----BEGIN CERTIFICATE-----` and `-----END CERTIFICATE-----`.
    1. Set the file extension to `.crt` and save.
 
-   </Aside>
+   </bongo:aside>
 
 1. Click **Next: Review**.
 
@@ -97,7 +97,7 @@ For this tutorial, you will need:
 
    ![AWS settings](../static/zero-trust-security/aws-sso-saas/aws-settings.png)
 
-   <Aside type='Warning' header='Important'>
+   <bongo:aside type='Warning' header='Important'>
 
    Access for SaaS does not currently support System for Cross-domain Identity Management (SCIM). Please make sure that:
 
@@ -105,7 +105,7 @@ For this tutorial, you will need:
    1. Users have matching usernames in your identity provider and AWS.
    1. Usernames are email addresses. This is the only format AWS supports with third-party SSO providers.
 
-   </Aside>
+   </bongo:aside>
 
 ## Test your connection
 

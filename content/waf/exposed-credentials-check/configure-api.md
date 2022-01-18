@@ -13,7 +13,7 @@ Configure exposed credentials checks using the [Rulesets API](https://developers
 
 You must deploy the Managed Ruleset to the `http_request_firewall_managed` phase.
 
-</Aside>
+</bongo:aside>
 
 To deploy the Managed Ruleset for a given zone, do the following:
 
@@ -35,11 +35,11 @@ For more information on defining overrides for Managed Rulesets using the Rulese
 
 ## Create a custom rule checking for exposed credentials
 
-<Aside type="note">
+<bongo:aside type="note">
 
 This feature is only available to customers on an Enterprise plan.
 
-</Aside>
+</bongo:aside>
 
 You can create rules that check for exposed credentials using the [Rulesets API](https://developers.cloudflare.com/ruleset-engine/rulesets-api). Include these rules in a custom ruleset, which you must create at the account level, and then deploy the custom ruleset to a phase.
 
@@ -57,7 +57,7 @@ These options have additional requirements:
 - Each expression must evaluate to a string.
 - You can only use the `upper()`, `lower()`, and `url_decode()` functions, and you cannot nest these functions.
 
-</Aside>
+</bongo:aside>
 
 You can use the `exposed_credential_check` field in rules with one of the following actions: `rewrite`, `log`, `block`, `challenge`, or `js_challenge`.
 

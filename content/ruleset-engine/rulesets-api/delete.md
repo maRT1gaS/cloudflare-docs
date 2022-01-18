@@ -33,7 +33,7 @@ You cannot delete a ruleset that is still referenced in other rules. For example
 
 To delete the ruleset, update or delete any rules that reference the ruleset and try again.
 
-</Aside>
+</bongo:aside>
 
 ### Example
 
@@ -73,7 +73,7 @@ You cannot delete a ruleset version if it is the latest ruleset version and ther
 
 To delete the ruleset version, update or delete any rules that reference the ruleset and try again.
 
-</Aside>
+</bongo:aside>
 
 ### Example
 

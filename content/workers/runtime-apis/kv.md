@@ -310,10 +310,10 @@ addEventListener('fetch', async event => {
 ```
 
 <Aside>
-  
+
 You can create a namespace <a href="https://developers.cloudflare.com/workers/cli-wrangler/commands#getting-started">using Wrangler</a> or in the <a href="https://dash.cloudflare.com/">Workers dashboard</a> on the KV page. For the dashboard, you can bind the namespace to your Worker by clicking "Settings" and adding a binding under "KV Namespace Bindings".
 
-</Aside>
+</bongo:aside>
 
 ### Referencing KV from Durable Objects and Workers using Modules Syntax
 

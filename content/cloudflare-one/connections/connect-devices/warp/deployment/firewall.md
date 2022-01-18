@@ -16,7 +16,7 @@ The WARP client talks with our edge outside the tunnel for operations like regis
 <Aside>
   The Orchestration API endpoint is currently shared with our Consumer WARP Client. In early 2022 we
   will be splitting this out to its own dedicated IP address.
-</Aside>
+</bongo:aside>
 
 ## WARP Ingress IP
 

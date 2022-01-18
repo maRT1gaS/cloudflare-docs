@@ -8,11 +8,11 @@ type: overview
 
 Create Custom Firewall rules under the **Custom Rules** tab in the **Firewall** app.
 
-<Aside type='warning' header='Important'>
+<bongo:aside type='warning' header='Important'>
 
 This feature is only available for selected customers on an Enterprise plan.
 
-</Aside>
+</bongo:aside>
 
 ## Create a Custom Firewall rule
 

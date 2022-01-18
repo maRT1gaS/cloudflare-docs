@@ -5,11 +5,11 @@ pcx-content-type: concept
 
 # Environments
 
-<Aside type="note">
+<bongo:aside type="note">
 
 You can only use environments with [wrangler](/cli-wrangler).
 
-</Aside>
+</bongo:aside>
 
 ## Background
 

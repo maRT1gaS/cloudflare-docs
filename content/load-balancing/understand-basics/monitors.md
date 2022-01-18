@@ -13,11 +13,11 @@ import MonitorDefinition from '../_partials/_monitor-definition.md';
 
 Health checks that result in a status change for an origin server are recorded as events in the Load Balancing event logs.
 
-<Aside type="note">
+<bongo:aside type="note">
 
 Health checks associated with load balancers are different from <strong>Standalone health checks</strong>. For more details about Standalone health checks, see the <a href="https://support.cloudflare.com/hc/articles/4404867308429">Support documentation</a>.
 
-</Aside>
+</bongo:aside>
 
 ---
 

@@ -11,10 +11,10 @@ import ConfigureAlerts from '../_partials/_alerts-configure.md';
 
 <AlertsIntro />
 
-<Aside type="note">
+<bongo:aside type="note">
 
 Only available to customers on Business and Enterprise plans.
 
-</Aside>
+</bongo:aside>
 
 <ConfigureAlerts />

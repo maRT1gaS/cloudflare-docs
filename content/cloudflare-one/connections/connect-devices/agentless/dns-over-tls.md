@@ -62,10 +62,10 @@ forward-zone:
 ```
 
  <Aside>
- 
+
 Each location has a unique DoT hostname and IPv6 address. Remember to enter your location's values when applying the config above.
 
-</Aside>
+</bongo:aside>
 
 ## Supported TLS versions
 

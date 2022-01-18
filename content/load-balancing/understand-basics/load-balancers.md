@@ -9,11 +9,11 @@ import LBDefinition from '../_partials/_load-balancer-definition.md';
 
 <LBDefinition />
 
-<Aside type="note">
+<bongo:aside type="note">
 
 For more background information on what load balancers are and how they work, check out our <a href="https://www.cloudflare.com/learning/performance/what-is-load-balancing/">Learning Center</a>.
 
-</Aside>
+</bongo:aside>
 
 ---
 
@@ -48,11 +48,11 @@ To set up a load balancer with **active-active failover**, either:
 - Create a load balancer with a single origin pool (`primary`) with multiple origins (`origin-1` and `origin-2`) and set the same [**Weight**](/understand-basics/weighted-load-balancing) for each origin.
 - Create a load balancer with two origin pools (`primary` and `secondary`) and — for [**Traffic Steering**](/understand-basics/traffic-steering) — select any option except for **Off**.
 
-<Aside type='note'>
+<bongo:aside type='note'>
 
 For more background reading on server failover and common configurations, see our <a href="https://www.cloudflare.com/learning/performance/what-is-server-failover/">Learning Center</a>.
 
-</Aside>
+</bongo:aside>
 
 ## Load balancing and existing DNS records
 

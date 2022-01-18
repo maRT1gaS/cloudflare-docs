@@ -51,7 +51,7 @@ The following table describes the parameters available:
 
 </TableWrap>
 
-<Aside type="note" header="Note">
+<bongo:aside type="note" header="Note">
 
 The maximum time range from <em>start</em> to <em>end</em> can't exceed 1 hour. Because <em>start</em> is inclusive and <em>end</em> is exclusive, to get all the data for every minute, starting at 10AM, the proper values are:
 
@@ -59,7 +59,7 @@ The maximum time range from <em>start</em> to <em>end</em> can't exceed 1 hour. 
 
 The overlap will be handled correctly.
 
-</Aside>
+</bongo:aside>
 
 ## Example API requests using cURL
 
@@ -81,11 +81,11 @@ curl -s \
     "https://api.cloudflare.com/client/v4/zones/<ZONE_ID>/logs/rayids/47ff6e2c812d3ccb?timestamps=rfc3339"
 ```
 
-<Aside type="note" header="Note">
+<bongo:aside type="note" header="Note">
 
 The IATA code returned as part of the Ray ID does not need to included in the request. For example: if you have a RayID such as `49ddb3e70e665831-DFW` only include `49ddb3e70e665831` in your request.
 
-</Aside>
+</bongo:aside>
 
 ## Fields
 

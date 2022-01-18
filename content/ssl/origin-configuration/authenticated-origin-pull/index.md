@@ -20,8 +20,8 @@ If you want your domain to be FIPS compliant, you must [upload your own certific
   </Button>
 </ButtonGroup>
 
-<Aside type='warning' header='Important'>
+<bongo:aside type='warning' header='Important'>
 
 Authenticated Origin Pull is incompatible with Railgun.
 
-</Aside>
+</bongo:aside>

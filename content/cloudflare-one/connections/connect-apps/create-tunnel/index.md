@@ -67,7 +67,7 @@ $ cloudflared tunnel delete <NAME>
 
 The command requires the `cert.pem` file.
 
-</Aside>
+</bongo:aside>
 
 If there are still active connections on that Tunnel, then you will have to force the deletion with:
 
@@ -83,6 +83,6 @@ Deleting the Tunnel also invalidates the credentials file associated with that T
 
 Tunnels created in this method do not currently display in the **Traffic** tab of the [Cloudflare dashboard](https://dash.cloudflare.com). These connections will be added to the dashboard in a future release.
 
-</Aside>
+</bongo:aside>
 
 Cloudflare Tunnel deletes DNS records after 24-48 hours of a Tunnel being unregistered. Cloudflare Tunnel does not delete TLS certificates on your behalf once the Tunnel is shut down. If you want to clean up a Tunnel you’ve shut down, you can delete DNS records [in the DNS editor](https://dash.cloudflare.com/?zone=dns) and revoke TLS certificates in the Origin Certificates section of the [SSL/TLS tab of the Cloudflare dashboard](https://dash.cloudflare.com?to=/:account/:zone/ssl-tls/origin).

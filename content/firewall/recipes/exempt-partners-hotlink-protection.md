@@ -4,11 +4,11 @@ pcx-content-type: configuration
 
 # Exempt partners from Hotlink Protection
 
-<Aside type='note' header='Note'>
+<bongo:aside type='note' header='Note'>
 
 If you use this technique, disable Hotlink Protection within the **Scrape Shield** app so that partner referrals are not blocked by that feature.
 
-</Aside>
+</bongo:aside>
 
 When enabled, Cloudflare Hotlink Protection blocks all HTTP referrers that are not part of your domain or zone. That presents a problem if you allow partners to use inline links to your assets.
 

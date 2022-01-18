@@ -36,7 +36,7 @@ Click **Create Service Token** and name the service token. Cloudflare Access wil
 
 For the purposes of this tutorial, the `Client Secret` is visible. However, real use cases should treat this like a password.
 
-</Aside>
+</bongo:aside>
 
 ## Add the service token to an app rule
 

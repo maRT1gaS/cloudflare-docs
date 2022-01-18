@@ -26,7 +26,7 @@ Use one of the following API endpoints:
 
 You cannot update the name of the ruleset or its type. Do not include these fields in the `data` field of your `PUT` request.
 
-</Aside>
+</bongo:aside>
 
 ## Example - Set the rules of a ruleset
 
@@ -175,7 +175,7 @@ You can use this API method to update the description of an existing ruleset or 
 
 You cannot update the description or the rules in a Managed Ruleset. You can only [define overrides](/managed-rulesets/override-managed-ruleset) to customize the ruleset behavior.
 
-</Aside>
+</bongo:aside>
 
 <details open>
 <summary>Request</summary>

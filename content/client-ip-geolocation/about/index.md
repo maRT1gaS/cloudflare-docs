@@ -5,11 +5,11 @@ pcx-content-type: concept
 
 # About
 
-<Aside type="note">
+<bongo:aside type="note">
 
 Client IP Geolocation is currently in closed Beta testing.
 
-</Aside>
+</bongo:aside>
 
 Cloudflare Client IP Geolocation helps you understand where in the world a given client is located, even if their true client IP address is obscured by Cloudflare's proxy systems. We offer this service to ensure customers have high-quality experiences interacting with origins that rely on geolocation — such as mapping providers — and origin operators can deliver the right content to the right users. Ensuring origins know where clients are located avoids problems associated with traditional VPNs that obscure a consumer’s geolocation and allow circumvention of geographic restrictions on content.
 

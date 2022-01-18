@@ -34,7 +34,7 @@ Cloudflare Access relies on a secure exchange between a user's browser and the T
 
 The integration does not currently support Safari.
 
-</Aside>
+</bongo:aside>
 
 ## Integrating Tanium Identity
 

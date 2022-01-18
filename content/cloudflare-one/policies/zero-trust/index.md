@@ -22,20 +22,20 @@ The action is the first element you'll be asked to configure when you create a Z
 
 These are the action types you can choose from:
 
-- **Allow**.  
+- **Allow**.
    The allow action allows users that meet certain criteria to reach an application behind Access.
-- **Block**.  
+- **Block**.
    The block action prevents users from reaching an application behind Access.
-- **Bypass**.  
+- **Bypass**.
    The bypass action disables any Access enforcement for traffic that meets the defined rule criteria.
-- **Service Auth**.  
+- **Service Auth**.
    Service Auth rules enforce authentication flows that do not require an identity provider IdP) login, such as service tokens and mutual TLS.
 
-<Aside type='note'>
+<bongo:aside type='note'>
 
 When applying a Bypass action, security settings revert to the defaults configured for the zone and any configured page rules. If Always use HTTPS is enabled for the site, then traffic to the bypassed destination continues in HTTPS. If it is not or you applied page rules to disable it, traffic is HTTP.
 
-</Aside>
+</bongo:aside>
 
 ## Rules
 

@@ -16,11 +16,11 @@ pcx-content-type: how-to
 </div>
 </details>
 
-<Aside type="note">
+<bongo:aside type="note">
 
 You can create multiple instances of the Application Check for each operating system you need to run it on, or if you need to check for multiple applications.
 
-</Aside>
+</bongo:aside>
 
 The Application Check device posture attribute checks that a specific application process is running on a device.
 

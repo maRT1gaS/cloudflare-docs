@@ -9,7 +9,7 @@ pcx-content-type: how-to
 
 This feature is only available if you're using the Teams Standard plan or the Teams Enterprise plan. For more information, see our [plans page](https://www.cloudflare.com/teams-pricing/).
 
-</Aside>
+</bongo:aside>
 
 You can provide automated systems with service tokens to authenticate against Cloudflare's Zero Trust policies. Cloudflare for teams will generate service tokens that consist of an ID and Secret. Automated systems or applications can then use these values to reach an application protected by Access.
 
@@ -37,11 +37,11 @@ The next page will display the generated `Client ID` and `Client Secret` for the
 
 ![Access Service Token card](../../static/documentation/identity/users/detail-service-token.png)
 
-<Aside type='warning' header='Important'>
+<bongo:aside type='warning' header='Important'>
 
 This is the **only time** Cloudflare Access will display the Client Secret. If you lose the Client Secret, you must generate a new service token.
 
-</Aside>
+</bongo:aside>
 
 6. Click **Close**.
 

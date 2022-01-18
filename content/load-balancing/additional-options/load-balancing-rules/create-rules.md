@@ -45,11 +45,11 @@ Create and manage [Load Balancing rules](../) in the **Custom Rules** page, whic
 
 1. Click **Save**.
 
-<Aside type='warning' header='Warning'>
+<bongo:aside type='warning' header='Warning'>
 
 To save a new load balancer rule, make sure to save both the rule **and** the overall load balancer configuration.
 
-</Aside>
+</bongo:aside>
 
 ## Example configuration
 

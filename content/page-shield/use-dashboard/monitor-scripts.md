@@ -32,11 +32,11 @@ If you recently activated Page Shield, you may see a delay in reporting.
 
 ## View script details
 
-<Aside type="note">
+<bongo:aside type="note">
 
 Only available to customers on Business and Enterprise plans.
 
-</Aside>
+</bongo:aside>
 
 You can check the details of each script displayed in the Script Monitor dashboard, including the following fields:
 

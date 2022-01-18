@@ -20,7 +20,7 @@ Once enabled, Cloudflare sends a `CF-Device-Type` HTTP header to your origin wit
 
 Changing Cache By Device Type setting will invalidate Cache.
 
-</Aside>
+</bongo:aside>
 
 The Cloudflare for WordPress plugin automatically purges all cache variations for updated pages. If you use any of the plugins listed below, enable cache by device type.
 

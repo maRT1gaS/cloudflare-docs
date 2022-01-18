@@ -64,11 +64,11 @@ Cloudflare does not enforce response limits, but cache limits for [Cloudflare's 
 
 Workers on the Bundled Usage Model are intended for use cases below 50 ms. Bundled Workers limits are based on CPU time, rather than [duration](#duration). This means that the time limit does not include the time a script is waiting for responses from network calls. The billing model for Bundled Workers is based on requests that exceed the included number of requests on the Paid plan. Learn more about [Usage Model pricing](/platform/pricing#usage-models).
 
-<Aside type="note" header="No limit* for duration">
+<bongo:aside type="note" header="No limit* for duration">
 
 There is no hard limit for duration. However, after 30 seconds, there is a higher chance of eviction.
 
-</Aside>
+</bongo:aside>
 
 ### Unbound Usage Model
 
@@ -92,11 +92,11 @@ The Workers Unbound Usage Model has a significantly higher limit than the Bundle
 
 </TableWrap>
 
-<Aside type="note" header="Free vs. Paid plan pricing">
+<bongo:aside type="note" header="Free vs. Paid plan pricing">
 
 Refer to [KV pricing](/platform/pricing#workers-kv) to review the specific KV operations you are allowed under each plan with their pricing.
 
-</Aside>
+</bongo:aside>
 
 ## Cache API limits
 
@@ -229,11 +229,11 @@ A Workers script can be up to 1 MB in size after compression.
 
 Unless otherwise negotiated as a part of an enterprise level contract, all Workers accounts are limited to a maximum of 30 scripts at any given time.
 
-<Aside type="note">
+<bongo:aside type="note">
 
 App Workers scripts do not count towards this limit.
 
-</Aside>
+</bongo:aside>
 
 ---
 
@@ -262,11 +262,11 @@ Workers KV is an eventually consistent system, meaning that reads will sometimes
 
 - 5 GBs total `put()` per-request
 
-<Aside type="note">
+<bongo:aside type="note">
 
 The size of chunked response bodies (`Transfer-Encoding: chunked`) is not known in advance. Then, `.put()`ing such responses will block subsequent `.put()`s from starting until the current `.put()` completes.
 
-</Aside>
+</bongo:aside>
 
 ---
 

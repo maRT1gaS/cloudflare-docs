@@ -15,23 +15,23 @@ To configure the network cross-connect for physical links, Cloudflare generates 
 - Order cross-connects at the locations the LOA specifies.
 - Verify when the cross-connects are complete.
 
-<Aside type='note'>
+<bongo:aside type='note'>
 
 To review physical interconnection locations, see [Partners](/partners#physical-interconnection).
 
-</Aside>
+</bongo:aside>
 
 ## Virtual Links
 
 To configure the network cross-connect for virtual links, you must create a request from the partner dashboard. Cloudflare will then review and accept the request.
 
-<Aside type='note'>
+<bongo:aside type='note'>
 
 When using a virtual partner network interconnect, provision cross-connects using the appropriate partner portals.
 
 For more information, see the [Cloudflare Network Interconnect Partner Program](https://www.cloudflare.com/network-interconnect-partnerships/).
 
-</Aside>
+</bongo:aside>
 
 ### Follow your partner's instructions below
 

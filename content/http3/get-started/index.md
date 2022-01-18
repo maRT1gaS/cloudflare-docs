@@ -14,11 +14,11 @@ Before you enable HTTP/3 on a Cloudflare domain, ensure you are using a supporte
 - [cURL](https://curl.haxx.se) + quiche - [Instructions](/tutorials/curl-brew)
 - [Cloudflare quiche-client](https://github.com/cloudflare/quiche) - [Instructions](/tutorials/quiche-http3-client)
 
-<Aside type="note" header="Note">
+<bongo:aside type="note" header="Note">
 
 Cloudflare supports multiple draft versions of HTTP/3 and QUIC. When using a client, verify that it supports one of the versions listed in the [release notes](/release-notes).
 
-</Aside>
+</bongo:aside>
 
 ## Enable HTTP/3 on a Cloudflare domain
 

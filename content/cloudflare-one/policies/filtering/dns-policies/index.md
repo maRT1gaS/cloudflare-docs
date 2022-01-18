@@ -10,7 +10,7 @@ hidden: true
 
 To take full advantage of the DNS filtering experience with Gateway, build any new DNS policy in the DNS (New) tab.
 
-</Aside>
+</bongo:aside>
 
 When a user makes a DNS request to Gateway, Gateway matches the request against the content or security categories you have set up for your organization. If the domain does not belong to any blocked categories, or if it matches an override rule, the user's client receives the DNS resolution and initiates an HTTP connection.
 
@@ -34,7 +34,7 @@ When creating a DNS policy, you can select as many security risk categories as y
 
 Sites that are classified as belonging to the **Child Abuse** category are blocked by default.
 
-</Aside>
+</bongo:aside>
 
 When creating a DNS policy, you can select as many content categories as you want to block with the policy.
 
@@ -61,7 +61,7 @@ Just like you can choose to block a domain and all subdomains, you can block an 
 
 Blocking a popular TLD like `.com` will prevent users from connecting to significant portions of the internet.
 
-</Aside>
+</bongo:aside>
 
 ## Order of operations
 

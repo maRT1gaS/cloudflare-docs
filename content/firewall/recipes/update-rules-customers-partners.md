@@ -11,11 +11,11 @@ Potential examples include:
 - Removing rate limiting for an API
 - Sharing brand assets and marketing materials
 
-<Aside type='note' header='Note'>
+<bongo:aside type='note' header='Note'>
 
 These rules can bypass Cloudflare's security features and are generally not recommended. Use with caution.
 
-</Aside>
+</bongo:aside>
 
 ## Update firewall rules by ASN
 
@@ -47,11 +47,11 @@ This example uses:
   </tbody>
 </table>
 
-<Aside type='warning' header='Important'>
+<bongo:aside type='warning' header='Important'>
 
 Access to [Bot Management](https://developers.cloudflare.com/bots/get-started/bm-subscription) requires a Cloudflare Enterprise plan with Bot Management.
 
-</Aside>
+</bongo:aside>
 
 ### Adjust rules by ASN
 

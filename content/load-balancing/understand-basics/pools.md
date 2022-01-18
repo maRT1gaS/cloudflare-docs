@@ -15,7 +15,7 @@ If you are familiar with DNS terminology, think of a pool as a “record set,”
 
 For more details about how origins and pools become unhealthy, refer to [Origin and pool health](/understand-basics/health-details).
 
-</Aside>
+</bongo:aside>
 
 ---
 

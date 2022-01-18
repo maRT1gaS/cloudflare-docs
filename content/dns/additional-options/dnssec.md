@@ -7,11 +7,11 @@ pcx-content-type: how-to
 
 DNS Security Extensions (DNSSEC) adds an extra layer of authentication to DNS, ensuring requests are not routed to a spoofed domain.
 
-<Aside type="note">
+<bongo:aside type="note">
 
 For additional background on DNSSEC, visit the [Cloudflare Learning Center](https://www.cloudflare.com/learning/dns/dns-security/).
 
-</Aside>
+</bongo:aside>
 
 ## Enable DNSSEC
 
@@ -56,11 +56,11 @@ This is not an exhaustive list, but the following links may be helpful:
 </div>
 </details>
 
-<Aside type="note" header="Note:">
+<bongo:aside type="note" header="Note:">
 
 Cloudflare automatically adds **DS** records for domains using Cloudflare Registrar or those using `.ch` and `.cz` top-level domains.
 
-</Aside>
+</bongo:aside>
 
 ## Troubleshooting
 

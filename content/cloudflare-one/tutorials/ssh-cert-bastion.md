@@ -78,7 +78,7 @@ Bastion mode introduces a risk of horizontal movement. Only use in cases where y
 
 Alternatively, you can point the service directly to a specific URL, IP, or port.
 
-</Aside>
+</bongo:aside>
 
 ```yaml
 tunnel: 79a60ee2-9a98-4f5f-96c7-76c88b2075be
@@ -161,4 +161,4 @@ When users authenticate through Cloudflare Access, Cloudflare will generate a ce
 
 The username in the identity provider must match the username on the SSH server.
 
-</Aside>
+</bongo:aside>

@@ -42,11 +42,11 @@ For this tutorial all API endpoints are public. However, Fauna also offers multi
 
 Open the [Fauna dashboard][fauna-dashboard] in your browser and log into your Fauna account.
 
-<Aside type="note" header="Fauna Account">
+<bongo:aside type="note" header="Fauna Account">
 
 If you do not have a Fauna account, you can [sign up][fauna-signup] and deploy this template using the free tier.
 
-</Aside>
+</bongo:aside>
 
 In the Fauna dashboard:
 
@@ -73,11 +73,11 @@ Navigate to the **Security** tab in the Fauna dashboard and create a new key wit
 
 The Fauna dashboard displays the key's secret. Copy and save this server key to use in a later step.
 
-<Aside type="warning" header="Protect your keys">
+<bongo:aside type="warning" header="Protect your keys">
 
 Server keys can read and write all documents in all collections and can call all [user-defined functions][fauna-udfs] (UDFs). Protect server keys and do not commit them to source control repositories.
 
-</Aside>
+</bongo:aside>
 
 ## Managing your inventory with Workers
 
@@ -92,11 +92,11 @@ $ cd fauna-workers
 $ wrangler publish
 ```
 
-<Aside type="note" header="Publish before storing secrets">
+<bongo:aside type="note" header="Publish before storing secrets">
 
 You must publish a version of your project before storing your server secret in the next step.
 
-</Aside>
+</bongo:aside>
 
 ### Adding your Fauna secret as an environment variable
 
@@ -459,11 +459,11 @@ header: Create product response
 }
 ```
 
-<Aside type="note">
+<bongo:aside type="note">
 
 Copy the `productId` value for use in the remaining test queries.
 
-</Aside>
+</bongo:aside>
 
 Next, read the document you just created:
 
@@ -600,11 +600,11 @@ The FQL [Update][fql-update] function only updates the provided properties of a 
 
 Finally, this query calculates the new total quantity by adding the value of `quantity` to `currentQuantity` using the FQL [Add][fql-add] function.
 
-<Aside type="note" header="Consistency guarantees in Fauna">
+<bongo:aside type="note" header="Consistency guarantees in Fauna">
 
 Even if multiple Workers update this quantity from different parts of the world, Fauna guarantees the consistency of the data across all Fauna regions. [This article][fauna-blog-consistency-without-clocks] explains how Fauna's distributed protocol works without the need for atomic clocks.
 
-</Aside>
+</bongo:aside>
 
 Test your update route:
 

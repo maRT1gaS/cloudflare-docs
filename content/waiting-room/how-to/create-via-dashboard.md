@@ -8,7 +8,7 @@ pcx-content-type: how-to
 
 <Aside>
   For additional context on creating a waiting room, see <a href="/get-started">Get started</a>.
-</Aside>
+</bongo:aside>
 
 1. Within your application, go to **Traffic** > **Waiting Rooms**.
 1. Click **Create**.

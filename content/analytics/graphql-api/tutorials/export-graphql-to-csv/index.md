@@ -12,13 +12,13 @@ visualization and usage.
 Therefore, this example queries the `ipFlows1mAttacksGroups` [data set][1],
 which containes minutely aggregates of Network Analytics attack activity.
 
-<Aside type="warning">
+<bongo:aside type="warning">
 
 This tutorial uses Network Analytics v1 (NAv1) nodes. These nodes are planned to
 be deprecated on March 31, 2022. For more information on migrating from Network
 Analytics v1 to Network Analytics v2, refer to the [migration guide][5].
 
-</Aside>
+</bongo:aside>
 
 ## Prerequisites
 

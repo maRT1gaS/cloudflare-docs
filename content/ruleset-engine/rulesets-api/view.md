@@ -35,7 +35,7 @@ Also, the list of rulesets at the zone level includes the account-level rulesets
 
 Not all zone-level phases support all types of rulesets, even if they are presented in the list returned by this API method. Check the documentation for each Cloudflare product for more information on which ruleset types are allowed in that product’s supported phases.
 
-</Aside>
+</bongo:aside>
 
 The result does not include the list of rules in the ruleset. Check [View a specific version of a ruleset](#view-a-specific-version-of-a-ruleset) to learn how to obtain the list of rules.
 
@@ -103,7 +103,7 @@ Use one of the following API endpoints:
 
 Note: You can only use the _Get a zone ruleset_ operation for zone-level phase entry points, that is, entry points where `kind` is set to `zone`.
 
-</Aside>
+</bongo:aside>
 
 The API returns a `404 Not Found` HTTP status code under these conditions:
 
@@ -314,7 +314,7 @@ curl -X GET \
 
 When you view a specific version of a Managed Ruleset, each rule listed in the result can have one or more associated categories/tags, and it will not contain an expression.
 
-</Aside>
+</bongo:aside>
 
 ## List rules in a Managed Ruleset with a specific tag
 

@@ -13,7 +13,7 @@ The **goal** is to ensure that PRs are easily **retrievable** and **readable**.
 
 When you’re working on several files or making significant changes in your local repo, try to split work into smaller commits.
 
-</Aside>
+</bongo:aside>
 
 | <span style="color:red">✘</span> | <span style="color:green">✓</span> |
 |---|---|

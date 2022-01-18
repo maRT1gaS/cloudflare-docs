@@ -5,11 +5,11 @@ pcx-content-type: tutorial
 
 # Entrust nShield Connect
 
-<Aside type='note' header='Note'>
+<bongo:aside type='note' header='Note'>
 
 This example assumes you have already configured the nShield Connect device and generated or imported your private keys.
 
-</Aside>
+</bongo:aside>
 
 Since the keys are already in place, we merely need to build the configuration file that the key server will read on startup. In this example the device contains a single RSA key pair.
 

@@ -9,7 +9,7 @@ order: 25
 
 This feature is only available for customers on an Enterprise plan.
 
-</Aside>
+</bongo:aside>
 
 The WAF allows you to log the request information that triggered a specific rule of a Managed Ruleset. This information is known as the payload. Payload logging is especially useful when diagnosing the behavior of WAF rules. Since the values that triggered a rule may contain sensitive data, they are encrypted with a customer-provided public key so that only you can examine them later.
 
@@ -34,4 +34,4 @@ Make sure you store your private key safely. If you lose the private key, config
 
 Cloudflare cannot decrypt encrypted payloads, since this operation requires your private key. Cloudflare staff will never ask for the private key.
 
-</Aside>
+</bongo:aside>

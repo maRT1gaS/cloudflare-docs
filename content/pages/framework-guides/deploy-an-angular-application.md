@@ -27,7 +27,7 @@ Alternatively, you can use [`npx`](https://www.npmjs.com/package/npx), which is 
 
 **Note:** All modern versions of `npm` already include the `npx` executable. You do not need to install anything for this approach.
 
-</Aside>
+</bongo:aside>
 
 ```sh
 # Create the project
@@ -109,11 +109,11 @@ After completing configuration, click the **Save and Deploy** button.
 
 You will see your first deploy pipeline in progress. Pages installs all dependencies – including Angular CLI – and builds the project as specified.
 
-<Aside type="note">
+<bongo:aside type="note">
 
 For the complete guide to deploying your first site to Cloudflare Pages, refer to the [Get started guide](/get-started).
 
-</Aside>
+</bongo:aside>
 
 After deploying your site, you will receive a unique subdomain for your project on `*.pages.dev`.
 

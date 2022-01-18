@@ -9,11 +9,11 @@ A letter of authorization (LOA) is a document that authorizes Cloudflare to anno
 
 The letter must contain both the prefixes you are authorizing Cloudflare to announce and which ASN they will be announced under. Cloudflare can announce a prefix under your ASN or you are welcome to use Cloudflare's ASN. If you want to use Cloudflare's ASN, inform your account team and they will provide the AS number to put in the LOA document.
 
-<Aside type="note" header="Note">
+<bongo:aside type="note" header="Note">
 
 An LOA is a formal document which should be on company letterhead and contain a wet signature. The Letter of Authorization must be a PDF. Transit providers may reject the LOA if it is a JPG or PNG.
 
-</Aside>
+</bongo:aside>
 
 ## LOA template
 

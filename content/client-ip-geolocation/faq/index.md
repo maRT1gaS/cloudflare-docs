@@ -5,11 +5,11 @@ pcx-content-type: faq
 
 # FAQ
 
-<Aside type="note">
+<bongo:aside type="note">
 
 Client IP Geolocation is currently in closed Beta testing.
 
-</Aside>
+</bongo:aside>
 
 ## Website operators
 

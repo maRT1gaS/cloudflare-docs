@@ -20,13 +20,13 @@ Cloudflare for Teams allows you to build Zero Trust rules based on device serial
 
 To create rules based on device serial numbers you'll need to create a list of numbers using the [Lists](/policies/lists) functionality in the Teams Dashboard.
 
-<Aside header='Important'>
+<bongo:aside header='Important'>
 
 Cloudflare Access relies on the WARP client to gather the serial number of a device attempting to reach an application.
 
 In order for your users to be able to authenticate, you must [deploy the WARP agent](/tutorials/gw-rollout-guide#configure-device-policies) in proxy mode to your company devices. Users also [must enroll](/tutorials/gw-rollout-guide#enroll-the-cloudflare-for-teams-agent-for-dns-filtering) into your organization's Cloudflare for Teams account.
 
-</Aside>
+</bongo:aside>
 
 1. On the [Teams dashboard](https://dash.teams.cloudflare.com), navigate to **My Team > Lists**.
 

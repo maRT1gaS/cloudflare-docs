@@ -19,13 +19,13 @@ In this tutorial we will cover how to configure a Zero Trust Private Network in 
 
 45 minutes
 
-<Aside header="Prerequisites">
+<bongo:aside header="Prerequisites">
 
 - A Teams account setup
 - The [WARP client](/connections/connect-devices/warp) installed on a device and enrolled in a Cloudflare for Teams instance
 - Admin access to server with Internet access
 
-</Aside>
+</bongo:aside>
 
 ---
 
@@ -81,7 +81,7 @@ warp-routing:
 
 ![Tunnel ID](../static/zero-trust-security/ztna/tunnel-id.png)
 
- </Aside>
+ </bongo:aside>
 
 1. Now run the tunnel:
 

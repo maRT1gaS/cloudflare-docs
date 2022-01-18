@@ -1,0 +1,10 @@
+{{#expect type, header, $slot}}
+<aside class="DocsMarkdown--aside" role="note" data-type={{ type || "note" }}>
+  {{#if header}}
+  <div class="DocsMarkdown--aside-header">
+    {{ header }}
+  </div>
+  {{/if}}
+
+  {{{ $slot }}}
+</aside>

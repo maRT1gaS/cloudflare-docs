@@ -5,11 +5,11 @@ order: 17
 
 # Rate limiting parameters
 
-<Aside type='warning'>
+<bongo:aside type='warning'>
 
 This feature is only available for selected customers on an Enterprise plan.
 
-</Aside>
+</bongo:aside>
 
 The available Rate Limiting rule parameters are the following:
 
@@ -47,11 +47,11 @@ The available Rate Limiting rule parameters are the following:
   - If you use `http.request.headers["<header_name>"]`, you must enter the header name in lower case, since Cloudflare normalizes header names at the edge.
   - If you use `http.request.cookies["<cookie_name>"]`, refer to [Recommendations](#recommendations) for additional validations you should implement.
 
-  - <Aside type="note">
+  - <bongo:aside type="note">
 
     Use `cf.unique_visitor_id` to handle situations such as requests under NAT sharing the same IP address. Cloudflare uses a variety of privacy-preserving techniques to identify unique visitors, which may include use of session cookies — refer to [Cloudflare Cookies](https://developers.cloudflare.com/fundamentals/get-started/cloudflare-cookies) for details.
 
-    </Aside>
+    </bongo:aside>
 
 - `period` <Type>Number</Type>
 

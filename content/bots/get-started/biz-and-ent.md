@@ -20,7 +20,7 @@ Super Bot Fight Mode is included in your Business or Enterprise subscription. Wh
 
 **Note**: If you have an Enterprise subscription without Bot Management, your application will also have Super Bot Fight Mode for Business.
 
-</Aside>
+</bongo:aside>
 
 ## Enable Super Bot Fight Mode
 

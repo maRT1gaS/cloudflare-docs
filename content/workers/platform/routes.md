@@ -109,11 +109,11 @@ If a route pattern path ends with `*`, then it matches all suffixes of that path
 
 - `https://example.com/path*` matches `https://example.com/path` and `https://example.com/path2` and `https://example.com/path/readme.txt`
 
-<Aside type="warning">
+<bongo:aside type="warning">
 
 There is a well-known bug associated with path matching concerning wildcards (`*`) and forward slashes (`/`) that is documented in [Known issues](/platform/known-issues).
 
-</Aside>
+</bongo:aside>
 
 #### Subdomains must have a DNS Record
 

@@ -53,7 +53,7 @@ pcx-content-type: tutorial
 <Aside>
   The Federation ID is found under Manage Users > Users in Setup. The Federation ID should match the
   email address of the user authenticating via Access.
-</Aside>
+</bongo:aside>
 
 ![Salefsorce configuration](../static/zero-trust-security/access/salesforce.png)
 

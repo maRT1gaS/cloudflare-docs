@@ -16,7 +16,7 @@ The rules in a Managed Ruleset have a default configuration. However, you can de
 
 On the Cloudflare dashboard you define overrides through **configurations**.
 
-</Aside>
+</bongo:aside>
 
 There are several Cloudflare products that provide you with Managed Rulesets. Check each product’s documentation for details on the available Managed Rulesets.
 
