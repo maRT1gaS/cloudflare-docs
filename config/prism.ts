@@ -196,7 +196,7 @@ function normalize(tokens: (Token | string)[]) {
   return lines;
 }
 
-export function highlight(code: string, lang: string, attrs: string): string {
+export function highlight(code: string, lang: string): string {
   lang = langs[lang] || lang || 'txt';
   let grammar = Prism.languages[lang.toLowerCase()];
 
@@ -205,25 +205,49 @@ export function highlight(code: string, lang: string, attrs: string): string {
     grammar = Prism.languages.txt;
   }
 
-  // TODO: parse content/attrs for `theme: dark` frontmatter
-  // TODO: highlight, theme, filename, header
-  // @see https://github.com/cloudflare/cloudflare-docs-engine/blob/dcaabff937e789145259417376e329d96a0d9e2f/src/components/mdx/code-block.js#L76
+  let frontmatter: {
+    theme?: string | 'light';
+    highlight?: `[${string}]`;
+    filename?: string;
+    header?: string;
+  } = {};
 
   if (code.substring(0, 3) === '---') {
     let index = code.indexOf('---', 3);
     if (index > 3) {
-      code = code.substring(index + 3).replace(/^(\r?\n)+/, '');
+      index += 3;
+      let content = code.substring(0, index);
+      code = code.substring(index).replace(/^(\r?\n)+/, '');
+
+      // TODO: pass in `utils.frontmatter` here
+      // frontmatter = utils.frontmatter(content);
+
+      let match = /^---\r?\n([\s\S]+?)\r?\n---/.exec(content);
+      if (match != null) match[1].split('\n').forEach(pair => {
+        let [key, ...v] = pair.split(':');
+        frontmatter[key.trim() as 'theme'] = v.join(':').trim();
+      });
     }
   }
+
+  let highlights = new Set(
+    JSON.parse(
+      frontmatter.highlight || '[]'
+    ).map((x: number) => x - 1)
+  );
 
   // tokenize & build custom string output
   let tokens = Prism.tokenize(code, grammar);
   let output = '';
 
-  let theme = 'light'; // TODO
+  let theme = frontmatter.theme || 'light';
   output += '<pre class="CodeBlock CodeBlock-with-rows CodeBlock-scrolls-horizontally';
+
   if (theme === 'light') output += ' CodeBlock-is-light-in-light-theme';
   output += ` CodeBlock--language-${lang}" language="${lang}">`;
+
+  if (frontmatter.header) output += `<span className="CodeBlock--header">${frontmatter.header}</span>`;
+  else if (frontmatter.filename) output += `<span className="CodeBlock--filename">${frontmatter.filename}</span>`;
 
   output += '<code>';
   output += '<span class="CodeBlock--rows">';
@@ -236,7 +260,8 @@ export function highlight(code: string, lang: string, attrs: string): string {
 
   for (; i < lines.length; i++) {
     line = lines[i];
-    row = '<span class="CodeBlock--row">';
+    row = '<span class="CodeBlock--row';
+    row += highlights.has(i) ? ' CodeBlock--row-is-highlighted">' : '">';
     row += '<span class="CodeBlock--row-indicator"></span>';
     row += '<div class="CodeBlock--row-content">';
     for (let j = 0; j < line.length; j++) {
