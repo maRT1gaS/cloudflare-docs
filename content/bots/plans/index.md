@@ -13,18 +13,18 @@ import GetStarted from '../_partials/_plan-get-started.md';
 <PlanIntro />
 
 <ButtonGroup>
-  <Button type="primary" href="/plans/free">
+  <bongo:button type="primary" href="/plans/free">
     Free
-  </Button>
-  <Button type="primary" href="/plans/pro">
+  </bongo:button>
+  <bongo:button type="primary" href="/plans/pro">
     Pro
-  </Button>
-  <Button type="primary" href="/plans/biz-and-ent">
+  </bongo:button>
+  <bongo:button type="primary" href="/plans/biz-and-ent">
     Business
-  </Button>
-  <Button type="primary" href="/plans/bm-subscription">
+  </bongo:button>
+  <bongo:button type="primary" href="/plans/bm-subscription">
     Bot Management for Enterprise
-  </Button>
+  </bongo:button>
 </ButtonGroup>
 
 ## How do I get started?

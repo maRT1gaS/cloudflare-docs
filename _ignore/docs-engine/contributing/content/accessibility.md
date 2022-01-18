@@ -15,6 +15,6 @@ pcx-content-type: best-practices
 --------------------------------
 
 <ButtonGroup>
-  <Button type="secondary" href="/contributing/content/formatting">← Formatting</Button>
-  <Button type="secondary" href="/contributing/content/working-with-github">Working with GitHub →</Button>
+  <bongo:button type="secondary" href="/contributing/content/formatting">← Formatting</bongo:button>
+  <bongo:button type="secondary" href="/contributing/content/working-with-github">Working with GitHub →</bongo:button>
 </ButtonGroup>

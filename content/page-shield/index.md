@@ -17,12 +17,12 @@ Page Shield includes the following features:
 - **Alerts**: Receive notifications about newly detected scripts, scripts loaded from unknown domains, new scripts considered malicious, or code changes in your existing scripts.
 
 <ButtonGroup>
-  <Button type="primary" href="/get-started">
+  <bongo:button type="primary" href="/get-started">
     Set up Page Shield
-  </Button>
-  <Button type="secondary" href="/about">
+  </bongo:button>
+  <bongo:button type="secondary" href="/about">
     Learn more
-  </Button>
+  </bongo:button>
 </ButtonGroup>
 
 ## Availability

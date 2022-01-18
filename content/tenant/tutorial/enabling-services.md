@@ -102,7 +102,7 @@ Once you have added the necessary features, you or your customer can move on to 
 Learn how to modify zone settings and other services.
 
 <p>
-  <Button type="primary" href="/tutorial/service-configuration">
+  <bongo:button type="primary" href="/tutorial/service-configuration">
     Step 4: Service configuration
-  </Button>
+  </bongo:button>
 </p>

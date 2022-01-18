@@ -16,6 +16,7 @@
     "@types/prettier": "2.4.3",
     "@types/prismjs": "1.16.6",
     "bongo": "npm:@lukeed/bongo@0.0.8",
+    "clsx": "1.1.1",
     "fromnow": "3.0.1",
     "prettier": "2.5.1",
     "prismjs": "1.26.0",

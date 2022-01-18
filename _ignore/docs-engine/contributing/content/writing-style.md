@@ -30,6 +30,6 @@ When writing documentation as part of a technical reference (e.g. [runtime API](
 --------------------------------
 
 <ButtonGroup>
-  <Button type="secondary" href="/contributing/content/content-framework">← Content framework</Button>
-  <Button type="secondary" href="/contributing/content/formatting">Formatting →</Button>
+  <bongo:button type="secondary" href="/contributing/content/content-framework">← Content framework</bongo:button>
+  <bongo:button type="secondary" href="/contributing/content/formatting">Formatting →</bongo:button>
 </ButtonGroup>

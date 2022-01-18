@@ -11,9 +11,9 @@ pcx-content-type: landing-page
 Explore drand: a distributed service providing public randomness in an application-agnostic, secure, and efficient way.
 
 <p>
-  <Button type="primary" href="/about">
+  <bongo:button type="primary" href="/about">
     Get started
-  </Button>
+  </bongo:button>
 </p>
 
 </ContentColumn>

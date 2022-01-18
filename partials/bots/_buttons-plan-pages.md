@@ -1,14 +1,14 @@
 <ButtonGroup>
-  <Button type="primary" href="../free">
+  <bongo:button type="primary" href="../free">
     Free
-  </Button>
-  <Button type="primary" href="../pro">
+  </bongo:button>
+  <bongo:button type="primary" href="../pro">
     Pro
-  </Button>
-  <Button type="primary" href="../biz-and-ent">
+  </bongo:button>
+  <bongo:button type="primary" href="../biz-and-ent">
     Business
-  </Button>
-  <Button type="primary" href="../bm-subscription">
+  </bongo:button>
+  <bongo:button type="primary" href="../bm-subscription">
     Bot Management for Enterprise
-  </Button>
+  </bongo:button>
 </ButtonGroup>

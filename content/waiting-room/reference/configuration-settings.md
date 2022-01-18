@@ -9,12 +9,12 @@ type: overview
 You can customize a variety of options for your waiting rooms.
 
 <ButtonGroup>
-  <Button type="primary" href="#dashboard-settings">
+  <bongo:button type="primary" href="#dashboard-settings">
     Dashboard settings
-  </Button>
-  <Button type="secondary" href="#additional-details">
+  </bongo:button>
+  <bongo:button type="secondary" href="#additional-details">
     Additional details
-  </Button>
+  </bongo:button>
 </ButtonGroup>
 
 ## Dashboard settings

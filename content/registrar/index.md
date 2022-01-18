@@ -11,10 +11,10 @@ pcx-content-type: overview
 Manage your domain with Cloudflare Registrar and add an additional layer of security to your DNS records for free. Cloudflare Registrar also offers redacted WHOIS information by default and will only charge you what is paid to the registry for your domain. No markup. No surprise fees.
 
 <ButtonGroup>
-  <Button type="primary" href="/why-choose-cloudflare">
+  <bongo:button type="primary" href="/why-choose-cloudflare">
     Learn more
-  </Button>
-  <Button type="secondary" href="/get-started/transfer-domain-to-cloudflare">
+  </bongo:button>
+  <bongo:button type="secondary" href="/get-started/transfer-domain-to-cloudflare">
     Setup domain transfer
-  </Button>
+  </bongo:button>
 </ButtonGroup>

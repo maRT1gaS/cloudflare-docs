@@ -25,9 +25,9 @@ This guide will instruct you through setting up a Cloudflare account to deployin
 Before you can start [publishing](/cli-wrangler/commands#publish) your Workers on your own domain or a free `*.workers.dev` subdomain, you must sign up for a Cloudflare Workers account.
 
 <p>
-  <Button type="primary" href="https://dash.cloudflare.com/sign-up/workers">
+  <bongo:button type="primary" href="https://dash.cloudflare.com/sign-up/workers">
     Sign up
-  </Button>
+  </bongo:button>
 </p>
 
 The signup process will guide you through choosing a `*.workers.dev` subdomain and verifying your email address, both of which are required to publish.

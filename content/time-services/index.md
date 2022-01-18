@@ -12,15 +12,15 @@ type: overview
 Learn more about Cloudflare’s suite of time services.
 
 <ButtonGroup>
-  <Button type="primary" href="/ntp">
+  <bongo:button type="primary" href="/ntp">
     NTP
-  </Button>
-  <Button type="primary" href="/nts">
+  </bongo:button>
+  <bongo:button type="primary" href="/nts">
     NTS
-  </Button>
-  <Button type="primary" href="/roughtime">
+  </bongo:button>
+  <bongo:button type="primary" href="/roughtime">
     Roughtime
-  </Button>
+  </bongo:button>
 </ButtonGroup>
 
 </ContentColumn>

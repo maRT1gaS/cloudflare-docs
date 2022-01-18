@@ -12,12 +12,12 @@ This authentication becomes particularly important with the Cloudflare Web Appli
 If you want your domain to be FIPS compliant, you must [upload your own certificate](set-up#per-hostname--customer-certificates).
 
 <ButtonGroup>
-  <Button type="primary" href="set-up">
+  <bongo:button type="primary" href="set-up">
     Get started
-  </Button>
-  <Button type="secondary" href="explanation">
+  </bongo:button>
+  <bongo:button type="secondary" href="explanation">
     Learn more
-  </Button>
+  </bongo:button>
 </ButtonGroup>
 
 <bongo:aside type='warning' header='Important'>

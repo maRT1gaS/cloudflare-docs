@@ -40,5 +40,5 @@ When you’re working on several files or making significant changes in your loc
 --------------------------------
 
 <ButtonGroup>
-  <Button type="secondary" href="/contributing/content/accessibility">← Accessibility</Button>
+  <bongo:button type="secondary" href="/contributing/content/accessibility">← Accessibility</bongo:button>
 </ButtonGroup>

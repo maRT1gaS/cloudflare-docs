@@ -13,7 +13,7 @@ The quickest way to experiment with Cloudflare Workers is in the [Playground](ht
     href="https://cloudflareworkers.com/#36ebe026bf3510a2e5acace89c09829f:about:blank"
   >
     Launch playground
-  </Button>
+  </bongo:button>
 </p>
 
 ---

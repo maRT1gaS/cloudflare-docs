@@ -43,19 +43,19 @@ __Tip:__ If you’d like to take advantage of Gatsby’s routing, but you want m
 The `<Button/>` can be used to render links (`<a/>`) stylized as buttons, or as literal HTML `<button/>` elements. This behavior is automatically determined based on whether an `href` attribute prop is passed.
 
 ```md
-<Button type="primary" href="/how-it-works">How it Works</Button>
+<bongo:button type="primary" href="/how-it-works">How it Works</bongo:button>
 ```
 
 <Example>
-<Button type="primary" href="/how-it-works">How it Works</Button>
+<bongo:button type="primary" href="/how-it-works">How it Works</bongo:button>
 </Example>
 
 ```jsx
-<Button type="secondary" onClick={()=>alert("Clicked")}>Click me</Button>
+<bongo:button type="secondary" onClick={()=>alert("Clicked")}>Click me</bongo:button>
 ```
 
 <Example>
-<Button type="secondary" onClick={()=>alert("Clicked")}>Click me</Button>
+<bongo:button type="secondary" onClick={()=>alert("Clicked")}>Click me</bongo:button>
 </Example>
 
 <Definitions>
@@ -76,15 +76,15 @@ Button groups allow you to display a few buttons in a row, while allowing them t
 
 ```jsx
 <ButtonGroup>
-  <Button type="primary">Primary</Button>
-  <Button type="secondary">Secondary</Button>
+  <bongo:button type="primary">Primary</bongo:button>
+  <bongo:button type="secondary">Secondary</bongo:button>
 </ButtonGroup>
 ```
 
 <Example>
 <ButtonGroup>
-  <Button type="primary">Primary</Button>
-  <Button type="secondary">Secondary</Button>
+  <bongo:button type="primary">Primary</bongo:button>
+  <bongo:button type="secondary">Secondary</bongo:button>
 </ButtonGroup>
 </Example>
 

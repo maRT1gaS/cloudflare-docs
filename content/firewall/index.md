@@ -21,10 +21,10 @@ Firewall Rules are available to customers on all Cloudflare plans.
 ---
 
 <ButtonGroup>
-  <Button type="primary" href="/cf-dashboard">
+  <bongo:button type="primary" href="/cf-dashboard">
     Manage rules
-  </Button>
-  <Button type="secondary" href="/cf-firewall-rules">
+  </bongo:button>
+  <bongo:button type="secondary" href="/cf-firewall-rules">
     Learn more
-  </Button>
+  </bongo:button>
 </ButtonGroup>

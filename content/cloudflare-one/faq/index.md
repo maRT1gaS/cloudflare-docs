@@ -21,54 +21,54 @@ If you can't find the answer you're looking for, feel free to head over to our [
 
 For extra guidance on experiencing Teams for the first time.
 
-<Button type="primary" href="/faq/teams-getting-started-faq/">
+<bongo:button type="primary" href="/faq/teams-getting-started-faq/">
   Getting started ❯
-</Button>
+</bongo:button>
 
 ## General
 
 For general questions on Cloudflare for Teams and how it works.
 
-<Button type="primary" href="/faq/teams-general-faq/">
+<bongo:button type="primary" href="/faq/teams-general-faq/">
   General ❯
-</Button>
+</bongo:button>
 
 ## Identity
 
 For questions on identity providers and accessing applications behind Teams.
 
-<Button type="primary" href="/faq/teams-authentication-faq/">
+<bongo:button type="primary" href="/faq/teams-authentication-faq/">
   Identity ❯
-</Button>
+</bongo:button>
 
 ## Policies
 
 For questions on how policies work, and how to create and test them.
 
-<Button type="primary" href="/faq/teams-policies-faq/">
+<bongo:button type="primary" href="/faq/teams-policies-faq/">
   Policies ❯
-</Button>
+</bongo:button>
 
 ## Devices
 
 For questions on device connectivity and the WARP client.
 
-<Button type="primary" href="/faq/teams-devices-faq/">
+<bongo:button type="primary" href="/faq/teams-devices-faq/">
   Devices ❯
-</Button>
+</bongo:button>
 
 ## Tunnels
 
 For questions on connecting applications with Tunnels.
 
-<Button type="primary" href="/faq/cloudflare-tunnels-faq/">
+<bongo:button type="primary" href="/faq/cloudflare-tunnels-faq/">
   Tunnels ❯
-</Button>
+</bongo:button>
 
 ## Troubleshooting
 
 Got an unexpected error? See if it's covered in our troubleshooting section.
 
-<Button type="primary" href="/faq/teams-troubleshooting/">
+<bongo:button type="primary" href="/faq/teams-troubleshooting/">
   Troubleshooting ❯
-</Button>
+</bongo:button>
