@@ -18,6 +18,15 @@ function init() {
   btn = document.querySelector('#ThemeToggle')!;
   btn.addEventListener('change', () => setter(!!btn.checked));
 
+  // Shift+D for toggle
+  addEventListener('keydown', ev => {
+    if (ev.target !== document.body) return;
+    if (ev.which === 68 && ev.shiftKey) {
+      ev.preventDefault();
+      setter(!btn.checked);
+    }
+  });
+
   try {
     media = window.matchMedia('(prefers-color-scheme:dark)');
     media.onchange = ev => setter(ev.matches);
