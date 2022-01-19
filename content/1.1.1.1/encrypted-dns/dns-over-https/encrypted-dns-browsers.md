@@ -26,7 +26,7 @@ This setting may already be enabled by default.
 1. Scroll down to **Privacy and security** > **Security**.
 1. Scroll down and enable the **Use secure DNS** switch.
 
-Your browser infers the DNS over HTTPS provider you want based on your system DNS. To benefit from Cloudflare DoH, make sure your system is [properly configured](/setup-1.1.1.1/windows).
+Your browser infers the DNS over HTTPS provider you want based on your system DNS. To benefit from Cloudflare DoH, make sure your system is [properly configured](/1.1.1.1/setup-1.1.1.1/windows).
 
 ## Microsoft Edge
 
