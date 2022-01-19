@@ -54,13 +54,9 @@ To enable Logpush to Sumo Logic:
 1. Provide the HTTP Source Address (URL) when prompted by the Logpush API or UI.
 
 <bongo:aside type="note" header="Note">
-
 Logpush will stop working if you regenerate the HTTP Source Address (URL). _See [generate a new URL for an HTTP Source from Sumo Logic](https://help.sumologic.com/03Send-Data/Sources/02Sources-for-Hosted-Collectors/HTTP-Source/zGenerate-a-new-URL-for-an-HTTP-Source)_. To use the new URL, you will have to get a new ownership challenge and update the destination for your job.
-
 </bongo:aside>
 
 <bongo:aside type="info" header="Info">
-
 Sumo Logic may impose throttling and caps on your log ingestion to prevent your account from using "On-Demand Capacity." _See [manage ingestion](https://help.sumologic.com/Manage/Ingestion-and-Volume/01Manage-Ingestion)_.
-
 </bongo:aside>

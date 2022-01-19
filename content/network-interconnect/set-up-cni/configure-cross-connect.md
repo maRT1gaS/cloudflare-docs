@@ -16,9 +16,7 @@ To configure the network cross-connect for physical links, Cloudflare generates 
 - Verify when the cross-connects are complete.
 
 <bongo:aside type='note'>
-
 To review physical interconnection locations, see [Partners](/partners#physical-interconnection).
-
 </bongo:aside>
 
 ## Virtual Links
@@ -26,11 +24,9 @@ To review physical interconnection locations, see [Partners](/partners#physical-
 To configure the network cross-connect for virtual links, you must create a request from the partner dashboard. Cloudflare will then review and accept the request.
 
 <bongo:aside type='note'>
-
 When using a virtual partner network interconnect, provision cross-connects using the appropriate partner portals.
 
 For more information, see the [Cloudflare Network Interconnect Partner Program](https://www.cloudflare.com/network-interconnect-partnerships/).
-
 </bongo:aside>
 
 ### Follow your partner's instructions below

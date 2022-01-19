@@ -9,10 +9,8 @@ The **goal** is to ensure that PRs are easily **retrievable** and **readable**.
 
 1. Make commit messages informative.
 
-<Aside>
-
+<bongo:aside>
 When you’re working on several files or making significant changes in your local repo, try to split work into smaller commits.
-
 </bongo:aside>
 
 | <span style="color:red">✘</span> | <span style="color:green">✓</span> |

@@ -12,9 +12,7 @@ Page Shield implements different mechanisms to determine if a script is maliciou
 - Malicious script detection
 
 <bongo:aside type="note">
-
 This feature is available as a paid add-on for customers on an Enterprise plan.
-
 </bongo:aside>
 
 ## Malicious URL checks

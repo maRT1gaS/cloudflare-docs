@@ -10,9 +10,7 @@ You can use custom hostname analytics for two general purposes: exploring how yo
 These analytics include **Site Analytics**, **Bot Analytics**, **Cache Analytics**, **Firewall Analytics**, and [any other datasets](https://developers.cloudflare.com/analytics/graphql-api/features/data-sets) with the `clientRequestHTTPHost` field.
 
 <bongo:aside type="note" header="Note:">
-
 The plan of your SSL for SaaS application determines the analytics available for your custom hostnames.
-
 </bongo:aside>
 
 ## Explore customer usage

@@ -10,9 +10,7 @@ import LBDefinition from '../_partials/_load-balancer-definition.md';
 <LBDefinition />
 
 <bongo:aside type="note">
-
 For more background information on what load balancers are and how they work, check out our <a href="https://www.cloudflare.com/learning/performance/what-is-load-balancing/">Learning Center</a>.
-
 </bongo:aside>
 
 ---
@@ -49,9 +47,7 @@ To set up a load balancer with **active-active failover**, either:
 - Create a load balancer with two origin pools (`primary` and `secondary`) and — for [**Traffic Steering**](/understand-basics/traffic-steering) — select any option except for **Off**.
 
 <bongo:aside type='note'>
-
 For more background reading on server failover and common configurations, see our <a href="https://www.cloudflare.com/learning/performance/what-is-server-failover/">Learning Center</a>.
-
 </bongo:aside>
 
 ## Load balancing and existing DNS records

@@ -9,6 +9,6 @@
 - [ ] (bongo) menus
 - [ ] (bongo) index pages
 - [ ] (bongo) fix `dev` assets
-- [ ] (bongo) allow `bongo-group`-like partial names
+- [ ] (bongo) allow `bongo:foo/bar` and `bongo:foo-bar`
 
 https://github.com/cloudflare/cloudflare-docs-engine/tree/master/src/components/mdx

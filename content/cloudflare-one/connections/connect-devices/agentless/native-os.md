@@ -6,7 +6,6 @@ pcx-content-type: how-to
 # Native OS
 
 <bongo:aside type="Warning" header="Warning">
-
 Enrolling devices using static IP addresses may prevent users from connecting to some of the public Wi-Fi networks that use captive portals. If users are experiencing connectivity issues related to captive portals, they should:
 
 1. Remove the static IP addresses from the device.
@@ -14,7 +13,6 @@ Enrolling devices using static IP addresses may prevent users from connecting to
 1. Once the connection has been established, add the static IP addresses back.
 
 Alternatively, you can look into using the [WARP client](/connections/connect-devices) to connect your devices to Teams.
-
 </bongo:aside>
 
 ## Linux

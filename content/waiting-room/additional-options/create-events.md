@@ -10,9 +10,7 @@ When you want to customize the behavior of a waiting room for a specific period 
 Any properties set on the event will override the default property on the waiting room for the duration of the event.
 
 <bongo:aside type="note">
-
 Only some customers can support scheduled events with their waiting rooms. For more details, see our <a href="/plans">Plans</a> page.
-
 </bongo:aside>
 
 ## Create an event
@@ -24,9 +22,7 @@ To create an event, make a [POST request](https://api.cloudflare.com/#waiting-ro
 If you are using a [custom template](../customize-waiting-room#custom-waiting-room), you may want to add [relevant variables](https://api.cloudflare.com/#waiting-room-update-waiting-room) to your template (listed under the `json_response_enabled` parameter).
 
 <bongo:aside type="note">
-
 If you need to create overlapping events, use different waiting rooms.
-
 </bongo:aside>
 
 ### Properties

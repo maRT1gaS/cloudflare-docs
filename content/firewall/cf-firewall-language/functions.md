@@ -82,7 +82,6 @@ The Cloudflare Firewall Rules language supports these transformation functions:
     `ends_with("/welcome.html", ".html") == true`
 
     <bongo:aside type='warning'>
-
     **Warning:** You can only use the `ends_with()` function in [rulesets](https://developers.cloudflare.com/ruleset-engine/) and [Transform Rules](https://developers.cloudflare.com/rules/transform).
 
     </bongo:aside>
@@ -137,7 +136,6 @@ The Cloudflare Firewall Rules language supports these transformation functions:
     `regex_replace("/foo/a/path", "^/foo/([^/]*)/(.*)$", "/bar/${2}/${1}") == "/bar/path/a/"`
 
     <bongo:aside type='warning'>
-
     **Warning:** You can only use the `regex_replace()` function in [rewrite expressions of Transform Rules](https://developers.cloudflare.com/rules/transform). Additionally, the first argument must be a field under `http.request.headers` or `http.request.uri`.
 
     </bongo:aside>
@@ -164,7 +162,6 @@ The Cloudflare Firewall Rules language supports these transformation functions:
     `starts_with("/blog/first-post", "/blog") == true`
 
     <bongo:aside type='warning'>
-
     **Warning:** You can only use the `starts_with()` function in [rulesets](https://developers.cloudflare.com/ruleset-engine/) and [Transform Rules](https://developers.cloudflare.com/rules/transform).
 
     </bongo:aside>
@@ -183,7 +180,6 @@ The Cloudflare Firewall Rules language supports these transformation functions:
     ```
 
     <bongo:aside type='warning'>
-
     **Warning:** You can only use the `to_string()` function in [rewrite expressions of Transform Rules](https://developers.cloudflare.com/rules/transform).
 
     </bongo:aside>
@@ -233,9 +229,7 @@ The Cloudflare Firewall Rules language supports these transformation functions:
 ## HMAC validation
 
 <bongo:aside type='warning' header='Important'>
-
 Access to the HMAC validation function requires a Cloudflare Pro, Business, or Enterprise plan.
-
 </bongo:aside>
 
 ### Overview
@@ -381,11 +375,9 @@ For details on generating a MessageMAC, see [_Implement token creation_](https:/
 ## HMAC validation examples
 
 <bongo:aside type='warning' header='Important'>
-
 When you do not use the optional _flags_ argument for `is_timed_hmac_valid_v0()`, you must URL encode the base64 value for _mac_ in the _MessageMAC_ argument.
 
 For more information, see [HMAC Validation: Overview](#overview).
-
 </bongo:aside>
 
 ### Simple case

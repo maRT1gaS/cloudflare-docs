@@ -9,14 +9,12 @@ pcx-content-type: tutorial
 
 This tutorial covers how to configure Zendesk SSO with Access for SaaS.
 
-<Aside>
-
+<bongo:aside>
 For this tutorial, you will need:
 
 - A Cloudflare for Teams Account
 - An integrated identity provider (IdP)
 - Admin access to your Zendesk account
-
 </bongo:aside>
 
 **⏲️ Time to complete:**
@@ -44,8 +42,7 @@ For this tutorial, you will need:
 
    [Additional Attributes](http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname) can also be synchronized with Zendesk.
 
-   <Aside>
-     This step is optional. If the name is not provided, Zendesk will [use the user’s email address
+   <bongo:aside>     This step is optional. If the name is not provided, Zendesk will [use the user’s email address
      as their name](https://support.zendesk.com/hc/en-us/articles/203663676#topic_dzb_gl5_2v))
    </bongo:aside>
 
@@ -60,8 +57,7 @@ For this tutorial, you will need:
    - SSO Endpoint => SAML SSO URL
    - Public Key => Certificate Fingerprint
 
-   <Aside>
-
+   <bongo:aside>
    The Public key must be transformed into a fingerprint. To do that:
 
    1. Copy the Public Key Value.

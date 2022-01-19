@@ -12,7 +12,6 @@ The basic steps for setting up a development are as follows.
 1. Clone the docs site repo (`@username/my-docs-site` below):
 
   <bongo:aside header="Note for Cloudflare employees">
-
   This would be `git@github.com:cloudflare/cloudflare-docs`.
 
   </bongo:aside>
@@ -24,7 +23,6 @@ The basic steps for setting up a development are as follows.
 1. `cd` into `my-docs-site` and run `npm install`:
 
   <bongo:aside header="Note for Cloudflare employees">
-
   When contributing to [@cloudflare/cloudflare-docs](https://github.com/cloudflare/cloudflare-docs) specifically, you’ll need to `cd` into the sub-folder for your product (`products/[productName]` inside the repo).
 
   </bongo:aside>
@@ -53,9 +51,7 @@ At this point, you can make changes to the Markdown files inside the content dir
 ## Watch files for changes
 
 <bongo:aside type="note">
-
 Applies only to Cloudflare Developers documentation.
-
 </bongo:aside>
 
 If you are contributing to [@cloudflare/cloudflare-docs](https://github.com/cloudflare/cloudflare-docs), you can use a command that starts the local development server and watches files for changes, updating the development server files automatically. To use this command:

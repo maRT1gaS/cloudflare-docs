@@ -22,9 +22,7 @@ The CSR provides an indication of automated traffic:
 - If the rate is close to **0%**, your rule is only acting on automated traffic. Consider changing the rule action to _Block_.
 
 <bongo:aside type="warning" header="Important">
-
 Currently, Cloudflare does not calculate the CSR of Managed Challenges.
 
 For customers on a Free plan, any rules configured with the _Challenge (Captcha)_ action now use Managed Challenges. For more information, see [Understanding Cloudflare Captchas and Challenge Passage](https://support.cloudflare.com/hc/articles/200170136#managed-challenge).
-
 </bongo:aside>

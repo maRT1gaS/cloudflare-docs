@@ -47,7 +47,6 @@ $ wrangler dev
    ```
 
    <bongo:aside type="note">
-
    Refer to the documentation on [Routes](/platform/routes) to configure `route` properly.
 
    </bongo:aside>

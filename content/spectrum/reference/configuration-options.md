@@ -7,10 +7,8 @@ pcx-content-type: reference
 
 Spectrum is a global TCP and UDP proxy running on Cloudflare's edge nodes. It does not terminate the connection. Instead it passes through the packets to the backend server.
 
-<Aside>
-
+<bongo:aside>
 Some of these features require an Enterprise plan. If you would like to upgrade, contact your account team.
-
 </bongo:aside>
 
 ## IP addresses

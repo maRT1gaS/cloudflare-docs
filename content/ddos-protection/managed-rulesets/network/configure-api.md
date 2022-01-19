@@ -16,12 +16,11 @@ You can define overrides at the ruleset, tag, and rule level for all Managed Rul
 
 When configuring the Network-layer DDoS Attack Protection Managed Ruleset, use overrides to define a different **action** or **sensitivity** from the default values. For more information on these rule parameters and the allowed values, refer to [Managed Ruleset parameters](/managed-rulesets/network/override-parameters).
 
-<Aside type='warning' header='Important'>
+<bongo:aside type='warning' header='Important'>
 
 The Network-layer DDoS Attack Protection Managed Ruleset is always enabled. You cannot disable its rules using an override with `"enabled": false`.
 
 You can only define overrides for the Network-layer DDoS Attack Protection Managed Ruleset at the account level.
-
 </bongo:aside>
 
 ## Example

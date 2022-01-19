@@ -61,10 +61,8 @@ Setting the cache level to Cache Everything will override the default "cacheabil
 
 ## Custom cache keys
 
-<Aside>
-
+<bongo:aside>
 **Note:** This feature is available only to enterprise customers.
-
 </bongo:aside>
 
 A request's cache key is what determines if two requests are "the same" for caching purposes. If a request has the same cache key as some previous request, then we can serve the same cached response for both. For more about cache keys see Using Custom Cache Keys support article.
@@ -98,10 +96,8 @@ Remember, Workers operating on behalf of different zones cannot affect each othe
 
 ## Override based on origin response code
 
-<Aside>
-
+<bongo:aside>
 **Note:** This feature is available only to enterprise customers.
-
 </bongo:aside>
 
 ```js

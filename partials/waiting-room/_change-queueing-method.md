@@ -4,7 +4,5 @@ Though you can change your [queueing method](/reference/queueing-methods), it ma
 - **From Random to FIFO**: Users will be ordered based on their cookie timestamp, meaning any new users move to the end of the FIFO queue.
 
 <bongo:aside type="note">
-
 If you change the queueing method from FIFO > Random > FIFO, users will be ordered by their original entry time.
-
 </bongo:aside>

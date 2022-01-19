@@ -94,7 +94,5 @@ Remote MSS: 1436
 ```
 
 <bongo:aside type='warning' header='Important'>
-
 If you do not have a publicly available TCP endpoint that Cloudflare can use to verify your MSS settings, you must provide a screenshot of the cURL command results, similar to the example above.
-
 </bongo:aside>

@@ -13,7 +13,5 @@ You can only edit the name of webhooks and/or delete them.
 1. Update the webhook's name and click **Save**.
 
 <bongo:aside type="note" header="Note">
-
 You can also delete a webhook after clicking **Edit**. However, it is faster to click **Delete** in the list of webhooks displayed in the **Destinations** card.
-
 </bongo:aside>

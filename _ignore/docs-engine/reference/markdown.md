@@ -24,16 +24,14 @@ Visit [example.com](https://example.com).
 
 View the [How it Works](/how-it-works) page.
 
-Learn how to use [`<Asides/>`](/reference/markdown#asides).
+Learn how to use [`<bongo:asides/>`](/reference/markdown#asides).
 ```
 
 - __Internal links__ will use [Gatsby’s `<Link/>` component](https://www.gatsbyjs.org/docs/gatsby-link/), which means they will be routed through `@reach/router` using `pushState`.
 - __External links__ (matching `/^https?:/`) and __hash links__ (`.indexOf("#") === 0`), will be rendered as regular `<a/>` elements.
 
-<Aside>
-
+<bongo:aside>
 __Tip:__ If you’d like to take advantage of Gatsby’s routing, but you want more control over the presentation of the link, use `<Link/>` directly. For example, this could be used to implement a custom link button.
-
 </bongo:aside>
 
 --------------------------------
@@ -106,19 +104,15 @@ Images are added by simply using the Markdown syntax.
 
 ## Asides
 
-Asides are used for displaying notes and warnings. They render as an `<aside/>` element with `aria-role="note"`. To use one, simply use the `<Aside/>` component.
+Asides are used for displaying notes and warnings. They render as an `<aside/>` element with `aria-role="note"`. To use one, simply use the `<bongo:aside/>` component.
 
-<Aside>
-
+<bongo:aside>
 __Note:__ This is a note.
-
 </bongo:aside>
 
 ```md
-<Aside>
-
+<bongo:aside>
 __Note:__ This is a note.
-
 </bongo:aside>
 ```
 
@@ -129,16 +123,12 @@ By default, an `Aside` will be of type `"note"`, meaning it will show in the fri
 You can also optionally specify a `header`.
 
 <bongo:aside type="warning" header="Warning">
-
 This is a warning.
-
 </bongo:aside>
 
 ```md
 <bongo:aside type="warning" header="Warning">
-
 This is a warning.
-
 </bongo:aside>
 ```
 
@@ -174,10 +164,8 @@ This is an example _of an example_.
 
 When writing reference documentation, there are four MDX components that you use `Definitions`, `Code`, `Type`, `ParamType`, and `PropMeta`, in conjunction with each other. All of these components are added to the global scope, so you do not need to import them.
 
-<Aside>
-
+<bongo:aside>
 __Note:__ You may also use `<Definitions/>` for definition lists that are not specifically for code (read: defining properties or methods), however depending on your use case, it may be more appropriate to simply use `<dl/>`, `<dt/>` and `<dd/>`.
-
 </bongo:aside>
 
 Here are some self-exemplifying definitions:
@@ -518,9 +506,7 @@ When commands require a specific working directory, add that directory before th
 #### Advanced usage
 
 <bongo:aside type="warning">
-
 __Warning:__ This usage is experimental and should be avoided.
-
 </bongo:aside>
 
 Custom tokenization can also be achieved by manually applying tokens. For example:
@@ -697,10 +683,10 @@ For example, here’s a directory listing for the docs engine part of the site.
 
 ## YouTube
 
-To add a responsive YouTube video player to the page, include the `<YouTube/>` component.
+To add a responsive YouTube video player to the page, include the `<bongo:youtube/>` component.
 
-<YouTube id="kdwfIrRJ4DE"/>
+<bongo:youtube id="kdwfIrRJ4DE" />
 
 ```md
-<YouTube id="kdwfIrRJ4DE"/>
+<bongo:youtube id="kdwfIrRJ4DE" />
 ```

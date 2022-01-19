@@ -22,12 +22,10 @@ You can use the JWT created by Cloudflare Access to validate requests on your or
 
 ## Manual verification
 
-<Aside>
-
+<bongo:aside>
 <b>Before you start</b>
 
 Install [`lokey`](https://github.com/jpf/lokey) and [`jq`](https://stedolan.github.io/jq/download/).
-
 </bongo:aside>
 
 1. Run this command:

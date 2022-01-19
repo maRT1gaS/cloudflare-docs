@@ -8,9 +8,7 @@ pcx-content-type: configuration
 Cloudflare verifies ownership of each new hostname before traffic is allowed to proxy. There are four methods to verify ownership: TXT record, HTTP token, CNAME, or Apex.
 
 <bongo:aside type="note" header="Note:">
-
 If a custom hostname is already on Cloudflare, then traffic will only shift to your fallback origin once the [DNS target has changed](/ssl-for-saas/getting-started#step-5--have-customer-create-a-cname-record).
-
 </bongo:aside>
 
 ## CNAME
@@ -35,11 +33,9 @@ app.example.com CNAME proxy-fallback.saasprovider.com
 proxy-fallback.saasprovider.com CNAME proxy-fallback.saasprovider.com.cdn.cloudflare.net
 ```
 
-<bongo:aside type="warning" header="Warning:">
-  To prevent unresolvable CNAME loops, only 10 consecutive CNAMES are followed to find the
+<bongo:aside type="warning" header="Warning:">  To prevent unresolvable CNAME loops, only 10 consecutive CNAMES are followed to find the
   appropriate Custom Hostname CNAME. The final CNAME must contain{' '}
-  <code class="InlineCode">[zone_name].cdn.cloudflare.net</code>.
-</bongo:aside>
+  <code class="InlineCode">[zone_name].cdn.cloudflare.net</code>.</bongo:aside>
 
 #### If using another DNS provider
 
@@ -133,10 +129,8 @@ location "/.well-known/cf-custom-hostname-challenge/24c8c68e-bec2-49b6-868e-f063
 
 1. After a few minutes, you will see the hostname validation become **Active** in the UI.
 
-<Aside>
-  Cloudflare sends GET requests to the <code>http_url</code> using{' '}
-  <code>User-Agent: Cloudflare Custom Hostname Verification</code>.
-</bongo:aside>
+<bongo:aside>  Cloudflare sends GET requests to the <code>http_url</code> using{' '}
+  <code>User-Agent: Cloudflare Custom Hostname Verification</code>.</bongo:aside>
 
 ## Error codes
 

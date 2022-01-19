@@ -26,9 +26,7 @@ firewallEventsAdaptive (limit: 2, orderBy: [datetime_ASC, clientCountryName_ASC]
 ```
 
 <bongo:aside type="info" header="Info">
-
 Specifying a sort order by date returns less specific results than specifying a sort order by date and country.
-
 </bongo:aside>
 
 **Response**

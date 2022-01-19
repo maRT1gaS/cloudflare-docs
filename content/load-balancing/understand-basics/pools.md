@@ -11,10 +11,8 @@ import PoolDefinition from '../_partials/_pool-definition.md';
 
 If you are familiar with DNS terminology, think of a pool as a “record set,” except Cloudflare only returns addresses that are considered healthy. You can attach health checks to individual pools for customized monitoring.
 
-<Aside>
-
+<bongo:aside>
 For more details about how origins and pools become unhealthy, refer to [Origin and pool health](/understand-basics/health-details).
-
 </bongo:aside>
 
 ---

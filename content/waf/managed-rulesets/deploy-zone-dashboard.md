@@ -30,9 +30,7 @@ Configure a Managed Ruleset to:
 To skip one or more rules or WAF Managed Rulesets, [add a WAF exception](/managed-rulesets/waf-exceptions).
 
 <bongo:aside type="note">
-
 Some Managed Rulesets may not allow custom configuration, depending on your Cloudflare plan.
-
 </bongo:aside>
 
 ### Configure field values for all the rules
@@ -111,7 +109,7 @@ Do the following:
 
 1. Click **Next**.
 
-   <Aside type='note' header='Note'>
+   <bongo:aside type='note' header='Note'>
 
    If you selected a tag, you get a dialog asking you if any new rules with the selected tag should be configured with the field values you selected.
 

@@ -40,7 +40,6 @@ To upload a custom SSL certificate in the dashboard:
 1. Copy and paste relevant values into **SSL Certificate** and **Private key** text areas (or click **Paste from file**).
 
    <bongo:aside type="note">
-
    If doing this manually, include the `---BEGIN CERTIFICATE---` and `---END CERTIFICATE---` like the placeholder text.
 
    </bongo:aside>
@@ -137,9 +136,7 @@ To update a certificate:
 1. Follow the same steps as [create a new certificate](#upload-a-custom-certificate).
 
 <bongo:aside type="note">
-
 To update the **Private Key Restriction** setting of a certificate, delete and re-add the certificate.
-
 </bongo:aside>
 
 ### Using the API

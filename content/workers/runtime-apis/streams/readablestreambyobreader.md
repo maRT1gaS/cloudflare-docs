@@ -39,7 +39,6 @@ const reader = readable.getReader({ mode: 'byob' });
 ## Common issues
 
   <bongo:aside type="warning" header="Warning">
-
 `read` provides no control over the minimum number of bytes that should be read into the buffer. Even if you allocate a 1MiB buffer, the kernel is perfectly within its rights to fulfill this read with a single byte, whether or not an EOF immediately follows.
 
 In practice, we have found that `read` typically fills only 1% of the provided buffer.

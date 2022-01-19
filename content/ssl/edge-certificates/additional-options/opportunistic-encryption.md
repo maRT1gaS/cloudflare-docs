@@ -19,7 +19,5 @@ To set up Opportunistic Encryption:
 3. For **Opportunistic Encryption**, switch the toggle to **On**.
 
 <bongo:aside type="note">
-
 You do not need to configure your origin web server to support Opportunistic Encryption.
-
 </bongo:aside>

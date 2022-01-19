@@ -26,9 +26,7 @@ To create a new advanced certificate in the dashboard:
 1. Click **Save**.
 
 <bongo:aside type='warning' header='Important'>
-
 Selecting **Let’s Encrypt** as a CA limits a certificate to txt validation_method, 90 validity_days, omission of cloudflare_branding, and 2 host entries (one for the zone name and one for the subdomain wildcard of the zone name, such as `example.com`, `*.example.com`).
-
 </bongo:aside>
 
 ### Using the API
@@ -77,7 +75,5 @@ Normally, you only need to update DCV if you have your application on a partial 
 For more information about DCV, refer to [DCV methods](/edge-certificates/changing-dcv-method).
 
 <bongo:aside type="warning">
-
 Due to recent changes, HTTP DCV validation will soon not be allowed for wildcard certificates or certificates with multiple Subject Alternative Names (SANs). For more details and next steps, refer to [Changes to HTTP DCV](/ssl-tls/dcv-update).
-
 </bongo:aside>

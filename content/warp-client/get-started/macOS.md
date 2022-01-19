@@ -44,7 +44,5 @@ $ ./uninstall.sh
 ```
 
 <bongo:aside type="note" header="Note">
-
 You may be prompted to provide your credentials while removing the application.
-
 </bongo:aside>

@@ -13,7 +13,6 @@ The following Page rules can control APO. Any changes to Caching page rules requ
 - **Cache Level: Cache Everything** — APO caches pages with all query strings. Default cookies rules still apply.
 
   <bongo:aside type="warning">
-
   Automatic page purge via the WordPress plugin won’t clean all cached pages, only pages without query strings. Cached responses will be returned even with request header `cache-control: no-cache`.
 
   </bongo:aside>

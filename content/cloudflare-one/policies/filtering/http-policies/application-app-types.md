@@ -73,8 +73,7 @@ Gateway periodically updates the _Do Not Decrypt_ app type to include new applic
 
 ![Do not decrypt HTTP rule](../../../static/documentation/faq/do-not-decrypt.png)
 
-<Aside>
-
+<bongo:aside>
 <b>Google Drive for Desktop</b> allows you to configure the app to trust the <a href="/connections/connect-devices/warp/install-cloudflare-cert">
   Cloudflare Root Certificate
 </a> Gateway presents. Doing so will allow you to inspect the traffic to and from Google Drive, instead
@@ -83,7 +82,6 @@ Root Certificate in Google Drive, check out these <a href="https://support.googl
   instructions for TrustedRootCertsFile
 </a>
 .
-
 </bongo:aside>
 
 ## Supported actions for applications

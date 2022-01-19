@@ -19,11 +19,9 @@ For authentication instructions, see [_Getting Started: Requests_](https://api.c
 For help with endpoints and pagination, see [_Getting Started: Endpoints_](https://api.cloudflare.com/#getting-started-endpoints).
 
 <bongo:aside type='warning' header='Important'>
-
 The Filters API endpoints require a value for _{zone_id}_.
 
 To retrieve a list of zones associated with your account, use the [List Zones](https://api.cloudflare.com/#zone-list-zones) operation and note the Zone ID associated with the domain for which you want to manage filters.
-
 </bongo:aside>
 
 The Cloudflare Filters API supports the operations outlined below. Visit the associated links for examples.

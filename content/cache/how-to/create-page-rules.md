@@ -69,9 +69,7 @@ You can also [purchase additional rules](https://www.cloudflare.com/features-pag
 - **Save and Deploy** to save the rule and enable it immediately.
 
 <bongo:aside type="note" header="Note">
-
 We do not support non-ASCII characters (e.g. punycode/unicode domain) in Page Rules. Instead, you can URL-encode the string using [Punycode converter](https://www.punycoder.com/) as a workaround.
-
 </bongo:aside>
 
 ## Edit existing page rules
@@ -118,9 +116,7 @@ To purge resources using Cache By Device Type, you must [purge by Cache-Tag](/ho
 Caching additional content at Cloudflare requires a **Cache Everything** Page Rule. Without creating a Cache Everything Page Rule, dynamic assets are never cached even if a [public Cache-Control header](/about/cache-control) is returned. When combined with an Edge Cache TTL > 0, **Cache Everything** removes cookies from the origin web server response.
 
 <bongo:aside type="warning" header="Warning">
-
 Do not use **Cache Everything** for admin sections of your website or for pages that require a login. To prevent Cloudflare from caching specific URLs, create a page rule with **Cache Level** set to **Bypass**. Next, drag that rule above the **Cache Everything** Page Rule in the dashboard so that the **Bypass** rule is above the **Cache Everything**.
-
 </bongo:aside>
 
 1. Log in to your Cloudflare account.

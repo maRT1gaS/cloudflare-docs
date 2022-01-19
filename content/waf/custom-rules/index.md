@@ -16,9 +16,7 @@ Use Custom Rules in the **Firewall** app to define the following rule types:
 Custom Rules are built upon the [Ruleset Engine](https://developers.cloudflare.com/ruleset-engine/) which you can use to define rules and actions in several Cloudflare products.
 
 <bongo:aside type='warning'>
-
 Custom Rules are only available for selected customers on an Enterprise plan. Contact your Cloudflare Customer Success Manager to get access.
-
 </bongo:aside>
 
 ---

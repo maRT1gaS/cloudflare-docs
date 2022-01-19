@@ -62,9 +62,7 @@ When naming your files:
 - `[[name]]` matches any depth of route below this point.
 
 <bongo:aside type="note" header="Route specificity">
-
 More specific routes (that is, those with fewer wildcards) take precedence over less specific routes.
-
 </bongo:aside>
 
 When a filename includes a placeholder, the `name` must be alphanumeric and cannot contain spaces. In turn, the URL segment(s) that match the placeholder will be available under the `context.params` object using the filename placeholder as the key.
@@ -315,9 +313,7 @@ export default {
 ```
 
 <bongo:aside type="warning">
-
 Your custom Module Worker is required to forward requests to static assets. Failure to do so will result in broken and/or unwanted behavior because your website's contents will not be served if you do not serve it.
-
 </bongo:aside>
 
 Then after placing your `_worker.js` file in your output directory, deploy your project normally through your git integration.

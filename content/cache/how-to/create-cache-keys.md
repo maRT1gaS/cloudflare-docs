@@ -6,9 +6,7 @@ pcx-content-type: how-to
 # Create custom cache keys
 
 <bongo:aside type="note" header="Note">
-
 Creating custom cache keys is limited to Enterprise users only.
-
 </bongo:aside>
 
 1. Log in to your Cloudflare account.

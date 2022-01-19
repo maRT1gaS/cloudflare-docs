@@ -36,9 +36,7 @@ To populate your list, see [_Use Rules Lists: Add items to a list_](/cf-dashboar
 ## Delete a list
 
 <bongo:aside type='note' header='Note'>
-
 You can only delete a list when there are no firewall rules (enabled or disabled) that reference the list.
-
 </bongo:aside>
 
 To delete a Firewall Rules list, follow these steps:

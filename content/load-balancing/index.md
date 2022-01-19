@@ -18,9 +18,7 @@ Cloudflare Load Balancing provides several benefits:
 - **Customized setup**: Create custom rules (or reuse monitors and pools across multiple load balancers) to adjust routing according to the characteristics of each request.
 
 <bongo:aside type='note' header="Note">
-
 If you are only interested in monitoring server health — and not in distributing traffic according to server health — check out our <a href="https://support.cloudflare.com/hc/articles/4404867308429">standalone Health Checks</a>.
-
 </bongo:aside>
 
 ## Availability

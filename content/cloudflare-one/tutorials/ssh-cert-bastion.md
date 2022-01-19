@@ -72,12 +72,10 @@ In the `ingress` section, input the hostname of the application created in the C
 
 ![Bastion](../static/zero-trust-security/ssh-slc/bastion-mode.png)
 
-<Aside>
-
+<bongo:aside>
 Bastion mode introduces a risk of horizontal movement. Only use in cases where you expect that users who connect to `cloudflared` would then be able to connect to anything that `cloudflared` can address.
 
 Alternatively, you can point the service directly to a specific URL, IP, or port.
-
 </bongo:aside>
 
 ```yaml
@@ -157,8 +155,6 @@ Host cfpipe-ssh-bastion.widgetcorp.tech
 
 When users authenticate through Cloudflare Access, Cloudflare will generate a certificate for the individual using the username from the identity provider (stripped of the email domain). That certificate will then be presented to the SSH server.
 
-<Aside>
-
+<bongo:aside>
 The username in the identity provider must match the username on the SSH server.
-
 </bongo:aside>

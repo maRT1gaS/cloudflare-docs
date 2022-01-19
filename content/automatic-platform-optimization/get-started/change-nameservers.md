@@ -36,7 +36,5 @@ We recommend keeping this browser tab or window open and opening a new tab or wi
 1. Replace the existing nameserver information with the Cloudflare nameservers from Step 4 of Create the custom nameserver with Cloudflare.
 
 <bongo:aside type="note">
-
 You may be prompted to confirm the nameserver change with your domain registrar. Confirm or continue after making the update.
-
 </bongo:aside>

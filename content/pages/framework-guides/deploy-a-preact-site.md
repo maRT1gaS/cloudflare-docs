@@ -65,9 +65,7 @@ After completing configuration, click the **Save and Deploy** button.
 You will see your first deploy pipeline in progress. Pages installs all dependencies and builds the project as specified.
 
 <bongo:aside type="note">
-
 **Note:** You will notice that within the `package.json` file, the `"build"` script uses the `--prerender` flag. With this, `wmr` produces static HTML pages – along with their assets – which is perfect for Pages.
-
 </bongo:aside>
 
 After you have deployed your site, you will receive a unique subdomain for your project on `*.pages.dev`.
@@ -77,9 +75,7 @@ Cloudflare Pages will automatically rebuild your project and deploy it on every 
 Additionally, you will have access to [preview deployments](/platform/preview-deployments), which repeat the build-and-deploy process for pull requests. With these, you can preview changes to your project with a real URL before deploying them to production.
 
 <bongo:aside type="note">
-
 For the complete guide to deploying your first site to Cloudflare Pages, refer to the [Get started guide](/get-started).
-
 </bongo:aside>
 
 ## Learn more

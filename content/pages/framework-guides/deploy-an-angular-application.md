@@ -23,10 +23,8 @@ $ cd my-angular-app
 
 Alternatively, you can use [`npx`](https://www.npmjs.com/package/npx), which is included with all modern `npm` versions, to avoid the global installation:
 
-<Aside>
-
+<bongo:aside>
 **Note:** All modern versions of `npm` already include the `npx` executable. You do not need to install anything for this approach.
-
 </bongo:aside>
 
 ```sh
@@ -110,9 +108,7 @@ After completing configuration, click the **Save and Deploy** button.
 You will see your first deploy pipeline in progress. Pages installs all dependencies – including Angular CLI – and builds the project as specified.
 
 <bongo:aside type="note">
-
 For the complete guide to deploying your first site to Cloudflare Pages, refer to the [Get started guide](/get-started).
-
 </bongo:aside>
 
 After deploying your site, you will receive a unique subdomain for your project on `*.pages.dev`.

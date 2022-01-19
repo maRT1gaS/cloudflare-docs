@@ -41,11 +41,9 @@ curl -X PUT \
 ```
 
 <bongo:aside type='note' header='Note'>
-
 `PUT` does not update the filter specified. It only looks at the _filter id_ to update the rule with a new filter.
 
 To update the filter, use the [Filters API](/api/cf-filters/).
-
 </bongo:aside>
 
 ### Response
@@ -88,13 +86,11 @@ These fields are required:
 All other fields are optional.
 
 <bongo:aside type='note' header='Note'>
-
 `PUT` overwrites fields that aren't explicitly passed in the request.
 
 For example, if the request omits `description`, any previously existing `description` value will be erased.
 
 To preserve existing values, issue a `GET` request and based on the response, determine which fields (and respective values) to include in your `PUT` request and avoid undesired overwrites.
-
 </bongo:aside>
 
 ### Request

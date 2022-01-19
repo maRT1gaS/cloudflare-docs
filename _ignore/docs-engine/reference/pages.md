@@ -20,7 +20,6 @@ Page URL paths are automatically derived from the file path inside the content d
 The special filename `index.md` is equivalent to `(empty string).md`. Therefore, you can think of `folder/page/index.md` as equivalent to `folder/page.md`; the only difference is that within each file, relative imports (of images, or of custom MDX components, as examples) will start from a different position in the file structure.
 
 <bongo:aside type="tip">
-
 __Tip:__ It’s common to use a folder to group a page with its media, e.g.:
 
 ```txt
@@ -44,7 +43,6 @@ https://example.com/page-1
 https://example.com/page-2
 https://example.com/page-3
 ```
-
 </bongo:aside>
 
 --------------------------------

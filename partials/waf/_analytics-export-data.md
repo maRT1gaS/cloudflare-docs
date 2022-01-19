@@ -1,9 +1,7 @@
 ### Export activity log data
 
 <bongo:aside type="note">
-
 Only available on Business and Enterprise plans.
-
 </bongo:aside>
 
 You can export a set of up to 500 raw events from the **Activity log** in JSON format. Export event data to combine and analyze Cloudflare data with your own stored in a separate system or database, such as a security information and event management system (SIEM). The data you export will reflect any filters you have applied.

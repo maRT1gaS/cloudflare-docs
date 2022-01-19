@@ -76,9 +76,7 @@ workers_dev = true
 ```
 
 <bongo:aside type="warning">
-
 \* **Warning:** Do not use plaintext environment variables to store sensitive information. Use [`wrangler secret put`](/cli-wrangler/commands#secret) instead.
-
 </bongo:aside>
 
 ### Adding KV namespaces via wrangler
@@ -124,9 +122,7 @@ To add environment variables, such as `vars` and `secret`:
 ![env variables dash](./media/env_variables_dash.png)
 
 <bongo:aside type="warning" header="Plaintext strings and secrets">
-
 Do not select **Encrypt** when adding environment variables if your variable is not a secret. Skip step 3 if your variable's value is a plaintext string and does not need to be encrypted.
-
 </bongo:aside>
 
 ### Adding KV namespace bindings via the dashboard

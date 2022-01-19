@@ -57,9 +57,7 @@ curl -X GET https://api.cloudflare.com/client/v4/accounts -H 'x-auth-email: <x-a
 ```
 
 <bongo:aside type="note">
-
 **Note:** This endpoint is the same as documented in our [API docs](https://api.cloudflare.com/#accounts-list-accounts). The same filters can be used for created accounts.
-
 </bongo:aside>
 
 You will get back a list of all the accounts you have created plus any accounts your user already had access to:

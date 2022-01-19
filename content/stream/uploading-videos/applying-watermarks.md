@@ -67,8 +67,7 @@ To create, list, delete, or get information about the profile, you will need you
 
   - Location of the watermark. Valid positions are: `upperRight`, `upperLeft`, `lowerLeft`, `lowerRight`, and `center`.
 
-    <Aside>
-
+    <bongo:aside>
     Note that `center` will ignore the `padding` parameter.
 
     </bongo:aside>

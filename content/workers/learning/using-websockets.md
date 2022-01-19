@@ -6,9 +6,7 @@ pcx-content-type: concept
 # Using WebSockets
 
 <bongo:aside type="warning">
-
 WebSocket pricing and limits details are currently not available. Developers are encouraged to experiment with WebSocket support in Cloudflare Workers, but WebSocket support generally remains in early access.
-
 </bongo:aside>
 
 WebSockets allow you to communicate in real time with your Cloudflare Workers serverless functions. In this guide, you will learn the basics of WebSockets on Cloudflare Workers, both from the perspective of writing WebSocket servers in your Workers functions, as well as connecting to and working with those WebSocket servers as a client.
@@ -16,17 +14,13 @@ WebSockets allow you to communicate in real time with your Cloudflare Workers se
 WebSockets are open connections sustained between the client and the origin server. Inside a WebSocket connection, the client and the origin can pass data back and forth without having to reestablish sessions. This makes exchanging data within a WebSocket connection fast. WebSockets are often used for real-time applications such as live chat and gaming.
 
 <bongo:aside type="note">
-
 WebSockets utilize a simple event-based system for receiving and sending messages, much like the Workers' runtime model of responding to events.
-
 </bongo:aside>
 
 ## Writing a WebSocket Server
 
 <bongo:aside type="note">
-
 The `wrangler dev` tool currently does not support connecting to Workers via the WebSocket protocol. Support for WebSockets in `wrangler dev` is tracked in [this GitHub issue](https://github.com/cloudflare/wrangler/issues/1910).
-
 </bongo:aside>
 
 WebSocket servers in Cloudflare Workers allow you to receive messages from a client in real time. This guide will show you how to set up a WebSocket server in Workers.
@@ -39,9 +33,7 @@ const websocket = new WebSocket('wss://example-websocket.signalnerve.workers.dev
 ```
 
 <bongo:aside type="note">
-
 For more details about creating and working with WebSockets in the client, refer to [Writing a WebSocket client](#writing-a-websocket-client).
-
 </bongo:aside>
 
 When an incoming WebSocket request reaches the Workers function, it will contain an `Upgrade` header, set to the string value `websocket`. Check for this header before continuing to instantiate a WebSocket:

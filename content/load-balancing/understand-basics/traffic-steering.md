@@ -13,9 +13,7 @@ Load Balancing provides several traffic steering modes, which allow customers to
 Configure traffic steering from the Load Balancing dashboard — in either the **Create a Load Balancer** wizard or the **Edit Load Balancer** panel — or via the Cloudflare API.
 
 <bongo:aside type="note">
-
 Without purchasing **Traffic Steering**, non-Enterprise customers only have access to **Off** and **Random** for their steering options.
-
 </bongo:aside>
 
 ---
@@ -109,9 +107,7 @@ To add coordinates when creating or editing a pool:
 1. Enter the latitude and longitude or drag a marker on the map.
 1. Select **Save**.
 
-<bongo:aside type="warning" header="Warning:">
-  For accurate proximity steering, add GPS coordinates to all pools within the same load balancer.
-</bongo:aside>
+<bongo:aside type="warning" header="Warning:">  For accurate proximity steering, add GPS coordinates to all pools within the same load balancer.</bongo:aside>
 
 ## Random steering
 

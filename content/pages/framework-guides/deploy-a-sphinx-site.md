@@ -19,9 +19,7 @@ In this guide, you will create a new Sphinx project and deploy it using Cloudfla
 - [pipenv](https://pipenv.pypa.io/en/latest/) - automatically creates and manages a virtualenv for your projects
 
 <bongo:aside type="note">
-
 If you are already running a version of Python 3.7, ensure that Python version 3.7 is also installed on your computer before you begin this guide. Python 3.7 is the latest version supported by Cloudflare Pages.
-
 </bongo:aside>
 
 The latest version of Python 3.7 is 3.7.11:
@@ -239,9 +237,7 @@ For example:
 After configuring your site, you can begin your first deploy. You should see Cloudflare Pages installing `Pipenv`, your project dependencies, and building your site, before deployment.
 
 <bongo:aside type="note">
-
 For the complete guide to deploying your first site to Cloudflare Pages, refer to the [Get started guide](/get-started).
-
 </bongo:aside>
 
 After deploying your site, you will receive a unique subdomain for your project on `*.pages.dev`. Every time you commit new code to your Sphinx site, Cloudflare Pages will automatically rebuild your project and deploy it.

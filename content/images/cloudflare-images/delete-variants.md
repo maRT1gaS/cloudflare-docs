@@ -8,9 +8,7 @@ pcx-content-type: reference
 You can delete variants via API with a simple cURL command.
 
 <bongo:aside type="warning" header="Warning">
-
 Deleting a variant is a global action that will affect other images that contain that variant.
-
 </bongo:aside>
 
 ```bash

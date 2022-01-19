@@ -52,7 +52,6 @@ brew install azure-cli
    ```
 
    <bongo:aside type="note" header="Note:">
-
    For a list of supported regions, see the [Microsoft documentation](https://azure.microsoft.com/en-us/global-infrastructure/services/?products=key-vault).
 
    </bongo:aside>

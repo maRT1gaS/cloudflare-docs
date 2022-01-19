@@ -48,9 +48,7 @@ Deploy your site to Pages by logging into the [Cloudflare dashboard](https://das
 After configuring your site, you can begin your first deploy. You should see Cloudflare Pages installing `vue`, your project dependencies, and building your site, before deploying it.
 
 <bongo:aside type="note">
-
 For the complete guide to deploying your first site to Cloudflare Pages, refer to the [Get started guide](/get-started).
-
 </bongo:aside>
 
 After deploying your site, you will receive a unique subdomain for your project on `*.pages.dev`.

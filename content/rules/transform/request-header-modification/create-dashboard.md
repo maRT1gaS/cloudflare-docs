@@ -23,7 +23,6 @@ Create HTTP Request Header Modification Rules in the **Transform Rules** tab und
 1. Under **When incoming requests match**, define the [rule expression](https://developers.cloudflare.com/firewall/cf-dashboard/create-edit-delete-rules#expression-builder-and-editor).
 
    <bongo:aside type='note'>
-
    Check the [available fields and functions](/transform/request-header-modification/reference/fields-functions).
 
    </bongo:aside>
@@ -43,7 +42,6 @@ Create HTTP Request Header Modification Rules in the **Transform Rules** tab und
    ![HTTP request header modification examples](../../static/transform/request-header-modification-example.png)
 
    <bongo:aside type='note'>
-
    You can modify up to 30 HTTP request headers in a single rule.
 
    </bongo:aside>

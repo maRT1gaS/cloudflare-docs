@@ -34,9 +34,7 @@ For example, this second configuration lets any user from Portugal with a `@team
 ## Block
 
 <bongo:aside type='warning' header='Important'>
-
 An Exclude rule will allow any user meeting that criteria to access an application when a Block Action is configured.
-
 </bongo:aside>
 
 This action explicitly prevents users from reaching an application behind Access. Block actions enforce similar behavior to allow actions that contain an Exclude rule without the need to allow specific users.
@@ -53,9 +51,7 @@ For example, this configuration blocks every request to the application, except 
 ## Bypass
 
 <bongo:aside type='warning' header='Important'>
-
 Use Bypass rules carefully, as they <b>disable any Access enforcement</b> for traffic that meets the defined rule criteria.
-
 </bongo:aside>
 
 The bypass rule action disables any Access enforcement for traffic that meets the defined rule criteria. This may be useful if you want to ensure your employees have direct permanent access to your internal applications, while still ensuring that any external resource is always asked to authenticate.

@@ -74,9 +74,7 @@ A challenge file will be written to the destination, and the filename will be in
 You will need to provide the token contained in the file when creating a job.
 
 <bongo:aside type="note" header="Note">
-
 When using Sumo Logic, you may find it helpful to have [Live Tail](https://help.sumologic.com/05Search/Live-Tail/About-Live-Tail) open to see the challenge file as soon as it's uploaded.
-
 </bongo:aside>
 
 ## Destination
@@ -123,9 +121,7 @@ There can be only 1 job writing to each unique destination. For S3 and GCS, a de
 ## Job object
 
 <bongo:aside type="info" header="Info">
-
 See a detailed description of the [Logpush job object definition](https://api.cloudflare.com/#logpush-jobs-properties).
-
 </bongo:aside>
 
 ## Options

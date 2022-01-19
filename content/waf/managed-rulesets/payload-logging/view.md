@@ -17,7 +17,7 @@ View the content of the matched rule payload in the dashboard by entering your p
 
 1. Enter your private key in the pop-up window and select **Decrypt**.
 
-   <Aside type='note'>
+   <bongo:aside type='note'>
 
    The private key is not sent to a Cloudflare server. The decryption occurs entirely in the browser.
 

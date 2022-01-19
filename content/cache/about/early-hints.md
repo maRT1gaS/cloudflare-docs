@@ -10,9 +10,7 @@ Early Hints takes advantage of “server think time” to asynchronously send in
 Formally, Early Hints is a [web standard](https://httpwg.org/specs/rfc8297.html) that defines a new HTTP status code (103 Early Hints) that defines new interactions between a client and server. 103s are served to clients while a 200 OK (or error) response is prepared, which is the “server think time.” You can enable Cloudflare's edge to cache and send 103 Early Hints responses with Link headers from your HTML pages. The response contains hints about which assets will likely be needed to fully render the web page. This "hinting" speeds up page loads and generally reduces user-perceived latency.
 
 <bongo:aside type="note" header="Note">
-
 Early Hints is currently only supported over HTTP/2 and HTTP/3.
-
 </bongo:aside>
 
 For more information about Early Hints, refer to the [Early Hints blog](https://blog.cloudflare.com/early-hints/).
@@ -34,9 +32,7 @@ Early Hints are only generated and cached:
 - When the response contains [link headers](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Link) with preconnect or preload rel types, such as `Link: </img/preloaded.png>; rel=preload`
 
 <bongo:aside type="note">
-
 Early Hints cache entries are keyed by request URI and ignore query strings.
-
 </bongo:aside>
 
 ## Emitting Early Hints

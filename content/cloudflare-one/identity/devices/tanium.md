@@ -30,10 +30,8 @@ Once complete, return to the Cloudflare for Teams dashboard to integrate with yo
 
 Cloudflare Access relies on a secure exchange between a user's browser and the Tanium agent to read data from the Tanium client. When users attempt to connect to a resource protected by Access with a Tanium rule, Cloudflare Access will validate the user's identity, and the browser will connect to the Tanium agent before making a decision to grant access.
 
-<Aside>
-
+<bongo:aside>
 The integration does not currently support Safari.
-
 </bongo:aside>
 
 ## Integrating Tanium Identity

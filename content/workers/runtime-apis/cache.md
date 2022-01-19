@@ -13,9 +13,7 @@ The Cache API is available globally but the contents of the cache do not replica
 However, any Cache API operations in the Cloudflare Workers dashboard editor, [Playground](/learning/playground) previews, and any `*.workers.dev` deployments will have no impact. Only Workers deployed to custom domains have access to functional `Cache` operations.
 
 <bongo:aside type="note">
-
 This individualized zone cache object differs from Cloudflare’s Global CDN. For details, refer to [How the Cache Works](/learning/how-the-cache-works).
-
 </bongo:aside>
 
 ---
@@ -60,11 +58,9 @@ Our implementation of the Cache API respects the following HTTP headers on the r
 This differs from the web browser Cache API as they do not honor any headers on the request or response.
 
 <bongo:aside type="note">
-
 Responses with `Set-Cookie` headers are never cached, because this sometimes indicates that the response contains unique data. To store a response with a `Set-Cookie` header, either delete that header or set `Cache-Control: private=Set-Cookie` on the response before calling `cache.put()`.
 
 Use the `Cache-Control` method to store the response without the `Set-Cookie` header.
-
 </bongo:aside>
 
 ---
@@ -86,9 +82,7 @@ cache.put(request, response);
 </Definitions>
 
 <bongo:aside type="note">
-
 The `stale-while-revalidate` and `stale-if-error` directives are not supported when using the `cache.put` or `cache.match` methods.
-
 </bongo:aside>
 
 #### Parameters
@@ -129,9 +123,7 @@ cache.match(request, options);
 </Definitions>
 
 <bongo:aside type="note">
-
 The `stale-while-revalidate` and `stale-if-error` directives are not supported when using the `cache.put` or `cache.match` methods.
-
 </bongo:aside>
 
 #### Parameters

@@ -32,10 +32,8 @@ Click **Create Service Token** and name the service token. Cloudflare Access wil
 
 ![Name and Detail](../static/zero-trust-security/ssh-tokens/name-and-detail.png)
 
-<Aside>
-
+<bongo:aside>
 For the purposes of this tutorial, the `Client Secret` is visible. However, real use cases should treat this like a password.
-
 </bongo:aside>
 
 ## Add the service token to an app rule

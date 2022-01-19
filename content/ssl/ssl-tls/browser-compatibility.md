@@ -15,9 +15,7 @@ Cloudflare attempts to provide compatibility for as wide a range of user agents 
 | Clients using RSA key exchange   | ❌   | ✅  | ✅       | ✅         |
 
 <bongo:aside type='warning' header='Important'>
-
 Cloudflare Universal SSL only supports browsers and API clients that use the [Server Name Indication (SNI)](https://www.cloudflare.com/learning/ssl/what-is-sni/) extension to the TLS protocol.
-
 </bongo:aside>
 
 ### Free plan
@@ -53,7 +51,5 @@ Paid plans provide additional compatibility with older browsers/operating system
 | Clients without SNI              | ✅                 | ❌                  | ❌                     | ❌           | ❌  |
 
 <bongo:aside type='note' header='Note'>
-
 SNI extensions to the TLS protocol were standardized in 2003. However, some browsers and operating systems only implemented this extension when TLS 1.1 was released in 2006 (or 2011 for mobile browsers). If your visitors use devices that have not been updated since 2011, they may not have SNI support.
-
 </bongo:aside>

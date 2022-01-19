@@ -12,9 +12,7 @@ Potential examples include:
 - Sharing brand assets and marketing materials
 
 <bongo:aside type='note' header='Note'>
-
 These rules can bypass Cloudflare's security features and are generally not recommended. Use with caution.
-
 </bongo:aside>
 
 ## Update firewall rules by ASN
@@ -48,9 +46,7 @@ This example uses:
 </table>
 
 <bongo:aside type='warning' header='Important'>
-
 Access to [Bot Management](https://developers.cloudflare.com/bots/get-started/bm-subscription) requires a Cloudflare Enterprise plan with Bot Management.
-
 </bongo:aside>
 
 ### Adjust rules by ASN

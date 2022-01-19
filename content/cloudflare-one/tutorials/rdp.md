@@ -77,10 +77,8 @@ By default, the agent will run as a Local Account service and will look for the 
 mkdir C:\Windows\System32\config\systemprofile\.cloudflared
 ```
 
-<Aside>
-
+<bongo:aside>
 Ensure that the machine's firewall permits egress on ports `80`, `443`, and `3389`, otherwise cloudflared will return an error.
-
 </bongo:aside>
 
 ## Authenticate `cloudflared`
@@ -149,12 +147,10 @@ with `%USERNAME%` being your Windows username (this is your user folder).
 
 ## Route to the Tunnel
 
-<Aside>
-
+<bongo:aside>
 <strong>IMPORTANT</strong>: Make sure you have enabled WebSockets in the "Network" section of your domain in the Cloudflare control panel:
 
 ![Enable WebSockets](../static/zero-trust-security/ssh/enable-websockets.png)
-
 </bongo:aside>
 
 You can now create a DNS record that will route traffic to this Tunnel. Multiple DNS records can point to a single Tunnel and will send traffic to the service configured as long as the hostname is defined with an [ingress rule](/connections/connect-apps/configuration/ingress).

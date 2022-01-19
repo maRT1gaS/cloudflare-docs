@@ -26,11 +26,9 @@ Most standard fields use the same naming conventions as [Wireshark display field
 - The Cloudflare Firewall Rules language does not support the `slice` operator.
 
 <bongo:aside type='note' header="Availability notes">
-
 - Access to `ip.geoip.is_in_european_union`, `ip.geoip.subdivision_1_iso_code`, and `ip.geoip.subdivision_2_iso_code` fields requires a Cloudflare Business or Enterprise plan.
 
 - Access to `http.request.cookies` field requires a Cloudflare Pro, Business, or Enterprise plan.
-
 </bongo:aside>
 
 The Cloudflare Firewall Rules language supports these standard fields:
@@ -585,9 +583,7 @@ The Cloudflare Firewall Rules language supports these standard fields:
 Dynamic fields represent computed or derived values, typically related to threat intelligence about an HTTP request.
 
 <bongo:aside type='note'>
-
 Access to `cf.bot_management.verified_bot` and `cf.bot_management.score` fields requires a Cloudflare Enterprise plan with [Bot Management](https://developers.cloudflare.com/bots/get-started/bm-subscription) enabled.
-
 </bongo:aside>
 
 The Cloudflare Firewall Rules language supports these dynamic fields:
@@ -1495,19 +1491,15 @@ The Cloudflare Firewall Rules language supports these HTTP header fields:
 ## HTTP body fields
 
 <bongo:aside type='note'>
-
 Access to HTTP body is an add-on product of the Cloudflare Enterprise plan.
-
 </bongo:aside>
 
 The Firewall Rules language includes fields that represent properties of an HTTP request body. Many of these return [arrays](/cf-firewall-language/values#arrays) containing the respective values.
 
 <bongo:aside type="warning">
-
 The value of `http.request.body.*` fields has a maximum size of 128 KB, which means that you cannot define expressions that rely on request body data beyond the first 128 KB. If the request body is larger, the body fields will contain a truncated value and the `http.request.body.truncated` field will be set to `true`.
 
 The maximum body size applies only to the values of HTTP body fields — the origin server will still receive the complete request body.
-
 </bongo:aside>
 
 The Cloudflare Firewall Rules language supports these HTTP body fields:

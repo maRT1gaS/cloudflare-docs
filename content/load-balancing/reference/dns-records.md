@@ -31,9 +31,7 @@ For hostnames with existing A, AAAA, or CNAME records, the LB record takes prece
   - **Outcome**: LB record takes precedence because it is as specific as the DNS record.
 
 <bongo:aside type="note">
-
 This behavior only applies to A, AAAA, or CNAME records. An LB record does not take precedence over other types of DNS records (MX, TXT, etc.).
-
 </bongo:aside>
 
 ## Disabling a load balancer

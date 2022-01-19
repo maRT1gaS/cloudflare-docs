@@ -13,9 +13,7 @@ Before getting started, review:
 - [Logpush job object definition](https://api.cloudflare.com/#logpush-jobs-properties)
 
 <bongo:aside type="note">
-
 The examples below are for zone-scoped data sets. Account-scoped data sets should use `/accounts/<ACCOUNT_ID>` instead of `/zone/<ZONE_ID>`.
-
 </bongo:aside>
 
 ## Step 1 - Get ownership challenge
@@ -52,9 +50,7 @@ A challenge file will be written to the destination, and the filename will be in
 You will need to provide the token contained in this file when creating a job in the next step.
 
 <bongo:aside type="note" header="Note">
-
 When using Sumo Logic, you may find it helpful to have [Live Tail](https://help.sumologic.com/05Search/Live-Tail/About-Live-Tail) open to see the challenge file as soon as it's uploaded.
-
 </bongo:aside>
 
 ## Step 2 - Create a job

@@ -26,9 +26,7 @@ This is the general pattern for using comparison operators:
 The Cloudflare Firewall Rules language supports these comparison operators:
 
 <bongo:aside type='warning' header='Important'>
-
 Access to the `matches` operator requires a Cloudflare Business or Enterprise plan.
-
 </bongo:aside>
 
 <TableWrap style="width:100%">
@@ -329,9 +327,7 @@ Each logical operator has an [order of precedence](#order-of-precedence). The or
 ### Order of precedence
 
 <bongo:aside type='warning' header='Important'>
-
 To avoid ambiguity when working with logical operators, use grouping symbols so that the order of evaluation is explicit.
-
 </bongo:aside>
 
 When writing compound expressions, it is important to be aware of the precedence of logical operators so that your expression is evaluated the way you expect.
@@ -352,9 +348,7 @@ Since the logical `and` operator has precedence over logical `or`, the `and` ope
 ## Grouping symbols
 
 <bongo:aside type='warning' header='Important'>
-
 Only the [Expression Editor](/cf-dashboard/expression-preview-editor/) and the [Cloudflare API](/api/) support grouping symbols. The [Expression Builder](/cf-dashboard/create-edit-delete-rules/) does not.
-
 </bongo:aside>
 
 The Firewall Rules language supports parentheses (`(`,`)`) as grouping symbols. Grouping symbols allow you to organize expressions, enforce precedence, and nest expressions.

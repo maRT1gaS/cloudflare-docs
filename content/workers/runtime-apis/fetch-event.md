@@ -110,11 +110,9 @@ When responding to a HTTP request, the fetch handler may use any of the followin
 ### `respondWith`
 
 <bongo:aside type="warning" header="Service Worker Only">
-
 The `respondWith` method is only applicable to the Service Worker format.
 
 With the Module Worker format, return a `Response` from the handler directly.
-
 </bongo:aside>
 
 Intercepts the request and allows the Worker to send a custom response.

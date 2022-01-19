@@ -34,20 +34,16 @@ To recap the basics of HTML5 forms, a `form` element generally contains an `acti
 </form>
 ```
 
-<Aside>
-
+<bongo:aside>
 If you're unfamiliar with HTML5 forms, the Mozilla Developer Network's ["Web Forms - Working with user data"](https://developer.mozilla.org/en-US/docs/Learn/Forms) is a great beginner's guide.
-
 </bongo:aside>
 
 To pass data _inside_ of the form, you can use `input` tags. `input` tags have a `type`, which specifies how the `input` should render, and what kind of data it contains. When an `input` has a `name` attribute, the `form` will submit that data to the provided `action` URL, matching that `name` attribute.
 
-<Aside>
-
+<bongo:aside>
 The `id` attribute, while not required for the `input` to be submitted as part of the `form`, [may be required to ensure accessibility](https://developer.mozilla.org/en-US/docs/Learn/Accessibility/HTML#meaningful_text_labels). If the `input` element is nested inside the `label`, the `id` is not required. If the `input` element is not nested inside the `label`, the `id` on the `input` is required along with the `for` (or `htmlFor` in React) property to ensure differently abled readers will get built-in accessibility features.
 
 Additionally, the `id` attribute is often set alongside the `name` attribute to enable styling via CSS.
-
 </bongo:aside>
 
 For example, if I fill in the `first_name` `input` with the text "Kristian", submitting the `form` via the "Submit" `button` will submit data to the URL `/new_submission` with the data `first_name=Hello`.
@@ -99,18 +95,14 @@ $ wrangler generate airtable-form-handler
 $ cd airtable-form-handler
 ```
 
-<Aside>
-
+<bongo:aside>
 If you've chosen to work with the [sample codebase on GitHub](https://github.com/cloudflare/workers-airtable-form), you can find a sample function in the `worker` directory.
-
 </bongo:aside>
 
 In `wrangler.toml`, add your Cloudflare account ID:
 
-<Aside>
-
+<bongo:aside>
 [Check out our Quick Start guide](https://developers.cloudflare.com/workers/get-started/guide#7-configure-your-project-for-deployment) if you're unsure where to find your Cloudflare Account ID.
-
 </bongo:aside>
 
 ```toml

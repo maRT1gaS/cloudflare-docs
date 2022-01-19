@@ -45,9 +45,7 @@ In **Top events by source** you can find details of the traffic flagged or actio
 You can adjust the scope of Firewall Analytics to one of the listed source values by clicking **Filter** or **Exclude** when hovering the value.
 
 <bongo:aside type="note">
-
 A deleted Firewall Rule or Rate Limiting rule will show as `Rule unavailable` under **Firewall Rules** or **Rate Limit Rules**. To check the changes made within your Cloudflare account, review your [Audit logs](https://support.cloudflare.com/hc/en-us/articles/115002833612-Understanding-Cloudflare-Audit-Logs).
-
 </bongo:aside>
 
 ## Activity log
@@ -69,9 +67,7 @@ The generated report will reflect all applied filters.
 ## Layer 4 denial-of-service attack mitigation
 
 <bongo:aside type="note">
-
 Only available on Enterprise plans.
-
 </bongo:aside>
 
 In **Denial-of-service attacks mitigated** you have visibility over mitigated Layer 4 denial-of-service SYN attacks towards your zones in the past seven days.

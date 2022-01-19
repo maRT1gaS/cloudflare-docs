@@ -11,7 +11,6 @@ pcx-content-type: how-to
 1. Click **Purchase** on the domain you wish to register. In rare instances, a domain that is not available for registration may appear in the search results. After clicking **Purchase**, a definitive availability check will be performed to confirm that the domain is actually available for registration.
 
   <bongo:aside type="note">
-
 Currently, Cloudflare cannot register premium domains (domains that have non-standard pricing) and Internationalized Domain Names (IDNs).
 
   </bongo:aside>
@@ -22,7 +21,6 @@ Currently, Cloudflare cannot register premium domains (domains that have non-sta
 1. Enter the contact details for the domain. These details will be used to create all of the required contacts (Registrant, Admin, Technical, and Billing), and may be updated after registration is completed. The following data fields have specific requirements:
 
   <bongo:aside type="note">
-
 At this time, you can only use ASCII characters for contact data. If the default contact has non-ASCII characters, you will need to update the domain contact details before proceeding. Cloudflare recommends that you update your default contact information to include ASCII characters only.
 
   </bongo:aside>
@@ -49,7 +47,6 @@ At this time, you can only use ASCII characters for contact data. If the default
 After entering the contact information click **Continue**. If any of the contact information is missing or not properly validated, an error message will appear and you will need to correct the data before proceeding.
 
   <bongo:aside type="note">
-
 If you have previously registered or transferred a domain name, the form will be filled in advance with the information from your default contact. If not, you will need to fill out the form.
 
 It is important that you provide complete and accurate contact information. If you do not follow this recommendation, the domain registration may be suspended and/or canceled.

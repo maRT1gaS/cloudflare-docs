@@ -25,9 +25,7 @@ curl -X DELETE \
 ```
 
 <bongo:aside type='note' header='Note'>
-
 `DELETE` does not delete any filter related to the firewall rule. To delete the filter, it's necessary to call the `/filters` API.
-
 </bongo:aside>
 
 ### Response

@@ -10,10 +10,8 @@ You can block security risks and content categories by creating DNS policies. On
 
 ## Security risk categories
 
-<Aside>
-
+<bongo:aside>
 If you wish to block a hostname or URL that belongs to a security risk category, you need to block that category. If the security risk category is not configured as blocked, requests to that hostname or URL will appear in your Gateway logs as allowed requests.
-
 </bongo:aside>
 
 | Category                     | Definition                                                                                                                                              |

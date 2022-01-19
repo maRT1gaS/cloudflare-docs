@@ -13,10 +13,8 @@ Tunnels are [persistent objects](https://blog.cloudflare.com/argo-tunnels-that-l
 
 You can create and configure Cloudflare Tunnel connections to [support multiple HTTP origins](/tutorials/multi-origin) or [multiple protocols simultaneously](/tutorials/gitlab). Doing so requires the use of a [configuration file](/connections/connect-apps/configuration/config), which Cloudflare recommends in most use cases. However, if you want to quickly spin up a new Tunnel, you can also use a single command to create, run, and route traffic to a Tunnel.
 
-<Aside>
-
+<bongo:aside>
 If you are migrating from "classic" Cloudflare Tunnel deployments to the new, persistent, model you can [follow the instructions](/tutorials/migrate-lb-tunnel) to migrate without downtime.
-
 </bongo:aside>
 
 **🗺️ This tutorial covers how to:**

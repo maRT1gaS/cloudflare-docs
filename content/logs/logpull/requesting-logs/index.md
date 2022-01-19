@@ -52,13 +52,11 @@ The following table describes the parameters available:
 </TableWrap>
 
 <bongo:aside type="note" header="Note">
-
 The maximum time range from <em>start</em> to <em>end</em> can't exceed 1 hour. Because <em>start</em> is inclusive and <em>end</em> is exclusive, to get all the data for every minute, starting at 10AM, the proper values are:
 
 `start=2018-05-15T10:00:00Z&end=2018-05-15T10:01:00Z`, then `start=2018-05-15T10:01:00Z&end=2018-05-15T10:02:00Z` and so on.
 
 The overlap will be handled correctly.
-
 </bongo:aside>
 
 ## Example API requests using cURL
@@ -82,9 +80,7 @@ curl -s \
 ```
 
 <bongo:aside type="note" header="Note">
-
 The IATA code returned as part of the Ray ID does not need to included in the request. For example: if you have a RayID such as `49ddb3e70e665831-DFW` only include `49ddb3e70e665831` in your request.
-
 </bongo:aside>
 
 ## Fields

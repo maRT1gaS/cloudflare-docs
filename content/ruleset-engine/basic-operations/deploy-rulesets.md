@@ -15,9 +15,7 @@ A rule that executes a ruleset consists of:
 - An **action**. Set the action to `execute`. The rules in the ruleset execute when a request satisfies the expression.
 
 <bongo:aside type='note'>
-
 To apply a rule to every request in a phase at the **zone** level, set the rule expression to `true`.
-
 </bongo:aside>
 
 ## Example

@@ -55,7 +55,6 @@ To use PTR records, you need to create a reverse DNS zone and add a PTR record f
           </details>
 
                 <bongo:aside type="warning">
-
         Enterprise customers can only add reverse zones for IPv4 addresses. If you want to add zones for IPv6 addresses, contact your account team.
 
               </bongo:aside>

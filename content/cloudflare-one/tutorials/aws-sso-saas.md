@@ -9,14 +9,12 @@ pcx-content-type: tutorial
 
 In this tutorial we will configure AWS SSO with Access for SaaS. Cloudflare Access for SaaS allows you to layer additional network and device posture policies on top of existing identity authentication from your identity provider. In this example, we are using Okta as an identity provider, but any supported identity provider can be leveraged.
 
-<Aside>
-
+<bongo:aside>
 For this tutorial, you will need:
 
 - A Cloudflare for Teams account
 - An integrated IdP
 - Admin access to an AWS account
-
 </bongo:aside>
 
 **⏲️ Time to complete:**
@@ -80,8 +78,7 @@ For this tutorial, you will need:
    | **Access Entity ID** | **IdP Issuer URL**  |
    | **Public Key**       | **IdP Certificate** |
 
-   <Aside>
-
+   <bongo:aside>
    The Public key must be transformed into a fingerprint. To do that:
 
    1. Copy the Public Key Value.
@@ -98,7 +95,6 @@ For this tutorial, you will need:
    ![AWS settings](../static/zero-trust-security/aws-sso-saas/aws-settings.png)
 
    <bongo:aside type='Warning' header='Important'>
-
    Access for SaaS does not currently support System for Cross-domain Identity Management (SCIM). Please make sure that:
 
    1. Users are created in both your identity provider and AWS

@@ -35,10 +35,8 @@ If you have already logged in and have a configuration file in `~/.cloudflared/`
 
 If you do not have a configuration file, you will need to create a config.yml file with fields listed above. You can pass a custom file by running `cloudflared --config CONFIG-FILE service install`.
 
-<Aside>
-
+<bongo:aside>
 The above arguments are required for pre-configured Cloudflare Tunnel deployments. If you are using legacy Tunnels, without names, you can append the `--legacy` flag when running `cloudflared` tunnel install command.
-
 </bongo:aside>
 
 Then, start the system service with the following command:
@@ -163,7 +161,6 @@ Output will be logged to `/Library/Logs/com.cloudflare.cloudflared.err.log` and 
    ```
 
    <bongo:aside type='Note'>
-
    If you haven't created a config.yml file, follow [these instructions](/connections/connect-apps/install-and-setup/tunnel-guide#4-create-a-configuration-file).
 
    </bongo:aside>

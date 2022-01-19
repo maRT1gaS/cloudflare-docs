@@ -232,9 +232,7 @@ Cloudflare supports two methods to permit requests through Firewall Rules expres
 2. Create an independent Firewall rule with an _Allow_ action
 
 <bongo:aside type='note' header='Note'>
-
 Cloudflare Firewall Rules does not bypass security measures defined in other **Firewall** app features.
-
 </bongo:aside>
 
 If you wish to permit certain exclusions, the examples below illustrate a few possible approaches.

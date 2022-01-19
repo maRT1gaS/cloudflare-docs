@@ -34,7 +34,5 @@ Notification History is available to all plans. The amount of history clients ha
 - **Enterprise**: History from the past 90 days.
 
 <bongo:aside type="note" header="Note">
-
 Customers will not be able to to access Notification History from before Oct 11, 2021.
-
 </bongo:aside>

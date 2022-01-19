@@ -134,7 +134,6 @@ When enabling Authenticated Origin Pull per hostname, all proxied traffic to the
 1. Upload a custom certificate following [these instructions](/edge-certificates/custom-certificates/uploading#using-the-api), but use the [`/origin_tls_client_auth/hostnames/certificates` endpoint](https://api.cloudflare.com/#per-hostname-authenticated-origin-pull-upload-a-hostname-client-certificate).
 
   <bongo:aside type='note' header='Note'>
-
 Save the certificate ID <code>id</code> since it is required for the next step.
 
   </bongo:aside>
@@ -166,7 +165,6 @@ For global:
 1. Upload multiple certificates following the steps in [Per-Hostname Authenticated Origin Pull](#per-hostname--customer-certificates)
 
   <bongo:aside type='note' header='Note'>
-
 Hostname certificates take precedence over zone certificates.
 
   </bongo:aside>

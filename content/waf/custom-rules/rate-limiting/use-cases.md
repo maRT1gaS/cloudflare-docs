@@ -7,9 +7,7 @@ order: 19
 # Common rate limiting use cases
 
 <bongo:aside type='warning'>
-
 This feature is only available for selected customers on an Enterprise plan.
-
 </bongo:aside>
 
 The examples below include sample Rate Limiting rule configurations that address common rate limiting use cases.
@@ -68,7 +66,5 @@ Mitigation expression:<br/>
 </Example>
 
 <bongo:aside type='warning' header='Important'>
-
 You can only define a value for the **Mitigation expression** via API.
-
 </bongo:aside>

@@ -20,8 +20,7 @@ To set up PingIdentity (SAML) as your identity provider:
 
 1. In the **SAML attribute configuration** dialog select **Email attribute > urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress**.
 
-   <Aside>
-
+   <bongo:aside>
    There is an additional setting for PingFederate prior to 9.0.
 
    </bongo:aside>

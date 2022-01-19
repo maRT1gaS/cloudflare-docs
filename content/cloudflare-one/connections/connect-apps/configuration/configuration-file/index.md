@@ -6,9 +6,7 @@ pcx-content-type: reference
 # Configuration file
 
 <bongo:aside type="note">
-
 If you are running [quick tunnels](/connections/connect-apps/install-and-setup/tunnel-useful-terms#quick-tunnels), you do not need a configuration file.
-
 </bongo:aside>
 
 The [configuration file](/connections/connect-apps/install-and-setup/tunnel-useful-terms#configuration-file) is a `.yaml` file that functions as the operating manual for `cloudflared`. By creating a configuration file, you can have fine-grained control over how an instance of `cloudflared` will operate.

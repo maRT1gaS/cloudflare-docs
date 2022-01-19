@@ -25,9 +25,7 @@ pcx-content-type: how-to
    ![Edit GraphQL Endpoint](../../../static/images/GraphiQL-response-pane.png)
 
 <bongo:aside type='note' header='Note'>
-
 The right-side response pane is empty when you enter your information correctly. An error displays when there are problems with your header credentials.
-
 </bongo:aside>
 
 Now that you have configured authentication with a Cloudflare API key, you are ready to run queries using _GraphiQL_.

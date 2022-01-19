@@ -40,7 +40,6 @@ This guide covers how to protect your DocuSign account with Access for SaaS.
 1. Copy and save SSO Endpoint, Entity ID and Public Key.
 
    <bongo:aside type='note'>
-
    The Public key must be transformed into a fingerprint. To do that:
 
    1. Copy the Public Key Value.

@@ -13,7 +13,6 @@ Cloudflare Workers provides a [serverless](https://www.cloudflare.com/learning/s
   <bongo:button type="primary" href="/get-started/guide">
     Get started
   </bongo:button>
-
   <bongo:button type="secondary" href="/tutorials">
     View the tutorials
   </bongo:button>
@@ -57,7 +56,6 @@ async function handleRequest(request) {
   <bongo:button type="primary" href="https://cloudflareworkers.com/#36ebe026bf3510a2e5acace89c09829f:about:blank">
     Launch playground
   </bongo:button>
-
   <bongo:button type="secondary" href="/learning/playground">
     Learn more
   </bongo:button>

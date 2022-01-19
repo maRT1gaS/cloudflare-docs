@@ -57,9 +57,7 @@ Defining environment variables inline will override the default credentials stor
 3. Select **View** to copy your **Global API Key**.\*
 
 <bongo:aside type="warning" header="Warning">
-
 \* Treat your Global API Key like a password. It should not be stored in version control or in your code – use environment variables if possible.
-
 </bongo:aside>
 
 ---

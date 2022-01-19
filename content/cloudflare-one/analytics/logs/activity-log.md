@@ -5,10 +5,8 @@ pcx-content-type: reference
 
 # Activity logs
 
-<Aside>
-
+<bongo:aside>
 Activity log will only show the public Source IP address. Private IP addresses are NAT-ed behind a public IP address.
-
 </bongo:aside>
 
 The Activity log allows you to see individual DNS queries made from your locations or, for paid subscribers, HTTP requests made from WARP clients. You can use the Activity log to investigate anomalies in your network. You can search by the DNS query or HTTP request and investigate each by clicking on a row.
@@ -99,10 +97,8 @@ Since the request is generated in an isolated browser, the result is rendered in
 
 ## Cloudflare logpush integration
 
-<Aside>
-
+<bongo:aside>
 This feature is only available on the Teams Enterprise plan.
-
 </bongo:aside>
 
 You can configure the automatic export of logs from Cloudflare Gateway to third-party storage destinations or to security information and event management (SIEM) tools. Once exported, your team can analyze and audit the data as needed. This feature builds on Cloudflare's Logpush Service. To enable this feature on the Teams dashboard:

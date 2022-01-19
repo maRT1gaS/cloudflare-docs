@@ -5,10 +5,8 @@ pcx-content-type: how-to
 
 # Configure dynamic advertisement
 
-<Aside>
-
+<bongo:aside>
 To prevent issues and simplify the advertisement process during an attack scenario, refer to [best practices for managing dynamic advertisement](/best-practices/dynamic-advertisement).
-
 </bongo:aside>
 
 ## Configure dynamic advertisement via the dashboard
