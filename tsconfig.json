@@ -12,6 +12,7 @@
     "allowSyntheticDefaultImports": true,
     "moduleResolution": "node",
     "strictNullChecks": true,
+    "isolatedModules": false,
     "removeComments": true,
     "sourceMap": false,
     "checkJs": true,
