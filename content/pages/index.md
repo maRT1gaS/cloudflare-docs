@@ -13,7 +13,7 @@ Deploy your dynamic frontend applications using Cloudflare Pages. Pages are supe
 
 Get started deploying your first site using our **Get started** guide below, or refer to our **Framework guides** page to explore the vast ecosystem of tools and frameworks that Pages supports.
 
-<ButtonGroup>
+<bongo:buttongroup>
   <bongo:button type="primary" href="/get-started">
     Get started
   </bongo:button>
@@ -23,7 +23,7 @@ Get started deploying your first site using our **Get started** guide below, or 
   <bongo:button type="secondary" href="https://pages.dev">
     Your Cloudflare Pages dashboard
   </bongo:button>
-</ButtonGroup>
+</bongo:buttongroup>
 
 ## Popular pages
 

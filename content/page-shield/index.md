@@ -16,14 +16,14 @@ Page Shield includes the following features:
 - **Code change detection**: Detects any changes in the scripts loaded in your pages.
 - **Alerts**: Receive notifications about newly detected scripts, scripts loaded from unknown domains, new scripts considered malicious, or code changes in your existing scripts.
 
-<ButtonGroup>
+<bongo:buttongroup>
   <bongo:button type="primary" href="/get-started">
     Set up Page Shield
   </bongo:button>
   <bongo:button type="secondary" href="/about">
     Learn more
   </bongo:button>
-</ButtonGroup>
+</bongo:buttongroup>
 
 ## Availability
 

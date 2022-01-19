@@ -29,7 +29,7 @@ When writing documentation as part of a technical reference (e.g. [runtime API](
 
 --------------------------------
 
-<ButtonGroup>
+<bongo:buttongroup>
   <bongo:button type="secondary" href="/contributing/content/content-framework">← Content framework</bongo:button>
   <bongo:button type="secondary" href="/contributing/content/formatting">Formatting →</bongo:button>
-</ButtonGroup>
+</bongo:buttongroup>

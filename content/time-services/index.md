@@ -11,7 +11,7 @@ type: overview
 
 Learn more about Cloudflare’s suite of time services.
 
-<ButtonGroup>
+<bongo:buttongroup>
   <bongo:button type="primary" href="/ntp">
     NTP
   </bongo:button>
@@ -21,6 +21,6 @@ Learn more about Cloudflare’s suite of time services.
   <bongo:button type="primary" href="/roughtime">
     Roughtime
   </bongo:button>
-</ButtonGroup>
+</bongo:buttongroup>
 
 </ContentColumn>

@@ -29,11 +29,11 @@ Cloudflare Load Balancing is available as an add-on feature for any type of acco
 
 ## Next steps
 
-<ButtonGroup>
+<bongo:buttongroup>
   <bongo:button type="primary" href="/get-started">
     Get started
   </bongo:button>
   <bongo:button type="secondary" href="/understand-basics">
     Learn more
   </bongo:button>
-</ButtonGroup>
+</bongo:buttongroup>

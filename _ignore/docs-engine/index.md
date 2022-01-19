@@ -14,10 +14,10 @@ The engine uses [Gatsby](https://www.gatsbyjs.com/), and includes many [built-in
 
 It’s __open-source__ and [available on GitHub](https://github.com/cloudflare/cloudflare-docs-engine).
 
-<ButtonGroup>
+<bongo:buttongroup>
   <bongo:button type="primary" href="/how-it-works">How it works</bongo:button>
   <bongo:button type="secondary" href="/faq">FAQ</bongo:button>
-</ButtonGroup>
+</bongo:buttongroup>
 
 --------------------------------
 

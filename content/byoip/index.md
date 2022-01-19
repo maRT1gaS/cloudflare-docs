@@ -10,8 +10,8 @@ With **Bringing Your Own IPs** (BYOIP), Cloudflare announces your IPs in all our
 
 BYOIP is compatible with Magic Transit, Spectrum, and CDN services.
 
-<ButtonGroup>
+<bongo:buttongroup>
   <bongo:button type="primary" href="/get-started">
     Get started
   </bongo:button>
-</ButtonGroup>
+</bongo:buttongroup>

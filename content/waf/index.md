@@ -8,7 +8,7 @@ pcx-content-type: overview
 
 The Cloudflare Web Application Firewall (WAF) provides both automatic protection from vulnerabilities and the flexibility to create custom rules.
 
-<ButtonGroup>
+<bongo:buttongroup>
   <bongo:button type="primary" href="/about">
     Learn more
   </bongo:button>
@@ -18,7 +18,7 @@ The Cloudflare Web Application Firewall (WAF) provides both automatic protection
   <bongo:button type="secondary" href="/change-log">
     Managed Rulesets change log
   </bongo:button>
-</ButtonGroup>
+</bongo:buttongroup>
 
 ---
 

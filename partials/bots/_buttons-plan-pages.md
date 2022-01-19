@@ -1,4 +1,4 @@
-<ButtonGroup>
+<bongo:buttongroup>
   <bongo:button type="primary" href="../free">
     Free
   </bongo:button>
@@ -6,9 +6,9 @@
     Pro
   </bongo:button>
   <bongo:button type="primary" href="../biz-and-ent">
-    Business
+  Business
   </bongo:button>
   <bongo:button type="primary" href="../bm-subscription">
     Bot Management for Enterprise
   </bongo:button>
-</ButtonGroup>
+</bongo:buttongroup>

@@ -4,7 +4,7 @@ Receiving too many requests can be bad for your origin. These requests might inc
 
 Select a plan to see how Cloudflare can help you protect your origin:
 
-<ButtonGroup>
+<bongo:buttongroup>
   <bongo:button type="primary" href="/get-started/origin-health/free">
     Free
   </bongo:button>
@@ -17,4 +17,4 @@ Select a plan to see how Cloudflare can help you protect your origin:
   <bongo:button type="primary" href="/get-started/origin-health/enterprise">
     Enterprise
   </bongo:button>
-</ButtonGroup>
+</bongo:buttongroup>

@@ -16,11 +16,11 @@ Magic Transit is not yet supported on Cloudflare's China Network.
 
 </bongo:aside>
 
-<ButtonGroup>
+<bongo:buttongroup>
   <bongo:button type="primary" href="/get-started">
     Get started
   </bongo:button>
   <bongo:button type="secondary" href="/about">
     Learn more
   </bongo:button>
-</ButtonGroup>
+</bongo:buttongroup>

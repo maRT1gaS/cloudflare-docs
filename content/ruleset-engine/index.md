@@ -20,11 +20,11 @@ The Ruleset Engine supports different Cloudflare products. Check each product's 
 
 ---
 
-<ButtonGroup>
+<bongo:buttongroup>
   <bongo:button type="primary" href="/basic-operations">
     Basic operations
   </bongo:button>
   <bongo:button type="secondary" href="/about">
     Learn more
   </bongo:button>
-</ButtonGroup>
+</bongo:buttongroup>

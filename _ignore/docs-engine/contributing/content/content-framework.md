@@ -96,6 +96,6 @@ When writing documentation as part of a technical reference (e.g. [runtime API](
 
 --------------------------------
 
-<ButtonGroup>
+<bongo:buttongroup>
   <bongo:button type="secondary" href="/contributing/content/writing-style">Writing style →</bongo:button>
-</ButtonGroup>
+</bongo:buttongroup>

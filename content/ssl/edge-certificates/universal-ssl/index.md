@@ -13,18 +13,15 @@ When you change your authoritative nameservers to point to Cloudflare, this proc
 
 If you **do not** use Cloudflare for your authoritative nameservers (a CNAME setup), you will need to perform the additional steps described in [Enable Universal SSL](enable-universal-ssl#non-authoritative-partial-domains).
 
-<ButtonGroup>
+<bongo:buttongroup>
   <bongo:button type="primary" href="enable-universal-ssl">
     Get started
   </bongo:button>
-  <Button
-    type="secondary"
-    href="https://www.cloudflare.com/learning/ssl/what-is-an-ssl-certificate/"
-    target="_blank"
-  >
+
+  <bongo:button type="secondary" href="https://www.cloudflare.com/learning/ssl/what-is-an-ssl-certificate/" target="_blank">
     Learn more
   </bongo:button>
-</ButtonGroup>
+</bongo:buttongroup>
 
 <bongo:aside type="note">
 

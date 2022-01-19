@@ -1,0 +1,14 @@
+- [ ] render markdown links w/ HTML (or change css)
+- [ ] header `id` values (linkable) – https://github.com/valeriangalliat/markdown-it-anchor
+- [x] frontmatter for code snippets (highlight, theme, etc)
+- [ ] (BIG) convert all engine components -> partials
+- [ ] (BIG) grab ALL markup output for 1:1 alignment
+- [ ] check mobile menus, etc
+- [ ] fix link hrefs
+
+- [ ] (bongo) menus
+- [ ] (bongo) index pages
+- [ ] (bongo) fix `dev` assets
+- [ ] (bongo) allow `bongo-group`-like partial names
+
+https://github.com/cloudflare/cloudflare-docs-engine/tree/master/src/components/mdx

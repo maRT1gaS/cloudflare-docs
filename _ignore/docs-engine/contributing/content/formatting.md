@@ -72,7 +72,7 @@ Specifically, please make sure to:
 
 --------------------------------
 
-<ButtonGroup>
+<bongo:buttongroup>
   <bongo:button type="secondary" href="/contributing/content/writing-style">← Writing style</bongo:button>
   <bongo:button type="secondary" href="/contributing/content/accessibility">Accessibility →</bongo:button>
-</ButtonGroup>
+</bongo:buttongroup>

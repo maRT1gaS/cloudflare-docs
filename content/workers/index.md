@@ -9,14 +9,15 @@ pcx-content-type: landing-page
 
 Cloudflare Workers provides a [serverless](https://www.cloudflare.com/learning/serverless/what-is-serverless/) execution environment that allows you to create entirely new applications or augment existing ones without configuring or maintaining infrastructure.
 
-<ButtonGroup>
+<bongo:buttongroup>
   <bongo:button type="primary" href="/get-started/guide">
     Get started
   </bongo:button>
+
   <bongo:button type="secondary" href="/tutorials">
     View the tutorials
   </bongo:button>
-</ButtonGroup>
+</bongo:buttongroup>
 
 ---
 
@@ -52,17 +53,15 @@ async function handleRequest(request) {
 }
 ```
 
-<ButtonGroup>
-  <Button
-    type="primary"
-    href="https://cloudflareworkers.com/#36ebe026bf3510a2e5acace89c09829f:about:blank"
-  >
+<bongo:buttongroup>
+  <bongo:button type="primary" href="https://cloudflareworkers.com/#36ebe026bf3510a2e5acace89c09829f:about:blank">
     Launch playground
   </bongo:button>
+
   <bongo:button type="secondary" href="/learning/playground">
     Learn more
   </bongo:button>
-</ButtonGroup>
+</bongo:buttongroup>
 
 ---
 

@@ -40,10 +40,12 @@ __Tip:__ If you’d like to take advantage of Gatsby’s routing, but you want m
 
 ## Buttons
 
-The `<Button/>` can be used to render links (`<a/>`) stylized as buttons, or as literal HTML `<button/>` elements. This behavior is automatically determined based on whether an `href` attribute prop is passed.
+The `<bongo:button/>` can be used to render links (`<a/>`) stylized as buttons, or as literal HTML `<button/>` elements. This behavior is automatically determined based on whether an `href` attribute prop is passed.
 
 ```md
-<bongo:button type="primary" href="/how-it-works">How it Works</bongo:button>
+<bongo:button type="primary" href="/how-it-works">
+  How it Works
+</bongo:button>
 ```
 
 <Example>
@@ -75,17 +77,17 @@ The `<Button/>` can be used to render links (`<a/>`) stylized as buttons, or as 
 Button groups allow you to display a few buttons in a row, while allowing them to wrap nicely on smaller displays.
 
 ```jsx
-<ButtonGroup>
+<bongo:buttongroup>
   <bongo:button type="primary">Primary</bongo:button>
   <bongo:button type="secondary">Secondary</bongo:button>
-</ButtonGroup>
+</bongo:buttongroup>
 ```
 
 <Example>
-<ButtonGroup>
+<bongo:buttongroup>
   <bongo:button type="primary">Primary</bongo:button>
   <bongo:button type="secondary">Secondary</bongo:button>
-</ButtonGroup>
+</bongo:buttongroup>
 </Example>
 
 --------------------------------

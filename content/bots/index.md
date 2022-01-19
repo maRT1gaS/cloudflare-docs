@@ -20,11 +20,11 @@ To see the differences in features and functionality, visit [Plans](/plans/).
 
 ## Next steps
 
-<ButtonGroup>
+<bongo:buttongroup>
   <bongo:button type="primary" href="/get-started">
     Get started
   </bongo:button>
   <bongo:button type="secondary" href="/concepts">
     Learn more
   </bongo:button>
-</ButtonGroup>
+</bongo:buttongroup>
