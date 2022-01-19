@@ -1,4 +1,4 @@
-<html lang={{ $site.lang }} is-docs-page="">
+<html lang={{ $site.lang }} theme="light" is-docs-page="">
   <head>
     {{#var descr = $utils.truncate($page.summary || $site.description, 165) }}
     {{#var title = $page.title ? ($site.title + ' | ' + $page.title) : $site.title }}
