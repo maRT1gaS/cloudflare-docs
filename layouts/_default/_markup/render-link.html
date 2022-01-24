@@ -1,0 +1,12 @@
+{{- $href := (.Destination | safeURL) -}}
+{{- $text := (.Text | safeHTML) -}}
+{{- if strings.HasPrefix $href "http" -}}
+  <a href={{ $href }} class="DocsMarkdown--link" target="_blank" rel="noopener nofollow">
+    <span class="DocsMarkdown--link-content">{{- $text -}}</span>
+    {{- partialCached "link.external" . -}}
+  </a>
+{{- else -}}
+  <a href={{ $href }} class="DocsMarkdown--link">
+    <span class="DocsMarkdown--link-content">{{- $text -}}</span>
+  </a>
+{{- end -}}
