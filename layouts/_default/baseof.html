@@ -1,0 +1,635 @@
+<!doctype html>
+<html lang="{{ .Site.LanguageCode }}" theme="light" is-docs-page="">
+<head>
+  {{- $descr := cond (.IsHome) $.Site.Params.description (trim (default (.Content | plainify | truncate 165) .Params.summary) "\n") }}
+	{{- $title := cond (.IsHome) $.Site.Title (printf "%s | %s" .Title $.Site.Title) -}}
+
+  <meta charset="utf-8">
+  <title>{{ $title }}</title>
+  <meta http-equiv="cleartype" content="on"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="mobile-web-app-capable" content="yes"/>
+
+  <meta name="application-name" content="{{ $title }}"/>
+  <meta name="msapplication-tap-highlight" content="no"/>
+  <meta name="apple-mobile-web-app-capable" content="yes"/>
+  <meta name="apple-mobile-web-app-title" content="{{ $title }}"/>
+  <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+  <meta name="description" content="{{ $descr }}" />
+
+  <link rel="stylesheet" href="/style.css"/>
+	{{- block "styles" . -}}{{- end -}}
+
+  {{- partial "script" (dict "src" "theme.ts" "inline" true "format" "iife") -}}
+  {{- partial "script" (dict "src" "main.ts" "defer" true) -}}
+  {{- block "scripts" . -}}{{- end -}}
+
+	<!-- <script>var $$r=document.documentElement;$$r.className='';!function(){var a=localStorage.getItem("dark");(a=a&&+a)||a||window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches,$$r.classList.toggle("dark",a=!!a),localStorage.setItem("dark",+a+"")}()</script> -->
+  <script data-source="docs" async defer src="https://feedback.developers.cloudflare.com/sdk.js"></script>
+  <link rel="preload" href="https://feedback.developers.cloudflare.com/sdk.css" as="style" onload="this.onload=null;this.rel='stylesheet'"/>
+  <noscript><link rel="stylesheet" href="https://feedback.developers.cloudflare.com/sdk.css"/></noscript>
+</head>
+<body>
+	<div class="DocsPage">
+    <div class="DocsMobileHeader">
+      <a class="DocsMobileHeader--cloudflare-logo-link Link Link-without-underline" href="https://developers.cloudflare.com/">
+        <div class="DocsNavLogoLockup DocsNavLogoLockup-with-small-gap">
+          <div class="DocsNavLogoLockup--logo">
+            <svg viewBox="0 0 48 48" fill="currentColor" role="img" aria-labelledby="title-7228824731188521"
+              xmlns="http://www.w3.org/2000/svg">
+              <title id="title-7228824731188521">Cloudflare docs logomark</title>
+              <path d="M31.236 28.717c-.373-.548-1.003-.864-1.76-.9l-14.353-.195a.262.262 0 01-.221-.122.348.348 0 01-.035-.267.396.396 0 01.338-.268l14.48-.195c1.714-.085 3.58-1.533 4.232-3.309l.828-2.25a.503.503 0 00.023-.292c-.932-4.404-4.698-7.689-9.198-7.689-4.15 0-7.672 2.798-8.931 6.679a4.156 4.156 0 00-2.973-.864c-1.994.207-3.59 1.874-3.789 3.954a4.84 4.84 0 00.105 1.545c-3.253.097-5.853 2.871-5.853 6.29 0 .304.024.608.059.912.023.146.14.256.28.256h26.488c.151 0 .291-.11.338-.268l.198-.742c.245-.876.152-1.68-.256-2.275zM36.062 21.39c-.128 0-.268 0-.396.012-.093 0-.175.073-.21.17l-.56 2.032c-.244.876-.151 1.679.257 2.275.373.548 1.003.864 1.76.9l3.055.195c.093 0 .175.049.222.122a.356.356 0 01.035.267.396.396 0 01-.339.268l-3.182.195c-1.726.085-3.58 1.532-4.232 3.309l-.234.62c-.046.122.035.243.164.243h10.935a.289.289 0 00.28-.219 8.654 8.654 0 00.292-2.214c0-4.501-3.521-8.175-7.847-8.175"></path>
+            </svg>
+          </div>
+          <span class="DocsNavLogoLockup--text">
+            <span data-text="Cloudflare">Cloudflare</span>
+            <span>&nbsp;</span>
+            <span data-text="Docs">Docs</span>
+          </span>
+        </div>
+      </a>
+    </div>
+
+    <div class="DocsMobileTitleHeader">
+      <a aria-current="page" class="DocsMobileTitleHeader--logo-link Link Link-without-underline" href="/1.1.1.1/">
+        <div class="DocsNavLogoLockup DocsNavLogoLockup-with-small-gap">
+          <div class="DocsNavLogoLockup--logo">
+            <span title="Cloudflare 1.1.1.1 logo">
+              <svg width="48" height="48" viewBox="0 0 48 48"
+                xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0)">
+                  <path d="M35.0925 34.695C32.1093 37.7858 28.0647 39.6299 23.775 39.855L26.775 36.855L24.66 34.7325L18 41.4L24.6375 48.0375L26.7525 45.915L23.7 42.855C27.831 42.679 31.8065 41.2304 35.0824 38.7077C38.3584 36.185 40.7745 32.7114 42 28.7625H38.8275C38.0097 30.9788 36.7375 32.9995 35.0925 34.695Z"></path>
+                  <path d="M13.0275 13.245C15.992 10.1723 20.0135 8.34118 24.2775 8.1225L21.3225 11.0775L23.4225 13.1775L29.91 6.675L30 6.585L23.4975 0.0825L23.4075 0L21.3075 2.1L24.345 5.1375C20.131 5.31338 16.0822 6.82524 12.7843 9.45439C9.48644 12.0835 7.11043 15.6937 6 19.7625H9.0975C9.89119 17.3177 11.2358 15.0879 13.0275 13.245Z"></path>
+                  <path d="M18.2025 23.37L16.7025 21.87H6L4.5 23.37V34.065L6 35.565H16.7025L18.2025 34.065V23.37ZM15.2025 32.565H7.5V24.87H15.2025V32.565Z"></path>
+                  <path d="M42 12.39H31.2975L29.7975 13.89V24.585L31.2975 26.085H42L43.5 24.585V13.89L42 12.39ZM40.5 23.085H32.7975V15.39H40.5V23.085Z"></path>
+                </g>
+                <defs>
+                  <clipPath id="clip0">
+                    <rect width="48" height="48"></rect>
+                  </clipPath>
+                </defs>
+              </svg>
+            </span>
+          </div>
+          <span class="DocsNavLogoLockup--text">
+            <span class="DocsMobileTitleHeader--text-scaler" style="--length:7">1.1.1.1</span>
+          </span>
+        </div>
+      </a>
+      <button class="Button DocsMobileTitleHeader--sidebar-toggle-button">
+        <span class="DocsMobileTitleHeader--sidebar-toggle-button-icon" aria-hidden="true">
+          <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" role="img" aria-labelledby="title-1332672649688018"
+            xmlns="http://www.w3.org/2000/svg">
+            <title id="title-1332672649688018">Navigation menu icon</title>
+            <path data-index="1" d="M5, 7h10" transform-origin="10  7"></path>
+            <path data-index="2" d="M5,10h10" transform-origin="10 10"></path>
+            <path data-index="3" d="M5,13h10" transform-origin="10 13"></path>
+          </svg>
+          <span is-visually-hidden="">Open external link</span>
+        </span>
+      </button>
+    </div>
+
+    <div class="DocsMobileNavBackdrop"></div>
+
+    <div class="DocsSidebar">
+      <div class="DocsSidebar--sections">
+        <div class="DocsSidebar--section DocsSidebar--header-section">
+          <a class="DocsSidebar--cloudflare-logo-link DocsSidebar--link" href="https://developers.cloudflare.com/">
+            <div class="DocsNavLogoLockup">
+              <div class="DocsNavLogoLockup--logo">
+                <svg viewBox="0 0 48 48" fill="currentColor" role="img" aria-labelledby="title-27458391960035233"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <title id="title-27458391960035233">Cloudflare docs logomark</title>
+                  <path d="M31.236 28.717c-.373-.548-1.003-.864-1.76-.9l-14.353-.195a.262.262 0 01-.221-.122.348.348 0 01-.035-.267.396.396 0 01.338-.268l14.48-.195c1.714-.085 3.58-1.533 4.232-3.309l.828-2.25a.503.503 0 00.023-.292c-.932-4.404-4.698-7.689-9.198-7.689-4.15 0-7.672 2.798-8.931 6.679a4.156 4.156 0 00-2.973-.864c-1.994.207-3.59 1.874-3.789 3.954a4.84 4.84 0 00.105 1.545c-3.253.097-5.853 2.871-5.853 6.29 0 .304.024.608.059.912.023.146.14.256.28.256h26.488c.151 0 .291-.11.338-.268l.198-.742c.245-.876.152-1.68-.256-2.275zM36.062 21.39c-.128 0-.268 0-.396.012-.093 0-.175.073-.21.17l-.56 2.032c-.244.876-.151 1.679.257 2.275.373.548 1.003.864 1.76.9l3.055.195c.093 0 .175.049.222.122a.356.356 0 01.035.267.396.396 0 01-.339.268l-3.182.195c-1.726.085-3.58 1.532-4.232 3.309l-.234.62c-.046.122.035.243.164.243h10.935a.289.289 0 00.28-.219 8.654 8.654 0 00.292-2.214c0-4.501-3.521-8.175-7.847-8.175"></path>
+                </svg>
+              </div>
+              <span class="DocsNavLogoLockup--text">
+                <span data-text="Cloudflare">Cloudflare</span>
+                <span>&nbsp;</span>
+                <span data-text="Docs">Docs</span>
+              </span>
+            </div>
+          </a>
+        </div>
+        <div class="DocsSidebar--section-separator"></div>
+        <div class="DocsSidebar--section DocsSidebar--docs-title-section">
+          <a aria-current="page" class="DocsSidebar--docs-title-logo-link DocsSidebar--link" href="/1.1.1.1/">
+            <div class="DocsNavLogoLockup">
+              <div class="DocsNavLogoLockup--logo">
+                <span title="Cloudflare 1.1.1.1 logo">
+                  <svg width="48" height="48" viewBox="0 0 48 48"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0)">
+                      <path d="M35.0925 34.695C32.1093 37.7858 28.0647 39.6299 23.775 39.855L26.775 36.855L24.66 34.7325L18 41.4L24.6375 48.0375L26.7525 45.915L23.7 42.855C27.831 42.679 31.8065 41.2304 35.0824 38.7077C38.3584 36.185 40.7745 32.7114 42 28.7625H38.8275C38.0097 30.9788 36.7375 32.9995 35.0925 34.695Z"></path>
+                      <path d="M13.0275 13.245C15.992 10.1723 20.0135 8.34118 24.2775 8.1225L21.3225 11.0775L23.4225 13.1775L29.91 6.675L30 6.585L23.4975 0.0825L23.4075 0L21.3075 2.1L24.345 5.1375C20.131 5.31338 16.0822 6.82524 12.7843 9.45439C9.48644 12.0835 7.11043 15.6937 6 19.7625H9.0975C9.89119 17.3177 11.2358 15.0879 13.0275 13.245Z"></path>
+                      <path d="M18.2025 23.37L16.7025 21.87H6L4.5 23.37V34.065L6 35.565H16.7025L18.2025 34.065V23.37ZM15.2025 32.565H7.5V24.87H15.2025V32.565Z"></path>
+                      <path d="M42 12.39H31.2975L29.7975 13.89V24.585L31.2975 26.085H42L43.5 24.585V13.89L42 12.39ZM40.5 23.085H32.7975V15.39H40.5V23.085Z"></path>
+                    </g>
+                    <defs>
+                      <clipPath id="clip0">
+                        <rect width="48" height="48"></rect>
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </span>
+              </div>
+              <span class="DocsNavLogoLockup--text">
+                <span class="DocsSidebar--docs-title-text-scaler" style="--length:7">1.1.1.1</span>
+              </span>
+            </div>
+          </a>
+          <div class="DocsSidebar--section-more Dropdown" data-expanded="false">
+            <button class="DocsSidebar--section-more-button Button" aria-expanded="false">
+              <div class="DocsSidebar--section-more-button-icon">
+                <svg viewBox="0 0 4 16" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" fill="currentColor" role="img" aria-labelledby="title-6032186738345315"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <title id="title-6032186738345315">Dropdown icon</title>
+                  <path d="M2,2v0m0,6v0m0,6v0z"></path>
+                </svg>
+                <span is-visually-hidden="">1.1.1.1
+                  <!-- --> menu
+                </span>
+              </div>
+            </button>
+            <div class="DocsSidebar--section-more-dropdown Dropdown--dropdown">
+              <ul class="Dropdown--list">
+                <li class="Dropdown--item">
+                  <a class="Dropdown--link" href="https://1.1.1.1" tabindex="-1">1.1.1.1 website</a>
+                </li>
+                <li class="Dropdown--item">
+                  <a class="Dropdown--link" href="https://cloudflare.com" tabindex="-1">Cloudflare homepage</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="DocsSidebar--section DocsSidebar--nav-section" style="position:relative;overflow:hidden;width:100%;height:100%">
+          <div style="position: absolute; inset: 0px; overflow: scroll; margin-right: 0px; margin-bottom: 0px;">
+            <div class="DocsSidebar--nav-section-shadow" style="opacity: 0;"></div>
+            <ul class="DocsSidebar--nav">
+              <li class="DocsSidebar--nav-item" is-active="">
+                <a aria-current="page" class="DocsSidebar--nav-link" is-active="" href="/1.1.1.1/">
+                  <span class="DocsSidebar--nav-link-highlight"></span>
+                  <span class="DocsSidebar--nav-link-text">Overview</span>
+                </a>
+              </li>
+              <li class="DocsSidebar--nav-item">
+                <button class="Button DocsSidebar--nav-expand-collapse-button">
+                  <span class="DocsSidebar--nav-expand-collapse-button-content" aria-hidden="true"></span>
+                  <span is-visually-hidden="">Expand
+                    <!-- -->:
+                    <!-- -->Set up 1.1.1.1
+                  </span>
+                </button>
+                <a class="DocsSidebar--nav-link" href="/1.1.1.1/setup-1.1.1.1">
+                  <span class="DocsSidebar--nav-link-highlight"></span>
+                  <span class="DocsSidebar--nav-link-text">Set up 1.1.1.1</span>
+                </a>
+                <div class="DocsSidebar--nav-item-collapse-container DocsSidebar--nav-item-collapse-hidden" style="min-height:0px">
+                  <div class="DocsSidebar--nav-item-collapse-wrapper">
+                    <div class="DocsSidebar--nav-item-collapse-wrapperInner">
+                      <div class="DocsSidebar--nav-item-collapse-content">
+                        <ul class="DocsSidebar--nav-subnav" depth="1" style="--depth:1">
+                          <li class="DocsSidebar--nav-item">
+                            <a class="DocsSidebar--nav-link" tabindex="-1" aria-hidden="true" href="/1.1.1.1/setup-1.1.1.1/android">
+                              <span class="DocsSidebar--nav-link-highlight"></span>
+                              <span class="DocsSidebar--nav-link-text">Android</span>
+                            </a>
+                          </li>
+                          <li class="DocsSidebar--nav-item">
+                            <a class="DocsSidebar--nav-link" tabindex="-1" aria-hidden="true" href="/1.1.1.1/setup-1.1.1.1/azure">
+                              <span class="DocsSidebar--nav-link-highlight"></span>
+                              <span class="DocsSidebar--nav-link-text">Azure</span>
+                            </a>
+                          </li>
+                          <li class="DocsSidebar--nav-item">
+                            <a class="DocsSidebar--nav-link" tabindex="-1" aria-hidden="true" href="/1.1.1.1/setup-1.1.1.1/gaming-consoles">
+                              <span class="DocsSidebar--nav-link-highlight"></span>
+                              <span class="DocsSidebar--nav-link-text">Gaming consoles</span>
+                            </a>
+                          </li>
+                          <li class="DocsSidebar--nav-item">
+                            <a class="DocsSidebar--nav-link" tabindex="-1" aria-hidden="true" href="/1.1.1.1/setup-1.1.1.1/google-cloud">
+                              <span class="DocsSidebar--nav-link-highlight"></span>
+                              <span class="DocsSidebar--nav-link-text">Google Cloud</span>
+                            </a>
+                          </li>
+                          <li class="DocsSidebar--nav-item">
+                            <a class="DocsSidebar--nav-link" tabindex="-1" aria-hidden="true" href="/1.1.1.1/setup-1.1.1.1/linux">
+                              <span class="DocsSidebar--nav-link-highlight"></span>
+                              <span class="DocsSidebar--nav-link-text">Linux</span>
+                            </a>
+                          </li>
+                          <li class="DocsSidebar--nav-item">
+                            <a class="DocsSidebar--nav-link" tabindex="-1" aria-hidden="true" href="/1.1.1.1/setup-1.1.1.1/router">
+                              <span class="DocsSidebar--nav-link-highlight"></span>
+                              <span class="DocsSidebar--nav-link-text">Router</span>
+                            </a>
+                          </li>
+                          <li class="DocsSidebar--nav-item">
+                            <a class="DocsSidebar--nav-link" tabindex="-1" aria-hidden="true" href="/1.1.1.1/setup-1.1.1.1/windows">
+                              <span class="DocsSidebar--nav-link-highlight"></span>
+                              <span class="DocsSidebar--nav-link-text">Windows 10</span>
+                            </a>
+                          </li>
+                          <li class="DocsSidebar--nav-item">
+                            <a class="DocsSidebar--nav-link" tabindex="-1" aria-hidden="true" href="/1.1.1.1/setup-1.1.1.1/ios">
+                              <span class="DocsSidebar--nav-link-highlight"></span>
+                              <span class="DocsSidebar--nav-link-text">iOS</span>
+                            </a>
+                          </li>
+                          <li class="DocsSidebar--nav-item">
+                            <a class="DocsSidebar--nav-link" tabindex="-1" aria-hidden="true" href="/1.1.1.1/setup-1.1.1.1/macos">
+                              <span class="DocsSidebar--nav-link-highlight"></span>
+                              <span class="DocsSidebar--nav-link-text">macOS</span>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="DocsSidebar--nav-item">
+                <button class="Button DocsSidebar--nav-expand-collapse-button">
+                  <span class="DocsSidebar--nav-expand-collapse-button-content" aria-hidden="true"></span>
+                  <span is-visually-hidden="">Expand
+                    <!-- -->:
+                    <!-- -->Set up 1.1.1.1 for Families
+                  </span>
+                </button>
+                <a class="DocsSidebar--nav-link" href="/1.1.1.1/1.1.1.1-for-families">
+                  <span class="DocsSidebar--nav-link-highlight"></span>
+                  <span class="DocsSidebar--nav-link-text">Set up 1.1.1.1 for Families</span>
+                </a>
+                <div class="DocsSidebar--nav-item-collapse-container DocsSidebar--nav-item-collapse-hidden" style="min-height:0px">
+                  <div class="DocsSidebar--nav-item-collapse-wrapper">
+                    <div class="DocsSidebar--nav-item-collapse-wrapperInner">
+                      <div class="DocsSidebar--nav-item-collapse-content">
+                        <ul class="DocsSidebar--nav-subnav" depth="1" style="--depth:1">
+                          <li class="DocsSidebar--nav-item">
+                            <a class="DocsSidebar--nav-link" tabindex="-1" aria-hidden="true" href="/1.1.1.1/1.1.1.1-for-families/android">
+                              <span class="DocsSidebar--nav-link-highlight"></span>
+                              <span class="DocsSidebar--nav-link-text">Android</span>
+                            </a>
+                          </li>
+                          <li class="DocsSidebar--nav-item">
+                            <a class="DocsSidebar--nav-link" tabindex="-1" aria-hidden="true" href="/1.1.1.1/1.1.1.1-for-families/linux">
+                              <span class="DocsSidebar--nav-link-highlight"></span>
+                              <span class="DocsSidebar--nav-link-text">Linux</span>
+                            </a>
+                          </li>
+                          <li class="DocsSidebar--nav-item">
+                            <a class="DocsSidebar--nav-link" tabindex="-1" aria-hidden="true" href="/1.1.1.1/1.1.1.1-for-families/router">
+                              <span class="DocsSidebar--nav-link-highlight"></span>
+                              <span class="DocsSidebar--nav-link-text">Router</span>
+                            </a>
+                          </li>
+                          <li class="DocsSidebar--nav-item">
+                            <a class="DocsSidebar--nav-link" tabindex="-1" aria-hidden="true" href="/1.1.1.1/1.1.1.1-for-families/windows">
+                              <span class="DocsSidebar--nav-link-highlight"></span>
+                              <span class="DocsSidebar--nav-link-text">Windows 10</span>
+                            </a>
+                          </li>
+                          <li class="DocsSidebar--nav-item">
+                            <a class="DocsSidebar--nav-link" tabindex="-1" aria-hidden="true" href="/1.1.1.1/1.1.1.1-for-families/ios">
+                              <span class="DocsSidebar--nav-link-highlight"></span>
+                              <span class="DocsSidebar--nav-link-text">iOS</span>
+                            </a>
+                          </li>
+                          <li class="DocsSidebar--nav-item">
+                            <a class="DocsSidebar--nav-link" tabindex="-1" aria-hidden="true" href="/1.1.1.1/1.1.1.1-for-families/mac">
+                              <span class="DocsSidebar--nav-link-highlight"></span>
+                              <span class="DocsSidebar--nav-link-text">macOS</span>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="DocsSidebar--nav-item">
+                <button class="Button DocsSidebar--nav-expand-collapse-button">
+                  <span class="DocsSidebar--nav-expand-collapse-button-content" aria-hidden="true"></span>
+                  <span is-visually-hidden="">Expand
+                    <!-- -->:
+                    <!-- -->Encrypt DNS traffic
+                  </span>
+                </button>
+                <a class="DocsSidebar--nav-link" href="/1.1.1.1/encrypted-dns">
+                  <span class="DocsSidebar--nav-link-highlight"></span>
+                  <span class="DocsSidebar--nav-link-text">Encrypt DNS traffic</span>
+                </a>
+                <div class="DocsSidebar--nav-item-collapse-container DocsSidebar--nav-item-collapse-hidden" style="min-height:0px">
+                  <div class="DocsSidebar--nav-item-collapse-wrapper">
+                    <div class="DocsSidebar--nav-item-collapse-wrapperInner">
+                      <div class="DocsSidebar--nav-item-collapse-content">
+                        <ul class="DocsSidebar--nav-subnav" depth="1" style="--depth:1">
+                          <li class="DocsSidebar--nav-item">
+                            <button class="Button DocsSidebar--nav-expand-collapse-button" tabindex="-1" aria-hidden="true">
+                              <span class="DocsSidebar--nav-expand-collapse-button-content" aria-hidden="true"></span>
+                              <span is-visually-hidden="">Expand
+                                <!-- -->:
+                                <!-- -->DNS over HTTPS
+                              </span>
+                            </button>
+                            <a class="DocsSidebar--nav-link" tabindex="-1" aria-hidden="true" href="/1.1.1.1/encrypted-dns/dns-over-https">
+                              <span class="DocsSidebar--nav-link-highlight"></span>
+                              <span class="DocsSidebar--nav-link-text">DNS over HTTPS</span>
+                            </a>
+                            <div class="DocsSidebar--nav-item-collapse-container DocsSidebar--nav-item-collapse-hidden" style="min-height:0px">
+                              <div class="DocsSidebar--nav-item-collapse-wrapper">
+                                <div class="DocsSidebar--nav-item-collapse-wrapperInner">
+                                  <div class="DocsSidebar--nav-item-collapse-content">
+                                    <ul class="DocsSidebar--nav-subnav" depth="2" style="--depth:2">
+                                      <li class="DocsSidebar--nav-item">
+                                        <button class="Button DocsSidebar--nav-expand-collapse-button" tabindex="-1" aria-hidden="true">
+                                          <span class="DocsSidebar--nav-expand-collapse-button-content" aria-hidden="true"></span>
+                                          <span is-visually-hidden="">Expand
+                                            <!-- -->:
+                                            <!-- -->Make API requests to 1.1.1.1
+                                          </span>
+                                        </button>
+                                        <a class="DocsSidebar--nav-link" tabindex="-1" aria-hidden="true" href="/1.1.1.1/encrypted-dns/dns-over-https/make-api-requests">
+                                          <span class="DocsSidebar--nav-link-highlight"></span>
+                                          <span class="DocsSidebar--nav-link-text">Make API requests to 1.1.1.1</span>
+                                        </a>
+                                        <div class="DocsSidebar--nav-item-collapse-container DocsSidebar--nav-item-collapse-hidden" style="min-height:0px">
+                                          <div class="DocsSidebar--nav-item-collapse-wrapper">
+                                            <div class="DocsSidebar--nav-item-collapse-wrapperInner">
+                                              <div class="DocsSidebar--nav-item-collapse-content">
+                                                <ul class="DocsSidebar--nav-subnav" depth="3" style="--depth:3">
+                                                  <li class="DocsSidebar--nav-item">
+                                                    <a class="DocsSidebar--nav-link" tabindex="-1" aria-hidden="true" href="/1.1.1.1/encrypted-dns/dns-over-https/make-api-requests/dns-wireformat">
+                                                      <span class="DocsSidebar--nav-link-highlight"></span>
+                                                      <span class="DocsSidebar--nav-link-text">Using DNS Wireformat</span>
+                                                    </a>
+                                                  </li>
+                                                  <li class="DocsSidebar--nav-item">
+                                                    <a class="DocsSidebar--nav-link" tabindex="-1" aria-hidden="true" href="/1.1.1.1/encrypted-dns/dns-over-https/make-api-requests/dns-json">
+                                                      <span class="DocsSidebar--nav-link-highlight"></span>
+                                                      <span class="DocsSidebar--nav-link-text">Using JSON</span>
+                                                    </a>
+                                                  </li>
+                                                </ul>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </li>
+                                      <li class="DocsSidebar--nav-item">
+                                        <a class="DocsSidebar--nav-link" tabindex="-1" aria-hidden="true" href="/1.1.1.1/encrypted-dns/dns-over-https/encrypted-dns-browsers">
+                                          <span class="DocsSidebar--nav-link-highlight"></span>
+                                          <span class="DocsSidebar--nav-link-text">Configure DoH on your browser</span>
+                                        </a>
+                                      </li>
+                                      <li class="DocsSidebar--nav-item">
+                                        <a class="DocsSidebar--nav-link" tabindex="-1" aria-hidden="true" href="/1.1.1.1/encrypted-dns/dns-over-https/dns-over-https-client">
+                                          <span class="DocsSidebar--nav-link-highlight"></span>
+                                          <span class="DocsSidebar--nav-link-text">Connect to 1.1.1.1 using DoH clients</span>
+                                        </a>
+                                      </li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="DocsSidebar--nav-item">
+                            <a class="DocsSidebar--nav-link" tabindex="-1" aria-hidden="true" href="/1.1.1.1/encrypted-dns/dns-over-tls">
+                              <span class="DocsSidebar--nav-link-highlight"></span>
+                              <span class="DocsSidebar--nav-link-text">DNS over TLS</span>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="DocsSidebar--nav-item">
+                <a class="DocsSidebar--nav-link" href="/1.1.1.1/ipv6-networks">
+                  <span class="DocsSidebar--nav-link-highlight"></span>
+                  <span class="DocsSidebar--nav-link-text">Support for IPv6-only networks</span>
+                </a>
+              </li>
+              <li class="DocsSidebar--nav-item">
+                <a class="DocsSidebar--nav-link" href="/1.1.1.1/network-operators">
+                  <span class="DocsSidebar--nav-link-highlight"></span>
+                  <span class="DocsSidebar--nav-link-text">Network operators</span>
+                </a>
+              </li>
+              <li class="DocsSidebar--nav-item">
+                <button class="Button DocsSidebar--nav-expand-collapse-button">
+                  <span class="DocsSidebar--nav-expand-collapse-button-content" aria-hidden="true"></span>
+                  <span is-visually-hidden="">Expand
+                    <!-- -->:
+                    <!-- -->Other ways to use 1.1.1.1
+                  </span>
+                </button>
+                <a class="DocsSidebar--nav-link" href="/1.1.1.1/other-ways-to-use-1.1.1.1">
+                  <span class="DocsSidebar--nav-link-highlight"></span>
+                  <span class="DocsSidebar--nav-link-text">Other ways to use 1.1.1.1</span>
+                </a>
+                <div class="DocsSidebar--nav-item-collapse-container DocsSidebar--nav-item-collapse-hidden" style="min-height:0px">
+                  <div class="DocsSidebar--nav-item-collapse-wrapper">
+                    <div class="DocsSidebar--nav-item-collapse-wrapperInner">
+                      <div class="DocsSidebar--nav-item-collapse-content">
+                        <ul class="DocsSidebar--nav-subnav" depth="1" style="--depth:1">
+                          <li class="DocsSidebar--nav-item">
+                            <a class="DocsSidebar--nav-link" tabindex="-1" aria-hidden="true" href="/1.1.1.1/other-ways-to-use-1.1.1.1/dns-in-google-sheets">
+                              <span class="DocsSidebar--nav-link-highlight"></span>
+                              <span class="DocsSidebar--nav-link-text">DNS in Google Sheets</span>
+                            </a>
+                          </li>
+                          <li class="DocsSidebar--nav-item">
+                            <a class="DocsSidebar--nav-link" tabindex="-1" aria-hidden="true" href="/1.1.1.1/other-ways-to-use-1.1.1.1/dns-over-discord">
+                              <span class="DocsSidebar--nav-link-highlight"></span>
+                              <span class="DocsSidebar--nav-link-text">DNS over Discord</span>
+                            </a>
+                          </li>
+                          <li class="DocsSidebar--nav-item">
+                            <a class="DocsSidebar--nav-link" tabindex="-1" aria-hidden="true" href="/1.1.1.1/other-ways-to-use-1.1.1.1/dns-over-telegram">
+                              <span class="DocsSidebar--nav-link-highlight"></span>
+                              <span class="DocsSidebar--nav-link-text">DNS over Telegram</span>
+                            </a>
+                          </li>
+                          <li class="DocsSidebar--nav-item">
+                            <a class="DocsSidebar--nav-link" tabindex="-1" aria-hidden="true" href="/1.1.1.1/other-ways-to-use-1.1.1.1/dns-over-tor">
+                              <span class="DocsSidebar--nav-link-highlight"></span>
+                              <span class="DocsSidebar--nav-link-text">DNS over Tor</span>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="DocsSidebar--nav-item">
+                <button class="Button DocsSidebar--nav-expand-collapse-button">
+                  <span class="DocsSidebar--nav-expand-collapse-button-content" aria-hidden="true"></span>
+                  <span is-visually-hidden="">Expand
+                    <!-- -->:
+                    <!-- -->Privacy
+                  </span>
+                </button>
+                <a class="DocsSidebar--nav-link" href="/1.1.1.1/privacy">
+                  <span class="DocsSidebar--nav-link-highlight"></span>
+                  <span class="DocsSidebar--nav-link-text">Privacy</span>
+                </a>
+                <div class="DocsSidebar--nav-item-collapse-container DocsSidebar--nav-item-collapse-hidden" style="min-height:0px">
+                  <div class="DocsSidebar--nav-item-collapse-wrapper">
+                    <div class="DocsSidebar--nav-item-collapse-wrapperInner">
+                      <div class="DocsSidebar--nav-item-collapse-content">
+                        <ul class="DocsSidebar--nav-subnav" depth="1" style="--depth:1">
+                          <li class="DocsSidebar--nav-item">
+                            <a class="DocsSidebar--nav-link" tabindex="-1" aria-hidden="true" href="/1.1.1.1/privacy/public-dns-resolver">
+                              <span class="DocsSidebar--nav-link-highlight"></span>
+                              <span class="DocsSidebar--nav-link-text">1.1.1.1 Public DNS Resolver</span>
+                            </a>
+                          </li>
+                          <li class="DocsSidebar--nav-item">
+                            <a class="DocsSidebar--nav-link" tabindex="-1" aria-hidden="true" href="/1.1.1.1/privacy/cloudflare-resolver-firefox">
+                              <span class="DocsSidebar--nav-link-highlight"></span>
+                              <span class="DocsSidebar--nav-link-text">Cloudflare Resolver for Firefox</span>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="DocsSidebar--nav-item">
+                <a class="DocsSidebar--nav-link" href="/1.1.1.1/faq">
+                  <span class="DocsSidebar--nav-link-highlight"></span>
+                  <span class="DocsSidebar--nav-link-text">FAQ</span>
+                </a>
+              </li>
+              <li class="DocsSidebar--nav-item">
+                <a class="DocsSidebar--nav-link" href="/1.1.1.1/terms-of-use">
+                  <span class="DocsSidebar--nav-link-highlight"></span>
+                  <span class="DocsSidebar--nav-link-text">Terms of Use</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div style="position:absolute;height:6px;display:none;right:2px;bottom:2px;left:2px;border-radius:3px">
+            <div style="position:relative;display:block;height:100%;cursor:pointer;border-radius:inherit;background-color:rgba(0,0,0,.2)"></div>
+          </div>
+          <div style="position:absolute;width:6px;display:none" class="Scrollbars--track Scrollbars--track-vertical">
+            <div style="position:relative;display:block;width:100%" class="Scrollbars--thumb Scrollbars--thumb-vertical"></div>
+          </div>
+        </div>
+      </div>
+      <div class="DocsSidebar--shadow"></div>
+    </div>
+
+    <div class="DocsToolbar">
+      <div class="DocsToolbar--search">
+        <div class="DocsSearch">
+          <div class="DocsSearch--input-wrapper">
+            <input type="text" id="DocsSearch--input" class="DocsSearch--input ds-input" spellcheck="false" autocomplete="off" placeholder="Search 1.1.1.1 docs..." role="combobox" aria-autocomplete="list" aria-expanded="false" aria-label="search input" aria-owns="algolia-autocomplete-listbox-0" dir="auto" style=""/>
+            <pre aria-hidden="true" style="position: absolute; visibility: hidden; white-space: pre; font-family: -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Fira Sans&quot;, &quot;Droid Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 400; word-spacing: 0px; letter-spacing: normal; text-indent: 0px; text-rendering: auto; text-transform: none;"></pre>
+            <div class="DocsSearch--input-icon">
+              <svg viewBox="0 0 16 16" fill="currentColor" role="img" aria-labelledby="title-6097058356725209"
+                xmlns="http://www.w3.org/2000/svg">
+                <title id="title-6097058356725209">Search icon (depiction of a magnifying glass)</title>
+                <path d="M11.999 10.585l3.458 3.458a1 1 0 01-1.414 1.414L10.585 12a6.5 6.5 0 111.414-1.414zM6.75 11.5a4.75 4.75 0 100-9.5 4.75 4.75 0 000 9.5z"></path>
+              </svg>
+            </div>
+            <div class="DocsSearch--input-bottom-border"></div>
+            <span class="algolia-autocomplete" style="position: absolute; z-index: 100; display: none; direction: ltr;">
+              <span class="ds-dropdown-menu" role="listbox" id="algolia-autocomplete-listbox-0" style="display: block; left: 0px; right: auto;">
+                <div class="ds-dataset-1"></div>
+              </span>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="DocsToolbar--tools">
+        <span class="wrapper svelte-14pk8r8">
+          <button data-feedback="true" class="DocsToolbar--feedback Button Button-is-docs-secondary">
+            <svg fill="none"
+              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 17">
+              <path d="M14 2.5H2l-.5.5v11.165l.863.345 2.852-3.01H14l.5-.5V3l-.5-.5Zm-.5 8H4.785L2.5 12.911V3.5h11v7Z" fill="currentColor"></path>
+              <path d="M12.5 5.003h-9v1h9v-1ZM12.5 7.5h-9v1h9v-1Z" fill="currentColor"></path>
+            </svg>Give Feedback
+          </button>
+        </span>
+        <div class="DocsToolbar--tools-spacer"></div>
+        <div class="DocsToolbar--tools-icon-item">
+          <div class="Tooltip---root">
+            <div class="DocsToolbar--tools-icon-item-content">
+              <a class="Link Link-without-underline" href="https://github.com/cloudflare/cloudflare-docs">
+                <svg viewBox="0 0 16 16" fill="currentColor" role="img" aria-labelledby="title-6991762763429039"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <title id="title-6991762763429039">GitHub icon</title>
+                  <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z" fill-rule="evenodd"></path>
+                </svg>
+              </a>
+            </div>
+            <span class="Tooltip" role="tooltip" position="bottom-end">Visit
+              <!-- -->1.1.1.1
+              <!-- --> on GitHub
+            </span>
+          </div>
+        </div>
+        <div class="DocsToolbar--tools-spacer"></div>
+        <div class="DocsToolbar--theme-toggle">
+          <div class="Tooltip---root">
+            <div class="ThemeToggle">
+              <input type="checkbox" id="ThemeToggle" class="ThemeToggle--input">
+              <label class="ThemeToggle--toggle" for="ThemeToggle">
+                <div class="ThemeToggle--toggle-handle"></div>
+                <div class="ThemeToggle--toggle-handle-icon ThemeToggle--sun">
+                  <svg viewBox="0 0 16 16" fill="currentColor" role="img" aria-labelledby="title-8812071124069258"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <title id="title-8812071124069258">Light theme icon (depiction of a sun)</title>
+                    <path d="M7.5 11.465a3.482 3.482 0 01-1.596-.662L4.11 12.596a.5.5 0 01-.707-.707l1.793-1.793A3.482 3.482 0 014.535 8.5H2a.5.5 0 010-1h2.535a3.482 3.482 0 01.662-1.596L3.404 4.11a.5.5 0 01.707-.707l1.793 1.793A3.482 3.482 0 017.5 4.535V2a.5.5 0 011 0v2.535a3.482 3.482 0 011.596.662l1.793-1.793a.5.5 0 01.707.707l-1.793 1.793c.343.458.577 1.003.662 1.596H14a.5.5 0 110 1h-2.535a3.482 3.482 0 01-.662 1.596l1.793 1.793a.5.5 0 01-.707.707l-1.793-1.793a3.482 3.482 0 01-1.596.662V14a.5.5 0 11-1 0v-2.535z"></path>
+                  </svg>
+                </div>
+                <div class="ThemeToggle--toggle-handle-icon ThemeToggle--moon">
+                  <svg viewBox="0 0 16 16" fill="currentColor" role="img" aria-labelledby="title-5971296394189265"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <title id="title-5971296394189265">Dark theme icon (depiction of a moon)</title>
+                    <path d="M7.067 3.087a5 5 0 005.466 7.026 5 5 0 11-5.466-7.026z"></path>
+                  </svg>
+                </div>
+              </label>
+              <span class="Tooltip" role="tooltip" position="bottom-end">Set theme to dark (⇧+D)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <main class="DocsBody">
+      {{/* partial "content/sidebar" . */}}
+
+      <div id="docs-content" data-reach-skip-nav-content=""></div>
+
+      <div class="DocsContent" page-type="document">
+        <div class="DocsContent--breadcrumbs">
+          <ul class="Breadcrumbs">
+            <li class="Breadcrumbs--item">
+              <a class="Link Link-without-underline Link-is-juicy" href="/pages/how-to">How to</a>
+            </li>
+          </ul>
+        </div>
+
+        <article class="DocsMarkdown">
+          {{- block "main" . -}}{{- end -}}
+        </article>
+      </div>
+    </main>
+
+    {{/* partial "footer" . */}}
+  </div>
+</body>
+</html>
