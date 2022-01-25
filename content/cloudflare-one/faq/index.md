@@ -1,5 +1,5 @@
 ---
-order: 100
+weight: 100
 type: overview
 pcx-content-type: navigation
 hideChildren: true

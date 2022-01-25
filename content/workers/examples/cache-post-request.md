@@ -1,5 +1,5 @@
 ---
-order: 1000
+weight: 1000
 type: example
 summary: Cache POST requests using the Cache API.
 tags:

@@ -1,5 +1,5 @@
 ---
-order: 1
+weight: 1
 title: Get started
 pcx-content-type: how-to
 ---

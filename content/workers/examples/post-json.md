@@ -1,5 +1,5 @@
 ---
-order: 1000
+weight: 1000
 type: example
 summary: Send a POST request with JSON data. Use to share data with external servers.
 tags:

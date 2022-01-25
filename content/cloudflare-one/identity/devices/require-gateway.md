@@ -1,5 +1,5 @@
 ---
-order: 1
+weight: 1
 title: Gateway
 pcx-content-type: how-to
 ---

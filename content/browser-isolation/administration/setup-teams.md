@@ -1,6 +1,6 @@
 ---
 title: New account
-order: 1
+weight: 1
 ---
 
 # Setup Cloudflare for Teams

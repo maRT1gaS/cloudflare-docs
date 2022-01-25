@@ -1,7 +1,7 @@
 ---
 pcx-content-type: how-to
 alwaysopen: true
-order: 751
+weight: 751
 ---
 
 # Deploy a Managed Ruleset

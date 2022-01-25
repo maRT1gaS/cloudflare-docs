@@ -1,6 +1,6 @@
 ---
 title: Cipher suites
-order: 3
+weight: 3
 pcx-content-type: reference
 ---
 

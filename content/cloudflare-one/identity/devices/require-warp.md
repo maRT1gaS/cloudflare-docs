@@ -1,5 +1,5 @@
 ---
-order: 2
+weight: 2
 title: WARP
 pcx-content-type: how-to
 ---

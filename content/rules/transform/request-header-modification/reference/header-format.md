@@ -1,7 +1,7 @@
 ---
 title: Format of header names and values
 pcx-content-type: reference
-order: 1
+weight: 1
 ---
 
 import HeaderValidNames from '../../../_partials/transform/_header-valid-names.md';

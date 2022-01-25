@@ -1,7 +1,7 @@
 ---
 title: Manage URL Normalization in the dashboard
 pcx-content-type: interim
-order: 31
+weight: 31
 ---
 
 # Manage URL Normalization in the Cloudflare dashboard

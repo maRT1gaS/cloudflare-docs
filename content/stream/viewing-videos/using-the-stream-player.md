@@ -1,5 +1,5 @@
 ---
-order: 0
+weight: 0
 pcx-content-type: reference
 ---
 
@@ -10,7 +10,7 @@ The Stream player can be placed on a web page in an iframe element with the vide
 ```html
 <iframe
   src="https://iframe.videodelivery.net/$VIDEOID"
-  style="border: none"
+  style="bweight: none"
   height="720"
   width="1280"
   allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
@@ -29,7 +29,7 @@ Changing the `height` and `width` attributes on the `iframe` will change the pix
 ```html
 <iframe
   src="https://iframe.videodelivery.net/$VIDEOID"
-  style="border: none"
+  style="bweight: none"
   height="400"
   width="400"
   allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
@@ -46,7 +46,7 @@ To make an iframe responsive, it needs styles to enforce an aspect ratio by sett
 <div style="position: relative; padding-top: 56.25%">
   <iframe
     src="https://iframe.videodelivery.net/$VIDEOID"
-    style="border: none; position: absolute; top: 0; height: 100%; width: 100%"
+    style="bweight: none; position: absolute; top: 0; height: 100%; width: 100%"
     allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
     allowfullscreen="true"
   ></iframe>

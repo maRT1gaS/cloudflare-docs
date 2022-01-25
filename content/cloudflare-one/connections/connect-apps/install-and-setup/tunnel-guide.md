@@ -1,5 +1,5 @@
 ---
-order: 3
+weight: 3
 title: Tunnel guide
 pcx-content-type: how-to
 ---

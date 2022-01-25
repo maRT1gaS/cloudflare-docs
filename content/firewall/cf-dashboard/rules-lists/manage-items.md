@@ -1,6 +1,6 @@
 ---
 pcx-content-type: how-to
-order: 360
+weight: 360
 ---
 
 # Manage list items (IP addresses)

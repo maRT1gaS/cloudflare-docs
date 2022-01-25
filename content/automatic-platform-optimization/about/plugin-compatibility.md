@@ -1,6 +1,6 @@
 ---
 title: Plugin compatibility
-order: 3
+weight: 3
 pcx-content-type: reference
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: Glossary
-order: 1
+weight: 1
 pcx-content-type: glossary
 ---
 
@@ -60,7 +60,7 @@ The number of requests served from Cloudflare without having to hit the origin s
 
 SSL certificates enable encryption over HTTPS for traffic between a client and a website. SSL certificates contain the website's public key and the website's identity along with related information. Devices attempting to communicate with the origin web server reference the SSL certificate to obtain the public key and verify the server's identity. Cloudflare provides a [Universal SSL certificate](https://developers.cloudflare.com/ssl/edge-certificates/universal-ssl) for each active Cloudflare domain.
 
-**Related terms:** SSL certificate, CAA record, Certificate Authority, EV certificate, intermediate certificate, primary certificate, root certificate  
+**Related terms:** SSL certificate, CAA record, Certificate Authority, EV certificate, intermediate certificate, primary certificate, root certificate
 **Relevant links:** [Cloudflare SSL documentation](https://developers.cloudflare.com/ssl/)
 
 ## Certificate Authority (CA)
@@ -71,7 +71,7 @@ A CA is a trusted third party that provides SSL certificates for encrypting netw
 
 A CAA record declares which CAs are allowed to issue an SSL certificate for a domain.
 
-**Related terms:** Certificate Authority  
+**Related terms:** Certificate Authority
 **Relevant links:** [CAA FAQ](https://support.cloudflare.com/hc/articles/115000310832)
 
 ## certificate packs
@@ -126,7 +126,7 @@ A DoS attack is a type of cyber attack in which an attacker aims to render a com
 
 A DDoS attack is a malicious attempt to disrupt normal traffic of a targeted server, service, or network by overwhelming the target or its surrounding infrastructure with a flood of Internet traffic.
 
-**Related terms:** DoS attack  
+**Related terms:** DoS attack
 **Relevant links:** [What is a DDoS attack?](https://www.cloudflare.com/learning/ddos/what-is-a-ddos-attack/)
 
 ## domain
@@ -151,7 +151,7 @@ DNS filtering is the process of using the Domain Name System to block malicious 
 
 DNS records are instructions that live in authoritative DNS servers and provide information about a domain including what IP address is associated with that domain and how to handle requests for that domain.
 
-**Related terms:** DNS  
+**Related terms:** DNS
 **Relevant links:** [Learning Center guide on DNS records](https://www.cloudflare.com/learning/dns/dns-records/)
 
 ## DNS server

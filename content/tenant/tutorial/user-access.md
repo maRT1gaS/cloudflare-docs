@@ -1,6 +1,6 @@
 ---
 title: '2: User access'
-order: 1
+weight: 1
 pcx-content-type: tutorial
 ---
 

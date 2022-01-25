@@ -1,6 +1,6 @@
 ---
 title: Plans
-order: 3
+weight: 3
 type: overview
 pcx-content-type: navigation
 ---

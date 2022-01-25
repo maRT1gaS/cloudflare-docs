@@ -1,6 +1,6 @@
 ---
 title: Partners
-order: 4
+weight: 4
 pcx-content-type: reference
 ---
 

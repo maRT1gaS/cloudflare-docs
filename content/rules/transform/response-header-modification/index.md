@@ -1,7 +1,7 @@
 ---
 title: Response Header Modification Rules
 pcx-content-type: concept
-order: 2
+weight: 2
 ---
 
 # HTTP Response Header Modification Rules

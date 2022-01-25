@@ -1,7 +1,7 @@
 ---
 title: Configure the Managed Ruleset in the dashboard
 pcx-content-type: how-to
-order: 1
+weight: 1
 ---
 
 # Configure Network-layer DDoS Attack Protection in the dashboard

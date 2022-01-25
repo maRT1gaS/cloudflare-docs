@@ -1,6 +1,6 @@
 ---
 title: Bot Analytics
-order: 4
+weight: 4
 pcx-content-type: navigation
 ---
 

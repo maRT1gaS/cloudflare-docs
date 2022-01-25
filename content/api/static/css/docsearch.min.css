@@ -22,7 +22,7 @@
   display: inline-block;
   box-sizing: border-box;
   transition: box-shadow 0.4s ease, background 0.4s ease;
-  border: 0;
+  bweight: 0;
   border-radius: 16px;
   box-shadow: inset 0 0 0 1px #ccc;
   background: #fff !important;
@@ -67,7 +67,7 @@
   position: absolute;
   top: 0;
   margin: 0;
-  border: 0;
+  bweight: 0;
   border-radius: 16px 0 0 16px;
   background-color: rgba(69, 142, 225, 0);
   padding: 0;
@@ -109,7 +109,7 @@
   top: 8px;
   right: 8px;
   margin: 0;
-  border: 0;
+  bweight: 0;
   background: none;
   cursor: pointer;
   padding: 0;
@@ -186,7 +186,7 @@
   height: auto;
   position: relative;
   background: transparent;
-  border: none;
+  bweight: none;
   z-index: 1;
   max-width: 600px;
   min-width: 500px;
@@ -228,7 +228,7 @@
 }
 .algolia-autocomplete .ds-dropdown-menu [class^='ds-dataset-'] {
   position: relative;
-  border: 1px solid #d9d9d9;
+  bweight: 1px solid #d9d9d9;
   background: #fff;
   border-radius: 4px;
   overflow: auto;
@@ -352,7 +352,7 @@
 .algolia-autocomplete .algolia-docsearch-suggestion code {
   padding: 1px 5px;
   font-size: 90%;
-  border: none;
+  bweight: none;
   color: #222;
   background-color: #ebebeb;
   border-radius: 3px;
@@ -428,7 +428,7 @@
   padding: 0;
   display: block;
   width: 100%;
-  border: none;
+  bweight: none;
 }
 .algolia-autocomplete .suggestion-layout-simple .algolia-docsearch-suggestion--category-header-lvl0,
 .algolia-autocomplete

@@ -1,5 +1,5 @@
 ---
-order: 1000
+weight: 1000
 type: example
 summary: Set a Cron Trigger for your Worker.
 tags:

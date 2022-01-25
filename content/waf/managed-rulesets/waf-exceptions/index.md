@@ -1,6 +1,6 @@
 ---
 pcx-content-type: concept
-order: 24
+weight: 24
 ---
 
 # Defining WAF exceptions

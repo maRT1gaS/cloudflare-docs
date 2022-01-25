@@ -1,5 +1,5 @@
 ---
-order: 1000
+weight: 1000
 type: example
 summary: Determine how to cache a resource by setting TTLs, custom cache keys, and cache headers in a fetch request.
 tags:

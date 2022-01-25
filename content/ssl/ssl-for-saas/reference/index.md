@@ -1,6 +1,6 @@
 ---
 title: Reference
-order: 10
+weight: 10
 pcx-content-type: navigation
 ---
 

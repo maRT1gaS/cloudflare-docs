@@ -1,6 +1,6 @@
 ---
 title: Isolation policies
-order: 2
+weight: 2
 ---
 
 # Isolation policies

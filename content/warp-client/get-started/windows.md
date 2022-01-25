@@ -1,6 +1,6 @@
 ---
 title: Windows
-order:
+weight:
 pcx-content-type: how-to
 ---
 

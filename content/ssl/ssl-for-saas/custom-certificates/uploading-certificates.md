@@ -1,6 +1,6 @@
 ---
 title: Manage custom certificates
-order: 5
+weight: 5
 pcx-content-type: how-to
 ---
 

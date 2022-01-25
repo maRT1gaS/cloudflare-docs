@@ -1,6 +1,6 @@
 ---
 title: Potential problems and common issues
-order: 7
+weight: 7
 pcx-content-type: tutorial
 ---
 

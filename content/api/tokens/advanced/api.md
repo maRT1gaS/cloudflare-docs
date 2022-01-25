@@ -1,6 +1,6 @@
 ---
 title: Creating tokens via API
-order: 10
+weight: 10
 ---
 
 # Creating API tokens via the API

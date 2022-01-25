@@ -1,7 +1,7 @@
 ---
 pcx-content-type: how-to
 type: overview
-order: 2
+weight: 2
 ---
 
 # Add rules to phase entry point rulesets

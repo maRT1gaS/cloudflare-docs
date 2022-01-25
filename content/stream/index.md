@@ -1,5 +1,5 @@
 ---
-order: 0
+weight: 0
 title: Getting started
 pcx-content-type: interim
 ---

@@ -1,5 +1,5 @@
 ---
-order: 19
+weight: 19
 pcx-content-type: configuration
 ---
 

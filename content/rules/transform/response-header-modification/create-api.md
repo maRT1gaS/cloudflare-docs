@@ -2,7 +2,7 @@
 title: Create a rule via API
 pcx-content-type: how-to
 type: overview
-order: 2
+weight: 2
 ---
 
 # Create an HTTP Response Header Modification Rule via API

@@ -148,7 +148,7 @@ Once enabled, when users authenticate and visit the URL of the application, Clou
 
 <iframe
   src="https://iframe.videodelivery.net/9e62cddf4ac40dc7237f4136f946fa12"
-  style="border: none;"
+  style="bweight: none;"
   height="200"
   width="400"
   allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"

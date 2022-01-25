@@ -1,6 +1,6 @@
 ---
 title: '1: Provisioning resources'
-order: 0
+weight: 0
 pcx-content-type: tutorial
 ---
 

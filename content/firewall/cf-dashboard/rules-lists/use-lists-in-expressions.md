@@ -1,6 +1,6 @@
 ---
 pcx-content-type: how-to
-order: 370
+weight: 370
 ---
 
 # Use lists in expressions

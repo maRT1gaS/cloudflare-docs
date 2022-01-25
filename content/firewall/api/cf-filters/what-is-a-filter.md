@@ -1,7 +1,7 @@
 ---
 title: What is a filter?
 pcx-content-type: concept
-order: 445
+weight: 445
 ---
 
 # What is a filter?

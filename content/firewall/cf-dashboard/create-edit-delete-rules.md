@@ -1,7 +1,7 @@
 ---
 title: Create, edit, and delete rules
 pcx-content-type: how-to
-order: 310
+weight: 310
 ---
 
 import firewallRulesExpressionBuilder10 from '../images/firewall-rules-expression-builder-10.gif';

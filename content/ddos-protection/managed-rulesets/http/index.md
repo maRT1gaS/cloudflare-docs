@@ -1,7 +1,7 @@
 ---
 title: HTTP DDoS Attack Protection
 pcx-content-type: concept
-order: 2
+weight: 2
 ---
 
 # HTTP DDoS Attack Protection Managed Ruleset

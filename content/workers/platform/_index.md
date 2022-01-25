@@ -1,8 +1,7 @@
 ---
-order: 5
+weight: 5
+title: Platform
 pcx-content-type: navigation
 ---
-
-# Platform
 
 <DirectoryListing path="/platform" />

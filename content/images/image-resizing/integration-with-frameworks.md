@@ -1,6 +1,6 @@
 ---
 title: Integration with frameworks
-order: 9
+weight: 9
 pcx-content-type: reference
 ---
 

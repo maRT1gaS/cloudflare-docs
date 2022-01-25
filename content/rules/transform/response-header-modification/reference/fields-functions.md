@@ -1,7 +1,7 @@
 ---
 title: Available fields and functions
 pcx-content-type: reference
-order: 2
+weight: 2
 ---
 
 import HeaderFields from '../../../_partials/transform/_header-modification-fields.md';

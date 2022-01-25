@@ -1,6 +1,6 @@
 ---
 title: Why choose Cloudflare
-order: 1
+weight: 1
 pcx-content-type: concept
 ---
 

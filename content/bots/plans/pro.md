@@ -1,6 +1,6 @@
 ---
 title: Pro
-order: 1
+weight: 1
 type: document
 pcx-content-type: reference
 hidden: true

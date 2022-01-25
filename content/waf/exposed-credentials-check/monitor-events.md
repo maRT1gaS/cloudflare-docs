@@ -1,6 +1,6 @@
 ---
 pcx-content-type: concept
-order: 5
+weight: 5
 ---
 
 # Monitor exposed credentials events

@@ -1,6 +1,6 @@
 ---
 pcx-content-type: reference
-order: 3
+weight: 3
 ---
 
 # Manage Transform Rules

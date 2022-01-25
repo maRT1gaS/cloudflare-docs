@@ -1,6 +1,6 @@
 ---
 title: Administration
-order: 3
+weight: 3
 ---
 
 # Administration

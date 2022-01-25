@@ -1,6 +1,6 @@
 ---
 pcx-content-type: concept
-order: 2
+weight: 2
 ---
 
 # Network Time Security

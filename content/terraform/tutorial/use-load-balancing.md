@@ -1,6 +1,6 @@
 ---
 title: 5 – Improve performance
-order: 5
+weight: 5
 pcx-content-type: tutorial
 ---
 

@@ -1,5 +1,5 @@
 ---
-order: 1000
+weight: 1000
 type: example
 summary: Set multiple Cron Triggers on three different schedules.
 tags:

@@ -1,5 +1,5 @@
 ---
-order: 1000
+weight: 1000
 type: example
 summary: Inspects the incoming request's TLS version and blocks if under TLSv1.2.
 tags:

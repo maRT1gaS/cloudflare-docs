@@ -1,6 +1,6 @@
 ---
 pcx-content-type: navigation
-order: 3
+weight: 3
 ---
 
 # Basic operations

@@ -1,6 +1,6 @@
 ---
 pcx-content-type: interim
-order: 3
+weight: 3
 ---
 
 # Release notes

@@ -1,7 +1,7 @@
 ---
 title: Logs
 pcx-content-type: reference
-order: 3
+weight: 3
 ---
 
 # DDoS logs

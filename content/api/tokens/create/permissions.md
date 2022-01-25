@@ -1,5 +1,5 @@
 ---
-order: 10
+weight: 10
 type: table
 ---
 

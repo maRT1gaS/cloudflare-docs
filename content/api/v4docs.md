@@ -1,5 +1,5 @@
 ---
-order: 3
+weight: 3
 ---
 
 # API v4 documentation

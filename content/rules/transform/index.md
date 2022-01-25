@@ -1,7 +1,7 @@
 ---
 title: Transform Rules
 pcx-content-type: concept
-order: 2
+weight: 2
 ---
 
 # About Transform Rules

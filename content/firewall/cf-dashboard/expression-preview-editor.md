@@ -1,6 +1,6 @@
 ---
 pcx-content-type: how-to
-order: 320
+weight: 320
 ---
 
 # Edit rule expressions

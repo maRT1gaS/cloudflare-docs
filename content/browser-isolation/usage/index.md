@@ -1,6 +1,6 @@
 ---
 title: Usage
-order: 1
+weight: 1
 ---
 
 # Usage

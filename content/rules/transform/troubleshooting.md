@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting
 pcx-content-type: faq
-order: 6
+weight: 6
 ---
 
 # Troubleshoot Transform Rules

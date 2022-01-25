@@ -1,6 +1,6 @@
 ---
 pcx-content-type: concept
-order: 240
+weight: 240
 ---
 
 # Rules Lists

@@ -1,6 +1,6 @@
 ---
 title: PacketFabric
-order: 4
+weight: 4
 pcx-content-type: tutorial
 ---
 

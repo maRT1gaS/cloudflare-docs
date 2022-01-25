@@ -2,7 +2,7 @@
 title: Create a rule via API
 pcx-content-type: how-to
 type: overview
-order: 2
+weight: 2
 ---
 
 # Create a URL Rewrite Rule via API

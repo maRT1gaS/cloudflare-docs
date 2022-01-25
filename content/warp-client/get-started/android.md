@@ -1,6 +1,6 @@
 ---
 title: Android
-order:
+weight:
 pcx-content-type: how-to
 ---
 

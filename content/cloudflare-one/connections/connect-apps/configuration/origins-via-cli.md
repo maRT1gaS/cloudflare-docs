@@ -1,5 +1,5 @@
 ---
-order: 20
+weight: 20
 hidden: true
 ---
 

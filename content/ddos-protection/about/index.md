@@ -1,7 +1,7 @@
 ---
 title: About
 pcx-content-type: concept
-order: 3
+weight: 3
 ---
 
 # About Cloudflare DDoS Protection

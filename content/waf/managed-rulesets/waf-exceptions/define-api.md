@@ -1,6 +1,6 @@
 ---
 pcx-content-type: configuration
-order: 2
+weight: 2
 ---
 
 # Define WAF exceptions via API

@@ -1,6 +1,6 @@
 ---
 title: Free
-order: 0
+weight: 0
 pcx-content-type: how-to
 ---
 

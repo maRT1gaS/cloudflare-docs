@@ -1,6 +1,6 @@
 ---
 title: Enable Microsoft Azure
-order: 62
+weight: 62
 pcx-content-type: how-to
 ---
 

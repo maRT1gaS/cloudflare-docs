@@ -1,6 +1,6 @@
 ---
 title: Plans
-order: 1
+weight: 1
 pcx-content-type: reference
 ---
 
@@ -8,7 +8,7 @@ pcx-content-type: reference
 
 <TableWrap>
 
-<table style="width:100%;border:1">
+<table style="width:100%;bweight:1">
   <thead>
     <tr>
       <th></th>

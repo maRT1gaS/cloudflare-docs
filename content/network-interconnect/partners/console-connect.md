@@ -1,6 +1,6 @@
 ---
 title: Console Connect
-order: 1
+weight: 1
 pcx-content-type: tutorial
 ---
 

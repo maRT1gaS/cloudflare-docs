@@ -1,6 +1,6 @@
 ---
 pcx-content-type: concept
-order: 11
+weight: 11
 type: overview
 ---
 

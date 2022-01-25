@@ -1,5 +1,5 @@
 ---
-order: 42
+weight: 42
 pcx-content-type: reference
 ---
 

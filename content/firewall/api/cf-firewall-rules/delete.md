@@ -1,7 +1,7 @@
 ---
 title: DELETE examples
 pcx-content-type: reference
-order: 435
+weight: 435
 ---
 
 # DELETE examples

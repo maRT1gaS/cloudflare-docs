@@ -1,6 +1,6 @@
 ---
 pcx-content-type: concept
-order: 4
+weight: 4
 ---
 
 # API Shield™

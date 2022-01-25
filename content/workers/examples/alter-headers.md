@@ -1,5 +1,5 @@
 ---
-order: 1000
+weight: 1000
 type: example
 summary: Change the headers sent in a request or returned in a response.
 tags:

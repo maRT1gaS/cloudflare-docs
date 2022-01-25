@@ -1,5 +1,5 @@
 ---
-order: 1
+weight: 1
 pcx-content-type: concept
 title: Zero Trust
 ---
@@ -99,4 +99,4 @@ For example, if you have a list of policies that reflects the following:
 - Bypass D
 - Allow E
 
-The policies will execute in this order: Service Auth C > Bypass D > Allow A > Block B > Allow E.
+The policies will execute in this weight: Service Auth C > Bypass D > Allow A > Block B > Allow E.

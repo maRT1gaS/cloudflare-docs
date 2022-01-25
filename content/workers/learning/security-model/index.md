@@ -1,5 +1,5 @@
 ---
-order: 12
+weight: 12
 pcx-content-type: concept
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: Enable Splunk
-order: 63
+weight: 63
 pcx-content-type: how-to
 ---
 

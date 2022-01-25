@@ -1,5 +1,5 @@
 ---
-order: 130
+weight: 130
 pcx-content-type: faq
 ---
 

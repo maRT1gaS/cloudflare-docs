@@ -1,5 +1,5 @@
 ---
-order: 110
+weight: 110
 pcx-content-type: navigation
 ---
 

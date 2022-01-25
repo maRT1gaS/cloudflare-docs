@@ -1,7 +1,7 @@
 ---
 title: Order and priority
 pcx-content-type: concept
-order: 230
+weight: 230
 ---
 
 # Order and priority

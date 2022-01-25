@@ -1,5 +1,5 @@
 ---
-order: 1000
+weight: 1000
 type: example
 summary: Redirect requests to certain URLs based on a mapped object to the request's URL.
 tags:

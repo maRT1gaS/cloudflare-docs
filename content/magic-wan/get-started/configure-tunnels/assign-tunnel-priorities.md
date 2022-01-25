@@ -1,6 +1,6 @@
 ---
 title: Create static routes
-order:
+weight:
 pcx-content-type: how-to
 ---
 

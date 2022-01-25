@@ -1,6 +1,6 @@
 ---
 title: Account-scoped data sets
-order: 20
+weight: 20
 pcx-content-type: navigation
 ---
 

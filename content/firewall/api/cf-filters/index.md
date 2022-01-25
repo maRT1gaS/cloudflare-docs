@@ -1,6 +1,6 @@
 ---
 pcx-content-type: reference
-order: 440
+weight: 440
 ---
 
 # Cloudflare Filters API

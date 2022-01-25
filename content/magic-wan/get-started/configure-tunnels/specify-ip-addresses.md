@@ -1,6 +1,6 @@
 ---
 title: Specify IP address for endpoint health checks
-order:
+weight:
 pcx-content-type: how-to
 ---
 

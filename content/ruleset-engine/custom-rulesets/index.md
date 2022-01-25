@@ -2,7 +2,7 @@
 title: Work with custom rulesets
 pcx-content-type: navigation
 alwaysopen: true
-order: 760
+weight: 760
 ---
 
 # Work with custom rulesets

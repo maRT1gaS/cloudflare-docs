@@ -1,6 +1,6 @@
 ---
 title: Query parameters and cached responses
-order: 10
+weight: 10
 pcx-content-type: reference
 ---
 

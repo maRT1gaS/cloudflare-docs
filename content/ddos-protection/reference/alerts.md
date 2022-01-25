@@ -1,7 +1,7 @@
 ---
 title: Alerts
 pcx-content-type: reference
-order: 3
+weight: 3
 ---
 
 # DDoS alerts

@@ -1,6 +1,6 @@
 ---
 title: Configure the cross-connect
-order: 4
+weight: 4
 pcx-content-type: tutorial
 ---
 

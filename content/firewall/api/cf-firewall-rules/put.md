@@ -1,6 +1,6 @@
 ---
 pcx-content-type: reference
-order: 430
+weight: 430
 ---
 
 # PUT examples

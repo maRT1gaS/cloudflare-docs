@@ -1,5 +1,5 @@
 ---
-order: 3
+weight: 3
 type: example
 summary: Allow access based on the "amr" identifier.
 tags:

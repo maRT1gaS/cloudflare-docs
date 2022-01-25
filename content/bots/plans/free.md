@@ -1,6 +1,6 @@
 ---
 title: Free
-order: 0
+weight: 0
 type: document
 pcx-content-type: reference
 hidden: true

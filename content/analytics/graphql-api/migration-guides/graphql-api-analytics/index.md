@@ -1,6 +1,6 @@
 ---
 title: HTTP Requests by Colo Groups to HTTP Requests by Adaptive Groups
-order: 10
+weight: 10
 pcx-content-type: reference
 ---
 

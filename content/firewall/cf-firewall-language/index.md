@@ -1,6 +1,6 @@
 ---
 pcx-content-type: reference
-order: 600
+weight: 600
 ---
 
 # Firewall Rules language

@@ -1,7 +1,7 @@
 ---
 title: About
 pcx-content-type: concept
-order: 200
+weight: 200
 ---
 
 # About Cloudflare Firewall Rules

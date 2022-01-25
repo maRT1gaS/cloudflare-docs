@@ -1,5 +1,5 @@
 ---
-order: 1000
+weight: 1000
 type: example
 summary: Set up an A/B test by controlling what response is served based on cookies.
 tags:

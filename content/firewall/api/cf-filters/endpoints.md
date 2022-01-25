@@ -1,7 +1,7 @@
 ---
 pcx-content-type: reference
 type: table
-order: 455
+weight: 455
 ---
 
 # Endpoints

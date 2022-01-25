@@ -1,5 +1,5 @@
 ---
-order: 3
+weight: 3
 type: example
 summary: Send a GET request and read in JSON from the response. Use to fetch external data.
 tags:

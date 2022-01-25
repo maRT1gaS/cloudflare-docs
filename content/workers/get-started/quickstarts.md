@@ -1,6 +1,7 @@
 ---
+weight: 2
 type: overview
-order: 2
+title: Quickstarts
 pcx-content-type: getting-started
 ---
 

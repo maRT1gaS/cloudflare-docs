@@ -1,5 +1,5 @@
 ---
-order: 1
+weight: 1
 ---
 
 # Jamf
@@ -128,7 +128,7 @@ For a description of each argument and what it means, see [deployment parameters
 
 1. Select **Computers** > **Policies** on the menu on the left side.
 1. Click **+ New**.
-1. Enter a Display name such as `Cloudflare WARP Client`.  
+1. Enter a Display name such as `Cloudflare WARP Client`.
    For _Triggers_, our recommendation is to select _Startup_, _Login_, _Enrollment Complete_ and _Recurring Check-in_, but you can select the value that works best for your organization.
 1. Navigate to **Packages**.
 1. Click **Configure**.

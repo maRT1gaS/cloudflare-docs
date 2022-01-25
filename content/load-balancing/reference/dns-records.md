@@ -1,6 +1,6 @@
 ---
 title: DNS records
-order:
+weight:
 pcx-content-type: reference
 ---
 

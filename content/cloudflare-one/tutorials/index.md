@@ -1,7 +1,7 @@
 ---
 type: overview
 hideChildren: true
-order: 2
+weight: 2
 pcx-content-type: navigation
 ---
 

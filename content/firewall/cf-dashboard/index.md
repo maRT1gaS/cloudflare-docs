@@ -1,7 +1,7 @@
 ---
 title: Manage rules in the dashboard
 pcx-content-type: navigation
-order: 300
+weight: 300
 ---
 
 # Manage rules in the Cloudflare dashboard

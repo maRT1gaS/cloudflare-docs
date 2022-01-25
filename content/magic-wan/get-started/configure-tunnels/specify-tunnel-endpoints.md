@@ -1,6 +1,6 @@
 ---
 title: Specify tunnel endpoints
-order:
+weight:
 pcx-content-type: how-to
 ---
 

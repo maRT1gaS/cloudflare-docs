@@ -1,5 +1,5 @@
 ---
-order: 1000
+weight: 1000
 type: example
 summary: Examine the contents of a Headers object by logging to console with a Map.
 tags:

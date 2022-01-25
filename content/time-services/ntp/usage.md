@@ -1,7 +1,7 @@
 ---
 title: User Guide
 pcx-content-type: how-to
-order: 0
+weight: 0
 ---
 
 # Using Cloudflare's Time Service

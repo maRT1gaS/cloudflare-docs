@@ -1,7 +1,7 @@
 ---
 title: '2020-11-05 – Emergency'
 type: table
-order: 951
+weight: 951
 ---
 
 # 2020-11-05 – Emergency release

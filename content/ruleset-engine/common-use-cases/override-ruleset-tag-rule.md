@@ -1,7 +1,7 @@
 ---
 pcx-content-type: configuration
 alwaysopen: true
-order: 774
+weight: 774
 ---
 
 # Deploy a Managed Ruleset with ruleset, tag, and rule overrides

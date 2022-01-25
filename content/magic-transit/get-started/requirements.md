@@ -1,6 +1,6 @@
 ---
 title: Requirements
-order:
+weight:
 pcx-content-type: tutorial
 ---
 

@@ -1,6 +1,6 @@
 ---
 pcx-content-type: concept
-order: 25
+weight: 25
 ---
 
 # Log the payload of matched rules

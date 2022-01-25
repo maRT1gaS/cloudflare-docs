@@ -1,6 +1,6 @@
 ---
 title: Enable Datadog
-order: 58
+weight: 58
 pcx-content-type: how-to
 ---
 

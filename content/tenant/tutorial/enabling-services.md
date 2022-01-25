@@ -1,6 +1,6 @@
 ---
 title: '3: Enabling services'
-order: 2
+weight: 2
 pcx-content-type: tutorial
 ---
 

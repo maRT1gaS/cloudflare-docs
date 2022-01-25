@@ -2,7 +2,7 @@
 title: Set WordPress rules to Block
 pcx-content-type: configuration
 alwaysopen: true
-order: 771
+weight: 771
 ---
 
 # Use tag overrides to set WordPress rules to Block

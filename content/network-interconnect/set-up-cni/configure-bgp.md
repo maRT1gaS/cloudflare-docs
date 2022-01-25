@@ -1,6 +1,6 @@
 ---
 title: Configure BGP and GRE
-order: 5
+weight: 5
 pcx-content-type: tutorial
 ---
 

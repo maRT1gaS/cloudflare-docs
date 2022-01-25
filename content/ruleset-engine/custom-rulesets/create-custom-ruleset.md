@@ -2,7 +2,7 @@
 title: Create a custom ruleset
 pcx-content-type: how-to
 alwaysopen: true
-order: 761
+weight: 761
 ---
 
 # Create a custom ruleset

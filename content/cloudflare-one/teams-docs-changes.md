@@ -1,5 +1,5 @@
 ---
-order: 0
+weight: 0
 title: 'Welcome'
 hidden: true
 pcx-content-type: reference

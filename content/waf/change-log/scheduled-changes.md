@@ -1,6 +1,6 @@
 ---
 type: table
-order: 1
+weight: 1
 ---
 
 # Scheduled changes

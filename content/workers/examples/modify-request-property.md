@@ -1,5 +1,5 @@
 ---
-order: 1000
+weight: 1000
 type: example
 summary: Create a modified request with edited properties based off of an incoming request.
 tags:

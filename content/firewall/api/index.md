@@ -1,7 +1,7 @@
 ---
 title: Manage rules via the APIs
 pcx-content-type: navigation
-order: 400
+weight: 400
 ---
 
 # Manage rules via the APIs

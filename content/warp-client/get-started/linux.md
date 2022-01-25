@@ -1,6 +1,6 @@
 ---
 title: Linux
-order:
+weight:
 pcx-content-type: how-to
 ---
 

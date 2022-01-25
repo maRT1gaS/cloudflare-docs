@@ -1,6 +1,6 @@
 ---
 title: Origin CA certificates
-order: 3
+weight: 3
 pcx-content-type: interim
 ---
 

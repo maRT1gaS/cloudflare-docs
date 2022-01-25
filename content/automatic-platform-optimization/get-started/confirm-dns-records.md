@@ -1,6 +1,6 @@
 ---
 title: Confirm DNS Records
-order: 5
+weight: 5
 pcx-content-type: how-to
 ---
 

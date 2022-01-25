@@ -1,6 +1,6 @@
 ---
 title: Windows
-order: 2
+weight: 2
 ---
 
 # Installation on Windows

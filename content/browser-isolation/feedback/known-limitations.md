@@ -1,6 +1,6 @@
 ---
 title: Known limitations
-order: 3
+weight: 3
 ---
 
 # Known limitations

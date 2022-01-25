@@ -1,6 +1,6 @@
 ---
 title: Domain Control Validation (DCV)
-order: 3
+weight: 3
 pcx-content-type: how-to
 ---
 

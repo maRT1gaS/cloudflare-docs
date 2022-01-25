@@ -1,5 +1,5 @@
 ---
-order: 5
+weight: 5
 ---
 
 # Restricting token use

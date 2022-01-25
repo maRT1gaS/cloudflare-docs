@@ -1,7 +1,7 @@
 ---
 title: Change log
 pcx-content-type: concept
-order: 9
+weight: 9
 ---
 
 # Change log for Managed Rulesets

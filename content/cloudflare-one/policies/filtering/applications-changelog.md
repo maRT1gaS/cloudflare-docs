@@ -1,5 +1,5 @@
 ---
-order: 10
+weight: 10
 pcx-content-type: reference
 hidden: true
 ---

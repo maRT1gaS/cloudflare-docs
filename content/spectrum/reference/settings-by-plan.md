@@ -1,6 +1,6 @@
 ---
 type: overview
-order:
+weight:
 pcx-content-type: reference
 ---
 

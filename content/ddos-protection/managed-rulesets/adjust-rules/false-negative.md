@@ -1,6 +1,6 @@
 ---
 pcx-content-type: how-to
-order: 2
+weight: 2
 ---
 
 # Handle a false negative or an incomplete mitigation

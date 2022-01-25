@@ -1,6 +1,6 @@
 ---
 title: How to
-order: 3
+weight: 3
 pcx-content-type: navigation
 ---
 

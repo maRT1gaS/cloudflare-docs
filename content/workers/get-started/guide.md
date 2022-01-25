@@ -1,5 +1,5 @@
 ---
-order: 0
+weight: 1
 title: 'Guide'
 pcx-content-type: how-to
 ---

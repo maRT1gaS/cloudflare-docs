@@ -1,7 +1,6 @@
 ---
-type: overview
-hideChildren: true
-order: 3
+weight: 3
+title: Tutorials
 pcx-content-type: navigation
 ---
 

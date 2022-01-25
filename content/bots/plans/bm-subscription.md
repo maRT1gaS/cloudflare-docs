@@ -1,6 +1,6 @@
 ---
 title: Enterprise Bot Management
-order: 3
+weight: 3
 type: document
 pcx-content-type: reference
 hidden: true

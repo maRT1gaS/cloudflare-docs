@@ -1,5 +1,5 @@
 ---
-order: 15
+weight: 15
 pcx-content-type: how-to
 title: Disk Encryption
 ---

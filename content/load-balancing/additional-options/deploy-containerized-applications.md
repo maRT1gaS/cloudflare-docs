@@ -1,6 +1,6 @@
 ---
 title: Containerized applications
-order: 8
+weight: 8
 pcx-content-type: how-to
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: List and view rulesets
 pcx-content-type: reference
-order: 783
+weight: 783
 type: overview
 ---
 

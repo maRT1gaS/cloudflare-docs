@@ -1,6 +1,6 @@
 ---
 title: Network Interconnect
-order: 3
+weight: 3
 pcx-content-type: tutorial
 ---
 

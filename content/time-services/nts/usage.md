@@ -1,7 +1,7 @@
 ---
 title: User Guide
 pcx-content-type: reference
-order: 0
+weight: 0
 ---
 
 # Using Cloudflare's Secure Time Service

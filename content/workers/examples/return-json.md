@@ -1,5 +1,5 @@
 ---
-order: 1
+weight: 1
 type: example
 summary: Return JSON directly from a Worker script, useful for building APIs and middleware.
 demo: https://returning-json.workers-sites-examples.workers.dev

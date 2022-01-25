@@ -1,6 +1,6 @@
 ---
 title: Flow-based monitoring
-order:
+weight:
 pcx-content-type: how-to
 ---
 

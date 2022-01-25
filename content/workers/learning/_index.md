@@ -1,8 +1,7 @@
 ---
-order: 4
+weight: 4
+title: Learning
 pcx-content-type: navigation
 ---
-
-# Learning
 
 <DirectoryListing path="/learning" />

@@ -1,6 +1,6 @@
 ---
 title: Actions
-order: 30
+weight: 30
 type: overview
 pcx-content-type: reference
 ---

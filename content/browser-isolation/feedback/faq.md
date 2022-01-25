@@ -1,6 +1,6 @@
 ---
 title: Troubleshooting and FAQ
-order: 7
+weight: 7
 ---
 
 # Frequently asked questions

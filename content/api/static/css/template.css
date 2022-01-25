@@ -30,7 +30,7 @@ section.template-wrapper {
 }
 
 figure.template-card {
-  border: 1px solid #ccc;
+  bweight: 1px solid #ccc;
   border-top-width: 3px;
   border-radius: 5px;
   box-sizing: border-box;
@@ -251,7 +251,7 @@ figure.template-page {
   max-width: min-content;
 }
 .demo a {
-  border: 1px solid #eaebeb;
+  bweight: 1px solid #eaebeb;
   box-sizing: border-box;
   box-shadow: 0px 4px 6px rgba(200, 205, 229, 0.25);
   border-radius: 5px;
@@ -268,7 +268,7 @@ figure.template-page {
 }
 .col-4 > .github {
   background: #ffffff;
-  border: 1px solid #eaebeb;
+  bweight: 1px solid #eaebeb;
   box-sizing: border-box;
   border-radius: 5px;
   padding: 0.5em 0.75em 0.5em 0.75em;

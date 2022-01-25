@@ -1,5 +1,5 @@
 ---
-order: 1000
+weight: 1000
 type: example
 summary: Resolve requests to your domain to a set of proxy third-party origin URLs.
 tags:

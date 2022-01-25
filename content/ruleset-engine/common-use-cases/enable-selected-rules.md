@@ -2,7 +2,7 @@
 title: Enable only selected rules
 pcx-content-type: configuration
 alwaysopen: true
-order: 773
+weight: 773
 ---
 
 # Use rulesets and rule overrides to only enable selected rules

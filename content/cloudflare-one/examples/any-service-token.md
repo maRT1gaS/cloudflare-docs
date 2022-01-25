@@ -1,5 +1,5 @@
 ---
-order: 3
+weight: 3
 type: example
 summary: The request will need to present the headers for any service token created for this account.
 tags:

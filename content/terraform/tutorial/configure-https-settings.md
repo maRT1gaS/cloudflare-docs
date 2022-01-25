@@ -1,6 +1,6 @@
 ---
 title: 3 – Configure HTTPs settings
-order: 3
+weight: 3
 pcx-content-type: tutorial
 ---
 

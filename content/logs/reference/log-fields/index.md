@@ -1,6 +1,6 @@
 ---
 title: Log fields
-order: 50
+weight: 50
 pcx-content-type: navigation
 ---
 

@@ -1,5 +1,6 @@
 ---
-order: 1
+weight: 1
+title: Get Started
 pcx-content-type: navigation
 ---
 

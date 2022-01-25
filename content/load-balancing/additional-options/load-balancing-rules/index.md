@@ -1,6 +1,6 @@
 ---
 title: Custom load balancing rules
-order: 17
+weight: 17
 pcx-content-type: concept
 ---
 

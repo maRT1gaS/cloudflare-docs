@@ -1,6 +1,6 @@
 ---
 title: Enable Amazon S3
-order: 55
+weight: 55
 pcx-content-type: how-to
 ---
 

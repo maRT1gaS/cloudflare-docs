@@ -62,7 +62,7 @@ You can also [purchase additional rules](https://www.cloudflare.com/features-pag
 1. Under **If the URL matches**, enter the URL or URL pattern that should match the rule. Learn more about wildcard matching
 1. Under **Then the settings are**, click **Add a Setting**.
 1. Select an option from the dropdown. You can include more than one setting per rule. Learn more about settings in the summary below.
-1. From the **Order** dropdown, specify the desired order: **First**, **Last**, or **Custom**.
+1. From the **Order** dropdown, specify the desired weight: **First**, **Last**, or **Custom**.
 1. Choose a save option:
 
 - **Save as Draft** to save the rule and leave it disabled. Note that disabled rules count towards the number of rules allowed for your domain.

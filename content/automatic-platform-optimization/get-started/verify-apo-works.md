@@ -1,6 +1,6 @@
 ---
 title: Verify APO works
-order: 8
+weight: 8
 pcx-content-type: tutorial
 ---
 

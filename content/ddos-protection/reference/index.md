@@ -1,6 +1,6 @@
 ---
 pcx-content-type: navigation
-order: 7
+weight: 7
 ---
 
 # Reference

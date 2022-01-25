@@ -1,6 +1,6 @@
 ---
 title: 1 –  Initialize Terraform
-order: 1
+weight: 1
 pcx-content-type: tutorial
 ---
 

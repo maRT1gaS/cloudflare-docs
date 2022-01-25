@@ -1,6 +1,6 @@
 ---
 title: iOS
-order:
+weight:
 pcx-content-type: how-to
 ---
 

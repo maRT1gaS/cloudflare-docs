@@ -1,6 +1,6 @@
 ---
 title: Schedule
-order: 0
+weight: 0
 ---
 
 # Cloudflare Developer Events

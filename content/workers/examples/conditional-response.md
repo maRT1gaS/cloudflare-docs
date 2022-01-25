@@ -1,5 +1,5 @@
 ---
-order: 1000
+weight: 1000
 type: example
 summary: Return a response based on the incoming request's URL, HTTP method, User Agent, IP address, ASN or device type.
 tags:

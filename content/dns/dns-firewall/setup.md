@@ -1,5 +1,5 @@
 ---
-order: 0
+weight: 0
 title: Setup
 pcx-content-type: how-to
 ---

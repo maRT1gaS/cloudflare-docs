@@ -1,7 +1,7 @@
 ---
 title: About NAv2
 pcx-content-type: concept
-order: 2
+weight: 2
 ---
 
 # About Network Analytics v2

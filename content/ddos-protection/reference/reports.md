@@ -1,7 +1,7 @@
 ---
 title: Reports
 pcx-content-type: reference
-order: 2
+weight: 2
 ---
 
 # DDoS reports

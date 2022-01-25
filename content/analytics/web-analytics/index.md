@@ -1,6 +1,6 @@
 ---
 title: Cloudflare Web Analytics
-order: 1
+weight: 1
 pcx-content-type: reference
 ---
 

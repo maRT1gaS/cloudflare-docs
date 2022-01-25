@@ -1,6 +1,6 @@
 ---
 pcx-content-type: reference
-order: 6
+weight: 6
 ---
 
 # Simulating test DDoS attacks

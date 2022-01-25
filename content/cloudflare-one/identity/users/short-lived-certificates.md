@@ -1,5 +1,5 @@
 ---
-order: 3
+weight: 3
 title: Short-lived certificates
 pcx-content-type: how-to
 ---

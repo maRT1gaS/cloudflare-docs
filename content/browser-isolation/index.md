@@ -1,6 +1,6 @@
 ---
 title: Welcome
-order: 0
+weight: 0
 type: overview
 ---
 

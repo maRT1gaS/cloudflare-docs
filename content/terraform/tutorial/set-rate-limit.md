@@ -1,6 +1,6 @@
 ---
 title: 4 – Set up rate limiting
-order: 4
+weight: 4
 pcx-content-type: tutorial
 ---
 

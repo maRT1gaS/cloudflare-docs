@@ -1,6 +1,6 @@
 ---
 title: Google Cloud
-order: 100
+weight: 100
 ---
 
 # Google Cloud
@@ -155,7 +155,7 @@ To create a report for your log data based on the Cloudflare template:
 
 8. Next, update the **Type** for each of the following fields as indicated below:
 
-<table style="border: solid 2px darkgrey; width: 100%;">
+<table style="bweight: solid 2px darkgrey; width: 100%;">
   <thead style="background: #ffeadf;">
     <tr>
       <th>Cloudflare Log Field</th>
@@ -288,7 +288,7 @@ You can also create custom fields directly in Data Studio.
 
 The following table summarizes which specific components require to be fixed:
 
-<table style="border: solid 2px darkgrey; width: 100%;">
+<table style="bweight: solid 2px darkgrey; width: 100%;">
   <thead style="background: #ffeadf;">
     <tr>
       <th>Report page</th>

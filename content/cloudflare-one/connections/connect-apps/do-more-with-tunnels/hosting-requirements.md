@@ -1,5 +1,5 @@
 ---
-order: 7
+weight: 7
 ---
 
 # Tunnel Hosting Requirements

@@ -1,7 +1,7 @@
 ---
 title: Create ruleset
 pcx-content-type: reference
-order: 784
+weight: 784
 type: overview
 ---
 

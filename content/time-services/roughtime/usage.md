@@ -1,7 +1,7 @@
 ---
 title: User Guide
 pcx-content-type: reference
-order: 1
+weight: 1
 ---
 
 # Using Cloudflare's Roughtime Service

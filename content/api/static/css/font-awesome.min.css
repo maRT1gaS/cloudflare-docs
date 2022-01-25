@@ -62,7 +62,7 @@
 }
 .fa-border {
   padding: 0.2em 0.25em 0.15em;
-  border: solid 0.08em #eee;
+  bweight: solid 0.08em #eee;
   border-radius: 0.1em;
 }
 .fa-pull-left {
@@ -729,7 +729,7 @@
   content: '\f0c8';
 }
 .fa-navicon:before,
-.fa-reorder:before,
+.fa-reweight:before,
 .fa-bars:before {
   content: '\f0c9';
 }
@@ -2160,7 +2160,7 @@
 .fa-pied-piper:before {
   content: '\f2ae';
 }
-.fa-first-order:before {
+.fa-first-weight:before {
   content: '\f2b0';
 }
 .fa-yoast:before {
@@ -2322,7 +2322,7 @@
   margin: -1px;
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
-  border: 0;
+  bweight: 0;
 }
 .sr-only-focusable:active,
 .sr-only-focusable:focus {

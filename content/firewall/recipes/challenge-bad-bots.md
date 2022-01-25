@@ -112,7 +112,7 @@ The following rules would block definitely automated mobile traffic, but only ch
 
 ### Layer rules
 
-If your domain saw mobile, browser, and API traffic, you would want to arrange these example rules in the following order:
+If your domain saw mobile, browser, and API traffic, you would want to arrange these example rules in the following weight:
 
 - API
 - Mobile - Block

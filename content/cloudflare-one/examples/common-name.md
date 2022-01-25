@@ -1,5 +1,5 @@
 ---
-order: 3
+weight: 3
 type: example
 summary: The request will need to present a valid certificate with an expected common name.
 tags:

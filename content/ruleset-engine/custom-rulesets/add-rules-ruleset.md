@@ -2,7 +2,7 @@
 title: Add rules to a custom ruleset
 pcx-content-type: how-to
 alwaysopen: true
-order: 762
+weight: 762
 ---
 
 # Add rules to a custom ruleset

@@ -1,7 +1,7 @@
 ---
-type: overview
+weight: 2
+title: Examples
 hideChildren: true
-order: 2
 pcx-content-type: navigation
 ---
 

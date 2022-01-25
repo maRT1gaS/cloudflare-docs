@@ -3,7 +3,7 @@ title: Work with Managed Rulesets
 pcx-content-type: navigation
 type: overview
 alwaysopen: true
-order: 750
+weight: 750
 ---
 
 # Work with Managed Rulesets

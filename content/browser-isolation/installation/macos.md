@@ -1,6 +1,6 @@
 ---
 title: macOS
-order: 3
+weight: 3
 ---
 
 # Installation on macOS

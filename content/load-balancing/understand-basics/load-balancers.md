@@ -1,5 +1,5 @@
 ---
-order: 2
+weight: 2
 pcx-content-type: concept
 ---
 
@@ -26,7 +26,7 @@ This setup ensures uninterrupted service and helps with planned outtages, but it
 To set up a load balancer with **active-passive failover**:
 
 1. Create a load balancer with two origin pools (`primary` and `secondary`).
-1. In the list of origin pools, set the following order:
+1. In the list of origin pools, set the following weight:
    1. `primary`
    1. `secondary`
 1. For **Traffic Steering**, select [**Off**](/understand-basics/traffic-steering#off---standard-failover).

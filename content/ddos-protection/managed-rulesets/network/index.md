@@ -1,7 +1,7 @@
 ---
 title: Network-layer DDoS Attack Protection
 pcx-content-type: concept
-order: 3
+weight: 3
 ---
 
 # Network-layer DDoS Attack Protection Managed Ruleset

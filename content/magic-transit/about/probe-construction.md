@@ -1,6 +1,6 @@
 ---
 title: Probe construction
-order:
+weight:
 pcx-content-type: concept
 ---
 

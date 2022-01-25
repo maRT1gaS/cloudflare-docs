@@ -1,6 +1,6 @@
 ---
 title: Business
-order: 2
+weight: 2
 type: document
 pcx-content-type: reference
 hidden: true

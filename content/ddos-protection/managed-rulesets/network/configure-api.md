@@ -1,7 +1,7 @@
 ---
 title: Configure the Managed Ruleset via API
 pcx-content-type: concept
-order: 2
+weight: 2
 ---
 
 # Configure Network-layer DDoS Attack Protection via API

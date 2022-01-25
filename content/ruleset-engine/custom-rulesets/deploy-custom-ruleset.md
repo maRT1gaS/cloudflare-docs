@@ -1,7 +1,7 @@
 ---
 pcx-content-type: how-to
 alwaysopen: true
-order: 763
+weight: 763
 ---
 
 # Deploy a custom ruleset

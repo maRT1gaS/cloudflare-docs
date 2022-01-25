@@ -1,5 +1,5 @@
 ---
-order: 1
+weight: 1
 pcx-content-type: reference
 ---
 
@@ -13,7 +13,7 @@ The SDK provides an API for programmatically controlling the player and listenin
 <!-- You can use styles and CSS on this iframe element where the video player will appear -->
 <iframe
   src="https://iframe.videodelivery.net/$VIDEOID"
-  style="border: none"
+  style="bweight: none"
   height="720"
   width="1280"
   allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"

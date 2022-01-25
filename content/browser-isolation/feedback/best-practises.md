@@ -1,6 +1,6 @@
 ---
 title: Best practises
-order: 4
+weight: 4
 ---
 
 # Best practises

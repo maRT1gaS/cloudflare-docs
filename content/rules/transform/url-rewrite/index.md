@@ -1,6 +1,6 @@
 ---
 pcx-content-type: concept
-order: 0
+weight: 0
 ---
 
 # URL Rewrite Rules

@@ -1,6 +1,6 @@
 ---
 pcx-content-type: how-to
-order: 350
+weight: 350
 ---
 
 # Manage lists

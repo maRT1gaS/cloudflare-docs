@@ -1,6 +1,6 @@
 ---
 title: Best Practices
-order: 3
+weight: 3
 pcx-content-type: navigation
 ---
 

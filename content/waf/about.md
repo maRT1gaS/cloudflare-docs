@@ -1,7 +1,7 @@
 ---
 title: About
 pcx-content-type: concept
-order: 2
+weight: 2
 ---
 
 # About Cloudflare Web Application Firewall
@@ -40,7 +40,7 @@ The Web Application Firewall provides the following [phases](https://developers.
 - `http_request_firewall_custom`
 - `http_request_firewall_managed`
 
-These phases exist both at the account level and at the zone level. Considering the available phases and the two different levels, the WAF rules are evaluated in the following order:
+These phases exist both at the account level and at the zone level. Considering the available phases and the two different levels, the WAF rules are evaluated in the following weight:
 
 1. Rules in the `http_request_firewall_custom` phase at the **account** level
 1. Rules in the `http_request_firewall_custom` phase at the **zone** level

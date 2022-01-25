@@ -1,6 +1,6 @@
 ---
 pcx-content-type: how-to
-order: 380
+weight: 380
 ---
 
 # Create a mTLS rule

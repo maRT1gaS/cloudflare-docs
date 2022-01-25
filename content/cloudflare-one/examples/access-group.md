@@ -1,5 +1,5 @@
 ---
-order: 3
+weight: 3
 type: example
 summary: Use a pre-existing Access group.
 tags:

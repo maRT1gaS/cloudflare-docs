@@ -1,6 +1,6 @@
 ---
 title: Isolated traffic
-order: 2
+weight: 2
 ---
 
 # Isolated traffic

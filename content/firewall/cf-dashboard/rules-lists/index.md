@@ -1,6 +1,6 @@
 ---
 pcx-content-type: how-to
-order: 340
+weight: 340
 ---
 
 # Use Rules Lists

@@ -1,5 +1,5 @@
 ---
-order: 1000
+weight: 1000
 type: example
 summary: Set common security headers (X-XSS-Protection, X-Frame-Options, X-Content-Type-Options, Permissions-Policy, Referrer-Policy, Strict-Transport-Security, Content-Security-Policy).
 tags:
@@ -23,7 +23,7 @@ const DEFAULT_SECURITY_HEADERS = {
     "Content-Security-Policy": "default-src 'self' example.com *.example.com",
     */
   /*
-    You can also set Strict-Transport-Security headers. 
+    You can also set Strict-Transport-Security headers.
     These are not automatically set because your website might get added to Chrome's HSTS preload list.
     Here's the code if you want to apply it:
     "Strict-Transport-Security" : "max-age=63072000; includeSubDomains; preload",
@@ -33,17 +33,17 @@ const DEFAULT_SECURITY_HEADERS = {
     "Permissions-Policy": "interest-cohort=()",
     */
   /*
-    X-XSS-Protection header prevents a page from loading if an XSS attack is detected. 
+    X-XSS-Protection header prevents a page from loading if an XSS attack is detected.
     @see https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-XSS-Protection
     */
   'X-XSS-Protection': '0; mode=block',
   /*
-    X-Frame-Options header prevents click-jacking attacks. 
+    X-Frame-Options header prevents click-jacking attacks.
     @see https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options
     */
   'X-Frame-Options': 'DENY',
   /*
-    X-Content-Type-Options header prevents MIME-sniffing. 
+    X-Content-Type-Options header prevents MIME-sniffing.
     @see https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Content-Type-Options
     */
   'X-Content-Type-Options': 'nosniff',

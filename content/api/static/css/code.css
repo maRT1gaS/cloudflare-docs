@@ -1,6 +1,6 @@
 /* for code block with line numbers */
 table.hljs-ln {
-  border: 0px;
+  bweight: 0px;
   background-color: inherit;
 }
 .hljs-ln-numbers {
@@ -8,10 +8,10 @@ table.hljs-ln {
   color: #ccc;
   vertical-align: top;
   padding-right: 5px;
-  border: 0px;
+  bweight: 0px;
 }
 
 tr > td.hljs-ln-code {
-  border: 0px;
+  bweight: 0px;
   padding-left: 10px;
 }

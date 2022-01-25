@@ -1,5 +1,5 @@
 ---
-order: 0
+weight: 0
 pcx-content-type: navigation
 title: 'Partners'
 ---

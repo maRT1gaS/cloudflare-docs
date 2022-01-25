@@ -1,6 +1,6 @@
 ---
 title: Enterprise deployment
-order: 4
+weight: 4
 ---
 
 # Enterprise deployment

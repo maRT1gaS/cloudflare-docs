@@ -1,7 +1,7 @@
 ---
 title: '2020-07-07 – Emergency'
 type: table
-order: 966
+weight: 966
 ---
 
 # 2020-07-07 – Emergency release

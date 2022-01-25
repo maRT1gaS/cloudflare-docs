@@ -1,5 +1,5 @@
 ---
-order: 0
+weight: 0
 pcx-content-type: how-to
 title: First-time setup
 ---

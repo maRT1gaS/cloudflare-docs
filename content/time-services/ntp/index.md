@@ -1,6 +1,6 @@
 ---
 pcx-content-type: concept
-order: 1
+weight: 1
 ---
 
 # Network Time Protocol

@@ -1,6 +1,6 @@
 ---
 title: Dynamic advertisement
-order: 2
+weight: 2
 pcx-content-type: best-practices
 ---
 

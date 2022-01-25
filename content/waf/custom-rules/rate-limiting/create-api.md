@@ -1,6 +1,6 @@
 ---
 pcx-content-type: how-to
-order: 15
+weight: 15
 type: overview
 ---
 
