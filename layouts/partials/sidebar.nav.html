@@ -2,10 +2,6 @@
 {{- $root := absURL (printf "/%s/" .Section) -}}
 {{- $title := (title .Section) -}}
 
-{{- $section := .Section }}
-
-{{ printf "%v" $section }}
-
 <div class="DocsSidebar">
   <div class="DocsSidebar--sections">
     <div class="DocsSidebar--section DocsSidebar--header-section">
@@ -65,7 +61,7 @@
               <title id="title-6032186738345315">Dropdown icon</title>
               <path d="M2,2v0m0,6v0m0,6v0z"></path>
             </svg>
-            <span is-visually-hidden="">{{ $title }} menu</span>
+            <span is-visually-hidden>{{ $title }} menu</span>
           </div>
         </button>
 
