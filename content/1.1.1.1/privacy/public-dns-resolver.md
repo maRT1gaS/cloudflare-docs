@@ -1,5 +1,6 @@
 ---
-order:
+weight:
+title: 1.1.1.1 Public DNS Resolver
 pcx-content-type: reference
 ---
 

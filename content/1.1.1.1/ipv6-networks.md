@@ -1,5 +1,6 @@
 ---
-order: 4
+weight: 4
+title: Support for IPv6-only networks
 pcx-content-type: reference
 ---
 

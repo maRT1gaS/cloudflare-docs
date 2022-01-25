@@ -1,5 +1,6 @@
 ---
-order: 8
+weight: 8
+title: Terms of Use
 pcx-content-type: reference
 ---
 

@@ -1,5 +1,6 @@
 ---
-order: 5
+weight: 5
+title: Other ways to use 1.1.1.1
 pcx-content-type: navigation
 ---
 

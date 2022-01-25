@@ -1,5 +1,5 @@
 ---
-order:
+weight:
 title: iOS
 pcx-content-type: how-to
 ---

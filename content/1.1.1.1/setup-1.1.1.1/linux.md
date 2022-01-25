@@ -1,5 +1,5 @@
 ---
-order:
+weight:
 title: Linux
 pcx-content-type: how-to
 ---

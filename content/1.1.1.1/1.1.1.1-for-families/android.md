@@ -1,5 +1,4 @@
 ---
-order:
 title: Android
 pcx-content-type: how-to
 ---

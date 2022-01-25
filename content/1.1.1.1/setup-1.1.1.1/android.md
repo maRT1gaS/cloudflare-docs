@@ -1,5 +1,5 @@
 ---
-order:
+weight:
 title: Android
 pcx-content-type: how-to
 ---

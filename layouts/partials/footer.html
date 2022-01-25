@@ -1,0 +1,30 @@
+<footer class="DocsFooter">
+  <div class="DocsFooter--content">
+    <div>
+      <span class="DocsFooter--edit-on-gh-link-wrapper">
+        {{- with .File -}}
+        <a href="https://github.com/cloudflare/cloudflare-docs/blob/production/content/{{ .Path }}" class="DocsMarkdown--link">
+          <span class="DocsMarkdown--link-content">Edit on GitHub</span>
+
+          <span class="DocsMarkdown--link-external-icon" aria-hidden="true">
+            <svg fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 16 16" role="img" aria-labelledby="title-3009599015724558" xmlns="http://www.w3.org/2000/svg">
+              <title id="title-3009599015724558">External link icon</title>
+              <path d="M6.75,1.75h-5v12.5h12.5v-5m0,-4v-3.5h-3.5M8,8l5.5-5.5"></path>
+            </svg>
+
+            <span is-visually-hidden="">Open external link</span>
+          </span>
+        </a>
+        {{- end -}}
+      </span>
+
+      <span class="DocsFooter--content-dot-spacer">
+        &nbsp; · &nbsp;
+      </span>
+
+      <span class="DocsFooter--content-time">
+        Updated {{ partial "datetime" .Lastmod }}
+      </span>
+    </div>
+  </div>
+</footer>

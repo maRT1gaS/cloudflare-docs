@@ -1,5 +1,6 @@
 ---
-order:
+weight:
+title: DNS over HTTPS
 pcx-content-type: navigation
 ---
 

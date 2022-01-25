@@ -1,0 +1,33 @@
+{{- $active := (eq .Active .Context.Permalink) -}}
+
+<li class="DocsSidebar--nav-item"{{ if $active }} is-active{{ end }}>
+  {{- if .Context.IsSection -}}
+  <button class="Button DocsSidebar--nav-expand-collapse-button">
+    <span class="DocsSidebar--nav-expand-collapse-button-content" aria-hidden="true"></span>
+    <span is-visually-hidden>Expand: {{ .Context.Title }}</span>
+  </button>
+  {{- end -}}
+
+  <a {{ if $active }}aria-current="page" {{ end }}class="DocsSidebar--nav-link" href="{{ .Context.Permalink }}"{{ if $active }} is-active{{ end }}>
+    <span class="DocsSidebar--nav-link-highlight"></span>
+    <span class="DocsSidebar--nav-link-text">{{ .Context.Title }}</span>
+  </a>
+
+  {{- if .Context.IsSection -}}
+    {{- $active := .Active }}
+    {{- $next := (add .Depth 1) }}
+    <div class="DocsSidebar--nav-item-collapse-container DocsSidebar--nav-item-collapse-hidden" style="min-height:0px">
+      <div class="DocsSidebar--nav-item-collapse-wrapper">
+        <div class="DocsSidebar--nav-item-collapse-wrapperInner">
+          <div class="DocsSidebar--nav-item-collapse-content">
+            <ul class="DocsSidebar--nav-subnav" depth="{{ .Depth }}" style="--depth:{{ .Depth }}">
+              {{- range (sort .Context.Pages.ByWeight) -}}
+                {{- partial "sidebar.navitem" (dict "Context" . "Depth" $next "Active" $active) }}
+              {{- end -}}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  {{- end -}}
+</li>

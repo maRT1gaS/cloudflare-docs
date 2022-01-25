@@ -1,5 +1,6 @@
 ---
-order:
+weight:
+title: Cloudflare Resolver for Firefox
 pcx-content-type: reference
 ---
 

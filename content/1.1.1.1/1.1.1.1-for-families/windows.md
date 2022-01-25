@@ -1,5 +1,5 @@
 ---
-order:
+weight:
 title: Windows 10
 pcx-content-type: how-to
 ---

@@ -1,5 +1,5 @@
 ---
-order:
+weight:
 title: Azure
 pcx-content-type: how-to
 ---

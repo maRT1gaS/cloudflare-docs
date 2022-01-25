@@ -1,5 +1,5 @@
 ---
-order:
+weight:
 title: Router
 pcx-content-type: how-to
 ---
