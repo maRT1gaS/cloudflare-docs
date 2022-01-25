@@ -97,27 +97,7 @@
     {{- partial "sidebar.nav" . -}}
 
     <div class="DocsToolbar">
-      <div class="DocsToolbar--search">
-        <div class="DocsSearch">
-          <div class="DocsSearch--input-wrapper">
-            <input type="text" id="DocsSearch--input" class="DocsSearch--input ds-input" spellcheck="false" autocomplete="off" placeholder="Search 1.1.1.1 docs..." role="combobox" aria-autocomplete="list" aria-expanded="false" aria-label="search input" aria-owns="algolia-autocomplete-listbox-0" dir="auto" style=""/>
-            <pre aria-hidden="true" style="position: absolute; visibility: hidden; white-space: pre; font-family: -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Fira Sans&quot;, &quot;Droid Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 400; word-spacing: 0px; letter-spacing: normal; text-indent: 0px; text-rendering: auto; text-transform: none;"></pre>
-            <div class="DocsSearch--input-icon">
-              <svg viewBox="0 0 16 16" fill="currentColor" role="img" aria-labelledby="title-6097058356725209"
-                xmlns="http://www.w3.org/2000/svg">
-                <title id="title-6097058356725209">Search icon (depiction of a magnifying glass)</title>
-                <path d="M11.999 10.585l3.458 3.458a1 1 0 01-1.414 1.414L10.585 12a6.5 6.5 0 111.414-1.414zM6.75 11.5a4.75 4.75 0 100-9.5 4.75 4.75 0 000 9.5z"></path>
-              </svg>
-            </div>
-            <div class="DocsSearch--input-bottom-border"></div>
-            <span class="algolia-autocomplete" style="position: absolute; z-index: 100; display: none; direction: ltr;">
-              <span class="ds-dropdown-menu" role="listbox" id="algolia-autocomplete-listbox-0" style="display: block; left: 0px; right: auto;">
-                <div class="ds-dataset-1"></div>
-              </span>
-            </span>
-          </div>
-        </div>
-      </div>
+      {{- partial "topbar.search" . -}}
 
       <div class="DocsToolbar--tools">
         <span class="wrapper svelte-14pk8r8">
