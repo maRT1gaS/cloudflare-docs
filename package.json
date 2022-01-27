@@ -5,8 +5,8 @@
   "repository": "cloudflare/cloudflare-docs",
   "description": "Cloudflare Developer Docs",
   "scripts": {
-    "dev": "bongo dev",
-    "build": "bongo build",
+    "dev": "hugo serve -D",
+    "build": "hugo --minify",
     "format": "tsm bin/format.ts",
     "lint": "tsm bin/format.ts --check"
   },
@@ -14,11 +14,9 @@
     "fromnow": "3.0.1"
   },
   "devDependencies": {
-    "@bongo/markdown": "0.0.8",
     "@types/node": "16.11.12",
     "@types/prettier": "2.4.3",
     "@types/prismjs": "1.16.6",
-    "bongo": "npm:@lukeed/bongo@0.0.8",
     "prettier": "2.5.1",
     "prismjs": "1.26.0",
     "tsm": "2.2.1"
