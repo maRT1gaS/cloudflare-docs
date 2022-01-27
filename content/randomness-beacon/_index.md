@@ -13,9 +13,9 @@ meta:
 Explore drand: a distributed service providing public randomness in an application-agnostic, secure, and efficient way.
 
 <p>
-  <bongo:button type="primary" href="/about">
+  {{<button type="primary" href="/about">}}
     Get started
-  </bongo:button>
+  {{</button>}}
 </p>
 
 </ContentColumn>

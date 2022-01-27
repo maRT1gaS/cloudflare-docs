@@ -13,7 +13,7 @@ Spectrum provides security and acceleration for any [TCP](https://www.cloudflare
 Spectrum is available on all paid plans. Pro and Business support selected protocols only, and Enterprise supports all TCP and UDP based traffic. For information on how billing is calculated, refer to [Billing for Spectrum](https://support.cloudflare.com/hc/articles/360041721872) for an in-depth breakdown.
 
 <p>
-  <bongo:button type="primary" href="/get-started">
+  {{<button type="primary" href="/get-started">}}
     Get started
-  </bongo:button>
+  {{</button>}}
 </p>

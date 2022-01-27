@@ -39,11 +39,11 @@ SSL for SaaS is available as an add-on purchase for customers on any plan. For m
 ## Next steps
 
 {{<button-group>}}
-  <bongo:button type="primary" href="getting-started">
+  {{<button type="primary" href="getting-started">}}
     Get started
-  </bongo:button>
+  {{</button>}}
 
-  <bongo:button type="secondary" href="https://blog.cloudflare.com/introducing-ssl-for-saas/" target="_blank">
+  {{<button type="secondary" href="https://blog.cloudflare.com/introducing-ssl-for-saas/" target="_blank">}}
     Learn more
-  </bongo:button>
+  {{</button>}}
 {{</button-group>}}

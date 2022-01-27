@@ -127,7 +127,7 @@ A successful request will return the id to confirm the operation:
 Learn how to manage how external customers access Cloudflare.
 
 <p>
-  <bongo:button type="primary" href="/tutorial/user-access">
+  {{<button type="primary" href="/tutorial/user-access">}}
     Step 2: User access
-  </bongo:button>
+  {{</button>}}
 </p>

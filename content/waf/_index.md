@@ -11,15 +11,15 @@ meta:
 The Cloudflare Web Application Firewall (WAF) provides both automatic protection from vulnerabilities and the flexibility to create custom rules.
 
 {{<button-group>}}
-  <bongo:button type="primary" href="/about">
+  {{<button type="primary" href="/about">}}
     Learn more
-  </bongo:button>
-  <bongo:button type="secondary" href="/managed-rulesets">
+  {{</button>}}
+  {{<button type="secondary" href="/managed-rulesets">}}
     WAF Managed Rulesets
-  </bongo:button>
-  <bongo:button type="secondary" href="/change-log">
+  {{</button>}}
+  {{<button type="secondary" href="/change-log">}}
     Managed Rulesets change log
-  </bongo:button>
+  {{</button>}}
 {{</button-group>}}
 
 ---

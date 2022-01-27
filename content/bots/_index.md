@@ -23,10 +23,10 @@ To see the differences in features and functionality, visit [Plans](/plans/).
 ## Next steps
 
 {{<button-group>}}
-  <bongo:button type="primary" href="/get-started">
+  {{<button type="primary" href="/get-started">}}
     Get started
-  </bongo:button>
-  <bongo:button type="secondary" href="/concepts">
+  {{</button>}}
+  {{<button type="secondary" href="/concepts">}}
     Learn more
-  </bongo:button>
+  {{</button>}}
 {{</button-group>}}

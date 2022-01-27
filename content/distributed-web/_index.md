@@ -14,12 +14,12 @@ meta:
 View files stored on the InterPlanetary File System in your browser. Interact with the Ethereum blockchain. Explore the Distributed Web.
 
 {{<button-group>}}
-  <bongo:button type="primary" href="/ipfs-gateway">
+  {{<button type="primary" href="/ipfs-gateway">}}
     IPFS Gateway
-  </bongo:button>
-  <bongo:button type="primary" href="/ethereum-gateway">
+  {{</button>}}
+  {{<button type="primary" href="/ethereum-gateway">}}
     Ethereum Gateway
-  </bongo:button>
+  {{</button>}}
 {{</button-group>}}
 
 </ContentColumn>

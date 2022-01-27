@@ -216,6 +216,6 @@ Other languages may require you to install additional tools beyond wrangler. See
 
 Get inspiration from other sites and projects out there that were built with Cloudflare Workers.
 
-<bongo:button type="primary" href="https://workers.cloudflare.com/built-with">
+{{<button type="primary" href="https://workers.cloudflare.com/built-with">}}
   Built with Workers
-</bongo:button>
+{{</button>}}

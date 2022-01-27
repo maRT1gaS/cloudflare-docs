@@ -14,15 +14,15 @@ meta:
 Learn more about Cloudflare’s suite of time services.
 
 {{<button-group>}}
-  <bongo:button type="primary" href="/ntp">
+  {{<button type="primary" href="/ntp">}}
     NTP
-  </bongo:button>
-  <bongo:button type="primary" href="/nts">
+  {{</button>}}
+  {{<button type="primary" href="/nts">}}
     NTS
-  </bongo:button>
-  <bongo:button type="primary" href="/roughtime">
+  {{</button>}}
+  {{<button type="primary" href="/roughtime">}}
     Roughtime
-  </bongo:button>
+  {{</button>}}
 {{</button-group>}}
 
 </ContentColumn>

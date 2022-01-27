@@ -11,7 +11,7 @@ To use Cloudflare’s Provisioning API capabilities requires enablement by Cloud
 Once setup, one of your existing Cloudflare users will be enabled to use the provisioning capabilities outlined in these docs.
 
 <p>
-  <bongo:button type="primary" href="/tutorial">
+  {{<button type="primary" href="/tutorial">}}
     Take the tutorial
-  </bongo:button>
+  {{</button>}}
 </p>
