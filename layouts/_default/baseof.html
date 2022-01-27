@@ -1,9 +1,9 @@
+{{- .Scratch.Set "product" (index $.Site.Data .Section) -}}
+{{- $descr := cond (.IsHome) $.Site.Params.description (trim (default (.Content | plainify | truncate 165) .Params.summary) "\n") }}
+{{- $title := cond (.IsHome) $.Site.Title (printf "%s | %s" .Title $.Site.Title) -}}
 <!doctype html>
 <html lang="{{ .Site.LanguageCode }}" theme="light" is-docs-page="">
 <head>
-  {{- $descr := cond (.IsHome) $.Site.Params.description (trim (default (.Content | plainify | truncate 165) .Params.summary) "\n") }}
-	{{- $title := cond (.IsHome) $.Site.Title (printf "%s | %s" .Title $.Site.Title) -}}
-
   <meta charset="utf-8">
   <title>{{ $title }}</title>
   <meta http-equiv="cleartype" content="on"/>
