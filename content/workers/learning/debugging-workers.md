@@ -7,7 +7,7 @@ pcx-content-type: concept
 
 Debugging is a critical part of developing a new application — whether running code in the initial stages of development, or trying to understand an issue occurring in production. In this article, you will learn how to effectively debug your Workers application, as well as review some code samples to help you get started:
 
-<bongo:youtube id="8iPmy7ePYDE" />
+{{<youtube id="8iPmy7ePYDE">}}
 
 ---
 
