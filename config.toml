@@ -1,0 +1,34 @@
+baseURL = "http://localhost:1313/"
+# baseURL = "https://developers.cloudflare.com"
+
+title = "Cloudflare Developers"
+languageCode = "en"
+DefaultContentLanguage = "en"
+disableHugoGeneratorInject = true
+enableRobotsTXT = true
+
+disableAliases = true
+disableKinds = ["taxonomy", "taxonomyTerm"]
+
+enableEmoji = true
+enableGitInfo = true
+
+rssLimit = 10
+
+paginate = 12 # default 10
+paginatePath = "page" # default
+
+[markup]
+	[markup.goldmark]
+		[markup.goldmark.renderer]
+			unsafe = true
+	[markup.highlight]
+		tabWidth = 2
+		style = "github"
+		codeFences = true
+		guessSyntax = true
+		lineNumbersInTable = true
+		noClasses = false
+		lineNoStart = 1
+		lineNos = false
+		hl_Lines = ""

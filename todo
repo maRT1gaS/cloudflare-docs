@@ -1,5 +1,5 @@
-- [ ] render markdown links w/ HTML (or change css)
-- [ ] header `id` values (linkable) – https://github.com/valeriangalliat/markdown-it-anchor
+- [x] render markdown links w/ HTML (or change css)
+- [x] header `id` values (linkable) – https://github.com/valeriangalliat/markdown-it-anchor
 - [x] frontmatter for code snippets (highlight, theme, etc)
 - [ ] (BIG) convert all engine components -> partials
 - [ ] (BIG) grab ALL markup output for 1:1 alignment
@@ -9,9 +9,28 @@
 - [ ] sidenav persist (`swaps` for content)
 - [ ] redirects
 
+- "federated search"??
+
 - [ ] (bongo) menus
 - [ ] (bongo) index pages
 - [ ] (bongo) fix `dev` assets
 - [ ] (bongo) allow `bongo:foo/bar` and `bongo:foo-bar`
 
+- [ ] (sidebar) dropdown JS
+- [ ] (sidebar) mobile toggle JS
+- [ ] (topbar) position for feedback
+- [ ] table of contents add/customize
+- [ ] update all code snippets --> customize output? probabyl not, change css instead
+- [ ] (baseof) icons / static product images
+- [ ] (baseof) sitemap, manifest, etc
+
+
 https://github.com/cloudflare/cloudflare-docs-engine/tree/master/src/components/mdx
+
+
+- broken link check -- https://github.com/marketplace/actions/hugo-broken-link-check
+- spell checker
+
+IMPROVES
+---
+- different description per page? everything the same within subsite
