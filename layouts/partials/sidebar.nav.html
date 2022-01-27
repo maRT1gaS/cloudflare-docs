@@ -1,6 +1,7 @@
 {{- $url := .Permalink -}}
 {{- $root := absURL (printf "/%s/" .Section) -}}
 {{- $title := (title .Section) -}}
+{{- $DATA := (.Scratch.Get "product") }}
 
 <div class="DocsSidebar">
   <div class="DocsSidebar--sections">
@@ -16,8 +17,7 @@
           </div>
 
           <span class="DocsNavLogoLockup--text">
-            <span data-text="Cloudflare">Cloudflare</span>
-            <span>&nbsp;</span>
+            <span data-text="Cloudflare">Cloudflare </span>
             <span data-text="Docs">Docs</span>
           </span>
         </div>
@@ -31,7 +31,7 @@
         <div class="DocsNavLogoLockup">
           <div class="DocsNavLogoLockup--logo">
             <span title="Cloudflare {{ $title }} logo">
-              {{- safeHTML (.Scratch.Get "product" ).logo -}}
+              {{- safeHTML $DATA.logo -}}
             </span>
           </div>
 
@@ -55,12 +55,11 @@
 
         <div class="DocsSidebar--section-more-dropdown Dropdown--dropdown">
           <ul class="Dropdown--list">
-            <li class="Dropdown--item">
-              <a class="Dropdown--link" href="https://1.1.1.1" tabindex="-1">1.1.1.1 website</a>
-            </li>
-            <li class="Dropdown--item">
-              <a class="Dropdown--link" href="https://cloudflare.com" tabindex="-1">Cloudflare homepage</a>
-            </li>
+            {{- range $DATA.externals -}}
+              <li class="Dropdown--item">
+                <a class="Dropdown--link" href="{{ .url }}" tabindex="-1">{{ .title }}</a>
+              </li>
+            {{- end -}}
           </ul>
         </div>
       </div>
