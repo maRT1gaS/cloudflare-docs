@@ -1,6 +1,8 @@
 ---
 title: Origin Cache-Control
 pcx-content-type: concept
+meta:
+  title: Origin Cache Control
 ---
 
 # Origin Cache Control

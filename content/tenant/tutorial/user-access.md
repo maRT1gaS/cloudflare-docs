@@ -1,7 +1,9 @@
 ---
-title: '2: User access'
+title: "2: User access"
 weight: 1
 pcx-content-type: tutorial
+meta:
+  title: "Step 2: User access"
 ---
 
 # Step 2: User access

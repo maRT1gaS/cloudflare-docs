@@ -2,6 +2,8 @@
 weight: 1
 pcx-content-type: navigation
 title: Cloudflare Tunnel
+meta:
+  title: Route traffic through a Cloudflare Tunnel
 ---
 
 # Route traffic through a Cloudflare Tunnel

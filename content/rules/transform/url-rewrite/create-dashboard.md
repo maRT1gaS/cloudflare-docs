@@ -2,6 +2,8 @@
 title: Create a rule in the dashboard
 pcx-content-type: how-to
 weight: 1
+meta:
+  title: Create a URL Rewrite Rule in the dashboard
 ---
 
 # Create a URL Rewrite Rule in the dashboard

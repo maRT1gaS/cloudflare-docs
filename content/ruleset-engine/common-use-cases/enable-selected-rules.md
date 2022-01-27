@@ -3,6 +3,8 @@ title: Enable only selected rules
 pcx-content-type: configuration
 alwaysopen: true
 weight: 773
+meta:
+  title: Use rulesets and rule overrides to only enable selected rules
 ---
 
 # Use rulesets and rule overrides to only enable selected rules

@@ -6,6 +6,7 @@ tags:
   - Security
   - Middleware
 pcx-content-type: configuration
+title: Block on TLS
 ---
 
 # Block on TLS

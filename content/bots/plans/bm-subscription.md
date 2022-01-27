@@ -4,6 +4,8 @@ weight: 3
 type: document
 pcx-content-type: reference
 hidden: true
+meta:
+  title: Plans — Bot Management for Enterprise
 ---
 
 import PlanIntro from '../_partials/_plan-intro.md';

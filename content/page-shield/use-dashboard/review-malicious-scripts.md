@@ -1,6 +1,7 @@
 ---
 weight: 2
 pcx-content-type: how-to
+title: Review scripts considered malicious
 ---
 
 # Review scripts considered malicious

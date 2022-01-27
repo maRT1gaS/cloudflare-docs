@@ -2,6 +2,8 @@
 title: Console Connect
 weight: 1
 pcx-content-type: tutorial
+meta:
+  title: Console Connect Users
 ---
 
 # Console Connect Users

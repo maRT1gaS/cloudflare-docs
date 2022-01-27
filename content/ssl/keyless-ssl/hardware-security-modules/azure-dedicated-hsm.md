@@ -1,6 +1,7 @@
 ---
 weight: 2
 pcx-content-type: tutorial
+title: Azure Dedicated HSM
 ---
 
 # Azure Dedicated HSM

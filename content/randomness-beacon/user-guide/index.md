@@ -1,6 +1,7 @@
 ---
 weight: 3
 pcx-content-type: reference
+title: User Guide
 ---
 
 # User Guide

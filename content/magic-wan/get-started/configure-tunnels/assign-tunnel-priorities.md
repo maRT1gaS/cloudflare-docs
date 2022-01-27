@@ -1,7 +1,9 @@
 ---
 title: Create static routes
-weight:
+weight: null
 pcx-content-type: how-to
+meta:
+  title: Assign tunnel route priorities
 ---
 
 # Assign tunnel route priorities

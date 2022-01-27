@@ -7,6 +7,7 @@ tags:
   - Originless
   - Authentication
 pcx-content-type: configuration
+title: HTTP "Basic" Authentication
 ---
 
 # HTTP "Basic" Authentication

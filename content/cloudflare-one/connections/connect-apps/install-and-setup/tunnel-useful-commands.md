@@ -1,6 +1,7 @@
 ---
 weight: 6
 pcx-content-type: reference
+title: Useful commands
 ---
 
 # Useful commands

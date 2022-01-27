@@ -2,6 +2,8 @@
 weight: 3
 title: Short-lived certificates
 pcx-content-type: how-to
+meta:
+  title: Configure short-lived certificates
 ---
 
 # Configure short-lived certificates

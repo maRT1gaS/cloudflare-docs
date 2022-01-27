@@ -1,6 +1,7 @@
 ---
 weight: 16
 pcx-content-type: concept
+title: Session affinity
 ---
 
 # Session affinity

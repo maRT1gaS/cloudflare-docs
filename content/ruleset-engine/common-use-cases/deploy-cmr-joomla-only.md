@@ -3,6 +3,8 @@ title: Enable only Joomla rules
 pcx-content-type: configuration
 alwaysopen: true
 weight: 772
+meta:
+  title: Use category overrides to enable Joomla rules
 ---
 
 # Use category overrides to enable Joomla rules

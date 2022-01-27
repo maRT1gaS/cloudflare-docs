@@ -1,6 +1,7 @@
 ---
 weight: 2
 pcx-content-type: how-to
+title: Upload video file
 ---
 
 # Upload video file

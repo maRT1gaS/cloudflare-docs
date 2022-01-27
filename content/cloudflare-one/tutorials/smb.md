@@ -2,6 +2,7 @@
 updated: 2021-03-30
 category: 🔐 Zero Trust
 pcx-content-type: tutorial
+title: Connect through Cloudflare Access to SMB file shares
 ---
 
 # Connect through Cloudflare Access to SMB file shares

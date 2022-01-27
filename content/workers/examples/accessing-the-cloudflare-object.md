@@ -1,11 +1,13 @@
 ---
 weight: 10
 type: example
-summary: Access custom Cloudflare properties and control how Cloudflare features are applied to every request.
+summary: Access custom Cloudflare properties and control how Cloudflare features
+  are applied to every request.
 demo: https://accessing-the-cloudflare-object.workers-sites-examples.workers.dev
 tags:
   - Originless
 pcx-content-type: configuration
+title: Accessing the  object
 ---
 
 # Accessing the `cf` object

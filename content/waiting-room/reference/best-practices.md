@@ -1,6 +1,7 @@
 ---
-weight:
+weight: null
 pcx-content-type: best-practices
+title: Best practices
 ---
 
 import ChangeQueueMethod from '../_partials/_change-queueing-method.md';

@@ -1,6 +1,7 @@
 ---
 weight: 38
 pcx-content-type: concept
+title: Data origin and collection
 ---
 
 # Data origin and collection

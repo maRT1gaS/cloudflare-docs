@@ -2,6 +2,8 @@
 weight: 1
 pcx-content-type: navigation
 title: Spectrum
+meta:
+  title: Add load balancing to Spectrum applications
 ---
 
 # Add load balancing to Spectrum applications

@@ -1,6 +1,7 @@
 ---
 weight: 105
 pcx-content-type: interim
+title: Sumo Logic
 ---
 
 # Sumo Logic

@@ -5,6 +5,7 @@ summary: Send a POST request with JSON data. Use to share data with external ser
 tags:
   - Originless
 pcx-content-type: configuration
+title: Post JSON
 ---
 
 # Post JSON

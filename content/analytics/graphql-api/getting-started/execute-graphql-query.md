@@ -1,6 +1,7 @@
 ---
 weight: 60
 pcx-content-type: interim
+title: Use curl to query the Analytics API
 ---
 
 # Use curl to query the Analytics API

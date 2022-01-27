@@ -1,6 +1,7 @@
 ---
 weight: 2
 pcx-content-type: concept
+title: Load balancers
 ---
 
 import LBDefinition from '../_partials/_load-balancer-definition.md';

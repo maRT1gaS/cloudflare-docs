@@ -1,6 +1,7 @@
 ---
 weight: 2
 pcx-content-type: navigation
+title: Analytics
 ---
 
 # Analytics

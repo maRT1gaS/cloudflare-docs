@@ -3,6 +3,8 @@ title: Decrypt the payload content
 pcx-content-type: how-to
 weight: 2
 type: overview
+meta:
+  title: Decrypt the payload content in the command line
 ---
 
 # Decrypt the payload content in the command line

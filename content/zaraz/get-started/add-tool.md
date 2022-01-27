@@ -1,6 +1,7 @@
 ---
 weight: 2
 pcx-content-type: how-to
+title: Add a third-party tool
 ---
 
 # Add a third-party tool

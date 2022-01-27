@@ -1,6 +1,8 @@
 ---
 title: Default cache behavior
 pcx-content-type: concept
+meta:
+  title: Default Cache Behavior
 ---
 
 # Default Cache Behavior

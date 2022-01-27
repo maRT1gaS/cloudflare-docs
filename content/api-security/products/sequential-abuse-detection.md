@@ -2,6 +2,7 @@
 weight: 3
 pcx-content-type: concept
 type: overview
+title: Sequential Abuse Detection
 ---
 
 import Availability from '../_partials/_availability.md';

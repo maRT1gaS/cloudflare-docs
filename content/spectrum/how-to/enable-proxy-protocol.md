@@ -1,6 +1,7 @@
 ---
-weight:
+weight: null
 pcx-content-type: configuration
+title: Enable Proxy protocol
 ---
 
 # Enable Proxy protocol

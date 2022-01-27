@@ -1,6 +1,7 @@
 ---
 weight: 2
 pcx-content-type: concept
+title: Detecting malicious scripts
 ---
 
 # Detecting malicious scripts

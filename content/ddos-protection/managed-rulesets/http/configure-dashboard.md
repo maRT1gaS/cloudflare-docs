@@ -2,6 +2,8 @@
 title: Configure the Managed Ruleset in the dashboard
 pcx-content-type: how-to
 weight: 1
+meta:
+  title: Configure HTTP DDoS Attack Protection in the dashboard
 ---
 
 # Configure HTTP DDoS Attack Protection in the dashboard

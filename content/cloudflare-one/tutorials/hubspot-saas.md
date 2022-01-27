@@ -2,6 +2,7 @@
 updated: 2021-09-20
 category: 🔐 Zero Trust
 pcx-content-type: tutorial
+title: Configure a Hubspot account for Access for SaaS
 ---
 
 # Configure a Hubspot account for Access for SaaS

@@ -1,6 +1,7 @@
 ---
 pcx-content-type: how-to
 type: overview
+title: Configure webhooks
 ---
 
 <ContentColumn>

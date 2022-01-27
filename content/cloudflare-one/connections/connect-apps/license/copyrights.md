@@ -1,6 +1,7 @@
 ---
 weight: 101
 pcx-content-type: reference
+title: Copyrights
 ---
 
 # Copyrights

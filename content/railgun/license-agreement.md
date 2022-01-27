@@ -2,6 +2,8 @@
 title: License agreement
 weight: 20
 pcx-content-type: reference
+meta:
+  title: License
 ---
 
 # License

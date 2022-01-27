@@ -1,7 +1,9 @@
 ---
 title: Windows
-weight:
+weight: null
 pcx-content-type: how-to
+meta:
+  title: Windows desktop client
 ---
 
 # Windows desktop client

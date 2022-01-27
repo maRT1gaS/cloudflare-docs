@@ -1,6 +1,7 @@
 ---
 weight: 9
 pcx-content-type: reference
+title: Common API calls
 ---
 
 # Common API calls

@@ -2,6 +2,7 @@
 updated: 2020-08-13
 difficulty: Beginner
 pcx-content-type: tutorial
+title: Migrating from Workers Sites to Pages
 ---
 
 # Migrating from Workers Sites to Pages

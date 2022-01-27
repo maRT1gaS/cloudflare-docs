@@ -1,10 +1,12 @@
 ---
 weight: 1000
 type: example
-summary: Send two GET request to two urls and aggregates the responses into one response.
+summary: Send two GET request to two urls and aggregates the responses into one
+  response.
 tags:
   - Originless
 pcx-content-type: configuration
+title: Aggregate requests
 ---
 
 # Aggregate requests

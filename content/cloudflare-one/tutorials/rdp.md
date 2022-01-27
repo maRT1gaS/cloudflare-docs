@@ -2,6 +2,7 @@
 updated: 2021-06-14
 category: 🔐 Zero Trust
 pcx-content-type: tutorial
+title: Connect through Cloudflare Access over RDP
 ---
 
 # Connect through Cloudflare Access over RDP

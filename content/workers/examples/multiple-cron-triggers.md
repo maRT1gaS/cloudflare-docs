@@ -5,6 +5,7 @@ summary: Set multiple Cron Triggers on three different schedules.
 tags:
   - Middleware
 pcx-content-type: configuration
+title: Multiple Cron Triggers
 ---
 
 # Multiple Cron Triggers

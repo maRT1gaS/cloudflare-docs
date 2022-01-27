@@ -2,6 +2,8 @@
 title: Potential problems and common issues
 weight: 7
 pcx-content-type: tutorial
+meta:
+  title: Potential problems
 ---
 
 # Potential problems

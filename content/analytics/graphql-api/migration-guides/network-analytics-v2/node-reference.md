@@ -1,6 +1,7 @@
 ---
 pcx-content-type: reference
 weight: 3
+title: NAv2 node reference
 ---
 
 # NAv2 node reference

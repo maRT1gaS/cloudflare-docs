@@ -2,6 +2,7 @@
 weight: 2
 pcx-content-type: concept
 type: overview
+title: Volumetric Abuse Detection
 ---
 
 import Availability from '../_partials/_availability.md';

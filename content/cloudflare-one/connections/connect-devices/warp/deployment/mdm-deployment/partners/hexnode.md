@@ -1,5 +1,6 @@
 ---
 weight: 1
+title: Hexnode
 ---
 
 # Hexnode

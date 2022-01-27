@@ -1,6 +1,7 @@
 ---
 weight: 2
 pcx-content-type: how-to
+title: DNS over TLS
 ---
 
 # DNS over TLS

@@ -1,6 +1,7 @@
 ---
 weight: 0
 pcx-content-type: interim
+title: Setup Phase
 ---
 
 # Setup Phase

@@ -2,6 +2,8 @@
 weight: 1
 title: Get started
 pcx-content-type: how-to
+meta:
+  title: Enable Image Resizing
 ---
 
 # Enable Image Resizing

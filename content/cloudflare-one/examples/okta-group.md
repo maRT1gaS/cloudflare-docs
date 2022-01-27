@@ -4,6 +4,7 @@ type: example
 summary: Allow members of an Okta Group.
 tags:
   - Okta® Group
+title: Okta® Group
 ---
 
 # Okta® Group

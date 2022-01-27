@@ -4,6 +4,7 @@ type: example
 summary: Allow members of an Azure Group. The ID is the group UUID (`id`) in Azure.
 tags:
   - Azure® Group
+title: Azure® Group
 ---
 
 # Azure® Group

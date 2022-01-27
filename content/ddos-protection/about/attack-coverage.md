@@ -3,6 +3,8 @@ title: Attack coverage
 pcx-content-type: reference
 weight: 2
 type: overview
+meta:
+  title: DDoS attack coverage
 ---
 
 # DDoS attack coverage

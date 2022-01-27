@@ -1,6 +1,7 @@
 ---
 weight: 5
 pcx-content-type: tutorial
+title: Entrust nShield Connect
 ---
 
 # Entrust nShield Connect

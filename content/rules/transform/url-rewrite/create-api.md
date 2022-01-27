@@ -3,6 +3,8 @@ title: Create a rule via API
 pcx-content-type: how-to
 type: overview
 weight: 2
+meta:
+  title: Create a URL Rewrite Rule via API
 ---
 
 # Create a URL Rewrite Rule via API

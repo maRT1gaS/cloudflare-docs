@@ -1,6 +1,7 @@
 ---
 weight: 3
 pcx-content-type: tutorial
+title: Configure your mobile app or IoT device
 ---
 
 # Configure your mobile app or IoT device

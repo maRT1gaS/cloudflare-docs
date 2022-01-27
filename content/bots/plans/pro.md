@@ -4,6 +4,8 @@ weight: 1
 type: document
 pcx-content-type: reference
 hidden: true
+meta:
+  title: Plans — Pro
 ---
 
 import PlanIntro from '../_partials/_plan-intro.md';

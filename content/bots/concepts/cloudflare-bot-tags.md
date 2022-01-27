@@ -2,6 +2,7 @@
 weight: 2
 type: overview
 pcx-content-type: reference
+title: Bot Tags
 ---
 
 # Bot Tags

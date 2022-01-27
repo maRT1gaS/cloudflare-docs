@@ -2,6 +2,8 @@
 title: Enable Datadog
 weight: 58
 pcx-content-type: how-to
+meta:
+  title: Enable Logpush to Datadog
 ---
 
 import EnableReadPermissions from '../../../_partials/_enable-read-permissions.md';

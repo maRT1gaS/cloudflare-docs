@@ -2,6 +2,7 @@
 updated: 2021-08-19
 category: 🔐 Zero Trust
 pcx-content-type: tutorial
+title: Integrate Microsoft MCAS with Teams
 ---
 
 # Integrate Microsoft MCAS with Teams

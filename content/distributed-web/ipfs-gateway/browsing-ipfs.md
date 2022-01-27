@@ -1,6 +1,7 @@
 ---
 weight: 1
 pcx-content-type: tutorial
+title: Browsing Content on IPFS
 ---
 
 # Browsing Content on IPFS

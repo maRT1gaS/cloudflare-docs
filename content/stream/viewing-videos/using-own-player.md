@@ -1,6 +1,7 @@
 ---
 weight: 2
 pcx-content-type: reference
+title: Using own player
 ---
 
 # Using own player

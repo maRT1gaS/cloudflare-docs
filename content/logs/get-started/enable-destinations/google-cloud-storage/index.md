@@ -1,6 +1,7 @@
 ---
 weight: 60
 pcx-content-type: how-to
+title: Enable Google Cloud Storage
 ---
 
 import EnableReadPermissions from '../../../_partials/_enable-read-permissions.md';

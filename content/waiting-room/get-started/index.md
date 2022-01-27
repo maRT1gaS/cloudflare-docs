@@ -1,6 +1,7 @@
 ---
 weight: 1
 pcx-content-type: tutorial
+title: Get started
 ---
 
 import QueueAll from '../_partials/_queue-all.md';

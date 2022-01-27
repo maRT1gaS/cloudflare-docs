@@ -2,6 +2,8 @@
 title: Future of Drand
 weight: 2
 pcx-content-type: concept
+meta:
+  title: What do you see as the future of this project?
 ---
 
 # What do you see as the future of this project?

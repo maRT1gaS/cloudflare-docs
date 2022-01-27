@@ -1,6 +1,7 @@
 ---
 weight: 10
 pcx-content-type: how-to
+title: Deploy  replicas
 ---
 
 # Deploy `cloudflared` replicas

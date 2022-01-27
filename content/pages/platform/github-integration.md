@@ -1,6 +1,7 @@
 ---
 weight: 1
 pcx-content-type: concept
+title: GitHub integration
 ---
 
 # GitHub integration

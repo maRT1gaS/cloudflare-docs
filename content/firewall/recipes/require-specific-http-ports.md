@@ -1,5 +1,6 @@
 ---
 pcx-content-type: configuration
+title: Require specific HTTP ports
 ---
 
 # Require specific HTTP ports

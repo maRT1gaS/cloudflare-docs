@@ -1,6 +1,7 @@
 ---
 weight: 0
 pcx-content-type: how-to
+title: Manage advanced certificates
 ---
 
 import DCVDefinition from '../../_partials/_dcv-definition.md';

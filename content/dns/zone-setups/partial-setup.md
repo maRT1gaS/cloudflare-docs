@@ -1,6 +1,7 @@
 ---
 weight: 1
 pcx-content-type: tutorial
+title: Partial (CNAME) setup
 ---
 
 # Partial (CNAME) setup

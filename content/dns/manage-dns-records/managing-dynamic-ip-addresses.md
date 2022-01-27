@@ -1,6 +1,7 @@
 ---
-weight:
+weight: null
 pcx-content-type: reference
+title: Use dynamic IP addresses
 ---
 
 # Use dynamic IP addresses

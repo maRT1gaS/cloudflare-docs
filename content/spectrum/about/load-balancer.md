@@ -1,6 +1,7 @@
 ---
-weight:
+weight: null
 pcx-content-type: concept
+title: Cloudflare Load Balancer
 ---
 
 # Cloudflare Load Balancer

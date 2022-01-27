@@ -1,6 +1,7 @@
 ---
 weight: 11
 pcx-content-type: reference
+title: Zone Analytics to GraphQL Analytics
 ---
 
 # Zone Analytics to GraphQL Analytics

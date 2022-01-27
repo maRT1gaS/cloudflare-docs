@@ -1,6 +1,7 @@
 ---
-weight:
+weight: null
 pcx-content-type: tutorial
+title: Get started
 ---
 
 # Get started

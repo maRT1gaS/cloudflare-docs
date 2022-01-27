@@ -1,6 +1,7 @@
 ---
 pcx-content-type: interim
 weight: 3
+title: Release notes
 ---
 
 # Release notes

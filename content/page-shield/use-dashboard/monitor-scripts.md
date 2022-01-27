@@ -2,6 +2,8 @@
 title: Monitor scripts
 weight: 1
 pcx-content-type: how-to
+meta:
+  title: Monitor scripts on your site
 ---
 
 # Monitor scripts on your site

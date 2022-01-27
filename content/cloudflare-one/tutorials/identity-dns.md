@@ -2,6 +2,7 @@
 updated: 2021-04-27
 category: 🛡️ Web Gateway
 pcx-content-type: tutorial
+title: Filter DNS based on users and groups
 ---
 
 # Filter DNS based on users and groups

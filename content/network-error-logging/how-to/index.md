@@ -1,6 +1,8 @@
 ---
 title: How to
 pcx-content-type: how-to
+meta:
+  title: View Reports
 ---
 
 import Beta from '../_partials/_beta.md';

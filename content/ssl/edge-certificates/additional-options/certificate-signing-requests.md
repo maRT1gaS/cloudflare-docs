@@ -1,6 +1,7 @@
 ---
 weight: 10
 pcx-content-type: how-to
+title: Certificate Signing Requests (CSRs)
 ---
 
 import CSRDefinition from '../../_partials/_csr-definition.md';

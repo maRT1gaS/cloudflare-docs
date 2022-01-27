@@ -1,5 +1,6 @@
 ---
 pcx-content-type: tutorial
+title: Transfer your domain to Cloudflare
 ---
 
 import BeforeYouBegin from '../_partials/_before-you-begin.md';

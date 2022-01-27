@@ -1,6 +1,7 @@
 ---
 weight: 18
 pcx-content-type: reference
+title: Additional details
 ---
 
 # Additional details

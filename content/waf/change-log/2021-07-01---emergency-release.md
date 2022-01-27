@@ -1,7 +1,9 @@
 ---
-title: '2021-07-01 – Emergency'
+title: 2021-07-01 – Emergency
 type: table
 weight: 936
+meta:
+  title: 2021-07-01 – Emergency Release
 ---
 
 # 2021-07-01 – Emergency Release

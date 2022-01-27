@@ -2,6 +2,7 @@
 pcx-content-type: configuration
 alwaysopen: true
 weight: 775
+title: Adjust the sensitivity of a specific HTTP DDoS rule to Low
 ---
 
 # Adjust the sensitivity of a specific HTTP DDoS rule to Low

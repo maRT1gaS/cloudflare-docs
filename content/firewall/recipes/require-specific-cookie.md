@@ -1,5 +1,6 @@
 ---
 pcx-content-type: configuration
+title: Require a specific cookie
 ---
 
 # Require a specific cookie

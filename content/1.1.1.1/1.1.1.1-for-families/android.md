@@ -1,6 +1,8 @@
 ---
 title: Android
 pcx-content-type: how-to
+meta:
+  title: Set up 1.1.1.1 for Families - Android
 ---
 
 import CaptivePortals from '../_partials/_captive-portals.md';

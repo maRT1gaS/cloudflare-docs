@@ -1,6 +1,7 @@
 ---
-weight:
+weight: null
 pcx-content-type: reference
+title: Types of DNS records
 ---
 
 # Types of DNS records

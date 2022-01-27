@@ -1,6 +1,7 @@
 ---
 weight: 2
 pcx-content-type: concept
+title: Certificate Transparency Monitoring
 ---
 
 import CertTransparencyDefinition from '../../_partials/_cert-transparency-monitoring-definition.md';

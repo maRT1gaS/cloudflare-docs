@@ -2,6 +2,8 @@
 title: Manage custom certificates
 weight: 5
 pcx-content-type: how-to
+meta:
+  title: Manage custom certificates — SSL for SaaS
 ---
 
 import CustomCertExample from '../../_partials/_custom-cert-file-example.md';

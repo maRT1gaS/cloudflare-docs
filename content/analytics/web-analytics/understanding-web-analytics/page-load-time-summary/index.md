@@ -1,6 +1,7 @@
 ---
 weight: 42
 pcx-content-type: reference
+title: Page load time summary
 ---
 
 # Page load time summary

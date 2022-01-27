@@ -6,6 +6,7 @@ tags:
   - Middleware
   - Headers
 pcx-content-type: configuration
+title: HTTP2 server push
 ---
 
 # HTTP2 server push

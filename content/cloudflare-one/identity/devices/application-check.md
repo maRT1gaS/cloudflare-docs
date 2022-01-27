@@ -1,6 +1,7 @@
 ---
 weight: 11
 pcx-content-type: how-to
+title: Application Check
 ---
 
 # Application Check

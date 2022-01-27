@@ -1,6 +1,7 @@
 ---
 weight: 3
 pcx-content-type: tutorial
+title: Azure Managed HSM
 ---
 
 # Azure Managed HSM

@@ -1,6 +1,7 @@
 ---
 weight: 85
 pcx-content-type: interim
+title: Parse Cloudflare Logs JSON data
 ---
 
 # Parse Cloudflare Logs JSON data

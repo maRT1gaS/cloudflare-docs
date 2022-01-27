@@ -1,6 +1,7 @@
 ---
 weight: 6
 pcx-content-type: navigation
+title: Mutual authentication
 ---
 
 # Mutual authentication

@@ -6,6 +6,7 @@ tags:
   - Security
   - Headers
 pcx-content-type: configuration
+title: CORS header proxy
 ---
 
 # CORS header proxy

@@ -1,6 +1,7 @@
 ---
 pcx-content-type: concept
 weight: 250
+title: API Shield™
 ---
 
 # API Shield™

@@ -6,6 +6,7 @@ demo: https://returning-html.workers-sites-examples.workers.dev
 tags:
   - Originless
 pcx-content-type: configuration
+title: Return small HTML page
 ---
 
 # Return small HTML page

@@ -2,6 +2,8 @@
 title: Troubleshooting
 weight: 5
 pcx-content-type: faq
+meta:
+  title: Troubleshoot Cloudflare Page Shield
 ---
 
 # Troubleshoot Cloudflare Page Shield

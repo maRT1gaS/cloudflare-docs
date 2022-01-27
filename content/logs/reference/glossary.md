@@ -1,6 +1,7 @@
 ---
 weight: 121
 pcx-content-type: interim
+title: Glossary
 ---
 
 # Glossary

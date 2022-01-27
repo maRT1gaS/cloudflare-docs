@@ -2,6 +2,8 @@
 title: Web standards
 weight: 0
 pcx-content-type: configuration
+meta:
+  title: JavaScript and web standards
 ---
 
 # JavaScript and web standards

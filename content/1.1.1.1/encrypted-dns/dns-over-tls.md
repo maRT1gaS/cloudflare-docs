@@ -1,6 +1,7 @@
 ---
-weight:
+weight: null
 pcx-content-type: concept
+title: DNS over TLS
 ---
 
 # DNS over TLS

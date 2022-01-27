@@ -1,6 +1,7 @@
 ---
 weight: 1
 pcx-content-type: concept
+title: Shadow IT Discovery
 ---
 
 # Shadow IT Discovery

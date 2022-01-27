@@ -1,6 +1,8 @@
 ---
 title: WritableStream DefaultWriter
 pcx-content-type: configuration
+meta:
+  title: WritableStreamDefaultWriter
 ---
 
 <!-- The space in the title was introduced to create a pleasing line-break in the title in the sidebar. -->

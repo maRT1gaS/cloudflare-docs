@@ -1,6 +1,7 @@
 ---
 weight: 14
 pcx-content-type: interim
+title: Requesting logs
 ---
 
 # Requesting logs

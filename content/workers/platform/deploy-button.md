@@ -1,6 +1,7 @@
 ---
 weight: 8
 pcx-content-type: concept
+title: Deploy button
 ---
 
 # Deploy button

@@ -2,6 +2,8 @@
 title: API parameter reference
 pcx-content-type: reference
 weight: 4
+meta:
+  title: URL rewrite API parameter reference
 ---
 
 # URL rewrite API parameter reference

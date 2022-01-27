@@ -1,6 +1,7 @@
 ---
 weight: 2
 pcx-content-type: how-to
+title: Create a client certificate
 ---
 
 # Create a client certificate

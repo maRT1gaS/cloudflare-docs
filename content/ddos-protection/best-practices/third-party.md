@@ -2,6 +2,8 @@
 title: Third-party services and DDoS protection
 pcx-content-type: reference
 weight: 1
+meta:
+  title: Third-party services and Cloudflare DDoS protection
 ---
 
 # Third-party services and Cloudflare DDoS protection

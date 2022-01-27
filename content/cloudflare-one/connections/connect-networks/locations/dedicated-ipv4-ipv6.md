@@ -1,6 +1,7 @@
 ---
 weight: 1
 pcx-content-type: concept
+title: Dedicated destination IPv4 and IPv6 addresses
 ---
 
 # Dedicated destination IPv4 and IPv6 addresses

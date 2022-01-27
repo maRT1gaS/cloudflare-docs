@@ -1,6 +1,7 @@
 ---
 weight: 11
 pcx-content-type: how-to
+title: OneLogin OIDC
 ---
 
 # OneLogin OIDC

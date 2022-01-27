@@ -1,6 +1,7 @@
 ---
 pcx-content-type: concept
 weight: 5
+title: Monitor exposed credentials events
 ---
 
 # Monitor exposed credentials events

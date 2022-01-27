@@ -2,6 +2,8 @@
 title: Analytics
 weight: 45
 pcx-content-type: how-to
+meta:
+  title: Load balancing analytics
 ---
 
 # Load balancing analytics

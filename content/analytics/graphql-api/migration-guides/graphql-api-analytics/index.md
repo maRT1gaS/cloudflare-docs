@@ -2,6 +2,9 @@
 title: HTTP Requests by Colo Groups to HTTP Requests by Adaptive Groups
 weight: 10
 pcx-content-type: reference
+meta:
+  title: httpRequests1mByColoGroups/httpRequests1dByColoGroups to
+    httpRequestsAdaptiveGroups
 ---
 
 # httpRequests1mByColoGroups/httpRequests1dByColoGroups to httpRequestsAdaptiveGroups

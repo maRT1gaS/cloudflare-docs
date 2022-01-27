@@ -1,6 +1,7 @@
 ---
 weight: 9
 pcx-content-type: how-to
+title: SAML | Keycloak
 ---
 
 # SAML | Keycloak

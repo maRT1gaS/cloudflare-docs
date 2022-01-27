@@ -1,6 +1,7 @@
 ---
 weight: 2
 pcx-content-type: faq
+title: General
 ---
 
 [❮ Back to FAQ](/faq)

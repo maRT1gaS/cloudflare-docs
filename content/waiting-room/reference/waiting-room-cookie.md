@@ -1,5 +1,6 @@
 ---
 pcx-content-type: reference
+title: Cookies
 ---
 
 # Cookies

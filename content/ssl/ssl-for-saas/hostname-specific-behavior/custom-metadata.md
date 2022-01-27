@@ -1,6 +1,7 @@
 ---
 weight: 1
 pcx-content-type: interim
+title: Custom metadata
 ---
 
 import PlanLimitation from '../../_partials/_ssl-for-saas-plan-limitation.md';

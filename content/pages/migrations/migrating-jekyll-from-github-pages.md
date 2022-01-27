@@ -2,6 +2,7 @@
 updated: 2021-07-27
 difficulty: Beginner
 pcx-content-type: tutorial
+title: Migrating a Jekyll-based site from GitHub Pages
 ---
 
 # Migrating a Jekyll-based site from GitHub Pages

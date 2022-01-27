@@ -1,7 +1,9 @@
 ---
 title: Region Mapping API
-weight:
+weight: null
 pcx-content-type: reference
+meta:
+  title: Cloudflare Region Mapping API
 ---
 
 import RegionMapping from '../_partials/_region-mapping.md';

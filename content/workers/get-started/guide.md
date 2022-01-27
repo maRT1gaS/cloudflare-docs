@@ -1,7 +1,9 @@
 ---
 weight: 1
-title: 'Guide'
+title: Guide
 pcx-content-type: how-to
+meta:
+  title: Get started guide
 ---
 
 # Get started guide

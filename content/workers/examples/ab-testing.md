@@ -5,6 +5,7 @@ summary: Set up an A/B test by controlling what response is served based on cook
 tags:
   - Originless
 pcx-content-type: configuration
+title: A/B testing
 ---
 
 # A/B testing

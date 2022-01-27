@@ -1,5 +1,6 @@
 ---
 pcx-content-type: how-to
+title: Edit a PagerDuty connected service
 ---
 
 # Edit a PagerDuty connected service

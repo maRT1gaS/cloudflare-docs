@@ -1,10 +1,12 @@
 ---
 weight: 5
 type: example
-summary: Redirect requests from one URL to another, or from one set of URLs to another set.
+summary: Redirect requests from one URL to another, or from one set of URLs to
+  another set.
 tags:
   - Middleware
 pcx-content-type: configuration
+title: Redirect
 ---
 
 # Redirect

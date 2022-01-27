@@ -1,6 +1,7 @@
 ---
 weight: 11
 pcx-content-type: concept
+title: Using WebSockets
 ---
 
 # Using WebSockets

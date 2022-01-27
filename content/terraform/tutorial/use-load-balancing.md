@@ -2,6 +2,8 @@
 title: 5 – Improve performance
 weight: 5
 pcx-content-type: tutorial
+meta:
+  title: Improve performance and reliability
 ---
 
 # Improve performance and reliability

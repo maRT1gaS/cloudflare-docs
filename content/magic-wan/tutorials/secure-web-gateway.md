@@ -1,6 +1,8 @@
 ---
 title: Secure Web Gateway
 pcx-content-type: tutorial
+meta:
+  title: Connect to Secure Web Gateway with Magic WAN
 ---
 
 # Connect to Secure Web Gateway with Magic WAN

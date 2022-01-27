@@ -2,6 +2,8 @@
 title: Domain Control Validation (DCV)
 weight: 3
 pcx-content-type: how-to
+meta:
+  title: Domain Control Validation (DCV) — SSL/TLS
 ---
 
 import DCVDefinition from '../_partials/_dcv-definition.md';

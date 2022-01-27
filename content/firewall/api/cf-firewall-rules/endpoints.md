@@ -2,6 +2,7 @@
 pcx-content-type: reference
 type: table
 weight: 415
+title: Endpoints
 ---
 
 # Endpoints

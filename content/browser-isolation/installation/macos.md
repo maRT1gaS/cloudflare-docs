@@ -1,6 +1,8 @@
 ---
 title: macOS
 weight: 3
+meta:
+  title: Installation on macOS
 ---
 
 # Installation on macOS

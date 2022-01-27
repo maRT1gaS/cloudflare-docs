@@ -1,6 +1,7 @@
 ---
 weight: 71
 pcx-content-type: concept
+title: DNS
 ---
 
 # DNS

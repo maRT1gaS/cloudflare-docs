@@ -2,6 +2,8 @@
 title: Create via dashboard
 weight: 0
 pcx-content-type: how-to
+meta:
+  title: Create a waiting room from the dashboard
 ---
 
 # Create a waiting room from the dashboard

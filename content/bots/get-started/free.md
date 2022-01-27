@@ -2,6 +2,8 @@
 title: Free
 weight: 0
 pcx-content-type: how-to
+meta:
+  title: Get started with Bot Fight Mode
 ---
 
 # Get started with Bot Fight Mode

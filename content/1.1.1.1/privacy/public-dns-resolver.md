@@ -1,7 +1,9 @@
 ---
-weight:
+weight: null
 title: 1.1.1.1 Public DNS Resolver
 pcx-content-type: reference
+meta:
+  title: 1.1.1.1 Public DNS ResolverWhat about requests for content blocking?
 ---
 
 # 1.1.1.1 Public DNS Resolver

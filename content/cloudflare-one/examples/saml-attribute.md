@@ -4,6 +4,7 @@ type: example
 summary: Allow users with specific SAML attributes.
 tags:
   - SAML Attribute
+title: SAML Attribute
 ---
 
 # SAML Attribute

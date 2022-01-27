@@ -2,6 +2,8 @@
 title: Configure BGP and GRE
 weight: 5
 pcx-content-type: tutorial
+meta:
+  title: Configure the BGP and GRE
 ---
 
 # Configure the BGP and GRE

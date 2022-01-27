@@ -1,6 +1,7 @@
 ---
 weight: 40
 pcx-content-type: concept
+title: Core Web Vitals
 ---
 
 # Core Web Vitals

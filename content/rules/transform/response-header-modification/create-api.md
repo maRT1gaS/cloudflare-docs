@@ -3,6 +3,8 @@ title: Create a rule via API
 pcx-content-type: how-to
 type: overview
 weight: 2
+meta:
+  title: Create an HTTP Response Header Modification Rule via API
 ---
 
 # Create an HTTP Response Header Modification Rule via API

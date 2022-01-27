@@ -1,6 +1,7 @@
 ---
 weight: 20
 pcx-content-type: how-to
+title: Configure an Analytics API token
 ---
 
 # Configure an Analytics API token

@@ -1,5 +1,6 @@
 ---
 pcx-content-type: how-to
+title: Install private packages
 ---
 
 # Install private packages

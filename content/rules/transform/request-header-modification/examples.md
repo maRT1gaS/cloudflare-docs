@@ -1,6 +1,7 @@
 ---
 pcx-content-type: configuration
 weight: 4
+title: Request header modification examples
 ---
 
 # Request header modification examples

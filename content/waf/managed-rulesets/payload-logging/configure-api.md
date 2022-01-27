@@ -2,6 +2,8 @@
 title: Configure payload logging via API
 pcx-content-type: how-to
 weight: 3
+meta:
+  title: Configure payload logging for a Managed Ruleset via API
 ---
 
 # Configure payload logging for a Managed Ruleset via API

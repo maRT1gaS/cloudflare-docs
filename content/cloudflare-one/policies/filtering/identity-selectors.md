@@ -1,6 +1,7 @@
 ---
 weight: 5
 pcx-content-type: reference
+title: Create identity-based policies
 ---
 
 # Create identity-based policies

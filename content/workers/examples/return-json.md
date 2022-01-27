@@ -1,12 +1,14 @@
 ---
 weight: 1
 type: example
-summary: Return JSON directly from a Worker script, useful for building APIs and middleware.
+summary: Return JSON directly from a Worker script, useful for building APIs and
+  middleware.
 demo: https://returning-json.workers-sites-examples.workers.dev
 tags:
   - JSON
   - Originless
 pcx-content-type: configuration
+title: Return JSON
 ---
 
 # Return JSON

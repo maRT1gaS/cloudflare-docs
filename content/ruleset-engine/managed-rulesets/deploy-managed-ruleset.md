@@ -2,6 +2,7 @@
 pcx-content-type: how-to
 alwaysopen: true
 weight: 751
+title: Deploy a Managed Ruleset
 ---
 
 # Deploy a Managed Ruleset

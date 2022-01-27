@@ -1,6 +1,7 @@
 ---
 weight: 87
 pcx-content-type: tutorial
+title: Manage Logpush with cURL
 ---
 
 # Manage Logpush with cURL

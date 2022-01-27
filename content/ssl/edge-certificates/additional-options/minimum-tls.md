@@ -1,6 +1,7 @@
 ---
 weight: 12
 pcx-content-type: concept
+title: Minimum TLS Version
 ---
 
 import MinimumTLSDefinition from '../../_partials/_minimum-tls-definition.md';

@@ -1,6 +1,8 @@
 ---
 title: Use rules lists
 pcx-content-type: how-to
+meta:
+  title: Define a Rules ListAdd IPs to the ListUse the List in a Rule
 ---
 
 # Define a Rules List

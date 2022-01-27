@@ -1,6 +1,7 @@
 ---
 weight: 3
 pcx-content-type: reference
+title: dataLayer compatibility mode
 ---
 
 # dataLayer compatibility mode

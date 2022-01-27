@@ -1,6 +1,7 @@
 ---
 weight: 40
 pcx-content-type: reference
+title: Sampling
 ---
 
 # Sampling

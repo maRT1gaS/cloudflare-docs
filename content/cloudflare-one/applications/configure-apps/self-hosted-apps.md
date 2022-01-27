@@ -1,6 +1,7 @@
 ---
 weight: 1
 pcx-content-type: how-to
+title: Self-hosted applications
 ---
 
 # Self-hosted applications

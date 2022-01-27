@@ -2,6 +2,8 @@
 title: Enterprise Bot Management
 weight: 3
 pcx-content-type: tutorial
+meta:
+  title: Get started with Bot Management for Enterprise
 ---
 
 import StaticResourcesBM from '../_partials/_static-resources-bm.md';

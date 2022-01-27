@@ -1,5 +1,6 @@
 ---
 pcx-content-type: configuration
+title: Update firewall rules for customers or partners
 ---
 
 # Update firewall rules for customers or partners

@@ -2,6 +2,8 @@
 title: Get started
 weight: 0
 pcx-content-type: tutorial
+meta:
+  title: Get started with SSL for SaaS
 ---
 
 import IssueCertsPreamble from '../_partials/_issue-certs-preamble.md';

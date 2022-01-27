@@ -6,6 +6,7 @@ tags:
   - Headers
   - Middleware
 pcx-content-type: configuration
+title: Alter headers
 ---
 
 # Alter headers

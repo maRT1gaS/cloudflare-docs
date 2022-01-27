@@ -1,6 +1,7 @@
 ---
 weight: 4
 pcx-content-type: common-configurations
+title: Application paths
 ---
 
 # Application paths

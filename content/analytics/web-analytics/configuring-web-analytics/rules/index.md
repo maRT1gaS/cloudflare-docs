@@ -1,6 +1,7 @@
 ---
 weight: 41
 pcx-content-type: how-to
+title: Rules
 ---
 
 # Rules

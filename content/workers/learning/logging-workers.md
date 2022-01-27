@@ -1,6 +1,7 @@
 ---
 weight: 4
 pcx-content-type: concept
+title: Logging from Workers
 ---
 
 # Logging from Workers

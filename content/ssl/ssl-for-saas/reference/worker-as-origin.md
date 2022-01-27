@@ -1,6 +1,7 @@
 ---
-weight:
+weight: null
 pcx-content-type: how-to
+title: Using a Worker as your origin
 ---
 
 # Using a Worker as your origin

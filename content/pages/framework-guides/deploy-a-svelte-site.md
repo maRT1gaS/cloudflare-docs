@@ -1,5 +1,6 @@
 ---
 pcx-content-type: how-to
+title: Deploy a Svelte site
 ---
 
 import TutorialsBeforeYouStart from '../_partials/_tutorials-before-you-start.md';

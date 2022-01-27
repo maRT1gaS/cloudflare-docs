@@ -1,6 +1,7 @@
 ---
 weight: 14
 pcx-content-type: tutorial
+title: Load shedding
 ---
 
 # Load shedding

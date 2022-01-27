@@ -1,6 +1,7 @@
 ---
 weight: 50
 pcx-content-type: reference
+title: Supported fields and operators
 ---
 
 # Supported fields and operators

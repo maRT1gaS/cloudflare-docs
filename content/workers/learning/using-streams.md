@@ -1,6 +1,7 @@
 ---
 weight: 9
 pcx-content-type: concept
+title: Using Streams
 ---
 
 # Using Streams

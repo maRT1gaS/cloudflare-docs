@@ -2,6 +2,8 @@
 title: 4 – Set up rate limiting
 weight: 4
 pcx-content-type: tutorial
+meta:
+  title: Set up rate limiting
 ---
 
 # Set up rate limiting

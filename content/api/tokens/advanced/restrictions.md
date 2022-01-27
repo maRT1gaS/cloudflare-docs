@@ -1,5 +1,6 @@
 ---
 weight: 5
+title: Restricting token use
 ---
 
 # Restricting token use

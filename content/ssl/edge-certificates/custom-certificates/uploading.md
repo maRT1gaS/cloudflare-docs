@@ -1,6 +1,7 @@
 ---
 weight: 1
 pcx-content-type: how-to
+title: Manage custom certificates
 ---
 
 import CAADefinition from '../../_partials/_caa-records-definition.md';

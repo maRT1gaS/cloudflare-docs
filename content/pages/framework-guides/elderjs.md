@@ -1,5 +1,6 @@
 ---
 pcx-content-type: how-to
+title: Deploy an Elder.js site
 ---
 
 import TutorialsBeforeYouStart from '../_partials/_tutorials-before-you-start.md';

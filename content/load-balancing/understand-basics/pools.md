@@ -1,6 +1,7 @@
 ---
 weight: 0
 pcx-content-type: concept
+title: Pools
 ---
 
 import PoolDefinition from '../_partials/_pool-definition.md';

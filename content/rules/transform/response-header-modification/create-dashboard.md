@@ -2,6 +2,8 @@
 title: Create a rule in the dashboard
 pcx-content-type: how-to
 weight: 1
+meta:
+  title: Create an HTTP Response Header Modification Rule in the dashboard
 ---
 
 # Create an HTTP Response Header Modification Rule in the dashboard

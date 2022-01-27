@@ -2,6 +2,8 @@
 title: Create via API
 weight: 1
 pcx-content-type: how-to
+meta:
+  title: Create a waiting room via the API
 ---
 
 # Create a waiting room via the API

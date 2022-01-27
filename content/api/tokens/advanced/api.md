@@ -1,6 +1,8 @@
 ---
 title: Creating tokens via API
 weight: 10
+meta:
+  title: Creating API tokens via the API
 ---
 
 # Creating API tokens via the API

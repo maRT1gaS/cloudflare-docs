@@ -1,5 +1,6 @@
 ---
 weight: 3
+title: API v4 documentation
 ---
 
 # API v4 documentation

@@ -2,6 +2,8 @@
 title: Drand Project
 weight: 0
 pcx-content-type: concept
+meta:
+  title: What is drand?
 ---
 
 # What is drand?

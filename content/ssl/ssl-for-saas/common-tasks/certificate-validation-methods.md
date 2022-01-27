@@ -2,6 +2,8 @@
 title: Validate certificates
 weight: 3
 pcx-content-type: configuration
+meta:
+  title: Validate certificates — SSL for SaaS
 ---
 
 import DCVDefinition from '../../_partials/_dcv-definition.md';

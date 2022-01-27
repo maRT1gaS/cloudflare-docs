@@ -1,6 +1,8 @@
 ---
 title: Isolated traffic
 weight: 2
+meta:
+  title: Isolated trafficExample isolation policies
 ---
 
 # Isolated traffic

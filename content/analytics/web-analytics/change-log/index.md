@@ -2,6 +2,8 @@
 title: Change log
 weight: 40
 pcx-content-type: reference
+meta:
+  title: Change log for
 ---
 
 # Change log for `beacon.min.js`

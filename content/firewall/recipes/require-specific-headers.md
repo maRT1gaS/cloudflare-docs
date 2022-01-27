@@ -1,5 +1,6 @@
 ---
 pcx-content-type: configuration
+title: Require specific HTTP headers
 ---
 
 # Require specific HTTP headers

@@ -1,6 +1,7 @@
 ---
 weight: 4
 pcx-content-type: concept
+title: Email security
 ---
 
 # Email security

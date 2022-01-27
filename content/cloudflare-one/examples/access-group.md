@@ -4,6 +4,7 @@ type: example
 summary: Use a pre-existing Access group.
 tags:
   - Access group
+title: Access group
 ---
 
 # Access group

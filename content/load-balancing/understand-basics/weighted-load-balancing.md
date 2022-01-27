@@ -1,6 +1,7 @@
 ---
 weight: 14
 pcx-content-type: concept
+title: Weighted load balancing
 ---
 
 # Weighted load balancing

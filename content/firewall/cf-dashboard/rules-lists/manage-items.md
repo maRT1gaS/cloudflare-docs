@@ -1,6 +1,7 @@
 ---
 pcx-content-type: how-to
 weight: 360
+title: Manage list items (IP addresses)
 ---
 
 # Manage list items (IP addresses)

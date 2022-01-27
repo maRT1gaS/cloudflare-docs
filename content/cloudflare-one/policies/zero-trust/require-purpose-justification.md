@@ -2,6 +2,8 @@
 weight: 1
 pcx-content-type: how-to
 title: Require Purpose Justification
+meta:
+  title: Require Purpose Justification after login
 ---
 
 # Require Purpose Justification after login

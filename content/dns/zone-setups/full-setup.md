@@ -1,6 +1,7 @@
 ---
 weight: 0
 pcx-content-type: tutorial
+title: Full setup
 ---
 
 # Full setup

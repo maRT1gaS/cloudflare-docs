@@ -2,6 +2,7 @@
 weight: 2
 pcx-content-type: how-to
 hidden: true
+title: Protect your origin server — Free
 ---
 
 import OriginHealthOverview from '../../_partials/_origin-health-overview';

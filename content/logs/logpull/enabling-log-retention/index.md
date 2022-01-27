@@ -1,6 +1,7 @@
 ---
 weight: 12
 pcx-content-type: interim
+title: Enabling log retention
 ---
 
 # Enabling log retention

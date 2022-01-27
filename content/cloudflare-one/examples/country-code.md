@@ -4,6 +4,7 @@ type: example
 summary: Allow a specific country.
 tags:
   - Country Code
+title: Country Code
 ---
 
 # Country Code

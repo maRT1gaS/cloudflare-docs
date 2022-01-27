@@ -1,6 +1,7 @@
 ---
 weight: 5
 pcx-content-type: how-to
+title: Revoke a client certificate
 ---
 
 # Revoke a client certificate

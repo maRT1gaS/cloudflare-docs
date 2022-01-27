@@ -2,6 +2,7 @@
 weight: 1
 pcx-content-type: reference
 type: overview
+title: Configuration settings
 ---
 
 # Configuration settings

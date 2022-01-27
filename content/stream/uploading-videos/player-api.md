@@ -1,5 +1,6 @@
 ---
 hidden: true
+title: Player API
 ---
 
 # Player API

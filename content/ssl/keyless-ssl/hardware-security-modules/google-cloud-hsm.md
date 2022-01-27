@@ -1,6 +1,7 @@
 ---
 weight: 7
 pcx-content-type: tutorial
+title: Google Cloud HSM
 ---
 
 # Google Cloud HSM

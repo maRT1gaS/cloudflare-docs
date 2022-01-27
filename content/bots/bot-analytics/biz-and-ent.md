@@ -2,6 +2,8 @@
 title: Business
 weight: 2
 pcx-content-type: reference
+meta:
+  title: Super Bot Fight Mode (Business) Analytics
 ---
 
 import AnalyticsFeatures from '../_partials/_analytics-features.md';

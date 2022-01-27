@@ -2,6 +2,8 @@
 weight: 16
 pcx-content-type: how-to
 title: Firewall
+meta:
+  title: Firewall (beta)
 ---
 
 # Firewall (beta)

@@ -2,6 +2,8 @@
 title: Create a pool
 weight: 1
 pcx-content-type: how-to
+meta:
+  title: Create an origin server pool
 ---
 
 import PoolDefinition from '../_partials/_pool-definition.md';

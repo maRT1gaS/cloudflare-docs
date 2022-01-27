@@ -1,5 +1,6 @@
 ---
 weight: 6
+title: Secure the Server
 ---
 
 # Secure the Server

@@ -1,6 +1,7 @@
 ---
 weight: 4
 pcx-content-type: reference
+title: Resize with Cloudflare Workers
 ---
 
 # Resize with Cloudflare Workers

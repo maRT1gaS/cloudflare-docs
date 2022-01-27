@@ -1,6 +1,7 @@
 ---
 weight: 4
 pcx-content-type: reference
+title: API commands
 ---
 
 # API commands

@@ -1,6 +1,7 @@
 ---
-weight:
+weight: null
 pcx-content-type: how-to
+title: Assign tunnel routes
 ---
 
 # Assign tunnel routes

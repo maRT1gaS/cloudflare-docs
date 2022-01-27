@@ -1,7 +1,9 @@
 ---
 title: Specify IP address for endpoint health checks
-weight:
+weight: null
 pcx-content-type: how-to
+meta:
+  title: Specify IP addresses for endpoint health checks
 ---
 
 # Specify IP addresses for endpoint health checks

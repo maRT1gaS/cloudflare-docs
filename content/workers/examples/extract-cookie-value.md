@@ -1,10 +1,12 @@
 ---
 weight: 1000
 type: example
-summary: Given the cookie name, get the value of a cookie. You can also use cookies for A/B testing.
+summary: Given the cookie name, get the value of a cookie. You can also use
+  cookies for A/B testing.
 tags:
   - Headers
 pcx-content-type: configuration
+title: Cookie parsing
 ---
 
 # Cookie parsing

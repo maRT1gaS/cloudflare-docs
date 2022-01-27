@@ -6,6 +6,7 @@ tags:
   - Debugging
   - Logging
 pcx-content-type: configuration
+title: Debugging logs
 ---
 
 # Debugging logs

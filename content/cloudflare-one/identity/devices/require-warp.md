@@ -2,6 +2,8 @@
 weight: 2
 title: WARP
 pcx-content-type: how-to
+meta:
+  title: Require WARP
 ---
 
 # Require WARP

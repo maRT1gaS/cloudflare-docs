@@ -3,6 +3,7 @@ updated: 2021-03-02
 category: 🛡️ Web Gateway
 difficulty: Beginner
 pcx-content-type: tutorial
+title: Upload and use a list of objects
 ---
 
 # Upload and use a list of objects

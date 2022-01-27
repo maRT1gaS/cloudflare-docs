@@ -1,6 +1,7 @@
 ---
 weight: 15
 pcx-content-type: how-to
+title: Create custom rules
 ---
 
 # Create custom rules

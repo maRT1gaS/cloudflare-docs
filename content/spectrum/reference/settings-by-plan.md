@@ -1,7 +1,8 @@
 ---
 type: overview
-weight:
+weight: null
 pcx-content-type: reference
+title: Settings by plan
 ---
 
 # Settings by plan

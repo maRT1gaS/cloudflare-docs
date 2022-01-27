@@ -1,6 +1,7 @@
 ---
 weight: 2
 pcx-content-type: configuration
+title: addEventListener
 ---
 
 # addEventListener

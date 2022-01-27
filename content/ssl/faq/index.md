@@ -1,6 +1,7 @@
 ---
 weight: 201
 pcx-content-type: navigation
+title: General FAQs
 ---
 
 # General FAQs

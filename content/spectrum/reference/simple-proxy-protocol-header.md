@@ -1,6 +1,6 @@
 ---
 title: Simple Proxy Protocol Header
-weight:
+weight: null
 pcx-content-type: reference
 ---
 

@@ -1,6 +1,7 @@
 ---
-weight:
+weight: null
 pcx-content-type: how-to
+title: Specify IP addresses for endpoint health checks
 ---
 
 # Specify IP addresses for endpoint health checks

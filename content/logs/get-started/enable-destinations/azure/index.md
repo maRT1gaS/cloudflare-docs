@@ -2,6 +2,8 @@
 title: Enable Microsoft Azure
 weight: 62
 pcx-content-type: how-to
+meta:
+  title: Enable Logpush to Microsoft Azure
 ---
 
 import EnableReadPermissions from '../../../_partials/_enable-read-permissions.md';

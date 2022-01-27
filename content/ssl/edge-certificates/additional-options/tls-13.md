@@ -1,6 +1,7 @@
 ---
 weight: 11
 pcx-content-type: how-to
+title: TLS 1.3
 ---
 
 import TLS13Definition from '../../_partials/_tls-13-definition.md';

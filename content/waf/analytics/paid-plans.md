@@ -2,6 +2,8 @@
 weight: 2
 pcx-content-type: reference
 title: Paid plans
+meta:
+  title: Firewall Analytics — Paid plans
 ---
 
 import FilterReportDuration from '../_partials/_analytics-filter-report-duration.md';

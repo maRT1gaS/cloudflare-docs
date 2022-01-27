@@ -3,6 +3,7 @@ updated: 2020-12-13
 category: 🔐 Zero Trust
 difficulty: Advanced
 pcx-content-type: tutorial
+title: Troubleshoot user login details
 ---
 
 # Troubleshoot user login details

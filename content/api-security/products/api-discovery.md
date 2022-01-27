@@ -2,6 +2,7 @@
 weight: 0
 pcx-content-type: concept
 type: overview
+title: API Discovery
 ---
 
 import Availability from '../_partials/_availability.md';

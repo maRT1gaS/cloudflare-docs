@@ -1,6 +1,7 @@
 ---
 weight: 5
 pcx-content-type: reference
+title: Delete variants
 ---
 
 # Delete variants

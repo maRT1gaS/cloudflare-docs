@@ -1,6 +1,7 @@
 ---
 weight: 1
 pcx-content-type: how-to
+title: DNS over HTTPS
 ---
 
 # DNS over HTTPS

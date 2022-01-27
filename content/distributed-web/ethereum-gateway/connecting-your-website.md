@@ -1,6 +1,7 @@
 ---
 weight: 3
 pcx-content-type: tutorial
+title: Connecting your Website
 ---
 
 # Connecting your Website

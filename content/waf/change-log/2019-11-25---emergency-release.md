@@ -1,7 +1,9 @@
 ---
-title: '2019-11-25 – Emergency'
+title: 2019-11-25 – Emergency
 type: table
 weight: 988
+meta:
+  title: 2019-11-25 – Emergency release
 ---
 
 # 2019-11-25 – Emergency release

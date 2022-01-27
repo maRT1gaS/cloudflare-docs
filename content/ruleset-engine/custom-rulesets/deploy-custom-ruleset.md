@@ -2,6 +2,7 @@
 pcx-content-type: how-to
 alwaysopen: true
 weight: 763
+title: Deploy a custom ruleset
 ---
 
 # Deploy a custom ruleset

@@ -1,6 +1,7 @@
 ---
 weight: 1
 pcx-content-type: configuration
+title: Get started
 ---
 
 # Get started

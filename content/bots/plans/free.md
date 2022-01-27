@@ -4,6 +4,8 @@ weight: 0
 type: document
 pcx-content-type: reference
 hidden: true
+meta:
+  title: Plans — Free
 ---
 
 import PlanIntro from '../_partials/_plan-intro.md';

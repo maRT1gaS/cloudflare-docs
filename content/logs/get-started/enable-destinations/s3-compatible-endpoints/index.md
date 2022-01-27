@@ -1,6 +1,7 @@
 ---
 weight: 56
 pcx-content-type: how-to
+title: Enable S3-compatible endpoints
 ---
 
 import EnableReadPermissions from '../../../_partials/_enable-read-permissions.md';

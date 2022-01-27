@@ -1,6 +1,7 @@
 ---
 weight: 200
 pcx-content-type: reference
+title: Notifications
 ---
 
 # Notifications

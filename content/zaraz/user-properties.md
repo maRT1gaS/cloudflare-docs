@@ -2,6 +2,7 @@
 weight: 4
 pcx-content-type: reference
 type: overview
+title: Accessing User Properties
 ---
 
 <ContentColumn>

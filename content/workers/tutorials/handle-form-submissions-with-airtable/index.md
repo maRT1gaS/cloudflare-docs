@@ -1,8 +1,9 @@
 ---
 updated: 2021-06-17
 difficulty: Beginner
-content_type: '📝 Tutorial'
+content_type: 📝 Tutorial
 pcx-content-type: tutorial
+title: Handle form submissions with Airtable
 ---
 
 import TutorialsBeforeYouStart from '../../_partials/_tutorials-before-you-start.md';

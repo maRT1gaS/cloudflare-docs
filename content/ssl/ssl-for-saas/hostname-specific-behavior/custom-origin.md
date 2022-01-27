@@ -1,6 +1,7 @@
 ---
 weight: 3
 pcx-content-type: concept
+title: Custom origin server
 ---
 
 import CustomOriginDefinition from '../../_partials/_custom-origin-server-definition.md';

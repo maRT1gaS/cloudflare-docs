@@ -1,6 +1,7 @@
 ---
 weight: 8
 pcx-content-type: reference
+title: Hostname verification backoff schedule
 ---
 
 # Hostname verification backoff schedule

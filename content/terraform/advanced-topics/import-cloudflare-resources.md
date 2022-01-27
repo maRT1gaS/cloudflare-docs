@@ -1,5 +1,6 @@
 ---
 pcx-content-type: tutorial
+title: Import Cloudflare resources
 ---
 
 # Import Cloudflare resources

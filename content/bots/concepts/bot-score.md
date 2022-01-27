@@ -1,6 +1,7 @@
 ---
 weight: 1
 pcx-content-type: concept
+title: Bot scores
 ---
 
 import BMBotDetectionEngines from '../_partials/_bm-bot-detection-engines.md';

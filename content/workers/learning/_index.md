@@ -4,4 +4,6 @@ title: Learning
 pcx-content-type: navigation
 ---
 
+# Learning
+
 <DirectoryListing path="/learning" />

@@ -2,6 +2,8 @@
 title: Cipher suites
 weight: 3
 pcx-content-type: reference
+meta:
+  title: Cipher suites — Origin
 ---
 
 # Cipher suites — Origin

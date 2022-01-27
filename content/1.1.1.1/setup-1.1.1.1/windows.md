@@ -1,7 +1,9 @@
 ---
-weight:
+weight: null
 title: Windows 10
 pcx-content-type: how-to
+meta:
+  title: Set up 1.1.1.1 - Windows 10
 ---
 
 import CaptivePortals from '../_partials/_captive-portals.md';

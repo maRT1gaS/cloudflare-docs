@@ -1,5 +1,6 @@
 ---
 pcx-content-type: how-to
+title: Deploy an Eleventy site
 ---
 
 import TutorialsBeforeYouStart from '../_partials/_tutorials-before-you-start.md';

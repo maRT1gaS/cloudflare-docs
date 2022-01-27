@@ -1,6 +1,7 @@
 ---
 weight: 61
 pcx-content-type: concept
+title: Enable BigQuery
 ---
 
 # Enable BigQuery

@@ -1,6 +1,7 @@
 ---
 weight: 12
 pcx-content-type: how-to
+title: Google Workspace
 ---
 
 # Google Workspace

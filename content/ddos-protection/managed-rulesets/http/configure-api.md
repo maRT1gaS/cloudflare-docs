@@ -2,6 +2,8 @@
 title: Configure the Managed Ruleset via API
 pcx-content-type: concept
 weight: 2
+meta:
+  title: Configure HTTP DDoS Attack Protection via API
 ---
 
 # Configure HTTP DDoS Attack Protection via API

@@ -1,6 +1,7 @@
 ---
 weight: 40
 pcx-content-type: interim
+title: Explore the Analytics schema with GraphiQL
 ---
 
 # Explore the Analytics schema with GraphiQL

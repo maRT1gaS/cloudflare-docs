@@ -2,6 +2,8 @@
 weight: 1
 pcx-content-type: how-to
 title: Railgun
+meta:
+  title: Use a load balancer with Railgun
 ---
 
 # Use a load balancer with Railgun

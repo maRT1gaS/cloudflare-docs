@@ -2,6 +2,8 @@
 title: Analytics
 pcx-content-type: reference
 weight: 1
+meta:
+  title: DDoS analytics
 ---
 
 # DDoS analytics

@@ -2,6 +2,8 @@
 title: Business
 weight: 2
 pcx-content-type: how-to
+meta:
+  title: Get started with Super Bot Fight Mode (Business)
 ---
 
 import EnableSteps from '../_partials/_get-started-pro-biz-steps.md';

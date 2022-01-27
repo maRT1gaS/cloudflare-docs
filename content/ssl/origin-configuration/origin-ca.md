@@ -2,6 +2,8 @@
 title: Origin CA certificates
 weight: 3
 pcx-content-type: interim
+meta:
+  title: Managing Cloudflare Origin CA certificates
 ---
 
 # Managing Cloudflare Origin CA certificates

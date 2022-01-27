@@ -1,6 +1,7 @@
 ---
 weight: 5
 pcx-content-type: reference
+title: Draw overlays and watermarks
 ---
 
 # Draw overlays and watermarks

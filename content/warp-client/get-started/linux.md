@@ -1,7 +1,9 @@
 ---
 title: Linux
-weight:
+weight: null
 pcx-content-type: how-to
+meta:
+  title: Linux desktop client
 ---
 
 # Linux desktop client

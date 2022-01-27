@@ -1,6 +1,7 @@
 ---
 weight: 39
 pcx-content-type: reference
+title: High-level metrics
 ---
 
 # High-level metrics

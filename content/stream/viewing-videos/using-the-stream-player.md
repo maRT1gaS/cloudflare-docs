@@ -1,6 +1,7 @@
 ---
 weight: 0
 pcx-content-type: reference
+title: Using the Stream player
 ---
 
 # Using the Stream player

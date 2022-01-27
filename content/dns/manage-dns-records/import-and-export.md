@@ -1,6 +1,7 @@
 ---
 weight: 1
 pcx-content-type: how-to
+title: Import and export records
 ---
 
 # Import and export records

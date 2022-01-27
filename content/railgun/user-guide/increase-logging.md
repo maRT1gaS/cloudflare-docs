@@ -1,6 +1,7 @@
 ---
 weight: 22
 pcx-content-type: reference
+title: Increase logging for Railgun
 ---
 
 # Increase logging for Railgun

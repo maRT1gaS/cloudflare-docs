@@ -2,6 +2,7 @@
 weight: 10
 pcx-content-type: reference
 hidden: true
+title: Applications changelog
 ---
 
 # Applications changelog

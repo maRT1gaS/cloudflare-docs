@@ -2,6 +2,8 @@
 title: 7 – Revert configuration
 weight: 7
 pcx-content-type: tutorial
+meta:
+  title: Revert configuration
 ---
 
 # Revert configuration

@@ -2,6 +2,7 @@
 pcx-content-type: how-to
 type: overview
 weight: 3
+title: Deploy rulesets
 ---
 
 # Deploy rulesets

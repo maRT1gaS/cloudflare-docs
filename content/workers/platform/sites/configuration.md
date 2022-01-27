@@ -1,6 +1,7 @@
 ---
 weight: 3
 pcx-content-type: configuration
+title: Configuration
 ---
 
 # Configuration

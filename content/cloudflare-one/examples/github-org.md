@@ -4,6 +4,7 @@ type: example
 summary: Allow members of a specific GitHub organization.
 tags:
   - GitHub™ Organization
+title: GitHub™ Organization
 ---
 
 # GitHub™ Organization

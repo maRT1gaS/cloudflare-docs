@@ -7,6 +7,7 @@ tags:
   - Caching
   - Cache API
 pcx-content-type: configuration
+title: Cache POST requests
 ---
 
 # Cache POST requests

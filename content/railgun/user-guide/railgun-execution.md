@@ -1,6 +1,7 @@
 ---
 weight: 8
 pcx-content-type: reference
+title: Railgun execution
 ---
 
 # Railgun execution

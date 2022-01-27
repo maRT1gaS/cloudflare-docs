@@ -2,6 +2,8 @@
 title: 6 – Add exceptions with Page Rules
 weight: 6
 pcx-content-type: tutorial
+meta:
+  title: Add exceptions with Page Rules
 ---
 
 # Add exceptions with Page Rules

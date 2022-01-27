@@ -1,6 +1,8 @@
 ---
 title: Troubleshooting and FAQ
 weight: 7
+meta:
+  title: Frequently asked questionsIn-Browser alerts
 ---
 
 # Frequently asked questions

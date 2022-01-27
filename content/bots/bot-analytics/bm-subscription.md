@@ -2,6 +2,8 @@
 title: Enterprise Bot Management
 weight: 3
 pcx-content-type: reference
+meta:
+  title: Bot Management for Enterprise Analytics
 ---
 
 import AnalyticsFeatures from '../_partials/_analytics-features.md';

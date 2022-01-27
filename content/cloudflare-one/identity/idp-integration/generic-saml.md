@@ -1,6 +1,7 @@
 ---
 weight: 0
 pcx-content-type: how-to
+title: Generic SAML 2.0
 ---
 
 # Generic SAML 2.0

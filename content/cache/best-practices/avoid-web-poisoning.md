@@ -1,6 +1,8 @@
 ---
 title: Avoid web cache poisoning
 pcx-content-type: concept
+meta:
+  title: Avoid Web Cache Poisoning
 ---
 
 # Avoid Web Cache Poisoning

@@ -1,6 +1,7 @@
 ---
 weight: 40
 pcx-content-type: concept
+title: Bridging from local to global
 ---
 
 # Bridging from local to global

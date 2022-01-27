@@ -1,6 +1,7 @@
 ---
 weight: 1
 pcx-content-type: how-to
+title: Set up authenticated origin pulls
 ---
 
 # Set up authenticated origin pulls

@@ -3,6 +3,7 @@ updated: 2021-03-09
 category: 🔐 Zero Trust
 difficulty: Intermediate
 pcx-content-type: tutorial
+title: Salesforce with Access for SaaS configuration
 ---
 
 # Salesforce with Access for SaaS configuration

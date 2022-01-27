@@ -1,7 +1,8 @@
 ---
-weight:
+weight: null
 type: overview
 pcx-content-type: reference
+title: JavaScript detections
 ---
 
 # JavaScript detections

@@ -2,6 +2,8 @@
 title: Enable Splunk
 weight: 63
 pcx-content-type: how-to
+meta:
+  title: Enable Logpush to Splunk
 ---
 
 import EnableReadPermissions from '../../../_partials/_enable-read-permissions.md';

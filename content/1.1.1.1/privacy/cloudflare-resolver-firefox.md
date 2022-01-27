@@ -1,5 +1,5 @@
 ---
-weight:
+weight: null
 title: Cloudflare Resolver for Firefox
 pcx-content-type: reference
 ---

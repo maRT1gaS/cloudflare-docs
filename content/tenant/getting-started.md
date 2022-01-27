@@ -1,6 +1,7 @@
 ---
 weight: 1
 pcx-content-type: interim
+title: Getting started
 ---
 
 # Getting started

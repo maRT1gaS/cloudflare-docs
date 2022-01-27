@@ -2,6 +2,8 @@
 title: Plans
 weight: 1
 pcx-content-type: reference
+meta:
+  title: Plans — SSL for SaaS
 ---
 
 # Plans — SSL for SaaS

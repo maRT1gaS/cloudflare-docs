@@ -1,6 +1,7 @@
 ---
 weight: 50
 pcx-content-type: interim
+title: Create a query in GraphiQL
 ---
 
 # Create a query in GraphiQL

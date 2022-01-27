@@ -2,6 +2,8 @@
 title: Equinix Fabric
 weight: 2
 pcx-content-type: tutorial
+meta:
+  title: Equinix Users
 ---
 
 # Equinix Users

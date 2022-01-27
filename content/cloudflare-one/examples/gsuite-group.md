@@ -4,6 +4,7 @@ type: example
 summary: Allow members of a specific G Suite group.
 tags:
   - G Suite® Group
+title: G Suite® Group
 ---
 
 # G Suite® Group

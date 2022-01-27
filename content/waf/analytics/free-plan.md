@@ -2,6 +2,8 @@
 weight: 1
 pcx-content-type: reference
 title: Free plan
+meta:
+  title: Firewall Analytics — Free plan
 ---
 
 import FilterReportDuration from '../_partials/_analytics-filter-report-duration.md';

@@ -1,6 +1,7 @@
 ---
 weight: 30
 pcx-content-type: concept
+title: Local networks
 ---
 
 # Local networks

@@ -1,6 +1,7 @@
 ---
 weight: 3
 pcx-content-type: faq
+title: Troubleshooting
 ---
 
 [❮ Back to FAQ](/faq)

@@ -1,6 +1,8 @@
 ---
 title: New account
 weight: 1
+meta:
+  title: Setup Cloudflare for Teams
 ---
 
 # Setup Cloudflare for Teams

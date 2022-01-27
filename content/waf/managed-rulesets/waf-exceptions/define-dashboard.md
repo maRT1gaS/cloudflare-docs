@@ -1,6 +1,7 @@
 ---
 pcx-content-type: how-to
 weight: 1
+title: Define WAF exceptions in the dashboard
 ---
 
 # Define WAF exceptions in the dashboard

@@ -1,7 +1,9 @@
 ---
-weight:
+weight: null
 title: Linux
 pcx-content-type: how-to
+meta:
+  title: Set up 1.1.1.1 - Linux
 ---
 
 import CaptivePortals from '../_partials/_captive-portals.md';

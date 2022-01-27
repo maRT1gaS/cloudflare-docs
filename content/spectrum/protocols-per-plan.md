@@ -1,6 +1,7 @@
 ---
 weight: 1
 pcx-content-type: configuration
+title: Protocols per plan
 ---
 
 # Protocols per plan

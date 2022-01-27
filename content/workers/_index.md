@@ -3,7 +3,6 @@ title: Overview
 weight: 1
 type: overview
 pcx-content-type: landing-page
-
 meta:
   title: Cloudflare Workers documentation
 ---

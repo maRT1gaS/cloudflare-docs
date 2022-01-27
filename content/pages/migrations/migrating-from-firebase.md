@@ -2,6 +2,7 @@
 updated: 2020-09-28
 difficulty: Beginner
 pcx-content-type: tutorial
+title: Migrating from Firebase
 ---
 
 # Migrating from Firebase

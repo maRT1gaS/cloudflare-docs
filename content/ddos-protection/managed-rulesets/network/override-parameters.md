@@ -2,6 +2,8 @@
 title: Managed Ruleset parameters
 pcx-content-type: reference
 weight: 3
+meta:
+  title: Network-layer DDoS Attack Protection parameters
 ---
 
 # Network-layer DDoS Attack Protection parameters

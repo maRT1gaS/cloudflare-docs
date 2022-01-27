@@ -2,6 +2,8 @@
 title: Alerts
 pcx-content-type: reference
 weight: 3
+meta:
+  title: DDoS alerts
 ---
 
 # DDoS alerts

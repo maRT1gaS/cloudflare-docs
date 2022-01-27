@@ -1,5 +1,6 @@
 ---
 pcx-content-type: configuration
+title: Stop R-U-Dead-Yet? (R.U.D.Y.) attacks
 ---
 
 # Stop R-U-Dead-Yet? (R.U.D.Y.) attacks

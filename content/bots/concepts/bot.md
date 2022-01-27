@@ -1,6 +1,7 @@
 ---
 weight: 0
 pcx-content-type: concept
+title: Bots
 ---
 
 # Bots

@@ -2,6 +2,7 @@
 pcx-content-type: concept
 weight: 11
 type: overview
+title: Determining the request rate
 ---
 
 # Determining the request rate

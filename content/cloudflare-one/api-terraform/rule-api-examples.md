@@ -2,6 +2,7 @@
 type: overview
 weight: 3
 pcx-content-type: configuration
+title: Access API examples
 ---
 
 # Access API examples

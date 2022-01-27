@@ -1,6 +1,7 @@
 ---
 weight: 1
 pcx-content-type: reference
+title: Encryption modes
 ---
 
 import SSLModeErrors from '../_partials/_ssl-mode-errors.md';

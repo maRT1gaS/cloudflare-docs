@@ -1,6 +1,7 @@
 ---
 weight: 5
 pcx-content-type: faq
+title: Devices
 ---
 
 [❮ Back to FAQ](/faq)

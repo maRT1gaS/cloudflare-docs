@@ -3,6 +3,7 @@ updated: 2020-12-29
 category: 🌐 Connections
 difficulty: Advanced
 pcx-content-type: tutorial
+title: MongoDB SSH
 ---
 
 # MongoDB SSH

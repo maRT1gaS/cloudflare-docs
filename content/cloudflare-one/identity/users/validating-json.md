@@ -1,6 +1,7 @@
 ---
 weight: 4
 pcx-content-type: how-to
+title: JSON web tokens
 ---
 
 # JSON web tokens

@@ -1,7 +1,9 @@
 ---
 title: macOS
-weight:
+weight: null
 pcx-content-type: how-to
+meta:
+  title: macOS desktop client
 ---
 
 # macOS desktop client

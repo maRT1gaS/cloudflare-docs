@@ -7,6 +7,7 @@ tags:
   - Middleware
   - Caching
 pcx-content-type: configuration
+title: Using the Cache API
 ---
 
 # Using the Cache API

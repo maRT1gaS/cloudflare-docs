@@ -2,6 +2,7 @@
 weight: 3
 pcx-content-type: interim
 type: overview
+title: HTTP Strict Transport Security (HSTS)
 ---
 
 import HSTSDefinition from '../../_partials/_hsts-definition.md';

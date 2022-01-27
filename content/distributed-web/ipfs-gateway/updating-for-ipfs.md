@@ -1,6 +1,7 @@
 ---
 weight: 4
 pcx-content-type: reference
+title: Updating your Website for IPFS
 ---
 
 # Updating your Website for IPFS

@@ -1,6 +1,7 @@
 ---
 weight: 12
 pcx-content-type: reference
+title: Sorting
 ---
 
 # Sorting

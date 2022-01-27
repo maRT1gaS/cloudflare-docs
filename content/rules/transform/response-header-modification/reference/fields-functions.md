@@ -2,6 +2,8 @@
 title: Available fields and functions
 pcx-content-type: reference
 weight: 2
+meta:
+  title: Available fields and functions for HTTP response header modification
 ---
 
 import HeaderFields from '../../../_partials/transform/_header-modification-fields.md';

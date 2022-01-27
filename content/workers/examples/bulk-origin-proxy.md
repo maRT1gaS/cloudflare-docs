@@ -5,6 +5,7 @@ summary: Resolve requests to your domain to a set of proxy third-party origin UR
 tags:
   - Middleware
 pcx-content-type: configuration
+title: Bulk origin override
 ---
 
 # Bulk origin override

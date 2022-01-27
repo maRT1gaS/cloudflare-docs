@@ -2,6 +2,8 @@
 title: Get started
 weight: 1
 pcx-content-type: how-to
+meta:
+  title: Install Terraform
 ---
 
 # Install Terraform

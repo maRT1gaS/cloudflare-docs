@@ -1,6 +1,7 @@
 ---
 weight: 6
 pcx-content-type: how to
+title: Add CAA records
 ---
 
 import CAADefinition from '../../_partials/_caa-records-definition.md';

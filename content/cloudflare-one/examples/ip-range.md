@@ -4,6 +4,7 @@ type: example
 summary: Allow an IP range.
 tags:
   - IP range
+title: IP range
 ---
 
 # IP range

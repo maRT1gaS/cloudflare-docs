@@ -4,6 +4,7 @@ type: example
 summary: Allow a specific email address.
 tags:
   - Email
+title: Email
 ---
 
 # Email

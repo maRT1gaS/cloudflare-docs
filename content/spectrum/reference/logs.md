@@ -1,6 +1,7 @@
 ---
-weight:
+weight: null
 pcx-content-type: reference
+title: Event logs
 ---
 
 # Event logs

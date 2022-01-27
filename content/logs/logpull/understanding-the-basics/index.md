@@ -1,6 +1,7 @@
 ---
 weight: 11
 pcx-content-type: interim
+title: Understanding the basics
 ---
 
 # Understanding the basics

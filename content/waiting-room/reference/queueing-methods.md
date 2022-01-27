@@ -1,5 +1,6 @@
 ---
 pcx-content-type: concept
+title: Queueing method
 ---
 
 import ChangeQueueMethod from '../_partials/_change-queueing-method.md';

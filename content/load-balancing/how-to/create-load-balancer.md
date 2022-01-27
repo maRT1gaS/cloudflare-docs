@@ -1,6 +1,7 @@
 ---
 weight: 3
 pcx-content-type: how-to
+title: Create a load balancer
 ---
 
 import LBDefinition from '../_partials/_load-balancer-definition.md';

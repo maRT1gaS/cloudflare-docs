@@ -1,11 +1,13 @@
 ---
 weight: 1000
 type: example
-summary: Block other websites from linking to your content. This is useful for protecting images.
+summary: Block other websites from linking to your content. This is useful for
+  protecting images.
 tags:
   - Security
   - Headers
 pcx-content-type: configuration
+title: Hot-link protection
 ---
 
 # Hot-link protection

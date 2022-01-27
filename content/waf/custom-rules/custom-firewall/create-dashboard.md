@@ -2,6 +2,7 @@
 pcx-content-type: how-to
 weight: 1
 type: overview
+title: Create Custom Firewall rules in the dashboard
 ---
 
 # Create Custom Firewall rules in the dashboard

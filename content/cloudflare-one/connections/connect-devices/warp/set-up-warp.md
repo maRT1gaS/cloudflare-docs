@@ -2,6 +2,8 @@
 weight: 0
 pcx-content-type: how-to
 title: First-time setup
+meta:
+  title: Set up WARP for your organization
 ---
 
 # Set up WARP for your organization

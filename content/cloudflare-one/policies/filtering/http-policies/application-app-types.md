@@ -1,6 +1,7 @@
 ---
 weight: 4
 pcx-content-type: how-to
+title: Applications and app types
 ---
 
 # Applications and app types

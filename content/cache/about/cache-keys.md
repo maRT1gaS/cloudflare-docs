@@ -1,6 +1,8 @@
 ---
 title: Cache keys
 pcx-content-type: concept
+meta:
+  title: Cache Keys
 ---
 
 # Cache Keys

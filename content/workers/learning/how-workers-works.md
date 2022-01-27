@@ -1,6 +1,7 @@
 ---
 weight: 6
 pcx-content-type: concept
+title: How Workers works
 ---
 
 import NetworkMap from '../../components/network-map';

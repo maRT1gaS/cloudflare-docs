@@ -1,6 +1,7 @@
 ---
 weight: 6
 pcx-content-type: tutorial
+title: IBM cloud HSM
 ---
 
 # IBM cloud HSM

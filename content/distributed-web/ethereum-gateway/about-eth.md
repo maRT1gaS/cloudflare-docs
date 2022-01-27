@@ -1,6 +1,7 @@
 ---
 weight: 2
 pcx-content-type: concept
+title: About Ethereum
 ---
 
 # About Ethereum

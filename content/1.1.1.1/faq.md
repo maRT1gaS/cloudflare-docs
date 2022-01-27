@@ -1,6 +1,6 @@
 ---
 weight: 6
-title: "FAQ"
+title: FAQ
 pcx-content-type: faq
 ---
 

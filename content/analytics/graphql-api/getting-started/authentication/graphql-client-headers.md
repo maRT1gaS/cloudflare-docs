@@ -1,6 +1,7 @@
 ---
 weight: 40
 pcx-content-type: how-to
+title: Configure GraphQL client endpoint and HTTP headers
 ---
 
 # Configure GraphQL client endpoint and HTTP headers

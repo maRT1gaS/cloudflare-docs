@@ -3,6 +3,7 @@ updated: 2020-12-20
 category: 🔐 Zero Trust
 difficulty: Medium
 pcx-content-type: tutorial
+title: Require Gateway connections
 ---
 
 # Require Gateway connections

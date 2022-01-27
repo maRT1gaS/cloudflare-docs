@@ -1,5 +1,6 @@
 ---
 pcx-content-type: how-to
+title: Preview Local Projects with Cloudflare Tunnel
 ---
 
 # Preview Local Projects with Cloudflare Tunnel

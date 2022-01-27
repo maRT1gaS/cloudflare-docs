@@ -1,6 +1,7 @@
 ---
 pcx-content-type: how-to
 weight: 370
+title: Use lists in expressions
 ---
 
 # Use lists in expressions

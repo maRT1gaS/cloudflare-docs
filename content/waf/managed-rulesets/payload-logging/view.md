@@ -1,6 +1,7 @@
 ---
 pcx-content-type: how-to
 weight: 2
+title: View the payload content in the dashboard
 ---
 
 # View the payload content in the dashboard

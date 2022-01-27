@@ -1,6 +1,7 @@
 ---
 weight: 50
 pcx-content-type: how-to
+title: DNS record
 ---
 
 # DNS record

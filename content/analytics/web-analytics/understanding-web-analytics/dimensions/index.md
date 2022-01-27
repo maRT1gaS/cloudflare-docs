@@ -1,6 +1,7 @@
 ---
 weight: 41
 pcx-content-type: reference
+title: Dimensions
 ---
 
 # Dimensions

@@ -2,6 +2,8 @@
 weight: 3
 title: Tunnel guide
 pcx-content-type: how-to
+meta:
+  title: Set up your first tunnel
 ---
 
 # Set up your first tunnel

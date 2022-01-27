@@ -2,6 +2,8 @@
 title: 3 – Configure HTTPs settings
 weight: 3
 pcx-content-type: tutorial
+meta:
+  title: Configure HTTPs settings
 ---
 
 # Configure HTTPs settings

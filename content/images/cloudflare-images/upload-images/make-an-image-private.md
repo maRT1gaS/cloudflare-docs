@@ -1,6 +1,7 @@
 ---
 weight: 3
 pcx-content-type: reference
+title: Making an image private
 ---
 
 # Making an image private

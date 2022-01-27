@@ -1,5 +1,6 @@
 ---
 pcx-content-type: how-to
+title: Secondary DNS override
 ---
 
 # Secondary DNS override

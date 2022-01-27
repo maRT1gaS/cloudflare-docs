@@ -3,6 +3,7 @@ updated: 2021-03-09
 category: 🛡️ Web Gateway
 difficulty: Advanced
 pcx-content-type: tutorial
+title: Block file uploads to Google Drive
 ---
 
 # Block file uploads to Google Drive

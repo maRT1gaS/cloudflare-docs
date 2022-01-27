@@ -2,6 +2,8 @@
 weight: 4
 pcx-content-type: how-to
 title: OS Version
+meta:
+  title: OS Version (beta)
 ---
 
 # OS Version (beta)

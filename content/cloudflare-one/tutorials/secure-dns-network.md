@@ -3,6 +3,7 @@ updated: 2020-11-28
 category: 🛡️ Web Gateway
 difficulty: Beginner
 pcx-content-type: tutorial
+title: Filter DNS on home or office network
 ---
 
 # Filter DNS on home or office network

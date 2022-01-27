@@ -1,11 +1,13 @@
 ---
 weight: 1000
 type: example
-summary: Allow or deny a request based on a known pre-shared key in a header. This is not meant to replace the WebCrypto API.
+summary: Allow or deny a request based on a known pre-shared key in a header.
+  This is not meant to replace the WebCrypto API.
 tags:
   - Authentication
   - WebCrypto
 pcx-content-type: configuration
+title: Auth with headers
 ---
 
 # Auth with headers

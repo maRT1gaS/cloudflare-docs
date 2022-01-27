@@ -1,6 +1,7 @@
 ---
 weight: 3
 pcx-content-type: how-to
+title: Upgrade your key server
 ---
 
 # Upgrade your key server

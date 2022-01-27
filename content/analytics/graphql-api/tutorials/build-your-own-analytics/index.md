@@ -1,6 +1,7 @@
 ---
 weight: 40
 pcx-content-type: interim
+title: Build your own Analytics dashboard
 ---
 
 # Build your own Analytics dashboard

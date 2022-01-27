@@ -1,6 +1,7 @@
 ---
 weight: 2
 pcx-content-type: how-to
+title: Get started
 ---
 
 import PoolDefinition from '../_partials/_pool-definition.md';

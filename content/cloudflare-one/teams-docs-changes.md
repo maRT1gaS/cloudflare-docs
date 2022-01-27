@@ -1,8 +1,10 @@
 ---
 weight: 0
-title: 'Welcome'
+title: Welcome
 hidden: true
 pcx-content-type: reference
+meta:
+  title: What's new?
 ---
 
 # What's new?

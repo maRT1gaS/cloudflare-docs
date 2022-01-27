@@ -1,6 +1,7 @@
 ---
-weight:
+weight: null
 pcx-content-type: reference
+title: Bot Management variables
 ---
 
 # Bot Management variables

@@ -2,6 +2,8 @@
 weight: 6
 title: Types of Notifications
 pcx-content-type: concept
+meta:
+  title: What kinds of Notifications are available?
 ---
 
 import SSLTroubleshoot from '../_partials/_troubleshoot-ssl';

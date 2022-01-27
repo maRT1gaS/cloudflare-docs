@@ -1,6 +1,7 @@
 ---
 weight: 2
 pcx-content-type: how-to
+title: Issue new certificates
 ---
 
 import IssueCertsPreamble from '../../_partials/_issue-certs-preamble.md';

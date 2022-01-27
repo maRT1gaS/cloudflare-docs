@@ -3,6 +3,7 @@ updated: 2021-08-03
 category: 🔐 Zero Trust
 difficulty: Advanced
 pcx-content-type: tutorial
+title: Configure Zendesk SSO with Access for SaaS
 ---
 
 # Configure Zendesk SSO with Access for SaaS

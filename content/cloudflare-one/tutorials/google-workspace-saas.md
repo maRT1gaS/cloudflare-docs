@@ -2,6 +2,7 @@
 updated: 2021-09-07
 category: 🔐 Zero Trust
 pcx-content-type: tutorial
+title: Configure a Google Workspace account for Access for SaaS
 ---
 
 # Configure a Google Workspace account for Access for SaaS

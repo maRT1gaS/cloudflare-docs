@@ -1,6 +1,7 @@
 ---
 weight: 21
 pcx-content-type: reference
+title: Changelog
 ---
 
 # Changelog

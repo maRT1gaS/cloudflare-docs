@@ -1,6 +1,7 @@
 ---
 weight: 1
 pcx-content-type: reference
+title: Using the player API
 ---
 
 # Using the player API

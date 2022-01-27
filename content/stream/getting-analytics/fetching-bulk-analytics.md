@@ -1,5 +1,6 @@
 ---
 pcx-content-type: reference
+title: Fetching bulk analytics
 ---
 
 # Fetching bulk analytics

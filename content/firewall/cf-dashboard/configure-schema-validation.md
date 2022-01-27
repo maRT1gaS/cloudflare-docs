@@ -2,6 +2,7 @@
 pcx-content-type: how-to
 weight: 390
 type: overview
+title: Configure Schema Validation
 ---
 
 # Configure Schema Validation

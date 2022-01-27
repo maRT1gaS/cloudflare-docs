@@ -1,6 +1,7 @@
 ---
 pcx-content-type: interim
 weight: 3
+title: Configure exposed credentials checks via API
 ---
 
 # Configure exposed credentials checks via API

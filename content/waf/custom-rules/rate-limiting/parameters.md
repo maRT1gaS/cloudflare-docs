@@ -1,6 +1,7 @@
 ---
 pcx-content-type: reference
 weight: 17
+title: Rate limiting parameters
 ---
 
 # Rate limiting parameters

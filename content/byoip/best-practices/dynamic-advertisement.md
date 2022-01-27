@@ -2,6 +2,8 @@
 title: Dynamic advertisement
 weight: 2
 pcx-content-type: best-practices
+meta:
+  title: Best practices for dynamic advertisement
 ---
 
 # Best practices for dynamic advertisement

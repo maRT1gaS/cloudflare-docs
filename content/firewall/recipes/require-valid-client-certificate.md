@@ -1,5 +1,6 @@
 ---
 pcx-content-type: configuration
+title: Require a valid client certificate
 ---
 
 # Require a valid client certificate

@@ -1,6 +1,7 @@
 ---
 weight: 15
 pcx-content-type: how-to
+title: Override HTTP Host headers
 ---
 
 # Override HTTP Host headers

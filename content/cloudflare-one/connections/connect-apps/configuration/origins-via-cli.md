@@ -1,6 +1,7 @@
 ---
 weight: 20
 hidden: true
+title: "Legacy: configuring origins via CLI"
 ---
 
 # Legacy: configuring origins via CLI

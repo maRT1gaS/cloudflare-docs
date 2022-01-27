@@ -1,6 +1,7 @@
 ---
 weight: 6
 pcx-content-type: reference
+title: Combine with SSL for SaaS
 ---
 
 # Combine with SSL for SaaS

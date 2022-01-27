@@ -1,6 +1,7 @@
 ---
 weight: 4
 pcx-content-type: how-to
+title: Send Events to a third-party tool
 ---
 
 # Send Events to a third-party tool

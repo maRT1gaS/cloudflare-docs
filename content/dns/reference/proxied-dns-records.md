@@ -1,6 +1,7 @@
 ---
-weight:
+weight: null
 pcx-content-type: reference
+title: Proxied DNS records
 ---
 
 # Proxied DNS records

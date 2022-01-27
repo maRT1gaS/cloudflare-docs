@@ -1,6 +1,7 @@
 ---
 weight: 30
 pcx-content-type: how-to
+title: Run as a service
 ---
 
 # Run as a service

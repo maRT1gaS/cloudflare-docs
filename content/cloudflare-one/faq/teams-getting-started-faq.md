@@ -1,6 +1,7 @@
 ---
 weight: 1
 pcx-content-type: faq
+title: Getting started with Teams
 ---
 
 [❮ Back to FAQ](/faq)

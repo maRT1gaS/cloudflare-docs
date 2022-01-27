@@ -1,3 +1,7 @@
+---
+title: Changelog
+---
+
 # Changelog
 
 ## 11/19/2021

@@ -1,6 +1,7 @@
 ---
 weight: 103
 pcx-content-type: interim
+title: Splunk
 ---
 
 # Splunk

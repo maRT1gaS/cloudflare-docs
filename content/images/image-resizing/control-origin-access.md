@@ -1,6 +1,7 @@
 ---
 weight: 6
 pcx-content-type: reference
+title: Control origin access
 ---
 
 # Control origin access

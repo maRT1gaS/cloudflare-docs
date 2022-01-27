@@ -1,6 +1,8 @@
 ---
 title: Reference
 pcx-content-type: reference
+meta:
+  title: Failures
 ---
 
 import Beta from '../_partials/_beta.md';

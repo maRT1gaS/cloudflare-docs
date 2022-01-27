@@ -1,6 +1,7 @@
 ---
 pcx-content-type: reference
 weight: 6
+title: Simulating test DDoS attacks
 ---
 
 # Simulating test DDoS attacks

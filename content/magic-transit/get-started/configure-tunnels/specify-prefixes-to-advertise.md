@@ -1,6 +1,7 @@
 ---
-weight:
+weight: null
 pcx-content-type: how-to
+title: Specify prefixes to advertise
 ---
 
 # Specify prefixes to advertise

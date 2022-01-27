@@ -2,6 +2,7 @@
 updated: 2020-11-30
 category: 🛡️ Web Gateway
 pcx-content-type: tutorial
+title: Filter DNS on devices
 ---
 
 # Filter DNS on devices

@@ -1,6 +1,7 @@
 ---
 pcx-content-type: how-to
 weight: 2
+title: Configure exposed credentials checks in the dashboard
 ---
 
 # Configure exposed credentials checks in the dashboard

@@ -3,6 +3,7 @@ updated: 2021-02-16
 category: 🌐 Connections
 difficulty: Advanced
 pcx-content-type: tutorial
+title: Create and connect an application with a single command
 ---
 
 # Create and connect an application with a single command

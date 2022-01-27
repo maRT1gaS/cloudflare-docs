@@ -1,5 +1,6 @@
 ---
 pcx-content-type: configuration
+title: Exempt partners from Hotlink Protection
 ---
 
 # Exempt partners from Hotlink Protection

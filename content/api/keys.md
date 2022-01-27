@@ -1,5 +1,6 @@
 ---
 weight: 10
+title: API keys (legacy)
 ---
 
 # API keys (legacy)

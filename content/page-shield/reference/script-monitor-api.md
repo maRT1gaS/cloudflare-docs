@@ -1,6 +1,7 @@
 ---
 weight: 2
 pcx-content-type: reference
+title: Script Monitor API
 ---
 
 # Script Monitor API

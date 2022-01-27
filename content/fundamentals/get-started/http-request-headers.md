@@ -1,5 +1,6 @@
 ---
 pcx-content-type: concept
+title: HTTP request headers
 ---
 
 # HTTP request headers

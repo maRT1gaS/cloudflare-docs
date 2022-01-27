@@ -1,6 +1,7 @@
 ---
 pcx-content-type: reference
 weight: 640
+title: Functions
 ---
 
 # Functions

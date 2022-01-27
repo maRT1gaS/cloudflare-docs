@@ -1,6 +1,7 @@
 ---
 weight: 88
 pcx-content-type: interim
+title: Manage Logpush with Python
 ---
 
 # Manage Logpush with Python

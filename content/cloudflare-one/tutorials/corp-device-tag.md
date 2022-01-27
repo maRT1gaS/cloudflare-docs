@@ -3,6 +3,7 @@ updated: 2021-03-30
 category: 🔐 Zero Trust
 difficulty: Beginner
 hidden: true
+title: Require corporate devices
 ---
 
 # Require corporate devices

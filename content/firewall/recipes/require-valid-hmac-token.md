@@ -1,5 +1,6 @@
 ---
 pcx-content-type: configuration
+title: Require a valid HMAC token
 ---
 
 # Require a valid HMAC token

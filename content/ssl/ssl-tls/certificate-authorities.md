@@ -1,6 +1,7 @@
 ---
 weight: 4
 pcx-content-type: reference
+title: Certificate authorities
 ---
 
 # Certificate authorities

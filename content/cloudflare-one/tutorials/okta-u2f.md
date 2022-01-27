@@ -3,6 +3,7 @@ updated: 2020-12-07
 category: 🔐 Zero Trust
 difficulty: Medium
 pcx-content-type: tutorial
+title: Require U2F with Okta
 ---
 
 # Require U2F with Okta

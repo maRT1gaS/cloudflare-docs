@@ -1,6 +1,7 @@
 ---
 weight: 14
 pcx-content-type: how-to
+title: Always Use HTTPS
 ---
 
 import AlwaysUseHTTPSDefinition from '../../_partials/_always-use-https-definition.md';

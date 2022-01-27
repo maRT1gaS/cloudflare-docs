@@ -1,6 +1,7 @@
 ---
 pcx-content-type: configuration
 weight: 3
+title: URL rewrite examples
 ---
 
 # URL rewrite examples

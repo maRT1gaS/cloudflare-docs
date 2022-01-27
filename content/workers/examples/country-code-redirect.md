@@ -5,6 +5,7 @@ summary: Redirect a response based on the country code in the header of a visito
 tags:
   - Originless
 pcx-content-type: configuration
+title: Country code redirect
 ---
 
 # Country code redirect

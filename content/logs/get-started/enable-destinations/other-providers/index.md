@@ -2,6 +2,8 @@
 title: Enable other providers
 weight: 65
 pcx-content-type: how-to
+meta:
+  title: Enable Logpush to other providers
 ---
 
 import EnableReadPermissions from '../../../_partials/_enable-read-permissions.md';

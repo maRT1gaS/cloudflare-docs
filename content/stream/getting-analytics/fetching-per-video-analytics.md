@@ -1,6 +1,7 @@
 ---
 weight: 2
 pcx-content-type: reference
+title: Fetching per-video analytics
 ---
 
 # Fetching per-video analytics

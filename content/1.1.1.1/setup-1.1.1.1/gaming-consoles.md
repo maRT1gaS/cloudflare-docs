@@ -1,7 +1,9 @@
 ---
-weight:
+weight: null
 title: Gaming consoles
 pcx-content-type: how-to
+meta:
+  title: Set up 1.1.1.1 - Gaming consoles
 ---
 
 # Set up 1.1.1.1 - Gaming consoles

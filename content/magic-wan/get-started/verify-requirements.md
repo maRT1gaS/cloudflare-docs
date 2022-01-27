@@ -2,6 +2,8 @@
 title: Verify requirements
 weight: 2
 pcx-content-type: how-to
+meta:
+  title: Requirements
 ---
 
 # Requirements

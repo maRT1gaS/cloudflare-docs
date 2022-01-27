@@ -1,6 +1,7 @@
 ---
 weight: 20
 pcx-content-type: reference
+title: Querying basics
 ---
 
 # Querying basics

@@ -2,6 +2,8 @@
 title: Get started
 weight: 1
 pcx-content-type: how-to
+meta:
+  title: Get started with Cloudflare Page Shield
 ---
 
 import AlertsIntro from '../_partials/_alerts-intro.md';

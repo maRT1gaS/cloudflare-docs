@@ -1,6 +1,7 @@
 ---
 weight: 3
 pcx-content-type: concept
+title: Debugging Workers
 ---
 
 # Debugging Workers

@@ -1,6 +1,7 @@
 ---
 weight: 2
 pcx-content-type: how-to
+title: Support mobile app traffic
 ---
 
 # Support mobile app traffic

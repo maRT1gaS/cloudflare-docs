@@ -1,6 +1,7 @@
 ---
 weight: 7
 pcx-content-type: concept
+title: How KV works
 ---
 
 # How KV works

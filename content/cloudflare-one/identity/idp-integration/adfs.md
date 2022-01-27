@@ -1,6 +1,7 @@
 ---
 weight: 5
 pcx-content-type: how-to
+title: SAML | Active Directory®
 ---
 
 # SAML | Active Directory®

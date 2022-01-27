@@ -2,6 +2,8 @@
 title: Expressions
 weight: 20
 pcx-content-type: reference
+meta:
+  title: Load Balancing expressions
 ---
 
 # Load Balancing expressions

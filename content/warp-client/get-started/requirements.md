@@ -3,6 +3,8 @@ title: Requirements
 weight: 3
 pcx-content-type: reference
 type: overview
+meta:
+  title: Installation requirements
 ---
 
 # Installation requirements

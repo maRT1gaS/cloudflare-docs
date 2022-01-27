@@ -2,6 +2,8 @@
 weight: 14
 pcx-content-type: how-to
 title: Domain Joined
+meta:
+  title: Domain Joined (beta)
 ---
 
 # Domain Joined (beta)

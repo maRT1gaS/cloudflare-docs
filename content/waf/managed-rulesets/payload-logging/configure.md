@@ -2,6 +2,8 @@
 title: Configure payload logging in the dashboard
 pcx-content-type: how-to
 weight: 1
+meta:
+  title: Configure payload logging for a Managed Ruleset in the dashboard
 ---
 
 # Configure payload logging for a Managed Ruleset in the dashboard

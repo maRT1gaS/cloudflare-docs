@@ -2,6 +2,8 @@
 weight: 1
 title: Gateway
 pcx-content-type: how-to
+meta:
+  title: Require Gateway
 ---
 
 # Require Gateway

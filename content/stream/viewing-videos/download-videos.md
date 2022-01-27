@@ -1,5 +1,6 @@
 ---
 weight: 5
+title: Download videos
 ---
 
 # Download videos

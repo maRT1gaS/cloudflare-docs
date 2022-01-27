@@ -2,6 +2,8 @@
 title: PacketFabric
 weight: 4
 pcx-content-type: tutorial
+meta:
+  title: PacketFabric Users
 ---
 
 # PacketFabric Users

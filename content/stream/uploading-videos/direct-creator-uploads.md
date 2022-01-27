@@ -1,6 +1,7 @@
 ---
 weight: 3
 pcx-content-type: interim
+title: Direct creator uploads
 ---
 
 # Direct creator uploads

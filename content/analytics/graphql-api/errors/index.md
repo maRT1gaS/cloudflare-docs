@@ -1,6 +1,7 @@
 ---
 weight: 25
 pcx-content-type: reference
+title: Error responses
 ---
 
 # Error responses

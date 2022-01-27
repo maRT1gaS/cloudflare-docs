@@ -2,6 +2,8 @@
 title: Network Interconnect
 weight: 3
 pcx-content-type: navigation
+meta:
+  title: Cloudflare Network Interconnect
 ---
 
 # Cloudflare Network Interconnect

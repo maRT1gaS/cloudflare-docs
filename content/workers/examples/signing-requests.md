@@ -1,11 +1,13 @@
 ---
 weight: 1000
 type: example
-summary: Sign and verify a request using the HMAC and SHA-256 algorithms or return a 403.
+summary: Sign and verify a request using the HMAC and SHA-256 algorithms or
+  return a 403.
 tags:
   - Security
   - WebCrypto
 pcx-content-type: configuration
+title: Sign requests
 ---
 
 # Sign requests

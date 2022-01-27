@@ -1,6 +1,8 @@
 ---
 title: Windows
 weight: 2
+meta:
+  title: Installation on Windows
 ---
 
 # Installation on Windows

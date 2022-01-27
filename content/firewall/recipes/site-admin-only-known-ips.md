@@ -1,5 +1,6 @@
 ---
 pcx-content-type: configuration
+title: Site administration—Require known IP addresses
 ---
 
 # Site administration—Require known IP addresses

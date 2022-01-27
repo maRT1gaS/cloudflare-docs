@@ -2,6 +2,7 @@
 weight: 3
 pcx-content-type: how-to
 hidden: true
+title: Enable third-party cookies
 ---
 
 # Enable third-party cookies

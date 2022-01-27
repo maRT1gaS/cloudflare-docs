@@ -1,6 +1,7 @@
 ---
 weight: 45
 pcx-content-type: interim
+title: Use GraphQL to create widgets
 ---
 
 # Use GraphQL to create widgets

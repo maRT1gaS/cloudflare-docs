@@ -1,6 +1,8 @@
 ---
 title: Enable DNSSEC
 pcx-content-type: tutorial
+meta:
+  title: Domain Name System Security Extensions
 ---
 
 # Domain Name System Security Extensions

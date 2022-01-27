@@ -1,8 +1,10 @@
 ---
 title: Create Load Balancer & Spectrum application
-nav:
-weight:
+nav: null
+weight: null
 pcx-content-type: how to
+meta:
+  title: Create a Load Balancer and Spectrum Application
 ---
 
 # Create a Load Balancer and Spectrum Application

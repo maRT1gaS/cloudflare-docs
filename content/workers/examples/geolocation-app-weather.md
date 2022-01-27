@@ -6,6 +6,7 @@ tags:
   - Originless
   - Geolocation
 pcx-content-type: configuration
+title: "Geolocation: Weather App"
 ---
 
 # Geolocation: Weather App

@@ -4,6 +4,7 @@ type: example
 summary: Allow access based on the "amr" identifier.
 tags:
   - Authentication Method
+title: Authentication method
 ---
 
 # Authentication method

@@ -1,5 +1,6 @@
 ---
 pcx-content-type: how-to
+title: Domain management
 ---
 
 # Domain management

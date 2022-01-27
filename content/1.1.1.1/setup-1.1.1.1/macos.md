@@ -1,7 +1,9 @@
 ---
-weight:
+weight: null
 title: macOS
 pcx-content-type: how-to
+meta:
+  title: Set up 1.1.1.1 - macOS
 ---
 
 import CaptivePortals from '../_partials/_captive-portals.md';

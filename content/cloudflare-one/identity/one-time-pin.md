@@ -1,6 +1,7 @@
 ---
 weight: 1
 pcx-content-type: how-to
+title: One-time PIN login
 ---
 
 # One-time PIN login

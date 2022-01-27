@@ -2,6 +2,8 @@
 weight: 15
 pcx-content-type: how-to
 title: Disk Encryption
+meta:
+  title: Disk Encryption (beta)
 ---
 
 # Disk Encryption (beta)

@@ -1,5 +1,6 @@
 ---
 weight: 10
+title: Privacy
 ---
 
 # Privacy

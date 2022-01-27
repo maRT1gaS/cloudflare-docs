@@ -1,6 +1,7 @@
 ---
 weight: 50
 pcx-content-type: faq
+title: Common error codes
 ---
 
 # Common error codes

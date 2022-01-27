@@ -1,5 +1,6 @@
 ---
 pcx-content-type: configuration
+title: Block Microsoft Exchange Autodiscover requests
 ---
 
 # Block Microsoft Exchange Autodiscover requests

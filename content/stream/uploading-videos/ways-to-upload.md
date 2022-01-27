@@ -2,6 +2,7 @@
 weight: 0
 type: overview
 pcx-content-type: reference
+title: Ways to upload
 ---
 
 # Ways to upload

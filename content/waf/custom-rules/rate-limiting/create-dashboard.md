@@ -2,6 +2,7 @@
 pcx-content-type: how-to
 weight: 13
 type: overview
+title: Create Rate Limiting rules in the dashboard
 ---
 
 # Create Rate Limiting rules in the dashboard

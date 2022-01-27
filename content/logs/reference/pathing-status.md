@@ -1,6 +1,7 @@
 ---
 weight: 122
 pcx-content-type: reference
+title: Pathing status
 ---
 
 # Pathing status

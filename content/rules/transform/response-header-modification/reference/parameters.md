@@ -2,6 +2,8 @@
 title: API parameter reference
 pcx-content-type: reference
 weight: 3
+meta:
+  title: Response header modification API parameter reference
 ---
 
 # Response header modification API parameter reference

@@ -1,5 +1,6 @@
 ---
 pcx-content-type: how-to
+title: Add custom HTTP headers
 ---
 
 # Add custom HTTP headers

@@ -3,6 +3,7 @@ updated: 2021-06-18
 category: 🔐 Zero Trust
 difficulty: Advanced
 pcx-content-type: tutorial
+title: Render a VNC client in browser
 ---
 
 # Render a VNC client in browser

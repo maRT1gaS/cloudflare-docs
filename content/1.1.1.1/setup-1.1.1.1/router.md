@@ -1,7 +1,9 @@
 ---
-weight:
+weight: null
 title: Router
 pcx-content-type: how-to
+meta:
+  title: Set up 1.1.1.1 - Router
 ---
 
 # Set up 1.1.1.1 - Router

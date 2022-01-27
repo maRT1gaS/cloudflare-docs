@@ -1,6 +1,7 @@
 ---
 weight: 4
 pcx-content-type: faq
+title: Policies
 ---
 
 [❮ Back to FAQ](/faq)

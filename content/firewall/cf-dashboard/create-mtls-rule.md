@@ -1,6 +1,7 @@
 ---
 pcx-content-type: how-to
 weight: 380
+title: Create a mTLS rule
 ---
 
 # Create a mTLS rule

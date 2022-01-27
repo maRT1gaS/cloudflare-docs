@@ -1,6 +1,7 @@
 ---
 weight: 6
 pcx-content-type: how-to
+title: SafeSearch
 ---
 
 # SafeSearch

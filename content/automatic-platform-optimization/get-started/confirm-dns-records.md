@@ -2,6 +2,8 @@
 title: Confirm DNS Records
 weight: 5
 pcx-content-type: how-to
+meta:
+  title: Confirm DNS records
 ---
 
 # Confirm DNS records

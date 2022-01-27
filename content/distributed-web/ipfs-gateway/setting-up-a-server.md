@@ -1,6 +1,7 @@
 ---
 weight: 2
 pcx-content-type: tutorial
+title: Setting Up a Server
 ---
 
 # Setting Up a Server

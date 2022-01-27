@@ -2,6 +2,8 @@
 title: Containerized applications
 weight: 8
 pcx-content-type: how-to
+meta:
+  title: Deploy containerized applications
 ---
 
 # Deploy containerized applications

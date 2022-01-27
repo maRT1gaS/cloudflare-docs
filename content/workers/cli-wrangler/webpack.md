@@ -1,6 +1,7 @@
 ---
 weight: 4
 pcx-content-type: configuration
+title: Webpack
 ---
 
 # Webpack

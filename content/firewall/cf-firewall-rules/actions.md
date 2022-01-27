@@ -1,6 +1,7 @@
 ---
 pcx-content-type: reference
 weight: 220
+title: Actions
 ---
 
 # Actions

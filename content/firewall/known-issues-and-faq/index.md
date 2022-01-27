@@ -2,6 +2,8 @@
 title: Frequently asked questions
 pcx-content-type: faq
 weight: 700
+meta:
+  title: Frequently asked questions (FAQ)
 ---
 
 # Frequently asked questions (FAQ)

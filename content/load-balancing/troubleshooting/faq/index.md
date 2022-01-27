@@ -1,6 +1,7 @@
 ---
 weight: 48
 pcx-content-type: faq
+title: FAQs
 ---
 
 # FAQs

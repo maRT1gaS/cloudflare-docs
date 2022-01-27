@@ -1,11 +1,14 @@
 ---
 weight: 1000
 type: example
-summary: Set common security headers (X-XSS-Protection, X-Frame-Options, X-Content-Type-Options, Permissions-Policy, Referrer-Policy, Strict-Transport-Security, Content-Security-Policy).
+summary: Set common security headers (X-XSS-Protection, X-Frame-Options,
+  X-Content-Type-Options, Permissions-Policy, Referrer-Policy,
+  Strict-Transport-Security, Content-Security-Policy).
 tags:
   - Security
   - Middleware
 pcx-content-type: configuration
+title: Set security headers
 ---
 
 # Set security headers

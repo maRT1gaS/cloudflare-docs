@@ -1,5 +1,6 @@
 ---
 pcx-content-type: how-to
+title: Register a new domain
 ---
 
 # Register a new domain

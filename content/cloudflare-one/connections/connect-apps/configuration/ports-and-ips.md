@@ -1,6 +1,7 @@
 ---
 weight: 3
 pcx-content-type: reference
+title: Ports and IPs
 ---
 
 # Ports and IPs

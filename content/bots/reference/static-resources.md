@@ -1,6 +1,7 @@
 ---
-weight:
+weight: null
 pcx-content-type: reference
+title: Static resource protection
 ---
 
 import StaticResourcesBM from '../_partials/_static-resources-bm.md';

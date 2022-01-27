@@ -1,6 +1,7 @@
 ---
 type: table
 weight: 1
+title: Scheduled changes
 ---
 
 # Scheduled changes

@@ -2,6 +2,8 @@
 title: 1 –  Initialize Terraform
 weight: 1
 pcx-content-type: tutorial
+meta:
+  title: Introduction to Terraform init
 ---
 
 # Introduction to Terraform init

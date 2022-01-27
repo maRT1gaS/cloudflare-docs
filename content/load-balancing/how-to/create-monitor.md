@@ -1,6 +1,7 @@
 ---
 weight: 2
 pcx-content-type: how-to
+title: Create a monitor
 ---
 
 import MonitorDefinition from '../_partials/_monitor-definition.md';

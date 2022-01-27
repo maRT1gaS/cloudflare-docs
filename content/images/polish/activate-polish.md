@@ -1,5 +1,6 @@
 ---
 pcx-content-type: how-to
+title: Activate Polish
 ---
 
 # Activate Polish

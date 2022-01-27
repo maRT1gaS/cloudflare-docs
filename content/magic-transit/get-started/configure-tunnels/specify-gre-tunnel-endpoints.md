@@ -1,6 +1,7 @@
 ---
-weight:
+weight: null
 pcx-content-type: how-to
+title: Specify tunnel endpoints
 ---
 
 # Specify tunnel endpoints

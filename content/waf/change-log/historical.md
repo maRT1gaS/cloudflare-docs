@@ -3,6 +3,7 @@ date: 2019-09-15
 type: table
 weight: 1001
 summary: Changes that were completed before the change log was made publicly available.
+title: Historical
 ---
 
 # Historical

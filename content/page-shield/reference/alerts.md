@@ -2,6 +2,8 @@
 title: Alerts
 weight: 1
 pcx-content-type: reference
+meta:
+  title: Page Shield alerts
 ---
 
 # Page Shield alerts

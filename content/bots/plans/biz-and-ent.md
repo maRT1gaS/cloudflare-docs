@@ -4,6 +4,8 @@ weight: 2
 type: document
 pcx-content-type: reference
 hidden: true
+meta:
+  title: Plans — Business and Enterprise
 ---
 
 import PlanIntro from '../_partials/_plan-intro.md';

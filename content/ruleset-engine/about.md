@@ -2,6 +2,8 @@
 title: About
 pcx-content-type: concept
 weight: 2
+meta:
+  title: About Ruleset Engine
 ---
 
 # About Ruleset Engine

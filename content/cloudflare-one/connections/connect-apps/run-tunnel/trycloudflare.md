@@ -1,6 +1,7 @@
 ---
 weight: 100
 pcx-content-type: how-to
+title: Quick Tunnels
 ---
 
 # Quick Tunnels

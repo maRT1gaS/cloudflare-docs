@@ -1,5 +1,6 @@
 ---
 pcx-content-type: how-to
+title: Troubleshoot a stalled transfer
 ---
 
 # Troubleshoot a stalled transfer

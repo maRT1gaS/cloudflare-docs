@@ -1,6 +1,7 @@
 ---
 weight: 5
 pcx-content-type: reference
+title: Tunnel Audit logs
 ---
 
 # Tunnel Audit logs

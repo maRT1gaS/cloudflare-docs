@@ -2,6 +2,8 @@
 title: Cipher suites
 weight: 1
 pcx-content-type: reference
+meta:
+  title: Cipher suites — Edge certificates
 ---
 
 import CipherSuitesDefinition from '../_partials/_cipher-suites-definition.md';

@@ -1,6 +1,7 @@
 ---
 weight: 1
 pcx-content-type: how-to
+title: Manage universal certificates
 ---
 
 # Manage universal certificates
