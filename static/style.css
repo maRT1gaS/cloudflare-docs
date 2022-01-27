@@ -1399,7 +1399,7 @@ html {
   --focus-size: 0;
 }
 
-.InlineCode {
+code, .InlineCode {
   font-family: var(--monospace-font-family);
   font-size: var(--inline-code-font-size);
   --default-padding: 0.2em 0.3em;
@@ -3102,7 +3102,7 @@ html[is-docs-page] body {
   vertical-align: middle;
   position: relative;
   top: -1px;
-  /* margin-left: 4px; */
+  margin-left: 4px;
   opacity: 0.7;
 }
 
