@@ -13,7 +13,7 @@ meta:
 
 Learn more about Cloudflare’s suite of time services.
 
-<bongo:buttongroup>
+{{<button-group>}}
   <bongo:button type="primary" href="/ntp">
     NTP
   </bongo:button>
@@ -23,6 +23,6 @@ Learn more about Cloudflare’s suite of time services.
   <bongo:button type="primary" href="/roughtime">
     Roughtime
   </bongo:button>
-</bongo:buttongroup>
+{{</button-group>}}
 
 </ContentColumn>

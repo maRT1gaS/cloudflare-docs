@@ -9,14 +9,14 @@ title: Configuration settings
 
 You can customize a variety of options for your waiting rooms.
 
-<bongo:buttongroup>
+{{<button-group>}}
   <bongo:button type="primary" href="#dashboard-settings">
     Dashboard settings
   </bongo:button>
   <bongo:button type="secondary" href="#additional-details">
     Additional details
   </bongo:button>
-</bongo:buttongroup>
+{{</button-group>}}
 
 ## Dashboard settings
 

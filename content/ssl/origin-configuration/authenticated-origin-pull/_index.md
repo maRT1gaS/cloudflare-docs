@@ -12,14 +12,14 @@ This authentication becomes particularly important with the Cloudflare Web Appli
 
 If you want your domain to be FIPS compliant, you must [upload your own certificate](set-up#per-hostname--customer-certificates).
 
-<bongo:buttongroup>
+{{<button-group>}}
   <bongo:button type="primary" href="set-up">
     Get started
   </bongo:button>
   <bongo:button type="secondary" href="explanation">
     Learn more
   </bongo:button>
-</bongo:buttongroup>
+{{</button-group>}}
 
 {{<Aside type="warning" header="Important">}}
 Authenticated Origin Pull is incompatible with Railgun.

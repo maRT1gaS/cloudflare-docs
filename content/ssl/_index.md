@@ -12,7 +12,7 @@ At Cloudflare, our goal is to build a better Internet (safer, better, more acces
 
 As part of that, we are proud to be the first Internet performance and security company to offer free SSL/TLS protection. SSL/TLS encrypts your web traffic to prevent data theft and other tampering.
 
-<bongo:buttongroup>
+{{<button-group>}}
   <bongo:button type="primary" href="/get-started">
     Get started
   </bongo:button>
@@ -20,4 +20,4 @@ As part of that, we are proud to be the first Internet performance and security 
   <bongo:button type="secondary" href="https://www.cloudflare.com/learning/ssl/what-is-ssl/" target="_blank">
     Learn more
   </bongo:button>
-</bongo:buttongroup>
+{{</button-group>}}

@@ -14,7 +14,7 @@ import GetStarted from '../_partials/_plan-get-started.md';
 
 <PlanIntro />
 
-<bongo:buttongroup>
+{{<button-group>}}
   <bongo:button type="primary" href="/plans/free">
     Free
   </bongo:button>
@@ -27,7 +27,7 @@ import GetStarted from '../_partials/_plan-get-started.md';
   <bongo:button type="primary" href="/plans/bm-subscription">
     Bot Management for Enterprise
   </bongo:button>
-</bongo:buttongroup>
+{{</button-group>}}
 
 ## How do I get started?
 
