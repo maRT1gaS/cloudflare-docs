@@ -1,7 +1,7 @@
 {{- $href := (.Destination | safeURL) -}}
 {{- $text := (.Text | safeHTML) -}}
 {{- if strings.HasPrefix $href "http" -}}
-  {{- partial "link.external" (dict "url" $href "text" $text) -}}
+  {{- partial "external.link" (dict "url" $href "text" $text) -}}
 {{- else -}}
   <a href={{ $href }} class="DocsMarkdown--link">
     <span class="DocsMarkdown--link-content">{{- $text -}}</span>
