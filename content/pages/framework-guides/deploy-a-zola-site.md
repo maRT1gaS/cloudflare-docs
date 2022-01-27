@@ -101,9 +101,9 @@ For example, `ZOLA_VERSION`: `0.14.0`.
 
 After configuring your site, you can begin your first deploy. You should see Cloudflare Pages installing `zola`, your project dependencies, and building your site, before deploying it.
 
-<bongo:aside type="note">
+{{<Aside type="note">}}
 For the complete guide to deploying your first site to Cloudflare Pages, refer to the [Get started guide](/get-started).
-</bongo:aside>
+{{</Aside>}}
 
 After deploying your site, you will receive a unique subdomain for your project on `*.pages.dev`.
 

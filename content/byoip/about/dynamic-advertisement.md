@@ -5,9 +5,9 @@ pcx-content-type: concept
 
 # Dynamic advertisement
 
-<bongo:aside>
+{{<Aside>}}
 To ensure smooth operation in general and simplify the advertisement process during an attack scenario, refer to [dynamic advertisement best practices](/best-practices/dynamic-advertisement).
-</bongo:aside>
+{{</Aside>}}
 
 To configure BGP advertisement at the Cloudflare edge, [use the Cloudflare API](/how-to/configure-dynamic-advertisement#configure-dynamic-advertisement-via-the-api) or [use the IP Prefixes page](/how-to/configure-dynamic-advertisement#configure-dynamic-advertisement-via-the-dashboard) from your Cloudflare Account Home.
 

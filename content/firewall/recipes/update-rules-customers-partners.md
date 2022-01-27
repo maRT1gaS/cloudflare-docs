@@ -11,9 +11,9 @@ Potential examples include:
 - Removing rate limiting for an API
 - Sharing brand assets and marketing materials
 
-<bongo:aside type='note' header='Note'>
+{{<Aside type="note" header="Note">}}
 These rules can bypass Cloudflare's security features and are generally not recommended. Use with caution.
-</bongo:aside>
+{{</Aside>}}
 
 ## Update firewall rules by ASN
 
@@ -45,9 +45,9 @@ This example uses:
   </tbody>
 </table>
 
-<bongo:aside type='warning' header='Important'>
+{{<Aside type="warning" header="Important">}}
 Access to [Bot Management](https://developers.cloudflare.com/bots/get-started/bm-subscription) requires a Cloudflare Enterprise plan with Bot Management.
-</bongo:aside>
+{{</Aside>}}
 
 ### Adjust rules by ASN
 

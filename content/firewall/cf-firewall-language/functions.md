@@ -81,10 +81,10 @@ The Cloudflare Firewall Rules language supports these transformation functions:
   - _Example:_<br />
     `ends_with("/welcome.html", ".html") == true`
 
-    <bongo:aside type='warning'>
+    {{<Aside type="warning">}}
     **Warning:** You can only use the `ends_with()` function in [rulesets](https://developers.cloudflare.com/ruleset-engine/) and [Transform Rules](https://developers.cloudflare.com/rules/transform).
 
-    </bongo:aside>
+    {{</Aside>}}
 
 - <code>
     len(<Type>String | bytes</Type>)
@@ -135,10 +135,10 @@ The Cloudflare Firewall Rules language supports these transformation functions:
     Replace with capture groups:<br />
     `regex_replace("/foo/a/path", "^/foo/([^/]*)/(.*)$", "/bar/${2}/${1}") == "/bar/path/a/"`
 
-    <bongo:aside type='warning'>
+    {{<Aside type="warning">}}
     **Warning:** You can only use the `regex_replace()` function in [rewrite expressions of Transform Rules](https://developers.cloudflare.com/rules/transform). Additionally, the first argument must be a field under `http.request.headers` or `http.request.uri`.
 
-    </bongo:aside>
+    {{</Aside>}}
 
 - <code>
     remove_bytes(<Type>bytes</Type>)
@@ -161,10 +161,10 @@ The Cloudflare Firewall Rules language supports these transformation functions:
   - _Example:_<br />
     `starts_with("/blog/first-post", "/blog") == true`
 
-    <bongo:aside type='warning'>
+    {{<Aside type="warning">}}
     **Warning:** You can only use the `starts_with()` function in [rulesets](https://developers.cloudflare.com/ruleset-engine/) and [Transform Rules](https://developers.cloudflare.com/rules/transform).
 
-    </bongo:aside>
+    {{</Aside>}}
 
 - <code>
     to_string(<Type>Integer | Boolean | IP address</Type>)
@@ -179,10 +179,10 @@ The Cloudflare Firewall Rules language supports these transformation functions:
     to_string(ssl) == 'true'
     ```
 
-    <bongo:aside type='warning'>
+    {{<Aside type="warning">}}
     **Warning:** You can only use the `to_string()` function in [rewrite expressions of Transform Rules](https://developers.cloudflare.com/rules/transform).
 
-    </bongo:aside>
+    {{</Aside>}}
 
 - <code>
     upper(<Type>String</Type>)
@@ -228,9 +228,9 @@ The Cloudflare Firewall Rules language supports these transformation functions:
 
 ## HMAC validation
 
-<bongo:aside type='warning' header='Important'>
+{{<Aside type="warning" header="Important">}}
 Access to the HMAC validation function requires a Cloudflare Pro, Business, or Enterprise plan.
-</bongo:aside>
+{{</Aside>}}
 
 ### Overview
 
@@ -374,11 +374,11 @@ For details on generating a MessageMAC, see [_Implement token creation_](https:/
 
 ## HMAC validation examples
 
-<bongo:aside type='warning' header='Important'>
+{{<Aside type="warning" header="Important">}}
 When you do not use the optional _flags_ argument for `is_timed_hmac_valid_v0()`, you must URL encode the base64 value for _mac_ in the _MessageMAC_ argument.
 
 For more information, see [HMAC Validation: Overview](#overview).
-</bongo:aside>
+{{</Aside>}}
 
 ### Simple case
 

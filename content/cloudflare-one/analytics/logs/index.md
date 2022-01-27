@@ -16,8 +16,8 @@ Cloudflare for Teams logs are stored for a varying period of time based on the s
 - **DNS logs** corresponding to DNS filtering: up to six months
 - **HTTP logs** corresponding to HTTP traffic filtering: up to 30 days
 
-<bongo:aside>  Teams Free users will have the visibility into the last 24 hours of DNS activity logs. Teams
-  Standard and Enterprise users have 30 days of visibility into both DNS and HTTP activity logs.</bongo:aside>
+{{<Aside>}}  Teams Free users will have the visibility into the last 24 hours of DNS activity logs. Teams
+  Standard and Enterprise users have 30 days of visibility into both DNS and HTTP activity logs.{{</Aside>}}
 
 ## How does Cloudflare use this data?
 

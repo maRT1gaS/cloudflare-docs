@@ -23,7 +23,7 @@ You can define overrides to customize the behavior of the rules included in a Ma
 
 To learn more about deploying Managed Rulesets and configuring overrides using the Rulesets API, see [Work with Managed Rulesets](https://developers.cloudflare.com/ruleset-engine/managed-rulesets).
 
-<bongo:aside type="warning" header="Important">
+{{<Aside type="warning" header="Important">}}
 Currently, each Managed Ruleset will execute **at most once per request**. Configuring a second rule that executes the same Managed Ruleset will have no effect.
 
 For example, consider two account-level rules with different expressions that execute the same Managed Ruleset. If the two rules match for the same request, the Managed Ruleset will not be executed for the second rule.
@@ -31,15 +31,15 @@ For example, consider two account-level rules with different expressions that ex
 As another example, consider an account-level rule that executes a Managed Ruleset and a zone-level rule that executes the same Managed Ruleset. If both rules match for the same request, the Managed Ruleset is only executed when the account-level rule is evaluated.
 
 This behavior will change in the future so that you can execute each Managed Ruleset multiple times per request.
-</bongo:aside>
+{{</Aside>}}
 
 ## Deploying custom rulesets
 
 You can create custom rulesets in the `http_request_firewall_custom` phase at the account level. After creating a custom ruleset, you can deploy it to a phase at the account level by adding a rule to the phase entry point that executes the custom ruleset.
 
-<bongo:aside type='warning' header='Important'>
+{{<Aside type="warning" header="Important">}}
 
 Currently, you can only deploy custom rulesets to a phase at the account level.
-</bongo:aside>
+{{</Aside>}}
 
 To learn more about creating and deploying custom rulesets using the Rulesets API, see [Work with custom rulesets](https://developers.cloudflare.com/ruleset-engine/custom-rulesets).

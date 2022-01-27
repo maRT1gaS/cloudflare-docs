@@ -5,9 +5,9 @@ pcx-content-type: concept
 
 # Network policies
 
-<bongo:aside type="note">
+{{<Aside type="note">}}
 To enable this feature, download and deploy the [WARP client](/connections/connect-devices/warp/deployment) on your devices.
-</bongo:aside>
+{{</Aside>}}
 
 With Teams, you can configure policies to control network-level traffic leaving your endpoints. Using network selectors like IP addresses and ports, your policies will control access to any network origin. Because Cloudflare for Teams [integrates with your identity provider](/identity/idp-integration), it also gives you the ability to create identity-based network policies. This means you can now control access to non-HTTP resources on a per-user basis regardless of where they are or what device they’re accessing that resource from.
 
@@ -136,9 +136,9 @@ Operators are the way Gateway matches traffic to a selector. Matching happens as
 |    matches regex     |       regex evaluates to true       |
 | does not match regex | all except when regex evals to true |
 
-<bongo:aside>
+{{<Aside>}}
 The <code>in</code> operator allows you to specify IP addresses or networks using CIDR notation.
-</bongo:aside>
+{{</Aside>}}
 
 ## Changing network protocol
 
@@ -146,6 +146,6 @@ You can set your protocol preferences in the **Protocol** card under **Settings*
 
 ![Protocol settings](../../../static/documentation/policies/protocol-settings.png)
 
-<bongo:aside>
+{{<Aside>}}
 Any option you select in the card will automatically apply to all of your network policies unless you specify a protocol within a policy itself.
-</bongo:aside>
+{{</Aside>}}

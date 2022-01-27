@@ -59,10 +59,10 @@ The SDK provides an API for programmatically controlling the player and listenin
 
   - Sets or returns whether the autoplay attribute was set, allowing video playback to start upon load.
 
-    <bongo:aside>
+    {{<Aside>}}
     Some browsers prevent videos with audio from playing automatically. You may add the `mute` attribute to allow your videos to autoplay. For more information, go [here](https://webkit.org/blog/6784/new-video-policies-for-ios/).
 
-    </bongo:aside>
+    {{</Aside>}}
 
 - `buffered` <TypeLink href="https://developer.mozilla.org/en-US/docs/Web/API/TimeRanges">TimeRanges</TypeLink> <PropMeta>readonly</PropMeta>
 
@@ -80,10 +80,10 @@ The SDK provides an API for programmatically controlling the player and listenin
 
   - Will initialize the player with the specified language code's text track enabled. The value should be the BCP-47 language code that was used to [upload the text track](/uploading-videos/adding-captions). If the specified language code has no captions available, the player will behave as though no language code had been provided.
 
-    <bongo:aside>
+    {{<Aside>}}
     This will _only_ work once during initialization. Beyond that point the user has full control over their text track settings.
 
-    </bongo:aside>
+    {{</Aside>}}
 
 - `duration` <Type>integer</Type> <PropMeta>readonly</PropMeta>
 
@@ -113,10 +113,10 @@ The SDK provides an API for programmatically controlling the player and listenin
 
   - Sets or returns whether the video should be preloaded upon element load.
 
-    <bongo:aside>
+    {{<Aside>}}
     The `<video>` element does not force the browser to follow the value of this attribute; it is a mere hint. Even though the `preload="none"` option is a valid HTML5 attribute, Stream player will always load some metadata to initialize the player. The amount of data loaded in this case is negligible.
 
-    </bongo:aside>
+    {{</Aside>}}
 
 - `primaryColor` <Type>string</Type>
 

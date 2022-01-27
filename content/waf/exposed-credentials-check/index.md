@@ -5,9 +5,9 @@ weight: 5
 
 # Automated exposed credentials check
 
-<bongo:aside type='note'>
-This feature is available to all paid plans.
-</bongo:aside>
+{{<Aside type="note">}}
+This feature is available to all paid plans.
+{{</Aside>}}
 
 Many web applications have suffered credential stuffing attacks in the recent past. In these attacks there is a massive number of login attempts using username/password pairs from databases of exposed credentials.
 
@@ -31,10 +31,10 @@ The WAF can perform one of the following actions when it detects exposed credent
 - _JS Challenge_ — Presents a Cloudflare JavaScript Captcha challenge to the clients making HTTP requests with exposed credentials.
 - _Challenge (Captcha)_ — Presents a Captcha challenge to the clients making HTTP requests with exposed credentials.
 
-<bongo:aside type='warning' header='Important'>
+{{<Aside type="warning" header="Important">}}
 
 Cloudflare recommends that you only use the following actions: _CF-Exposed Credentials Header_ (named `rewrite` in the API) or _Log_ (`log`).
-</bongo:aside>
+{{</Aside>}}
 
 ## The Exposed Credentials Check Managed Ruleset
 
@@ -55,19 +55,19 @@ Additionally, this Managed Ruleset also includes generic rules for other common 
 
 The default action for the rules in the Exposed Credentials Check Managed Ruleset is _CF-Exposed Credentials Header_ (named `rewrite` in the API).
 
-<bongo:aside type='note' header='Note'>
+{{<Aside type="note" header="Note">}}
 
 The Managed Ruleset contains an additional rule that blocks HTTP requests already containing the `Exposed-Credential-Check` HTTP header used by the _CF-Exposed Credentials Header_ action. These requests could be used to trick the origin into believing that a request contained (or did not contain) exposed credentials.
-</bongo:aside>
+{{</Aside>}}
 
 You can turn the Managed Ruleset on/off and customize the action performed by each rule when there is a match. Check [Configure exposed credentials check in the dashboard](/exposed-credentials-check/configure-dashboard) for more information.
 
 ## Exposed credentials checks in custom rules
 
-<bongo:aside type='warning'>
+{{<Aside type="warning">}}
 
 Currently, exposed credentials checks in custom rules are only available via API.
-</bongo:aside>
+{{</Aside>}}
 
 You can also check for exposed credentials in custom rules. One common use case is to create custom rules on the end user authentication endpoints of your application to check for exposed credentials.
 
@@ -75,7 +75,7 @@ To check for exposed credentials in a custom rule, include the exposed credentia
 
 Use the [Rulesets API](https://developers.cloudflare.com/ruleset-engine/rulesets-api) to include exposed credentials check in a custom rule. For more information, see [Create a custom rule checking for exposed credentials](/exposed-credentials-check/configure-api#create-a-custom-rule-checking-for-exposed-credentials).
 
-<bongo:aside type='note' header='Note'>
+{{<Aside type="note" header="Note">}}
 
 Rules that check for exposed credentials run before Rate Limiting Rules.
-</bongo:aside>
+{{</Aside>}}

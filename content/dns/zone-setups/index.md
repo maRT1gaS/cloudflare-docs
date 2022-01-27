@@ -11,6 +11,6 @@ When using Cloudflare DNS, you have three setup options:
 - [Partial (CNAME) setup](partial-setup): Cloudflare is your primary DNS provider but **does not** provide your authoritative nameservers.
 - [Secondary DNS](secondary-dns): Cloudflare is not your primary DNS provider, but serves read-only DNS records to increase redundancy and resiliency.
 
-<bongo:aside type="note" header="Note:">
+{{<Aside type="note" header="Note:">}}
 If you run your own authoritative nameservers but still want to benefit from Cloudflare's DDoS protection, check out [DNS Firewall](/dns-firewall).
-</bongo:aside>
+{{</Aside>}}

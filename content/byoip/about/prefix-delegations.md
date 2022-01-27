@@ -24,9 +24,9 @@ API calls for delegations can be found at [Prefix Delegations](https://api.cloud
 1. At the bottom of the page, click **Add Delegation**. Other accounts your user is a part of will auto-load when you create the delegation.
 1. When you are done, click **Save**.
 
-<bongo:aside>
+{{<Aside>}}
 The dashboard only supports delegation of an entire prefix. If you want to delegate less than the entire prefix, use the API.
-</bongo:aside>
+{{</Aside>}}
 
 ## Spectrum
 

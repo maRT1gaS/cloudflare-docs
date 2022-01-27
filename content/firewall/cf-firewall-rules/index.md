@@ -49,11 +49,11 @@ You should aim for a low Challenge Solve Rate. Review the CSR of your CAPTCHA ru
 - If the rate is higher than expected, for example regarding a Bot Management rule, consider relaxing the rule criteria so that you issue fewer challenges to human visitors.
 - If the rate is 0%, no CAPTCHA challenges are being solved. This means that you have no human visitors whose requests match the rule filter. Consider changing the rule action to _Block_.
 
-<bongo:aside type="warning" header="Important">
+{{<Aside type="warning" header="Important">}}
 Currently, Cloudflare does not calculate the CSR of Managed Challenges.
 
 For customers on a Free plan, any rules configured with the _Challenge (Captcha)_ action now use Managed Challenges. For more information, see [Understanding Cloudflare Captchas and Challenge Passage](https://support.cloudflare.com/hc/articles/200170136#managed-challenge).
-</bongo:aside>
+{{</Aside>}}
 
 ### Expression Builder
 

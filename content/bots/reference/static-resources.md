@@ -9,9 +9,9 @@ import StaticResourcesBM from '../_partials/_static-resources-bm.md';
 
 Pro, Business, and Enterprise customers can use Cloudflare's bot solutions to protect their static resources from bots.
 
-<bongo:aside type="warning" header="Warning">  If you enable static resource protection, you may block good bots — like mail clients — that
+{{<Aside type="warning" header="Warning">}}  If you enable static resource protection, you may block good bots — like mail clients — that
   routinely fetch static resources. Make sure you understand your existing infrastructure before
-  enabling this feature.</bongo:aside>
+  enabling this feature.{{</Aside>}}
 
 ## Super Bot Fight Mode
 

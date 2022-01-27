@@ -69,8 +69,8 @@ If you are experiencing a DDoS attack detected by Cloudflare and the applied mit
 
 _\* Not available in Network Analytics dashboard yet._
 
-<bongo:aside type="warning">
+{{<Aside type="warning">}}
 The **DDoS** tab under **Firewall** is currently only available to the WAF/CDN customers.
-</bongo:aside>
+{{</Aside>}}
 
 Once saved, the rule takes effect within one or two minutes. The rule adjustment should provide immediate remedy, which you can view in the [analytics dashboard](/reference/analytics).

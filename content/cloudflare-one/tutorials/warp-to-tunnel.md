@@ -42,8 +42,8 @@ You can now use `cloudflared` to control Cloudflare Tunnel connections in your C
 
 ![Download Cert](../static/secure-origin-connections/share-new-site/cert-download.png)
 
-<bongo:aside>  If you already have `cloudflared` installed, make sure it's updated to the latest version before
-  you continue with the tutorial. Some commands may not run with older versions of `cloudflared`.</bongo:aside>
+{{<Aside>}}  If you already have `cloudflared` installed, make sure it's updated to the latest version before
+  you continue with the tutorial. Some commands may not run with older versions of `cloudflared`.{{</Aside>}}
 
 ## Create a Tunnel
 
@@ -106,9 +106,9 @@ This example runs it from the command-line but we recommend running `cloudflared
 
 ## Route private IP ranges through WARP
 
-<bongo:aside>
+{{<Aside>}}
 Make sure **HTTP traffic filtering** is enabled. This lets Cloudflare proxy your private IP ranges to corresponding Cloudflare Tunnels.
-</bongo:aside>
+{{</Aside>}}
 
 Users can reach this private service by logging into their Cloudflare for Teams account and the WARP agent.
 

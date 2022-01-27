@@ -19,9 +19,9 @@ Cloudflare renews these domains automatically 30 days before their expiration da
 
 If the renewal fails, you will receive an email notification and Cloudflare will try to renew the domain three additional times. If these attempts fail, you must manually renew your domain.
 
-<bongo:aside type="note">
+{{<Aside type="note">}}
 If you want to delete your domain from Cloudflare, **disable** Auto-Renew first.
-</bongo:aside>
+{{</Aside>}}
 
 ## Renew a domain manually
 
@@ -46,10 +46,10 @@ Once a domain is registered, Registrar sends the following expiration notices to
 - An email one day after a domain expires.
 - An email 20 days after the expiration date.
 
-<bongo:aside type="note">
+{{<Aside type="note">}}
 If you do not renew your domain before the expiration date, your domain will enter a Redemption Grace Period (RGP) for 30 days. These domains are not deleted and you can restore them to your account, but restoration may require an additional fee. You cannot transfer domains during the RGP.
 
 All renewals are final and Cloudflare will not issue refunds.
 
 When renewing a domain, additional years are always added to the current expiration date regardless of when the renewal takes place.
-</bongo:aside>
+{{</Aside>}}

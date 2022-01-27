@@ -20,9 +20,9 @@ When enabling session affinity with [Cloudflare Load Balancer](https://developer
 
 The `__cflb` cookie allows Cloudflare to return an end user to the same customer origin for a specific period of time configured by the customer. This allows the end user to have a seamless experience (for example, this cookie is used for keeping an end user’s items in a shopping cart while they continue to navigate around the website). This cookie is a session cookie that lasts from several seconds up to 24 hours.
 
-<bongo:aside type="note">
+{{<Aside type="note">}}
 Currently Cloudflare only supports Session Affinity in "orange-cloud" (proxied) mode.
-</bongo:aside>
+{{</Aside>}}
 
 ### \_\_cf_bm cookie for Cloudflare bot products
 
@@ -32,9 +32,9 @@ This cookie expires after 30 minutes of continuous inactivity by the end user. T
 
 A separate `__cf_bm` cookie is generated for each site that an end user visits, as Cloudflare does not track users from site to site or from session to session. The `__cf_bm` cookie is generated independently by Cloudflare, and does not correspond to any user ID or other identifiers in a customer’s web application.
 
-<bongo:aside type="note">
+{{<Aside type="note">}}
 Bot Management is available to Enterprise customers as an add-on service. Contact your Cloudflare account team to enable Bot Management for your site. Non-Enterprise customers can enable [Bot Fight Mode or Super Bot Fight Mode](https://developers.cloudflare.com/bots/).
-</bongo:aside>
+{{</Aside>}}
 
 ### \_\_cf_ob_info and \_\_cf_use_ob cookie for Cloudflare Always Online
 

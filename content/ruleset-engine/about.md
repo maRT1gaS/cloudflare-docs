@@ -20,9 +20,9 @@ A phase defines a stage in the life of a request where you can execute rulesets.
 
 Phases exist at two levels: at the **account** level and at the **zone** level. For the same phase, rules defined at the account level are evaluated **before** the rules defined at the zone level.
 
-<bongo:aside type="note">
+{{<Aside type="note">}}
 Currently, phases at the account level are only available in Enterprise plans.
-</bongo:aside>
+{{</Aside>}}
 
 The following diagram outlines the request handling process where requests go through the available phases:
 
@@ -40,12 +40,12 @@ Rulesets are versioned. Each ruleset modification creates a new version of the r
 
 There are several types of rulesets. Cloudflare provides **Managed Rulesets** that you can deploy. Additionally, you can create and manage your own **custom rulesets**. Specific Cloudflare products may provide other types of rulesets.
 
-<bongo:aside type="note" header="Note">
+{{<Aside type="note" header="Note">}}
 The `kind` field of phase entry point rulesets has one of the following values:
 
 - `root` for phase entry point rulesets at the account level
 - `zone` for phase entry point rulesets at the zone level
-</bongo:aside>
+{{</Aside>}}
 
 ### Managed Rulesets
 
@@ -59,9 +59,9 @@ For more information on deploying Managed Rulesets and defining overrides, check
 
 ### Custom rulesets
 
-<bongo:aside type="warning" header="Important">
+{{<Aside type="warning" header="Important">}}
 Currently, custom rulesets are only supported by the Cloudflare WAF.
-</bongo:aside>
+{{</Aside>}}
 
 Use custom rulesets to define your own sets of rules. After creating a custom ruleset, deploy it to a phase by creating a rule that executes the ruleset.
 

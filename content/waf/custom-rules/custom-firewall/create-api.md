@@ -10,9 +10,9 @@ Use the [Rulesets API](https://developers.cloudflare.com/ruleset-engine/rulesets
 
 You must deploy Custom Firewall rules to the `http_request_firewall_custom` phase entry point ruleset.
 
-<bongo:aside type='warning' header='Important'>
+{{<Aside type="warning" header="Important">}}
 This feature is only available for selected customers on an Enterprise plan.
-</bongo:aside>
+{{</Aside>}}
 
 ## Create a Custom Firewall rule
 

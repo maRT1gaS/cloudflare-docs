@@ -39,9 +39,9 @@ When you validate against the apex, Cloudflare can complete DCV for all subdomai
 
 #### HTTP
 
-<bongo:aside type="warning">
+{{<Aside type="warning">}}
 Due to recent changes, HTTP DCV validation will soon not be allowed for wildcard certificates or certificates with multiple SANs. For more details and next steps, refer to [Changes to HTTP DCV](/ssl-tls/dcv-update).
-</bongo:aside>
+{{</Aside>}}
 
 If you are using proxied (orange-clouded) DNS records and can tolerate a few minutes of downtime, Cloudflare can handle DCV by using an HTTP token. This token is available for the Certificate Authority as soon as you create a CNAME record to Cloudflare in your authoritative DNS and you create proxied DNS records for your hostname within Cloudflare.
 

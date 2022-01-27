@@ -13,9 +13,9 @@ pcx-content-type: tutorial
 
 In this tutorial you learn how to retrieve data in your Cloudflare Workers applications from a PostgreSQL database using [Postgres database connector](https://github.com/cloudflare/worker-template-postgres).
 
-<bongo:aside type="note">
+{{<Aside type="note">}}
 If you are using a MySQL database, refer to the [MySQL database connector](https://github.com/cloudflare/worker-template-mysql) template.
-</bongo:aside>
+{{</Aside>}}
 
 For a quick start, you will use Docker to run a local instance of Postgres and PgBouncer, and to securely expose the stack to the Internet using Cloudflare Tunnel.
 
@@ -49,9 +49,9 @@ Running this command will:
 
 ### Start the Postgres server
 
-<bongo:aside type="warning" header="Warning">
+{{<Aside type="warning" header="Warning">}}
 Cloudflare Tunnel will be accessible from the Internet once you run the following `docker compose` command. Cloudflare recommends that you secure your `TUNNEL_HOSTNAME` behind [Cloudflare Access](https://developers.cloudflare.com/cloudflare-one/applications/configure-apps/self-hosted-apps) before you continue.
-</bongo:aside>
+{{</Aside>}}
 
 You can find a prepared `docker-compose` file that does not require any changes in `scripts/postgres` with the following services:
 
@@ -157,9 +157,9 @@ return new Response(JSON.stringify(result));
 
 In `wrangler.toml`, enter your Cloudflare account ID in the line containing `account_id`:
 
-<bongo:aside type="note">
+{{<Aside type="note">}}
 [Refer to our Quick Start guide](https://developers.cloudflare.com/workers/get-started/guide#7-configure-your-project-for-deployment) if you do not know where to find your Cloudflare Account ID.
-</bongo:aside>
+{{</Aside>}}
 
 ```toml
 ---

@@ -23,9 +23,9 @@ When creating a rule, you must specify an **Action**:
 - _Send to_: Emails will be routed to your **Destination address**. This is the default action.
 - _Drop_: Accepts emails but deletes them without routing to the specified **Destination address**. This can be useful if you want to make an email address appear valid for privacy reasons.
 
-<bongo:aside type="note">
+{{<Aside type="note">}}
 All rules are automatically disabled until the destination address is validated by the user. This is to prevent spamming unintended recipients.
-</bongo:aside>
+{{</Aside>}}
 
 ## Catch-all address
 
@@ -46,6 +46,6 @@ In this section there is a list of destination addresses that have already been 
 
 To prevent spam, Email Routing rules do not become active until after the destination address has been verified. Cloudflare sends a verification email to destination addresses specified in Custom addresses, where you need to click **Verify email address**.
 
-<bongo:aside type="note">
+{{<Aside type="note">}}
 Deleting a destination address automatically disables all routing rules that use that email address as destination.
-</bongo:aside>
+{{</Aside>}}

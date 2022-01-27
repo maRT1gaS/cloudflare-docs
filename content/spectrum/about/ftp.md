@@ -7,9 +7,9 @@ pcx-content-type: concept
 
 Enabling Spectrum for FTP is not straightforward due to the implementation of the protocol. This guide gives an overview of the intricacies of FTP and under which circumstances you can enable Spectrum for your FTP service.
 
-<bongo:aside>
+{{<Aside>}}
 This feature requires an Enterprise plan. If you would like to upgrade, contact your account team.
-</bongo:aside>
+{{</Aside>}}
 
 ## How FTP Operates
 

@@ -10,9 +10,9 @@ The **queueing method** determines the order that visitors exit an active waitin
 
 Only certain customers can use queue methods besides First In First Out (FIFO). For more details, refer to <a href="/plans">Plans</a> page.
 
-<bongo:aside type="note" header="Note:">
+{{<Aside type="note" header="Note:">}}
 Regardless of the queueing method, if `queueAll` is enabled or an event is prequeueing, users in the waiting room will not be accepted to the origin. These users will always see a waiting room page that refreshes automatically.
-</bongo:aside>
+{{</Aside>}}
 
 ## First In First Out (FIFO)
 

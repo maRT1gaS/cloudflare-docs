@@ -30,9 +30,9 @@ There is no guarantee that the renewal will succeed. Renewals may fail for vario
 
 If you decide you no longer need the domain, [disable auto-renew for your account](/account-options/renew-domains#set—up-automatic-renewals). Once disabled, your domain will not renew upon expiration.
 
-<bongo:aside type="note" header="Note">
+{{<Aside type="note" header="Note">}}
 The first auto-renew attempt will occur approximately 30 days prior to expiration. If you wish to disable auto-renew, do so at least 30 days prior.
-</bongo:aside>
+{{</Aside>}}
 
 You can continue to keep your domain registered with Cloudflare for the time remaining on the expiration date. If you decide you want to keep the domain, enable auto-renew at any time prior to your expiration.
 

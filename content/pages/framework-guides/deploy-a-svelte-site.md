@@ -11,9 +11,9 @@ import TutorialsBeforeYouStart from '../_partials/_tutorials-before-you-start.md
 In this guide, you will create a new Svelte application and deploy it using Cloudflare Pages.
 You will use [`SvelteKit`](https://kit.svelte.dev/), the official Svelte framework for building web applications of all sizes.
 
-<bongo:aside type="warning">
+{{<Aside type="warning">}}
 **Note:** At this guide's time of publication, SvelteKit is still in beta. However, the Svelte team is confident that the steps below are stable. This guide will be updated as needed, both during and after the beta phase.
-</bongo:aside>
+{{</Aside>}}
 
 ## Setting up a new project
 
@@ -67,9 +67,9 @@ Select the new GitHub repository that you created and, in the **Set up builds an
 
 Optionally, you can customize the **Project name** field. It defaults to the GitHub repository's name, but it does not need to match. The **Project name** value is assigned as your `*.pages.dev` subdomain.
 
-<bongo:aside type="warning">
+{{<Aside type="warning">}}
 **Important:** SvelteKit requires Node.js v14.x or later to build successfully. You must expand the **Environment Variables (advanced)** section and add a `NODE_VERSION` variable with a value of `14` or greater.
-</bongo:aside>
+{{</Aside>}}
 
 ### SvelteKit Configuration
 
@@ -98,9 +98,9 @@ const config = {
 export default config;
 ```
 
-<bongo:aside type="note">
+{{<Aside type="note">}}
 **Important:** Remember to commit and push these changes to your GitHub repository.
-</bongo:aside>
+{{</Aside>}}
 
 ### Finalize Setup
 
@@ -112,9 +112,9 @@ Cloudflare Pages will automatically rebuild your project and deploy it on every 
 
 Additionally, you will have access to [preview deployments](/platform/preview-deployments), which repeat the build-and-deploy process for pull requests. With these, you can preview changes to your project with a real URL before deploying them to production.
 
-<bongo:aside type="note">
+{{<Aside type="note">}}
 For the complete guide to deploying your first site to Cloudflare Pages, refer to the [Get started guide](/get-started).
-</bongo:aside>
+{{</Aside>}}
 
 ## Learn more
 

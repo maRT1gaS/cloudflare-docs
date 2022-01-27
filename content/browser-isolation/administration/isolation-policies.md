@@ -61,12 +61,9 @@ Isolation policies are applied to requests that include `Accept: text/html*`. Th
 
 In the settings (Gateway → Policies → Settings) page, click the toggle to enable filtering once clients have been deployed and certificates installed. If you do not enable filtering, your rules will not apply.
 
-<bongo:aside>  Note: It usually takes about 60 seconds for a new policy to be configured for users and you may
-  need to restart your web browser to establish a{' '}
-  <a href="/feedback/faq#how-long-does-it-take-for-l7-firewall-policies-to-apply">
-    filtered connection
-  </a>{' '}
-  for open websites.</bongo:aside>
+{{<Aside>}}
+Note: It usually takes about 60 seconds for a new policy to be configured for users and you may need to restart your web browser to establish a [filtered connection](/feedback/faq#how-long-does-it-take-for-l7-firewall-policies-to-apply) for open websites.
+{{</Aside>}}
 
 ## Start browsing
 

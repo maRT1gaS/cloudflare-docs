@@ -9,9 +9,9 @@ You can specify the order of the query result elements using the `orderBy` argum
 
 The default order for an aggregated data set is by the fields on which the aggregated data is grouped. If you specify a different order, the aggregation group is appended to your specified ordering.
 
-<bongo:aside type="note" header="Note">
+{{<Aside type="note" header="Note">}}
 Ordering within nested structures is not supported.
-</bongo:aside>
+{{</Aside>}}
 
 ## Examples
 

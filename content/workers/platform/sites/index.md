@@ -46,6 +46,6 @@ If you already have an application deployed to Workers, this guide will show you
   </bongo:button>
 </p>
 
-<bongo:aside>
+{{<Aside>}}
 **Note:** Workers Sites is built on Workers KV, and usage rates may apply. See the [Pricing page](/platform/pricing) to learn more.
-</bongo:aside>
+{{</Aside>}}

@@ -12,9 +12,9 @@ POST zones/{zone_id}/firewall/rules
 
 Creates one or more firewall rules.
 
-<bongo:aside type="note">
+{{<Aside type="note">}}
 To create a firewall rule you need a [filter](/api/cf-filters/what-is-a-filter) identifier (`id`). If you have not created a filter yet, refer to the [Cloudflare Filters API documentation](/api/cf-filters/post).
-</bongo:aside>
+{{</Aside>}}
 
 ## Request
 

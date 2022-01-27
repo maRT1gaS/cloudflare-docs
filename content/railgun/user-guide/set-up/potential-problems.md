@@ -18,7 +18,7 @@ To run Railgun on non-standard ports you need to add the correct mapping to the 
 
 ```txt
 default = 127.0.0.1
-example.com:2083 = 127.0.0.1:2083
+example.com:2083 = 127.0.0.1:2083
 ```
 
 ---

@@ -31,19 +31,19 @@ Cloudflare offers a variety of options for your application's edge certificates:
 - [**Custom certificates**](/edge-certificates/custom-certificates): <CustomCertificateDefinition/>
 - [**Keyless certificates**](/keyless-ssl) (Enterprise only): <KeylessSSLDefinition/>
 
-<bongo:aside type="note" header="Note:">
+{{<Aside type="note" header="Note:">}}
 <SSLforSaaSDefinition />
 
 For more details, refer to [SSL for SaaS (managed hostnames)](/ssl-for-saas).
-</bongo:aside>
+{{</Aside>}}
 
 ## Step 2 — Choose your encryption mode
 
 Once you have chosen your edge certificate, [choose an encryption mode](/origin-configuration/ssl-modes) to specify how Cloudflare should encrypt connections between a) visitors and Cloudflare and b) Cloudflare and your origin server.
 
-<bongo:aside type="warning" header="Warning:">
+{{<Aside type="warning" header="Warning:">}}
 Before choosing an encryption mode, make sure you have changed relevant settings on your application or origin server. Otherwise, visitors may encounter errors on your site.
-</bongo:aside>
+{{</Aside>}}
 
 ## Step 3 (optional) — Enable additional features
 

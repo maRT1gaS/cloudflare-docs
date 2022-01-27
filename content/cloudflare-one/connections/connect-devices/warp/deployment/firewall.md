@@ -13,8 +13,8 @@ The WARP client talks with our edge outside the tunnel for operations like regis
 
 - IPv4 API Endpoint: `162.159.192.1`
 
-<bongo:aside>  The Orchestration API endpoint is currently shared with our Consumer WARP Client. In early 2022 we
-  will be splitting this out to its own dedicated IP address.</bongo:aside>
+{{<Aside>}}  The Orchestration API endpoint is currently shared with our Consumer WARP Client. In early 2022 we
+  will be splitting this out to its own dedicated IP address.{{</Aside>}}
 
 ## WARP Ingress IP
 

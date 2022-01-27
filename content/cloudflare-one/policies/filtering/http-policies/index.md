@@ -5,9 +5,9 @@ pcx-content-type: concept
 
 # HTTP policies
 
-<bongo:aside>
+{{<Aside>}}
 Install the <a href="/connections/connect-devices/warp/install-cloudflare-cert">Cloudflare Root Certificate</a> before creating HTTP policies.
-</bongo:aside>
+{{</Aside>}}
 
 HTTP policies allow you to filter HTTP traffic on the L7 firewall. Gateway will intercept all HTTP and HTTPS traffic and apply the rules you have configured in your policy to either block, allow, or override specific elements such as websites, IP addresses, and file types.
 
@@ -26,9 +26,9 @@ Expressions are sets of conditions with which you can combine [selectors](#selec
 
 ### Selectors
 
-<bongo:aside type="note">
+{{<Aside type="note">}}
 Policies created using the URL selector are case-sensitive.
-</bongo:aside>
+{{</Aside>}}
 
 Gateway matches HTTP traffic against the following selectors, or criteria:
 
@@ -106,9 +106,9 @@ You can build HTTP policies using **identity-based selectors**. These selectors 
 | ------------------- | ------------------------------------------ |
 | Security Categories | `any(http.request.uri.category[*] in {1})` |
 
-<bongo:aside type="note" header="Host or Domain?">
+{{<Aside type="note" header="Host or Domain?">}}
 The `Host` selector matches the exact entry input by a customer in the value field or list. The `Domain` selector matches the exact entry and all subdomains in the value field or list.
-</bongo:aside>
+{{</Aside>}}
 
 ### Operators
 
@@ -163,9 +163,9 @@ For more information on this action, refer to the documentation on [Browser Isol
 
 ### Do Not Inspect
 
-<bongo:aside type='Warning' header='Warning'>
+{{<Aside type="Warning" header="Warning">}}
 When a _Do Not Inspect_ rule is created for a given hostname, application, or app type, no traffic will be inspected.
-</bongo:aside>
+{{</Aside>}}
 
 _Do Not Inspect_ lets administrators bypass certain elements from inspection. Administrators who wish to bypass a site must match against the host in order to prevent HTTP inspection from occurring on both encrypted and plaintext traffic.
 

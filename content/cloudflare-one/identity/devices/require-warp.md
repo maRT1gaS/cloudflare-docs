@@ -17,9 +17,9 @@ pcx-content-type: how-to
 </div>
 </details>
 
-<bongo:aside type="note">
+{{<Aside type="note">}}
 This device posture attribute will check for all versions of WARP, including the consumer version.
-</bongo:aside>
+{{</Aside>}}
 
 Cloudflare for Teams enables you to restrict access to your applications to devices running the Cloudflare WARP client. This allows you to flexibly ensure that a user's traffic is secure and encrypted before allowing access to a resource protected behind Teams.
 

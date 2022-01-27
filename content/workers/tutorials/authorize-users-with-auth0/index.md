@@ -736,9 +736,9 @@ In your Workers Site, you can add a **Log out** link, which will send users to t
 <a href="/logout">Log out</a>
 ```
 
-<bongo:aside type="note">
+{{<Aside type="note">}}
 By design, the placement of the `LOGOUT CODE BLOCK` in `workers-site/index.js` is placed _after_ the `WORKERS SITES CODE BLOCK`. This is intentional: it allows users to continue to your application’s deployed Workers Site code, meaning that you can provide a corresponding `logout/index.html` template with a “You’re logged out!” message, or something similar.
-</bongo:aside>
+{{</Aside>}}
 
 An example logout HTML page could look like this:
 
@@ -893,9 +893,9 @@ Below is the complete list of secrets that the Workers script will look for when
 
 For each key, you can find the corresponding value in your Auth0 application settings page.
 
-<bongo:aside type="warning" header="A note for developers using Wrangler 1.9.0 and below">
+{{<Aside type="warning" header="A note for developers using Wrangler 1.9.0 and below">}}
 Due to an issue with Wrangler’s publishing feature, you will need to publish your project before you are able to set these secrets. To do this successfully, add a line stubbing out each of the above secrets in `auth0.js`:
-</bongo:aside>
+{{</Aside>}}
 
 ```js
 ---

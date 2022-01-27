@@ -1,5 +1,5 @@
 ---
-weight: 2
+weight: 3
 title: Examples
 hideChildren: true
 pcx-content-type: navigation

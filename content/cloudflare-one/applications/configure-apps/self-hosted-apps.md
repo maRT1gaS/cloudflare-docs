@@ -5,12 +5,12 @@ pcx-content-type: how-to
 
 # Self-hosted applications
 
-<bongo:aside>
+{{<Aside>}}
 <b>Before you start</b>
 
 - **<a href="https://support.cloudflare.com/hc/articles/201720164-Creating-a-Cloudflare-account-and-adding-a-website">Add a website to Cloudflare</a>**
 - **<a href="https://support.cloudflare.com/hc/articles/205195708">Change your domain nameservers to Cloudflare</a>**
-</bongo:aside>
+{{</Aside>}}
 
 Cloudflare Access allows you to securely publish internal tools and applications to the Internet, by providing an authentication layer using your existing identity providers to control who has access to your applications.
 
@@ -34,10 +34,10 @@ You are now ready to start configuring your app.
 
 {' '}
 
-<bongo:aside>  The session duration for an application will determine the minimum frequency a user will be
+{{<Aside>}}  The session duration for an application will determine the minimum frequency a user will be
   prompted to authenticate with the configured provider. If you want users to be prompted to
   authenticate every time they reach your application, select{' '}
-  <code>No duration, expires immediately</code>.</bongo:aside>
+  <code>No duration, expires immediately</code>.{{</Aside>}}
 
 ![Set application name](../../static/documentation/applications/applications-name-session.png)
 
@@ -45,19 +45,19 @@ You are now ready to start configuring your app.
 
 {' '}
 
-<bongo:aside>  When specifying an application domain, you can use wildcards to protect multiple parts of an
+{{<Aside>}}  When specifying an application domain, you can use wildcards to protect multiple parts of an
   application that share a root path. For more information on how to use wildcards, see the
-  instructions in the <a href="/policies/zero-trust/app-paths">Application paths</a> page.</bongo:aside>
+  instructions in the <a href="/policies/zero-trust/app-paths">Application paths</a> page.{{</Aside>}}
 
 1. Scroll down to the **Application visibility** card.
 
    - Toggle on **Show application in the App Launcher** if you want the application to be visible in the App Launcher. The toggle does not impact the ability for users to reach the application. Users with no access to the application will not see it in the App Launcher regardless of whether the toggle is enabled. Users with access to the application will still be able to reach it with a direct link.
    - [Optional] Add a custom logo for your application by clicking **Custom** and entering a link to your desired image.
 
-   <bongo:aside>     If you're having issues specifying a custom logo, check that the image is served from an HTTPS
+   {{<Aside>}}     If you're having issues specifying a custom logo, check that the image is served from an HTTPS
      endpoint. For example, <code>http://www.example.com/upload/logo.png</code> will not work.
      However, <code>https://www.example.com/upload/logo.png</code> will.
-   </bongo:aside>
+   {{</Aside>}}
 
 1. Next, scroll down to the **Identity Providers** card to select the identity providers you want to enable for your app.
 

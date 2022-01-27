@@ -48,11 +48,11 @@ You control the edge router advertisement, which dictates whether Cloudflare’s
 
 _Duration:_ ~5 business days
 
-<bongo:aside type='warning' header='Important'>
+{{<Aside type="warning" header="Important">}}
 You must put the appropriate MSS clamps in place before routing changes are made. Failure to apply an MSS clamp can result in dropped packets and hard-to-debug connectivity issues.
 
 When using [Cloudflare Network Interconnect](https://developers.cloudflare.com/network-interconnect/) with Magic Transit, you must set the MSS clamp size to 1332 bytes to accommodate additional overhead from the foo-over-UDP (FOU) protocol and IPv6. These are used to backhaul data from the data center where traffic is ingested (close to the end user) to the facility with the CNI link.
-</bongo:aside>
+{{</Aside>}}
 
 ## 5. Go live and announce prefixes
 

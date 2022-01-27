@@ -12,9 +12,9 @@ If you need to manage mobile app traffic, Cloudflare provides a JSON-friendly wa
 
 Since the format of the waiting room response is controlled by an HTTP header (`Accept: application/json` or `Accept: text/html`), a single waiting room can handle both mobile and web traffic.
 
-<bongo:aside type="note">
+{{<Aside type="note">}}
 Only certain customers can support mobile traffic with their waiting rooms. For more details, see our <a href="/plans">Plans</a> page.
-</bongo:aside>
+{{</Aside>}}
 
 ---
 

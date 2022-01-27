@@ -21,9 +21,9 @@ For guidance on using Page Shield's Script Monitor dashboard, refer to [Monitor 
 
 ## Configure alerts
 
-<bongo:aside type="note">
+{{<Aside type="note">}}
 Only available to customers on Business and Enterprise plans.
-</bongo:aside>
+{{</Aside>}}
 
 <AlertsIntro />
 

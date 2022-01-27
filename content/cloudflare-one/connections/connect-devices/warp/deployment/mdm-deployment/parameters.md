@@ -78,9 +78,9 @@ This field is only required to enforce DNS policies when deploying the client in
 
 On new deployments, you must also include the `auto_connect` parameter with at least a value of 0. This will prevent clients from being deployed in the off state without a way for users to manually enable them.
 
-<bongo:aside type='note'>
+{{<Aside type="note">}}
 This parameter replaces the old `enabled` property, which can no longer be used in conjunction with the new `switch_locked` and `auto_connect`. If you want to use these parameters, you must remove `enabled`.
-</bongo:aside>
+{{</Aside>}}
 
 ### `auto_connect`
 
@@ -95,9 +95,9 @@ This parameter replaces the old `enabled` property, which can no longer be used 
 - `0` Allow the switch to stay in the off position indefinitely until the user turns it back on.
 - `1-1440` Turn switch back on automatically after the specified number of minutes.
 
-<bongo:aside>  This parameter replaces the old `enabled` property, which can no longer be used in conjunction
+{{<Aside>}}  This parameter replaces the old `enabled` property, which can no longer be used in conjunction
   with the new `switch_locked` and `auto_connect`. If you want to use these parameters, you must
-  remove `enabled`.</bongo:aside>
+  remove `enabled`.{{</Aside>}}
 
 ### `support_url`
 
@@ -114,8 +114,8 @@ This parameter replaces the old `enabled` property, which can no longer be used 
 
 ## Authentication with service tokens
 
-<bongo:aside>  Devices that connect to Cloudflare for Teams with Service Token authentication are not subject to
-  identity based rules.</bongo:aside>
+{{<Aside>}}  Devices that connect to Cloudflare for Teams with Service Token authentication are not subject to
+  identity based rules.{{</Aside>}}
 
 Instead of requiring users to authenticate with their credentials, you can deploy the WARP client with a pre-generated [Service Token](/identity/service-auth/service-tokens).
 

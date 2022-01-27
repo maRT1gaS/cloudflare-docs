@@ -54,9 +54,9 @@ The full syntax of the `action_parameters` field to define a dynamic HTTP reques
 }
 ```
 
-<bongo:aside type='note'>
+{{<Aside type="note">}}
 Check the [available fields and functions](/transform/request-header-modification/reference/fields-functions) you can use in an expression.
-</bongo:aside>
+{{</Aside>}}
 
 ## Header removal parameters
 

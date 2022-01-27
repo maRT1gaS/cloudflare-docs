@@ -61,6 +61,6 @@ Layer 4 load balancers route traffic by forwarding traffic to certain ports or I
 
 Cloudflare currently only supports layer 4 load balancing as part of [Cloudflare Spectrum](https://developers.cloudflare.com/spectrum/about/load-balancer).
 
-<bongo:aside type="note">
+{{<Aside type="note">}}
 Since Spectrum operates at the TCP level, it does not have the information to support features like [session affinity](/understand-basics/session-affinity), [custom rules](/understand-basics/load-balancing-rules), or caching.
-</bongo:aside>
+{{</Aside>}}

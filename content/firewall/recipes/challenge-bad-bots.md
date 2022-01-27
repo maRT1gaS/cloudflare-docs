@@ -4,9 +4,9 @@ pcx-content-type: configuration
 
 # Challenge bad bots
 
-<bongo:aside type='warning' header='Important'>
+{{<Aside type="warning" header="Important">}}
 Access to [Bot Management](https://developers.cloudflare.com/bots/get-started/bm-subscription) requires a Cloudflare Enterprise plan with Bot Management enabled.
-</bongo:aside>
+{{</Aside>}}
 
 Cloudflare’s Bot Management feature scores the likelihood that a request originates from a bot.
 

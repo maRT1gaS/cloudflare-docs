@@ -18,10 +18,10 @@ To set up a PNI connection, provide the following information:
 
 Cloudflare authorizes the PNI, you place the order, and Cloudflare handles the rest.
 
-<bongo:aside type="warning" header="Important">  To set up a cross-connect in a metropolitan area network (MAN) that does not have a physical
+{{<Aside type="warning" header="Important">}}  To set up a cross-connect in a metropolitan area network (MAN) that does not have a physical
   Cloudflare location, you must purchase Equinix Metro Connect or a similar product to interconnect
   locations. For example, if Cloudflare has a peering facility in NY5 and you are in NY1, you must
-  use Metro Connect to cross-connect from NY1 to NY5.</bongo:aside>
+  use Metro Connect to cross-connect from NY1 to NY5.{{</Aside>}}
 
 ### Example PNI configuration data
 

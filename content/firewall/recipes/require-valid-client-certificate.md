@@ -12,11 +12,11 @@ Before you can use API Shield to protect your API or web application, you must d
 - [Configure your mobile app or Internet-of-things device](https://developers.cloudflare.com/ssl/client-certificates/configure-your-mobile-app-or-iot-device) to use the client certificate.
 - [Enable mutual Transport Layer Security (mTLS) for a host](https://developers.cloudflare.com/ssl/client-certificates/enable-mtls) in your zone.
 
-<bongo:aside type='warning' header='Important'>
+{{<Aside type="warning" header="Important">}}
 You can only use API Shield with a certificate authority (CA) that is fully managed by Cloudflare. Cloudflare generates a unique CA for each zone.
 
 If you need to use a different CA, contact a Cloudflare Customer Success Manager.
-</bongo:aside>
+{{</Aside>}}
 
 This example creates a firewall rule that requires API calls to present a valid client certificate. When the client certificate cannot be verified, the rule triggers the _Block_ action.
 

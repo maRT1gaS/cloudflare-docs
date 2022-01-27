@@ -31,9 +31,9 @@ The following table compares the features of NAv1 and NAv2:
 
 _\* Applicable only for Magic Transit customers._
 
-<bongo:aside type="note">
+{{<Aside type="note">}}
 The `attackId` field value may be different between NAv1 and NAv2 for the same attack.
-</bongo:aside>
+{{</Aside>}}
 
 ## Node comparison
 

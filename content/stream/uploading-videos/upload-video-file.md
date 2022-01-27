@@ -20,9 +20,9 @@ curl -X POST \
 https://api.cloudflare.com/client/v4/accounts/$ACCOUNT/stream
 ```
 
-<bongo:aside>
+{{<Aside>}}
 Note that cURL `-F` flag automatically configures the content-type header and maps `skiing.mp4` to a form input called `file`.
-</bongo:aside>
+{{</Aside>}}
 
 ## Resumable uploads with tus (for large files)
 
@@ -32,18 +32,18 @@ Note that cURL `-F` flag automatically configures the content-type header and ma
 
 [tus protocol](https://tus.io) is the recommended method for uploading large files to Cloudflare Stream from a computer. Popular programming languages have [tus client implementations](https://tus.io/implementations.html).
 
-<bongo:aside>
+{{<Aside>}}
 Important: Cloudflare Stream requires a minimum chunk size of 5,242,880 bytes when using TUS, unless the entire file is less than this amount.
 
 We recommend increasing the chunk size to 52,428,800 bytes for better performance when the client connection is expected to be reliable.
 Maximum chunk size can be 209,715,200 bytes.
-</bongo:aside>
+{{</Aside>}}
 
-<bongo:aside>
+{{<Aside>}}
 Important: Cloudflare Stream requires a chunk size divisible by 256KiB (256x1024 bytes). Please round your desired chunk size to the nearest multiple of 256KiB.
 
 The final chunk of an upload or uploads that fit within a single chunk are exempt from this requirement.
-</bongo:aside>
+{{</Aside>}}
 
 ### Specifying upload options
 

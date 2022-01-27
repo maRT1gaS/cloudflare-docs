@@ -39,7 +39,7 @@ This guide covers how to protect your DocuSign account with Access for SaaS.
 1. Set an Access policy (for example, create a policy based on _Emails ending in @example.com_).
 1. Copy and save SSO Endpoint, Entity ID and Public Key.
 
-   <bongo:aside type='note'>
+   {{<Aside type="note">}}
    The Public key must be transformed into a fingerprint. To do that:
 
    1. Copy the Public Key Value.
@@ -47,9 +47,9 @@ This guide covers how to protect your DocuSign account with Access for SaaS.
    1. Wrap the value in `-----BEGIN CERTIFICATE-----` and `-----END CERTIFICATE-----`.
    1. Set the file extension to `.crt` and save.
 
-   </bongo:aside>
+   {{</Aside>}}
 
-## Configure your DocuSign SSO instance
+## Configure your DocuSign SSO instance
 
 1. Ensure you have a domain claimed in Zendesk.
 1. From the DocuSign Admin dashboard, click **Identity Providers**.

@@ -18,12 +18,12 @@ You can redirect your domain visitors to HTTPS through SSL/TLS or Page Rules, de
 To redirect traffic for all subdomains and hosts in your domain:
 
 1. Log into your [Cloudflare account](https://dash.cloudflare.com) and go to a specific domain.
-1. Navigate to **SSL/TLS** > **Edge Certificates**.
-1. For **Always Use HTTPS**, switch the toggle to **On**.
+1. Navigate to **SSL/TLS** > **Edge Certificates**.
+1. For **Always Use HTTPS**, switch the toggle to **On**.
 
-<bongo:aside type="note">
+{{<Aside type="note">}}
 The _Always Use HTTPS_ action will only appear if your zone has an active Cloudflare SSL certificate.
-</bongo:aside>
+{{</Aside>}}
 
 ### Page Rules
 

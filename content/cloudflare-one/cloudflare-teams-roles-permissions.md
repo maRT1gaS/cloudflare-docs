@@ -22,9 +22,9 @@ A member can be given one of six roles within a Teams account:
 
 </TableWrap>
 
-<bongo:aside>
+{{<Aside>}}
 Only Enterprise users can assign multiple roles to additional members.
-</bongo:aside>
+{{</Aside>}}
 
 To check the list of members in your account, or to add new members:
 

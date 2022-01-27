@@ -9,12 +9,12 @@ If you would like to temporarily disconnect Browser Isolation, you can do this b
 
 While the WARP client is disconnected your Internet traffic does not route through Cloudflare and is not Isolated.
 
-<bongo:aside>  If you are having a issue with a specific website we suggest creating a{' '}
+{{<Aside>}}  If you are having a issue with a specific website we suggest creating a{' '}
   <strong>Do Not Isolate</strong> policy for a specific Host in{' '}
   <a href="/administration/isolation-policies#disabling-isolation-for-domains">
     isolation policies
   </a>
-  .</bongo:aside>
+  .{{</Aside>}}
 
 ## macOS
 

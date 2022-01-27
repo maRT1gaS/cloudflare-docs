@@ -43,9 +43,9 @@ Alternatively, [download the latest Darwin amd64 release directly](https://githu
 | ---------- | ---------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------ |
 | Executable | [Download](https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-windows-386.exe) | [Download](https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-windows-amd64.exe) |
 
-<bongo:aside>
+{{<Aside>}}
 Instances of `cloudflared` do not automatically update on Windows. You will need to perform manual updates.
-</bongo:aside>
+{{</Aside>}}
 
 ## Docker
 

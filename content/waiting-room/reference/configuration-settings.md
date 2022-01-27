@@ -149,9 +149,9 @@ You can customize a variety of options for your waiting rooms.
   </tbody>
 </table>
 
-<bongo:aside type='note' header='Note'>
+{{<Aside type="note" header="Note">}}
 You can configure only one waiting room per `host/path` combination.
-</bongo:aside>
+{{</Aside>}}
 
 ## Additional details
 

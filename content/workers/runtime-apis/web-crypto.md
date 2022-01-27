@@ -29,9 +29,9 @@ Some common uses include:
 
 - [Signing requests](/examples/signing-requests)
 
-<bongo:aside type="warning" header="Warning">
+{{<Aside type="warning" header="Warning">}}
 The Web Crypto API differs significantly from Node’s Crypto API. If you want to port JavaScript that relies on Node’s Crypto API, you’ll need to invest in translating it to use Web Crypto primitives.
-</bongo:aside>
+{{</Aside>}}
 
 ## Methods
 

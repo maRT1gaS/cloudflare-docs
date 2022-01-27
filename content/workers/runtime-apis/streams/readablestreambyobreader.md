@@ -38,14 +38,14 @@ const reader = readable.getReader({ mode: 'byob' });
 
 ## Common issues
 
-  <bongo:aside type="warning" header="Warning">
+  {{<Aside type="warning" header="Warning">}}
 `read` provides no control over the minimum number of bytes that should be read into the buffer. Even if you allocate a 1MiB buffer, the kernel is perfectly within its rights to fulfill this read with a single byte, whether or not an EOF immediately follows.
 
 In practice, we have found that `read` typically fills only 1% of the provided buffer.
 
 Workers team is considering implementing or proposing a change to the Streams API to allow users to specify `minBytes` that should be read into the buffer before resolving the read.
 
-  </bongo:aside>
+  {{</Aside>}}
 
 ## See also
 

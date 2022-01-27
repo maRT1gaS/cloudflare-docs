@@ -172,9 +172,9 @@ As before, you could either:
 - Edit the **Hostname** of your existing load balancer
 - Update the CNAME record sending traffic to your load balancer
 
-<bongo:aside type="note">
+{{<Aside type="note">}}
 If you have an Enterprise account, also evaluate your application for any excluded paths. For example, you might not want the load balancer to distribute requests directed at your `/admin` path. For any exceptions, [set up a Page Rule](https://support.cloudflare.com/hc/articles/206190798) using the **Resolve Override** setting.
-</bongo:aside>
+{{</Aside>}}
 
 ## Step 7 — Continue reviewing load balancing analytics
 

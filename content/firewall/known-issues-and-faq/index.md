@@ -231,9 +231,9 @@ Cloudflare supports two methods to permit requests through Firewall Rules expres
 1. Exclude a type of request from being blocked or challenged, for example based on IP address, ASN, or country
 2. Create an independent Firewall rule with an _Allow_ action
 
-<bongo:aside type='note' header='Note'>
+{{<Aside type="note" header="Note">}}
 Cloudflare Firewall Rules does not bypass security measures defined in other **Firewall** app features.
-</bongo:aside>
+{{</Aside>}}
 
 If you wish to permit certain exclusions, the examples below illustrate a few possible approaches.
 

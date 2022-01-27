@@ -21,11 +21,11 @@ To handle CORS headers for the policy protecting the path that requires CORS, na
 
 ## Access and CORS
 
-<bongo:aside type='Warning' header='Important'>
+{{<Aside type="Warning" header="Important">}}
 - Safari, in particular Safari 13.1, handles cookies in a unique format. In some cases, this can cause CORS to fail. This will be dependent on Apple releasing a patch for handling cookies. This is known to impact macOS 10.15.4 when running Safari 13.1 (15609.1.20.111.8).
 
 - Do not troubleshoot CORS in Incognito mode, as this will cause disruptions with Access due to `CF-Authorization` being blocked as a third-party cookie on cross origin requests"
-</bongo:aside>
+{{</Aside>}}
 
 If you have two sites protected by Cloudflare Access, `app1.site.com` and `app2.hostname.com`, requests made between the two will be subject to CORS checks. Users who login to `app1.site.com` will be issued cookies for `app1.site.com` and your Cloudflare Access [team domain](/glossary#team-domain).
 
@@ -93,5 +93,5 @@ In general, we recommend the following steps when troubleshooting CORS issues:
 2. Ensure that the application has set `credentials: 'same-origin'` in all fetch or XHR requests.
 3. If you are using the [cross-origin setting](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/crossorigin) on script tags, these must be set to "use-credentials".
 
-<bongo:aside type="Warning" header="CORS is failing on the same domain">  CORS checks do not occur on the same domain. If this error occurs, it is likely the user flow is
-  making a sub-request without the cookie.</bongo:aside>
+{{<Aside type="Warning" header="CORS is failing on the same domain">}}  CORS checks do not occur on the same domain. If this error occurs, it is likely the user flow is
+  making a sub-request without the cookie.{{</Aside>}}

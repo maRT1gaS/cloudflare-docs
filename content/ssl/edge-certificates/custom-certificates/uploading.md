@@ -39,10 +39,10 @@ To upload a custom SSL certificate in the dashboard:
 1. In **Edge Certificates**, click **Upload Custom SSL Certificate**.
 1. Copy and paste relevant values into **SSL Certificate** and **Private key** text areas (or click **Paste from file**).
 
-   <bongo:aside type="note">
+   {{<Aside type="note">}}
    If doing this manually, include the `---BEGIN CERTIFICATE---` and `---END CERTIFICATE---` like the placeholder text.
 
-   </bongo:aside>
+   {{</Aside>}}
 
 1. Choose the appropriate [**Bundle Method**](../bundling-methodologies).
 1. Select a value for [**Private Key Restriction**](/edge-certificates/custom-certificates#geo-key-manager-private-key-restriction).
@@ -135,9 +135,9 @@ To update a certificate:
 1. Click the wrench icon and click **Replace SSL certificate and key**.
 1. Follow the same steps as [create a new certificate](#upload-a-custom-certificate).
 
-<bongo:aside type="note">
+{{<Aside type="note">}}
 To update the **Private Key Restriction** setting of a certificate, delete and re-add the certificate.
-</bongo:aside>
+{{</Aside>}}
 
 ### Using the API
 

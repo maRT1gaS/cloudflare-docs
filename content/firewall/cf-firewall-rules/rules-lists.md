@@ -57,8 +57,9 @@ The number of Rules Lists you can create depends on the Cloudflare plans associa
   </tbody>
 </table></TableWrap>
 
-<bongo:aside header="Important">  Access to the Open Proxy List in the rule builder and <code>cf.open_proxies</code> requires a
-  Cloudflare Enterprise plan.</bongo:aside>
+{{<Aside header="Important">}}
+Access to the Open Proxy List in the rule builder and `cf.open_proxies` requires a Cloudflare Enterprise plan.
+{{</Aside>}}
 
 ## Managing lists
 

@@ -30,13 +30,13 @@ For authentication instructions, see [Getting Started: Requests](https://api.clo
 
 For help with endpoints and pagination, see [Getting Started: Endpoints](https://api.cloudflare.com/#getting-started-endpoints).
 
-<bongo:aside>
+{{<Aside>}}
 The Rulesets API endpoints require a value for `{account_id}` or `{zone-id}`.
 
 To retrieve a list of accounts you have access to, use the [List Accounts](https://api.cloudflare.com/#accounts-list-accounts) operation. Note the IDs of the accounts you want to manage.
 
 To retrieve a list of zones you have access to, use the [List Zones](https://api.cloudflare.com/#zone-list-zones) operation. Note the IDs of the zones you want to manage.
-</bongo:aside>
+{{</Aside>}}
 
 The Cloudflare Rulesets API supports the operations outlined below. Visit the associated links for API endpoints and examples.
 

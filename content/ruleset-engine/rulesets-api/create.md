@@ -153,9 +153,9 @@ curl -X POST \
 
 The following example request creates a zone-level phase entry point ruleset at the `http_request_firewall_managed` phase with a single rule that executes a Managed Ruleset.
 
-<bongo:aside type="note">
+{{<Aside type="note">}}
 You do not have to use this method to create a phase entry point ruleset — Cloudflare automatically creates the entry point ruleset when you add a rule to it, if it does not exist. Refer to [Add rules to phase entry point rulesets](/basic-operations/add-rule-phase-rulesets) for more information.
-</bongo:aside>
+{{</Aside>}}
 
 <details open>
 <summary>Request</summary>

@@ -78,11 +78,11 @@ For DNS policies:
 
 Your block page is now enabled for this policy.
 
-<bongo:aside header='Warning: Potential Security Risk'>
+{{<Aside header="Warning: Potential Security Risk">}}
 If your users are seeing the following error when navigating to a blocked page, double-check that you have downloaded the Cloudflare certificate and you have added it correctly to your system.
 
 ![Block page](../../static/documentation/policies/https-browser-error.png)
-</bongo:aside>
+{{</Aside>}}
 
 ## Customize the block page
 

@@ -36,9 +36,9 @@ You are now using encryption only for your DNS queries.
 
 ## Manually configure 1.1.1.1 for Families
 
-<bongo:aside type="note">
+{{<Aside type="note">}}
 If you configure 1.1.1.1 for Families manually, you will have to do it for every WiFi network your device connects to. This method does not work for cellular connections.
-</bongo:aside>
+{{</Aside>}}
 
 ### Block malware
 

@@ -77,9 +77,9 @@ Ports 80 and 443 are the only ports compatible with:
 - Proxying of [Cloudflare Apps](https://www.cloudflare.com/apps/developer/docs/getting-started)
 - [Cloudflare Caching](https://support.cloudflare.com/hc/en-us/articles/360021806811)
 
-<bongo:aside type="note">
+{{<Aside type="note">}}
 [Cloudflare Access](https://developers.cloudflare.com/cloudflare-one/) does not support port numbers in URLs. Port numbers are stripped from requests for URLs protected through Cloudflare Access.
-</bongo:aside>
+{{</Aside>}}
 
 ## Related resources
 

@@ -25,9 +25,9 @@ To choose the default, unbranded waiting room:
 
 ## Custom waiting room
 
-<bongo:aside type="note">
+{{<Aside type="note">}}
 Only certain customers can customize their waiting rooms. For more details, see our <a href="/plans">Plans</a> page.
-</bongo:aside>
+{{</Aside>}}
 
 To customize a waiting room:
 

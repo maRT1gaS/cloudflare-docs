@@ -13,9 +13,9 @@ Cron Triggers allow users to map a cron expression to a Worker script using a [S
 
 You can add Cron Triggers to scripts with the Cloudflare API, or in the dashboard in **Workers** > **Manage Workers** > select **your Worker** > [**Triggers**](https://dash.cloudflare.com/?to=/:account/workers). Refer to [Limits](/limits#number-of-schedules) to track the maximum number of Cron Triggers per Worker. If a script is managed with Wrangler, Cron Triggers should be exclusively managed through the `wrangler.toml` file.
 
-<bongo:aside type="note" header="Requires a ScheduledEvent Listener">
+{{<Aside type="note" header="Requires a ScheduledEvent Listener">}}
 To respond to a Cron Trigger, you must add a [`"scheduled"` event](/runtime-apis/scheduled-event) listener to the Workers script.
-</bongo:aside>
+{{</Aside>}}
 
 ![workers-schedule-editor](./media/workers-schedule-editor.png)
 
@@ -70,9 +70,9 @@ Some common time intervals that may be useful for setting up your Cron Trigger:
 
 </Definitions>
 
-<bongo:aside type="note" header="Testing Cron Triggers and potential delays">
+{{<Aside type="note" header="Testing Cron Triggers and potential delays">}}
 A recommended way for testing your Cron Trigger is to first deploy it to a test domain. Adding a new Cron Trigger, updating an old Cron Trigger, or deleting a Cron Trigger may take minutes for changes to propagate to the Cloudflare network edge.
-</bongo:aside>
+{{</Aside>}}
 
 ## Viewing past events
 

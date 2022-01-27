@@ -13,11 +13,11 @@ This article assumes that you are already familiar with [_Querying basics_](/gra
 
 Before you begin, [configure the API endpoint and HTTP headers](/graphql-api/getting-started/authentication/graphql-client-headers) in the GraphiQL client.
 
-<bongo:aside type='tip' header='Tip'>
+{{<Aside type="tip" header="Tip">}}
 To explore the documentation for the data sets and fields in the Cloudflare GraphQL schema, click **Docs** to open the _Documentation Explorer_ pane.
 
 For an introduction, see [Explore the GraphQL schema](/graphql-api/getting-started/explore-graphql-schema).
-</bongo:aside>
+{{</Aside>}}
 
 ## Set up a query and choose a data set
 
@@ -25,9 +25,9 @@ Click on the editing pane of GraphiQL and add this base query, replacing `zone-i
 
 ![GraphiQL base query](../../static/images/graphiql-base-query.png)
 
-<bongo:aside type='tip' header='Tip'>
+{{<Aside type="tip" header="Tip">}}
 To find the ID for a zone, log in to your Cloudflare account and click the site for which you want to obtain the zone ID. In the Cloudflare dashboard **Overview** page, scroll to the **API** section in the right sidebar, which displays your zone ID and account ID.
-</bongo:aside>
+{{</Aside>}}
 
 To assist query building, the GraphiQL client has word completion. Insert your cursor in the query, in this case on the line below `zones`, and start entering a value to engage the feature. For example, when you type `firewall`, a popup menu displays the data sets that return firewall information:
 

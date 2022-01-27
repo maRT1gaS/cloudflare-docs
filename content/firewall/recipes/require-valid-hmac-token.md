@@ -4,9 +4,9 @@ pcx-content-type: configuration
 
 # Require a valid HMAC token
 
-<bongo:aside type='warning' header='Important'>
+{{<Aside type="warning" header="Important">}}
 Access to the HMAC validation function requires a Cloudflare Pro, Business, or Enterprise plan.
-</bongo:aside>
+{{</Aside>}}
 
 ## HMAC token validation
 
@@ -68,11 +68,11 @@ then the token is valid and the function returns `true`.
 
 Since the expression in this example uses the `not` operator, it only matches when the HMAC token is _not_ valid. When the token is not valid, the Cloudflare triggers the action and blocks the request.
 
-<bongo:aside type='warning' header='Important'>
+{{<Aside type="warning" header="Important">}}
 When you do not use the optional _flags_ argument for `_is_timed_hmac_valid()`, you must URL encode the base64 value for _mac_ in the _MessageMAC_ argument.
 
 For more, see [_Functions: HMAC Validation_](https://developers.cloudflare.com/firewall/cf-firewall-language/functions#hmac-validation).
-</bongo:aside>
+{{</Aside>}}
 
 ## Use the same secret key to protect multiple paths
 

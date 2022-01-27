@@ -17,9 +17,9 @@ This tutorial will guide you through:
 
 Including build times, this tutorial should take you less than 15 minutes to complete.
 
-<bongo:aside type="note">
+{{<Aside type="note">}}
 If you have a Jekyll-based site not deployed on GitHub Pages, refer to [the Jekyll framework guide](/framework-guides/deploy-a-jekyll-site).
-</bongo:aside>
+{{</Aside>}}
 
 ## Before you begin
 
@@ -34,9 +34,9 @@ If you do not have Rubygems (`gem`) or Bundler (`bundle`) installed on your mach
 
 ## Preparing your GitHub Pages repository
 
-<bongo:aside type="note">
+{{<Aside type="note">}}
 If your GitHub Pages repository already has a `Gemfile` and `Gemfile.lock` present, you can skip this step entirely. The GitHub Pages environment assumes a default set of Jekyll plugins that are not explicitly specified in a `Gemfile`.
-</bongo:aside>
+{{</Aside>}}
 
 Your existing Jekyll-based repository must specify a `Gemfile` (Ruby's dependency configuration file) to allow Cloudflare Pages to fetch and install those dependencies during the [build step](/platform/build-configuration).
 
@@ -102,9 +102,9 @@ $ git push origin main
 
 With your GitHub Pages project now explicitly specifying its dependencies, you can start configuring Cloudflare Pages. The process is almost identical to [deploying a Jekyll site](/framework-guides/deploy-a-jekyll-site).
 
-<bongo:aside type="note">
+{{<Aside type="note">}}
 If you are configuring your Cloudflare Pages site for the first time, refer to the [Get started guide](/get-started#connect-to-github), which explains how to connect your existing GitHub repository to Cloudflare Pages.
-</bongo:aside>
+{{</Aside>}}
 
 Deploy your site to Pages by logging into the [Cloudflare dashboard](https://dash.cloudflare.com/) > **Account Home** > **Pages** and selecting **Create a project**. Select the new GitHub repository that you created and, in the **Set up builds and deployments** section, provide the following information:
 
@@ -120,9 +120,9 @@ Deploy your site to Pages by logging into the [Cloudflare dashboard](https://das
 
 After you have configured your site, you can begin your first deploy. You should see Cloudflare Pages installing `jekyll`, your project dependencies, and building your site, before deploying it.
 
-<bongo:aside type="note">
+{{<Aside type="note">}}
 For the complete guide to deploying your first site to Cloudflare Pages, refer to the [Get started guide](/getting-started).
-</bongo:aside>
+{{</Aside>}}
 
 After deploying your site, you will receive a unique subdomain for your project on `*.pages.dev`. Every time you commit new code to your Jekyll site, Cloudflare Pages will automatically rebuild your project and deploy it. You will also get access to [preview deployments](/platform/preview-deployments) on new pull requests, so you can preview how changes look to your site before deploying them to production.
 

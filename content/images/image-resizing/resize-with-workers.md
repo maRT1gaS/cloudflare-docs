@@ -152,9 +152,9 @@ These typings are also available in [our Workers TypeScript definitions library]
 
 Create a new script in the Workers section of the Cloudflare Dashboard. Scope your Worker script to a path dedicated to serving assets, such as `/images/*` or `/assets/*`. Only supported image formats can be resized. Attempting to resize any other type of resource (CSS, HTML) will result in an error.
 
-<bongo:aside type="warning" header="Warning">
+{{<Aside type="warning" header="Warning">}}
 Do not set up the Image Resizing worker for the entire zone (`/*`). This will block all non-image requests and make your website inaccessible.
-</bongo:aside>
+{{</Aside>}}
 
 It is best to keep the path handled by the Worker separate from the path to original (unresized) images to avoid request loops caused by the image resizing worker calling itself. For example, store your images in `example.com/originals/` directory, and handle resizing via `example.com/thumbnails/*` path that fetches images from the `/originals/` directory. If source images are stored in a location that is handled by a Worker, you must prevent the Worker from creating an infinite loop.
 
@@ -178,9 +178,9 @@ addEventListener('fetch', event => {
 
 ## Lack of preview in the Dashboard
 
-<bongo:aside type="note" header="Note">
+{{<Aside type="note" header="Note">}}
 Image Resizing is not simulated in the preview of in the Workers dashboard editor.
-</bongo:aside>
+{{</Aside>}}
 
 The script preview of the Worker editor ignores `fetch()` options, and will always fetch unresized images. To see the effect of Image Resizing you must deploy the Worker script and use it outside of the editor.
 

@@ -6,8 +6,8 @@ title: Secure Web Gateway
 
 # Secure Web Gateway policies
 
-<bongo:aside>  When creating or editing policies, keep in mind that it may take up to 60 seconds for that policy
-  to be updated across all of our data centers.</bongo:aside>
+{{<Aside>}}  When creating or editing policies, keep in mind that it may take up to 60 seconds for that policy
+  to be updated across all of our data centers.{{</Aside>}}
 
 With Secure Web Gateway polices, Cloudflare for Teams allows you to set up policies to inspect DNS, HTTP, and Network traffic.
 
@@ -17,8 +17,8 @@ This section describes how to create DNS, HTTP and Network policies on the Cloud
 
 ## Check that a policy is working
 
-<bongo:aside>  Before you start, please make sure you are connected to a network that is associated with the
-  location where the policy is applied.</bongo:aside>
+{{<Aside>}}  Before you start, please make sure you are connected to a network that is associated with the
+  location where the policy is applied.{{</Aside>}}
 
 Once you've created a policy to block a domain, you can use either `dig` or `nslookup` on your to see if the policy is working as intended.
 

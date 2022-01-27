@@ -11,12 +11,12 @@ To create a client certificate in the Cloudflare dashboard:
 1. Navigate to **SSL** > **Client Certificates**.
 1. Click **Create Certificate**.
 
-  <bongo:aside type='warning' header='Important'>
+  {{<Aside type="warning" header="Important">}}
 You can only use API Shield with a certificate authority (CA) that is fully managed by Cloudflare. Cloudflare generates a unique CA for each zone.
 
 If you need to use certificates issued by another CA, use <a href="https://developers.cloudflare.com/cloudflare-one/identity/devices/mutual-tls-authentication?">Cloudflare Access</a> to upload your own CA.
 
-  </bongo:aside>
+  {{</Aside>}}
 
 1. For **Private key type**, select a value.
 

@@ -22,9 +22,9 @@ Administrators can use Cloudflare Tunnel to connect a VNC host to Cloudflare’s
 
 10 minutes
 
-<bongo:aside>
+{{<Aside>}}
 There are a number of VNC versions, deployments and instances. This tutorial focuses on configuring a Tight VNC server on an Azure hosted Linux virtual machine. For help with other configurations, please post your questions in our [community](https://community.cloudflare.com/t/feedback-for-browser-vnc/280619/3).
-</bongo:aside>
+{{</Aside>}}
 
 ## Before you start
 

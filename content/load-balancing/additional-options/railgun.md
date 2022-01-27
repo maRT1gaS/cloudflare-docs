@@ -10,9 +10,9 @@ title: Railgun
 
 By adding a load balancer to Railgun, you speed up connections between Cloudflare data centers and DNS origin servers so that uncacheable requests have minimal latency.
 
-<bongo:aside type="note">
+{{<Aside type="note">}}
 For additional guidance and diagrams, refer to [Best practices for Railgun with a Load Balancer](https://support.cloudflare.com/hc/articles/200168346).
-</bongo:aside>
+{{</Aside>}}
 
 ## Set up Railgun in front of a load balancer
 

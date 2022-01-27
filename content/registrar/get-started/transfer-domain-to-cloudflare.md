@@ -50,9 +50,9 @@ In most cases, domains may be transferred even if WHOIS privacy services have be
 
 Your new registrar needs to confirm with your old registrar that the transfer flow is authorized. To do that, your old registrar will provide an authorization code to you.
 
-<bongo:aside type="note">
+{{<Aside type="note">}}
 This code is often referred to as an authorization code, auth code, authinfo code, or transfer code. You will need to input that code to complete your transfer to Cloudflare. Cloudflare will use it to confirm the transfer is authentic.
-</bongo:aside>
+{{</Aside>}}
 
 ### 5. Initiate your transfer to Cloudflare
 
@@ -73,9 +73,9 @@ Sites can be unavailable for a few reasons, including:
 
 You will not be billed at this step. Cloudflare will only bill your card when you input the auth code and confirm the contact information at the conclusion of your transfer request.
 
-<bongo:aside type="note">
+{{<Aside type="note">}}
 If you have an <a href='https://support.cloudflare.com/hc/articles/203471284#h_1l0KGygoBX9QYjNrhAcHjg'>unverified account email address</a>, you will not be able to transfer domains. Verify your account email address before proceeding.
-</bongo:aside>
+{{</Aside>}}
 
 ### 6. Input your authorization code
 

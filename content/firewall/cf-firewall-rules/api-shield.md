@@ -18,9 +18,9 @@ Cloudflare API Shield follows a positive security model.
 
 ## Mutual TLS (mTLS)
 
-<bongo:aside type='note'>
+{{<Aside type="note">}}
 Mutual TLS using a Cloudflare-managed certificate authority (CA) is available to all Cloudflare plans.
-</bongo:aside>
+{{</Aside>}}
 
 Mutual TLS (mTLS) authentication uses client certificates to ensure that traffic between client and server is bidirectionally secure and trusted. It also allows requests that do not authenticate via an identity provider, such as Internet-of-things (IoT) devices, to demonstrate they can reach a given resource.
 
@@ -42,19 +42,19 @@ To protect your application with mTLS authentication, use this workflow:
 
 1. Create Cloudflare firewall rules that [require API requests to present a valid client certificate](/recipes/require-valid-client-certificate). The **Firewall** app in the Cloudflare dashboard provides a dedicated interface where you can [create mTLS rules](/cf-dashboard/create-mtls-rule).
 
-<bongo:aside type='warning' header='Important'>
+{{<Aside type="warning" header="Important">}}
 API Shield's Mutual TLS requires Cloudflare-issued certificates. You can use mTLS with any fully managed certificate authority (CA) where Cloudflare issues the client certificates.
 
 If you need to use certificates issued by another CA, use <a href="https://developers.cloudflare.com/cloudflare-one/identity/devices/mutual-tls-authentication?">Cloudflare Access</a> to upload your own CA.
 
 When using Yubikeys, the browser may prompt for unlocking the key due to a problem in Yubikey's PKCS#11 library.
-</bongo:aside>
+{{</Aside>}}
 
 ## Schema Validation
 
-<bongo:aside type='note'>
+{{<Aside type="note">}}
 This feature is only available for customers on an Enterprise plan. Contact your Cloudflare Customer Success Manager to get access.
-</bongo:aside>
+{{</Aside>}}
 
 An API Schema defines which API requests are valid based on several request properties like target endpoint and HTTP method.
 
@@ -64,9 +64,9 @@ API Shield supports API Schemas using OpenAPI Specification v3. The accepted fil
 
 To configure Schema Validation for one or more hosts using the dashboard, check [Configure Schema Validation](/cf-dashboard/configure-schema-validation).
 
-<bongo:aside type='warning' header='Important'>
+{{<Aside type="warning" header="Important">}}
 Currently, API Shield cannot validate some features of API Schemas, including the following: request body validations, all responses, external references, non-basic path templating, or unique items.
-</bongo:aside>
+{{</Aside>}}
 
 ### Operation IDs
 

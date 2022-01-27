@@ -21,10 +21,10 @@ To add a location to Teams:
 
 If any of the above apply to your case, click **Delete** to the right of the IPv4 field.
 
-   <bongo:aside>
+   {{<Aside>}}
 If you're using an Enterprise plan, you'll be able to manually change the IPv4 address.
 
-   </bongo:aside>
+   {{</Aside>}}
 
 ![Add location](../../../static/documentation/connections/add-location.png)
 

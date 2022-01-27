@@ -9,9 +9,9 @@ While using Railgun and configuring Origin CA certificates, please note that add
 
 This means that when enabling Full SSL (Strict) in the dashboard while Railgun is enabled, the Listener will no longer consider the origin presenting the Origin CA certificate as trustworthy, resulting in a 520 error.
 
-<bongo:aside>
+{{<Aside>}}
 **Note**: This error condition will only occur if `validate.cert` is enabled (for example, set to **1**) from the `railgun.conf` file.
-</bongo:aside>
+{{</Aside>}}
 
 Here is an example of the error generated when `validate.cert = 1`, the origin uses an Origin CA leaf, and the Origin CA roots are not in the trust store for Railgun specified by `ca.bundle`:
 
@@ -26,6 +26,6 @@ Here are the following options available to avoid these errors:
 
 By default, `railgun.conf` defines the Listener's trust store as (for Debian/Ubuntu): `ca.bundle = /etc/ssl/railgun-ca-certs.crt`.
 
-<bongo:aside>
+{{<Aside>}}
 **Note**: As a reminder, the Listener will need to be restarted after making changes to the configuration file.
-</bongo:aside>
+{{</Aside>}}

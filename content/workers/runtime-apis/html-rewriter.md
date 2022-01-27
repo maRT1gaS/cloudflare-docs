@@ -432,7 +432,7 @@ This is what selectors are and what they are used for.
 
 - `E:not(s)`
 
-  - an E element that does not match either compound selectors
+  - an E element that does not match either compound selectors
 
 - `E.warning`
 

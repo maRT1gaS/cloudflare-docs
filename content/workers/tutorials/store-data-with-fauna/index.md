@@ -25,7 +25,7 @@ Building with Fauna, Workers, and Worktop enables you to create a globally distr
 
 ![fauna-cf-workers-diagram](./media/fauna-cf-workers-diagram.jpg)
 
-Fauna is a document-based database with a flexible schema. This allows you to define the structure of your data – whatever it may be – and store documents that adhere to that structure. In this tutorial, you build a product inventory, where each `product` document must contain the following properties:
+Fauna is a document-based database with a flexible schema. This allows you to define the structure of your data – whatever it may be – and store documents that adhere to that structure. In this tutorial, you build a product inventory, where each `product` document must contain the following properties:
 
 - **title** - A human-friendly string that represents the title or name of a product.
 - **serialNumber** - A machine-friendly string that uniquely identifies the product.
@@ -42,9 +42,9 @@ For this tutorial all API endpoints are public. However, Fauna also offers multi
 
 Open the [Fauna dashboard][fauna-dashboard] in your browser and log into your Fauna account.
 
-<bongo:aside type="note" header="Fauna Account">
+{{<Aside type="note" header="Fauna Account">}}
 If you do not have a Fauna account, you can [sign up][fauna-signup] and deploy this template using the free tier.
-</bongo:aside>
+{{</Aside>}}
 
 In the Fauna dashboard:
 
@@ -71,9 +71,9 @@ Navigate to the **Security** tab in the Fauna dashboard and create a new key wit
 
 The Fauna dashboard displays the key's secret. Copy and save this server key to use in a later step.
 
-<bongo:aside type="warning" header="Protect your keys">
+{{<Aside type="warning" header="Protect your keys">}}
 Server keys can read and write all documents in all collections and can call all [user-defined functions][fauna-udfs] (UDFs). Protect server keys and do not commit them to source control repositories.
-</bongo:aside>
+{{</Aside>}}
 
 ## Managing your inventory with Workers
 
@@ -88,9 +88,9 @@ $ cd fauna-workers
 $ wrangler publish
 ```
 
-<bongo:aside type="note" header="Publish before storing secrets">
+{{<Aside type="note" header="Publish before storing secrets">}}
 You must publish a version of your project before storing your server secret in the next step.
-</bongo:aside>
+{{</Aside>}}
 
 ### Adding your Fauna secret as an environment variable
 
@@ -453,9 +453,9 @@ header: Create product response
 }
 ```
 
-<bongo:aside type="note">
+{{<Aside type="note">}}
 Copy the `productId` value for use in the remaining test queries.
-</bongo:aside>
+{{</Aside>}}
 
 Next, read the document you just created:
 
@@ -592,9 +592,9 @@ The FQL [Update][fql-update] function only updates the provided properties of a 
 
 Finally, this query calculates the new total quantity by adding the value of `quantity` to `currentQuantity` using the FQL [Add][fql-add] function.
 
-<bongo:aside type="note" header="Consistency guarantees in Fauna">
+{{<Aside type="note" header="Consistency guarantees in Fauna">}}
 Even if multiple Workers update this quantity from different parts of the world, Fauna guarantees the consistency of the data across all Fauna regions. [This article][fauna-blog-consistency-without-clocks] explains how Fauna's distributed protocol works without the need for atomic clocks.
-</bongo:aside>
+{{</Aside>}}
 
 Test your update route:
 

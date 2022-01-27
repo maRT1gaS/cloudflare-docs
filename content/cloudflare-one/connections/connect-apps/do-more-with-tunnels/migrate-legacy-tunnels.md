@@ -6,10 +6,10 @@ title: Migrate legacy tunnels
 
 # Migrate legacy tunnels to named tunnels
 
-<bongo:aside type='note' header='Before you start'>
+{{<Aside type="note" header="Before you start">}}
 - [Download](/connections/connect-apps/install-and-setup/installation) the latest version of `cloudflared`
 - Obtain a new origin certificate by running `cloudflared login`. While named tunnels are scoped to an account, for legacy reasons the login page requires selecting a zone.
-</bongo:aside>
+{{</Aside>}}
 
 Originally, a Cloudflare Tunnel connection corresponded to a DNS record in your account. Requests to that hostname hit Cloudflare’s network first and our edge sends those requests over the tunnel to your origin. However, fitting an outbound-only connection into a reverse proxy creates some ergonomic and stability hurdles. The original Cloudflare Tunnel architecture attempted to both manage DNS records and create connections. When connections became disrupted, Tunnel would recreate the entire deployment. Additionally, Argo Tunnel connections could not be treated like regular origin servers in Cloudflare’s control plane and had to be managed directly from the server-side software.
 

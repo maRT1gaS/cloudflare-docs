@@ -9,13 +9,13 @@ When troubleshooting or testing the Railgun Listener, it may be necessary to rai
 
 In order to increase logging, the `log.level` within `railgun.conf` should be set to **5** in order for all events within the Listener instance to be captured during troubleshooting.
 
-<bongo:aside>
+{{<Aside>}}
 **Note**: The Railgun service running on the server will also need to be restarted. For changes to take effect, input the following:
 
 ```sh
 $ service railgun restart
 ```
-</bongo:aside>
+{{</Aside>}}
 
 The log files for Railgun can be found in the following locations for each supported operating system:
 

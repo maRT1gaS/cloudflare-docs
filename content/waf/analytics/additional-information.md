@@ -28,6 +28,6 @@ highlight: [3]
 }
 ```
 
-<bongo:aside type="warning">
+{{<Aside type="warning">}}
 Currently, you cannot disable validation checks. They run early in Cloudflare's infrastructure before the configuration for domains has been loaded.
-</bongo:aside>
+{{</Aside>}}

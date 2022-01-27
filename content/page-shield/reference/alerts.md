@@ -10,18 +10,18 @@ Refer to [Configure Page Shield alerts](/use-dashboard/configure-alerts) for ins
 
 ## Basic alerts
 
-<bongo:aside type="note">
+{{<Aside type="note">}}
 Available for Cloudflare customers on a Business or Enterprise plan.
-</bongo:aside>
+{{</Aside>}}
 
 - **New Script Alert**: Triggered daily by any new JavaScript dependencies detected in your pages.
 - **New Domain Alert**: Triggered hourly by newly detected JavaScript dependencies from new host domains.
 
 ## Malicious code alerts
 
-<bongo:aside type="note">
+{{<Aside type="note">}}
 Available as a paid add-on for Cloudflare customers on an Enterprise plan.
-</bongo:aside>
+{{</Aside>}}
 
 - **Malicious Domain Alert**: Triggered immediately by JavaScript dependencies loaded from domains known to be malicious according to threat intelligence feeds.
 - **Malicious URL Alert**: Triggered immediately by JavaScript dependencies loaded from URLs known to be malicious according to threat intelligence feeds.

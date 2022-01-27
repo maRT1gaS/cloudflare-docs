@@ -56,15 +56,15 @@ Defining environment variables inline will override the default credentials stor
 2. After being taken to the **Profile** page, scroll to **API Keys**.
 3. Select **View** to copy your **Global API Key**.\*
 
-<bongo:aside type="warning" header="Warning">
+{{<Aside type="warning" header="Warning">}}
 \* Treat your Global API Key like a password. It should not be stored in version control or in your code – use environment variables if possible.
-</bongo:aside>
+{{</Aside>}}
 
 ---
 
 ## Use Tokens
 
-After getting your token or key, you can set up your default credentials on your local machine by running `wrangler config`:
+After getting your token or key, you can set up your default credentials on your local machine by running `wrangler config`:
 
 ```bash
 $ wrangler config
@@ -72,7 +72,7 @@ Enter API token:
 superlongapitoken
 ```
 
-Use the `--api-key` flag to instead configure with email and global API key:
+Use the `--api-key` flag to instead configure with email and global API key:
 
 ```bash
 $ wrangler config --api-key

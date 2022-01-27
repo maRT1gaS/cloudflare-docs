@@ -21,9 +21,9 @@ According to this formula, an origin with a weight of **0** should not receive a
 
 You can also see this value in the **Percent** field when creating or editing a pool in the dashboard.
 
-<bongo:aside type="note" header="Note:">
+{{<Aside type="note" header="Note:">}}
 If an origin is used in multiple pools and has multiple weights assigned, the total traffic sent to that pool will differ from the percentage specified in each individual pool.
-</bongo:aside>
+{{</Aside>}}
 
 ---
 

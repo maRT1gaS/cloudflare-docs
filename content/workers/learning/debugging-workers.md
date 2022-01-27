@@ -55,6 +55,6 @@ Inserting `console.log` lines throughout your code can help you understand the s
 
 You can customize how `wrangler dev` works to fit your needs. Refer to [the `wrangler dev` documentation](/cli-wrangler/commands#dev) for available configuration options.
 
-<bongo:aside type="warning">
+{{<Aside type="warning">}}
 There is a bug associated with `wrangler dev` documented in the [Known issues section](/platform/known-issues#wrangler-dev).
-</bongo:aside>
+{{</Aside>}}

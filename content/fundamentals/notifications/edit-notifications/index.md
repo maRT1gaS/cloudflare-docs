@@ -12,6 +12,6 @@ pcx-content-type: how-to
 
 The browser will navigate back to the list of Notifications.
 
-<bongo:aside type="note" header="Note">
+{{<Aside type="note" header="Note">}}
 You can also disable and/or delete Notifications. To disable a Notification, click the **Enabled** toggle. To delete it, click **Delete**.
-</bongo:aside>
+{{</Aside>}}

@@ -11,9 +11,9 @@ When visitors request content from your domain, Cloudflare first attempts to ser
 
 Authenticated origin pulls make sure that all of these `origin pulls` come from Cloudflare. Put another way, authenticated origin pulls ensure that any HTTPS requests outside of Cloudflare will not receive a response from your origin.
 
-<bongo:aside type='note' header='Note'>
+{{<Aside type="note" header="Note">}}
 Requests to gray-clouded records within Cloudflare DNS are also blocked.
-</bongo:aside>
+{{</Aside>}}
 
 ## Detailed explanation
 

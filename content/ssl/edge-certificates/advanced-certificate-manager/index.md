@@ -11,9 +11,9 @@ Advanced Certificate Manager offers a flexible and customizable way to issue and
 
 <ACMDefinition />
 
-<bongo:aside type="note" header="Note">
+{{<Aside type="note" header="Note">}}
 Advanced certificates supercede legacy [Dedicated SSL certificates](https://support.cloudflare.com/hc/articles/228009108).
-</bongo:aside>
+{{</Aside>}}
 
 ## Features
 

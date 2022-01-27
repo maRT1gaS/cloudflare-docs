@@ -12,9 +12,9 @@ Before getting started, review:
 - [Logpush API configuration](/reference/logpush-api-configuration)
 - [Logpush job object definition](https://api.cloudflare.com/#logpush-jobs-properties)
 
-<bongo:aside type="note">
+{{<Aside type="note">}}
 The examples below are for zone-scoped data sets. Account-scoped data sets should use `/accounts/<ACCOUNT_ID>` instead of `/zone/<ZONE_ID>`.
-</bongo:aside>
+{{</Aside>}}
 
 ## Step 1 - Get ownership challenge
 
@@ -49,9 +49,9 @@ A challenge file will be written to the destination, and the filename will be in
 
 You will need to provide the token contained in this file when creating a job in the next step.
 
-<bongo:aside type="note" header="Note">
+{{<Aside type="note" header="Note">}}
 When using Sumo Logic, you may find it helpful to have [Live Tail](https://help.sumologic.com/05Search/Live-Tail/About-Live-Tail) open to see the challenge file as soon as it's uploaded.
-</bongo:aside>
+{{</Aside>}}
 
 ## Step 2 - Create a job
 
@@ -71,7 +71,7 @@ https://api.cloudflare.com/client/v4/zones/<ZONE_ID>/logpush/jobs \
   - Set the timestamp format to RFC 3339 (`&timestamps=rfc3339`) for:
     - Google BigQuery usage
     - Automated timestamp parsing within Sumo Logic; _see [timestamps from Sumo Logic](https://help.sumologic.com/03Send-Data/Sources/04Reference-Information-for-Sources/Timestamps%2C-Time-Zones%2C-Time-Ranges%2C-and-Date-Formats) for details_
-- _ownership_challenge_ - challenge token required to prove destination ownership
+- _ownership_challenge_ - challenge token required to prove destination ownership
 
 ### Response
 

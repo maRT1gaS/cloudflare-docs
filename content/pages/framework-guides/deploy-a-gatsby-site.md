@@ -52,9 +52,9 @@ Deploy your site to Pages by logging into the [Cloudflare dashboard](https://das
 
 After configuring your site, you can begin your first deploy. You should see Cloudflare Pages installing `gatsby`, your project dependencies, and building your site, before deploying it.
 
-<bongo:aside type="note">
+{{<Aside type="note">}}
 For the complete guide to deploying your first site to Cloudflare Pages, refer to the [Get started guide](/get-started).
-</bongo:aside>
+{{</Aside>}}
 
 After deploying your site, you will receive a unique subdomain for your project on `*.pages.dev`.
 Every time you commit new code to your Gatsby site, Cloudflare Pages will automatically rebuild your project and deploy it. You will also get access to [preview deployments](/platform/preview-deployments) on new pull requests, so you can preview how changes look to your site before deploying them to production.

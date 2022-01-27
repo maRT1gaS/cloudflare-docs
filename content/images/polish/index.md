@@ -13,9 +13,9 @@ When an image is fetched from your origin, our systems automatically optimize it
 
 ## Polish compression options
 
-<bongo:aside type="warning" header="Warning">
+{{<Aside type="warning" header="Warning">}}
 Polish may not be applied to origin responses that contain a `Vary` header. The only accepted `Vary` header is `Vary: Accept-Encoding`.
-</bongo:aside>
+{{</Aside>}}
 
 ### Lossless
 
@@ -25,9 +25,9 @@ Lossless attempts to strip most metadata, like EXIF data, but does not change th
 
 Lossy attempts to strip most metadata and compresses images by approximately 15 percent. When uncompressed, some of the redundant information from the original image is lost. On average, using Lossy mode reduces file size by 48 percent. Lossy has the same effect as Lossless when applied to PNG.
 
-<bongo:aside type="note">
+{{<Aside type="note">}}
 With Lossless and Lossy modes, Cloudflare attempts to strip as much metadata as possible. However, Cloudflare cannot guarantee stripping all metadata because other factors, such as caching status, might affect which metadata is finally sent in the response.
-</bongo:aside>
+{{</Aside>}}
 
 ### WebP
 

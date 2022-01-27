@@ -51,9 +51,9 @@ To set up a Splunk Logpush job:
 1. Create a job with the appropriate endpoint URL and authentication parameters
 1. Enable the job to begin pushing logs
 
-<bongo:aside type="note" header="Note">
+{{<Aside type="note" header="Note">}}
 Unlike configuring Logpush jobs for AWS S3, GCS, or Azure, there is no ownership challenge when configuring Logpush to Splunk.
-</bongo:aside>
+{{</Aside>}}
 
 <EnableReadPermissions />
 
@@ -73,8 +73,9 @@ To create a job, make a `POST` request to the Logpush jobs endpoint with the fol
     - Using command line. Example: `python -c 'import uuid; print(uuid.uuid4())'`
   - `<INSECURE-SKIP-VERIFY>`: Boolean value. Cloudflare recommends setting this value to `false`. Setting this value to `true` is equivalent to using the `-k` option with `curl` as shown in Splunk examples and is **not** recommended. Only set this value to `true` when HEC uses a self-signed certificate.
 
-<bongo:aside type="note" header="Note">  Cloudflare highly recommends setting this value to <code class="InlineCode">false</code>. Refer to
-  the <a href="/faq#logpush-faq">Logpush FAQ</a> for more information.</bongo:aside>
+{{<Aside type="note" header="Note">}}
+Cloudflare highly recommends setting this value to `false`. Refer to the <a href="/faq#logpush-faq">Logpush FAQ</a> for more information.
+{{</Aside>}}
 
 - `<SOURCE-TYPE>`: The Splunk sourcetype. Example: `cloudflare:json`
 - `<SPLUNK-AUTH-TOKEN>`: The Splunk authorization token that’s URL-encoded. Example: `Splunk%20e6d94e8c-5792-4ad1-be3c-29bcaee0197d`

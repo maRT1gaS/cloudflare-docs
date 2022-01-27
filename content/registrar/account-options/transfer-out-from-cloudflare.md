@@ -6,13 +6,13 @@ pcx-content-type: how-to
 
 Cloudflare Registrar makes it easy to transfer your domain to another registrar. Follow the instructions below to transfer your domain out from Cloudflare.
 
-<bongo:aside type="warning">
+{{<Aside type="warning">}}
 ICANN rules prohibit a domain from being transferred if:
 
 - It has been transferred within the last 60 days;
 - It was registered within the last 60 days;
 - Or if the WHOIS registrant information has been modified in the last 60 days (even if redacted).
-</bongo:aside>
+{{</Aside>}}
 
 ## Unlocking your domain at Cloudflare
 

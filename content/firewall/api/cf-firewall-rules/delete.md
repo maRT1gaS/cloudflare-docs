@@ -24,9 +24,9 @@ curl -X DELETE \
      "https://api.cloudflare.com/client/v4/zones/d56084adb405e0b7e32c52321bf07be6/firewall/rules?id=cbf4b7a5a2a24e59a03044d6d44ceb09"
 ```
 
-<bongo:aside type='note' header='Note'>
+{{<Aside type="note" header="Note">}}
 `DELETE` does not delete any filter related to the firewall rule. To delete the filter, it's necessary to call the `/filters` API.
-</bongo:aside>
+{{</Aside>}}
 
 ### Response
 

@@ -12,9 +12,9 @@ Using load balancing analytics, you can:
 - Assess the health status of origin servers in your pools.
 - Review changes in pools and pool health over time.
 
-<bongo:aside type="note">
+{{<Aside type="note">}}
 Load balancing analytics are only available to customers on paid plans (Pro, Business, and Enterprise).
-</bongo:aside>
+{{</Aside>}}
 
 ## Dashboard Analytics
 
@@ -30,9 +30,9 @@ These metrics show the number of requests routed to specific pools within a load
 
 Add additional filters for specific pools, times, regions, and origins.
 
-<bongo:aside type="note">
+{{<Aside type="note">}}
 Load balancing <strong>requests</strong> are the number of uncached requests made by your load balancer. By default, Cloudflare caches resolved IP addresses for up to five seconds.
-</bongo:aside>
+{{</Aside>}}
 
 ### Latency
 

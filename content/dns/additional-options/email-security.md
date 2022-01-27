@@ -11,9 +11,9 @@ There are several DNS mechanisms to prevent others from sending emails on behalf
 - [DomainKeys Identified Mail (DKIM)](https://www.cloudflare.com/learning/dns/dns-records/dns-dkim-record/): Ensure email authenticity by cryptographically signing emails.
 - [Domain-based Message Authentication Reporting and Conformance (DMARC)](https://www.cloudflare.com/learning/dns/dns-records/dns-dmarc-record/): Receive aggregate reports about your email traffic and provide clear instructions for how email receivers should treat non-conforming emails.
 
-<bongo:aside type="note">
+{{<Aside type="note">}}
 For additional background on email security records, refer to the [introductory blog post](https://blog.cloudflare.com/tackling-email-spoofing/).
-</bongo:aside>
+{{</Aside>}}
 
 ## Configure email security records
 

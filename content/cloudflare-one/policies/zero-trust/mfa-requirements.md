@@ -34,11 +34,11 @@ The rule must contain an Include rule which defines an identity. For example, th
 
 5. Save the rule.
 
-<bongo:aside type='warning' header='Important'>
+{{<Aside type="warning" header="Important">}}
 **What happens if the user fails to present the required MFA method?**
 
 Cloudflare Access will reject the user, even if they successfully login to the identity provider with an alternative method.
-</bongo:aside>
+{{</Aside>}}
 
 ## Adding authentication methods into the JWT
 

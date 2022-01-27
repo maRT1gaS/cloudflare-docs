@@ -8,9 +8,9 @@ pcx-content-type: tutorial
 
 In this tutorial, you will learn how to deploy your Vercel application to Cloudflare Pages.
 
-<bongo:aside type="note">
+{{<Aside type="note">}}
 You should already have an existing project deployed on Vercel that you would like to host on Cloudflare Pages. Features such as Vercel's serverless functions are currently not supported in Cloudflare Pages.
-</bongo:aside>
+{{</Aside>}}
 
 ## Finding your build command and build directory
 

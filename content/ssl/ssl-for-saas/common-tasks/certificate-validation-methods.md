@@ -64,9 +64,9 @@ In the response, you will see two properties inside of the `ssl` object: `cname`
 
 HTTP adds a DCV token to your origin. You can either add that token [manually](#http-manual) to support pre-validation or wait for Cloudflare to add the DCV token [automatically](#http-automatic), which may lead to a few minutes of downtime.
 
-<bongo:aside type="warning">
+{{<Aside type="warning">}}
 Due to recent changes, HTTP DCV validation will soon not be allowed for wildcard certificates. For more details and next steps, refer to [Changes to HTTP DCV](/ssl-tls/dcv-update).
-</bongo:aside>
+{{</Aside>}}
 
 #### HTTP (manual)
 
@@ -112,10 +112,10 @@ Once you create a new hostname [via the dashboard](/ssl-for-saas/common-tasks/is
 
 </details>
 
-<bongo:aside type='note' header='Note'>
+{{<Aside type="note" header="Note">}}
 Cloudflare is able to serve a random token from our edge due to the fact that `site.example.com` has a CNAME in place to `$CNAME_TARGET`, which ultimately resolves to Cloudflare IPs. If your customer has not yet added the CNAME, the CA will not be able to retrieve the token and the process will not complete.
 
 We will attempt to retry this validation check for a finite period before timing out. Refer to <a href="/ssl-for-saas/validation-backoff-schedule">Validation Retry Schedule</a> for more details.
-</bongo:aside>
+{{</Aside>}}
 
 If you would like to complete the issuance process before asking your customer to update their CNAME (or before changing the resolution of your target CNAME to be proxied by Cloudflare), choose another validation method.

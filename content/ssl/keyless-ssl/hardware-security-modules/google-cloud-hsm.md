@@ -21,9 +21,9 @@ Make sure that you have:
 
 To set up the Google Cloud HSM, [create a key ring](https://cloud.google.com/kms/docs/hsm#kms-create-key-hsm-web) and indicate its location.
 
-<bongo:aside type="note" header="Note:">
+{{<Aside type="note" header="Note:">}}
 Only [certain locations](https://cloud.google.com/kms/docs/locations#hsm-regions) support Google Cloud HSM.
-</bongo:aside>
+{{</Aside>}}
 
 ---
 
@@ -62,9 +62,9 @@ Create a key, including the following information:
 
 After creating a key ring and key, [import the private key](https://cloud.google.com/kms/docs/importing-a-key).
 
-<bongo:aside type="note" header="Note:">
+{{<Aside type="note" header="Note:">}}
 You need to [convert your key](https://cloud.google.com/kms/docs/formatting-keys-for-import#formatting_asymmetric_keys) from a PEM to DER format.
-</bongo:aside>
+{{</Aside>}}
 
 ---
 

@@ -43,6 +43,6 @@ $ cd /Applications/Cloudflare\ WARP.app/Contents/Resources
 $ ./uninstall.sh
 ```
 
-<bongo:aside type="note" header="Note">
+{{<Aside type="note" header="Note">}}
 You may be prompted to provide your credentials while removing the application.
-</bongo:aside>
+{{</Aside>}}

@@ -5,9 +5,9 @@ pcx-content-type: tutorial
 
 # AWS cloud HSM
 
-<bongo:aside type='note' header='Note'>
+{{<Aside type="note" header="Note">}}
 This example imports an existing key pair, but you may prefer to [generate your key on the HSM](https://docs.aws.amazon.com/cloudhsm/latest/userguide/manage-keys.html).
-</bongo:aside>
+{{</Aside>}}
 
 ---
 

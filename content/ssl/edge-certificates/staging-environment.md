@@ -11,9 +11,9 @@ Use your certificate staging environment to test new custom (modern) certificate
 - You misunderstand the order of your certificates.
 - Clients have previously pinned your custom certificate, causing a TLS termination error.
 
-<bongo:aside type="note">
+{{<Aside type="note">}}
 Staging environments are available only to Enterprise customers as part of an open beta. For access, reach out to your Account team.
-</bongo:aside>
+{{</Aside>}}
 
 ---
 

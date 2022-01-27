@@ -5,7 +5,7 @@ pcx-content-type: how-to
 
 # Add bookmarks
 
-Cloudflare for Teams allows admins to show applications on their user’s [App Launcher](/applications/app-launcher) even if those applications are not secured behind Access. This way, users can access all the applications they need to work, all in one place — regardless of whether those applications are protected by Access.
+Cloudflare for Teams allows admins to show applications on their user’s [App Launcher](/applications/app-launcher) even if those applications are not secured behind Access. This way, users can access all the applications they need to work, all in one place — regardless of whether those applications are protected by Access.
 
 Links to applications not protected by Access can be added as **bookmarks**. To add a bookmark:
 
@@ -22,10 +22,10 @@ Links to applications not protected by Access can be added as **bookmarks**. To 
    - Toggle on **Show application in the App Launcher** if you want the application to be visible in the App Launcher. The toggle does not impact the ability for users to reach the application.
    - [Optional] Add a custom logo for your application by clicking **Custom** and entering a link to your desired image.
 
-   <bongo:aside>     If you're having issues specifying a custom logo, check that the image is served from an HTTPS
+   {{<Aside>}}     If you're having issues specifying a custom logo, check that the image is served from an HTTPS
      endpoint. For example, <code>http://www.example.com/upload/logo.png</code> will not work.
      However, <code>https://www.example.com/upload/logo.png</code> will.
-   </bongo:aside>
+   {{</Aside>}}
 
 1. Click **Next**.
 

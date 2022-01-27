@@ -5,9 +5,9 @@ pcx-content-type: how-to
 
 # Get started
 
-<bongo:aside type="note">
+{{<Aside type="note">}}
 Client IP Geolocation is currently in closed Beta testing.
-</bongo:aside>
+{{</Aside>}}
 
 There are several things you can do to best handle traffic from Cloudflare VPN and forward-proxy users:
 

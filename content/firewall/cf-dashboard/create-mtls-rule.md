@@ -13,11 +13,11 @@ Before you can create a mTLS rule, you must do the following:
 - [Configure your mobile app or IoT device](https://developers.cloudflare.com/ssl/client-certificates/configure-your-mobile-app-or-iot-device) to use your Cloudflare-issued client certificate.
 - [Enable mutual Transport Layer Security (mTLS) for a host](https://developers.cloudflare.com/ssl/client-certificates/enable-mtls) in your zone.
 
-<bongo:aside type='warning' header='Important'>
+{{<Aside type="warning" header="Important">}}
 You can only use mTLS with a certificate authority (CA) that is fully managed by Cloudflare. Cloudflare generates a unique CA for each zone.
 
 If you need to use certificates issued by another CA, use [Cloudflare Access](https://developers.cloudflare.com/cloudflare-one/identity/devices/mutual-tls-authentication) to upload your own CA.
-</bongo:aside>
+{{</Aside>}}
 
 ## Use the Mutual TLS Rule interface
 

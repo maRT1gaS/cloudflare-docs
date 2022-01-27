@@ -6,9 +6,9 @@ type: overview
 
 # Configure Schema Validation
 
-<bongo:aside type='note'>
+{{<Aside type="note">}}
 This feature is only available for customers on an Enterprise plan. Contact your Cloudflare Customer Success Manager to get access.
-</bongo:aside>
+{{</Aside>}}
 
 Use the **API Shield** interface to configure [API Schema Validation](/cf-firewall-rules/api-shield#schema-validation), which validates requests according to the API Schema you provide.
 
@@ -44,12 +44,12 @@ To configure Schema Validation in the Cloudflare dashboard, follow these steps:
 
    For example, if your API is available at `http://api.example.com/v1`, the expression must include a check for the _Hostname_ field (which must be equal to `api.example.com`) and a check for the _URI Path_ field using a regular expression (which must match the regex `^/v1`).
 
-   <bongo:aside type='warning' header='Important'>
+   {{<Aside type="warning" header="Important">}}
    To validate the hostname, you must include the _Hostname_ field explicitly in the rule, even if the hostname value is in the schema file. Any hostname value present in the schema file will be ignored.
 
    Regular expression support is a paid add-on in the Enterprise plan.
 
-   </bongo:aside>
+   {{</Aside>}}
 
 1. Click **Next**.
 
@@ -63,10 +63,10 @@ To configure Schema Validation in the Cloudflare dashboard, follow these steps:
 
 1. Click **Deploy** to validate the content of the schema file and deploy the Schema Validation rule.
 
-   <bongo:aside type='warning'>
+   {{<Aside type="warning">}}
    If you get a validation error, make sure you are using one of the supported file formats. Also, each endpoint and method pair must have a [unique Operation ID](/cf-firewall-rules/api-shield#operation-ids).
 
-   </bongo:aside>
+   {{</Aside>}}
 
 1. After deploying your API Shield rule, Cloudflare displays a summary of all API endpoints organized by their protection level and what will be the actions taken for non-compliant and unprotected requests.
 
@@ -78,10 +78,10 @@ To configure Schema Validation in the Cloudflare dashboard, follow these steps:
 
 1. In the **Fallthrough action** dropdown, select the action to perform for incoming requests addressed at other (non-protected) API endpoints.
 
-   <bongo:aside type='warning'>
+   {{<Aside type="warning">}}
    Currently, request body validations are not supported.
 
-   </bongo:aside>
+   {{</Aside>}}
 
 1. Click **Done**.
 

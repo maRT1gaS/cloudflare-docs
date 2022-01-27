@@ -7,9 +7,9 @@ pcx-content-type: reference
 
 You can delete variants via API with a simple cURL command.
 
-<bongo:aside type="warning" header="Warning">
+{{<Aside type="warning" header="Warning">}}
 Deleting a variant is a global action that will affect other images that contain that variant.
-</bongo:aside>
+{{</Aside>}}
 
 ```bash
 curl -X DELETE api.cloudflare.com/client/v4/account/:account_id/images/v1/variants/:variant_name

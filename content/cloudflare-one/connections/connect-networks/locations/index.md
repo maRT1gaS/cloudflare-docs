@@ -5,9 +5,9 @@ pcx-content-type: concept
 
 # Locations
 
-<bongo:aside type="Warning" header="Warning">
+{{<Aside type="Warning" header="Warning">}}
 Deploying Gateway DNS filtering using static IP addresses may prevent users from connecting to public Wi-Fi networks through captive portals. To avoid this issue, use the [WARP client](/connections/connect-devices/warp) to connect your devices to Teams.
-</bongo:aside>
+{{</Aside>}}
 
 Locations are usually physical entities like offices, homes, retail stores, movie theatres, or data centers. The fastest way to start sending DNS queries from a location and protect it from security threats is by changing the DNS resolvers at the router.
 
@@ -40,9 +40,9 @@ The only requirement for a location is its name. All other fields are optional i
 
 ### Source IPv4 address
 
-<bongo:aside>
+{{<Aside>}}
 Changing the source IPv4 address of a location is an Enterprise feature. See our [payment plans](https://www.cloudflare.com/teams-pricing/) for more information.
-</bongo:aside>
+{{</Aside>}}
 
 Gateway uses the public source IPv4 address of your network to identify your location, apply policies and log DNS requests. When creating a location, the Teams dashboard automatically identifies the public source IP address.
 
@@ -50,7 +50,7 @@ Users on the Enterprise plan have the option of manually entering one or more IP
 
 ![Editable IP address](../../../static/documentation/policies/editable-ip-address.png)
 
-<bongo:aside type='note' header='Your IPv4 address is taken'>
+{{<Aside type="note" header="Your IPv4 address is taken">}}
 When trying to configure a location over IPv4, you may run into this error:
 
 ![Source IP taken](../../../static/documentation/connections/source-ip-taken.png)
@@ -58,7 +58,7 @@ When trying to configure a location over IPv4, you may run into this error:
 This may mean someone else in the same network signed up for Cloudflare Gateway before you did. If your network supports IPv6, you can still use Cloudflare Gateway's DNS filtering by sending DNS queries over IPv6. You can also use the DNS over HTTPS hostname to send queries using a DNS over HTTPS client.
 
 If you think someone else is wrongfully using this IPv4 address, please [let us know](https://forms.gle/o9dLMjmCg6QtaDJ88).
-</bongo:aside>
+{{</Aside>}}
 
 ### IPv6 address
 

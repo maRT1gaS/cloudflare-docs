@@ -15,9 +15,9 @@ Only one redirect can be defined per line and must follow this format:
 [source] [destination] [code?]
 ```
 
-<bongo:aside heading="Status Code">
+{{<Aside heading="Status Code">}}
 The `[code]` parameter is optional, and when not defined, will default to a `302` status code.
-</bongo:aside>
+{{</Aside>}}
 
 A complete example with multiple redirects may look like the following:
 

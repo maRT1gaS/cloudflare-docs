@@ -148,9 +148,9 @@ query {
 }
 ```
 
-<bongo:aside type='note' header='Note'>
+{{<Aside type="note" header="Note">}}
 This is only an example. You must specify the <code>zoneTag</code> for your domain. Your Cloudflare dashboard lists your Zone ID (<code>zoneTag</code>) on the <em>Overview</em> page.
-</bongo:aside>
+{{</Aside>}}
 
 ## Introspection
 

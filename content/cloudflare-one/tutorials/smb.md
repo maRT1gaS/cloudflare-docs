@@ -86,6 +86,6 @@ The Windows Server service supports share actions over a network like file, prin
 
 On the Windows machine, locate the Server process, likely called `Server` and running as `services.msc`. Terminate this service in the Run dialog box and ensure it is disabled on boot. Next, follow the same steps for the `TCP/IP NetBIOS Helper` service.
 
-<bongo:aside>
+{{<Aside>}}
 Ensure that the machine's firewall permits egress on ports `80`, `443`, and `2244`, otherwise cloudflared will return an error.
-</bongo:aside>
+{{</Aside>}}

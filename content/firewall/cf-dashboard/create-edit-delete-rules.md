@@ -20,9 +20,9 @@ For more, see [_Expressions_](/cf-firewall-rules/fields-and-expressions/) and [_
 
 ## Expression Builder and Editor
 
-<bongo:aside type='warning' header='Important'>
+{{<Aside type="warning" header="Important">}}
 Firewall Rules expressions have a 4KB limit (approximately 4,000 text characters).
-</bongo:aside>
+{{</Aside>}}
 
 The Firewall app in the Cloudflare dashboard offers two options for editing expressions.
 
@@ -38,9 +38,9 @@ Both interfaces are available in the **Create Firewall Rule** page. This article
 
 ## Create a firewall rule
 
-<bongo:aside type='note' header='Note'>
+{{<Aside type="note" header="Note">}}
 Create a **Firewall Rule** based on the filters and exclusions you select within firewall analytics by clicking **Create firewall rule** within the **Overview** tab of the **Firewall** app.
-</bongo:aside>
+{{</Aside>}}
 
 To create a new firewall rule:
 

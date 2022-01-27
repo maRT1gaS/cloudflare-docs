@@ -46,10 +46,10 @@ $ wrangler dev
    route = "https://example.com/*"
    ```
 
-   <bongo:aside type="note">
+   {{<Aside type="note">}}
    Refer to the documentation on [Routes](/platform/routes) to configure `route` properly.
 
-   </bongo:aside>
+   {{</Aside>}}
 
    If you enable `workers_dev` and supply configuration for a personal domain, your Worker will deploy to both locations.
 

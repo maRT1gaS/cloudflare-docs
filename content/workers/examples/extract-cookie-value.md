@@ -37,6 +37,6 @@ addEventListener('fetch', event => {
 });
 ```
 
-<bongo:aside type="note" header="External Dependencies">
+{{<Aside type="note" header="External Dependencies">}}
 This example is set up to depend on [`cookie@0.4.1`](https://www.npmjs.com/package/cookie/v/0.4.1) or [`worktop@0.7.1`](https://www.npmjs.com/package/worktop/v/0.7.1). You may pick either package, as they both work the same way.
-</bongo:aside>
+{{</Aside>}}

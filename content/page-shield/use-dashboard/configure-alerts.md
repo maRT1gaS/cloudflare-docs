@@ -11,8 +11,8 @@ import ConfigureAlerts from '../_partials/_alerts-configure.md';
 
 <AlertsIntro />
 
-<bongo:aside type="note">
+{{<Aside type="note">}}
 Only available to customers on Business and Enterprise plans.
-</bongo:aside>
+{{</Aside>}}
 
 <ConfigureAlerts />

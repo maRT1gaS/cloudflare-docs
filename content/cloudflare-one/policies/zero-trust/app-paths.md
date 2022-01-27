@@ -13,9 +13,9 @@ In the Teams dashboard, when adding a [self-hosted web application](/application
 
 ![Application domain](../../static/documentation/applications/path-subdomain.png)
 
-<bongo:aside>
+{{<Aside>}}
 Teams does not support port numbers in the URL. Requests to URLs with port numbers are redirected to the URL and the port numbers stripped.
-</bongo:aside>
+{{</Aside>}}
 
 ## Using wildcards in subdomains and paths
 
@@ -81,11 +81,11 @@ Using a wildcard in the _path_ field to protect multi-level paths **does not cov
 
 </TableWrap>
 
-<bongo:aside type='warning' header='Important'>
+{{<Aside type="warning" header="Important">}}
 You cannot use wildcards to partially match subdomain and path names. Using asterisks in any way other than the ones outlined above **will cause the wildcard to be invalidated**. This means your application won't be effective, and neither will be any rules you may try to enforce on it at a later time.
 
 | Entry               | Does NOT cover                               |
 | ------------------- | -------------------------------------------- |
 | `example.com/cat-*` | `example.com/cat`, `example.com/cat-food`    |
 | `*ing.example.com`  | `ing.example.com`, `engineering.example.com` |
-</bongo:aside>
+{{</Aside>}}

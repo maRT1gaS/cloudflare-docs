@@ -205,9 +205,9 @@ cloudflared tunnel run
 
 ![Tunnel Run](../static/zero-trust-security/gitlab/tunnel-run.png)
 
-<bongo:aside>
+{{<Aside>}}
 This command should be run as a `systemd` service for long-term use; if it terminates, GitLab will be unavailable.
-</bongo:aside>
+{{</Aside>}}
 
 ### Configure DNS records
 
@@ -243,9 +243,9 @@ GitLab will create a new project and repository.
 
 ![New Project](../static/zero-trust-security/gitlab/new-project.png)
 
-<bongo:aside>
+{{<Aside>}}
 To pull or push code, you must also add an SSH key to your profile in GitLab.
-</bongo:aside>
+{{</Aside>}}
 
 ### Configuring SSH
 

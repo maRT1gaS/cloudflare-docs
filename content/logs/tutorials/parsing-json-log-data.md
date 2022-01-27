@@ -11,9 +11,9 @@ After downloading your Cloudflare Logs data, you can use different tools to pars
 
 In this tutorial, you will learn how to parse your JSON log data using _jq_. To get started with _jq_, visit the [_jq_ official site](https://stedolan.github.io/jq/).
 
-<bongo:aside type="note" header="Note">
+{{<Aside type="note" header="Note">}}
 _jq_ is a powerful command line for parsing JSON data and performing certain types of analysis. To perform more detailed analysis, consider a full-fledged data analysis system, such as _Kibana_.
-</bongo:aside>
+{{</Aside>}}
 
 ## Aggregating fields
 

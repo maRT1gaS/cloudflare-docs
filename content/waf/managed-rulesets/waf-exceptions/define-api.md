@@ -11,9 +11,9 @@ To configure the WAF exception, define the `action_parameters` object according 
 
 Refer to [Add rules to phase entry point rulesets](https://developers.cloudflare.com/ruleset-engine/basic-operations/add-rule-phase-rulesets) for more information on adding rules using the [Rulesets API](https://developers.cloudflare.com/ruleset-engine/rulesets-api).
 
-<bongo:aside type="note" header="Rule execution order">
+{{<Aside type="note" header="Rule execution order">}}
 Rules with `skip` action only apply to rules with `execute` action listed **after** them. If you add a rule with `skip` action at the end of the rules list of a phase entry point ruleset, nothing will be skipped.
-</bongo:aside>
+{{</Aside>}}
 
 ## Skip all remaining rules
 

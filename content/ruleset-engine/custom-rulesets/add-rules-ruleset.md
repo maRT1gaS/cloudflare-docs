@@ -9,14 +9,14 @@ weight: 762
 
 To add rules to an existing custom ruleset, use the [Update ruleset](/rulesets-api/update) API method and pass the rules in an array. Each rule contains an expression and action.
 
-<bongo:aside type='note' header='Choosing the appropriate API method'>
+{{<Aside type="note" header="Choosing the appropriate API method">}}
 When you add rules to a ruleset using the [Update ruleset](/rulesets-api/update) method, you replace all the rules in the ruleset with the rules in the request. Use this API method when adding or updating several rules at once. This method updates the ruleset version number only once.
 
 You can use other API methods depending on the type of operation:
 
 - Add a single rule to an existing custom ruleset — use the [Add rule to ruleset](/rulesets-api/add-rule) method.
 - Update a single rule in a custom ruleset — use the [Update rule](/rulesets-api/update-rule) method.
-</bongo:aside>
+{{</Aside>}}
 
 The following request adds two rules to a custom ruleset. These will be the only two rules in the ruleset.
 

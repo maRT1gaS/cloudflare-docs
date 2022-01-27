@@ -10,9 +10,9 @@ pcx-content-type: landing-page
 
 Magic Transit delivers network functions at Cloudflare scale — DDoS protection, traffic acceleration, and much more from every Cloudflare data center — for on-premise, cloud-hosted, and hybrid networks.
 
-<bongo:aside type="note" header="Note">
+{{<Aside type="note" header="Note">}}
 Magic Transit is not yet supported on Cloudflare's China Network.
-</bongo:aside>
+{{</Aside>}}
 
 <bongo:buttongroup>
   <bongo:button type="primary" href="/get-started">

@@ -109,17 +109,17 @@ When responding to a HTTP request, the fetch handler may use any of the followin
 
 ### `respondWith`
 
-<bongo:aside type="warning" header="Service Worker Only">
+{{<Aside type="warning" header="Service Worker Only">}}
 The `respondWith` method is only applicable to the Service Worker format.
 
 With the Module Worker format, return a `Response` from the handler directly.
-</bongo:aside>
+{{</Aside>}}
 
 Intercepts the request and allows the Worker to send a custom response.
 
 If a `fetch` event handler does not call `respondWith`, the runtime delivers the event to the next registered `fetch` event handler. In other words, while not recommended, this means it is possible to add multiple `"fetch"` event handlers within a Worker.
 
-If no `fetch` event handler calls `respondWith`, then the runtime forwards the request to the origin as if the Worker did not. However, if there is no origin – or the Worker itself is your origin server, which is always true for `*.workers.dev` domains – then you must call `respondWith` for a valid response.
+If no `fetch` event handler calls `respondWith`, then the runtime forwards the request to the origin as if the Worker did not. However, if there is no origin – or the Worker itself is your origin server, which is always true for `*.workers.dev` domains – then you must call `respondWith` for a valid response.
 
 ```js
 // Format: Service Worker

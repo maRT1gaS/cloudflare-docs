@@ -13,9 +13,9 @@ The following code will build a page with all the requirements to fetch from Gra
 
 ## Code
 
-<bongo:aside type='note' header='Note'>
+{{<Aside type="note" header="Note">}}
 Cloudflare's [GraphQL endpoint](https://api.cloudflare.com/client/v4/graphql) does not set any CORS headers. Add an endpoint that can proxy the requests back to the API to avoid encountering CORS errors. In the following example, this hostname is referred to as **api.yourdomain.com**.
-</bongo:aside>
+{{</Aside>}}
 
 ```html
 <!DOCTYPE html>

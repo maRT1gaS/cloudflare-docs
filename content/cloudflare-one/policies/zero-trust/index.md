@@ -31,9 +31,9 @@ These are the action types you can choose from:
 - **Service Auth**.
    Service Auth rules enforce authentication flows that do not require an identity provider IdP) login, such as service tokens and mutual TLS.
 
-<bongo:aside type='note'>
+{{<Aside type="note">}}
 When applying a Bypass action, security settings revert to the defaults configured for the zone and any configured page rules. If Always use HTTPS is enabled for the site, then traffic to the bypassed destination continues in HTTPS. If it is not or you applied page rules to disable it, traffic is HTTP.
-</bongo:aside>
+{{</Aside>}}
 
 ## Rules
 

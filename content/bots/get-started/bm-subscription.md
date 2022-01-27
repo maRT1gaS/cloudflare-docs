@@ -58,11 +58,11 @@ At the end of your analysis, you should:
 - Have a range of scores you can confidently block or challenge
 - Understand nuances in your traffic that may require special attention
 
-<bongo:aside type='note' header='Important'>
+{{<Aside type="note" header="Important">}}
 If you were a Cloudflare customer before adding Bot Management, you can view past analytics. This means that you will be able to sort through traffic insights immediately.
 
 New customers should give Bot Analytics a few days to gather data. You should only begin blocking or challenging traffic after checking for possible exemptions or special endpoints.
-</bongo:aside>
+{{</Aside>}}
 
 ### Step 3 — Create a Firewall Rule for automated traffic
 

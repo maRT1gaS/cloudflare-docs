@@ -49,10 +49,10 @@ writeArrayToStream([1, 2, 3, 4, 5], writableStream)
 
   - Aborts the stream. This method returns a promise that fulfills with a response `undefined`. `reason` is an optional human-readable string indicating the reason for cancellation. `reason` will be passed to the underlying sink’s abort algorithm. If this writable stream is one side of a [TransformStream](/runtime-apis/streams/transformstream), then its abort algorithm causes the transform’s readable side to become errored with `reason`.
 
-    <bongo:aside type="warning" header="Warning">
+    {{<Aside type="warning" header="Warning">}}
   Any data not yet written is lost upon abort.
 
-    </bongo:aside>
+    {{</Aside>}}
 
 - `close()` <Type>Promise&lt;void></Type>
 
