@@ -1,11 +1,25 @@
 {{ define "main" }}
-  <div id="docs-content" data-reach-skip-nav-content=""></div>
+  <div class="DocsPage">
+    {{- partial "topbar.mobile" . -}}
+    {{- partial "sidebar.nav" . -}}
 
-  <div class="DocsContent" page-type="overview">
-    <article class="DocsMarkdown">
-      <div class="DocsMarkdown--content-column">
-        {{ .Content }}
+    <div class="DocsToolbar">
+      {{- partial "topbar.search" . -}}
+      {{- partial "topbar.tools" . -}}
+    </div>
+
+    <main class="DocsBody">
+      <div id="docs-content" data-reach-skip-nav-content></div>
+
+      <div class="DocsContent" page-type="overview">
+        <article class="DocsMarkdown">
+          <div class="DocsMarkdown--content-column">
+            {{- .Content -}}
+          </div>
+        </article>
       </div>
-    </article>
+    </main>
+
+    {{ partial "footer" . }}
   </div>
 {{ end }}

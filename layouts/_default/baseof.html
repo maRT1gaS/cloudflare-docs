@@ -1,67 +1,22 @@
-{{- $DATA := (index $.Site.Data .Section) -}}
-{{- .Scratch.Set "product" $DATA -}}
-
-{{- $META := merge $DATA.meta (default dict .Params.meta) -}}
-
-{{- $pt := default .Title .Params.meta.title -}}
-{{- $title := printf "%s · %s" $pt $DATA.meta.title -}}
 <!doctype html>
-<html lang="{{ .Site.LanguageCode }}" theme="light" is-docs-page="">
-<head>
-  <meta charset="utf-8">
-  <title>{{ $title }}</title>
-  <meta http-equiv="cleartype" content="on"/>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+<html lang="{{ .Site.LanguageCode }}" theme="light" is-docs-page>
+  <head>
+    {{- partial "head.meta" . -}}
 
-  <meta name="application-name" content="{{ $title }}"/>
-  <meta name="msapplication-tap-highlight" content="no"/>
-  <meta name="apple-mobile-web-app-title" content="{{ $title }}"/>
-  <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
-  <meta name="apple-mobile-web-app-capable" content="yes"/>
-  <meta name="mobile-web-app-capable" content="yes"/>
-  <meta name="theme-color" content="#f38020"/>
+    <link rel="stylesheet" href="/style.css"/>
+    {{- block "styles" . -}}{{- end -}}
 
-  <meta name="description" content="{{ $META.description }}" />
+    {{- partial "script" (dict "src" "theme.ts" "inline" true "format" "iife") -}}
+    {{- partial "script" (dict "src" "main.ts" "defer" true) -}}
+    {{- block "scripts" . -}}{{- end -}}
 
-  <meta property="og:image" content="{{ $META.image }}"/>
-  <meta property="og:title" content="{{ $title }}"/>
-  <meta property="og:description" content="{{ $META.description }}"/>
-  <meta property="og:type" content="website"/>
-
-  <meta name="twitter:title" content="{{ $title }}"/>
-  <meta name="twitter:image" content="{{ $META.image }}"/>
-  <meta name="twitter:description" content="{{ $META.description }}"/>
-  <meta name="twitter:creator" content="{{ $META.author }}"/>
-  <meta name="twitter:card" content="summary_large_image"/>
-
-  <link rel="stylesheet" href="/style.css"/>
-	{{- block "styles" . -}}{{- end -}}
-
-  {{- partial "script" (dict "src" "theme.ts" "inline" true "format" "iife") -}}
-  {{- partial "script" (dict "src" "main.ts" "defer" true) -}}
-  {{- block "scripts" . -}}{{- end -}}
-
-	<!-- <script>var $$r=document.documentElement;$$r.className='';!function(){var a=localStorage.getItem("dark");(a=a&&+a)||a||window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches,$$r.classList.toggle("dark",a=!!a),localStorage.setItem("dark",+a+"")}()</script> -->
-  <script data-source="docs" async defer src="https://feedback.developers.cloudflare.com/sdk.js"></script>
-  <link rel="preload" href="https://feedback.developers.cloudflare.com/sdk.css" as="style" onload="this.onload=null;this.rel='stylesheet'"/>
-  <noscript><link rel="stylesheet" href="https://feedback.developers.cloudflare.com/sdk.css"/></noscript>
-</head>
-<body>
-	<div class="DocsPage">
-    {{- partial "topbar.mobile" . -}}
-    {{- partial "sidebar.nav" . -}}
-
-    <div class="DocsToolbar">
-      {{- partial "topbar.search" . -}}
-      {{- partial "topbar.tools" . -}}
-    </div>
-
-    <main class="DocsBody">
-      {{- block "main" . -}}{{- end -}}
-    </main>
-
-    {{ partial "footer" . }}
-  </div>
-</body>
+    <!-- <script>var $$r=document.documentElement;$$r.className='';!function(){var a=localStorage.getItem("dark");(a=a&&+a)||a||window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches,$$r.classList.toggle("dark",a=!!a),localStorage.setItem("dark",+a+"")}()</script> -->
+    <script data-source="docs" async defer src="https://feedback.developers.cloudflare.com/sdk.js"></script>
+    <link rel="preload" href="https://feedback.developers.cloudflare.com/sdk.css" as="style" onload="this.onload=null;this.rel='stylesheet'"/>
+    <noscript><link rel="stylesheet" href="https://feedback.developers.cloudflare.com/sdk.css"/></noscript>
+  </head>
+  <body>
+    {{- block "main" . -}}
+    {{- end -}}
+  </body>
 </html>

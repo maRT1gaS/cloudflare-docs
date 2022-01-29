@@ -16,10 +16,14 @@
 {{- $class := delimit $class " " -}}
 
 {{- if $url -}}
-  <a href="{{ $url }}" class="{{ $class }}">
-    <span class="DocsMarkdown--link-content">{{ .Inner }}</span>
-  </a>
+  {{- if strings.HasPrefix $url "http" -}}
+    {{- partial "external.link" (dict "url" $url "text" .Inner "class" $class) -}}
   {{- else -}}
+    <a href="{{ $url }}" class="{{ $class }}">
+      <span class="DocsMarkdown--link-content">{{ .Inner }}</span>
+    </a>
+  {{- end -}}
+{{- else -}}
   <button class="{{ $class }}">
     <span class="DocsMarkdown--link-content">{{ .Inner }}</span>
   </button>
