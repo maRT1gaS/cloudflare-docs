@@ -23,12 +23,13 @@ To handle CORS headers for the policy protecting the path that requires CORS, na
 ## Access and CORS
 
 {{<Aside type="Warning" header="Important">}}
+
 - Safari, in particular Safari 13.1, handles cookies in a unique format. In some cases, this can cause CORS to fail. This will be dependent on Apple releasing a patch for handling cookies. This is known to impact macOS 10.15.4 when running Safari 13.1 (15609.1.20.111.8).
 
 - Do not troubleshoot CORS in Incognito mode, as this will cause disruptions with Access due to `CF-Authorization` being blocked as a third-party cookie on cross origin requests"
-{{</Aside>}}
+  {{</Aside>}}
 
-If you have two sites protected by Cloudflare Access, `app1.site.com` and `app2.hostname.com`, requests made between the two will be subject to CORS checks. Users who login to `app1.site.com` will be issued cookies for `app1.site.com` and your Cloudflare Access [team domain](/glossary#team-domain).
+If you have two sites protected by Cloudflare Access, `app1.site.com` and `app2.hostname.com`, requests made between the two will be subject to CORS checks. Users who login to `app1.site.com` will be issued cookies for `app1.site.com` and your Cloudflare Access [team domain](/cloudflare-one/glossary/#team-domain).
 
 When the user's browser requests `app2.hostname.com`, the cookie will not be present for that domain so the request will be sent to the login page. However, the user will have a cookie for their Cloudflare Access session, which will redirect them successfully to `app2.hostname.com` if they are permitted to reach it.
 
@@ -42,10 +43,13 @@ This can be addressed with the following settings:
 ## List of CORS settings
 
 - **Access-Control-Allow-Credentials** allows CORS headers or methods to use the user’s credentials to reach the protected application or path.
+
 - **Access-Control-Max-Age (seconds)** allows you to set a maximum time for caching the results of a CORS request.
+
 - **Access-Control-Allow-Origins** lets you list the fully qualified domain name (FQDN) that makes the CORS request. You can add multiple FQDNs or select **Allow all origins** to permit any FQDN.
 
 - **Access-Control-Allow-Methods** allows you to permit all method types (for example, POST or GET requests).
+
 - **Access-Control-Allow Headers** allow you to permit all HTTP headers or HTTP headers you define that meet the criteria defined in the **Access-Control-Allow-Origins** or **Access-Control-Allow-Methods** sections.
 
 ### CORS requests that do not require OPTIONS (Simple Requests)
@@ -58,9 +62,9 @@ Requests that do not include the cookie will be redirected to the Cloudflare Acc
 
 You can use the command-line tool `curl` to review your configuration. To do so, you will need three prerequisites:
 
-1. An OPTIONS request
-2. An origin header
-3. The Access-Control-Request-Method
+1.  An OPTIONS request
+2.  An origin header
+3.  The Access-Control-Request-Method
 
 The example `curl` command below includes all three.
 
@@ -90,9 +94,9 @@ cf-request-id: 0244b54354000082d7b991f200000001
 
 In general, we recommend the following steps when troubleshooting CORS issues:
 
-1. Capture a HAR file with the issue described, as well as the JS console log output recorded simultaneously. This is because the HAR file alone will not give full visibility on the reason behind cross-origin issues.
-2. Ensure that the application has set `credentials: 'same-origin'` in all fetch or XHR requests.
-3. If you are using the [cross-origin setting](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/crossorigin) on script tags, these must be set to "use-credentials".
+1.  Capture a HAR file with the issue described, as well as the JS console log output recorded simultaneously. This is because the HAR file alone will not give full visibility on the reason behind cross-origin issues.
+2.  Ensure that the application has set `credentials: 'same-origin'` in all fetch or XHR requests.
+3.  If you are using the [cross-origin setting](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/crossorigin) on script tags, these must be set to "use-credentials".
 
-{{<Aside type="Warning" header="CORS is failing on the same domain">}}  CORS checks do not occur on the same domain. If this error occurs, it is likely the user flow is
-  making a sub-request without the cookie.{{</Aside>}}
+{{<Aside type="Warning" header="CORS is failing on the same domain">}} CORS checks do not occur on the same domain. If this error occurs, it is likely the user flow is
+making a sub-request without the cookie.{{</Aside>}}

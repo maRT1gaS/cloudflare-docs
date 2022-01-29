@@ -10,14 +10,14 @@ You can use a GraphQL client to build and execute queries to the GraphQL API end
 
 ## Prerequisites
 
-This article assumes that you are already familiar with [_Querying basics_](/graphql-api/getting-started/querying-basics).
+This article assumes that you are already familiar with [_Querying basics_](/analytics/graphql-api/getting-started/querying-basics/).
 
-Before you begin, [configure the API endpoint and HTTP headers](/graphql-api/getting-started/authentication/graphql-client-headers) in the GraphiQL client.
+Before you begin, [configure the API endpoint and HTTP headers](/analytics/graphql-api/getting-started/authentication/graphql-client-headers/) in the GraphiQL client.
 
 {{<Aside type="tip" header="Tip">}}
 To explore the documentation for the data sets and fields in the Cloudflare GraphQL schema, click **Docs** to open the _Documentation Explorer_ pane.
 
-For an introduction, see [Explore the GraphQL schema](/graphql-api/getting-started/explore-graphql-schema).
+For an introduction, see [Explore the GraphQL schema](/analytics/graphql-api/getting-started/explore-graphql-schema/).
 {{</Aside>}}
 
 ## Set up a query and choose a data set

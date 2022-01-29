@@ -5,12 +5,12 @@ title: Provider customization
 
 # Provider customization
 
-Terraform communicates with cloud and edge provider APIs such as Cloudflare through modules known as "providers." These providers are [installed automatically](/tutorial/initialize-terraform/#2-initialize-terraform-and-the-cloudflare-provider) when you run `terraform init` in a directory that has a `.tf` file containing a provider. Typically, the only required parameters to the provider are those required to authenticate. In many cases, however, you may want to customize the provider to your needs. Below we examine some of the [optional settings](https://www.terraform.io/docs/providers/cloudflare/#argument-reference) that can be passed to the Cloudflare Provider.
+Terraform communicates with cloud and edge provider APIs such as Cloudflare through modules known as "providers." These providers are [installed automatically](/terraform/tutorial/initialize-terraform/#2-initialize-terraform-and-the-cloudflare-provider) when you run `terraform init` in a directory that has a `.tf` file containing a provider. Typically, the only required parameters to the provider are those required to authenticate. In many cases, however, you may want to customize the provider to your needs. Below we examine some of the [optional settings](https://www.terraform.io/docs/providers/cloudflare/#argument-reference) that can be passed to the Cloudflare Provider.
 
 ## Adjust the default Cloudflare provider settings
 
 {{<Aside>}}
-The examples below build on the [Cloudflare Terraform tutorial](/tutorial).
+The examples below build on the [Cloudflare Terraform tutorial](/terraform/tutorial/).
 {{</Aside>}}
 
 The Cloudflare Terraform provider can be customized through the use of configuration parameters, specified either in your `.tf` configuration files or via environment variables, such as `$CLOUDFLARE_RPS`. Using environment variables may make sense when running Terraform from a CI/CD system or when the change is temporary and does not need to be persisted in your configuration history.

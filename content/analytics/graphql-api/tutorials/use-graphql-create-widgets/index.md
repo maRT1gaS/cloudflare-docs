@@ -19,8 +19,8 @@ This article presents examples of queries you can use to populate your own dashb
 
 Use this workflow to build and test queries:
 
-- Install and configure the [GraphiQL](https://www.electronjs.org/apps/graphiql) app to authenticate to the Cloudflare Analytics GraphQL API. Cloudflare recommends token authentication. (See _[Configure an Analytics API token](/graphql-api/getting-started/authentication/api-token-auth/)_.)
-- Construct the queries in the GraphiQL. You can use the introspective documentation in the GraphQL client to explore the nodes available. For further information about queries, refer to _[Querying basics](/graphql-api/getting-started/querying-basics/)_.
+- Install and configure the [GraphiQL](https://www.electronjs.org/apps/graphiql) app to authenticate to the Cloudflare Analytics GraphQL API. Cloudflare recommends token authentication. (See _[Configure an Analytics API token](/analytics/graphql-api/getting-started/authentication/api-token-auth/)_.)
+- Construct the queries in the GraphiQL. You can use the introspective documentation in the GraphQL client to explore the nodes available. For further information about queries, refer to _[Querying basics](/analytics/graphql-api/getting-started/querying-basics/)_.
 - Test your queries by running them from GraphiQL or by passing them as the payload in a cURL request to the GraphQL API endpoint.
 - Use the queries in your application to provide data for your dashboard widgets.
 
@@ -28,7 +28,7 @@ Use this workflow to build and test queries:
 
 These examples use the account ID for the Cloudflare account that you are querying. You can define this as a variable (`accountTag`) and reference it in your queries.
 
-The queries also use a filter to specify the time interval that you want to query. The filter uses a start time and end time to define the time interval. You use different attributes to specify the start and end times, depending on the time period that you want to query. Refer to _[Filtering](/graphql-api/features/filtering)_ for further information about filters.
+The queries also use a filter to specify the time interval that you want to query. The filter uses a start time and end time to define the time interval. You use different attributes to specify the start and end times, depending on the time period that you want to query. Refer to _[Filtering](/analytics/graphql-api/features/filtering/)_ for further information about filters.
 
 The following example queries for data with dates greater than or equal to `date_geq` and less than or equal to `date_leq`:
 
@@ -46,7 +46,7 @@ header: Account and query time interval settings
 
 This table lists Network Analytics data sets (nodes) and the `datetimeDimension` that you should use when querying data for a given time selection.
 
-When you want an aggregated view of data, use the `Groups` query nodes. For example, the `ipFlows1mAttacksGroups` data set represents minute-wise rollup reports of attack activity. For more detail, see [_Data sets_](/graphql-api/features/data-sets).
+When you want an aggregated view of data, use the `Groups` query nodes. For example, the `ipFlows1mAttacksGroups` data set represents minute-wise rollup reports of attack activity. For more detail, see [_Data sets_](/analytics/graphql-api/features/data-sets/).
 
 <TableWrap>
 

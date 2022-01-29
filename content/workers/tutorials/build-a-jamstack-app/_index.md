@@ -6,7 +6,7 @@ pcx-content-type: tutorial
 title: Build a Todo list JAMstack application
 ---
 
-import TutorialsBeforeYouStart from '../../_partials/_tutorials-before-you-start.md';
+import TutorialsBeforeYouStart from '../../\_partials/\_tutorials-before-you-start.md';
 
 # Build a Todo list JAMstack application
 
@@ -14,14 +14,14 @@ import TutorialsBeforeYouStart from '../../_partials/_tutorials-before-you-start
 
 ## Overview
 
-In this tutorial, you will build a todo list application using HTML, CSS, and JavaScript. The application data will be stored in [Workers KV](/runtime-apis/kv).
+In this tutorial, you will build a todo list application using HTML, CSS, and JavaScript. The application data will be stored in [Workers KV](/workers/runtime-apis/kv/).
 
 ![Preview](./media/finished.png)
 
 Before starting this project, you should have some experience with HTML, CSS, and JavaScript. If you are new to writing web applications, Workers is a great platform to get started. You will learn:
 
-1. How building with Workers makes it easy to focus on writing code and ship finished products.
-2. How the addition of Workers KV makes this tutorial a great introduction to building full, data-driven applications.
+1.  How building with Workers makes it easy to focus on writing code and ship finished products.
+2.  How the addition of Workers KV makes this tutorial a great introduction to building full, data-driven applications.
 
 If you would like to see the finished code for this project, find the [project on GitHub](https://github.com/signalnerve/cloudflare-workers-todos) and refer to the [live demo](https://todos.signalnerve.workers.dev/) to review what you will be building.
 
@@ -39,7 +39,7 @@ $ wrangler generate todos
 $ cd todos
 ```
 
-Wrangler templates are just Git repositories, so if you want to create your own templates, or use one from the [Template Gallery](/examples), there are various options to help you get started.
+Wrangler templates are just Git repositories, so if you want to create your own templates, or use one from the [Template Gallery](/workers/examples/), there are various options to help you get started.
 
 Wrangler’s default template includes support for building and deploying JavaScript-based projects, including Webpack support. Inside of your new `todos` directory, `index.js` represents the entry point to your Cloudflare Workers application.
 
@@ -70,9 +70,9 @@ The code provided by the default Wrangler template generates a simple text respo
 
 The work needed to create this application is split into three tasks:
 
-1. Write data to KV
-2. Rendering data from KV
-3. Adding todos from the application UI
+1.  Write data to KV
+2.  Rendering data from KV
+3.  Adding todos from the application UI
 
 For the remainder of this tutorial you will complete each task, iterating on your application, and then publish it to your own domain.
 

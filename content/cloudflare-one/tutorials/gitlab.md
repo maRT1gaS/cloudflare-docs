@@ -101,7 +101,7 @@ To determine who can reach the application, Cloudflare Access relies on integrat
 
 For GitLab, start by building two policies. Users will connect to GitLab in a couple of methods: in the web app and over SSH. Create policies to secure a subdomain for each. First, the web app.
 
-Before you build the rule, you'll need to follow [these instructions](/setup) to set up Cloudflare Access in your account.
+Before you build the rule, you'll need to follow [these instructions](/cloudflare-one/setup/) to set up Cloudflare Access in your account.
 
 Once enabled, navigate to the `Applications` page in the Cloudflare for Teams Dashboard. Click `Add an application`.
 
@@ -214,11 +214,9 @@ This command should be run as a `systemd` service for long-term use; if it termi
 
 You can now create DNS records for GitLab in the Cloudflare dashboard. Remember, you will still need two records - one for the web application and one for SSH traffic.
 
-In the DNS tab, choose the website where you built your [Zero Trust policies](/policies/zero-trust). Click `+Add record` and select `CNAME` from type. In the `Name` field, input `gitlab`. In the `Target` field, input the ID of the Tunnel created followed by `cfargotunnel.com`. In this example, that value is:
+In the DNS tab, choose the website where you built your [Zero Trust policies](/cloudflare-one/policies/zero-trust/). Click `+Add record` and select `CNAME` from type. In the `Name` field, input `gitlab`. In the `Target` field, input the ID of the Tunnel created followed by `cfargotunnel.com`. In this example, that value is:
 
-```
-6ff42ae2-765d-4adf-8112-31c55c1551ef.cfargotunnel.com
-```
+    6ff42ae2-765d-4adf-8112-31c55c1551ef.cfargotunnel.com
 
 ![Add DNS](../static/zero-trust-security/gitlab/add-dns.png)
 
@@ -252,9 +250,7 @@ To pull or push code, you must also add an SSH key to your profile in GitLab.
 
 To push and pull code over SSH, you will need to install `cloudflared` on the client machine as well. This example uses a macOS laptop. On macOS, you can install `cloudflared` with the following command.
 
-```
-$ brew install cloudflare/cloudflare/cloudflared
-```
+    $ brew install cloudflare/cloudflare/cloudflared
 
 While you need to install `cloudflared`, you do not need to wrap your SSH commands in any unique way. Instead, you will need to make a one-time change to your SSH configuration file.
 

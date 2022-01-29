@@ -406,11 +406,11 @@ met:
     * Redistributions of source code must retain the above copyright
 
 notice, this list of conditions and the following disclaimer.
-_ Redistributions in binary form must reproduce the above
+\_ Redistributions in binary form must reproduce the above
 copyright notice, this list of conditions and the following disclaimer
 in the documentation and/or other materials provided with the
 distribution.
-_ Neither the name of Google Inc. nor the names of its
+\_ Neither the name of Google Inc. nor the names of its
 contributors may be used to endorse or promote products derived from
 this software without specific prior written permission.
 
@@ -441,7 +441,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 ---
 
-https://godoc.org/github.com/matttproud/golang_protobuf_extensions/pbutil
+https://godoc.org/github.com/matttproud/golang\_protobuf\_extensions/pbutil
 
                                  Apache License
                            Version 2.0, January 2004
@@ -675,7 +675,7 @@ THE SOFTWARE.
 
 https://github.com/pkg/errors
 
-Copyright (c) 2015, Dave Cheney <dave@cheney.net>
+Copyright (c) 2015, Dave Cheney [dave@cheney.net](/cloudflare-one/ave@cheney.net/)
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
@@ -701,8 +701,8 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ---
 
-https://github.com/prometheus/client_golang
-https://github.com/prometheus/client_model
+https://github.com/prometheus/client\_golang
+https://github.com/prometheus/client\_model
 https://github.com/prometheus/common
 https://github.com/prometheus/procfs
 
@@ -894,7 +894,7 @@ APPENDIX: How to apply the Apache License to your work.
       same "printed page" as the copyright notice for easier
       identification within third-party archives.
 
-Copyright [yyyy] [name of copyright owner]
+Copyright \[yyyy] \[name of copyright owner]
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -1146,7 +1146,7 @@ https://zombiezen.com/go/capnproto2
 
 go-capnproto is licensed under the terms of the MIT license reproduced below.
 
-===============================================================================
+\===============================================================================
 
 Copyright (C) 2014 the go-capnproto authors and contributors.
 
@@ -1168,4 +1168,4 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 
-===============================================================================
+\===============================================================================

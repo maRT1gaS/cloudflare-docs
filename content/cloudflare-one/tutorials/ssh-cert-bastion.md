@@ -32,8 +32,8 @@ Replacing long-lived API keys with short-lived certificates offers the following
 
 ## Before you start
 
-1. [Add a website to Cloudflare](https://support.cloudflare.com/hc/en-us/articles/201720164-Creating-a-Cloudflare-account-and-adding-a-website)
-2. [Change your domain nameservers to Cloudflare](https://support.cloudflare.com/hc/en-us/articles/205195708)
+1.  [Add a website to Cloudflare](https://support.cloudflare.com/hc/en-us/articles/201720164-Creating-a-Cloudflare-account-and-adding-a-website)
+2.  [Change your domain nameservers to Cloudflare](https://support.cloudflare.com/hc/en-us/articles/205195708)
 
 ---
 
@@ -49,7 +49,7 @@ Name the application using a subdomain of a domain active in your Cloudflare acc
 
 ![Name App](../static/zero-trust-security/ssh-slc/name-app.png)
 
-Build a policy to determine who will be able to reach these resources. You can use Access Groups to build reuseable policies. In this case, the group specified includes rules that enforce [Okta group membership](/tutorials/okta-u2f) and [country location](/tutorials/country-rules).
+Build a policy to determine who will be able to reach these resources. You can use Access Groups to build reuseable policies. In this case, the group specified includes rules that enforce [Okta group membership](/cloudflare-one/tutorials/okta-u2f/) and [country location](/cloudflare-one/tutorials/country-rules/).
 
 ![Rules](../static/zero-trust-security/ssh-slc/add-rule.png)
 
@@ -57,7 +57,7 @@ Build a policy to determine who will be able to reach these resources. You can u
 
 You can now connect the host to Cloudflare with Cloudflare Tunnel. Cloudflare Tunnel, powered by its `cloudflared` daemon, will create an outbound-only connection from your environment and send SSH connections from users to protected resources once authorized.
 
-First, [install and authenticate](/connections/connect-apps/install-and-setup) an instance of `cloudflared` in a location that can address the resources you are connecting to Cloudflare.
+First, [install and authenticate](/cloudflare-one/connections/connect-apps/install-and-setup/) an instance of `cloudflared` in a location that can address the resources you are connecting to Cloudflare.
 
 Next, create a new Tunnel with the following command. You can replace `ssh-pool` with any name.
 
@@ -102,9 +102,7 @@ You can now configure a DNS record for the Tunnel you have created. Navigate to 
 
 Open the `DNS` page and click **+Add record**. Select `CNAME` for `Type` and in the `Target` field input the UUID value of your Tunnel followed by `.cfargotunnel.com`. In this example, that value is:
 
-```
-79a60ee2-9a98-4f5f-96c7-76c88b2075be.cfargotunnel.com
-```
+    79a60ee2-9a98-4f5f-96c7-76c88b2075be.cfargotunnel.com
 
 ![Add DNS](../static/zero-trust-security/ssh-slc/add-dns.png)
 
@@ -124,10 +122,8 @@ Cloudflare Access will display the public key and an audience tag for the genera
 
 You must now configure your SSH host to rely on the generated certificate. In your `sshd` configuration, set the following values:
 
-```
-PubkeyAuthentication yes
-TrustedUserCAKeys /etc/ssh/ca.pub
-```
+    PubkeyAuthentication yes
+    TrustedUserCAKeys /etc/ssh/ca.pub
 
 Save the public key value as a `ca.pub` file in the path specified in the `TrustedUserCAKeys` setting. Restart the server.
 
@@ -143,16 +139,14 @@ $ cloudflared access ssh-config --hostname ssh-bastion.widgetcorp.tech --short-l
 
 `cloudflared` will generate the required lines to append to the SSH configuration file, similar to the example output below.
 
-```
-Host ssh-bastion.widgetcorp.tech
-  ProxyCommand bash -c '/usr/local/bin/cloudflared access ssh-gen --hostname %h; ssh -tt %r@cfpipe-ssh-bastion.widgetcorp.tech >&2 <&1'
+    Host ssh-bastion.widgetcorp.tech
+      ProxyCommand bash -c '/usr/local/bin/cloudflared access ssh-gen --hostname %h; ssh -tt %r@cfpipe-ssh-bastion.widgetcorp.tech >&2 <&1'
 
-Host cfpipe-ssh-bastion.widgetcorp.tech
-  HostName ssh-bastion.widgetcorp.tech
-  ProxyCommand /usr/local/bin/cloudflared access ssh --hostname %h
-  IdentityFile ~/.cloudflared/ssh-bastion.widgetcorp.tech-cf_key
-  CertificateFile ~/.cloudflared/ssh-bastion.widgetcorp.tech-cf_key-cert.pub
-```
+    Host cfpipe-ssh-bastion.widgetcorp.tech
+      HostName ssh-bastion.widgetcorp.tech
+      ProxyCommand /usr/local/bin/cloudflared access ssh --hostname %h
+      IdentityFile ~/.cloudflared/ssh-bastion.widgetcorp.tech-cf_key
+      CertificateFile ~/.cloudflared/ssh-bastion.widgetcorp.tech-cf_key-cert.pub
 
 When users authenticate through Cloudflare Access, Cloudflare will generate a certificate for the individual using the username from the identity provider (stripped of the email domain). That certificate will then be presented to the SSH server.
 

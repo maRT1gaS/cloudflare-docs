@@ -26,7 +26,7 @@ If the SSL/TLS handshake cannot be completed, check whether the certificate and 
 
 ## Check mTLS hosts
 
-Check whether [mTLS has been enabled](../enable-mtls) for the correct host. The host should match the API endpoint that you want to protect.
+Check whether [mTLS has been enabled](/ssl/enable-mtls/) for the correct host. The host should match the API endpoint that you want to protect.
 
 ---
 
@@ -34,15 +34,17 @@ Check whether [mTLS has been enabled](../enable-mtls) for the correct host. The 
 
 To review mTLS rules:
 
-1. Click **Firewall** > **Firewall Rules**.
-1. On a specific rule, click **Edit**.
-1. On that rule, check whether:
+1.  Click **Firewall** > **Firewall Rules**.
 
-   - The Expression Preview is correct.
-   - The hostname matches your API endpoint. For example, for the API endpoint `api.trackers.ninja/time`, the rule should look like:
+2.  On a specific rule, click **Edit**.
 
-     ```txt
-     (http.host in {"api.trackers.ninja"} and not cf.tls_client_auth.cert_verified)
-     ```
+3.  On that rule, check whether:
 
-1. To edit the rule, either use the user interface or click **Edit expression**.
+    - The Expression Preview is correct.
+    - The hostname matches your API endpoint. For example, for the API endpoint `api.trackers.ninja/time`, the rule should look like:
+
+      ```txt
+      (http.host in {"api.trackers.ninja"} and not cf.tls_client_auth.cert_verified)
+      ```
+
+4.  To edit the rule, either use the user interface or click **Edit expression**.

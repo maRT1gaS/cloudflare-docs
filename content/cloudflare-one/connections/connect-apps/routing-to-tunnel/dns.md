@@ -6,10 +6,10 @@ title: DNS record
 
 # DNS record
 
-| Before you start                                                   |
-| ------------------------------------------------------------------ |
-| 1. [Create a Tunnel](/connections/connect-apps/create-tunnel)      |
-| 2. [Configure the Tunnel](/connections/connect-apps/configuration) |
+| Before you start                                                                   |
+| ---------------------------------------------------------------------------------- |
+| 1. [Create a Tunnel](/cloudflare-one/connections/connect-apps/create-tunnel/)      |
+| 2. [Configure the Tunnel](/cloudflare-one/connections/connect-apps/configuration/) |
 
 ## Route traffic from the Cloudflare dashboard
 
@@ -21,10 +21,10 @@ Unlike publicly routable IP addresses, the subdomain will only proxy traffic for
 
 To create a DNS record for your tunnel:
 
-1. Log into the Cloudflare dashboard.
-1. Navigate to the **Cloudflare DNS** tab.
-1. Create a new CNAME record and input the subdomain of your tunnel into the Target field.
-1. Click **Save**.
+1.  Log into the Cloudflare dashboard.
+2.  Navigate to the **Cloudflare DNS** tab.
+3.  Create a new CNAME record and input the subdomain of your tunnel into the Target field.
+4.  Click **Save**.
 
 ![DNS tab](../../../static/documentation/connections/connect-apps/dns/dns-record.png)
 
@@ -36,9 +36,9 @@ Additionally, you can create multiple DNS records that point to the same tunnel 
 
 To delete a DNS record assigned to a tunnel:
 
-1. Log into the Cloudflare dashboard.
-1. Navigate to DNS and locate the DNS record under the DNS management card.
-1. Click **Edit** > **Delete**.
+1.  Log into the Cloudflare dashboard.
+2.  Navigate to DNS and locate the DNS record under the DNS management card.
+3.  Click **Edit** > **Delete**.
 
 ## Route traffic from the command line
 
@@ -56,4 +56,4 @@ Note: this command requires the `cert.pem` file.
 
 ## Optional: Configure additional Cloudflare settings
 
-The application will default to the Cloudflare settings of the hostname in your account that includes the Cloudflare Tunnel DNS record, including [cache rules](https://support.cloudflare.com/hc/en-us/articles/202775670-Customizing-Cloudflare-s-cache) and [firewall policies](https://developers.cloudflare.com/firewall/). You can changes these settings for your hostname in Cloudflare's dashboard.
+The application will default to the Cloudflare settings of the hostname in your account that includes the Cloudflare Tunnel DNS record, including [cache rules](https://support.cloudflare.com/hc/en-us/articles/202775670-Customizing-Cloudflare-s-cache) and [firewall policies](/firewall/). You can changes these settings for your hostname in Cloudflare's dashboard.

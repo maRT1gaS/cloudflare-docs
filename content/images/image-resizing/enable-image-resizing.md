@@ -10,7 +10,7 @@ meta:
 
 To use Image Resizing you first need to enable it via the Speed app on your Cloudflare dashboard:
 
-1. Log in to the [Cloudflare dashboard](https://dash.cloudflare.com/) and select your account. Go to **Speed**.
+1.  Log in to the [Cloudflare dashboard](https://dash.cloudflare.com/) and select your account. Go to **Speed**.
 
   <div class="full-img">
 
@@ -18,9 +18,9 @@ To use Image Resizing you first need to enable it via the Speed app on your Clou
 
   </div>
 
-1. Click the **Optimization** tab.
-1. Under **File Size Optimization**, enable **Image Resizing**.
-1. If you do not want to resize images from any origin, uncheck **Resize images from any origin**.
+1.  Click the **Optimization** tab.
+2.  Under **File Size Optimization**, enable **Image Resizing**.
+3.  If you do not want to resize images from any origin, uncheck **Resize images from any origin**.
 
 {{<Aside type="note" header="Note">}}
 Image Resizing defaults to resizing images from **any domain**. To prevent third parties from resizing any image at any origin, uncheck **Resize images from any origin**. When unchecked, Image Resizing will only resize images that are in the enabled zone.

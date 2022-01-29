@@ -93,7 +93,7 @@ $ jq -r '.CacheCacheStatus' logs.json | sort -n | uniq -c | sort -n
 
 ## Showing TLS versions
 
-To see what TLS versions your visitors are using &mdash; for example, to decide if you can disable TLS versions that are older than 1.2 &mdash; use the following query:
+To see what TLS versions your visitors are using — for example, to decide if you can disable TLS versions that are older than 1.2 — use the following query:
 
 ```bash
 $ jq -r '.ClientSSLProtocol' logs.json | sort -n | uniq -c | sort -n

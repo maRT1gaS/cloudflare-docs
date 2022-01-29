@@ -31,11 +31,11 @@ When using [subdomain support](https://support.cloudflare.com/hc/articles/360026
 
 If Cloudflare manages your domain's DNS:
 
-1. Create an account-level nameserver with a [POST command](https://api.cloudflare.com/#account-level-custom-nameservers-add-account-custom-nameserver).
-1. Cloudflare creates the [glue records](https://www.ietf.org/rfc/rfc1912.txt) automatically.
-1. To enable the custom nameservers on existing zones:
-   1. Use a [PUT command](https://api.cloudflare.com/#account-level-custom-nameservers-usage-for-a-zone-set-account-custom-nameserver-related-zone-metadata) on each zone.
-   1. Modify the zone's registrar to use the custom nameserver names.
+1.  Create an account-level nameserver with a [POST command](https://api.cloudflare.com/#account-level-custom-nameservers-add-account-custom-nameserver).
+2.  Cloudflare creates the [glue records](https://www.ietf.org/rfc/rfc1912.txt) automatically.
+3.  To enable the custom nameservers on existing zones:
+    1.  Use a [PUT command](https://api.cloudflare.com/#account-level-custom-nameservers-usage-for-a-zone-set-account-custom-nameserver-related-zone-metadata) on each zone.
+    2.  Modify the zone's registrar to use the custom nameserver names.
 
 To make this custom nameserver the default for all new zones, use a [PUT command](https://api.cloudflare.com/#accounts-update-account) on an account and set the value of `use_account_custom_ns_by_default` to `true`.
 
@@ -43,12 +43,12 @@ To make this custom nameserver the default for all new zones, use a [PUT command
 
 If another provider manages your domain's DNS:
 
-1. Create an account-level nameserver with a [POST command](https://api.cloudflare.com/#account-level-custom-nameservers-add-account-custom-nameserver).
-1. Add the [glue records](https://www.ietf.org/rfc/rfc1912.txt) for each entry at your DNS provider.
-1. Use a [POST command](https://api.cloudflare.com/#account-level-custom-nameservers-verify-account-custom-nameserver-glue-records) to verify that the glue records are active.
-1. To enable the custom nameservers on existing zones:
-   1. Use a [PUT command](https://api.cloudflare.com/#account-level-custom-nameservers-usage-for-a-zone-set-account-custom-nameserver-related-zone-metadata) on each zone.
-   1. Modify the zone's registrar to use the custom nameserver names.
+1.  Create an account-level nameserver with a [POST command](https://api.cloudflare.com/#account-level-custom-nameservers-add-account-custom-nameserver).
+2.  Add the [glue records](https://www.ietf.org/rfc/rfc1912.txt) for each entry at your DNS provider.
+3.  Use a [POST command](https://api.cloudflare.com/#account-level-custom-nameservers-verify-account-custom-nameserver-glue-records) to verify that the glue records are active.
+4.  To enable the custom nameservers on existing zones:
+    1.  Use a [PUT command](https://api.cloudflare.com/#account-level-custom-nameservers-usage-for-a-zone-set-account-custom-nameserver-related-zone-metadata) on each zone.
+    2.  Modify the zone's registrar to use the custom nameserver names.
 
 To make this custom nameserver the default for all new zones, use a [PUT command](https://api.cloudflare.com/#accounts-update-account) on an account and set the value of `use_account_custom_ns_by_default` to `true`.
 
@@ -56,10 +56,10 @@ To make this custom nameserver the default for all new zones, use a [PUT command
 
 To add custom nameservers to a specific zone:
 
-1. Log in to the [Cloudflare dashboard](https://dash.cloudflare.com) and select your account and domain.
-1. Go to **DNS**.
-1. On **Custom Nameservers**, click **Add Custom Nameservers** and enter nameserver hostnames (like ns1, ns2, ns3).
-1. Cloudflare will assign IPv4 and IPv6 to your nameservers.
-1. The next steps depends on whether Cloudflare manages the DNS for your domain:
-   - If Cloudflare does manage the DNS for your domain, no further action is required.
-   - If Cloudflare does not manage the DNS for your domain, add the **Custom Nameservers** and IP addresses to your domain registrar’s DNS as [glue (A or AAAA) records](https://www.ietf.org/rfc/rfc1912.txt). If you do not add these records, DNS lookups for your domain will fail.
+1.  Log in to the [Cloudflare dashboard](https://dash.cloudflare.com) and select your account and domain.
+2.  Go to **DNS**.
+3.  On **Custom Nameservers**, click **Add Custom Nameservers** and enter nameserver hostnames (like ns1, ns2, ns3).
+4.  Cloudflare will assign IPv4 and IPv6 to your nameservers.
+5.  The next steps depends on whether Cloudflare manages the DNS for your domain:
+    - If Cloudflare does manage the DNS for your domain, no further action is required.
+    - If Cloudflare does not manage the DNS for your domain, add the **Custom Nameservers** and IP addresses to your domain registrar’s DNS as [glue (A or AAAA) records](https://www.ietf.org/rfc/rfc1912.txt). If you do not add these records, DNS lookups for your domain will fail.

@@ -6,7 +6,7 @@ title: Weighted load balancing
 
 # Weighted load balancing
 
-Use weighted load balancing to send specific percentages of traffic to available origins within a [pool](../pools). If an origin becomes unhealthy, traffic will be rebalanced to available origins according to their respective weights.
+Use weighted load balancing to send specific percentages of traffic to available origins within a [pool](/load-balancing/pools/). If an origin becomes unhealthy, traffic will be rebalanced to available origins according to their respective weights.
 
 ---
 
@@ -30,9 +30,9 @@ If an origin is used in multiple pools and has multiple weights assigned, the to
 
 ## Limitations
 
-When enabled, [session affinity](../session-affinity) can affect traffic distribution since established sessions are not reset when origin weights are modified.
+When enabled, [session affinity](/load-balancing/session-affinity/) can affect traffic distribution since established sessions are not reset when origin weights are modified.
 
-When using [DNS-only load balancing](../proxy-status#gray-clouded-dns-only-load-balancing), DNS resolves may cache resolved IPs for clients and affect traffic distribution.
+When using [DNS-only load balancing](/load-balancing/proxy-status/#gray-clouded-dns-only-load-balancing), DNS resolves may cache resolved IPs for clients and affect traffic distribution.
 
 ---
 
@@ -52,7 +52,7 @@ A significant amount of traffic is required for the distribution to converge on 
 
 ### Via the dashboard
 
-Configure origin weights when you [create a load balancer](/create-load-balancer-ui) or from the **Load Balancing** dashboard in the **Traffic** app.
+Configure origin weights when you [create a load balancer](/load-balancing/create-load-balancer-ui/) or from the **Load Balancing** dashboard in the **Traffic** app.
 
 ### Via the API
 

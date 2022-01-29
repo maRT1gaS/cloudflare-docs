@@ -21,7 +21,7 @@ The WARP application uses [BoringTun](https://blog.cloudflare.com/boringtun-user
 Read more about WARP in our blog post [Introducing WARP: Fixing Mobile Internet Performance and Security](https://blog.cloudflare.com/1111-warp-better-vpn/).
 
 {{<Aside type="warning" header="Warning">}}
- WARP does not provide anonymity and is not designed to prevent servers you communicate with from identifying you. WARP also does not allow you to pretend to be accessing the Internet from a different country than the one you are currently in.
+WARP does not provide anonymity and is not designed to prevent servers you communicate with from identifying you. WARP also does not allow you to pretend to be accessing the Internet from a different country than the one you are currently in.
 {{</Aside>}}
 
 ## WARP via Local Proxy
@@ -30,8 +30,8 @@ Currently, this mode is available on desktop clients only. When WARP is configur
 
 Because this feature restricts WARP to just applications configured to use the local proxy, leaving all other traffic unencrypted over the Internet by default, we have hidden it in the **Advanced** menu. To turn it on:
 
-1. Navigate to **Preferences** > **Advanced** and select **Configure Proxy**.
-1. On the window that opens, check the box and configure the port you want to listen on.
+1.  Navigate to **Preferences** > **Advanced** and select **Configure Proxy**.
+2.  On the window that opens, check the box and configure the port you want to listen on.
 
 This will enable the **WARP via Local Proxy** option in the **WARP Settings** menu.
 

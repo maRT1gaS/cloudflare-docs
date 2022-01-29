@@ -22,10 +22,10 @@ When users log in to an application protected by Access, Access generates two se
 
 <TableWrap>
 
-| Token                    | Description                                                        | Storage                                              |
-| ------------------------ | ------------------------------------------------------------------ | ---------------------------------------------------- |
-| **Global session token** | Establishes the maximum amount of time for a user’s Access session | Your Cloudflare [team domain](/glossary#team-domain) |
-| **Application token**    | Establishes a session for a specific application                   | The hostname of the application protected            |
+| Token                    | Description                                                        | Storage                                                              |
+| ------------------------ | ------------------------------------------------------------------ | -------------------------------------------------------------------- |
+| **Global session token** | Establishes the maximum amount of time for a user’s Access session | Your Cloudflare [team domain](/cloudflare-one/glossary/#team-domain) |
+| **Application token**    | Establishes a session for a specific application                   | The hostname of the application protected                            |
 
 </TableWrap>
 
@@ -51,11 +51,11 @@ The authentication process involves Cloudflare Access issuing a signed JSON Web 
 
 To immediately terminate all active sessions for a specific application:
 
-1. On the Teams dashboard, navigate to **Access > Applications** and locate the application for which you would like to revoke active sessions.
+1.  On the Teams dashboard, navigate to **Access > Applications** and locate the application for which you would like to revoke active sessions.
 
-1. Click **Edit** for that application.
+2.  Click **Edit** for that application.
 
-1. In the Overview page, click **Revoke existing tokens**.
+3.  In the Overview page, click **Revoke existing tokens**.
 
 ![revoke-users](../../static/documentation/identity/users/revoke-token.png)
 
@@ -67,15 +67,15 @@ Access can immediately revoke a single user session across all applications in y
 
 If you want to permanently revoke a user's access:
 
-1. Disable their account in your IdP so that they cannot authenticate, then revoke their Access user session.
+1.  Disable their account in your IdP so that they cannot authenticate, then revoke their Access user session.
 
-2. On the Teams dashboard, navigate to **My Team** > **Users**.
+2.  On the Teams dashboard, navigate to **My Team** > **Users**.
 
 Users who have authenticated in the current calendar month will be displayed. Search for or select the user you need to revoke.
 
 ![revoke-users](../../static/documentation/identity/users/connected-user-list.png)
 
-3. Click **Revoke session** and confirm.
+3.  Click **Revoke session** and confirm.
 
 ![revoke-users](../../static/documentation/identity/users/revoke-user-session.png)
 
@@ -95,13 +95,13 @@ All three settings can be enabled in an Application’s settings menu.
 
 To reach the settings menu:
 
-1. On the [Teams dashboard](https://dash.teams.cloudflare.com), navigate to **Access > Applications**.
+1.  On the [Teams dashboard](https://dash.teams.cloudflare.com), navigate to **Access > Applications**.
 
-1. Locate the application for which you would like to enable these settings.
+2.  Locate the application for which you would like to enable these settings.
 
-1. Click **Edit**.
+3.  Click **Edit**.
 
-1. Select **Settings**.
+4.  Select **Settings**.
 
 ![Settings menu](../../static/documentation/identity/users/cookies.png)
 
@@ -128,7 +128,7 @@ The Binding Cookie is an additional cookie created when a user successfully auth
 
 The [SameSite](https://web.dev/samesite-cookies-explained/) Attribute selector is a cookie attribute that restricts the cookie to only being sent if the cookie’s defined site matches the site being requested in the browser. This adds protection against CSRF attacks.
 
-The selector options are<sup>[[1](#source)]</sup>:
+The selector options are<sup>\[[1](#source)]</sup>:
 
 - **None** - Cookies will be sent in all contexts, i.e sending cross-origin is allowed.
 - **Lax** - Cookies are allowed to be sent with top-level navigations and will be sent along with GET requests initiated by third party websites.

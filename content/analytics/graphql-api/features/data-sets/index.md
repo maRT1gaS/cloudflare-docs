@@ -8,15 +8,15 @@ title: Data Sets (tables)
 
 Cloudflare Analytics offers a range of data sets, including both general and product-specific data sets. Data sets use a consistent naming scheme that explicitly identifies the type of data they return:
 
-- **Domain.** Each data set is named after the domain it describes and is associated with a set of nodes. Data nodes are typically named after the domain they represent. Product-specific data nodes incorporate the name of the relevant product, as in `loadBalancingRequests`. Network Analytics data nodes incorporate the `ipFlows` label.
+*   **Domain.** Each data set is named after the domain it describes and is associated with a set of nodes. Data nodes are typically named after the domain they represent. Product-specific data nodes incorporate the name of the relevant product, as in `loadBalancingRequests`. Network Analytics data nodes incorporate the `ipFlows` label.
 
-- **Aggregated data.** Nodes that represent aggregated data include the `Groups` suffix. For example, the `loadBalancingRequestsGroups` node represents aggregated data for Load Balancing requests. Aggregated data returns in an array of `...Group` objects. If the data represented by a node is aggregated prior to query time, the aggregation period is also specified. For example, `requests1mGroups` represents data aggregated into a collection of minute-wise roll-up reports.
+*   **Aggregated data.** Nodes that represent aggregated data include the `Groups` suffix. For example, the `loadBalancingRequestsGroups` node represents aggregated data for Load Balancing requests. Aggregated data returns in an array of `...Group` objects. If the data represented by a node is aggregated prior to query time, the aggregation period is also specified. For example, `requests1mGroups` represents data aggregated into a collection of minute-wise roll-up reports.
 
-- **Raw data.** Raw data nodes, such as `loadBalancingRequests`, are not aggregated and so do not incorporate the `Groups` suffix. Raw data returns in arrays containing objects of the relevant data type. For example, a query to `loadBalancingRequests` returns an array of _LoadBalancingRequest_ objects.
+*   **Raw data.** Raw data nodes, such as `loadBalancingRequests`, are not aggregated and so do not incorporate the `Groups` suffix. Raw data returns in arrays containing objects of the relevant data type. For example, a query to `loadBalancingRequests` returns an array of *LoadBalancingRequest* objects.
 
-- **Adaptive Sampling.** Nodes that represent data acquired using adaptive sampling incorporate the `Adaptive` suffix. (For details, see _[Sampling](/graphql-api/sampling/)_).
+*   **Adaptive Sampling.** Nodes that represent data acquired using adaptive sampling incorporate the `Adaptive` suffix. (For details, see *[Sampling](/analytics/graphql-api/sampling/)*).
 
-Detailed descriptions of nodes, their structure, and supported queries are available directly from the GraphQL Analytics API via **introspection** (see _[Getting started: Querying basics](https://developers.cloudflare.com/analytics/graphql-api/getting-started/#querying-basics)_). For more on using introspection to ask a GraphQL schema for information about the queries it supports, see the [GraphQL documentation](https://graphql.org/learn/introspection/).
+Detailed descriptions of nodes, their structure, and supported queries are available directly from the GraphQL Analytics API via **introspection** (see *[Getting started: Querying basics](/analytics/graphql-api/getting-started/#querying-basics)*). For more on using introspection to ask a GraphQL schema for information about the queries it supports, see the [GraphQL documentation](https://graphql.org/learn/introspection/).
 
 ## Available data sets
 
@@ -125,9 +125,9 @@ Unique values are not available as a dimension but can be queried as demonstrate
 
 Every exposed table has a GraphQL type definition. Type definitions observe the following rules:
 
-- Regular fields represent themselves.
-- Every field, including nested fields, has a type and represents a list of that type.
-- The `enum` type represents an enumerated field.
+*   Regular fields represent themselves.
+*   Every field, including nested fields, has a type and represents a list of that type.
+*   The `enum` type represents an enumerated field.
 
 Here is an example type definition for `ContentTypeMapElem`:
 

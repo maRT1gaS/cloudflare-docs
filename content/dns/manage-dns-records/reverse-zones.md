@@ -12,7 +12,7 @@ Enterprise customers who control their own IP prefix(es) can set up reverse zone
 
 PTR records specify the allowed hosts for a given IP address. They are the opposite of [**A** records](https://www.cloudflare.com/learning/dns/dns-records/dns-a-record) and used for reverse DNS lookups.
 
-Historically, PTR records prevented outbound SMTP servers from being blocked by spam filters. However, more modern DNS records — [DKIM and DMARC](/additional-options/email-security) — provide better verifications of domain ownership.
+Historically, PTR records prevented outbound SMTP servers from being blocked by spam filters. However, more modern DNS records — [DKIM and DMARC](/dns/additional-options/email-security/) — provide better verifications of domain ownership.
 
 Now, PTR records are primarily useful for those who own a dedicated IP space. They can help populate trace routes and security tools with human-readable domain names.
 
@@ -35,7 +35,8 @@ If your account does not meet these qualifications and you do not own the IP pre
 To use PTR records, you need to create a reverse DNS zone and add a PTR record for forward resolution:
 
 1.  Within your enterprise account, click **Add site**.
-1.  For your site name, use the reverse IP address:
+
+2.  For your site name, use the reverse IP address:
 
         - For /24 prefixes, the pattern is:
           - **IP prefix**: `<octet_1>.<octet_2>.<octet_3>.0/24`
@@ -60,10 +61,13 @@ To use PTR records, you need to create a reverse DNS zone and add a PTR record f
 
               {{</Aside>}}
 
-1.  If you are adding less than 200 PTR records, select the **Free** plan. If you are adding more, select the **Pro** plan.
-1.  Skip the rest of the onboarding process.
-1.  Once finished with onboarding, go to **DNS**.
-1.  For each IP within the prefix, add a PTR record using the least significant octet(s) as the subdomain.
+3.  If you are adding less than 200 PTR records, select the **Free** plan. If you are adding more, select the **Pro** plan.
+
+4.  Skip the rest of the onboarding process.
+
+5.  Once finished with onboarding, go to **DNS**.
+
+6.  For each IP within the prefix, add a PTR record using the least significant octet(s) as the subdomain.
 
               <details>
 
@@ -82,6 +86,6 @@ To use PTR records, you need to create a reverse DNS zone and add a PTR record f
 
         </details>
 
-1.  Add the two Cloudflare nameservers provided for the zone at your Regional Internet Registry (RIR).
+7.  Add the two Cloudflare nameservers provided for the zone at your Regional Internet Registry (RIR).
 
 After this process, your reverse zone will be activated and you can perform reverse DNS lookups.

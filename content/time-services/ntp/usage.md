@@ -15,11 +15,11 @@ in pool.ntp.org share. Using servers that smear time along with servers that do 
 
 Here is an example of how to configure your Mac to synchronize time from time.cloudflare.com:
 
-1. Go to System Preferences
-2. Go to Date & Time
-3. Click the lock icon on the bottom left to make changes
-4. Enter your password
-5. Next to Set date and time automatically, enter `time.cloudflare.com`
+1.  Go to System Preferences
+2.  Go to Date & Time
+3.  Click the lock icon on the bottom left to make changes
+4.  Enter your password
+5.  Next to Set date and time automatically, enter `time.cloudflare.com`
 
 ![MacOS](../static/mactime.png)
 
@@ -27,13 +27,13 @@ Here is an example of how to configure your Mac to synchronize time from time.cl
 
 Here is an example of how to configure your Windows computer to synchronize time from time.cloudflare.com:
 
-1. Go to Control Panel
-2. Go to Clock and Region
-3. Click on Date and Time
-4. Go to the Internet Time tab
-5. Click Change settings..
-6. Next to Server:, type `time.cloudflare.com` and click 'Update now'
-7. Click 'OK'
+1.  Go to Control Panel
+2.  Go to Clock and Region
+3.  Click on Date and Time
+4.  Go to the Internet Time tab
+5.  Click Change settings..
+6.  Next to Server:, type `time.cloudflare.com` and click 'Update now'
+7.  Click 'OK'
 
 ![Windows](../static/window.png)
 

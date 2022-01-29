@@ -7,7 +7,7 @@ title: Applications changelog
 
 # Applications changelog
 
-We update the list of supported applications and app types periodically. Check our [HTTP policies section](/policies/filtering/http-policies) for more details on how to create policies using applications and app types.
+We update the list of supported applications and app types periodically. Check our [HTTP policies section](/cloudflare-one/policies/filtering/http-policies/) for more details on how to create policies using applications and app types.
 
 ## April 2021
 

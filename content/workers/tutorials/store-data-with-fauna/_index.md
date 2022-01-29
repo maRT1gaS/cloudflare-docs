@@ -6,7 +6,7 @@ pcx-content-type: tutorial
 title: Create a serverless, globally distributed REST API with Fauna
 ---
 
-import TutorialsBeforeYouStart from '../../_partials/_tutorials-before-you-start.md';
+import TutorialsBeforeYouStart from '../../\_partials/\_tutorials-before-you-start.md';
 
 # Create a serverless, globally distributed REST API with Fauna
 
@@ -18,9 +18,9 @@ In this tutorial you learn how to store and retrieve data in your Cloudflare Wor
 
 ### Learning goals
 
-- How to store and retrieve data from Fauna in your Workers.
-- How to use Wrangler to store secrets securely.
-- How to use [Worktop][worktop] to add routing to your Workers.
+*   How to store and retrieve data from Fauna in your Workers.
+*   How to use Wrangler to store secrets securely.
+*   How to use [Worktop][worktop] to add routing to your Workers.
 
 Building with Fauna, Workers, and Worktop enables you to create a globally distributed, strongly consistent, fully serverless REST API in a single repository. You can develop and reason about your application as if it were a monolith but gain the resilience and reduced latency of a distributed application running at the edge.
 
@@ -28,10 +28,10 @@ Building with Fauna, Workers, and Worktop enables you to create a globally distr
 
 Fauna is a document-based database with a flexible schema. This allows you to define the structure of your data – whatever it may be – and store documents that adhere to that structure. In this tutorial, you build a product inventory, where each `product` document must contain the following properties:
 
-- **title** - A human-friendly string that represents the title or name of a product.
-- **serialNumber** - A machine-friendly string that uniquely identifies the product.
-- **weightLbs** - A floating point number that represents the weight in pounds of the product.
-- **quantity** A non-negative integer that represents how many items of a particular product there are in the inventory.
+*   **title** - A human-friendly string that represents the title or name of a product.
+*   **serialNumber** - A machine-friendly string that uniquely identifies the product.
+*   **weightLbs** - A floating point number that represents the weight in pounds of the product.
+*   **quantity** A non-negative integer that represents how many items of a particular product there are in the inventory.
 
 Documents are stored in the **Products** [collection][fauna-collections]. Collections in document databases are groups of related documents.
 
@@ -49,10 +49,10 @@ If you do not have a Fauna account, you can [sign up][fauna-signup] and deploy t
 
 In the Fauna dashboard:
 
-1. Select **Create database**.
-2. Provide a valid name.
-3. Select the **Classic** [Region Group][fauna-region-groups].
-4. Select **Create**.
+1.  Select **Create database**.
+2.  Provide a valid name.
+3.  Select the **Classic** [Region Group][fauna-region-groups].
+4.  Select **Create**.
 
 ![Creating your database in Fauna](./media/create-database.png)
 
@@ -106,7 +106,7 @@ $ wrangler secret put FAUNA_SECRET
 
 When prompted, paste the Fauna server secret you obtained earlier.
 
-The **FAUNA_SECRET** environment variable is now injected automatically into your Worker code at runtime.
+The **FAUNA\_SECRET** environment variable is now injected automatically into your Worker code at runtime.
 
 ### Installing dependencies
 
@@ -237,7 +237,7 @@ const faunaClient = new faunadb.Client({
 });
 ```
 
-The **FAUNA_SECRET** environment variable is injected into your application automatically at runtime. Workers run on a custom JavaScript runtime instead of Node.js, so you do not need to use `process.env` to access your environment variables.
+The **FAUNA\_SECRET** environment variable is injected into your application automatically at runtime. Workers run on a custom JavaScript runtime instead of Node.js, so you do not need to use `process.env` to access your environment variables.
 
 ### Creating product documents
 
@@ -322,9 +322,9 @@ let newDoc = {
 };
 ```
 
-- **ref** - A [reference][fql-reference] to the newly created document.
-- **ts** - The timestamp of the new document creation in microseconds.
-- **data** - The actual content of the document.
+*   **ref** - A [reference][fql-reference] to the newly created document.
+*   **ts** - The timestamp of the new document creation in microseconds.
+*   **data** - The actual content of the document.
 
 Examining the route you create, when the query is successful, the ID of the newly created document is returned in the response body:
 
@@ -570,9 +570,9 @@ Let(
 
 This query uses the FQL [Let][fql-let] function to set some variables for use later in the query:
 
-- **productRef** - The **Ref** of the document to update.
-- **productDocument** - The full product document that will be updated.
-- **currentQuantity** - The currently available quantity of the product. You extract the property by using the FQL [Select][fql-select] function.
+*   **productRef** - The **Ref** of the document to update.
+*   **productDocument** - The full product document that will be updated.
+*   **currentQuantity** - The currently available quantity of the product. You extract the property by using the FQL [Select][fql-select] function.
 
 You can access the values of variables created by `Let` in any subsequent FQL expressions by using the FQL [Var][fql-var] function.
 
@@ -851,27 +851,51 @@ To build your own production-ready applications, refer to the [Fauna Workers qui
 If you'd like to speak directly with a Fauna expert about building your applications on Cloudflare Workers with Fauna, please [contact][fauna-contact] us.
 
 [fauna]: https://fauna.com/?utm_source=Cloudflare&utm_medium=referral&utm_campaign=Q4_CF_2021
+
 [fauna-blog-consistency-without-clocks]: https://fauna.com/blog/consistency-without-clocks-faunadb-transaction-protocol?utm_source=Cloudflare&utm_medium=referral&utm_campaign=Q4_CF_2021
+
 [fauna-choosing-authentication-strategy]: https://fauna.com/blog/choosing-an-authentication-strategy-with-fauna?utm_source=Cloudflare&utm_medium=referral&utm_campaign=Q4_CF_2021
+
 [fauna-collections]: https://docs.fauna.com/fauna/current/learn/introduction/key_concepts#collections?utm_source=Cloudflare&utm_medium=referral&utm_campaign=Q4_CF_2021
+
 [fauna-contact]: https://www2.fauna.com/cloudflare-contact?utm_source=Cloudflare&utm_medium=referral&utm_campaign=Q4_CF_2021
+
 [fauna-dashboard]: https://dashboard.fauna.com/?utm_source=Cloudflare&utm_medium=referral&utm_campaign=Q4_CF_2021
+
 [fauna-default-roles]: https://docs.fauna.com/fauna/current/security/keys.html?utm_source=Cloudflare&utm_medium=referral&utm_campaign=Q4_CF_2021
+
 [fauna-region-groups]: https://docs.fauna.com/fauna/current/api/fql/region_groups#how-to-use-region-groups?utm_source=Cloudflare&utm_medium=referral&utm_campaign=Q4_CF_2021
+
 [fauna-signup]: https://dashboard.fauna.com/signup?utm_source=Cloudflare&utm_medium=referral&utm_campaign=Q4_CF_2021
+
 [fauna-udfs]: https://docs.fauna.com/fauna/current/learn/understanding/user_defined_functions?utm_source=Cloudflare&utm_medium=referral&utm_campaign=Q4_CF_2021
+
 [fql]: https://docs.fauna.com/fauna/current/api/fql/?utm_source=Cloudflare&utm_medium=referral&utm_campaign=Q4_CF_2021
+
 [fql-add]: https://docs.fauna.com/fauna/current/api/fql/functions/add?lang=shell&utm_source=Cloudflare&utm_medium=referral&utm_campaign=Q4_CF_2021
+
 [fql-delete]: https://docs.fauna.com/fauna/current/api/fql/functions/delete?lang=shell&utm_source=Cloudflare&utm_medium=referral&utm_campaign=Q4_CF_2021
+
 [fql-get]: https://docs.fauna.com/fauna/current/api/fql/functions/get?lang=shell&utm_source=Cloudflare&utm_medium=referral&utm_campaign=Q4_CF_2021
+
 [fql-let]: https://docs.fauna.com/fauna/current/api/fql/functions/let?lang=shell&utm_source=Cloudflare&utm_medium=referral&utm_campaign=Q4_CF_2021
+
 [fql-reference]: https://docs.fauna.com/fauna/current/api/fql/functions/ref?lang=shell&utm_source=Cloudflare&utm_medium=referral&utm_campaign=Q4_CF_2021
+
 [fql-select]: https://docs.fauna.com/fauna/current/api/fql/functions/select?lang=shell&utm_source=Cloudflare&utm_medium=referral&utm_campaign=Q4_CF_2021
+
 [fql-update]: https://docs.fauna.com/fauna/current/api/fql/functions/update?lang=shell&utm_source=Cloudflare&utm_medium=referral&utm_campaign=Q4_CF_2021
+
 [fql-var]: https://docs.fauna.com/fauna/current/api/fql/functions/var?lang=shell&utm_source=Cloudflare&utm_medium=referral&utm_campaign=Q4_CF_2021
+
 [fauna-js-docs]: https://github.com/fauna/faunadb-js#using-with-cloudflare-workers
+
 [http-status-codes]: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status
+
 [worktop]: https://github.com/lukeed/worktop
+
 [wrangler-dev]: https://developers.cloudflare.com/workers/cli-wrangler/commands#dev
+
 [wrangler-generate]: https://developers.cloudflare.com/workers/cli-wrangler/commands#generate
+
 [wrangler-publish]: https://developers.cloudflare.com/workers/cli-wrangler/commands#publish

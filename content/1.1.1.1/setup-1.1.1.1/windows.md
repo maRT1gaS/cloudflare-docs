@@ -13,31 +13,41 @@ import Encrypted from '../_partials/_encrypted.md';
 
 Follow these steps to configure 1.1.1.1:
 
-1. Click the **Start menu** > **Settings**.
-1. Select **Network and Internet** > **Change Adapter Settings**.
-1. Right-click on the WiFi network you are connected to and click **Properties**.
-1. Select **Internet Protocol Version 4**.
-1. Click **Properties** > **Use The Following DNS Server Addresses**.
-1. Take note of any IP addresses you might have and save them in a safe place in case you need to use them later.
-1. Remove any IP addresses that may be already listed and in their place add:
+1.  Click the **Start menu** > **Settings**.
 
-   ```txt
-   1.1.1.1
-   1.0.0.1
-   ```
+2.  Select **Network and Internet** > **Change Adapter Settings**.
 
-1. Click **OK**.
-1. Now, go to **Internet Protocol Version 6**.
-1. Select **Properties** > **Use The Following DNS Server Addresses**.
-1. Take note of any IP addresses you might have and save them in a safe place in case you need to use them later.
-1. Remove any IP addresses that may be already listed and in their place add:
+3.  Right-click on the WiFi network you are connected to and click **Properties**.
 
-   ```txt
-   2606:4700:4700::1111
-   2606:4700:4700::1001
-   ```
+4.  Select **Internet Protocol Version 4**.
 
-1. Click **Close**.
+5.  Click **Properties** > **Use The Following DNS Server Addresses**.
+
+6.  Take note of any IP addresses you might have and save them in a safe place in case you need to use them later.
+
+7.  Remove any IP addresses that may be already listed and in their place add:
+
+    ```txt
+    1.1.1.1
+    1.0.0.1
+    ```
+
+8.  Click **OK**.
+
+9.  Now, go to **Internet Protocol Version 6**.
+
+10. Select **Properties** > **Use The Following DNS Server Addresses**.
+
+11. Take note of any IP addresses you might have and save them in a safe place in case you need to use them later.
+
+12. Remove any IP addresses that may be already listed and in their place add:
+
+    ```txt
+    2606:4700:4700::1111
+    2606:4700:4700::1001
+    ```
+
+13. Click **Close**.
 
 <CaptivePortals />
 <Encrypted />

@@ -5,10 +5,10 @@ title: Fetching bulk analytics
 
 # Fetching bulk analytics
 
- {{<Aside type="note">}}
+{{<Aside type="note">}}
 Currently, Stream Analytics are only available for video plays that use the Stream Player. If you are using a third-party player, you will not see analytics for video plays from third-party players.
 
- {{</Aside>}}
+{{</Aside>}}
 
 Stream has a GraphQL analytics API that can be used to get bulk analytics for all videos in your account with one HTTP request.
 
@@ -38,17 +38,17 @@ View analytics is collected only when the Stream player is used. If you use a th
 {{<Aside>}}
 Docs on this page is in progress. We have provided an example below where you can retrieve time viewed for the videos on your account in a single query.
 
-Please refer to [Cloudflare GraphQL analytics for HTTP requests](https://developers.cloudflare.com/analytics/graphql-api/getting-started) for further details on how to set up a GraphQL client for testing.
+Please refer to [Cloudflare GraphQL analytics for HTTP requests](/analytics/graphql-api/getting-started) for further details on how to set up a GraphQL client for testing.
 {{</Aside>}}
 
 ## Example usage
 
 Here is how you would get the view count and minutes viewed for the videos in your Stream account:
 
-1. Make a query to https://api.cloudflare.com/client/v4/graphql
-1. Include your Cloudflare API token in the headers (see cURL example included on this page)
-1. It is important that you change the $ACCOUNT_ID with your account ID and the date range
-1. The body of the query should contain the following GraphQL Query:
+1.  Make a query to https://api.cloudflare.com/client/v4/graphql
+2.  Include your Cloudflare API token in the headers (see cURL example included on this page)
+3.  It is important that you change the $ACCOUNT_ID with your account ID and the date range
+4.  The body of the query should contain the following GraphQL Query:
 
 ```graphql
 query {
@@ -223,9 +223,9 @@ query {
 
 Here are the steps to implementing pagination:
 
-1. Call the first query without uid_gt filter to get the first set of videos
-1. Grab the last video ID from the response from the first query
-1. Call next query by specifying uid_gt property and set it to the last video ID. This will return the next set of videos
+1.  Call the first query without uid_gt filter to get the first set of videos
+2.  Grab the last video ID from the response from the first query
+3.  Call next query by specifying uid_gt property and set it to the last video ID. This will return the next set of videos
 
 ## Limitations
 

@@ -10,7 +10,7 @@ You can manage your Cloudflare Logpush service from the command line using cURL.
 
 Before getting started, review:
 
-- [Logpush API configuration](/reference/logpush-api-configuration)
+- [Logpush API configuration](/logs/reference/logpush-api-configuration/)
 - [Logpush job object definition](https://api.cloudflare.com/#logpush-jobs-properties)
 
 {{<Aside type="note">}}
@@ -29,7 +29,7 @@ $ curl -s -XPOST https://api.cloudflare.com/client/v4/zones/<ZONE_ID>/logpush/ow
 
 ### Parameters
 
-- _destination_conf_ - see [Destination](/reference/logpush-api-configuration/#destination) for details
+- _destination_conf_ - see [Destination](/logs/reference/logpush-api-configuration/#destination) for details
 
 ### Response
 
@@ -65,9 +65,9 @@ https://api.cloudflare.com/client/v4/zones/<ZONE_ID>/logpush/jobs \
 ### Parameters
 
 - _name_ (optional) - we suggest using your domain name as the job name; cannot be changed after the job is created
-- _destination_conf_ - see [Destination](/reference/logpush-api-configuration/#destination) for details
+- _destination_conf_ - see [Destination](/logs/reference/logpush-api-configuration/#destination) for details
 - _dataset_ - the category of logs you want to receive; either `http_requests` (default), `spectrum_events`, or `firewall_events`; cannot be changed after the job is created
-- _logpull_options_ (optional) - see [Options](/reference/logpush-api-configuration/#options)
+- _logpull_options_ (optional) - see [Options](/logs/reference/logpush-api-configuration/#options)
   - Typically includes the desired fields and timestamp format
   - Set the timestamp format to RFC 3339 (`&timestamps=rfc3339`) for:
     - Google BigQuery usage

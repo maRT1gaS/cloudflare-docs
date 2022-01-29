@@ -21,11 +21,11 @@ import EmailValidationProcess from '../_partials/_email-validation-process.md';
 
 ### Full setups
 
-If your domain is on a full setup (Cloudflare runs your [authoritative nameservers](https://developers.cloudflare.com/fundamentals/glossary#nameserver)), we handle DCV automatically on your behalf using a TXT record.
+If your domain is on a full setup (Cloudflare runs your [authoritative nameservers](/fundamentals/glossary#nameserver)), we handle DCV automatically on your behalf using a TXT record.
 
 ### Custom certificates
 
-If your domain is using a [custom certificate](../custom-certificates), you need to handle DCV on your own when you obtain certificates from a CA.
+If your domain is using a [custom certificate](/ssl/custom-certificates/), you need to handle DCV on your own when you obtain certificates from a CA.
 
 ## Performing DCV
 
@@ -42,7 +42,7 @@ When you validate against the apex, Cloudflare can complete DCV for all subdomai
 #### HTTP
 
 {{<Aside type="warning">}}
-Due to recent changes, HTTP DCV validation will soon not be allowed for wildcard certificates or certificates with multiple SANs. For more details and next steps, refer to [Changes to HTTP DCV](/ssl-tls/dcv-update).
+Due to recent changes, HTTP DCV validation will soon not be allowed for wildcard certificates or certificates with multiple SANs. For more details and next steps, refer to [Changes to HTTP DCV](/ssl/ssl-tls/dcv-update/).
 {{</Aside>}}
 
 If you are using proxied (orange-clouded) DNS records and can tolerate a few minutes of downtime, Cloudflare can handle DCV by using an HTTP token. This token is available for the Certificate Authority as soon as you create a CNAME record to Cloudflare in your authoritative DNS and you create proxied DNS records for your hostname within Cloudflare.

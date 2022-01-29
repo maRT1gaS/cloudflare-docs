@@ -21,7 +21,7 @@ $ wrangler generate <new-project-name> <github-repo-url>
 
 - `new-project-name`
 
-  - A folder with this name will be created with your new project inside, pre-configured to [your Workers account](/cli-wrangler/configuration).
+  - A folder with this name will be created with your new project inside, pre-configured to [your Workers account](/workers/cli-wrangler/configuration/).
 
 - `github-repo-url`
   - This is the URL of the GitHub repo starter, as below.
@@ -217,5 +217,5 @@ Other languages may require you to install additional tools beyond wrangler. See
 Get inspiration from other sites and projects out there that were built with Cloudflare Workers.
 
 {{<button type="primary" href="https://workers.cloudflare.com/built-with">}}
-  Built with Workers
+Built with Workers
 {{</button>}}

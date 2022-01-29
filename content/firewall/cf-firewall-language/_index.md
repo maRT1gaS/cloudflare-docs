@@ -8,7 +8,7 @@ title: Firewall Rules language
 
 The Cloudflare Firewall Rules language is a flexible and intuitive specification for building Firewall Rules expressions. Based on the widely known [Wireshark display filters](https://www.wireshark.org/docs/wsug_html_chunked/ChWorkBuildDisplayFilterSection.html), the Firewall Rules language allows you to precisely target HTTP requests with a syntax and semantics familiar to security engineers.
 
-When evaluating a firewall rule, Cloudflare compares values associated with an HTTP request to those defined in the firewall rule's [expression](https://developers.cloudflare.com/firewall/cf-firewall-rules/fields-and-expressions/). If the expression evaluates `true`, Cloudflare triggers the [action](https://developers.cloudflare.com/firewall/cf-firewall-rules/actions/) for that rule.
+When evaluating a firewall rule, Cloudflare compares values associated with an HTTP request to those defined in the firewall rule's [expression](/firewall/cf-firewall-rules/fields-and-expressions/). If the expression evaluates `true`, Cloudflare triggers the [action](/firewall/cf-firewall-rules/actions/) for that rule.
 
 The Firewall Rules language supports two kinds of expression—simple and compound.
 
@@ -28,15 +28,15 @@ Simple expressions have the syntax
 
 where
 
-- [Fields](https://developers.cloudflare.com/firewall/cf-firewall-language/fields/#fields) specify properties associated with an HTTP request.
+*   [Fields](/firewall/cf-firewall-language/fields/#fields) specify properties associated with an HTTP request.
 
-- [Comparison operators](https://developers.cloudflare.com/firewall/cf-firewall-language/operators/#comparison-operators) define how values must relate to actual request data for an expression to return `true`.
+*   [Comparison operators](/firewall/cf-firewall-language/operators/#comparison-operators) define how values must relate to actual request data for an expression to return `true`.
 
-- [Values](https://developers.cloudflare.com/firewall/cf-firewall-language/values/#values) represent the data associated with fields. When evaluating a firewall rule, Cloudflare compares these values with the actual data obtained from the request.
+*   [Values](/firewall/cf-firewall-language/values/#values) represent the data associated with fields. When evaluating a firewall rule, Cloudflare compares these values with the actual data obtained from the request.
 
 ## Compound expressions
 
-**Compound expressions** use [logical operators](https://developers.cloudflare.com/firewall/cf-firewall-language/operators/#logical-operators) such as `and` to combine two or more expressions into a single expression.
+**Compound expressions** use [logical operators](/firewall/cf-firewall-language/operators/#logical-operators) such as `and` to combine two or more expressions into a single expression.
 
 For example, this expression uses the `and` operator to target requests to `www.example.com` that are not on ports 80 or 443:
 
@@ -56,6 +56,6 @@ Compound expressions allow you to generate sophisticated, highly targeted firewa
 
 The Firewall Rules language includes support for grouping symbols and functions. Each of these expand the power and flexibility of the language:
 
-- [Grouping symbols](https://developers.cloudflare.com/firewall/cf-firewall-language/operators/#grouping-symbols) allow you to explicitly group expressions that should be evaluated together.
+*   [Grouping symbols](/firewall/cf-firewall-language/operators/#grouping-symbols) allow you to explicitly group expressions that should be evaluated together.
 
-- [Functions](https://developers.cloudflare.com/firewall/cf-firewall-language/functions/#functions) allow you to manipulate and validate values in expressions.
+*   [Functions](/firewall/cf-firewall-language/functions/#functions) allow you to manipulate and validate values in expressions.

@@ -6,7 +6,7 @@ title: Enabling log retention
 
 # Enabling log retention
 
-By default, your HTTP request logs are not retained. When using the Logpull API for the first time, you will need to enable retention. You can also turn off retention at any time. Note that after retention is turned off, previously saved logs will be available until the retention period expires (_see [Data retention period](/logpull/understanding-the-basics/#data-retention-period)_).
+By default, your HTTP request logs are not retained. When using the Logpull API for the first time, you will need to enable retention. You can also turn off retention at any time. Note that after retention is turned off, previously saved logs will be available until the retention period expires (_see [Data retention period](/logs/logpull/understanding-the-basics/#data-retention-period)_).
 
 ## Endpoints
 

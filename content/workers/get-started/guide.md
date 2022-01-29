@@ -8,9 +8,9 @@ meta:
 
 # Get started guide
 
-Cloudflare Workers is a serverless application platform running on Cloudflare’s global [cloud network](https://www.cloudflare.com/learning/serverless/glossary/what-is-edge-computing/) in over 200 cities around the world, offering both [free and paid plans](/platform/pricing).
+Cloudflare Workers is a serverless application platform running on Cloudflare’s global [cloud network](https://www.cloudflare.com/learning/serverless/glossary/what-is-edge-computing/) in over 200 cities around the world, offering both [free and paid plans](/workers/platform/pricing/).
 
-Learn more about [how Workers works](/learning/how-workers-works).
+Learn more about [how Workers works](/workers/learning/how-workers-works/).
 
 {{<Aside type="note" header="Try the Playground">}}
 The quickest way to experiment with Cloudflare Workers is in the [Playground](https://cloudflareworkers.com/#36ebe026bf3510a2e5acace89c09829f:about:blank). The Playground does not require any setup. It is a simple, instant way to preview and test a Workers script directly in the browser against any site.
@@ -22,7 +22,7 @@ This guide will instruct you through setting up a Cloudflare account to deployin
 
 ## 1. Sign up for a Workers account
 
-Before you can start [publishing](/cli-wrangler/commands#publish) your Workers on your own domain or a free `*.workers.dev` subdomain, you must sign up for a Cloudflare Workers account.
+Before you can start [publishing](/workers/cli-wrangler/commands/#publish) your Workers on your own domain or a free `*.workers.dev` subdomain, you must sign up for a Cloudflare Workers account.
 
 <p>
   {{<button type="primary" href="https://dash.cloudflare.com/sign-up/workers">}}
@@ -36,7 +36,7 @@ The signup process will guide you through choosing a `*.workers.dev` subdomain a
 
 ## 2. Install the Workers CLI
 
-Installing `wrangler`, the Workers CLI, gives you the freedom to [`generate`](/cli-wrangler/commands#generate), [`configure`](/cli-wrangler/commands#configure), [`build`](/cli-wrangler/commands#build), [`preview`](/cli-wrangler/commands#preview), and [`publish`](/cli-wrangler/commands#publish) your Workers projects from the comfort of your development environment.
+Installing `wrangler`, the Workers CLI, gives you the freedom to [`generate`](/workers/cli-wrangler/commands/#generate), [`configure`](/workers/cli-wrangler/commands/#configure), [`build`](/workers/cli-wrangler/commands/#build), [`preview`](/workers/cli-wrangler/commands/#preview), and [`publish`](/workers/cli-wrangler/commands/#publish) your Workers projects from the comfort of your development environment.
 
 To install [`wrangler`](https://github.com/cloudflare/wrangler), ensure you have [`npm` installed](https://www.npmjs.com/get-npm), preferably using a Node version manager like [Volta](https://volta.sh/) or [nvm](https://github.com/nvm-sh/nvm) to avoid permission issues, then run:
 
@@ -80,7 +80,7 @@ Open the browser, log into your account, and select **Allow**. This will send an
 
 ## 4. Generate a new project
 
-Wrangler’s `generate` [command](/cli-wrangler/commands#generate) will create a new project. By default, the [default starter](https://github.com/cloudflare/worker-template) template will be used to generate a new project. To provide a custom template, you may provide the [template argument](/cli-wrangler/commands#generate) with a URL to your desired repository. For example, to create a Worker from the default template called `my-worker`, run:
+Wrangler’s `generate` [command](/workers/cli-wrangler/commands/#generate) will create a new project. By default, the [default starter](https://github.com/cloudflare/worker-template) template will be used to generate a new project. To provide a custom template, you may provide the [template argument](/workers/cli-wrangler/commands/#generate) with a URL to your desired repository. For example, to create a Worker from the default template called `my-worker`, run:
 
 ```sh
 ~/ $ wrangler generate my-worker
@@ -103,7 +103,7 @@ route = ""
 zone_id = ""
 ```
 
-Refer to the [Quick Starts](/get-started/quickstarts) page to see a complete list of starter templates.
+Refer to the [Quick Starts](/workers/get-started/quickstarts/) page to see a complete list of starter templates.
 
 For example, to build a Workers project in TypeScript, run:
 
@@ -111,7 +111,7 @@ For example, to build a Workers project in TypeScript, run:
 ~/ $ wrangler generate my-typescript-worker https://github.com/cloudflare/worker-typescript-template
 ```
 
-To start a project from your own code — rather than a starter — use [`wrangler init`](/cli-wrangler/commands#init).
+To start a project from your own code — rather than a starter — use [`wrangler init`](/workers/cli-wrangler/commands/#init).
 
 ---
 
@@ -123,10 +123,10 @@ With your new project generated, you can begin to write your code.
 
 Fundamentally, a Workers application consists of two parts:
 
-1. An [event listener](/runtime-apis/add-event-listener) that listens for [`FetchEvents`](/runtime-apis/fetch-event), and
-2. An event handler that returns a [Response](/runtime-apis/response) object which is passed to the event’s `.respondWith()` method.
+1.  An [event listener](/workers/runtime-apis/add-event-listener/) that listens for [`FetchEvents`](/workers/runtime-apis/fetch-event/), and
+2.  An event handler that returns a [Response](/workers/runtime-apis/response/) object which is passed to the event’s `.respondWith()` method.
 
-When a request is received on one of Cloudflare’s edge servers for a URL matching a Workers script, it passes the request to the Workers runtime. This [dispatches a `FetchEvent`](/learning/fetch-event-lifecycle) in the [isolate](/learning/how-workers-works#isolates) where the script is running.
+When a request is received on one of Cloudflare’s edge servers for a URL matching a Workers script, it passes the request to the Workers runtime. This [dispatches a `FetchEvent`](/workers/learning/fetch-event-lifecycle/) in the [isolate](/workers/learning/how-workers-works/#isolates) where the script is running.
 
 ```js
 ---
@@ -145,15 +145,15 @@ async function handleRequest(request) {
 
 Below is an example of the request response workflow:
 
-1. An event listener for the `FetchEvent` tells the script to listen for any request coming to your Worker. The event handler is passed the `event` object, which includes `event.request`, a [`Request`](/runtime-apis/request) object which is a representation of the HTTP request that triggered the `FetchEvent`.
+1.  An event listener for the `FetchEvent` tells the script to listen for any request coming to your Worker. The event handler is passed the `event` object, which includes `event.request`, a [`Request`](/workers/runtime-apis/request/) object which is a representation of the HTTP request that triggered the `FetchEvent`.
 
-2. The call to [`.respondWith()`](/runtime-apis/fetch-event#methods) lets the Workers runtime intercept the request in order to send back a custom response (in this example, the plain text “Hello worker!”).
+2.  The call to [`.respondWith()`](/workers/runtime-apis/fetch-event/#methods) lets the Workers runtime intercept the request in order to send back a custom response (in this example, the plain text “Hello worker!”).
 
-   - The `FetchEvent` handler typically culminates in a call to the method `.respondWith()` with either a [`Response`](/runtime-apis/response) or `Promise<Response>` that determines the response.
+    - The `FetchEvent` handler typically culminates in a call to the method `.respondWith()` with either a [`Response`](/workers/runtime-apis/response/) or `Promise<Response>` that determines the response.
 
-   - The `FetchEvent` object also provides [two other methods](/runtime-apis/fetch-event#methods) to handle unexpected exceptions and operations that may complete after a response is returned.
+    - The `FetchEvent` object also provides [two other methods](/workers/runtime-apis/fetch-event/#methods) to handle unexpected exceptions and operations that may complete after a response is returned.
 
-Learn more about [the `FetchEvent` lifecycle](/learning/fetch-event-lifecycle).
+Learn more about [the `FetchEvent` lifecycle](/workers/learning/fetch-event-lifecycle/).
 
 ### 5b. Routing and filtering requests
 
@@ -189,9 +189,9 @@ It is common to route requests based on:
 - `request.url` — e.g. filter based on query parameters or the pathname.
 - `request.headers` — filter based on specific headers.
 
-Refer to a full list of [all properties of a `Request` object](/runtime-apis/request#properties).
+Refer to a full list of [all properties of a `Request` object](/workers/runtime-apis/request/#properties).
 
-In addition to standard request properties, the Workers platform populates the request with a [`cf` object](/runtime-apis/request#incomingrequestcfproperties), containing many useful properties, for example, the `region` or `timezone`.
+In addition to standard request properties, the Workers platform populates the request with a [`cf` object](/workers/runtime-apis/request/#incomingrequestcfproperties), containing many useful properties, for example, the `region` or `timezone`.
 
 #### Option 2: Use a template for routing on URL
 
@@ -201,11 +201,11 @@ For more complex routing, it is recommended to use a library. The [Workers route
 ~/ $ wrangler generate my-worker-with-router https://github.com/cloudflare/worker-template-router
 ```
 
-This starter is used in the tutorial for [building a Slack Bot](/tutorials/build-a-slackbot).
+This starter is used in the tutorial for [building a Slack Bot](/workers/tutorials/build-a-slackbot/).
 
 ### 5c. Make use of runtime APIs
 
-The example outlined in this guide is a starting point. There are many Workers [runtime APIs](/runtime-apis) available to manipulate requests and generate responses. For example, you can use the [HTMLRewriter API](/runtime-apis/html-rewriter) to parse and dynamically transform HTML, use the [Cache API](/runtime-apis/cache) to retrieve data from and put data into [the Cloudflare cache](/learning/how-the-cache-works), compute a custom response right from the edge, redirect the request to another service, and more.
+The example outlined in this guide is a starting point. There are many Workers [runtime APIs](/workers/runtime-apis/) available to manipulate requests and generate responses. For example, you can use the [HTMLRewriter API](/workers/runtime-apis/html-rewriter/) to parse and dynamically transform HTML, use the [Cache API](/workers/runtime-apis/cache/) to retrieve data from and put data into [the Cloudflare cache](/workers/learning/how-the-cache-works/), compute a custom response right from the edge, redirect the request to another service, and more.
 
 For inspiration, refer to [Built with Workers](https://workers.cloudflare.com/built-with) for a showcase of projects.
 
@@ -250,7 +250,7 @@ Once you have filled in your `account_id`, you are ready to preview your code. R
 This command will build your project, run it locally, and return a URL for you to visit to preview the Worker.
 
 {{<Aside header="A note about building">}}
-Running `wrangler dev` and `wrangler publish` both run `wrangler build` beforehand automatically, but it can be useful to run `build` separately to check for errors. Running `wrangler build` installs the necessary dependencies for your project and compiles it to make it ready for previewing or deployment. Learn [more about Wrangler](/cli-wrangler/commands).
+Running `wrangler dev` and `wrangler publish` both run `wrangler build` beforehand automatically, but it can be useful to run `build` separately to check for errors. Running `wrangler build` installs the necessary dependencies for your project and compiles it to make it ready for previewing or deployment. Learn [more about Wrangler](/workers/cli-wrangler/commands/).
 {{</Aside>}}
 
 ---
@@ -283,7 +283,7 @@ name = "my-worker"
 account_id = "$yourAccountId"
 ```
 
-After you have filled in your `account_id`, configure the `type` to `"webpack"` in your `wrangler.toml` file to tell Wrangler to use [Webpack](/cli-wrangler/webpack) to package your project for deployment. To learn more about `type` configuration, refer to the [`type` configuration](/cli-wrangler/configuration) page.
+After you have filled in your `account_id`, configure the `type` to `"webpack"` in your `wrangler.toml` file to tell Wrangler to use [Webpack](/workers/cli-wrangler/webpack/) to package your project for deployment. To learn more about `type` configuration, refer to the [`type` configuration](/workers/cli-wrangler/configuration/) page.
 
 ```toml
 ---
@@ -304,12 +304,12 @@ To publish your application on a zone you own, and not a `*.workers.dev` subdoma
 
 You can get your `zone_id` with the following steps:
 
-1. [**Log in** to your Cloudflare account](https://dash.cloudflare.com/login) and select the desired zone.
-2. If not already there, navigate to **Overview** in the dashboard.
-3. Scroll down until you see **Zone ID** on the right.
-4. Click **Click to copy** below the input.
+1.  [**Log in** to your Cloudflare account](https://dash.cloudflare.com/login) and select the desired zone.
+2.  If not already there, navigate to **Overview** in the dashboard.
+3.  Scroll down until you see **Zone ID** on the right.
+4.  Click **Click to copy** below the input.
 
-Wrangler’s environments feature allows you to deploy the same project to multiple places under multiple names. For a complete guide on how to configure environments, refer to the [environments page](/platform/environments).
+Wrangler’s environments feature allows you to deploy the same project to multiple places under multiple names. For a complete guide on how to configure environments, refer to the [environments page](/workers/platform/environments/).
 
 To add a `production` environment, pass in a `zone_id` and `route`:
 
@@ -331,7 +331,7 @@ zone_id = "$yourZoneId"
 route = "example.com/*"
 ```
 
-The `route` key here is a [route pattern](/platform/routes), which can contain wildcards.
+The `route` key here is a [route pattern](/workers/platform/routes/), which can contain wildcards.
 
 If your route is configured to a hostname, you will need to add a DNS record to Cloudflare to ensure that the hostname can be resolved externally. If your Worker acts as your origin (i.e., the request terminates in a Worker), you must add a DNS record.
 
@@ -360,7 +360,7 @@ header: Publish to workers.dev
 
 #### (Optional) Publish your project to a registered domain
 
-To deploy the production environment set in your `wrangler.toml` file in the [optional configuration step](/get-started/guide#optional-configure-for-deploying-to-a-registered-domain), pass the `--env` flag to the command:
+To deploy the production environment set in your `wrangler.toml` file in the [optional configuration step](/workers/get-started/guide/#optional-configure-for-deploying-to-a-registered-domain), pass the `--env` flag to the command:
 
 ```sh
 ---
@@ -369,7 +369,7 @@ header: Publish to example.com
 ~/my-worker $ wrangler publish --env production
 ```
 
-For more information on environments, refer to the [Wrangler documentation](/cli-wrangler/configuration#environments).
+For more information on environments, refer to the [Wrangler documentation](/workers/cli-wrangler/configuration/#environments).
 
 You can also configure a GitHub repository to automatically deploy every time you `git push`. You can do this by either using the [Workers GitHub action](https://github.com/marketplace/actions/deploy-to-cloudflare-workers-with-wrangler), or by writing your own GitHub action and manually configuring the necessary [GitHub secrets](https://docs.github.com/en/actions/configuring-and-managing-workflows/creating-and-storing-encrypted-secrets).
 
@@ -377,4 +377,4 @@ You can also configure a GitHub repository to automatically deploy every time yo
 
 ## Next steps
 
-This is just the beginning of what you can do with Cloudflare Workers. To do more with Workers, refer to the [Tutorials](/tutorials) section.
+This is just the beginning of what you can do with Cloudflare Workers. To do more with Workers, refer to the [Tutorials](/workers/tutorials/) section.

@@ -14,38 +14,43 @@ Follow these steps to configure 1.1.1.1 in Ubuntu and Debian:
 
 ## Ubuntu
 
-1. Click **System** > **Preferences** > **Network Connections**.
-1. Select the **Wireless tab**, then choose the WiFi network you are currently connected to.
-1. Click **Edit** > **IPv4**.
-1. Take note of any IP addresses you might have and save them in a safe place in case you need to use them later.
-1. Change the DNS servers listed to:
+1.  Click **System** > **Preferences** > **Network Connections**.
 
-   ```txt
-   1.1.1.1
-   1.0.0.1
-   ```
+2.  Select the **Wireless tab**, then choose the WiFi network you are currently connected to.
 
-1. Click **Apply**.
-1. Then, go to **IPv6** and add the DNS servers:
+3.  Click **Edit** > **IPv4**.
 
-   ```txt
-   2606:4700:4700::1111
-   2606:4700:4700::1001
-   ```
+4.  Take note of any IP addresses you might have and save them in a safe place in case you need to use them later.
 
-1. Click **Apply**.
+5.  Change the DNS servers listed to:
+
+    ```txt
+    1.1.1.1
+    1.0.0.1
+    ```
+
+6.  Click **Apply**.
+
+7.  Then, go to **IPv6** and add the DNS servers:
+
+    ```txt
+    2606:4700:4700::1111
+    2606:4700:4700::1001
+    ```
+
+8.  Click **Apply**.
 
 ## Debian
 
-1. In the command line, type:
+1.  In the command line, type:
 
 ```sh
 $ sudo vim /etc/resolv.conf
 ```
 
-1. Press the <kbd>i</kbd> key on your keyboard to edit the document.
-1. Take note of any IP addresses you might have and save them in a safe place in case you need to use them later.
-1. Replace the `nameserver` lines with:
+1.  Press the <kbd>i</kbd> key on your keyboard to edit the document.
+2.  Take note of any IP addresses you might have and save them in a safe place in case you need to use them later.
+3.  Replace the `nameserver` lines with:
 
 For IPv4:
 
@@ -61,10 +66,10 @@ For IPv6:
     nameserver 2606:4700:4700::1001
     ```
 
-1. Press the <kbd>ESC</kbd> key on your keyboard to save and exit Vim. Then, type:
+1.  Press the <kbd>ESC</kbd> key on your keyboard to save and exit Vim. Then, type:
 
-```
-:wq
-```
+<!---->
+
+    :wq
 
 <CaptivePortals />

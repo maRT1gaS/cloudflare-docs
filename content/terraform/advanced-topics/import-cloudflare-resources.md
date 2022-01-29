@@ -10,7 +10,7 @@ An important point to understand about Terraform is that it can only manage conf
 - A [configuration file](https://www.terraform.io/docs/configuration/index.html) (ending in `.tf`) that defines the configuration of resources for Terraform to manage. This is what you worked with in the tutorial steps.
 - A local [state file](https://www.terraform.io/docs/state/) that maps the resource names defined in your configuration file, e.g., cloudflare_load_balancer.www-lb to the resources that exist in Cloudflare.
 
-When Terraform makes calls to Cloudflare's API to create new resources as explained in the [tutorial](/tutorial), it persists those IDs to a state file. By default, the `terraform.tfstate` file in your directory is used, but this can also be a [remote location](https://www.terraform.io/docs/state/remote.html). These IDs are later looked up and refreshed when you call `terraform plan` and `terraform apply`.
+When Terraform makes calls to Cloudflare's API to create new resources as explained in the [tutorial](/terraform/tutorial/), it persists those IDs to a state file. By default, the `terraform.tfstate` file in your directory is used, but this can also be a [remote location](https://www.terraform.io/docs/state/remote.html). These IDs are later looked up and refreshed when you call `terraform plan` and `terraform apply`.
 
 If you configured Cloudflare through other means, for example, by logging into the Cloudflare Dashboard or making `curl` calls to api.cloudflare.com, Terraform does not yet have these resource IDs in the state file. To manage this preexisting configuration, you will need to first reproduce the configuration in your config file and then import resources individually by providing their IDs and resource names.
 
@@ -22,13 +22,13 @@ First, `go get` cf-terraforming with `GO111MODULE=on go get -u github.com/cloudf
 
 You can use `cf-terraforming` or `cf-terraforming -h` to view the help file, but to use cf-terraforming, specify the four items below:
 
-1. Your Cloudflare user email - `--email` or `-e`
-2. Your Cloudflare API token - `--token` or `-t`
-3. The account and/or zone to pull resources from - `--account`/`--zone` or `-a`/`-z`
+1.  Your Cloudflare user email - `--email` or `-e`
+2.  Your Cloudflare API token - `--token` or `-t`
+3.  The account and/or zone to pull resources from - `--account`/`--zone` or `-a`/`-z`
 
 - Specifying an account will generate configuration for all resources from all zones in that account.
 
-4. The Cloudflare resources to generate config
+4.  The Cloudflare resources to generate config
 
 The list of supported resources is available in the [Terraform README](https://github.com/cloudflare/cf-terraforming#supported-resources).
 
@@ -57,9 +57,8 @@ Start by making a call to Cf-Terraforming to enumerate the Terraform configurati
 {{<Aside type="note" header="Note">}}
 The command below assumes you run the tool from `{GOPATH}/src/github.com/cloudflare/cf-terraforming`. If pulled with `go get` and if `$GOPATH/bin` is in your `$PATH` you should be able to just run the tool with `$ cf-terraforming <parameters>`.
 
-```
-$ go run cmd/cf-terraforming/main.go --email $CLOUDFLARE_EMAIL --token $CLOUDFLARE_API_TOKEN -z 1109d899a5ff5fd74bc01e581693685a --resource-type cloudflare_record > importing-example.tf
-```
+    $ go run cmd/cf-terraforming/main.go --email $CLOUDFLARE_EMAIL --token $CLOUDFLARE_API_TOKEN -z 1109d899a5ff5fd74bc01e581693685a --resource-type cloudflare_record > importing-example.tf
+
 {{</Aside>}}
 
 If output to standard out, the result should look like the example below. In this case, you directly imported the configuration into your Terraform configuration file `importing-state.tf`.
@@ -102,7 +101,7 @@ resource "cloudflare_record" "mitigateddos_net_a123_mitigateddos_net_2" {
 }
 ```
 
-Calling terraform `plan` now will attempt to create these resources as if they did not exist, which is not preferred. To fix this, [import the real state of those resources](/advanced-topics/importing-cloudflare-resources#import-resources-into-terraform-state) from Cloudflare into the Terraform state file (`.tfstate`) via Terraform import.
+Calling terraform `plan` now will attempt to create these resources as if they did not exist, which is not preferred. To fix this, [import the real state of those resources](/terraform/advanced-topics/importing-cloudflare-resources/#import-resources-into-terraform-state) from Cloudflare into the Terraform state file (`.tfstate`) via Terraform import.
 
 ```sh
 $ terraform plan

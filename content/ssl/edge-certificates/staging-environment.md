@@ -24,10 +24,10 @@ Staging environments are available only to Enterprise customers as part of an op
 
 To upload custom (modern) certificates to your staging environment:
 
-1. Navigate to **SSL/TLS** > **Staging Certificates**.
-1. Click **Upload Custom Staging Certificate**.
-1. Upload your custom (modern) certificate ([detailed instructions](/edge-certificates/custom-certificates/uploading)).
-1. Your certificate will appear in the dashboard with a status of **Staging Deployment**. If you refresh the page, its status should go to **Staging Active**.
+1.  Navigate to **SSL/TLS** > **Staging Certificates**.
+2.  Click **Upload Custom Staging Certificate**.
+3.  Upload your custom (modern) certificate ([detailed instructions](/ssl/edge-certificates/custom-certificates/uploading/)).
+4.  Your certificate will appear in the dashboard with a status of **Staging Deployment**. If you refresh the page, its status should go to **Staging Active**.
 
 ### Step 2 — Test certificate
 
@@ -43,9 +43,9 @@ You should confirm whether:
 
 Asssuming there are no issues, push your custom (modern) certificate to your production environment:
 
-1. Navigate to **SSL/TLS** > **Staging Certificates**.
-1. Click a custom certificate.
-1. Click **Push to Production**.
+1.  Navigate to **SSL/TLS** > **Staging Certificates**.
+2.  Click a custom certificate.
+3.  Click **Push to Production**.
 
 If there were issues with your certificate, you can keep it in your staging environment or click **Deactivate** on the certificate itself.
 
@@ -53,9 +53,9 @@ If there were issues with your certificate, you can keep it in your staging envi
 
 If you roll out a custom (modern) certificate to production and encounter issues, you can push that certificate back to your staging environment for additional testing:
 
-1. Navigate to **SSL/TLS** > **Edge Certificates**.
-1. Click a custom certificate.
-1. Click **Push to Staging**.
+1.  Navigate to **SSL/TLS** > **Edge Certificates**.
+2.  Click a custom certificate.
+3.  Click **Push to Staging**.
 
 ---
 

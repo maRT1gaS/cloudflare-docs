@@ -24,7 +24,7 @@ $ ls -lh sample.log
 -rw-r--r-- 1 mik mik 25K Dec 17 15:49 sample.log
 ```
 
-Based on this information, the approximate number of messages/day is 19,920 (83*10*24), and the byte size is 6MB (25K*10*24). The size estimate is based on the default response field set. Changing the response field set (_see [Fields](/logpull/understanding-the-basics/#fields)_) will change the response size.
+Based on this information, the approximate number of messages/day is 19,920 (83*10*24), and the byte size is 6MB (25K*10*24). The size estimate is based on the default response field set. Changing the response field set (_see [Fields](/logs/logpull/understanding-the-basics/#fields)_) will change the response size.
 
 To get a good estimate of daily traffic, it is best to get at least 30 log lines in your hourly sample. If the response size is too small (or too large), adjust the sample value, not the time range.
 
@@ -67,5 +67,5 @@ The following usage restrictions apply:
 - **Timeout:** the response will fail with a terminated connection after 10 minutes
 - **Stream Timeout:** the request will be terminated with a `408` error response if the connection is idle for 30s. This timeout usually means that the request is probably too exhaustive (frequent timeouts (> 12/hr) will result in subsequent queries
   to be blocked with status code 429 for 1hr) and so:
-  _ try requesting records using lesser number of fields
-  _ try with smaller **start** and **end** parameters
+  \_ try requesting records using lesser number of fields
+  \_ try with smaller **start** and **end** parameters

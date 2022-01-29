@@ -19,7 +19,7 @@ Cloudflare Logpush supports pushing logs to S3-compatible destinations via the C
 - [Oracle Cloud Object Storage](https://docs.cloud.oracle.com/en-us/iaas/Content/Object/Tasks/s3compatibleapi.htm)
 - On-premise [Ceph Object Gateway](https://docs.ceph.com/en/latest/radosgw/s3/)
 
-For more information about Logpush and the current production APIs, see the [Cloudflare Logpush](/get-started/) documentation.
+For more information about Logpush and the current production APIs, see the [Cloudflare Logpush](/logs/get-started/) documentation.
 
 ## Manage via the Cloudflare dashboard
 
@@ -27,31 +27,31 @@ Enable Logpush to an S3-compatible destination via the dashboard.
 
 To enable the Cloudflare Logpush service:
 
-1. Log in to the Cloudflare dashboard.
+1.  Log in to the Cloudflare dashboard.
 
-1. Select the Enterprise domain you want to use with Logpush.
+2.  Select the Enterprise domain you want to use with Logpush.
 
-1. Go to **Analytics** > **Logs**.
+3.  Go to **Analytics** > **Logs**.
 
-1. Click **Connect a service**. A modal window opens where you will need to complete several steps.
+4.  Click **Connect a service**. A modal window opens where you will need to complete several steps.
 
-1. Select the data set you want to push to a storage service.
+5.  Select the data set you want to push to a storage service.
 
-1. Select the data fields to include in your logs. You can add or remove fields later by modifying your settings in **Logs** > **Logpush**.
+6.  Select the data fields to include in your logs. You can add or remove fields later by modifying your settings in **Logs** > **Logpush**.
 
-1. Select **S3-Compatible**.
+7.  Select **S3-Compatible**.
 
-1. Enter or select the following destination information:
+8.  Enter or select the following destination information:
 
-   - **S3 Compatible Bucket Path**
-   - **Bucket region**
-   - **Access Key ID**
-   - **Secret Access Key**
-   - **Endpoint URL**
+    - **S3 Compatible Bucket Path**
+    - **Bucket region**
+    - **Access Key ID**
+    - **Secret Access Key**
+    - **Endpoint URL**
 
-1. Click **Validate access**.
+9.  Click **Validate access**.
 
-1. Click **Save and Start Pushing** to finish enabling Logpush.
+10. Click **Save and Start Pushing** to finish enabling Logpush.
 
 Once connected, Cloudflare lists the S3-compatible destination as a connected service under **Logs** > **Logpush**. Edit or remove connected services from here.
 
@@ -59,8 +59,8 @@ Once connected, Cloudflare lists the S3-compatible destination as a connected se
 
 To set up S3-compatible endpoints:
 
-1. Create a job with the appropriate endpoint URL and authentication parameters.
-1. Enable the job to begin pushing logs.
+1.  Create a job with the appropriate endpoint URL and authentication parameters.
+2.  Enable the job to begin pushing logs.
 
 See below for detailed instructions.
 
@@ -86,7 +86,7 @@ To create a job, make a `POST` request to the Logpush jobs endpoint with the fol
 {{</Aside>}}
 
 - `dataset` - the category of logs you want to receive; either `http_requests` (default), `spectrum_events` or `firewall_events`
-- `logpull_options` (optional) - To configure fields, sample rate, and timestamp format, see [Logpush API options](/get-started/logpush-configuration-api/understanding-logpush-api#options)
+- `logpull_options` (optional) - To configure fields, sample rate, and timestamp format, see [Logpush API options](/logs/get-started/logpush-configuration-api/understanding-logpush-api/#options)
 
 Example request using cURL:
 

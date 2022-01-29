@@ -10,7 +10,7 @@ meta:
 
 Now that rate limiting is set up, your login page is now protected against credential brute for attacks.
 
-In this tutorial, you will add a second origin for some basic round robining, and then use the [Cloudflare Load Balancing](https://developers.cloudflare.com/load-balancing/) product to fail traffic over as needed. You will also enhance your load balancing configuration through the use of "geo steering" to serve results from an origin server that is geographically closest to your end users.
+In this tutorial, you will add a second origin for some basic round robining, and then use the [Cloudflare Load Balancing](/load-balancing/) product to fail traffic over as needed. You will also enhance your load balancing configuration through the use of "geo steering" to serve results from an origin server that is geographically closest to your end users.
 
 ## 1. Add another DNS record for www
 
@@ -137,11 +137,11 @@ As noted above, there is no discernible pattern for which origin receives the re
 Before proceeding, ensure Load Balancing is enabled for your account. If you are on an Enterprise plan, contact your Customer Success Manager to enable Load Balancing' otherwise, you can subscribe to Load Balancing within the Cloudflare Dashboard.
 {{</Aside>}}
 
-As described in the [Load Balancing tutorial](https://developers.cloudflare.com/load-balancing/get-started), you will need to complete three tasks:
+As described in the [Load Balancing tutorial](/load-balancing/get-started), you will need to complete three tasks:
 
-1. Create a monitor to run health checks against your origin servers.
-2. Create a pool of one or more origin servers that will receive load balanced traffic.
-3. Create a load balancer with an external hostname, e.g., `www.example.com`, and one or more pools.
+1.  Create a monitor to run health checks against your origin servers.
+2.  Create a pool of one or more origin servers that will receive load balanced traffic.
+3.  Create a load balancer with an external hostname, e.g., `www.example.com`, and one or more pools.
 
 ### i. Define and create the health check ("monitor")
 
@@ -195,7 +195,7 @@ EOF
 
 ### iii. Define and create the load balancer
 
-When you create a load balancer (LB), it will [replace any existing DNS records with the same name](https://developers.cloudflare.com/load-balancing/reference/dns-records). For example, if you create the `www.example.com` LB below, it will supersede the two www DNS records that you previously defined. One benefit of leaving the DNS records in place is that if you temporarily disable load balancing, connections to this hostname are still possible as shown in step #2 above.
+When you create a load balancer (LB), it will [replace any existing DNS records with the same name](/load-balancing/reference/dns-records). For example, if you create the `www.example.com` LB below, it will supersede the two www DNS records that you previously defined. One benefit of leaving the DNS records in place is that if you temporarily disable load balancing, connections to this hostname are still possible as shown in step #2 above.
 
 ```sh
 $ cat >> cloudflare.tf <<'EOF'

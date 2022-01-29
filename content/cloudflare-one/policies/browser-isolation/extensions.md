@@ -14,7 +14,7 @@ This capability allows extending tools that require DOM access (such as password
 
 ### Prerequisite: Isolate Chrome Web Store
 
-Installing extensions requires that the Chrome Web Store is isolated, first create an [HTTP policy](/policies/filtering/http-policies) that isolates the Chrome Webstore (chrome.google.com).
+Installing extensions requires that the Chrome Web Store is isolated, first create an [HTTP policy](/cloudflare-one/policies/filtering/http-policies/) that isolates the Chrome Webstore (chrome.google.com).
 
 ### Install an extension
 

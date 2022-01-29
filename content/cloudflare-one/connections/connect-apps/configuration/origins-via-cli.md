@@ -1,13 +1,13 @@
 ---
 weight: 20
 hidden: true
-title: "Legacy: configuring origins via CLI"
+title: 'Legacy: configuring origins via CLI'
 ---
 
 # Legacy: configuring origins via CLI
 
 `cloudflared` proxies traffic to local services running on your origin. You can configure the exact properties of each
-origin by adding stanzas to the [Ingress Rules](/connections/connect-apps/configuration/ingress). However, if you only want to proxy
+origin by adding stanzas to the [Ingress Rules](/cloudflare-one/connections/connect-apps/configuration/ingress/). However, if you only want to proxy
 traffic to a single local service, you can use CLI flags instead of YAML to configure that service.
 
 - [`--url`](#--url)
@@ -133,4 +133,4 @@ Timeout after which an idle keepalive connection can be discarded.
 | ---------------- | ------- |
 | `--socks5=value` | `true`  |
 
-See this [tutorial on connecting through Cloudflare Access using kubectl](/tutorials/kubectl) for example usage.
+See this [tutorial on connecting through Cloudflare Access using kubectl](/cloudflare-one/tutorials/kubectl/) for example usage.

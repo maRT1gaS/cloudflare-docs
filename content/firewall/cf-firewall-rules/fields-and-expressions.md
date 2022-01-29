@@ -20,7 +20,7 @@ The Expression Builder’s visual interface allows you to build expressions with
 
 By comparison, the Expression Editor is text only, but it supports advanced features not available in the builder. You can find both in the **Firewall Rules** tab.
 
-The [_Cloudflare Filters API_](/api/cf-filters) provides an interface for programmatically managing expressions. Use [_Firewall Rules API_](/api/cf-firewall-rules) to combine a filter with an action and deploy a new firewall rule.
+The [_Cloudflare Filters API_](/firewall/api/cf-filters/) provides an interface for programmatically managing expressions. Use [_Firewall Rules API_](/firewall/api/cf-firewall-rules/) to combine a filter with an action and deploy a new firewall rule.
 
 ## Simple and compound expressions
 
@@ -35,9 +35,9 @@ When working with Firewall Rules, you will encounter two kinds of expressions:
 
 Simple expressions are composed of 3 elements:
 
-1. A **field** that represents a property of an HTTP request.
-2. A representative **value** for that field, which Firewall Rules will compare with the actual value from the request.
-3. A **comparison operator**, which specifies how the value defined in the expression must relate to the actual value from the request for the operator to return `true`.
+1.  A **field** that represents a property of an HTTP request.
+2.  A representative **value** for that field, which Firewall Rules will compare with the actual value from the request.
+3.  A **comparison operator**, which specifies how the value defined in the expression must relate to the actual value from the request for the operator to return `true`.
 
 If the comparison operator returns `true`, the request matches the expression.
 
@@ -59,9 +59,9 @@ Simple expressions use this pattern:
 <field> <comparison operator> <value>
 ```
 
-For more on creating firewall rules using Cloudflare’s visual builder, see [_Create, edit, and delete rules_](/cf-dashboard/create-edit-delete-rules).
+For more on creating firewall rules using Cloudflare’s visual builder, see [_Create, edit, and delete rules_](/firewall/cf-dashboard/create-edit-delete-rules/).
 
-For a list of supported fields and comparison operators, see [_Firewall Rules language_](/cf-firewall-language/).
+For a list of supported fields and comparison operators, see [_Firewall Rules language_](/firewall/cf-firewall-language/).
 
 ### Compound expressions
 
@@ -95,4 +95,4 @@ Compound expressions are easier to scan when displayed in the Expression Builder
 
 ![Expression Builder with compound expression](../images/firewall-rules-expressions-explained-2.png)
 
-For a list of supported logical operators, see [_Firewall Rules language: Operators_](/cf-firewall-language/operators).
+For a list of supported logical operators, see [_Firewall Rules language: Operators_](/firewall/cf-firewall-language/operators/).

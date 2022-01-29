@@ -4,7 +4,7 @@
 - [ ] (BIG) convert all engine components -> partials
 - [ ] (BIG) grab ALL markup output for 1:1 alignment
 - [ ] check mobile menus, etc
-- [ ] fix link hrefs
+- [x] fix link hrefs
 - [x] sidenav anim
 - [ ] sidenav persist (`swaps` for content)
 - [ ] redirects

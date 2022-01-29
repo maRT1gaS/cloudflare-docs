@@ -15,8 +15,8 @@ To change whether and how traffic reaches a waiting room, update the values for 
 
 To enable a waiting room:
 
-1. Go to **Traffic** > **Waiting Rooms**.
-1. On a waiting room, set **Enabled** to **On**.
+1.  Go to **Traffic** > **Waiting Rooms**.
+2.  On a waiting room, set **Enabled** to **On**.
 
 ## Queue activation
 
@@ -34,4 +34,4 @@ However, if you want all visitors to be queued — in preparation for a product 
 
 ## Queueing method
 
-For more details about queueing method, refer to [Queueing methods](/reference/queueing-methods).
+For more details about queueing method, refer to [Queueing methods](/waiting-room/reference/queueing-methods/).

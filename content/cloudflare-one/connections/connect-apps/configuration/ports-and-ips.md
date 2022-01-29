@@ -56,37 +56,33 @@ On Windows, you can use PowerShell commands if dig is not available.
 
 To test DNS:
 
-```
-PS C:\Windows\system32> Resolve-DnsName -Name _origintunneld._tcp.argotunnel.com SRV
+    PS C:\Windows\system32> Resolve-DnsName -Name _origintunneld._tcp.argotunnel.com SRV
 
-Name                                     Type   TTL   Section    NameTarget                     Priority Weight Port
-----                                     ----   ---   -------    ----------                     -------- ------ ----
-_origintunneld._tcp.argotunnel.com       SRV    112   Answer     region2.argotunnel.com         2        1      7844
-_origintunneld._tcp.argotunnel.com       SRV    112   Answer     region1.argotunnel.com         1        1      7844
-```
+    Name                                     Type   TTL   Section    NameTarget                     Priority Weight Port
+    ----                                     ----   ---   -------    ----------                     -------- ------ ----
+    _origintunneld._tcp.argotunnel.com       SRV    112   Answer     region2.argotunnel.com         2        1      7844
+    _origintunneld._tcp.argotunnel.com       SRV    112   Answer     region1.argotunnel.com         1        1      7844
 
 To test ports:
 
-```
-PS C:\Cloudflared\bin> tnc region1.argotunnel.com -port 443
+    PS C:\Cloudflared\bin> tnc region1.argotunnel.com -port 443
 
-ComputerName     : region1.argotunnel.com
-RemoteAddress    : 198.41.192.227
-RemotePort       : 443
-InterfaceAlias   : Ethernet
-SourceAddress    : 10.0.2.15
-TcpTestSucceeded : True
-```
+    ComputerName     : region1.argotunnel.com
+    RemoteAddress    : 198.41.192.227
+    RemotePort       : 443
+    InterfaceAlias   : Ethernet
+    SourceAddress    : 10.0.2.15
+    TcpTestSucceeded : True
 
-```
-PS C:\Cloudflared\bin> tnc region1.argotunnel.com -port 7844
+<!---->
 
-ComputerName     : region1.argotunnel.com
-RemoteAddress    : 198.41.192.227
-RemotePort       : 7844
-InterfaceAlias   : Ethernet
-SourceAddress    : 10.0.2.15
-TcpTestSucceeded : True
-```
+    PS C:\Cloudflared\bin> tnc region1.argotunnel.com -port 7844
+
+    ComputerName     : region1.argotunnel.com
+    RemoteAddress    : 198.41.192.227
+    RemotePort       : 7844
+    InterfaceAlias   : Ethernet
+    SourceAddress    : 10.0.2.15
+    TcpTestSucceeded : True
 
 \* _These IP addresses are unlikely to change but in the event that they do, Cloudflare will update the information here._

@@ -25,10 +25,12 @@ The available Rate Limiting rule parameters are the following:
   - Action to perform when the request rate specified in the rule is reached.
   - Use one of the following values: `block`, `challenge`, `js_challenge`, or `log`.
 
-- `characteristics` <Type>Array&lt;String&gt;</Type>
+- `characteristics` <Type>Array\<String></Type>
 
   - Field name in the dashboard: **With the same**.
+
   - Set of parameters defining how Cloudflare tracks the request rate for the rule.
+
   - Use one or more of the following characteristics:
 
     | API value                                     | UI value                  |
@@ -43,11 +45,13 @@ The available Rate Limiting rule parameters are the following:
     | `http.request.uri.args["<query_param_name>"]` | _Query_                   |
 
   - You cannot use both `cf.unique_visitor_id` and `ip.src` as characteristics of the same Rate Limiting rule.
+
   - If you use `http.request.headers["<header_name>"]`, you must enter the header name in lower case, since Cloudflare normalizes header names at the edge.
+
   - If you use `http.request.cookies["<cookie_name>"]`, refer to [Recommendations](#recommendations) for additional validations you should implement.
 
   - {{<Aside type="note">}}
-    Use `cf.unique_visitor_id` to handle situations such as requests under NAT sharing the same IP address. Cloudflare uses a variety of privacy-preserving techniques to identify unique visitors, which may include use of session cookies — refer to [Cloudflare Cookies](https://developers.cloudflare.com/fundamentals/get-started/cloudflare-cookies) for details.
+    Use `cf.unique_visitor_id` to handle situations such as requests under NAT sharing the same IP address. Cloudflare uses a variety of privacy-preserving techniques to identify unique visitors, which may include use of session cookies — refer to [Cloudflare Cookies](/fundamentals/get-started/cloudflare-cookies) for details.
 
     {{</Aside>}}
 
@@ -82,5 +86,5 @@ The available Rate Limiting rule parameters are the following:
 
 If you use `http.request.cookies["<cookie_name>"]` as a Rate Limiting rule characteristic, follow these recommendations:
 
-- Create a [Custom Firewall rule](/custom-rules/custom-firewall) that blocks requests with more than one value for the cookie.
+- Create a [Custom Firewall rule](/waf/custom-rules/custom-firewall/) that blocks requests with more than one value for the cookie.
 - Validate the cookie value at the origin before performing any demanding server operations.

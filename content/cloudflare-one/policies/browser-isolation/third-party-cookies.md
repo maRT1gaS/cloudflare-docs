@@ -15,33 +15,33 @@ Follow these instructions to enable third-party cookies in your browser:
 
 ## Chrome (Incognito mode)
 
-1. Open Chrome.
-1. At the top right, click the three-dot menu and go to **Settings**.
-1. Scroll down to **Privacy and security**, click **Cookies and other site data**.
-1. Click **See all cookies and site data** > **Remove all**.
-1. Confirm by clicking **Clear all**.
+1.  Open Chrome.
+2.  At the top right, click the three-dot menu and go to **Settings**.
+3.  Scroll down to **Privacy and security**, click **Cookies and other site data**.
+4.  Click **See all cookies and site data** > **Remove all**.
+5.  Confirm by clicking **Clear all**.
 
 ## Firefox (Private Browsing mode)
 
-1. Open Firefox.
-1. Click **Tools** > **Options**.
-1. Click **Privacy** in the top panel.
-1. Select the checkbox labeled _Accept cookies from sites_.
-1. Select the checkbox labeled _Accept third-party cookies_.
-1. Click **OK**.
+1.  Open Firefox.
+2.  Click **Tools** > **Options**.
+3.  Click **Privacy** in the top panel.
+4.  Select the checkbox labeled _Accept cookies from sites_.
+5.  Select the checkbox labeled _Accept third-party cookies_.
+6.  Click **OK**.
 
 ## Safari
 
-1. Open Safari.
-1. Go to **Preferences** > **Privacy**.
-1. Under the **Cookies and website data** section, un-select both:
-   - Prevent cross-site tracking
-   - Block all cookies
-1. Close the Preferences window.
+1.  Open Safari.
+2.  Go to **Preferences** > **Privacy**.
+3.  Under the **Cookies and website data** section, un-select both:
+    - Prevent cross-site tracking
+    - Block all cookies
+4.  Close the Preferences window.
 
 ## Brave
 
-1. Open Brave.
-1. Click the menu and go to **Settings**.
-1. Go to **Additional settings** > **Privacy and Security** > **Cookies and other site data**.
-1. Click **Allow all cookies**.
+1.  Open Brave.
+2.  Click the menu and go to **Settings**.
+3.  Go to **Additional settings** > **Privacy and Security** > **Cookies and other site data**.
+4.  Click **Allow all cookies**.

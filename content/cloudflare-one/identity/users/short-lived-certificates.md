@@ -14,22 +14,22 @@ Cloudflare Access removes the burden on the end user of generating a key, while 
 
 ## 1. **Secure a server behind Cloudflare Access**.
 
-To protect a resource behind Cloudflare Access, first follow [these instructions](/tutorials/ssh) to secure the server.
+To protect a resource behind Cloudflare Access, first follow [these instructions](/cloudflare-one/tutorials/ssh/) to secure the server.
 
 ## 2. **Generate a short-lived certificate public key**.
 
-1. On the Teams dashboard, navigate to **Access > Service Auth**.
+1.  On the Teams dashboard, navigate to **Access > Service Auth**.
 
-2. In the drop-down, choose the application that represents the resource you secured in Step 1.
+2.  In the drop-down, choose the application that represents the resource you secured in Step 1.
 
-   ![New Cert](../../static/documentation/applications/non-http/slc-create.png)
+    ![New Cert](../../static/documentation/applications/non-http/slc-create.png)
 
-3. Click **Generate certificate**. A row will appear with a public key scoped to your application.
+3.  Click **Generate certificate**. A row will appear with a public key scoped to your application.
 
-4. Save the key or keep it somewhere convenient for configuring your server.
-   You can return to copy this public key any time in the Service Auth dashboard.
+4.  Save the key or keep it somewhere convenient for configuring your server.
+    You can return to copy this public key any time in the Service Auth dashboard.
 
-   ![Pub Key Cert](../../static/documentation/applications/non-http/slc-detail.png)
+    ![Pub Key Cert](../../static/documentation/applications/non-http/slc-detail.png)
 
 ## 3. **Ensure Unix usernames match user SSO identities**
 
@@ -47,21 +47,21 @@ $ sudo adduser jdoe
 
 ## 4. **Save your public key**
 
-1. Save the public key generated from the dashboard in Step 2 as a new `.pub` file in your system.
+1.  Save the public key generated from the dashboard in Step 2 as a new `.pub` file in your system.
 
-2. Use the following command to change directories to the SSH configuration directory on the machine:
+2.  Use the following command to change directories to the SSH configuration directory on the machine:
 
 ```sh
 $ cd /etc/ssh
 ```
 
-3. Once there, you can use the following command to both generate the file and open a text editor to input the public key.
+3.  Once there, you can use the following command to both generate the file and open a text editor to input the public key.
 
 ```sh
 $ vim ca.pub
 ```
 
-4. In the `ca.pub` file, paste the public key generated in Access without any modifications. Save the file. In some systems, you may need to use the following command to force the file to save depending on your permissions.
+4.  In the `ca.pub` file, paste the public key generated in Access without any modifications. Save the file. In some systems, you may need to use the following command to force the file to save depending on your permissions.
 
 ```bash
 :w !sudo tee %
@@ -74,21 +74,21 @@ Cloudflare Access requires two changes to the `sshd_config` file used on the tar
 
 The first change requires that you uncomment a field already set in most default configurations; the second change adds a new field.
 
-1. While staying within the `/etc/ssh` directory, open the `sshd_config` file.
+1.  While staying within the `/etc/ssh` directory, open the `sshd_config` file.
 
 ```sh
 $ vim /etc/ssh/sshd_config
 ```
 
-2. Navigate to the row named `PubkeyAuthentication`. In most default configurations, the row will appear commented out as follows:
+2.  Navigate to the row named `PubkeyAuthentication`. In most default configurations, the row will appear commented out as follows:
 
 ```bash
 # PubkeyAuthentication yes
 ```
 
-3. Remove the # symbol to uncomment the line; keep the setting `yes` enabled.
+3.  Remove the # symbol to uncomment the line; keep the setting `yes` enabled.
 
-4. Next, add a new line below `PubkeyAuthentication` as follows:
+4.  Next, add a new line below `PubkeyAuthentication` as follows:
 
 ```bash
 TrustedUserCAKeys /etc/ssh/ca.pub
@@ -123,7 +123,7 @@ $ sudo systemctl restart sshd
 
 ### Configure your client SSH config
 
-On the client side, follow [this tutorial](/tutorials/ssh) to configure your device to use Cloudflare Access to reach the protected machine. To use short-lived certificates, you must include the following settings in your SSH config file.
+On the client side, follow [this tutorial](/cloudflare-one/tutorials/ssh/) to configure your device to use Cloudflare Access to reach the protected machine. To use short-lived certificates, you must include the following settings in your SSH config file.
 
 To save time, you can use the following cloudflared command to print the required configuration command:
 
@@ -148,4 +148,4 @@ Host cfpipe-vm.example.com
 
 ### Connect through a browser-based terminal
 
-End users can connect to the SSH session without any configuration by using Cloudflare's browser-based terminal. Users visit the URL of the application and Cloudflare's terminal handles the short-lived certificate flow. To enable, follow the instructions [here](/tutorials/ssh-browser).
+End users can connect to the SSH session without any configuration by using Cloudflare's browser-based terminal. Users visit the URL of the application and Cloudflare's terminal handles the short-lived certificate flow. To enable, follow the instructions [here](/cloudflare-one/tutorials/ssh-browser/).

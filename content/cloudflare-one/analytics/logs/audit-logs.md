@@ -8,8 +8,8 @@ title: Access Audit logs
 
 Cloudflare Access generates two types of audit logs:
 
-- **[Authentication audit logs](#authentication-audit-logs)** maintain a record of authentication events.
-- **[Per-request audit logs](#per-request-audit-logs)** record HTTP requests to protected URI paths.
+*   **[Authentication audit logs](#authentication-audit-logs)** maintain a record of authentication events.
+*   **[Per-request audit logs](#per-request-audit-logs)** record HTTP requests to protected URI paths.
 
 ## Authentication Audit Logs
 
@@ -24,37 +24,35 @@ Access retains authentication logs for 6 months.
 Access audit logs are available in the Logs section of the Cloudflare for Teams dashboard.
 Access provides the following view types of the logs:
 
-- **User**: all unique users with at least one successful login during the current calendar month.
-- **Access Audit Log**: Changes made to Access policies across the account.
-- **Access Requests**: All authentication attempts. Details include the identity provider or login method and the IP address of the user.
+*   **User**: all unique users with at least one successful login during the current calendar month.
+*   **Access Audit Log**: Changes made to Access policies across the account.
+*   **Access Requests**: All authentication attempts. Details include the identity provider or login method and the IP address of the user.
 
-```
-https://api.cloudflare.com/client/v4/accounts/<account_id>/access/logs/access_requests?direction=desc&limit=15&page=1
-```
+<!---->
+
+    https://api.cloudflare.com/client/v4/accounts/<account_id>/access/logs/access_requests?direction=desc&limit=15&page=1
 
 Access authentication logs contain the following fields:
 
 | Field          | Description                                              |
 | -------------- | -------------------------------------------------------- |
-| **user_email** | The email address of the authenticating user             |
-| **ip_address** | The IP address of the authenticating user                |
-| **app_uid**    | The unique identifier for the protected application      |
-| **add_domain** | The URL of the protected application                     |
+| **user\_email** | The email address of the authenticating user             |
+| **ip\_address** | The IP address of the authenticating user                |
+| **app\_uid**    | The unique identifier for the protected application      |
+| **add\_domain** | The URL of the protected application                     |
 | **action**     | The event that occurred, such as a login attempt         |
 | **allowed**    | The result of the authentication event.                  |
-| **created_at** | The event timestamp.                                     |
+| **created\_at** | The event timestamp.                                     |
 | **connection** | The IdP used to authenticate.                            |
 | **country**    | The country associated with the user’s IP address        |
-| **ray_id**     | A unique identifier for every request through Cloudflare |
-| **app_type**   | Specifies if the app is self-hosted or SaaS              |
+| **ray\_id**     | A unique identifier for every request through Cloudflare |
+| **app\_type**   | Specifies if the app is self-hosted or SaaS              |
 
 ### Access Requests Audit API endpoint
 
 The [Access Requests Audit](https://api.cloudflare.com/#access-requests-access-requests-audit) API endpoint provides a custom URL to export audit log events for your account.
 
-```
-GET accounts/:identifier/access/logs/access_requests
-```
+    GET accounts/:identifier/access/logs/access_requests
 
 #### Optional fields
 
@@ -107,11 +105,11 @@ A video guide is also available:
 
 ### Cloudflare logging
 
-Enterprise customers have access to detailed logs of HTTP requests, on their Cloudflare dashboard. Enterprise customers also have access to Cloudflare's Logpush service, which can be configured from the Cloudflare Dashboard or API (for more information about Cloudflare HTTP logging, see the [Cloudflare Logs](https://developers.cloudflare.com/logs/) section).
+Enterprise customers have access to detailed logs of HTTP requests, on their Cloudflare dashboard. Enterprise customers also have access to Cloudflare's Logpush service, which can be configured from the Cloudflare Dashboard or API (for more information about Cloudflare HTTP logging, see the [Cloudflare Logs](/logs/) section).
 
-Once a member of your team authenticates to reach a resource behind Access, Cloudflare generates a token for that user that contains their SSO identity. The token is structured as a [JSON Web Token (JWT)](/glossary#json-web-token). Cloudflare relies on an RSA Signature with SHA-256, or RS256, an asymmetric algorithm, to perform that signature. Cloudflare also makes the public key available, so that you can validate their authenticity, as well.
+Once a member of your team authenticates to reach a resource behind Access, Cloudflare generates a token for that user that contains their SSO identity. The token is structured as a [JSON Web Token (JWT)](/cloudflare-one/glossary/#json-web-token). Cloudflare relies on an RSA Signature with SHA-256, or RS256, an asymmetric algorithm, to perform that signature. Cloudflare also makes the public key available, so that you can validate their authenticity, as well.
 
-When a user requests a given URL, Access appends the user identity from that token as a request header, which we then log as the request passes through our network. Your team can collect these logs in your preferred third-party Security information and event management (SIEM) software or storage destination by using the [Cloudflare Logpush](https://developers.cloudflare.com/logs/about) platform.
+When a user requests a given URL, Access appends the user identity from that token as a request header, which we then log as the request passes through our network. Your team can collect these logs in your preferred third-party Security information and event management (SIEM) software or storage destination by using the [Cloudflare Logpush](/logs/about) platform.
 
 Cloudflare Logpush can be used to gather and send specific request headers from the requests made to sites behind Access. Once enabled, you can then configure the destination where Cloudflare should send these logs. When enabled with the Access user identity field, the logs will export to your systems as JSON similar to the logs below.
 
@@ -154,6 +152,6 @@ Access integrates with the Cloudflare Logpush API, so you can export per-request
 
 Cloudflare Logpush pushes Enterprise customers' HTTP request logs, including Access user identity, to a cloud storage provider every 5 minutes.
 
-For instructions on setting up Logpush, see [Manage the Logpush API](https://developers.cloudflare.com/logs/logpush/logpush-configuration-api/).
+For instructions on setting up Logpush, see [Manage the Logpush API](/logs/logpush/logpush-configuration-api/).
 
-For more on exporting per-request Access logs, see [Understanding the Logpush API](https://developers.cloudflare.com/logs/logpush/logpush-configuration-api/understanding-logpush-api/).
+For more on exporting per-request Access logs, see [Understanding the Logpush API](/logs/logpush/logpush-configuration-api/understanding-logpush-api/).

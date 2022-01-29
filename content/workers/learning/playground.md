@@ -30,21 +30,21 @@ async function handleRequest(request) {
 }
 ```
 
-This is the least complex Worker you can write. When the Worker receives a request, the `fetch` event is dispatched. [RespondWith](/learning/fetch-event-lifecycle#respondwith) intercepts the event, promising to return the result of the `handleRequest` function to the client. Finally, `handleRequest` is actually called, and it returns a text [response](/runtime-apis/response) of `"Hello world"` which is delivered back to the client.
+This is the least complex Worker you can write. When the Worker receives a request, the `fetch` event is dispatched. [RespondWith](/workers/learning/fetch-event-lifecycle/#respondwith) intercepts the event, promising to return the result of the `handleRequest` function to the client. Finally, `handleRequest` is actually called, and it returns a text [response](/workers/runtime-apis/response/) of `"Hello world"` which is delivered back to the client.
 
-Refer to the reference for [addEventListener](/runtime-apis/add-event-listener), [FetchEvent](/runtime-apis/fetch-event), and [FetchEvent lifecycle](/learning/fetch-event-lifecycle) to learn more.
+Refer to the reference for [addEventListener](/workers/runtime-apis/add-event-listener/), [FetchEvent](/workers/runtime-apis/fetch-event/), and [FetchEvent lifecycle](/workers/learning/fetch-event-lifecycle/) to learn more.
 
 ---
 
 ## Beyond hello world
 
-To get familiar with Workers, experiment with the Playground by borrowing [Examples](/examples) from the documentation. This will allow you to experience firsthand [what Workers can do](https://www.cloudflare.com/learning/serverless/why-use-serverless/).
+To get familiar with Workers, experiment with the Playground by borrowing [Examples](/workers/examples/) from the documentation. This will allow you to experience firsthand [what Workers can do](https://www.cloudflare.com/learning/serverless/why-use-serverless/).
 
 ---
 
 ## Using the Playground
 
-There are two versions of the Playground available. The [browser Playground](cloudflareworkers.com) and the dashboard Playground, also known as the previewer.
+There are two versions of the Playground available. The [browser Playground](/workers/cloudflareworkers.com/) and the dashboard Playground, also known as the previewer.
 
 To access the dashboard Playground, log into your Cloudflare account and go to **Account Home** > **Workers** > **your Worker script** > **Quick edit**.
 

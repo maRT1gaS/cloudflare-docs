@@ -9,12 +9,10 @@ meta:
 
 A Cache Key is an identifier that Cloudflare uses for a file in our cache, and the Cache Key Template defines the identifier for a given HTTP request. For example, consider the following HTTP request on a TLS connection:
 
-```
-GET /logo.jpg HTTP/1.1
-Host: www.cloudflare.com
-User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36
-Accept: image/jpg
-```
+    GET /logo.jpg HTTP/1.1
+    Host: www.cloudflare.com
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36
+    Accept: image/jpg
 
 The default Cache Key constructed from this request combines aspects such as Cloudflare Zone ID, scheme, hostname, and path into a Cache Key similar to `1234:https://www.example.com/foo.jpg`. Zone ID and Path are always included in the Cache Key and cannot be modified.
 
@@ -22,7 +20,7 @@ The default Cache Key constructed from this request combines aspects such as Clo
 Using Custom Cache Keys may result in cache sharding and reduction of your cache hit ratio.
 {{</Aside>}}
 
-To create a Cache Key, see [Create a Custom Cache Key](/how-to/create-cache-keys).
+To create a Cache Key, see [Create a Custom Cache Key](/cache/how-to/create-cache-keys/).
 
 ## Cache Key Template
 
@@ -32,12 +30,12 @@ There are a couple of common reasons to change the Cache Key Template. You might
 - Consolidate the cache so different HTTP requests are stored in the same file. For example, to remove the Origin header added to Cloudflare Cache Keys by default.
 
 {{<Aside type="note" header="Note">}}
-`$scheme` is the protocol (HTTP or HTTPS) sent to your origin web server and not the protocol received from the visitor. Therefore, setting the Cloudflare [SSL option](https://support.cloudflare.com/hc/articles/200170416) influences caching decisions. For instance, Cloudflare only attempts to connect to your origin web server via HTTP when [Flexible SSL](https://developers.cloudflare.com/ssl/origin-configuration/ssl-modes#flexible) is utilized. Thus, Cloudflare serves the same cached resource for visitor requests via either HTTP or HTTPS since Flexible SSL instructs Cloudflare to connect to an origin solely over HTTP.
+`$scheme` is the protocol (HTTP or HTTPS) sent to your origin web server and not the protocol received from the visitor. Therefore, setting the Cloudflare [SSL option](https://support.cloudflare.com/hc/articles/200170416) influences caching decisions. For instance, Cloudflare only attempts to connect to your origin web server via HTTP when [Flexible SSL](/ssl/origin-configuration/ssl-modes#flexible) is utilized. Thus, Cloudflare serves the same cached resource for visitor requests via either HTTP or HTTPS since Flexible SSL instructs Cloudflare to connect to an origin solely over HTTP.
 {{</Aside>}}
 
 For cross-origin requests, such as one from `anotherdomain.com` to `example.com`, the Origin HTTP request header results in a Cache Key with the `${header:origin}` token populated as `anotherdomain.com::https://www.example.com/something`.
 
-A [Cache Level](/how-to/set-caching-levels) of Ignore Query String creates the following Cache Key:
+A [Cache Level](/cache/how-to/set-caching-levels/) of Ignore Query String creates the following Cache Key:
 `${header:origin}::${scheme}://${host_header}${uri_iqs}`
 
 `${uri_iqs}` is replaced with the request path excluding the query string, so a request for `http://example.com/file.jpg?something=123` creates the following Cache Key:

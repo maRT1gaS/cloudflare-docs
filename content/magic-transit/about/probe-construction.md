@@ -33,7 +33,7 @@ There are three tunnel health states: **Healthy**, **Degraded**, and **Down**.
 
 **Healthy** tunnels are preferred to **Degraded** tunnels, and Degraded tunnels are preferred to those that are **Down**.
 
-Magic Transit steers traffic to tunnels based on priorities you set when you [assign tunnel route priorities](/get-started/configure-tunnels/assign-tunnel-route-priorities) during onboarding. Tunnel routes with lower values have priority over those with higher values.
+Magic Transit steers traffic to tunnels based on priorities you set when you [assign tunnel route priorities](/magic-transit/get-started/configure-tunnels/assign-tunnel-route-priorities/) during onboarding. Tunnel routes with lower values have priority over those with higher values.
 
 {{<Aside type="note" header="Note">}}
 Cloudflare edge servers may be able to reach the origin infrastructure from some locations at a given time but not others. This occurs because Cloudflare does not synchronize health checks among edge servers and because the Internet is not homogenous.
@@ -52,7 +52,7 @@ When Magic Transit identifies a route that is not healthy, it applies the these 
 - Degraded: Add 500,000 to priority.
 - Down: Add 1,000,000 to priority.
 
-The values for failure penalties are intentionally extreme so that they always exceed the priority values assigned during [routing configuration](/get-started/configure-tunnels/assign-tunnel-route-priorities).
+The values for failure penalties are intentionally extreme so that they always exceed the priority values assigned during [routing configuration](/magic-transit/get-started/configure-tunnels/assign-tunnel-route-priorities/).
 
 Applying a penalty instead of removing the route altogether preserves redundancy and maintains options for customers with only one tunnel. Penalties also support the case when multiple tunnels are unhealthy.
 
@@ -68,8 +68,8 @@ Tunnels in a **Degraded** state transition to **Healthy** when the failure rate 
 
 Magic Transit’s tunnel health check system allows a tunnel to quickly transition from **Healthy** to **Degraded** or **Down**, but tunnel transition occurs slowly from **Degraded** or **Down** to **Healthy**. This scenario is referred to as hysteresis — which is when a system's output depends on its history of past inputs — and dampens changes to tunnel routing caused by flapping and other intermittent network failures.
 
-{{<Aside type="note" header="Note">}}  Cloudflare always attempts to send traffic over available tunnel routes with the highest priority,
-  even when all configured tunnels are in an unhealthy state.{{</Aside>}}
+{{<Aside type="note" header="Note">}} Cloudflare always attempts to send traffic over available tunnel routes with the highest priority,
+even when all configured tunnels are in an unhealthy state.{{</Aside>}}
 
 ## Example
 

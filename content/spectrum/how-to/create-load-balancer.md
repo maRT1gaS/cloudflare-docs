@@ -11,18 +11,18 @@ meta:
 
 ## Create a Load Balancer
 
-To create a Load Balancer from the dashboard, follow the [Create a load balancer](https://developers.cloudflare.com/load-balancing/create-load-balancer-ui#workflow) workflow.
+To create a Load Balancer from the dashboard, follow the [Create a load balancer](/load-balancing/create-load-balancer-ui#workflow) workflow.
 
-To create a load balancer using the API, follow the [Create a Cloudflare load balancer via the API](https://developers.cloudflare.com/load-balancing/create-load-balancer-api) workflow.
+To create a load balancer using the API, follow the [Create a Cloudflare load balancer via the API](/load-balancing/create-load-balancer-api) workflow.
 
 ## Create a Spectrum application
 
-1. Log in to the Cloudflare dashboard.
-1. Click **Spectrum**.
-1. Click **Create an Application**.
-1. Under **Origin**, select **Load Balancer**.
-1. Select the load balancer from the menu.
-1. Click **Submit**.
+1.  Log in to the Cloudflare dashboard.
+2.  Click **Spectrum**.
+3.  Click **Create an Application**.
+4.  Under **Origin**, select **Load Balancer**.
+5.  Select the load balancer from the menu.
+6.  Click **Submit**.
 
 ### Example Curl using the API
 

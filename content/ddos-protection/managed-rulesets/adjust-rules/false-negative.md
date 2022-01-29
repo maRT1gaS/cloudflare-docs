@@ -14,7 +14,7 @@ To address a false negative:
 
 - If you are a WAF/CDN customer, follow the steps in the [Responding to DDoS attacks](https://support.cloudflare.com/hc/articles/200170196) page, which guides you on enabling the _Under Attack_ mode and creating Rate Limiting and Firewall rules as needed.
 
-- If you are a Magic Transit customer, [use Magic Firewall rules](https://developers.cloudflare.com/magic-firewall/how-to/add-rules) to help mitigate the attack.
+- If you are a Magic Transit customer, [use Magic Firewall rules](/magic-firewall/how-to/add-rules) to help mitigate the attack.
 
 ## Incomplete mitigations
 
@@ -28,7 +28,8 @@ The system chooses the mitigation action based on the logic and the DDoS protect
 If you are experiencing a DDoS attack detected by Cloudflare and the applied mitigation action is not sufficiently strict, change the rule action to _Block_:
 
 1.  Log in to the [Cloudflare dashboard](https://dash.cloudflare.com) and select your account.
-1.  Navigate to the analytics dashboard and apply filters to the displayed data.
+
+2.  Navigate to the analytics dashboard and apply filters to the displayed data.
 
               <details>
 
@@ -60,13 +61,19 @@ If you are experiencing a DDoS attack detected by Cloudflare and the applied mit
 
         </details>
 
-1.  Scroll down to the **Activity log**.
-1.  Click **Edit columns** and enable **Rule ID**\*.
-1.  Copy the rule ID from one of the DDoS log entries.
-1.  Navigate to **Firewall** > **DDoS** and click **Configure** next to the Managed Ruleset containing the rule you will adjust.
-1.  Click **Browse rules** and paste the Rule ID in the search field.
-1.  Change the rule’s **Action** to _Block_.
-1.  Click **Next** and then **Save**.
+3.  Scroll down to the **Activity log**.
+
+4.  Click **Edit columns** and enable **Rule ID**\*.
+
+5.  Copy the rule ID from one of the DDoS log entries.
+
+6.  Navigate to **Firewall** > **DDoS** and click **Configure** next to the Managed Ruleset containing the rule you will adjust.
+
+7.  Click **Browse rules** and paste the Rule ID in the search field.
+
+8.  Change the rule’s **Action** to _Block_.
+
+9.  Click **Next** and then **Save**.
 
 _\* Not available in Network Analytics dashboard yet._
 
@@ -74,4 +81,4 @@ _\* Not available in Network Analytics dashboard yet._
 The **DDoS** tab under **Firewall** is currently only available to the WAF/CDN customers.
 {{</Aside>}}
 
-Once saved, the rule takes effect within one or two minutes. The rule adjustment should provide immediate remedy, which you can view in the [analytics dashboard](/reference/analytics).
+Once saved, the rule takes effect within one or two minutes. The rule adjustment should provide immediate remedy, which you can view in the [analytics dashboard](/ddos-protection/reference/analytics/).

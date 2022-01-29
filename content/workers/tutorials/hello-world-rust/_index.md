@@ -6,7 +6,7 @@ pcx-content-type: tutorial
 title: Hello World in Rust
 ---
 
-import TutorialsBeforeYouStart from '../../_partials/_tutorials-before-you-start.md';
+import TutorialsBeforeYouStart from '../../\_partials/\_tutorials-before-you-start.md';
 
 # Hello World in Rust
 
@@ -26,11 +26,11 @@ In the command line, generate your Workers project by passing in a project name 
 
 This command creates a directory called `rustwasm-markdown-parser` which you can now `cd` into.
 
-Wrangler templates are Git repositories. If you want to create your own templates, or use one from the [Template Gallery](/examples), there is a variety of options to help you get started.
+Wrangler templates are Git repositories. If you want to create your own templates, or use one from the [Template Gallery](/workers/examples/), there is a variety of options to help you get started.
 
 ## Workers Playground
 
-You can test how your Workers function will execute when it is deployed by using the [`dev` command](/cli-wrangler/commands#dev):
+You can test how your Workers function will execute when it is deployed by using the [`dev` command](/workers/cli-wrangler/commands/#dev):
 
 ```sh
 rustwasm-markdown-parser $ wrangler dev
@@ -134,8 +134,8 @@ In this tutorial, you built and published a Rust-generated WebAssembly serverles
 
 If you enjoyed this tutorial, below you can find other tutorials for building on Cloudflare Workers:
 
-- [Authorize users with Auth0](/tutorials/authorize-users-with-auth0)
-- [Build a JAMStack app](/tutorials/build-a-jamstack-app)
-- [Build a QR code generator](/tutorials/build-a-qr-code-generator)
+*   [Authorize users with Auth0](/workers/tutorials/authorize-users-with-auth0/)
+*   [Build a JAMStack app](/workers/tutorials/build-a-jamstack-app/)
+*   [Build a QR code generator](/workers/tutorials/build-a-qr-code-generator/)
 
-If you want to get started building your own projects, review the existing list of [Quickstart templates](/get-started/quickstarts).
+If you want to get started building your own projects, review the existing list of [Quickstart templates](/workers/get-started/quickstarts/).

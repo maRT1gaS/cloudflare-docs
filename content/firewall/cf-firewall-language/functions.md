@@ -23,7 +23,7 @@ In the expression below, the`lower()` function transforms `http.host` values to 
 lower(http.host) == "www.cloudflare.com"
 ```
 
-Transformation functions that do not take arrays as an argument type require the `[*]` special index notation. Refer to [Arrays](/cf-firewall-language/values#arrays) for more information.
+Transformation functions that do not take arrays as an argument type require the `[*]` special index notation. Refer to [Arrays](/firewall/cf-firewall-language/values/#arrays) for more information.
 
 The Cloudflare Firewall Rules language supports these transformation functions:
 
@@ -38,8 +38,7 @@ The Cloudflare Firewall Rules language supports these transformation functions:
 
   - Returns <code class="InlineCode">true</code> when the comparison operator in the argument returns `true` for <em>any</em> of the values in the argument array. Returns <code class="InlineCode">false</code> otherwise.
 
-  - <em>Example:</em>
-    <br />
+  - <em>Example:</em> <br />
 
     <code class="InlineCode" style="width:100%">
       any(url_decode(http.request.body.form.values[*])[*] contains "an xss attack")
@@ -54,8 +53,7 @@ The Cloudflare Firewall Rules language supports these transformation functions:
 
   - Returns <code class="InlineCode">true</code> when the comparison operator in the argument returns `true` for <em>all</em> values in the argument array. Returns <code class="InlineCode">false</code> otherwise.
 
-  - <em>Example:</em>
-    <br />
+  - <em>Example:</em> <br />
 
     <code class="InlineCode">
       all(http.request.headers['content-type'][*] == "application/json")
@@ -67,8 +65,7 @@ The Cloudflare Firewall Rules language supports these transformation functions:
 
   - Takes a comma-separated list of values. Concatenates the argument values into a single String.
 
-  - <em>Example:</em>
-    <br />
+  - <em>Example:</em> <br />
 
     <code class="InlineCode">concat("String1"," ","String",2) == "String1 String2"</code>
 
@@ -83,7 +80,7 @@ The Cloudflare Firewall Rules language supports these transformation functions:
     `ends_with("/welcome.html", ".html") == true`
 
     {{<Aside type="warning">}}
-    **Warning:** You can only use the `ends_with()` function in [rulesets](https://developers.cloudflare.com/ruleset-engine/) and [Transform Rules](https://developers.cloudflare.com/rules/transform).
+    **Warning:** You can only use the `ends_with()` function in [rulesets](/ruleset-engine/) and [Transform Rules](/rules/transform).
 
     {{</Aside>}}
 
@@ -93,8 +90,7 @@ The Cloudflare Firewall Rules language supports these transformation functions:
 
   - Returns the byte length of a String or Bytes field.
 
-  - <em>Example:</em>
-    <br />
+  - <em>Example:</em> <br />
 
     <code class="InlineCode">len(http.host)</code>
 
@@ -104,8 +100,7 @@ The Cloudflare Firewall Rules language supports these transformation functions:
 
   - Converts a string field to lowercase. Only uppercase ASCII bytes are converted. All other bytes are unaffected.
 
-  - <em>Example:</em>
-    <br />
+  - <em>Example:</em> <br />
 
     <code class="InlineCode">lower(http.host) == "www.cloudflare.com"</code>
 
@@ -137,7 +132,7 @@ The Cloudflare Firewall Rules language supports these transformation functions:
     `regex_replace("/foo/a/path", "^/foo/([^/]*)/(.*)$", "/bar/${2}/${1}") == "/bar/path/a/"`
 
     {{<Aside type="warning">}}
-    **Warning:** You can only use the `regex_replace()` function in [rewrite expressions of Transform Rules](https://developers.cloudflare.com/rules/transform). Additionally, the first argument must be a field under `http.request.headers` or `http.request.uri`.
+    **Warning:** You can only use the `regex_replace()` function in [rewrite expressions of Transform Rules](/rules/transform). Additionally, the first argument must be a field under `http.request.headers` or `http.request.uri`.
 
     {{</Aside>}}
 
@@ -147,10 +142,9 @@ The Cloudflare Firewall Rules language supports these transformation functions:
 
   - Returns a new byte array with all the occurrences of the given bytes removed.
 
-  - <em>Example:</em>
-    <br />
+  - <em>Example:</em> <br />
 
-    <code class="InlineCode">remove_bytes(http.host, "\x2e\x77") == "cloudflarecom"</code>
+    <code class="InlineCode">remove\_bytes(http.host, "\x2e\x77") == "cloudflarecom"</code>
 
 - <code>
     starts_with(source<ParamType>String</ParamType>, substring
@@ -163,7 +157,7 @@ The Cloudflare Firewall Rules language supports these transformation functions:
     `starts_with("/blog/first-post", "/blog") == true`
 
     {{<Aside type="warning">}}
-    **Warning:** You can only use the `starts_with()` function in [rulesets](https://developers.cloudflare.com/ruleset-engine/) and [Transform Rules](https://developers.cloudflare.com/rules/transform).
+    **Warning:** You can only use the `starts_with()` function in [rulesets](/ruleset-engine/) and [Transform Rules](/rules/transform).
 
     {{</Aside>}}
 
@@ -181,7 +175,7 @@ The Cloudflare Firewall Rules language supports these transformation functions:
     ```
 
     {{<Aside type="warning">}}
-    **Warning:** You can only use the `to_string()` function in [rewrite expressions of Transform Rules](https://developers.cloudflare.com/rules/transform).
+    **Warning:** You can only use the `to_string()` function in [rewrite expressions of Transform Rules](/rules/transform).
 
     {{</Aside>}}
 
@@ -191,8 +185,7 @@ The Cloudflare Firewall Rules language supports these transformation functions:
 
   - Converts a string field to uppercase. Only lowercase ASCII bytes are converted. All other bytes are unaffected.
 
-  - <em>Example:</em>
-    <br />
+  - <em>Example:</em> <br />
 
     <code class="InlineCode">upper(http.host) == "WWW.CLOUDFLARE.COM"</code>
 
@@ -208,8 +201,7 @@ The Cloudflare Firewall Rules language supports these transformation functions:
 
     - <code class="InlineCode">%E4%BD</code> decodes to <code class="InlineCode">ä½ </code>
 
-  - <em>Example:</em>
-    <br />
+  - <em>Example:</em> <br />
 
     <code class="InlineCode">
       any(url_decode(http.request.body.form.values[*])[*] contains "an xss attack")
@@ -291,7 +283,7 @@ http.host == "download.example.com"
 and not is_timed_hmac_valid_v0("mysecretkey", http.request.uri, 100000, http.request.timestamp.sec, 8)
 ```
 
-To review examples of firewall rules that use HMAC validation, see [_Common use cases_](/recipes/).
+To review examples of firewall rules that use HMAC validation, see [_Common use cases_](/firewall/recipes/).
 
 ### MessageMAC
 
@@ -353,7 +345,8 @@ and is composed of these parentheses-delimited expressions:
         <p>
           A base64-encoded version of the <em>MAC</em>. When you do not set the value of the{' '}
           <em>urlSafe</em> argument in the HMAC validation function to{' '}
-          <code class="InlineCode">'s'</code>, you must URL encode the base64 value for <em>mac</em>.
+          <code class="InlineCode">'s'</code>, you must URL encode the base64 value for <em>mac</em>
+          .
         </p>
         <p>
           When the base64 MAC encoding is URL-safe, the value for <em>mac</em> contains 43 bytes.

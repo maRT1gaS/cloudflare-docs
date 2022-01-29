@@ -14,10 +14,10 @@ When creating a DNS policy, you can select as many security risk categories and 
 
 Build a DNS policy by configuring the following elements:
 
-- [Expressions](#expressions)
-- [Selectors](#selectors)
-- [Operators](#operators)
-- [Actions](#actions)
+*   [Expressions](#expressions)
+*   [Selectors](#selectors)
+*   [Operators](#operators)
+*   [Actions](#actions)
 
 {{<Aside>}}
 Unless a more specific selector is configured in a policy (e.g., `user email` or `source IP address` for a registered location), then the policy will be evaluated against all DNS queries that reach Gateway from your organization.
@@ -33,7 +33,7 @@ Gateway matches DNS traffic against the following selectors, or criteria:
 
 #### Identity-based selectors
 
-You can build DNS policies using **identity-based selectors**. These selectors require Gateway with WARP mode to be enabled in the Cloudflare for Teams WARP client and the user to be enrolled in the organization via the WARP client. For a list of identity-based selectors and API examples, please refer to the [dedicated section](/policies/filtering/identity-selectors).
+You can build DNS policies using **identity-based selectors**. These selectors require Gateway with WARP mode to be enabled in the Cloudflare for Teams WARP client and the user to be enrolled in the organization via the WARP client. For a list of identity-based selectors and API examples, please refer to the [dedicated section](/cloudflare-one/policies/filtering/identity-selectors/).
 
 #### DOH Subdomain
 
@@ -142,11 +142,11 @@ Just like actions in HTTP policies, actions in DNS policies allow you to choose 
 
 These are the action types you can choose from:
 
-- [Allow](#allow)
-- [Block](#block)
-- [Override](#override)
-- [SafeSearch](#safesearch)
-- [Youtube Restricted Mode](#youtube-restricted-mode)
+*   [Allow](#allow)
+*   [Block](#block)
+*   [Override](#override)
+*   [SafeSearch](#safesearch)
+*   [Youtube Restricted Mode](#youtube-restricted-mode)
 
 ### Allow
 
@@ -184,7 +184,7 @@ You can use Cloudflare Gateway to enable SafeSearch on search engines like Googl
 
 ### YouTube Restricted Mode
 
-Similarly, you can enforce YouTube Restricted mode by choosing the _Youtube Restricted_ action. YouTube Restricted Mode is an automated filter for adult and offensive content built into YouTube. To enable Youtube Restricted Mode, you could set up a policy like the following:
+Similarly, you can enforce YouTube Restricted mode by choosing the *Youtube Restricted* action. YouTube Restricted Mode is an automated filter for adult and offensive content built into YouTube. To enable Youtube Restricted Mode, you could set up a policy like the following:
 
 | Selector   | Operator | Value         | Action             |
 | ---------- | -------- | ------------- | ------------------ |
@@ -194,4 +194,4 @@ This setup ensures users will be blocked from accessing offensive sites using DN
 
 ## Custom block page
 
-When choosing the Block action, toggle the **Display custom block page** setting to respond to queries with a block page, and to specify the message you want to display to users who navigate to blocked websites. If disabled, Gateway will respond to blocked queries with `0.0.0.0`. For more information, see the dedicated documentation on [customizing the block page](/policies/filtering/configuring-block-page).
+When choosing the Block action, toggle the **Display custom block page** setting to respond to queries with a block page, and to specify the message you want to display to users who navigate to blocked websites. If disabled, Gateway will respond to blocked queries with `0.0.0.0`. For more information, see the dedicated documentation on [customizing the block page](/cloudflare-one/policies/filtering/configuring-block-page/).

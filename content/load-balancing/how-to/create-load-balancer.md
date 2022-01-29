@@ -12,7 +12,7 @@ import LBCreateAPI from '../_partials/_load-balancer-create-api.md';
 
 <LBDefinition />
 
-For more details about load balancers, refer to [Load balancers](/understand-basics/load-balancers).
+For more details about load balancers, refer to [Load balancers](/load-balancing/understand-basics/load-balancers/).
 
 ## Via the dashboard
 

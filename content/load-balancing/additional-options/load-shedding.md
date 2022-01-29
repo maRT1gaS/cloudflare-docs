@@ -6,9 +6,9 @@ title: Load shedding
 
 # Load shedding
 
-Use load shedding to prevent an at-risk origin from [becoming unhealthy](/understand-basics/health-details) and starting the failover process.
+Use load shedding to prevent an at-risk origin from [becoming unhealthy](/load-balancing/understand-basics/health-details/) and starting the failover process.
 
-Once you configure load shedding on a pool, that pool will begin diverting traffic to other pools according to your load shedding settings and the load balancer's [steering policy](/understand-basics/traffic-steering).
+Once you configure load shedding on a pool, that pool will begin diverting traffic to other pools according to your load shedding settings and the load balancer's [steering policy](/load-balancing/understand-basics/traffic-steering/).
 
 ## Step 1 — Identify at-risk origins
 
@@ -19,7 +19,7 @@ Using your internal metrics, identify origins at risk of reaching their failure 
 
 ## Step 2 — Shed default traffic from a pool
 
-Once you have identified an at-risk origin, shed a small amount of **Default** traffic from that origin's pool. This traffic is not affiliated with existing [Session affinity](/understand-basics/session-affinity) sessions.
+Once you have identified an at-risk origin, shed a small amount of **Default** traffic from that origin's pool. This traffic is not affiliated with existing [Session affinity](/load-balancing/understand-basics/session-affinity/) sessions.
 
 Configure load shedding via the [dashboard](#configure-via-dashboard) or the [API](#configure-via-api).
 
@@ -28,10 +28,10 @@ Configure load shedding via the [dashboard](#configure-via-dashboard) or the [AP
 To enable load shedding for a specific pool via the dashboard:
 
 1.  Go to **Traffic** > **Load Balancing**.
-1.  Click **Manage Pools**.
-1.  On a pool, click **Edit**.
-1.  Click the **Configure Load Shedding** dropdown.
-1.  For **Default traffic**, select a **Policy** and a **Shed %**:
+2.  Click **Manage Pools**.
+3.  On a pool, click **Edit**.
+4.  Click the **Configure Load Shedding** dropdown.
+5.  For **Default traffic**, select a **Policy** and a **Shed %**:
 
                   <details>
 
@@ -96,7 +96,7 @@ For more guidance on choosing a shedding policy, see [Shedding policies](#sheddi
 
 ## Step 3 — Monitor traffic
 
-Once you have started shedding default traffic, evaluate the effects by reviewing the [**Overview** metrics](/load-balancing-analytics#overview-metrics) in Load Balancing analytics. Based on these numbers and your internal metrics, you will know whether you need to divert additional traffic from the pool.
+Once you have started shedding default traffic, evaluate the effects by reviewing the [**Overview** metrics](/load-balancing/load-balancing-analytics/#overview-metrics) in Load Balancing analytics. Based on these numbers and your internal metrics, you will know whether you need to divert additional traffic from the pool.
 
 If you see increased traffic to a pool, you may need to shed additional traffic. Pools shed a percentage of total traffic, so any increase in total traffic will also increase the traffic reaching your pool.
 
@@ -104,11 +104,11 @@ If you see increased traffic to a pool, you may need to shed additional traffic.
 
 If you need to shed additional pool traffic:
 
-1. Follow the steps outlined in [Step 2](#step-2--shed-default-traffic-from-a-pool).
-   - In the dashboard, increase the **Shed %** for **Default traffic** and/or **Session affinity traffic**.
-   - For the API, increase the value for `default_percent` and/or `session_percent`.
+1.  Follow the steps outlined in [Step 2](#step-2--shed-default-traffic-from-a-pool).
+    - In the dashboard, increase the **Shed %** for **Default traffic** and/or **Session affinity traffic**.
+    - For the API, increase the value for `default_percent` and/or `session_percent`.
 
-Since shedding **Session Affinity traffic** will disrupt [existing sessions](/understand-basics/session-affinity) and may degrade the customer experience, only enable this option if your pool is in imminent danger of becoming unhealthy or your pool has a high percentage of traffic related to existing sessions. For more guidance, see [Shedding policies](#shedding-policies).
+Since shedding **Session Affinity traffic** will disrupt [existing sessions](/load-balancing/understand-basics/session-affinity/) and may degrade the customer experience, only enable this option if your pool is in imminent danger of becoming unhealthy or your pool has a high percentage of traffic related to existing sessions. For more guidance, see [Shedding policies](#shedding-policies).
 
 ## Step 5 — Disable load shedding
 
@@ -128,7 +128,7 @@ A _Random_ policy:
 
 - Randomly sheds the percentage of requests specified in the _Shed %_.
 - Distributes traffic more accurately because it sheds at the request level.
-- May cause requests from the same IP to hit different origins, potentially leading to cache misses, inconsistent latency, or session disruption for [DNS-only load balancers](/understand-basics/proxy-modes#dns-only-mode).
+- May cause requests from the same IP to hit different origins, potentially leading to cache misses, inconsistent latency, or session disruption for [DNS-only load balancers](/load-balancing/understand-basics/proxy-modes/#dns-only-mode).
 
 An _IP hash_ policy:
 
@@ -138,7 +138,7 @@ An _IP hash_ policy:
 
 Choose a _Random_ policy when you want a more accurate distribution of raw requests and an _IP hash_ policy when you want to prevent a single IP from flapping between different origins.
 
-For **Session Affinity traffic**, you can only use an _IP hash_ policy since these requests relate to existing sessions. Only increase the _Shed %_ if you are comfortable disrupting [existing sessions](/understand-basics/session-affinity).
+For **Session Affinity traffic**, you can only use an _IP hash_ policy since these requests relate to existing sessions. Only increase the _Shed %_ if you are comfortable disrupting [existing sessions](/load-balancing/understand-basics/session-affinity/).
 
 ### Fallback pools
 

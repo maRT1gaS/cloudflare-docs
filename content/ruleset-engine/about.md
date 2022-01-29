@@ -47,7 +47,7 @@ The `kind` field of phase entry point rulesets has one of the following values:
 
 - `root` for phase entry point rulesets at the account level
 - `zone` for phase entry point rulesets at the zone level
-{{</Aside>}}
+  {{</Aside>}}
 
 ### Managed Rulesets
 
@@ -57,7 +57,7 @@ The rules in a Managed Ruleset have a default action and status. However, you ca
 
 There are several Cloudflare products that provide you with Managed Rulesets. Check each product’s documentation for details on the available Managed Rulesets.
 
-For more information on deploying Managed Rulesets and defining overrides, check [Work with Managed Rulesets](/managed-rulesets).
+For more information on deploying Managed Rulesets and defining overrides, check [Work with Managed Rulesets](/ruleset-engine/managed-rulesets/).
 
 ### Custom rulesets
 
@@ -67,7 +67,7 @@ Currently, custom rulesets are only supported by the Cloudflare WAF.
 
 Use custom rulesets to define your own sets of rules. After creating a custom ruleset, deploy it to a phase by creating a rule that executes the ruleset.
 
-For more information on creating and deploying custom rulesets, check [Work with custom rulesets](/custom-rulesets).
+For more information on creating and deploying custom rulesets, check [Work with custom rulesets](/ruleset-engine/custom-rulesets/).
 
 ## Rules
 
@@ -83,8 +83,8 @@ Rules can have additional features through specific Cloudflare products. You may
 
 ## Get started
 
-To view existing rulesets and their properties, see [View rulesets](/basic-operations/view-rulesets).
+To view existing rulesets and their properties, see [View rulesets](/ruleset-engine/basic-operations/view-rulesets/).
 
-For more information on deploying Managed Rulesets and defining overrides, check [Work with Managed Rulesets](/managed-rulesets).
+For more information on deploying Managed Rulesets and defining overrides, check [Work with Managed Rulesets](/ruleset-engine/managed-rulesets/).
 
-For more information on creating and deploying custom rulesets, check [Work with custom rulesets](/custom-rulesets).
+For more information on creating and deploying custom rulesets, check [Work with custom rulesets](/ruleset-engine/custom-rulesets/).

@@ -6,7 +6,7 @@ pcx-content-type: tutorial
 title: GitHub SMS notifications using Twilio
 ---
 
-import TutorialsBeforeYouStart from '../../_partials/_tutorials-before-you-start.md';
+import TutorialsBeforeYouStart from '../../\_partials/\_tutorials-before-you-start.md';
 
 # GitHub SMS notifications using Twilio
 
@@ -18,13 +18,13 @@ In this tutorial, you will learn to build an SMS notification system on Workers 
 
 You will learn how to:
 
-- Build Webhooks using Workers
-- Integrate Workers with GitHub and Twilio
-- Use Worker secrets with Wrangler
+*   Build Webhooks using Workers
+*   Integrate Workers with GitHub and Twilio
+*   Use Worker secrets with Wrangler
 
 ![Video of receiving a text after pushing to a repo](media/video-of-receiving-a-text-after-pushing-to-a-repo.gif)
 
----
+***
 
 ## Generate a project
 
@@ -46,27 +46,27 @@ First, create a Webhook for your repository to post updates to your Worker. Insi
 
 You can reference the finished code on this [GitHub repository](https://github.com/davidtsong/github-twilio-notifications/).
 
----
+***
 
 ## Configure GitHub
 
 To start, you will need to configure a GitHub Webhook to post to your Worker when there is an update to the repository:
 
-1. Go to your Github repository's **Settings** > **Webhooks** > **Add webhook**.
+1.  Go to your Github repository's **Settings** > **Webhooks** > **Add webhook**.
 
-2. Set the Payload URL to the `/webhook` path on your Worker URL. You can find your worker URL by populating [your account id in the `wrangler.toml`](/get-started/guide#6-preview-your-project) file and then [running `wrangler publish` in your command line](/get-started/guide#8-publish-your-project) to generate a live URL for your Worker.
+2.  Set the Payload URL to the `/webhook` path on your Worker URL. You can find your worker URL by populating [your account id in the `wrangler.toml`](/workers/get-started/guide/#6-preview-your-project) file and then [running `wrangler publish` in your command line](/workers/get-started/guide/#8-publish-your-project) to generate a live URL for your Worker.
 
-3. In the **Content type** dropdown, select _application/json_.
+3.  In the **Content type** dropdown, select *application/json*.
 
-4. In the **Secret** field, input a secret key of your choice.
+4.  In the **Secret** field, input a secret key of your choice.
 
-5. In **Which events would you like to trigger this webhook?**, select **Let me select individual events**. Select the events you want to get notifications for (e.g., **Pull requests**, **Pushes**, and **Branch or tag creation**).
+5.  In **Which events would you like to trigger this webhook?**, select **Let me select individual events**. Select the events you want to get notifications for (e.g., **Pull requests**, **Pushes**, and **Branch or tag creation**).
 
-6. Select **Add webhook** to finish configuration.
+6.  Select **Add webhook** to finish configuration.
 
 ![GitHub config screenshot](media/github-config-screenshot.png)
 
----
+***
 
 ## Parsing the response
 
@@ -93,7 +93,7 @@ async function handleRequest(request) {
 }
 ```
 
-Begin by modifying the starter code to handle a `POST` response and renaming the request handler. You can use the `request.method` property of [request](/runtime-apis/request) to check if the request is a `POST` request, and send an error response if the request is not a `POST` request. The `simpleResponse` function is an easy wrapper for you to respond with requests using your Worker.
+Begin by modifying the starter code to handle a `POST` response and renaming the request handler. You can use the `request.method` property of [request](/workers/runtime-apis/request/) to check if the request is a `POST` request, and send an error response if the request is not a `POST` request. The `simpleResponse` function is an easy wrapper for you to respond with requests using your Worker.
 
 ```js
 ---
@@ -171,7 +171,7 @@ async function checkSignature(formData, headers) {
 }
 ```
 
-Since our project relies on importing a library, use [webpack](/cli-wrangler/webpack/) and update your `wrangler.toml` file to set `type = "webpack"`.
+Since our project relies on importing a library, use [webpack](/workers/cli-wrangler/webpack/) and update your `wrangler.toml` file to set `type = "webpack"`.
 
 Your `wrangler.toml` should look something like this:
 
@@ -187,7 +187,7 @@ route = ""
 zone_id = ""
 ```
 
----
+***
 
 ## Sending a text with Twilio
 
@@ -274,12 +274,12 @@ You can reference the finished code on this [GitHub repository](https://github.c
 
 By completing this tutorial, you have learned how to:
 
-- Build Webhooks using Workers
-- Integrate Workers with GitHub and Twilio
-- Use Worker secrets with Wrangler
+*   Build Webhooks using Workers
+*   Integrate Workers with GitHub and Twilio
+*   Use Worker secrets with Wrangler
 
 Other tutorials:
 
-- [Authorize users with Auth0](/tutorials/authorize-users-with-auth0)
-- [Build a JAMStack app](/tutorials/build-a-jamstack-app)
-- [Build a QR code generator](/tutorials/build-a-qr-code-generator)
+*   [Authorize users with Auth0](/workers/tutorials/authorize-users-with-auth0/)
+*   [Build a JAMStack app](/workers/tutorials/build-a-jamstack-app/)
+*   [Build a QR code generator](/workers/tutorials/build-a-qr-code-generator/)

@@ -10,9 +10,9 @@ This tutorial explains how to analyze [Cloudflare Logs](https://www.cloudflare.c
 
 ## Overview
 
-If you have not used Cloudflare Logs before, refer to the [Logs documentation](https://developers.cloudflare.com/logs) for more details. Contact your Cloudflare Customer Account Team to enable logs for your account.
+If you have not used Cloudflare Logs before, refer to the [Logs documentation](/logs) for more details. Contact your Cloudflare Customer Account Team to enable logs for your account.
 
-This tutorial describes how to use Cloudflare Logpush to send logs to AWS S3 and the [AWS S3 source collector](https://help.sumologic.com/03Send-Data/Sources/02Sources-for-Hosted-Collectors/Amazon-Web-Services/AWS-S3-Source) to get logs into Sumo Logic. To learn how to use Logpush to send logs to AWS S3, refer to the [Logpush documentation](https://developers.cloudflare.com/logs/get-started/enable-destinations/aws-s3). Alternatively, you can use [Logpull](https://developers.cloudflare.com/logs/logpull) to get logs to your Sumo Logic instance directly and skip Task 1.
+This tutorial describes how to use Cloudflare Logpush to send logs to AWS S3 and the [AWS S3 source collector](https://help.sumologic.com/03Send-Data/Sources/02Sources-for-Hosted-Collectors/Amazon-Web-Services/AWS-S3-Source) to get logs into Sumo Logic. To learn how to use Logpush to send logs to AWS S3, refer to the [Logpush documentation](/logs/get-started/enable-destinations/aws-s3). Alternatively, you can use [Logpull](/logs/logpull) to get logs to your Sumo Logic instance directly and skip Task 1.
 
 ### Prerequisites
 
@@ -20,7 +20,7 @@ Before sending your Cloudflare log data to Sumo Logic, make sure that you:
 
 - Have an existing Sumo Logic account
 - Have a Cloudflare Enterprise account with Cloudflare Logs enabled
-- Configure [Logpush](https://developers.cloudflare.com/logs/about) or [Logpull](https://developers.cloudflare.com/logs/logpull)
+- Configure [Logpush](/logs/about) or [Logpull](/logs/logpull)
 - Consult the [Sumo Logic documentation](https://help.sumologic.com/07Sumo-Logic-Apps/18SAAS_and_Cloud_Apps/Cloudflare) for the Cloudflare App
 
 {{<Aside type="note" header="Note">}}
@@ -35,21 +35,21 @@ You can use either **Cloudflare Logpush** or **AWS S3** to send your Cloudflare 
 
 To enable Cloudflare Logpush in Sumo Logic:
 
-1. Configure a [Hosted Collector](https://help.sumologic.com/03Send-Data/Hosted-Collectors/Configure-a-Hosted-Collector).
+1.  Configure a [Hosted Collector](https://help.sumologic.com/03Send-Data/Hosted-Collectors/Configure-a-Hosted-Collector).
 
-2. Configure an [HTTP Logs and Metrics Source](https://help.sumologic.com/03Send-Data/Sources/02Sources-for-Hosted-Collectors/HTTP-Source).
+2.  Configure an [HTTP Logs and Metrics Source](https://help.sumologic.com/03Send-Data/Sources/02Sources-for-Hosted-Collectors/HTTP-Source).
 
-3. Provide the _HTTP Source Address (URL)_ required by the Cloudflare Logpush API or Cloudflare dashboard UI.
+3.  Provide the _HTTP Source Address (URL)_ required by the Cloudflare Logpush API or Cloudflare dashboard UI.
 
-4. Enable [Cloudflare Logpush to Sumo Logic](https://developers.cloudflare.com/logs/get-started/enable-destinations/sumo-logic).
+4.  Enable [Cloudflare Logpush to Sumo Logic](/logs/get-started/enable-destinations/sumo-logic).
 
 ### 1.2 Send log data via AWS S3
 
 To connect AWS S3 to Sumo Logic:
 
-1. [Configure your AWS S3 Source](https://help.sumologic.com/03Send-Data/Sources/02Sources-for-Hosted-Collectors/Amazon-Web-Services/AWS-S3-Source).
+1.  [Configure your AWS S3 Source](https://help.sumologic.com/03Send-Data/Sources/02Sources-for-Hosted-Collectors/Amazon-Web-Services/AWS-S3-Source).
 
-2. Begin collecting Cloudflare logs data.
+2.  Begin collecting Cloudflare logs data.
 
 ## Task 2 - Filter Workers requests
 
@@ -63,10 +63,10 @@ Under **Processing Rules for Logs** create a **Filter** (processing rule regex o
 
 To install the [Cloudflare App for Sumo Logic](https://help.sumologic.com/07Sumo-Logic-Apps/18SAAS_and_Cloud_Apps/Cloudflare):
 
-1. In the Sumo Logic UI, click **App Catalog** and search for _Cloudflare_.
-   ![Sumo Logic Cloudflare in App Catalog](../../../static/images/sumo-logic/screenshots/cloudflare-app-sumo-logic-app-catalog.png)
+1.  In the Sumo Logic UI, click **App Catalog** and search for _Cloudflare_.
+    ![Sumo Logic Cloudflare in App Catalog](../../../static/images/sumo-logic/screenshots/cloudflare-app-sumo-logic-app-catalog.png)
 
-2. Click **Add to Library** and specify the **Source** category _Cloudflare_, which was completed in Step 1.
+2.  Click **Add to Library** and specify the **Source** category _Cloudflare_, which was completed in Step 1.
 
 You should now be able to see the Cloudflare dashboards populated with your Cloudflare log data.
 

@@ -14,7 +14,7 @@ This article provides an introduction to browsing the Analytics GraphQL schema w
 
 ## Prerequisites
 
-Before you begin, [configure the API endpoint and HTTP headers](/graphql-api/getting-started/authentication/graphql-client-headers) in the GraphiQL client.
+Before you begin, [configure the API endpoint and HTTP headers](/analytics/graphql-api/getting-started/authentication/graphql-client-headers/) in the GraphiQL client.
 
 ## Open the Documentation Explorer
 
@@ -28,9 +28,7 @@ The **Documentation Explorer** opens and displays a list of available objects:
 
 Objects in the **Documentation Explorer** use this syntax:
 
-```
-object-name: object-type-definition
-```
+    object-name: object-type-definition
 
 ## Find the type definition of an object
 
@@ -80,7 +78,7 @@ The definition for the data set displays. This example shows the `firewallEvents
 
 ![firewallEventsAdaptive data set definition](../../static/images/graphiql-doc-explorer-firewallevents-definition.png)
 
-Refer to [_Data Sets (tables)_](/graphql-api/features/data-sets) for details on the nomenclature and behavior of these nodes.
+Refer to [_Data Sets (tables)_](/analytics/graphql-api/features/data-sets/) for details on the nomenclature and behavior of these nodes.
 
 ## Find the fields available for a data set
 
@@ -94,4 +92,4 @@ The list of fields displays:
 
 ![ZoneFirewallEventsAdaptive type definition](../../static/images/graphiql-doc-explorer-firewall-fields.png)
 
-For more on working with the Analytics API in GraphiQL, see [Create a query in GraphiQL](/graphql-api/getting-started/compose-graphql-query).
+For more on working with the Analytics API in GraphiQL, see [Create a query in GraphiQL](/analytics/graphql-api/getting-started/compose-graphql-query/).

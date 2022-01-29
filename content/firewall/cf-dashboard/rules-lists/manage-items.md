@@ -10,9 +10,9 @@ title: Manage list items (IP addresses)
 
 To view the items in a Firewall Rules list, follow these steps:
 
-1. [Access the Lists interface](/cf-dashboard/rules-lists/) in the **Configurations > Lists** page of your Cloudflare account.
+1.  [Access the Lists interface](/firewall/cf-dashboard/rules-lists/) in the **Configurations > Lists** page of your Cloudflare account.
 
-1. To view items in a list, click the **Edit** link associated with the list you want to view.
+2.  To view items in a list, click the **Edit** link associated with the list you want to view.
 
 The list of items displays sorted by IP address, ascending:
 
@@ -39,48 +39,48 @@ For example, instead of `2001:8a0:6a0b:1a01:d423:43b9:13c5:2e8f`, enter one of t
 
 - `2001:8a0:6a0b:1a01:0000:0000:0000:0000/64`
 - `2001:8a0:6a0b:1a01::/64` (using the [double colon notation](https://tools.ietf.org/html/rfc5952#section-4.2))
-{{</Aside>}}
+  {{</Aside>}}
 
 You can use uppercase or lowercase characters for IPv6 addresses in lists. However, when you save the list, uppercase characters are converted to lowercase.
 
 To add items to a Firewall Rules list, follow these steps:
 
-1. [Access the Lists interface](https://developers.cloudflare.com/firewall/cf-dashboard/rules-lists/) in the **Configurations > Lists** page of your Cloudflare account.
+1.  [Access the Lists interface](/firewall/cf-dashboard/rules-lists/) in the **Configurations > Lists** page of your Cloudflare account.
 
-1. Click the **Edit** button associated with the list that you want to edit.
+2.  Click the **Edit** button associated with the list that you want to edit.
 
-   The list of IP items displays.
+    The list of IP items displays.
 
-1. Click **Add items**.
+3.  Click **Add items**.
 
-   The **Add items to list** page displays:
+    The **Add items to list** page displays:
 
-   ![Add items to list page](../../images/lists-add-items-to-list-page.png)
+    ![Add items to list page](../../images/lists-add-items-to-list-page.png)
 
-1. To [add items to the list manually](#add-items-to-a-list-manually), use the text inputs in the Lists interface.
+4.  To [add items to the list manually](#add-items-to-a-list-manually), use the text inputs in the Lists interface.
 
-1. To [add items in CSV format](/cf-dashboard/rules-lists/manage-items/#add-items-in-csv-format), click **Upload CSV**.
+5.  To [add items in CSV format](/firewall/cf-dashboard/rules-lists/manage-items/#add-items-in-csv-format), click **Upload CSV**.
 
 ### Add items to a list manually
 
-1. In the **Add items to list** page, add an IP Address and an optional description in the text inputs.
+1.  In the **Add items to list** page, add an IP Address and an optional description in the text inputs.
 
-   ![Enter list items manually](../../images/lists-add-items-manually.png)
+    ![Enter list items manually](../../images/lists-add-items-manually.png)
 
-1. As you enter information into a text input, a new row of inputs displays below the current one.
+2.  As you enter information into a text input, a new row of inputs displays below the current one.
 
-   To delete any of the IP addresses that you have entered, click **X**.
+    To delete any of the IP addresses that you have entered, click **X**.
 
-1. Click **Add to list** to add the new items.
+3.  Click **Add to list** to add the new items.
 
-   The updated list displays.
+    The updated list displays.
 
 ### Add items in CSV format
 
 {{<Aside type="warning" header="Important">}}
 Importing a CSV file to a list only updates descriptions or adds items to the list. It does not delete items from a list.
 
-If you need to replace the entire contents of a list, format the data as an array and use the Update Lists operation in the [Lists API](/api/cf-lists/endpoints).
+If you need to replace the entire contents of a list, format the data as an array and use the Update Lists operation in the [Lists API](/firewall/api/cf-lists/endpoints/).
 {{</Aside>}}
 
 #### Use valid CSV file format
@@ -96,46 +96,46 @@ IP-address
 
 To add items to a Firewall Rules list by uploading a CSV file, follow these steps:
 
-1. In the **Add items to list** page, click **Upload CSV**.
+1.  In the **Add items to list** page, click **Upload CSV**.
 
-   Your operating system's file browser dialog displays.
+    Your operating system's file browser dialog displays.
 
-1. Browse to the location of the CSV file, select it, and click **Open**.
+2.  Browse to the location of the CSV file, select it, and click **Open**.
 
-   The **Add items to list** page updates to include the items from the CSV file:
+    The **Add items to list** page updates to include the items from the CSV file:
 
-   ![CSV items shown in Add items page](../../images/lists-add-items-csv.png)
+    ![CSV items shown in Add items page](../../images/lists-add-items-csv.png)
 
-1. You can continue to edit the items in the list before adding them:
+3.  You can continue to edit the items in the list before adding them:
 
-   - To delete any of the IP addresses that you have entered, click **X**.
-   - To add extra IP addresses manually, enter the information in the text inputs.
+    - To delete any of the IP addresses that you have entered, click **X**.
+    - To add extra IP addresses manually, enter the information in the text inputs.
 
-1. Click **Add to list** to add the new items to your list.
+4.  Click **Add to list** to add the new items to your list.
 
-   The updated list displays.
+    The updated list displays.
 
 {{<Aside type="warning" header="Important">}}
 When uploading CSV data, keep in mind that duplicate data is treated as follows:
 
 - IP addresses that were already in the list are updated with the description from the CSV file.
 - IP addresses in the CSV file that were not already in the list are added to the list.
-{{</Aside>}}
+  {{</Aside>}}
 
 ## Delete items from a list
 
 To delete items from a Firewall Rules list, follow these steps:
 
-1. [Access the Lists interface](/cf-dashboard/rules-lists/) in the **Configurations > Lists** page of your Cloudflare account.
+1.  [Access the Lists interface](/firewall/cf-dashboard/rules-lists/) in the **Configurations > Lists** page of your Cloudflare account.
 
-1. Click the **Edit** link associated with list from which you want to delete.
+2.  Click the **Edit** link associated with list from which you want to delete.
 
-1. Select the checkboxes next to the items that you want to delete. To select all of the items, use the checkbox in the column header:
+3.  Select the checkboxes next to the items that you want to delete. To select all of the items, use the checkbox in the column header:
 
-   ![Delete items from list](../../images/lists-delete-items.png)
+    ![Delete items from list](../../images/lists-delete-items.png)
 
-1. Click **Remove** to delete the selected items from the list.
+4.  Click **Remove** to delete the selected items from the list.
 
-1. Click **Remove** in the confirmation dialog.
+5.  Click **Remove** in the confirmation dialog.
 
-   The updated list displays.
+    The updated list displays.

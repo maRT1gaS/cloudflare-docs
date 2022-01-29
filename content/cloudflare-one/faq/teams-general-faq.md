@@ -4,7 +4,7 @@ pcx-content-type: faq
 title: General
 ---
 
-[❮ Back to FAQ](/faq)
+[❮ Back to FAQ](/cloudflare-one/faq/)
 
 # General
 

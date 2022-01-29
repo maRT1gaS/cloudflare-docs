@@ -8,7 +8,7 @@ title: Configure an Analytics API token
 
 Cloudflare recommends API tokens as the preferred authentication method with Cloudflare APIs. This article walks through creating API tokens for authentication to the GraphQL Analytics API.
 
-For more detail on API tokens and the full range of supported options, see [_Creating API tokens_](https://developers.cloudflare.com/api/tokens/create).
+For more detail on API tokens and the full range of supported options, see [_Creating API tokens_](/api/tokens/create).
 
 To create an API token for authentication to the GraphQL Analytics API, use this workflow:
 
@@ -22,13 +22,13 @@ To create an API token for authentication to the GraphQL Analytics API, use this
 
 To access the **Create Custom Token** page, follow these steps:
 
-1. Log in to your Cloudflare account and select _My Profile_ from the user account drop-down list.
+1.  Log in to your Cloudflare account and select _My Profile_ from the user account drop-down list.
 
 ![User account drop-down list](../../../static/images/account-profile.png)
 
-1. In your user profile page, select the **API Tokens** tab.
+1.  In your user profile page, select the **API Tokens** tab.
 
-1. In the **API Tokens** page, click **Create Token**.
+2.  In the **API Tokens** page, click **Create Token**.
 
 ![API Tokens tab](../../../static/images/user-profile-api-tokens-tab.png)
 
@@ -42,7 +42,7 @@ The next section of this walkthrough shows you how to [configure a custom token]
 
 To configure a custom token, follow these steps:
 
-1. Click **Get started** in the **Custom token** section of the **Create API Token** page:
+1.  Click **Get started** in the **Custom token** section of the **Create API Token** page:
 
 ![Create API Token page](../../../static/images/create-api-token-get-started.png)
 
@@ -50,27 +50,27 @@ The **Create Custom Token** page displays:
 
 ![Create Custom Token page](../../../static/images/create-custom-api-token.png)
 
-1. Enter a descriptive name for your token in the **Token name** text input field.
+1.  Enter a descriptive name for your token in the **Token name** text input field.
 
-1. To configure access to the GraphQL Analytics API, use the **Permissions** drop-down lists. To set permissions for the GraphQL Analytics API, select _Analytics_ from the second drop-down list.
+2.  To configure access to the GraphQL Analytics API, use the **Permissions** drop-down lists. To set permissions for the GraphQL Analytics API, select _Analytics_ from the second drop-down list.
 
 This example scopes zone-level permissions for read access to the Analytics API:
 
 ![Configure permissions](../../../static/images/create-custom-token-permissions.png)
 
-1. To configure the specific zones to which the token grants access, use the **Resources** drop-down lists. In this example, the token is set to grant access to all zones:
+1.  To configure the specific zones to which the token grants access, use the **Resources** drop-down lists. In this example, the token is set to grant access to all zones:
 
 ![Configure resources](../../../static/images/create-custom-token-zone-resources.png)
 
-1. [Optional] To restrict the API token to specific IP addresses, use the **IP Address Filtering** controls.
+1.  \[Optional] To restrict the API token to specific IP addresses, use the **IP Address Filtering** controls.
 
 ![Configure IP](../../../static/images/create-custom-token-ip-address-filtering.png)
 
-1. To define how long the token is valid, click the **TTL** (time-to-live) start/end date picker.
+1.  To define how long the token is valid, click the **TTL** (time-to-live) start/end date picker.
 
 ![Configure TTL](../../../static/images/create-custom-token-ttl.png)
 
-1. Click **Continue to summary**.
+1.  Click **Continue to summary**.
 
 The next section of this walkthrough shows you how to [review and test your API token](#review-and-test-your-api-token).
 

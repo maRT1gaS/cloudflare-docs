@@ -10,19 +10,19 @@ You can start a live stream using the Stream Dashboard or the API. After you sub
 
 ## Using the Dashboard
 
-1. To start a live stream using the Stream Dashboard, click the **Live Inputs** tab.
+1.  To start a live stream using the Stream Dashboard, click the **Live Inputs** tab.
 
 ![Start a live stream by choosing the Live Inputs tab](./live-inputs-dash.png)
 
-1. Next, click **Create Live Input**.
+1.  Next, click **Create Live Input**.
 
 ![Create a Live Input](./create-live-input.png)
 
-1. Give your Live Input a name and click **Create Live Input**.
+1.  Give your Live Input a name and click **Create Live Input**.
 
 ![Give your Live Input a name](./live-input-name.png)
 
-1. Once you have created a Live Input, you can retrieve the RTMPS URL and Key.
+1.  Once you have created a Live Input, you can retrieve the RTMPS URL and Key.
 
 ![Your Live Input's RTMPS URL and key](./rtmps-key.png)
 

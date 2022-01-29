@@ -10,7 +10,7 @@ Each client supports the following set of parameters as part of their deployment
 
 ## Required for full Cloudflare One features
 
-For the vast majority of Cloudflare for Teams features to work, you need to specify a team name. Examples of Teams features depending on the team name are [HTTP policies](/policies/filtering/http-policies), [Browser Isolation](/connections/connect-browsers), and [device posture](/identity/devices).
+For the vast majority of Cloudflare for Teams features to work, you need to specify a team name. Examples of Teams features depending on the team name are [HTTP policies](/cloudflare-one/policies/filtering/http-policies/), [Browser Isolation](/cloudflare-one/connections/connect-browsers/), and [device posture](/cloudflare-one/identity/devices/).
 
 ### `organization`
 
@@ -18,9 +18,9 @@ For the vast majority of Cloudflare for Teams features to work, you need to spec
 | -------------- | ---------- |
 | `organization` | string     |
 
-**Description.** Instructs the client to register device with your organization. Registration requires authentication via an [IDP](/identity/idp-integration) or [Service Auth](/identity/service-auth).
+**Description.** Instructs the client to register device with your organization. Registration requires authentication via an [IDP](/cloudflare-one/identity/idp-integration/) or [Service Auth](/cloudflare-one/identity/service-auth/).
 
-**Value:** Your [team name](/glossary#team-name).
+**Value:** Your [team name](/cloudflare-one/glossary/#team-name).
 
 ## Required field for DNS only policy enforcemet
 
@@ -34,7 +34,7 @@ This field is only required to enforce DNS policies when deploying the client in
 
 **Description.** Instructs the client to direct all DNS queries to a specific policy location. This value is only necessary if deploying without a team name _or_ in an organization with multiple policy locations.
 
-**Value:** Your [DoH subdomain](/glossary#doh-subdomain).
+**Value:** Your [DoH subdomain](/cloudflare-one/glossary/#doh-subdomain).
 
 ## Optional fields
 
@@ -48,8 +48,8 @@ This field is only required to enforce DNS policies when deploying the client in
 
 **Value:**
 
-- `1dot1` Gateway enforcement of DNS policies only through [DoH](/glossary#doh). All other traffic is handled by your devices default mechanisms
-- `warp` [default value] All traffic sent through [Cloudflare Gateway](/glossary#cloudflare-gateway) via our encrypted tunnel. This mode is required for features such as HTTP policies, Browser Isolation, identity-based rules, or device posture.
+- `1dot1` Gateway enforcement of DNS policies only through [DoH](/cloudflare-one/glossary/#doh). All other traffic is handled by your devices default mechanisms
+- `warp` \[default value] All traffic sent through [Cloudflare Gateway](/cloudflare-one/glossary/#cloudflare-gateway) via our encrypted tunnel. This mode is required for features such as HTTP policies, Browser Isolation, identity-based rules, or device posture.
 
 ### `onboarding`
 
@@ -62,7 +62,7 @@ This field is only required to enforce DNS policies when deploying the client in
 **Value:**
 
 - `false` Screens hidden.
-- `true` [default value] Screen visible.
+- `true` \[default value] Screen visible.
 
 ### `switch_locked`
 
@@ -74,7 +74,7 @@ This field is only required to enforce DNS policies when deploying the client in
 
 **Value:**
 
-- `false` [default value] The user is able to turn switch on/off at their discretion. When the switch is off, the user will not have the ability to reach sites protected by Access that leverage certain device posture checks.
+- `false` \[default value] The user is able to turn switch on/off at their discretion. When the switch is off, the user will not have the ability to reach sites protected by Access that leverage certain device posture checks.
 - `true` The user is prevented from turning off the switch.
 
 On new deployments, you must also include the `auto_connect` parameter with at least a value of 0. This will prevent clients from being deployed in the off state without a way for users to manually enable them.
@@ -96,9 +96,9 @@ This parameter replaces the old `enabled` property, which can no longer be used 
 - `0` Allow the switch to stay in the off position indefinitely until the user turns it back on.
 - `1-1440` Turn switch back on automatically after the specified number of minutes.
 
-{{<Aside>}}  This parameter replaces the old `enabled` property, which can no longer be used in conjunction
-  with the new `switch_locked` and `auto_connect`. If you want to use these parameters, you must
-  remove `enabled`.{{</Aside>}}
+{{<Aside>}} This parameter replaces the old `enabled` property, which can no longer be used in conjunction
+with the new `switch_locked` and `auto_connect`. If you want to use these parameters, you must
+remove `enabled`.{{</Aside>}}
 
 ### `support_url`
 
@@ -115,10 +115,10 @@ This parameter replaces the old `enabled` property, which can no longer be used 
 
 ## Authentication with service tokens
 
-{{<Aside>}}  Devices that connect to Cloudflare for Teams with Service Token authentication are not subject to
-  identity based rules.{{</Aside>}}
+{{<Aside>}} Devices that connect to Cloudflare for Teams with Service Token authentication are not subject to
+identity based rules.{{</Aside>}}
 
-Instead of requiring users to authenticate with their credentials, you can deploy the WARP client with a pre-generated [Service Token](/identity/service-auth/service-tokens).
+Instead of requiring users to authenticate with their credentials, you can deploy the WARP client with a pre-generated [Service Token](/cloudflare-one/identity/service-auth/service-tokens/).
 
 Both a `auth_client_id` and `auth_client_secret` are required when using this authentication method.
 
@@ -128,7 +128,7 @@ Both a `auth_client_id` and `auth_client_secret` are required when using this au
 | ---------------- | ---------- |
 | `auth_client_id` | string     |
 
-**Description.** The automatically genereated ID when you created your [Service Token](/identity/service-auth/service-tokens).
+**Description.** The automatically genereated ID when you created your [Service Token](/cloudflare-one/identity/service-auth/service-tokens/).
 
 **Value:** `Client ID` from your service token.
 
@@ -138,7 +138,7 @@ Both a `auth_client_id` and `auth_client_secret` are required when using this au
 | -------------------- | ---------- |
 | `auth_client_secret` | string     |
 
-**Description.** The automatically genereated secret when you created your [Service Token](/identity/service-auth/service-tokens).
+**Description.** The automatically genereated secret when you created your [Service Token](/cloudflare-one/identity/service-auth/service-tokens/).
 
 **Value:** `Client Secret` from your service token.
 

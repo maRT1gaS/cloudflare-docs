@@ -36,12 +36,12 @@ Specifies the path to a config file in YAML format.
 ## `ingress`
 
 Configures which local services `cloudflared` will proxy incoming requests to.
-Refer to the [Ingress Rules docs](/connections/connect-apps/configuration/ingress) for details.
+Refer to the [Ingress Rules docs](/cloudflare-one/connections/connect-apps/configuration/ingress/) for details.
 
 ## `originRequest`
 
 Configures how `cloudflared` will send requests to your local services.
-Refer to the [Origin Configuration docs](/connections/connect-apps/configuration/ingress#origin-configurations) for details.
+Refer to the [Origin Configuration docs](/cloudflare-one/connections/connect-apps/configuration/ingress/#origin-configurations) for details.
 
 ## `autoupdate-freq`
 
@@ -142,7 +142,7 @@ Allows you to choose the regions to which connections are established. Omit or l
 | --------------- | -------------------- |
 | `logfile value` | `TUNNEL_LOGFILE`     |
 
-Saves application log to this file. Mainly useful for reporting issues. For more details on what information you need when contacting Cloudflare support, refer to [this guide](/faq/cloudflare-tunnels-faq).
+Saves application log to this file. Mainly useful for reporting issues. For more details on what information you need when contacting Cloudflare support, refer to [this guide](/cloudflare-one/faq/cloudflare-tunnels-faq/).
 
 ## `loglevel`
 

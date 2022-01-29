@@ -306,7 +306,7 @@ Changes last week:
 
 Changes this week:
 
-- Fixed a regression in HTMLRewriter: [https://github.com/cloudflare/lol-html/issues/50](https://github.com/cloudflare/lol-html/issues/50)
+- Fixed a regression in HTMLRewriter: <https://github.com/cloudflare/lol-html/issues/50>
 - Common HTTP method names passed to `fetch()` or `new Request()` are now case-insensitive as required by the Fetch API spec.
 
 Changes last week (… forgot to post):
@@ -379,7 +379,7 @@ New this week:
 Runtime release notes covering the past few weeks:
 
 - Increased total per-request `Cache.put()` limit to 5GiB.
-- Increased individual `Cache.put()` limits to the lesser of 5GiB or the zone’s normal cache limits ([https://support.cloudflare.com/hc/en-us/articles/200172516-Understanding-Cloudflare-s-CDN](https://support.cloudflare.com/hc/en-us/articles/200172516-Understanding-Cloudflare-s-CDN)).
+- Increased individual `Cache.put()` limits to the lesser of 5GiB or the zone’s normal cache limits (<https://support.cloudflare.com/hc/en-us/articles/200172516-Understanding-Cloudflare-s-CDN>).
 - Added a helpful error message explaining AES decryption failures.
 - Some overload errors were erroneously being reported as daemonDown (1105) errors. They have been changed to exceededCpu (1102) errors, which better describes their cause.
 - More “internal errors” were converted to useful user-facing errors.

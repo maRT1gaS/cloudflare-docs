@@ -80,7 +80,7 @@ If you have an <a href='https://support.cloudflare.com/hc/articles/203471284#h_1
 
 ### 6. Input your authorization code
 
-In the next page, input the authorization code for each domain you are transferring. You also need to unlock each domain so that Cloudflare can process your request. For more information, refer to the instructions provided by your [current registrar on how to transfer your domain](/get-started/transfer-domain-to-cloudflare#set-up-a-domain-transfer).
+In the next page, input the authorization code for each domain you are transferring. You also need to unlock each domain so that Cloudflare can process your request. For more information, refer to the instructions provided by your [current registrar on how to transfer your domain](/registrar/get-started/transfer-domain-to-cloudflare/#set-up-a-domain-transfer).
 
 <div class="medium-img">
 
@@ -94,9 +94,9 @@ In the final stage of the transfer process, input the contact information for yo
 
 You can modify the contact information, if needed:
 
-1. From your **Account Home**, select **Registrar**.
-1. Under the **Manage** tab, select **Edit** in the **Default Contact** card.
-1. Update your information.
+1.  From your **Account Home**, select **Registrar**.
+2.  Under the **Manage** tab, select **Edit** in the **Default Contact** card.
+3.  Update your information.
 
 After entering the contact information, agree to the domain registration terms of service by selecting **Confirm transfer**.
 

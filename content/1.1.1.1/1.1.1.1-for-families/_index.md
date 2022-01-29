@@ -18,10 +18,10 @@ pcx-content-type: reference
 
 Using the following DNS resolvers will block malicious content:
 
-- `1.1.1.2`
-- `1.0.0.2`
-- `2606:4700:4700::1112`
-- `2606:4700:4700::1002`
+*   `1.1.1.2`
+*   `1.0.0.2`
+*   `2606:4700:4700::1112`
+*   `2606:4700:4700::1002`
 
 </div>
 </details>
@@ -32,10 +32,10 @@ Using the following DNS resolvers will block malicious content:
 
 When you change your DNS resolvers to the addresses below, 1.1.1.1 for Families will block malware and adult content.
 
-- `1.1.1.3`
-- `1.0.0.3`
-- `2606:4700:4700::1113`
-- `2606:4700:4700::1003`
+*   `1.1.1.3`
+*   `1.0.0.3`
+*   `2606:4700:4700::1113`
+*   `2606:4700:4700::1003`
 
 </div>
 </details>

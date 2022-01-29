@@ -8,19 +8,19 @@ meta:
 
 # Manage URL Normalization in the Cloudflare dashboard
 
-Use the **Rules** app in the Cloudflare dashboard to control [URL Normalization](/normalization) settings.
+Use the **Rules** app in the Cloudflare dashboard to control [URL Normalization](/rules/normalization/) settings.
 
 ![Configure Normalization](../static/normalization/url-normalization-settings.png)
 
 Do the following:
 
-1. Log in to the Cloudflare dashboard.
+1.  Log in to the Cloudflare dashboard.
 
-1. Select the **Websites** tab and choose the site for which you want to configure URL Normalization.
+2.  Select the **Websites** tab and choose the site for which you want to configure URL Normalization.
 
-1. Click the **Rules** tile in the app bar, and then click the **Settings** tab.
+3.  Click the **Rules** tile in the app bar, and then click the **Settings** tab.
 
-1. Under **Configure Normalization**, enable or disable the [available URL Normalization settings](#available-settings).
+4.  Under **Configure Normalization**, enable or disable the [available URL Normalization settings](#available-settings).
 
 ## Available settings
 
@@ -37,7 +37,7 @@ The Cloudflare dashboard provides two components to manage URL Normalization:
   - When set to _Off_ (default), requests sent to the origin are not modified.
 
     {{<Aside type="note" header="Note">}}
-  You can only view and enable this option when **Normalize incoming URLs** is also enabled.
+    You can only view and enable this option when **Normalize incoming URLs** is also enabled.
 
     {{</Aside>}}
 

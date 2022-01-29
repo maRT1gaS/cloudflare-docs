@@ -16,9 +16,9 @@ AV scanning of files requires organizations to enable Proxy mode under **Setting
 
 To enable AV scanning:
 
-1. On the [Teams Dashboard](https://dash.teams.cloudflare.com), navigate to **Settings > Network**.
+1.  On the [Teams Dashboard](https://dash.teams.cloudflare.com), navigate to **Settings > Network**.
 
-1. In the section titled **AV Scanning**, toggle whether to scan files for malicious payloads during uploads, downloads, or both.
+2.  In the section titled **AV Scanning**, toggle whether to scan files for malicious payloads during uploads, downloads, or both.
 
 When a file is blocked due to the presence of malware, it is logged as a Block decision:
 
@@ -29,6 +29,7 @@ When a file is blocked due to the presence of malware, it is logged as a Block d
 If AV scanning is enabled, Gateway will use the following to determine whether a file is present in a request or response, and whether to scan that file (first match will result in the file being scanned):
 
 - If the Content-Disposition HTTP header is `Attachment`
+
 - If the byte signature of the body of the request matches a signature we identify as one of the following file type categories:
 
   - **Executable** (e.g., `.exe`, `.bat`, `.dll`, `.wasm`)
@@ -55,7 +56,7 @@ The following files cannot be scanned and will be blocked or allowed based on wh
 
 ## Opt content out from scanning
 
-When an admin enables AV scanning for uploads and/or downloads, Gateway will scan every supported file. Admins can selectively choose to disable scanning by leveraging the HTTP rules. All [HTTP selectors](https://developers.cloudflare.com/cloudflare-one/policies/filtering/http-policies#selectors) can be used to opt HTTP traffic out from AV scanning using the Do Not Scan action. For example, to prevent AV scanning of files uploaded to or downloaded from `example.com`, an admin would configure the following rule:
+When an admin enables AV scanning for uploads and/or downloads, Gateway will scan every supported file. Admins can selectively choose to disable scanning by leveraging the HTTP rules. All [HTTP selectors](/cloudflare-one/policies/filtering/http-policies#selectors) can be used to opt HTTP traffic out from AV scanning using the Do Not Scan action. For example, to prevent AV scanning of files uploaded to or downloaded from `example.com`, an admin would configure the following rule:
 
 | Selector | Operator      | Value           | Acton       |
 | -------- | ------------- | --------------- | ----------- |

@@ -8,7 +8,7 @@ title: addEventListener
 
 ## Background
 
-This function defines triggers for a Worker script to execute. There are currently two types of event listeners - `"fetch"` listeners which are sent a [`FetchEvent`](/runtime-apis/fetch-event) and `"scheduled"` listeners which are sent a [`ScheduledEvent`](/runtime-apis/scheduled-event).
+This function defines triggers for a Worker script to execute. There are currently two types of event listeners - `"fetch"` listeners which are sent a [`FetchEvent`](/workers/runtime-apis/fetch-event/) and `"scheduled"` listeners which are sent a [`ScheduledEvent`](/workers/runtime-apis/scheduled-event/).
 
 ## Syntax
 
@@ -16,7 +16,7 @@ This function defines triggers for a Worker script to execute. There are current
 
 - <Code>addEventListener(type, listener)</Code> <Type>void</Type>
 
-  - If multiple `"fetch"` listeners are registered, when one doesn’t call [`event.respondWith()`](/runtime-apis/fetch-event#methods), the runtime delivers the event to the next registered listener.
+  - If multiple `"fetch"` listeners are registered, when one doesn’t call [`event.respondWith()`](/workers/runtime-apis/fetch-event/#methods), the runtime delivers the event to the next registered listener.
   - A `"fetch"` listener and a `"scheduled"` listener can be registered in the same script.
   - A script can have only one `"scheduled"` listener.
 
@@ -38,7 +38,7 @@ This function defines triggers for a Worker script to execute. There are current
 
     - `event` <Type>FetchEvent</Type> or <Type>ScheduledEvent</Type>
 
-      - The events dispatched to a Worker. See [`FetchEvent`](/runtime-apis/fetch-event) or [`ScheduledEvent`](/runtime-apis/scheduled-event).
+      - The events dispatched to a Worker. See [`FetchEvent`](/workers/runtime-apis/fetch-event/) or [`ScheduledEvent`](/workers/runtime-apis/scheduled-event/).
 
     </Definitions>
 

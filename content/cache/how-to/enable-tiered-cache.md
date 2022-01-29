@@ -5,9 +5,9 @@ pcx-content-type: how-to
 
 # Enable Tiered Cache
 
-1. Log in to your [Cloudflare dashboard](https://dash.cloudflare.com) and select your domain.
-1. Click **Caching** > **Tiered Cache**.
-1. From **Argo Tiered Cache**, toggle the button to **enabled**.
+1.  Log in to your [Cloudflare dashboard](https://dash.cloudflare.com) and select your domain.
+2.  Click **Caching** > **Tiered Cache**.
+3.  From **Argo Tiered Cache**, toggle the button to **enabled**.
 
 After enabling Tiered Cache, you are automatically enrolled in Smart Tiered Cache.
 

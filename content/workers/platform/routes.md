@@ -22,7 +22,7 @@ Cloudflare Site routes are comprised of:
 
 - Route URL (refer to [Matching Behavior](#matching-behavior))
 - Worker script to execute on matching requests
-- Failure mode for rate-limited accounts on the Free plan (see [daily request limits](/platform/limits#request-limits))
+- Failure mode for rate-limited accounts on the Free plan (see [daily request limits](/workers/platform/limits/#request-limits))
 
 The Routes REST API documentation can be found [in the Workers API docs](https://api.cloudflare.com/#worker-routes-properties).
 
@@ -111,7 +111,7 @@ If a route pattern path ends with `*`, then it matches all suffixes of that path
 - `https://example.com/path*` matches `https://example.com/path` and `https://example.com/path2` and `https://example.com/path/readme.txt`
 
 {{<Aside type="warning">}}
-There is a well-known bug associated with path matching concerning wildcards (`*`) and forward slashes (`/`) that is documented in [Known issues](/platform/known-issues).
+There is a well-known bug associated with path matching concerning wildcards (`*`) and forward slashes (`/`) that is documented in [Known issues](/workers/platform/known-issues/).
 {{</Aside>}}
 
 #### Subdomains must have a DNS Record

@@ -8,7 +8,7 @@ meta:
 
 # Page Shield alerts
 
-Refer to [Configure Page Shield alerts](/use-dashboard/configure-alerts) for instructions on configuring alerts.
+Refer to [Configure Page Shield alerts](/page-shield/use-dashboard/configure-alerts/) for instructions on configuring alerts.
 
 ## Basic alerts
 

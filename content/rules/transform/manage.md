@@ -23,9 +23,9 @@ The **Transform Rules** dashboard interface lets you:
 
 In the **Transform Rules** tab you can:
 
-- [Create a URL Rewrite Rule](/transform/url-rewrite/create-dashboard)
-- [Create an HTTP Request Header Modification Rule](/transform/request-header-modification/create-dashboard)
-- [Create an HTTP Response Header Modification Rule](/transform/response-header-modification/create-dashboard)
+- [Create a URL Rewrite Rule](/rules/transform/url-rewrite/create-dashboard/)
+- [Create an HTTP Request Header Modification Rule](/rules/transform/request-header-modification/create-dashboard/)
+- [Create an HTTP Response Header Modification Rule](/rules/transform/response-header-modification/create-dashboard/)
 
 Refer to each linked section for details on creating each rule type.
 

@@ -35,9 +35,9 @@ We strongly recommend that you use an operating system still supported by the ve
 
 You need to create a public DNS record for your key server. If you are using Cloudflare, this record **cannot be proxied (orange clouded)**. As a security measure, you should hide the hostname of your key server.
 
-1. Use `openssl rand -hex 24` to generate a long, random hostname such as `11aa40b4a5db06d4889e48e2f738950ddfa50b7349d09b5f.example.com`.
-1. Add this record via your DNS provider’s interface as an **A** or **AAAA** record pointing to the IP address of your Keyless SSL server.
-1. Use this hostname as the server hostname during initialization of your Keyless SSL server.
+1.  Use `openssl rand -hex 24` to generate a long, random hostname such as `11aa40b4a5db06d4889e48e2f738950ddfa50b7349d09b5f.example.com`.
+2.  Add this record via your DNS provider’s interface as an **A** or **AAAA** record pointing to the IP address of your Keyless SSL server.
+3.  Use this hostname as the server hostname during initialization of your Keyless SSL server.
 
 ---
 
@@ -49,18 +49,18 @@ Upload certificates to Cloudflare with only SANs that you wish to use with Cloud
 
 For each certificate you wish to use with Keyless SSL:
 
-1. Log in to the [Cloudflare dashboard](https://dash.cloudflare.com) and select your zone.
-1. Navigate to **SSL/TLS** > **Edge Certificates**.
-1. Click **Upload Keyless SSL Certificate**.
-1. Fill in the upload modal with the certificate and other details and click **Add**.
+1.  Log in to the [Cloudflare dashboard](https://dash.cloudflare.com) and select your zone.
+2.  Navigate to **SSL/TLS** > **Edge Certificates**.
+3.  Click **Upload Keyless SSL Certificate**.
+4.  Fill in the upload modal with the certificate and other details and click **Add**.
 
-| Label               | Description                                                                                                                                                            | Example Values                                               |
-| ------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------ |
-| Key server label    | Any unique identifier for your key server                                                                                                                              | “test-keyless”, “production-keyless-1”                       |
-| Key server hostname | The hostname of your key server that holds the key for this certificate (such as the random hostname generated earlier).                                               | 11aa40b4a5db06d4889e48e2f738950ddfa50b7349d09b5f.example.com |
-| Key server port     | Set to 2407 unless you have changed this on the key server.                                                                                                            | 2407                                                         |
-| SSL Certificate     | The valid X509v3 SSL certificate (in PEM form) for which you hold the private key.                                                                                     | (PEM bytes)                                                  |
-| Bundle method       | This should almost always be **Compatible**. Refer to [Uploading Custom Certificates](/edge-certificates/custom-certificates/bundling-methodologies) for more details. | Compatible                                                   |
+| Label               | Description                                                                                                                                                                 | Example Values                                               |
+| ------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------ |
+| Key server label    | Any unique identifier for your key server                                                                                                                                   | “test-keyless”, “production-keyless-1”                       |
+| Key server hostname | The hostname of your key server that holds the key for this certificate (such as the random hostname generated earlier).                                                    | 11aa40b4a5db06d4889e48e2f738950ddfa50b7349d09b5f.example.com |
+| Key server port     | Set to 2407 unless you have changed this on the key server.                                                                                                                 | 2407                                                         |
+| SSL Certificate     | The valid X509v3 SSL certificate (in PEM form) for which you hold the private key.                                                                                          | (PEM bytes)                                                  |
+| Bundle method       | This should almost always be **Compatible**. Refer to [Uploading Custom Certificates](/ssl/edge-certificates/custom-certificates/bundling-methodologies/) for more details. | Compatible                                                   |
 
 ---
 
@@ -69,28 +69,28 @@ For each certificate you wish to use with Keyless SSL:
 Finally, you need to install the key server on your infrastructure, populate it with the SSL keys of the certificates you wish to use to terminate TLS at Cloudflare’s edge, and activate the key server so it can be mutually authenticated.
 
 {{<Aside type="note">}}
-If you plan to run Keyless SSL in a [high availability setup](../reference/high-availability), you may need to set up additional infrastructure (load balancing and health checks).
+If you plan to run Keyless SSL in a [high availability setup](/ssl/reference/high-availability/), you may need to set up additional infrastructure (load balancing and health checks).
 {{</Aside>}}
 
 ### Install
 
-1. Add the Cloudflare Package Repository as per https://pkg.cloudflare.com/.
-1. Amazon Linux customers need to manually set the yum `$releasever` value:
-1. Amazon Linux 1: `sudo sed -i 's/$releasever/6/' /etc/yum.repos.d/cloudflare.repo`
-1. Amazon Linux 2: `sudo sed -i 's/$releasever/7/' /etc/yum.repos.d/cloudflare.repo`
-1. Update your OS’ package listings, e.g., `apt-get update` or `yum makecache`.
-1. Install the gokeyless server (min version used should be 1.5.3):
-1. Debian/Ubuntu: `sudo apt-get install gokeyless`
-1. RHEL/CentOS: `sudo yum install gokeyless`
-1. Amazon Linux: `sudo yum install rsyslog shadow-utils && sudo yum install gokeyless`
+1.  Add the Cloudflare Package Repository as per https://pkg.cloudflare.com/.
+2.  Amazon Linux customers need to manually set the yum `$releasever` value:
+3.  Amazon Linux 1: `sudo sed -i 's/$releasever/6/' /etc/yum.repos.d/cloudflare.repo`
+4.  Amazon Linux 2: `sudo sed -i 's/$releasever/7/' /etc/yum.repos.d/cloudflare.repo`
+5.  Update your OS’ package listings, e.g., `apt-get update` or `yum makecache`.
+6.  Install the gokeyless server (min version used should be 1.5.3):
+7.  Debian/Ubuntu: `sudo apt-get install gokeyless`
+8.  RHEL/CentOS: `sudo yum install gokeyless`
+9.  Amazon Linux: `sudo yum install rsyslog shadow-utils && sudo yum install gokeyless`
 
 ### Configure
 
 Add your Cloudflare account details to the configuration file located at `/etc/keyless/gokeyless.yaml`:
 
-1. Set the hostname of the key server, for example, `11aa40b4a5db06d4889e48e2f.example.com`.
-1. Set the Zone ID (found on **Overview** tab of the Cloudflare dashboard).
-1. [Set the Origin CA API key](https://dash.cloudflare.com/profile).
+1.  Set the hostname of the key server, for example, `11aa40b4a5db06d4889e48e2f.example.com`.
+2.  Set the Zone ID (found on **Overview** tab of the Cloudflare dashboard).
+3.  [Set the Origin CA API key](https://dash.cloudflare.com/profile).
 
 ### Populate keys
 
@@ -110,7 +110,7 @@ To activate, restart your keyless instance:
 - systemd: `sudo service gokeyless restart`
 - upstart/sysvinit: `sudo /etc/init.d/gokeyless restart`
 
-If this command fails, try troubleshooting by [checking the logs](/keyless-ssl/troubleshooting/).
+If this command fails, try troubleshooting by [checking the logs](/ssl/keyless-ssl/troubleshooting/).
 
 ### Allow incoming connections from Cloudflare
 

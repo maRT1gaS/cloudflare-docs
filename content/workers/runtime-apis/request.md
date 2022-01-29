@@ -42,7 +42,7 @@ addEventListener('fetch', event => {
 The global `fetch` method itself invokes the `Request` constructor. The [`RequestInit`](#requestinit) and [`RequestInitCfProperties`](#requestinitcfproperties) types defined below also describe the valid parameters that can be passed to `fetch`.
 
 {{<Aside header="Learn more">}}
-Review [Understanding the FetchEvent Lifecycle](/learning/fetch-event-lifecycle) for a deeper understanding of these fundamental Workers concepts.
+Review [Understanding the FetchEvent Lifecycle](/workers/learning/fetch-event-lifecycle/) for a deeper understanding of these fundamental Workers concepts.
 {{</Aside>}}
 
 ## Constructor
@@ -120,7 +120,7 @@ Invalid or incorrectly-named keys in the `cf` object will be silently ignored. C
 
   - This option forces Cloudflare to cache the response for this request, regardless of what headers are seen on the response. This is equivalent to setting two page rules: [“Edge Cache TTL”](https://support.cloudflare.com/hc/en-us/articles/200168376-What-does-edge-cache-expire-TTL-mean-) and [“Cache Level” (to “Cache Everything”)](https://support.cloudflare.com/hc/en-us/articles/200172266). The value must be zero or a positive number. A value of `0` indicates that the cache asset expires immediately.
 
-- `cacheTtlByStatus` <Type>{ [key: string]: number }</Type> <PropMeta>optional</PropMeta>
+- `cacheTtlByStatus` <Type>{ \[key: string]: number }</Type> <PropMeta>optional</PropMeta>
 
   - This option is a version of the `cacheTtl` feature which chooses a TTL based on the response’s status code. If the response to this request has a status code that matches, Cloudflare will cache for the instructed time, and override cache instructives sent by the origin. For example: `{ "200-299": 86400, 404: 1, "500-599": 0 }`. The value can be any integer, including zero and negative integers. A value of `0` indicates that the cache asset expires immediately. Any negative value instructs Cloudflare not to cache at all.
 
@@ -202,7 +202,7 @@ All plans have access to:
 
 - `botManagement` <Type>Object | null</Type>
 
-  - Only set when using Cloudflare Bot Management. Object with the following properties: `score`, `verifiedBot`, `staticResource`. Refer to the [`Bot Management Variables`](https://developers.cloudflare.com/bots/reference/bot-management-variables) for more details.
+  - Only set when using Cloudflare Bot Management. Object with the following properties: `score`, `verifiedBot`, `staticResource`. Refer to the [`Bot Management Variables`](/bots/reference/bot-management-variables) for more details.
 
 - `colo` <Type>string</Type>
 
@@ -288,23 +288,23 @@ These methods are only available on an instance of a `Request` object or through
 
 <Definitions>
 
-- `clone()` <Type>Promise&lt;Request></Type>
+- `clone()` <Type>Promise\<Request></Type>
 
   - Creates a copy of the `Request` object.
 
-- `arrayBuffer()` <Type>Promise&lt;ArrayBuffer></Type>
+- `arrayBuffer()` <Type>Promise\<ArrayBuffer></Type>
 
   - Returns a promise that resolves with an [`ArrayBuffer`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) representation of the request body.
 
-- `formData()` <Type>Promise&lt;FormData></Type>
+- `formData()` <Type>Promise\<FormData></Type>
 
   - Returns a promise that resolves with a [`FormData`](https://developer.mozilla.org/en-US/docs/Web/API/FormData) representation of the request body.
 
-- `json()` <Type>Promise&lt;Object></Type>
+- `json()` <Type>Promise\<Object></Type>
 
   - Returns a promise that resolves with a JSON representation of the request body.
 
-- `text()` <Type>Promise&lt;string></Type>
+- `text()` <Type>Promise\<string></Type>
 
   - Returns a promise that resolves with a string (text) representation of the request body.
 
@@ -316,7 +316,7 @@ These methods are only available on an instance of a `Request` object or through
 
 The `Request` context is the context of the `"fetch"` event callback. It is important to note that due to how workers are executed, asynchronous tasks (e.g. `fetch`) can only be run _inside_ the request context.
 
-The request context is available inside of the [`FetchEvent` handler](/runtime-apis/fetch-event/):
+The request context is available inside of the [`FetchEvent` handler](/workers/runtime-apis/fetch-event/):
 
 ```js
 addEventListener('fetch', event => {
@@ -327,7 +327,7 @@ addEventListener('fetch', event => {
 
 ### When passing a promise to fetch event `.respondWith()`
 
-If you pass a Response promise to the fetch event [`.respondWith()`](/runtime-apis/fetch-event/#methods) method, the request context is active during any asynchronous tasks which run before the Response promise has settled. You can pass the event to an async handler, for example:
+If you pass a Response promise to the fetch event [`.respondWith()`](/workers/runtime-apis/fetch-event/#methods) method, the request context is active during any asynchronous tasks which run before the Response promise has settled. You can pass the event to an async handler, for example:
 
 ```js
 addEventListener('fetch', event => {
@@ -359,6 +359,6 @@ This code snippet will throw during script startup, and the `"fetch"` event list
 
 ## See also
 
-- [Examples: Modify request property](/examples/modify-request-property)
-- [Examples: Accessing the `cf` object](/examples/accessing-the-cloudflare-object)
-- [Reference: `Response`](/runtime-apis/response)
+- [Examples: Modify request property](/workers/examples/modify-request-property/)
+- [Examples: Accessing the `cf` object](/workers/examples/accessing-the-cloudflare-object/)
+- [Reference: `Response`](/workers/runtime-apis/response/)

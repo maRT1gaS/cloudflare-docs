@@ -40,7 +40,7 @@ routes = ["example.com/*"]
 
 Environment configuration <PropMeta>(optional)</PropMeta>: the configuration values you specify under an `[env.name]` in your `wrangler.toml` file.
 
-Environments allow you to deploy the same project to multiple places under multiple names. These environments are utilized with the `--env` or `-e` flag on the [commands](/cli-wrangler/commands) that are deploying live Worker scripts:
+Environments allow you to deploy the same project to multiple places under multiple names. These environments are utilized with the `--env` or `-e` flag on the [commands](/workers/cli-wrangler/commands/) that are deploying live Worker scripts:
 
 - `build`
 - `dev`
@@ -122,7 +122,7 @@ Cloudflare will continue to support `rust` and `webpack` project types, but reco
 
 - `webpack_config` <Type>inherited</Type> <PropMeta>optional</PropMeta>
 
-  - This is the path to a custom webpack configuration file for your Worker. You must specify this field to use a custom webpack configuration, otherwise Wrangler will use a default configuration for you. Refer to the [Wrangler webpack page](/cli-wrangler/webpack) for more information.
+  - This is the path to a custom webpack configuration file for your Worker. You must specify this field to use a custom webpack configuration, otherwise Wrangler will use a default configuration for you. Refer to the [Wrangler webpack page](/workers/cli-wrangler/webpack/) for more information.
 
 - `vars` <Type>not inherited</Type> <PropMeta>optional</PropMeta>
 
@@ -146,7 +146,7 @@ Cloudflare will continue to support `rust` and `webpack` project types, but reco
 
 - `usage_model` <Type>inherited</Type> <PropMeta>optional</PropMeta>
 
-  - Specifies the [Usage Model](/platform/pricing#usage-models) for your Worker. There are two options - [`bundled`](/platform/limits#bundled-usage-model) and [`unbound`](/platform/limits#unbound-usage-model). For newly created Workers, if the Usage Model is omitted it will be set to the [default Usage Model set on the account](https://dash.cloudflare.com/?account=workers/default-usage-model). For existing Workers, if the Usage Model is omitted, it will be set to the Usage Model configured in the dashboard for that Worker.
+  - Specifies the [Usage Model](/workers/platform/pricing/#usage-models) for your Worker. There are two options - [`bundled`](/workers/platform/limits/#bundled-usage-model) and [`unbound`](/workers/platform/limits/#unbound-usage-model). For newly created Workers, if the Usage Model is omitted it will be set to the [default Usage Model set on the account](https://dash.cloudflare.com/?account=workers/default-usage-model). For existing Workers, if the Usage Model is omitted, it will be set to the Usage Model configured in the dashboard for that Worker.
 
 - `build` <Type>top level</Type> <PropMeta>optional</PropMeta>
 
@@ -156,7 +156,7 @@ Cloudflare will continue to support `rust` and `webpack` project types, but reco
 
 ### vars
 
-The `vars` key defines a table of [environment variables](/platform/environment-variables) provided to your Worker script. All values are plaintext values.
+The `vars` key defines a table of [environment variables](/workers/platform/environment-variables/) provided to your Worker script. All values are plaintext values.
 
 Usage:
 
@@ -184,7 +184,7 @@ vars = { FOO = "some value", BAR = "some other string" }
 ```
 
 {{<Aside type="note">}}
-Secrets should be handled using the [`wrangler secret`](/cli-wrangler/commands#secret) command.
+Secrets should be handled using the [`wrangler secret`](/workers/cli-wrangler/commands/#secret) command.
 {{</Aside>}}
 
 ### kv_namespaces
@@ -229,7 +229,7 @@ let value = await FOO.get('keyname');
 
 - `binding` <PropMeta>required</PropMeta>
 
-  - The name of the global variable your code will reference. It will be provided as a [KV runtime instance](/runtime-apis/kv).
+  - The name of the global variable your code will reference. It will be provided as a [KV runtime instance](/workers/runtime-apis/kv/).
 
 - `id` <PropMeta>required</PropMeta>
 
@@ -242,14 +242,14 @@ let value = await FOO.get('keyname');
 </Definitions>
 
 {{<Aside type="note">}}
-Creating your KV namespaces can be handled using Wrangler’s [KV Commands](/cli-wrangler/commands#kv).
+Creating your KV namespaces can be handled using Wrangler’s [KV Commands](/workers/cli-wrangler/commands/#kv).
 
 You can also define your `kv_namespaces` using an [alternative TOML syntax](https://github.com/toml-lang/toml/blob/master/toml.md#user-content-table).
 {{</Aside>}}
 
 ### site
 
-A [Workers Site](/platform/sites) generated with [`wrangler generate --site`](/cli-wrangler/commands#generate) or [`wrangler init --site`](/cli-wrangler/commands#init).
+A [Workers Site](/workers/platform/sites/) generated with [`wrangler generate --site`](/workers/cli-wrangler/commands/#generate) or [`wrangler init --site`](/workers/cli-wrangler/commands/#init).
 
 Usage:
 
@@ -330,7 +330,7 @@ Refer to the [gitignore documentation](https://git-scm.com/docs/gitignore) to le
 
 #### Customizing your Sites Build
 
-Workers Sites projects use webpack by default. Though you can [bring your own webpack configuration](/cli-wrangler/webpack#using-with-workers-sites), be aware of your `entry` and `context` settings.
+Workers Sites projects use webpack by default. Though you can [bring your own webpack configuration](/workers/cli-wrangler/webpack/#using-with-workers-sites), be aware of your `entry` and `context` settings.
 
 You can also use the `[build]` section with Workers Sites, as long as your build step will resolve dependencies in `node_modules`. Refer to the [custom builds](#build) section for more information.
 
@@ -449,7 +449,7 @@ Module Workers `export` their event handlers instead of using `addEventListener`
 Modules receive all bindings (KV Namespaces, Environment Variables, and Secrets) as arguments to the exported handlers. With the Service Worker format, these bindings are available as global variables.
 
 {{<Aside type="note">}}
-Refer to the [`FetchEvent` documentation](https://developers.cloudflare.com/workers/runtime-apis/fetch-event) to learn more about the differences between the Service Worker and Module worker formats.
+Refer to the [`FetchEvent` documentation](/workers/runtime-apis/fetch-event) to learn more about the differences between the Service Worker and Module worker formats.
 {{</Aside>}}
 
 An uploaded module may `import` other uploaded ES Modules. If using the CommonJS format, you may `require` other uploaded CommonJS modules.

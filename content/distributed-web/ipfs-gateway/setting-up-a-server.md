@@ -22,8 +22,7 @@ pinning service and your own server for higher availability.
   [DigitalOcean](https://www.digitalocean.com/) is an option, or something like
   a [NUC](https://www.intel.com/content/www/us/en/products/boards-kits/nuc.html)
   or [Raspberry Pi](https://www.raspberrypi.org/) running on your home network
-  will work.<br />
-  <u>Recommended Minimum Requirements:</u>- 2 gigabytes of RAM - 10 gigabytes of disk space - 1
+  will work.<br /> <u>Recommended Minimum Requirements:</u>- 2 gigabytes of RAM - 10 gigabytes of disk space - 1
   terabyte of bandwidth per month
 
 ## Installing IPFS
@@ -62,19 +61,17 @@ create a service for it so that we get all these benefits.
 To do this, we create a _unit file_ at `/etc/systemd/system/ipfs.service` with
 the contents:
 
-```
-[Unit]
-Description=IPFS Daemon
+    [Unit]
+    Description=IPFS Daemon
 
-[Service]
-ExecStart=/usr/local/bin/ipfs daemon
-User=root
-Restart=always
-LimitNOFILE=10240
+    [Service]
+    ExecStart=/usr/local/bin/ipfs daemon
+    User=root
+    Restart=always
+    LimitNOFILE=10240
 
-[Install]
-WantedBy=multi-user.target
-```
+    [Install]
+    WantedBy=multi-user.target
 
 Change the line "User=root" if you're not running the daemon as root, and then
 tell systemd about the new service:

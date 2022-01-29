@@ -50,7 +50,7 @@ To access logs in the dashboard, go to **Traffic** > **Load Balancing Analytics*
 
 ## GraphQL Analytics
 
-For more flexibility, get load balancing metrics directly from the [GraphQL Analytics API](https://developers.cloudflare.com/analytics/graphql-api).
+For more flexibility, get load balancing metrics directly from the [GraphQL Analytics API](/analytics/graphql-api).
 
 Get started with a sample query:
 

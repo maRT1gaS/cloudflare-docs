@@ -38,12 +38,12 @@ Set default configuration values by running the following commands:
 
 ## Deploying a web application
 
-1. Create a container cluster to run the container image. A cluster consists of a pool of Compute Engine VM instances running Kubernetes.
+1.  Create a container cluster to run the container image. A cluster consists of a pool of Compute Engine VM instances running Kubernetes.
 
-   - Run the following command to create a three-node cluster (our cluster name is _camilia-cluster_): `gcloud container clusters create camilia-cluster --num-nodes=3`
+    - Run the following command to create a three-node cluster (our cluster name is _camilia-cluster_): `gcloud container clusters create camilia-cluster --num-nodes=3`
 
-   - It may take several minutes for the cluster to be created. Once the command is complete, run the following command to see the cluster’s three worker VM instances: `gcloud compute instances list`
+    - It may take several minutes for the cluster to be created. Once the command is complete, run the following command to see the cluster’s three worker VM instances: `gcloud compute instances list`
 
-1. Deploy the application to the cluster. Use the kubectl command-line tool to deploy and manage applications on a Kubernetes Engine cluster.
-   You can create a simple nginx docker container, for example, using the following command (_camilia-nginx_ is the name for the deployment):
-   `kubectl run camilia-nginx --image=nginx --port 80`
+2.  Deploy the application to the cluster. Use the kubectl command-line tool to deploy and manage applications on a Kubernetes Engine cluster.
+    You can create a simple nginx docker container, for example, using the following command (_camilia-nginx_ is the name for the deployment):
+    `kubectl run camilia-nginx --image=nginx --port 80`

@@ -21,13 +21,13 @@ You can use Cloudflare Gateway to filter and log DNS queries from any device in 
 
 ## Before you start
 
-1. [Add Gateway to your account](/setup)
+1.  [Add Gateway to your account](/cloudflare-one/setup/)
 
 ---
 
 ## Configure Cloudflare Gateway
 
-Before you begin, you'll need to follow [these instructions](/setup) to set up Cloudflare Gateway in your account. To perform DNS filtering, you need one of the following subscriptions:
+Before you begin, you'll need to follow [these instructions](/cloudflare-one/setup/) to set up Cloudflare Gateway in your account. To perform DNS filtering, you need one of the following subscriptions:
 
 - Teams Free
 - Teams Standard
@@ -43,7 +43,7 @@ If you want to create a different location, one that you are not currently using
 
 ## Create a Gateway policy
 
-Next, you can [build a policy](/policies/filtering/dns-policies) that will filter DNS queries for known malicious hostnames and other types of threats. Navigate to the `Policies` page. On the DNS tab, click `Create a DNS policy`.
+Next, you can [build a policy](/cloudflare-one/policies/filtering/dns-policies/) that will filter DNS queries for known malicious hostnames and other types of threats. Navigate to the `Policies` page. On the DNS tab, click `Create a DNS policy`.
 
 ![Add Policy](../static/secure-web-gateway/secure-dns-network/create-dns-policy.png)
 
@@ -73,7 +73,7 @@ Instructions to change your router's DNS settings are available in the Cloudflar
 
 ![Expand Location](../static/secure-web-gateway/secure-dns-network/expand-location.png)
 
-The default toggle presented will be `Router`. Follow the instructions on the page to change your router settings. Additional instructions are available for routers from specific manufacturers in the [documentation here](https://developers.cloudflare.com/1.1.1.1/setting-up-1.1.1.1/router).
+The default toggle presented will be `Router`. Follow the instructions on the page to change your router settings. Additional instructions are available for routers from specific manufacturers in the [documentation here](/1.1.1.1/setting-up-1.1.1.1/router).
 
 ![Expand Location](../static/secure-web-gateway/secure-dns-network/router-instructions.png)
 

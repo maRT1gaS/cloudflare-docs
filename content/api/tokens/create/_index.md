@@ -17,11 +17,11 @@ If you are new to API Tokens or the Cloudflare API, Templates are the quickest w
 
 For this example, the `Edit Zone DNS` template has been selected. After selecting, you are presented with a view of the currently selected permissions. There are 3 required inputs to creating a Token:
 
-1. The token name
-2. The permissions granted to the token
-3. The resources the token can affect
+1.  The token name
+2.  The permissions granted to the token
+3.  The resources the token can affect
 
-There are two additional inputs that can be used to restrict how a token is used. These are _IP restrictions_ and _Time to Live (TTL) restrictions_. Both of these are covered in Advance Usage under [Restricting Token Use](/tokens/advanced/restrictions)
+There are two additional inputs that can be used to restrict how a token is used. These are *IP restrictions* and *Time to Live (TTL) restrictions*. Both of these are covered in Advance Usage under [Restricting Token Use](/api/tokens/advanced/restrictions/)
 
 ![Template Customization](./media/template-customize.png)
 
@@ -35,13 +35,13 @@ This can be anything text and should be informative of why or how the token is b
 
 Permissions are segmented into three categories based on resource:
 
-1. Zone Permissions
-2. Account Permissions
-3. User Permissions
+1.  Zone Permissions
+2.  Account Permissions
+3.  User Permissions
 
-Each category contains Permission Groups related to those resources. DNS permissions belong to the Zone category, while Billing permissions belong to the Account category. A full list of the Permission Groups can be [found here](/tokens/create/permissions)
+Each category contains Permission Groups related to those resources. DNS permissions belong to the Zone category, while Billing permissions belong to the Account category. A full list of the Permission Groups can be [found here](/api/tokens/create/permissions/)
 
-After selecting a Permission Group, you can choose what level of access to grant the token. Most groups offer `Edit` or `Read` options. `Edit` is full _CRUDL_ (_create_, _read_, _update_, _delete_, _list_) access, while `Read` is just the _read_ permission and _list_ where appropriate.
+After selecting a Permission Group, you can choose what level of access to grant the token. Most groups offer `Edit` or `Read` options. `Edit` is full *CRUDL* (*create*, *read*, *update*, *delete*, *list*) access, while `Read` is just the *read* permission and *list* where appropriate.
 
 ### Token Resources
 
@@ -53,9 +53,9 @@ As permissions are selected in resource categories, options for selecting the ap
 
 When creating tokens with access to zone resources there are multiple ways to define the access. The options available are:
 
-1. A specific zone - ex: example.com.
-2. All zones from a specific account - ex: All zones belonging to the account named `example production`.
-3. All zones in all accounts. This grants access to every zone you have access to. Exercise caution when granting permissions this widely.
+1.  A specific zone - ex: example.com.
+2.  All zones from a specific account - ex: All zones belonging to the account named `example production`.
+3.  All zones in all accounts. This grants access to every zone you have access to. Exercise caution when granting permissions this widely.
 
 Note: When selections of option 2 or 3 are included, then excluding zones can be used to "allow all" zones as defined except specific zones.
 
@@ -67,8 +67,8 @@ For this example, we go with option 1 and select the zone `theburritobot.com`.
 
 Account resources are similar to zone resources but with 1 less option:
 
-1. A specific account - ex: My Production Account.
-2. All accounts. This would be all the accounts the user has access to.
+1.  A specific account - ex: My Production Account.
+2.  All accounts. This would be all the accounts the user has access to.
 
 Once you have selected the appropriate permissions and resources, select `Continue to Summary` to review the token before creating.
 
@@ -86,7 +86,7 @@ Once you have verified the token is as desired, select `Create Token` to proceed
 
 Once successfully generated, the token secret is only shown once. Make sure to copy the secret to a secure place.
 
-_Warning:_ Do not store the secret in plaintext where others may be able to access it. Anyone with this token can perform the authorized actions against the resources the token has been granted access to.
+*Warning:* Do not store the secret in plaintext where others may be able to access it. Anyone with this token can perform the authorized actions against the resources the token has been granted access to.
 
 ![Token Create Completion Screen](./media/token-complete.png)
 
@@ -126,6 +126,6 @@ If the secret is lost or believed to be compromised, you can either create a new
 
 To roll your API token:
 
-1. Log into your [Cloudflare account](https://dash.cloudflare.com) and go to **User Profile** > **API Tokens**.
-1. Next to the API token you wish to roll, click the **three dot icon** > **Roll**.
-1. Then, click **Confirm** to continue and you will see a new API token secret key.
+1.  Log into your [Cloudflare account](https://dash.cloudflare.com) and go to **User Profile** > **API Tokens**.
+2.  Next to the API token you wish to roll, click the **three dot icon** > **Roll**.
+3.  Then, click **Confirm** to continue and you will see a new API token secret key.

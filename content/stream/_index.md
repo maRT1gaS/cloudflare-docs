@@ -13,15 +13,15 @@ Cloudflare Stream provides end-to-end video infrastructure at scale. Stream hand
 To get started with Stream, simply visit the Stream Dashboard in your Cloudflare account or [sign up](https://dash.cloudflare.com/sign-up/stream). Your stream videos are not attached to an domain in your Cloudflare account and you don't need a domain on Cloudflare to use Stream.
 
 {{<button-group>}}
-  {{<button type="primary" href="https://dash.cloudflare.com/?to=/:account/stream">}}
-    Visit the Stream dashboard
-  {{</button>}}
-  {{<button type="secondary" href="https://api.cloudflare.com/#stream-videos-properties">}}
-    View API reference
-  {{</button>}}
+{{<button type="primary" href="https://dash.cloudflare.com/?to=/:account/stream">}}
+Visit the Stream dashboard
+{{</button>}}
+{{<button type="secondary" href="https://api.cloudflare.com/#stream-videos-properties">}}
+View API reference
+{{</button>}}
 {{</button-group>}}
 
----
+***
 
 # Getting started
 
@@ -29,8 +29,8 @@ To get started with Stream, simply visit the Stream Dashboard in your Cloudflare
 
 To make your first request to the Stream API, you must obtain these pieces of information:
 
-1. Your Cloudflare Account ID
-1. A Cloudflare Account API Token
+1.  Your Cloudflare Account ID
+2.  A Cloudflare Account API Token
 
 ### Step 1: Uploading your first video
 
@@ -74,7 +74,7 @@ This cURL command tells the Stream API to download the MP4 file and make it avai
 
 ### Step 2: Wait until the video is ready to stream
 
-Because Stream must download and process the video, the video might not be available for a few seconds depending on the length of your video. You should poll the Stream API until `readyToStream` is `true`, or use [webhooks](/uploading-videos/using-webhooks) to be notified when a video is ready for streaming.
+Because Stream must download and process the video, the video might not be available for a few seconds depending on the length of your video. You should poll the Stream API until `readyToStream` is `true`, or use [webhooks](/stream/uploading-videos/using-webhooks/) to be notified when a video is ready for streaming.
 
 Use the video UID from the first step to poll the video:
 
@@ -113,7 +113,7 @@ highlight: [6]
 
 ### Step 3: Stream the video!
 
-The `uid` of the video can be used refer to the video after uploading and can be used to play it using the [Stream video player](/viewing-videos/using-the-stream-player).
+The `uid` of the video can be used refer to the video after uploading and can be used to play it using the [Stream video player](/stream/viewing-videos/using-the-stream-player/).
 
 ```html
 <iframe
@@ -148,7 +148,7 @@ https://github.com/cloudflare/cloudflare-docs-engine/issues/281
 
 ### Next steps
 
-- [Securing your Stream](/viewing-videos/securing-your-stream)
-- [Displaying thumbnails to your video](/viewing-videos/securing-your-stream)
-- [Programmatically controlling the video player](/viewing-videos/using-the-player-api)
-- [Uploading without a API token](/uploading-videos/direct-creator-uploads)
+*   [Securing your Stream](/stream/viewing-videos/securing-your-stream/)
+*   [Displaying thumbnails to your video](/stream/viewing-videos/securing-your-stream/)
+*   [Programmatically controlling the video player](/stream/viewing-videos/using-the-player-api/)
+*   [Uploading without a API token](/stream/uploading-videos/direct-creator-uploads/)

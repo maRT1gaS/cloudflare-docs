@@ -16,10 +16,10 @@ HTTP policies allow you to filter HTTP traffic on the L7 firewall. Gateway will 
 
 Build an HTTP policy by configuring the following elements:
 
-- **Expressions**
-  - **Selectors**
-  - **Operators**
-- **Actions**
+*   **Expressions**
+    *   **Selectors**
+    *   **Operators**
+*   **Actions**
 
 ## Expressions
 
@@ -35,7 +35,7 @@ Gateway matches HTTP traffic against the following selectors, or criteria:
 
 #### Identity-based selectors
 
-You can build HTTP policies using **identity-based selectors**. These selectors require Gateway with WARP mode to be enabled in the Cloudflare for Teams WARP client and the user to be enrolled in the organization via the WARP client. For a list of identity-based selectors and API examples, please refer to the [dedicated section](/policies/filtering/identity-selectors).
+You can build HTTP policies using **identity-based selectors**. These selectors require Gateway with WARP mode to be enabled in the Cloudflare for Teams WARP client and the user to be enrolled in the organization via the WARP client. For a list of identity-based selectors and API examples, please refer to the [dedicated section](/cloudflare-one/policies/filtering/identity-selectors/).
 
 #### Host
 
@@ -130,12 +130,12 @@ Just like actions on destinations in DNS policies, actions in HTTP policies allo
 
 These are the action types you can choose from:
 
-- **[Allow](#allow)**
-- **[Block](#block)**
-- **[Isolate](#isolate)**
-- **[Do Not Isolate](#do-not-isolate)**
-- **[Do Not Inspect](#do-not-inspect)**
-- **[Do Not Scan](#do-not-scan)**
+*   **[Allow](#allow)**
+*   **[Block](#block)**
+*   **[Isolate](#isolate)**
+*   **[Do Not Isolate](#do-not-isolate)**
+*   **[Do Not Inspect](#do-not-inspect)**
+*   **[Do Not Scan](#do-not-scan)**
 
 ### Allow
 
@@ -156,23 +156,23 @@ Rules with Block actions block outbound traffic from reaching destinations you s
 
 ### Isolate
 
-For more information on this action, refer to the documentation on [Browser Isolation policies](/policies/browser-isolation).
+For more information on this action, refer to the documentation on [Browser Isolation policies](/cloudflare-one/policies/browser-isolation/).
 
 ### Do Not Isolate
 
-For more information on this action, refer to the documentation on [Browser Isolation policies](/policies/browser-isolation).
+For more information on this action, refer to the documentation on [Browser Isolation policies](/cloudflare-one/policies/browser-isolation/).
 
 ### Do Not Inspect
 
 {{<Aside type="Warning" header="Warning">}}
-When a _Do Not Inspect_ rule is created for a given hostname, application, or app type, no traffic will be inspected.
+When a *Do Not Inspect* rule is created for a given hostname, application, or app type, no traffic will be inspected.
 {{</Aside>}}
 
-_Do Not Inspect_ lets administrators bypass certain elements from inspection. Administrators who wish to bypass a site must match against the host in order to prevent HTTP inspection from occurring on both encrypted and plaintext traffic.
+*Do Not Inspect* lets administrators bypass certain elements from inspection. Administrators who wish to bypass a site must match against the host in order to prevent HTTP inspection from occurring on both encrypted and plaintext traffic.
 
-The _Do Not Inspect_ action is only available when matching against the host criteria.
+The *Do Not Inspect* action is only available when matching against the host criteria.
 
-The L7 firewall will evaluate _Do Not Inspect_ rules before any subsequent Allow or Block rules. For encrypted traffic, Gateway uses the Server Name Indicator (SNI) in the TLS header to determine whether to decrypt the traffic for further HTTP inspection against Allow or Block rules. All _Do Not Inspect_ rules are evaluated first to determine if decryption should occur. This means regardless of precedence in a customer's list of rules, all _Do Not Inspect_ rules will take precedence over Allow or Block rules.
+The L7 firewall will evaluate *Do Not Inspect* rules before any subsequent Allow or Block rules. For encrypted traffic, Gateway uses the Server Name Indicator (SNI) in the TLS header to determine whether to decrypt the traffic for further HTTP inspection against Allow or Block rules. All *Do Not Inspect* rules are evaluated first to determine if decryption should occur. This means regardless of precedence in a customer's list of rules, all *Do Not Inspect* rules will take precedence over Allow or Block rules.
 
 ### Do Not Scan
 
@@ -186,18 +186,18 @@ When an admin enables AV scanning for uploads and/or downloads, Gateway will sca
 
 For more information on disabling QUIC on a managed device, see [these instructions](https://support.google.com/chrome/a/answer/7649838?hl=en). You can manually disable QUIC in Google Chrome using the Experimental QUIC protocol (`#enable-quic`) flag:
 
-1. In the address bar, type: `chrome://flags#enable-quic`.
-1. Set the **Experimental QUIC protocol** flag to `Disabled`.
-1. Relaunch Chrome for the setting to take effect.
+1.  In the address bar, type: `chrome://flags#enable-quic`.
+2.  Set the **Experimental QUIC protocol** flag to `Disabled`.
+3.  Relaunch Chrome for the setting to take effect.
 
 The following Windows registry key (or Mac/Linux preference) can be used to disable QUIC in Chrome, and can be enforced via GPO or equivalent:
 
-- **Data type:** `Boolean [Windows:REG_DWORD]`
-- **Windows registry location for Windows clients:** `Software\Policies\Google\Chrome\QuicAllowed`
-- **Windows registry location for Google Chrome OS clients:** `Software\Policies\Google\ChromeOS\QuicAllowed`
-- **Mac/Linux preference name:** `QuicAllowed`
-- **Description:** If this policy is set to true (or not set), usage of QUIC is allowed. If the policy is set to false, usage of QUIC is not allowed.
-- **Recommended value:** `Windows: 0x00000000`, `Linux: false`, `Mac: <false />`
+*   **Data type:** `Boolean [Windows:REG_DWORD]`
+*   **Windows registry location for Windows clients:** `Software\Policies\Google\Chrome\QuicAllowed`
+*   **Windows registry location for Google Chrome OS clients:** `Software\Policies\Google\ChromeOS\QuicAllowed`
+*   **Mac/Linux preference name:** `QuicAllowed`
+*   **Description:** If this policy is set to true (or not set), usage of QUIC is allowed. If the policy is set to false, usage of QUIC is not allowed.
+*   **Recommended value:** `Windows: 0x00000000`, `Linux: false`, `Mac: <false />`
 
 ## FAQ
 

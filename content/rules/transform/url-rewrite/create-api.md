@@ -9,26 +9,26 @@ meta:
 
 # Create a URL Rewrite Rule via API
 
-Use the [Rulesets API](https://developers.cloudflare.com/ruleset-engine/rulesets-api) to create URL Rewrite Rules via API. Define the rewrite configuration in the `action_parameters` field. Refer to [URL rewrite examples](/transform/url-rewrite/examples) for examples of rule definitions.
+Use the [Rulesets API](/ruleset-engine/rulesets-api) to create URL Rewrite Rules via API. Define the rewrite configuration in the `action_parameters` field. Refer to [URL rewrite examples](/rules/transform/url-rewrite/examples/) for examples of rule definitions.
 
 When creating a URL Rewrite Rule via API, make sure you:
 
 - Set the rule action to `rewrite`
-- Define the [URL rewrite parameters](/transform/url-rewrite/parameters) in the `action_parameters` field according to the type of URL rewrite (static or dynamic)
+- Define the [URL rewrite parameters](/rules/transform/url-rewrite/parameters/) in the `action_parameters` field according to the type of URL rewrite (static or dynamic)
 - Deploy the rule to the `http_request_transform` phase at the zone level
 
 ---
 
 Follow this workflow to create a URL Rewrite Rule for a given zone via API:
 
-1. Use the [List existing rulesets](https://developers.cloudflare.com/ruleset-engine/rulesets-api/view#list-existing-rulesets) method to check if there is already a ruleset for the `http_request_transform` phase at the zone level.
+1.  Use the [List existing rulesets](/ruleset-engine/rulesets-api/view#list-existing-rulesets) method to check if there is already a ruleset for the `http_request_transform` phase at the zone level.
 
-1. If the phase ruleset does not exist, create it using the [Create ruleset](https://developers.cloudflare.com/ruleset-engine/rulesets-api/create) method with the zone-level endpoint. In the new ruleset properties, set the following values:
+2.  If the phase ruleset does not exist, create it using the [Create ruleset](/ruleset-engine/rulesets-api/create) method with the zone-level endpoint. In the new ruleset properties, set the following values:
 
-   - **kind**: `zone`
-   - **phase**: `http_request_transform`
+    - **kind**: `zone`
+    - **phase**: `http_request_transform`
 
-1. Use the [Update ruleset](https://developers.cloudflare.com/ruleset-engine/rulesets-api/update) method to add a URL Rewrite Rule to the list of ruleset rules (check the examples below). Alternatively, include the rule in the [Create ruleset](https://developers.cloudflare.com/ruleset-engine/rulesets-api/create) request mentioned in the previous step.
+3.  Use the [Update ruleset](/ruleset-engine/rulesets-api/update) method to add a URL Rewrite Rule to the list of ruleset rules (check the examples below). Alternatively, include the rule in the [Create ruleset](/ruleset-engine/rulesets-api/create) request mentioned in the previous step.
 
 ### Examples
 
@@ -36,7 +36,7 @@ Follow this workflow to create a URL Rewrite Rule for a given zone via API:
 <summary>Example: Add a rule that performs a static URL rewrite</summary>
 <div>
 
-The following example sets the rules of an existing phase ruleset (`{ruleset-id}`) to a single URL Rewrite Rule — performing a static rewrite of the URI path — using the [Update ruleset](https://developers.cloudflare.com/ruleset-engine/rulesets-api/update) method:
+The following example sets the rules of an existing phase ruleset (`{ruleset-id}`) to a single URL Rewrite Rule — performing a static rewrite of the URI path — using the [Update ruleset](/ruleset-engine/rulesets-api/update) method:
 
 ```curl
 ---
@@ -111,7 +111,7 @@ header: Response
 <summary>Example: Add a rule that performs a dynamic URL rewrite</summary>
 <div>
 
-The following example sets the rules of an existing phase ruleset (`{ruleset-id}`) to a single URL Rewrite Rule — performing a dynamic rewrite of the URI path — using the [Update ruleset](https://developers.cloudflare.com/ruleset-engine/rulesets-api/update) method:
+The following example sets the rules of an existing phase ruleset (`{ruleset-id}`) to a single URL Rewrite Rule — performing a dynamic rewrite of the URI path — using the [Update ruleset](/ruleset-engine/rulesets-api/update) method:
 
 ```curl
 ---

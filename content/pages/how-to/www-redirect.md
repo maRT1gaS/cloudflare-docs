@@ -15,11 +15,11 @@ Next, make the Page Rule which will handle the redirect. For this, you will make
 
 To do this:
 
-1. Go to **Rules** [in the dashboard](https://dash.cloudflare.com?to=/:account/:zone/rules).
-2. Select **Create Page Rule**.
-3. Set the target to `www.example.com/*`, the `/*` is what matches all paths.
-4. Select _Forwarding URL_ from the dropdown and select the **301 - Permanent Redirect** option from the status code dropdown.
-5. Finally, for the Forwarding URL location, set it to `example.com/$1`, the `$1` will be replaced by the wildcard match in target (the `*`).
+1.  Go to **Rules** [in the dashboard](https://dash.cloudflare.com?to=/:account/:zone/rules).
+2.  Select **Create Page Rule**.
+3.  Set the target to `www.example.com/*`, the `/*` is what matches all paths.
+4.  Select _Forwarding URL_ from the dropdown and select the **301 - Permanent Redirect** option from the status code dropdown.
+5.  Finally, for the Forwarding URL location, set it to `example.com/$1`, the `$1` will be replaced by the wildcard match in target (the `*`).
 
 ![Page Rule redirect](./media/www_redirect_pagerule.png)
 

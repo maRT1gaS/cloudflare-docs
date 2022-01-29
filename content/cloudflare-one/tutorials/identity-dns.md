@@ -22,9 +22,9 @@ To apply these types of rules, you will need to deploy Cloudflare's agent on the
 
 ## Before you start
 
-1. [Add Gateway to your account](/setup)
-1. [Integrate your identity provider](/identity/idp-integration)
-1. [Enroll users in the Cloudflare for Teams agent](/connections/connect-devices/warp)
+1.  [Add Gateway to your account](/cloudflare-one/setup/)
+2.  [Integrate your identity provider](/cloudflare-one/identity/idp-integration/)
+3.  [Enroll users in the Cloudflare for Teams agent](/cloudflare-one/connections/connect-devices/warp/)
 
 ---
 

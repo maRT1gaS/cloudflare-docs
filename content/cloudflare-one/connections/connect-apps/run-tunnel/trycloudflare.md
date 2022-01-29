@@ -10,9 +10,9 @@ Developers can use the TryCloudflare tool to experiment with Cloudflare Tunnel w
 
 ## Use TryCloudflare
 
-1. Follow [these instructions](/connections/connect-apps/install-and-setup/installation) to install `cloudflared`. If you have an older copy, update to 2019.4.0 or later.
-2. Launch a web server that is available over localhost to `cloudflared`.
-3. Run the following terminal command to start a free tunnel.
+1.  Follow [these instructions](/cloudflare-one/connections/connect-apps/install-and-setup/installation/) to install `cloudflared`. If you have an older copy, update to 2019.4.0 or later.
+2.  Launch a web server that is available over localhost to `cloudflared`.
+3.  Run the following terminal command to start a free tunnel.
 
 ```sh
 $ cloudflared tunnel
@@ -42,4 +42,4 @@ $ cloudflared tunnel --url http://localhost:7000
 
 ### Legal
 
-Your installation of cloudflared software constitutes a symbol of your signature indicating that you accept the terms of the [Cloudflare License](/connections/connect-apps/license), [Terms](https://www.cloudflare.com/terms/) and [Privacy Policy](https://www.cloudflare.com/privacypolicy/).
+Your installation of cloudflared software constitutes a symbol of your signature indicating that you accept the terms of the [Cloudflare License](/cloudflare-one/connections/connect-apps/license/), [Terms](https://www.cloudflare.com/terms/) and [Privacy Policy](https://www.cloudflare.com/privacypolicy/).

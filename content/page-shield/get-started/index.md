@@ -15,11 +15,11 @@ import ConfigureAlerts from '../_partials/_alerts-configure.md';
 
 To enable Page Shield:
 
-1. Log in to the [Cloudflare dashboard](https://dash.cloudflare.com/), and select your account and domain.
-1. Go to **Firewall** > **Page Shield**.
-1. Click **Enable Page Shield**.
+1.  Log in to the [Cloudflare dashboard](https://dash.cloudflare.com/), and select your account and domain.
+2.  Go to **Firewall** > **Page Shield**.
+3.  Click **Enable Page Shield**.
 
-For guidance on using Page Shield's Script Monitor dashboard, refer to [Monitor scripts](/use-dashboard/monitor-scripts).
+For guidance on using Page Shield's Script Monitor dashboard, refer to [Monitor scripts](/page-shield/use-dashboard/monitor-scripts/).
 
 ## Configure alerts
 

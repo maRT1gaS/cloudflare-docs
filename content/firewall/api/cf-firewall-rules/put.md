@@ -44,7 +44,7 @@ curl -X PUT \
 {{<Aside type="note" header="Note">}}
 `PUT` does not update the filter specified. It only looks at the _filter id_ to update the rule with a new filter.
 
-To update the filter, use the [Filters API](/api/cf-filters/).
+To update the filter, use the [Filters API](/firewall/api/cf-filters/).
 {{</Aside>}}
 
 ### Response

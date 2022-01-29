@@ -4,7 +4,7 @@ pcx-content-type: faq
 title: Policies
 ---
 
-[❮ Back to FAQ](/faq)
+[❮ Back to FAQ](/cloudflare-one/faq/)
 
 # Policies
 
@@ -21,13 +21,13 @@ Wildcard-based policies in Cloudflare Access only cover the level where they are
 
 ## Can I use regular expressions to build policies?
 
-You can use wildcards when setting up Zero Trust policies. Wildcards are useful when specifying application paths you want to protect. For more information, see our guide for [Using wildcards in subdomains and paths](/policies/zero-trust/app-paths#using-wildcards-in-subdomains-and-paths).
+You can use wildcards when setting up Zero Trust policies. Wildcards are useful when specifying application paths you want to protect. For more information, see our guide for [Using wildcards in subdomains and paths](/cloudflare-one/policies/zero-trust/app-paths/#using-wildcards-in-subdomains-and-paths).
 
 Gateway uses Rust to evaluate regular expressions. The Rust implementation is slightly different than regex libraries used elsewhere. For example, if you want to match multiple domains, you could use the pipe symbol (`|`) as an OR operator. In Gateway, you do not need to use an escape character (`\`) before the pipe symbol. Let's say you want to block requests to two hosts if either appears in a request header. A regex for such a rule would look like this:
 
-| Selector | Operator      | Value                                                   | Action |
-| -------- | ------------- | ------------------------------------------------------- | ------ |
-| Host     | Matches regex | <Code>.\*whispersystems.org &#124; .\*signal.org</Code> | Block  |
+| Selector | Operator      | Value                       | Action               |
+| -------- | ------------- | --------------------------- | -------------------- | ----- |
+| Host     | Matches regex | <Code>.\*whispersystems.org | .\*signal.org</Code> | Block |
 
 To evaluate if your regex matches, you can use [Rustexp](https://rustexp.lpil.uk/).
 

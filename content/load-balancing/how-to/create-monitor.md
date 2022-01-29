@@ -13,7 +13,7 @@ import MonitorCreateAPI from '../_partials/_monitor-create-api.md';
 
 <MonitorDefinition />
 
-For more details about monitors, refer to [Monitors](/understand-basics/monitors).
+For more details about monitors, refer to [Monitors](/load-balancing/understand-basics/monitors/).
 
 ---
 
@@ -31,16 +31,19 @@ For more details about monitors, refer to [Monitors](/understand-basics/monitors
 
 Once your monitor is created, you need to attach it to an origin pool:
 
-1. Go to **Traffic** > **Load Balancing**.
-1. Click **Manage Pools**.
-1. On a specific pool, click **Edit**.
-1. Update the following information:
+1.  Go to **Traffic** > **Load Balancing**.
 
-   - **Monitor**: Select your monitor.
-   - **Health Check Regions:** Specifies geographic regions from which Cloudflare should send health check requests. Because of [how monitors check pool health](/understand-basics/health-details#how-an-origin-becomes-unhealthy), selecting multiple regions could increase the load on your servers.
-   - **Notification E-mail:** Contains email addresses that receive notifications (individual, mailing list address, PagerDuty address).
+2.  Click **Manage Pools**.
 
-1. Click **Save**. The status of your health check will be _unknown_ until the results of the first check are available.
+3.  On a specific pool, click **Edit**.
+
+4.  Update the following information:
+
+    - **Monitor**: Select your monitor.
+    - **Health Check Regions:** Specifies geographic regions from which Cloudflare should send health check requests. Because of [how monitors check pool health](/load-balancing/understand-basics/health-details/#how-an-origin-becomes-unhealthy), selecting multiple regions could increase the load on your servers.
+    - **Notification E-mail:** Contains email addresses that receive notifications (individual, mailing list address, PagerDuty address).
+
+5.  Click **Save**. The status of your health check will be _unknown_ until the results of the first check are available.
 
 ---
 
@@ -56,4 +59,4 @@ Once your monitor is created, you need to attach it to an origin pool:
 
 ### Attach the monitor to a pool
 
-Once your monitor is created, save its `id` property. Include this value in the `monitor` parameter when [creating your pool](/how-to/create-pool#via-the-api).
+Once your monitor is created, save its `id` property. Include this value in the `monitor` parameter when [creating your pool](/load-balancing/how-to/create-pool/#via-the-api).

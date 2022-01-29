@@ -17,11 +17,11 @@ When a user makes a DNS request to Gateway, Gateway matches the request against 
 
 DNS policies can be built by doing one or more of the following:
 
-1. Selecting security risk categories you want to block.
-1. Enabling SafeSearch.
-1. Enabling YouTube Restricted Mode.
-1. Selecting content categories you want to block.
-1. Adding custom domains you want to block, allow, or override.
+1.  Selecting security risk categories you want to block.
+2.  Enabling SafeSearch.
+3.  Enabling YouTube Restricted Mode.
+4.  Selecting content categories you want to block.
+5.  Adding custom domains you want to block, allow, or override.
 
 ## Security risk categories
 
@@ -40,9 +40,9 @@ When creating a DNS policy, you can select as many content categories as you wan
 Setting a **destination** for a policy allows you to have manual control on what action to take on requests for **specific domains**.
 When setting a domain as a destination, you have the option to allow, block or override that domain.
 
-- **Allow**. This action forces resolving this destination and all its sub-destinations, and takes precedence over any blocked destinations.
-- **Block**. This action will block a destination and all its sub-destinations.
-- **Override**. This action will forward all requests to a given destination to another destination you can set.
+*   **Allow**. This action forces resolving this destination and all its sub-destinations, and takes precedence over any blocked destinations.
+*   **Block**. This action will block a destination and all its sub-destinations.
+*   **Override**. This action will forward all requests to a given destination to another destination you can set.
 
 ### Blocking a subdomain
 
@@ -52,7 +52,7 @@ If you only want to block a subdomain `a.example.com`, then instead of adding `e
 
 ### Blocking a top-level domain
 
-Just like you can choose to block a domain and all subdomains, you can block an entire top-level domain (TLD) by specifying it in a custom list. For example, if you wish to block all domains and subdomains registered as a `.net`, you would input `net` in a custom list with the _Block_ action selected.
+Just like you can choose to block a domain and all subdomains, you can block an entire top-level domain (TLD) by specifying it in a custom list. For example, if you wish to block all domains and subdomains registered as a `.net`, you would input `net` in a custom list with the *Block* action selected.
 
 {{<Aside>}}
 Blocking a popular TLD like `.com` will prevent users from connecting to significant portions of the internet.

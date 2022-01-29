@@ -25,14 +25,12 @@ $ dotnet new blazorwasm my-blazor-project
 
 To deploy, Cloudflare Pages will need a way to build the Blazor project. In the project's directory root, create a `build.sh` file. Populate the file with this:
 
-```
-#!/bin/sh
-curl -sSL https://dot.net/v1/dotnet-install.sh > dotnet-install.sh
-chmod +x dotnet-install.sh
-./dotnet-install.sh -c 6.0 -InstallDir ./dotnet6
-./dotnet6/dotnet --version
-./dotnet6/dotnet publish -c Release -o output
-```
+    #!/bin/sh
+    curl -sSL https://dot.net/v1/dotnet-install.sh > dotnet-install.sh
+    chmod +x dotnet-install.sh
+    ./dotnet-install.sh -c 6.0 -InstallDir ./dotnet6
+    ./dotnet6/dotnet --version
+    ./dotnet6/dotnet publish -c Release -o output
 
 <TutorialsBeforeYouStart />
 
@@ -67,12 +65,12 @@ Deploy your site to Pages by logging into the [Cloudflare dashboard](https://das
 After configuring your site, you can begin your first deploy. You should see Cloudflare Pages installing `dotnet`, your project dependencies, and building your site, before deploying it.
 
 {{<Aside type="note">}}
-For the complete guide to deploying your first site to Cloudflare Pages, refer to the [Get started guide](/get-started).
+For the complete guide to deploying your first site to Cloudflare Pages, refer to the [Get started guide](/pages/get-started/).
 {{</Aside>}}
 
 After deploying your site, you will receive a unique subdomain for your project on `*.pages.dev`.
-Every time you commit new code to your Blazor site, Cloudflare Pages will automatically rebuild your project and deploy it. You will also get access to [preview deployments](/platform/preview-deployments) on new pull requests, so you can preview how changes look to your site before deploying them to production.
+Every time you commit new code to your Blazor site, Cloudflare Pages will automatically rebuild your project and deploy it. You will also get access to [preview deployments](/pages/platform/preview-deployments/) on new pull requests, so you can preview how changes look to your site before deploying them to production.
 
 ## Learn more
 
-By completing this guide, you have successfully deployed your Blazor site to Cloudflare Pages. To get started with other frameworks, [refer to the list of Framework guides](/framework-guides).
+By completing this guide, you have successfully deployed your Blazor site to Cloudflare Pages. To get started with other frameworks, [refer to the list of Framework guides](/pages/framework-guides/).

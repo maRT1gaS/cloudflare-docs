@@ -9,9 +9,9 @@ title: KV
 
 Workers KV is a global, low-latency, key-value data store. It supports exceptionally high read volumes with low-latency, making it possible to build highly dynamic APIs and websites which respond as quickly as a cached static file would.
 
-Learn more about [How KV works](/learning/how-kv-works).
+Learn more about [How KV works](/workers/learning/how-kv-works/).
 
-To use Workers KV you must create a KV namespace and add a [binding](/runtime-apis/kv#kv-bindings) to your Worker. See the [instructions for Wrangler KV commands](/cli-wrangler/commands#kv) or the KV page of the [Workers dashboard](https://dash.cloudflare.com/?to=/:account/workers/kv/namespaces)
+To use Workers KV you must create a KV namespace and add a [binding](/workers/runtime-apis/kv/#kv-bindings) to your Worker. See the [instructions for Wrangler KV commands](/workers/cli-wrangler/commands/#kv) or the KV page of the [Workers dashboard](https://dash.cloudflare.com/?to=/:account/workers/kv/namespaces)
 
 ---
 
@@ -43,18 +43,18 @@ This method returns a `Promise` that you should `await` on in order to verify a 
 The maximum size of a value is 25 MiB.
 
 You can also [write key-value pairs from the command line with
-Wrangler](/cli-wrangler/commands#kvkey).
+Wrangler](/workers/cli-wrangler/commands/#kvkey).
 
 Finally, you can [write data via the API](https://api.cloudflare.com/#workers-kv-namespace-write-key-value-pair).
 
 Due to the eventually consistent nature of Workers KV, concurrent writes from different edge locations can end up overwriting one another. It’s a common pattern to write data via Wrangler or the API but read the data from within a worker, avoiding this issue by issuing all writes from the same location.
 
-Writes are immediately visible to other requests in the same edge location, but can take up to 60 seconds to be visible in other parts of the world. See [How KV works](/learning/how-kv-works) for more on this topic.
+Writes are immediately visible to other requests in the same edge location, but can take up to 60 seconds to be visible in other parts of the world. See [How KV works](/workers/learning/how-kv-works/) for more on this topic.
 
 #### Writing data in bulk
 
 You can [write more than one key-value pair at a time with
-wrangler](/cli-wrangler/commands#kvbulk) or [via the
+wrangler](/workers/cli-wrangler/commands/#kvbulk) or [via the
 API](https://api.cloudflare.com/#workers-kv-namespace-write-multiple-key-value-pairs), up to 10,000 KV pairs. A `key` and `value` are required for each KV pair. The entire request size must be less than 100 megabytes.
 We do not support this from within a Worker script at this time.
 
@@ -89,7 +89,7 @@ We talked about the basic form of the `put` method above, but this call also has
 These assume that `secondsSinceEpoch` and `secondsFromNow` are variables defined elsewhere in your Worker code.
 
 You can also [write with an expiration on the command line via
-Wrangler](/cli-wrangler/commands#kvkey) or [via the
+Wrangler](/workers/cli-wrangler/commands/#kvkey) or [via the
 API](https://api.cloudflare.com/#workers-kv-namespace-write-key-value-pair).
 
 #### Metadata
@@ -108,7 +108,7 @@ To get the value for a given key, you can call the `get` method on any namespace
 
 The method returns a promise you can `await` to get the value. If the key is not found, the promise will resolve with the literal value `null`.
 
-Note that `get` may return stale values -- if a given key has recently been read in a given location, changes to the key made in other locations may take up to 60 seconds to be visible. See [How KV works](/learning/how-kv-works) for more on this topic.
+Note that `get` may return stale values -- if a given key has recently been read in a given location, changes to the key made in other locations may take up to 60 seconds to be visible. See [How KV works](/workers/learning/how-kv-works/) for more on this topic.
 
 Here’s an example of reading a key from within a Worker:
 
@@ -128,7 +128,7 @@ async function handleRequest(request) {
 ```
 
 You can also [read key-value pairs from the command line with
-wrangler](/cli-wrangler/commands#kvkey).
+wrangler](/workers/cli-wrangler/commands/#kvkey).
 
 Finally, you can also [read from the API](https://api.cloudflare.com/#workers-kv-namespace-read-key-value-pair).
 
@@ -163,11 +163,9 @@ The effective Cache TTL of an already cached item can be reduced by getting it a
 
 You can get the metadata associated with a key-value pair alongside its value by calling the `getWithMetadata` method on a namespace you’ve bound in your script:
 
-```
-const valueAndMetadata = await NAMESPACE.getWithMetadata(key)
-const value = valueAndMetadata.value
-const metadata = valueAndMetadata.metadata
-```
+    const valueAndMetadata = await NAMESPACE.getWithMetadata(key)
+    const value = valueAndMetadata.value
+    const metadata = valueAndMetadata.metadata
 
 If there’s no metadata associated with the requested key-value pair, `null` will be returned for metadata.
 
@@ -183,7 +181,7 @@ This will remove the key and value from your namespace. As with any operations, 
 
 This method returns a promise that you should `await` on in order to verify successful deletion.
 
-You can also [delete key-value pairs from the command line with Wrangler](/cli-wrangler/commands#kvkey) or [via the API](https://api.cloudflare.com/#workers-kv-namespace-delete-key-value-pair).
+You can also [delete key-value pairs from the command line with Wrangler](/workers/cli-wrangler/commands/#kvkey) or [via the API](https://api.cloudflare.com/#workers-kv-namespace-delete-key-value-pair).
 
 ### Listing keys
 
@@ -201,7 +199,7 @@ async function handleRequest(request) {
 }
 ```
 
-You can also [list keys on the command line with Wrangler](/cli-wrangler/commands#kvkey) or [via the API](https://api.cloudflare.com/#workers-kv-namespace-list-a-namespace-s-keys).
+You can also [list keys on the command line with Wrangler](/workers/cli-wrangler/commands/#kvkey) or [via the API](https://api.cloudflare.com/#workers-kv-namespace-list-a-namespace-s-keys).
 
 Changes may take up to 60 seconds to be visible when listing keys.
 
@@ -237,7 +235,7 @@ The `keys` property will contain an array of objects describing each key. That o
 
 Additionally, if `list_complete` is `false`, there are more keys to fetch. You’ll use the `cursor` property to get more keys. See the [Pagination section](#pagination) below for more details.
 
-Note that if your values fit in [the metadata size limit](/platform/limits#kv-limits), list can be used to return information associated with multiple keys in one operation. This is more efficient than a list followed by a get per key.
+Note that if your values fit in [the metadata size limit](/workers/platform/limits/#kv-limits), list can be used to return information associated with multiple keys in one operation. This is more efficient than a list followed by a get per key.
 
 #### Listing by prefix
 
@@ -281,7 +279,7 @@ A KV namespace is a key-value database that is replicated to Cloudflare's edge. 
 
 The name of your binding **does not** need to match the KV namespace's name. Instead, the binding should be a valid JavaScript identifier because it will exist as a global variable within your Worker.
 
-This is not the case with modules, see [next section](/runtime-apis/kv#referencing-kv-from-durable-objects-and-workers-using-modules-syntax).
+This is not the case with modules, see [next section](/workers/runtime-apis/kv/#referencing-kv-from-durable-objects-and-workers-using-modules-syntax).
 
 When you create a namespace (see note below), it will have a name you choose (e.g. "My tasks"), and an assigned ID (e.g. "06779da6940b431db6e566b4846d64db")
 
@@ -316,7 +314,7 @@ You can create a namespace <a href="https://developers.cloudflare.com/workers/cl
 
 ### Referencing KV from Durable Objects and Workers using Modules Syntax
 
-The docs above assume you're using the original service worker syntax, where binding a KV namespace makes it available as a global variable with the name you chose, e.g. `NAMESPACE`. Durable Objects use modules syntax, so instead of a global variable, bindings are available as properties of the `env` parameter [passed to the constructor](/runtime-apis/durable-objects#durable-object-class-definition). A typical example might look like:
+The docs above assume you're using the original service worker syntax, where binding a KV namespace makes it available as a global variable with the name you chose, e.g. `NAMESPACE`. Durable Objects use modules syntax, so instead of a global variable, bindings are available as properties of the `env` parameter [passed to the constructor](/workers/runtime-apis/durable-objects/#durable-object-class-definition). A typical example might look like:
 
 ```js
 export class DurableObject {
@@ -334,5 +332,5 @@ export class DurableObject {
 
 ## See Also
 
-- [Limits](/platform/limits#kv-limits)
-- [Pricing](/platform/pricing#kv)
+- [Limits](/workers/platform/limits/#kv-limits)
+- [Pricing](/workers/platform/pricing/#kv)

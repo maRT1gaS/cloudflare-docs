@@ -9,7 +9,7 @@ title: Verify custom hostnames
 Cloudflare verifies ownership of each new hostname before traffic is allowed to proxy. There are four methods to verify ownership: TXT record, HTTP token, CNAME, or Apex.
 
 {{<Aside type="note" header="Note:">}}
-If a custom hostname is already on Cloudflare, then traffic will only shift to your fallback origin once the [DNS target has changed](/ssl-for-saas/getting-started#step-5--have-customer-create-a-cname-record).
+If a custom hostname is already on Cloudflare, then traffic will only shift to your fallback origin once the [DNS target has changed](/ssl/ssl-for-saas/getting-started/#step-5--have-customer-create-a-cname-record).
 {{</Aside>}}
 
 ## CNAME
@@ -22,13 +22,13 @@ Cloudflare iterates over the CNAME chain starting from the hostname. The value o
 
 #### If using Cloudflare for a partial setup
 
-1. Add a CNAME record to Cloudflare DNS for your domain:
+1.  Add a CNAME record to Cloudflare DNS for your domain:
 
 ```txt
 app.example.com CNAME proxy-fallback.saasprovider.com
 ```
 
-1. Add a CNAME record to your authoritative DNS to point to the fallback origin:
+1.  Add a CNAME record to your authoritative DNS to point to the fallback origin:
 
 ```txt
 proxy-fallback.saasprovider.com CNAME proxy-fallback.saasprovider.com.cdn.cloudflare.net
@@ -40,8 +40,8 @@ To prevent unresolvable CNAME loops, only 10 consecutive CNAMES are followed to 
 
 #### If using another DNS provider
 
-1. Log into your authoritative DNS provider.
-1. Add a CNAME record to point to the fallback origin owned by the SaaS provider.
+1.  Log into your authoritative DNS provider.
+2.  Add a CNAME record to point to the fallback origin owned by the SaaS provider.
 
 ```txt
 app.example.com CNAME proxy-fallback.saasprovider.com
@@ -87,9 +87,9 @@ Each API call to create a Custom Hostname also provides an HTTP _ownership_verif
 
 To get and use an HTTP ownership_verification record:
 
-1. Make an API call to [create a Custom Hostname](https://api.cloudflare.com/#custom-hostname-for-a-zone-create-custom-hostname).
+1.  Make an API call to [create a Custom Hostname](https://api.cloudflare.com/#custom-hostname-for-a-zone-create-custom-hostname).
 
-1. In the response, copy the `http_url` and `http_body` from the `ownership_verification_http` object:
+2.  In the response, copy the `http_url` and `http_body` from the `ownership_verification_http` object:
 
   <details>
   <summary>Example response (truncated)</summary>
@@ -115,22 +115,20 @@ To get and use an HTTP ownership_verification record:
   </div>
   </details>
 
-1. Store the `http_url` and `http_body` on your origin web server.
+1.  Store the `http_url` and `http_body` on your origin web server.
 
   <details>
   <summary>Example configuration</summary>
   <div>
 
-```
-location "/.well-known/cf-custom-hostname-challenge/24c8c68e-bec2-49b6-868e-f06373780630" {
-  return 200 "48b409f6-c886-406b-8cbc-0fbf59983555\n";
-}
-```
+    location "/.well-known/cf-custom-hostname-challenge/24c8c68e-bec2-49b6-868e-f06373780630" {
+      return 200 "48b409f6-c886-406b-8cbc-0fbf59983555\n";
+    }
 
   </div>
   </details>
 
-1. After a few minutes, you will see the hostname validation become **Active** in the UI.
+1.  After a few minutes, you will see the hostname validation become **Active** in the UI.
 
 {{<Aside>}}
 Cloudflare sends GET requests to the `http_url` using `User-Agent: Cloudflare Custom Hostname Verification`.

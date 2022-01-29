@@ -6,9 +6,9 @@ title: Create a Tunnel
 
 # Create a Tunnel
 
-| Before you start                                                                                      |
-| ----------------------------------------------------------------------------------------------------- |
-| 1. [Install and authenticate `cloudflared`](/connections/connect-apps/install-and-setup/installation) |
+| Before you start                                                                                                      |
+| --------------------------------------------------------------------------------------------------------------------- |
+| 1. [Install and authenticate `cloudflared`](/cloudflare-one/connections/connect-apps/install-and-setup/installation/) |
 
 ## Create a Tunnel
 
@@ -26,7 +26,7 @@ This command will create a Tunnel with the name provided and associate it with a
 
 Creating a Tunnel generates a credentials file for that specific Tunnel. This file is used to authenticate the Tunnel with your Cloudflare account when it connects.
 
-You can also view and manage the Tunnels generated. Click [here](/connections/connect-apps/create-tunnel) for more information on other commands available.
+You can also view and manage the Tunnels generated. Click [here](/cloudflare-one/connections/connect-apps/create-tunnel/) for more information on other commands available.
 
 ## Associate the Tunnel with a CIDR
 
@@ -69,4 +69,4 @@ warp-routing:
 
 ## Run the Tunnel
 
-You can now [run the Tunnel](/connections/connect-apps/run-tunnel) to connect it to Cloudflare.
+You can now [run the Tunnel](/cloudflare-one/connections/connect-apps/run-tunnel/) to connect it to Cloudflare.

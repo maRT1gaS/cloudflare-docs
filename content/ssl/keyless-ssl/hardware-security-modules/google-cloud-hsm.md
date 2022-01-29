@@ -75,7 +75,5 @@ Once you’ve imported the key, copy the **Resource name** from the UI. Then, ad
 
 With the config file saved, restart `gokeyless` and verify it started successfully.
 
-```
-$ sudo systemctl restart gokeyless.service
-$ sudo systemctl status gokeyless.service -l
-```
+    $ sudo systemctl restart gokeyless.service
+    $ sudo systemctl status gokeyless.service -l

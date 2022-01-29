@@ -25,11 +25,11 @@ Cloudflare stops malicious traffic before it reaches your origin web server. Clo
 
 A DNS lookup of a proxied (orange-clouded) Cloudflare subdomain returns [Cloudflare IP addresses](https://www.cloudflare.com/ips/). Proxied traffic comes to Cloudflare's edge and then Cloudflare forwards the request to your server. Cloudflare masks your origin IP address for proxied DNS records so attackers cannot bypass Cloudflare and directly attack your origin web server.
 
-Visitor <--[Connection 1]--> Cloudflare Edge <--[Connection 2]--> Origin Server
+Visitor <--\[Connection 1]--> Cloudflare Edge <--\[Connection 2]--> Origin Server
 
 A DNS lookup of an unproxied (grey-clouded) Cloudflare subdomain returns the IP address that you have entered for the record. Unproxied traffic goes directly to your origin server and does not receive any of the benefits of using Cloudflare.
 
-Visitor <--[Connection]--> Origin Server
+Visitor <--\[Connection]--> Origin Server
 
 [Create your Cloudflare account and add a domain](https://support.cloudflare.com/hc/en-us/articles/201720164) to review our security benefits.
 
@@ -42,7 +42,7 @@ Cloudflare optimizes the delivery of website resources for your visitors. Cloudf
 Cloudflare’s globally distributed [Anycast network](https://www.cloudflare.com/learning/cdn/glossary/anycast-network/) routes visitor requests to the nearest Cloudflare data center. Cloudflare distributed DNS responds to website visitors with Cloudflare IP addresses for traffic you proxy to Cloudflare. This also provides security by hiding the specific IP address of your origin web server.
 
 {{<Aside type="note">}}
-Cloudflare-proxied domains share IP addresses from a pool that belongs to the Cloudflare network. As a result, Cloudflare does not offer dedicated or exclusive IP addresses. To reduce the number of Cloudflare IPs that your domain shares with other Cloudflare customer domains, upgrade to a [Business or Enterprise plan and upload a Custom SSL certificate](https://developers.cloudflare.com/ssl/edge-certificates/custom-certificates).
+Cloudflare-proxied domains share IP addresses from a pool that belongs to the Cloudflare network. As a result, Cloudflare does not offer dedicated or exclusive IP addresses. To reduce the number of Cloudflare IPs that your domain shares with other Cloudflare customer domains, upgrade to a [Business or Enterprise plan and upload a Custom SSL certificate](/ssl/edge-certificates/custom-certificates).
 {{</Aside>}}
 
 Also, our flat-rate pricing structure provides predictability and reliability in your [CDN](https://www.cloudflare.com/cdn-y/) and [DDoS](https://www.cloudflare.com/ddos/) bandwidth expenses. Cloudflare does not have bandwidth limits for domains on the Free, Pro and Business plans as long as those domains comply with our [Terms of Service](https://www.cloudflare.com/terms/). However, your hosting provider may still impose limits on bandwidth usage and/or charge for bandwidth.

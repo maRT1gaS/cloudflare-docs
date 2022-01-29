@@ -25,10 +25,10 @@ The Workers platform fully supports JavaScript. Cloudflare recommends using Java
 
 ### Resources on JavaScript / Typescript
 
-- [Quickstarts](/get-started/quickstarts) – More example repos to use as a basis for your projects
+- [Quickstarts](/workers/get-started/quickstarts/) – More example repos to use as a basis for your projects
 - [TypeScript type definitions](https://github.com/cloudflare/workers-types)
-- [JavaScript and web standard APIs](/runtime-apis/web-standards)
-- [Tutorials](/tutorials)
+- [JavaScript and web standard APIs](/workers/runtime-apis/web-standards/)
+- [Tutorials](/workers/tutorials/)
 
 ## Wasm-supported
 

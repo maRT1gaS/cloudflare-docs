@@ -12,28 +12,28 @@ For most tools, the trigger will be a simple _Page view_ event type, for which C
 
 To create a new trigger:
 
-1. Log in to the [Cloudflare dashboard](https://dash.cloudflare.com/login), and select your account and website.
+1.  Log in to the [Cloudflare dashboard](https://dash.cloudflare.com/login), and select your account and website.
 
-1. Go to **Zaraz**.
+2.  Go to **Zaraz**.
 
-1. In **Triggers**, select **Create trigger**.
+3.  In **Triggers**, select **Create trigger**.
 
-1. Enter a descriptive name for the trigger.
+4.  Enter a descriptive name for the trigger.
 
-1. In **Match Rules**, define the condition that will activate this trigger.
+5.  In **Match Rules**, define the condition that will activate this trigger.
 
-   1. In **Variable name**, input the variable you want as the trigger. For example, `{{ client.__zarazTrack }}` is the name of an event a user sends using `zarazTrack`. Refer to the [Accessing User Properties](/user-properties) table for a list of variables you can use as triggers.
+    1.  In **Variable name**, input the variable you want as the trigger. For example, `{{ client.__zarazTrack }}` is the name of an event a user sends using `zarazTrack`. Refer to the [Accessing User Properties](/zaraz/user-properties/) table for a list of variables you can use as triggers.
 
-   1. In the drop-down menu, choose from a list of operators, such as _Contains_, _Equals_, _Starts with_, among others.
+    2.  In the drop-down menu, choose from a list of operators, such as _Contains_, _Equals_, _Starts with_, among others.
 
-   1. In **Match string** input the string that completes the rule. For example, if you were tracking purchases, you would input `purchase`.
+    3.  In **Match string** input the string that completes the rule. For example, if you were tracking purchases, you would input `purchase`.
 
-   The following is an example of a complete rule:
+    The following is an example of a complete rule:
 
-   ```txt
-   {{ client.__zarazTrack }}` Contains `signup_success 2`
-   ```
+    ```txt
+    {{ client.__zarazTrack }}` Contains `signup_success 2`
+    ```
 
-1. Click **Save**.
+6.  Click **Save**.
 
 Your trigger is now complete. If you go back to the main page you will see it listed under **Triggers**. You can also see where your trigger is used, and click the trigger to edit it.

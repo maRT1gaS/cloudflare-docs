@@ -10,7 +10,7 @@ The [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) prov
 The `fetch` method is implemented on the ServiceWorkerGlobalScope. See [MDN documentation](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch) for more information.
 
 {{<Aside>}}
-**Note:** Asynchronous tasks such as `fetch` are not executed at the top level in a Worker script and must be executed within a FetchEvent handler such as [`respondWith`](/runtime-apis/fetch-event#methods). Learn more about [the Request context](/runtime-apis/request#the-request-context).
+**Note:** Asynchronous tasks such as `fetch` are not executed at the top level in a Worker script and must be executed within a FetchEvent handler such as [`respondWith`](/workers/runtime-apis/fetch-event/#methods). Learn more about [the Request context](/workers/runtime-apis/request/#the-request-context).
 {{</Aside>}}
 
 {{<Aside type="warning" header="Warning">}}
@@ -57,7 +57,7 @@ async function eventHandler(event) {
 
 - `request` <TypeLink href="/runtime-apis/request">Request</TypeLink> | <Type>string</Type>
 
-  - The [`Request`](/runtime-apis/request) object or a string represents the URL to fetch.
+  - The [`Request`](/workers/runtime-apis/request/) object or a string represents the URL to fetch.
 
 - `init` <TypeLink href="/runtime-apis/request#requestinit">RequestInit</TypeLink>
   - The content of the request.
@@ -68,7 +68,7 @@ async function eventHandler(event) {
 
 ## See also
 
-- [Example: use `fetch` to respond with another site](/examples/respond-with-another-site)
-- [Example: Fetch HTML](/examples/fetch-html)
-- [Example: Fetch JSON](/examples/fetch-json)
-- [Example: cache using Fetch](/examples/cache-using-fetch)
+- [Example: use `fetch` to respond with another site](/workers/examples/respond-with-another-site/)
+- [Example: Fetch HTML](/workers/examples/fetch-html/)
+- [Example: Fetch JSON](/workers/examples/fetch-json/)
+- [Example: cache using Fetch](/workers/examples/cache-using-fetch/)

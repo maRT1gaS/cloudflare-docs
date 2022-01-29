@@ -12,7 +12,7 @@ As part of the Workers platform's integration with Chrome Developer Tools, you c
 
 <StreamVideo id="f11809a382160334e9be9a2aedf13d1d" />
 
-`wrangler inspect` is only available in Wrangler v1.19.3 or later. Check what version you have before continuing. If you need to update Wrangler, refer to the guide on [upgrading Wrangler](https://developers.cloudflare.com/workers/cli-wrangler/install-update).
+`wrangler inspect` is only available in Wrangler v1.19.3 or later. Check what version you have before continuing. If you need to update Wrangler, refer to the guide on [upgrading Wrangler](/workers/cli-wrangler/install-update).
 
 ## Profiling an example project
 
@@ -80,9 +80,9 @@ With the DevTools open, select the **Profile** tab > **Start**. Open a new tab w
 
 There are three ways to view the CPU profiling data:
 
-1. **Tree** - a top-down view of all functions called. Starting with top-level functions and nesting subsequent calls under each one.
-2. **Heavy** - a bottom-up view of all functions called. Starting with the final functions in the stack and nesting parent calls under each one.
-3. **Chart** - a flame chart that will show all function calls and how much time was spent in each function execution.
+1.  **Tree** - a top-down view of all functions called. Starting with top-level functions and nesting subsequent calls under each one.
+2.  **Heavy** - a bottom-up view of all functions called. Starting with the final functions in the stack and nesting parent calls under each one.
+3.  **Chart** - a flame chart that will show all function calls and how much time was spent in each function execution.
 
 To find slow functions, enter the **Chart** view and search for the last long function in a stack.
 

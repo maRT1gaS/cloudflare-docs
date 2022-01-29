@@ -19,7 +19,7 @@ The single-file purge rate limit for the Free subscription is 1000 urls/min. The
 
 A single-file purge performed through your Cloudflare dashboard does not clear objects that contain:
 
-- [Custom cache keys](/about/cache-keys)
+- [Custom cache keys](/cache/about/cache-keys/)
 - [Origin header](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Origin)
 - Any of these response headers:
   - `X-Forwarded-Host`
@@ -35,14 +35,14 @@ You can purge objects with these characteristics using an API call ([Purge files
 Always use UTF-8 encoded URLs for single-file cache purges. Wildcards are not supported on single file purge, and you must use purge by hostname, prefix, or implement cache tags as an alternative solution. All of the listed options are Enterprise features.
 {{</Aside>}}
 
-1. Log in to your Cloudflare dashboard.
-1. Click **Caching** > **Configuration**.
-1. Under **Purge Cache**, click **Custom Purge**. The **Custom Purge** window appears.
-1. Under **Purge by**, select **URL**.
-1. Enter the appropriate value(s) in the text field using the format shown in the example.
-1. Perform any additional instructions to complete the form.
-1. Review your entries.
-1. Click **Purge**.
+1.  Log in to your Cloudflare dashboard.
+2.  Click **Caching** > **Configuration**.
+3.  Under **Purge Cache**, click **Custom Purge**. The **Custom Purge** window appears.
+4.  Under **Purge by**, select **URL**.
+5.  Enter the appropriate value(s) in the text field using the format shown in the example.
+6.  Perform any additional instructions to complete the form.
+7.  Review your entries.
+8.  Click **Purge**.
 
 ## Purge everything
 
@@ -50,10 +50,10 @@ To maintain optimal site performance, Cloudflare strongly recommends using singl
 
 Purging everything immediately clears all resources from your CDN cache in all Cloudflare data centers. Each new request for a purged resource returns to your origin server to validate the resource. If Cloudflare cannot validate the resource, Cloudflare fetches the latest version from the origin server and replaces the cached version. When a site with heavy traffic contains a lot of assets, requests to your origin server can increase substantially and result in slow site performance.
 
-1. Log in to your Cloudflare dashboard.
-1. Click **Caching** > **Configuration**.
-1. Under **Purge Cache**, click **Purge Everything**. A warning window appears.
-1. If you agree, click **Purge Everything**.
+1.  Log in to your Cloudflare dashboard.
+2.  Click **Caching** > **Configuration**.
+3.  Under **Purge Cache**, click **Purge Everything**. A warning window appears.
+4.  If you agree, click **Purge Everything**.
 
 ## Cache-Tags (Enterprise Only)
 
@@ -61,11 +61,11 @@ Cache-tag purging makes multi-file purging easier because you can bulk purge by 
 
 ### General workflow for cache-tags
 
-1. Add tags to the `Cache-Tag HTTP` response header from your origin web server for your web content, such as pages, static assets, etc.
-1. [Ensure your web traffic is proxied](https://support.cloudflare.com/hc/articles/205195708#h_815d1b1e-74cf-4a5f-b477-e441a76ac3fd) through Cloudflare.
-1. Cloudflare associates the tags in the `Cache-Tag HTTP` header with the content being cached.
-1. Use specific cache-tags to purge your Cloudflare CDN cache of all content containing that cache-tag from your dashboard or [using our API](https://api.cloudflare.com/#zone-purge-files-by-cache-tags-or-host).
-1. Cloudflare forces a [cache miss](/about/default-cache-behavior#cloudflare-cache-responses) on content with the purged cache-tag.
+1.  Add tags to the `Cache-Tag HTTP` response header from your origin web server for your web content, such as pages, static assets, etc.
+2.  [Ensure your web traffic is proxied](https://support.cloudflare.com/hc/articles/205195708#h_815d1b1e-74cf-4a5f-b477-e441a76ac3fd) through Cloudflare.
+3.  Cloudflare associates the tags in the `Cache-Tag HTTP` header with the content being cached.
+4.  Use specific cache-tags to purge your Cloudflare CDN cache of all content containing that cache-tag from your dashboard or [using our API](https://api.cloudflare.com/#zone-purge-files-by-cache-tags-or-host).
+5.  Cloudflare forces a [cache miss](/cache/about/default-cache-behavior/#cloudflare-cache-responses) on content with the purged cache-tag.
 
 {{<Aside type="warning" header="Warning">}}
 Be careful when purging. A cache miss can cause execution delays by requiring a fetch from your origin server.
@@ -93,12 +93,12 @@ When your content reaches our edge network, Cloudflare:
 
 ## Purge using cache-tags
 
-1. Log in to your Cloudflare dashboard.
-1. Click **Caching** > **Configuration**.
-1. Under **Purge Cache**, click **Custom Purge**. The **Custom Purge** window appears.
-1. Under **Purge by**, select **URL**.
-1. In the text box, enter your tags to use to purge the cached resources. To purge multiple cache-tagged resources, separate each tag with a comma or have one tag per line.
-1. Click **Purge**.
+1.  Log in to your Cloudflare dashboard.
+2.  Click **Caching** > **Configuration**.
+3.  Under **Purge Cache**, click **Custom Purge**. The **Custom Purge** window appears.
+4.  Under **Purge by**, select **URL**.
+5.  In the text box, enter your tags to use to purge the cached resources. To purge multiple cache-tagged resources, separate each tag with a comma or have one tag per line.
+6.  Click **Purge**.
 
 {{<Aside type="note" header="Note">}}
 You can purge using cache-tags or hostnames via the Cloudflare API. For more information, see the [API documentation](https://api.cloudflare.com/) for Purging by cache-tag or hostname. You can use up to 30 cache-tags in one API call and make up to 30,000 purge API calls in a 24-hour period.
@@ -120,16 +120,16 @@ Purging by prefix is useful in different scenarios, such as:
 - Increasing control over cached objects in a path
 - Simplifying the number of purge calls sent
 
-1. Log in to your Cloudflare dashboard.
-1. Select the appropriate domain.
-1. Click **Caching** > **Configuration**.
-1. Under **Purge Cache**, click **Custom Purge**. The **Custom Purge** window appears.
-1. Under **Purge by**, select **Prefix**.
-1. Follow the syntax instructions.
-   - One prefix per line.
-   - Maximum 30 prefixes per API call.
-1. Enter the appropriate value(s) in the text field using the format shown in the example.
-1. Click **Purge**.
+1.  Log in to your Cloudflare dashboard.
+2.  Select the appropriate domain.
+3.  Click **Caching** > **Configuration**.
+4.  Under **Purge Cache**, click **Custom Purge**. The **Custom Purge** window appears.
+5.  Under **Purge by**, select **Prefix**.
+6.  Follow the syntax instructions.
+    - One prefix per line.
+    - Maximum 30 prefixes per API call.
+7.  Enter the appropriate value(s) in the text field using the format shown in the example.
+8.  Click **Purge**.
 
 ### Limitations
 
@@ -160,21 +160,17 @@ For a Cache Key based on device type, purge the asset by passing the `CF-Device-
 
 See the example API request below to purge all mobile assets on the root web page.
 
-```
-curl -X POST "https://api.cloudflare.com/client/v4/zones/{zone_tag}/purge_cache"
--H "X-Auth-Email: user@example.com" -H "X-Auth-Key: c2547eb745079dac9320b638f5e225cf483cc5cfdda41"
--H "Content-Type: application/json" --data '{"files":[{"url":"http://my.website.com/","headers":{"CF-Device-Type":"mobile"}}]}'
-```
+    curl -X POST "https://api.cloudflare.com/client/v4/zones/{zone_tag}/purge_cache"
+    -H "X-Auth-Email: user@example.com" -H "X-Auth-Key: c2547eb745079dac9320b638f5e225cf483cc5cfdda41"
+    -H "Content-Type: application/json" --data '{"files":[{"url":"http://my.website.com/","headers":{"CF-Device-Type":"mobile"}}]}'
 
 ### Purge by geo
 
 Purge resources for a location-based Cache Key by specifying the two-letter country code. Spain is used in the example below.
 
-```
-curl -X POST "https://api.cloudflare.com/client/v4/zones/{zone_tag}/purge_cache"
--H "X-Auth-Email: user@example.com"
--H "X-Auth-Key: c2547eb745079dac9320b638f5e225cf483cc5cfdda41" -H "Content-Type: application/json" --data '{"files":[{"url":"http://my.website.com/", "headers":{"Cf-Ipcountry":"ES"}}]}'
-```
+    curl -X POST "https://api.cloudflare.com/client/v4/zones/{zone_tag}/purge_cache"
+    -H "X-Auth-Email: user@example.com"
+    -H "X-Auth-Key: c2547eb745079dac9320b638f5e225cf483cc5cfdda41" -H "Content-Type: application/json" --data '{"files":[{"url":"http://my.website.com/", "headers":{"Cf-Ipcountry":"ES"}}]}'
 
 ## Purge varied images
 

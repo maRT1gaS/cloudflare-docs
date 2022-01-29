@@ -20,13 +20,13 @@ Without purchasing **Traffic Steering**, non-Enterprise customers only have acce
 
 ## Off - standard failover
 
-Standard failover directs traffic from unhealthy pools — determined by [health checks](/understand-basics/monitors) and the **Health Threshold** — to the next healthy pool in the configuration. Customers commonly use this option to set up [active - passive failover](/understand-basics/load-balancers#active---passive-failover).
+Standard failover directs traffic from unhealthy pools — determined by [health checks](/load-balancing/understand-basics/monitors/) and the **Health Threshold** — to the next healthy pool in the configuration. Customers commonly use this option to set up [active - passive failover](/load-balancing/understand-basics/load-balancers/#active---passive-failover).
 
 Standard failover uses the pool order to determine failover priority (the failover order).
 
 If all pools are marked unhealthy, Load Balancing will direct traffic to the fallback pool. The default fallback pool is the last pool listed in the Load Balancing configuration.
 
-To specify a fallback pool via the API, use the Update Load Balancers command and set the `fallback_pool` parameter. See _[Load Balancers](/understand-basics/load-balancers/)_ for details.
+To specify a fallback pool via the API, use the Update Load Balancers command and set the `fallback_pool` parameter. See _[Load Balancers](/load-balancing/understand-basics/load-balancers/)_ for details.
 
 If no monitors are attached to the load balancer, it will direct traffic to the primary pool exclusively.
 
@@ -58,7 +58,7 @@ Cloudflare has 13 geographic regions that span the world. The region of a client
 
 <RegionMapping />
 
-For more details on working with regions and region codes, refer to [Region Mapping API](/reference/region-mapping-api).
+For more details on working with regions and region codes, refer to [Region Mapping API](/load-balancing/reference/region-mapping-api/).
 
 ### Via the API
 
@@ -103,9 +103,9 @@ To use proximity steering on a load balancer, you first need to add GPS coordina
 
 To add coordinates when creating or editing a pool:
 
-1. Click the **Configure co-ordinates for Proximity Steering** dropdown.
-1. Enter the latitude and longitude or drag a marker on the map.
-1. Select **Save**.
+1.  Click the **Configure co-ordinates for Proximity Steering** dropdown.
+2.  Enter the latitude and longitude or drag a marker on the map.
+3.  Select **Save**.
 
 {{<Aside type="warning" header="Warning:">}}
 For accurate proximity steering, add GPS coordinates to all pools within the same load balancer.
@@ -113,4 +113,4 @@ For accurate proximity steering, add GPS coordinates to all pools within the sam
 
 ## Random steering
 
-Choose **Random** to route traffic to a healthy pool at random. Customers can use this option to set up [active - active failover](/understand-basics/load-balancers#active---active-failover) (or round robin), where traffic is split equally between multiple pools.
+Choose **Random** to route traffic to a healthy pool at random. Customers can use this option to set up [active - active failover](/load-balancing/understand-basics/load-balancers/#active---active-failover) (or round robin), where traffic is split equally between multiple pools.

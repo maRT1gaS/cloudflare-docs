@@ -6,7 +6,7 @@ tags:
   - Originless
   - Geolocation
 pcx-content-type: configuration
-title: "Geolocation: Hello World"
+title: 'Geolocation: Hello World'
 ---
 
 # Geolocation: Hello World

@@ -11,7 +11,7 @@ import HSTSDefinition from '../../_partials/_hsts-definition.md';
 
 <HSTSDefinition />
 
-HSTS adds an HTTP header that directs [compliant web browsers](/ssl-tls/browser-compatibility) to:
+HSTS adds an HTTP header that directs [compliant web browsers](/ssl/ssl-tls/browser-compatibility/) to:
 
 - Transform HTTP links to HTTPS links
 - Prevent users from bypassing SSL browser warnings
@@ -47,26 +47,26 @@ If you remove HTTPS before disabling HSTS or before waiting for the duration of 
 
 To enable HSTS for your website:
 
-1. Log in to the Cloudflare dashboard and select your account.
-1. Select your website.
-1. Go to **SSL/TLS** > **Edge Certificates**.
-1. For **HTTP Strict Transport Security (HSTS)**, click **Enable HSTS**.
-1. Read the dialog and click **I understand**.
-1. Click **Next**.
-1. Configure the [HSTS settings](#configuration-settings).
-1. Click **Save**.
+1.  Log in to the Cloudflare dashboard and select your account.
+2.  Select your website.
+3.  Go to **SSL/TLS** > **Edge Certificates**.
+4.  For **HTTP Strict Transport Security (HSTS)**, click **Enable HSTS**.
+5.  Read the dialog and click **I understand**.
+6.  Click **Next**.
+7.  Configure the [HSTS settings](#configuration-settings).
+8.  Click **Save**.
 
 ## Disable HSTS
 
 To disable HSTS on your website:
 
-1. Log in to the Cloudflare dashboard and select your account.
-1. Select your website.
-1. Go to **SSL/TLS** > **Edge Certificates**.
-1. For **HTTP Strict Transport Security (HSTS)**, click **Enable HSTS**.
-1. Set the **Max Age Header** to **0 (Disable)**.
-1. If you previously enabled the **No-Sniff** header and want to remove it, set it to **Off**.
-1. Click **Save**.
+1.  Log in to the Cloudflare dashboard and select your account.
+2.  Select your website.
+3.  Go to **SSL/TLS** > **Edge Certificates**.
+4.  For **HTTP Strict Transport Security (HSTS)**, click **Enable HSTS**.
+5.  Set the **Max Age Header** to **0 (Disable)**.
+6.  If you previously enabled the **No-Sniff** header and want to remove it, set it to **Off**.
+7.  Click **Save**.
 
 ## Configuration settings
 

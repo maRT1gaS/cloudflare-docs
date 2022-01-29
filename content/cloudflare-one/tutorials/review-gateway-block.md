@@ -22,8 +22,8 @@ You can use Cloudflare Gateway to filter and log DNS queries from devices on any
 
 ## Before you start
 
-1. [Add Gateway to your account](/setup)
-2. Deploy Gateway rules to a network or group of [devices](/policies/filtering/dns-policies)
+1.  [Add Gateway to your account](/cloudflare-one/setup/)
+2.  Deploy Gateway rules to a network or group of [devices](/cloudflare-one/policies/filtering/dns-policies/)
 
 ---
 
@@ -43,7 +43,7 @@ Click the **Filter** action to filter by date range, user, action, and policy. I
 
 ![Blocked](../static/secure-web-gateway/review-gateway-block/blocked.png)
 
-You can expand the record to identify more information about the event, including user identity if you have deployed the [Cloudflare for Teams agent](/connections/connect-devices).
+You can expand the record to identify more information about the event, including user identity if you have deployed the [Cloudflare for Teams agent](/cloudflare-one/connections/connect-devices/).
 
 ![Blocked Expand](../static/secure-web-gateway/review-gateway-block/blocked-expand.png)
 

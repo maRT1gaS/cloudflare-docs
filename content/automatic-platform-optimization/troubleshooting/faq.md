@@ -18,10 +18,8 @@ No. APO ignores Origin Cache Control for caching on the Edge, but APO serves ori
 
 The browser cache control headers may be missing with APO if you set your browser to cache TTL to "respect existing headers." For example:
 
-```
-$ curl -sv -o /dev/null https://example.com/ -H 'Accept: text/html' 2>&1 | grep cache-control
-< cache-control: max-age=86400, stale-while-revalidate=86400, stale-if-error=86400
-```
+    $ curl -sv -o /dev/null https://example.com/ -H 'Accept: text/html' 2>&1 | grep cache-control
+    < cache-control: max-age=86400, stale-while-revalidate=86400, stale-if-error=86400
 
 ## Is the stale-if-error directive still needed with APO?
 
@@ -41,4 +39,4 @@ Yes, Google Fonts are also optimized when APO is activated. You can confirm the 
 
 ## Can I customize query string caching with APO?
 
-For more information on query parameters, see [Query parameters and cached responses](/reference/query-parameters).
+For more information on query parameters, see [Query parameters and cached responses](/automatic-platform-optimization/reference/query-parameters/).

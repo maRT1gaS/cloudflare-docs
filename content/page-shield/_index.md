@@ -12,19 +12,19 @@ Page Shield provides you with visibility on the scripts loaded on your domain's 
 
 Page Shield includes the following features:
 
-- **Script Monitor**: Dashboard that displays information about all scripts detected in your domain's pages.
-- **Page attribution**: Allows you to find in which page a script first appeared, and view a list of the latest occurrences of the script in your pages.
-- **Malicious code detection**: Detects malicious code in your pages using threat intelligence and machine learning.
-- **Code change detection**: Detects any changes in the scripts loaded in your pages.
-- **Alerts**: Receive notifications about newly detected scripts, scripts loaded from unknown domains, new scripts considered malicious, or code changes in your existing scripts.
+*   **Script Monitor**: Dashboard that displays information about all scripts detected in your domain's pages.
+*   **Page attribution**: Allows you to find in which page a script first appeared, and view a list of the latest occurrences of the script in your pages.
+*   **Malicious code detection**: Detects malicious code in your pages using threat intelligence and machine learning.
+*   **Code change detection**: Detects any changes in the scripts loaded in your pages.
+*   **Alerts**: Receive notifications about newly detected scripts, scripts loaded from unknown domains, new scripts considered malicious, or code changes in your existing scripts.
 
 {{<button-group>}}
-  {{<button type="primary" href="/get-started">}}
-    Set up Page Shield
-  {{</button>}}
-  {{<button type="secondary" href="/about">}}
-    Learn more
-  {{</button>}}
+{{<button type="primary" href="/page-shield/get-started/">}}
+Set up Page Shield
+{{</button>}}
+{{<button type="secondary" href="/page-shield/about/">}}
+Learn more
+{{</button>}}
 {{</button-group>}}
 
 ## Availability
@@ -39,6 +39,6 @@ Page Shield includes the following features:
 
 ## Get started
 
-To get started with Page Shield, refer to the Page Shield [setup guide](/get-started).
+To get started with Page Shield, refer to the Page Shield [setup guide](/page-shield/get-started/).
 
-To manage Page Shield using an API, refer to the [Script Monitor API](/reference/script-monitor-api).
+To manage Page Shield using an API, refer to the [Script Monitor API](/page-shield/reference/script-monitor-api/).

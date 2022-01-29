@@ -18,9 +18,9 @@ You can redirect your domain visitors to HTTPS through SSL/TLS or Page Rules, de
 
 To redirect traffic for all subdomains and hosts in your domain:
 
-1. Log into your [Cloudflare account](https://dash.cloudflare.com) and go to a specific domain.
-1. Navigate to **SSL/TLS** > **Edge Certificates**.
-1. For **Always Use HTTPS**, switch the toggle to **On**.
+1.  Log into your [Cloudflare account](https://dash.cloudflare.com) and go to a specific domain.
+2.  Navigate to **SSL/TLS** > **Edge Certificates**.
+3.  For **Always Use HTTPS**, switch the toggle to **On**.
 
 {{<Aside type="note">}}
 The _Always Use HTTPS_ action will only appear if your zone has an active Cloudflare SSL certificate.
@@ -30,14 +30,14 @@ The _Always Use HTTPS_ action will only appear if your zone has an active Cloudf
 
 If you only want specific subdomains redirected to HTTPS, redirect on a URL basis using Cloudflare [Page Rules](https://support.cloudflare.com/hc/articles/218411427).
 
-1. Navigate to **Rules** > **Page Rules** > **Create Page Rules**
-1. Enter the URL, for example `http://example.com/*`
-1. Choose _Forwarding URL_ from the drop down menu.
-1. Click _Select Status Code_ and choose _301_ (Permanent Redirect) or _302_ (Temporary Redirect).
-1. Enter the destination URL (`https://www.example.com/$1`).
+1.  Navigate to **Rules** > **Page Rules** > **Create Page Rules**
+2.  Enter the URL, for example `http://example.com/*`
+3.  Choose _Forwarding URL_ from the drop down menu.
+4.  Click _Select Status Code_ and choose _301_ (Permanent Redirect) or _302_ (Temporary Redirect).
+5.  Enter the destination URL (`https://www.example.com/$1`).
 
 This rule will redirect requests for the example.com root domain to the www.example.com subdomain while preserving the URL directory.
 
 ### Limitations
 
-Forcing HTTPS does not resolve issues with [mixed content](https://support.cloudflare.com/hc/articles/200170476), as browsers check the protocol of included resources before making a request. You will need to use only relative links or HTTPS links on pages that you force to HTTPS. Cloudflare can automatically resolve some mixed-content links using our [Automatic HTTPS Rewrites](/edge-certificates/additional-options/automatic-https-rewrites) functionality.
+Forcing HTTPS does not resolve issues with [mixed content](https://support.cloudflare.com/hc/articles/200170476), as browsers check the protocol of included resources before making a request. You will need to use only relative links or HTTPS links on pages that you force to HTTPS. Cloudflare can automatically resolve some mixed-content links using our [Automatic HTTPS Rewrites](/ssl/edge-certificates/additional-options/automatic-https-rewrites/) functionality.

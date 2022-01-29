@@ -8,14 +8,14 @@ title: Cron Triggers
 
 ## Background
 
-Cron Triggers allow users to map a cron expression to a Worker script using a [ScheduledEvent](/runtime-apis/scheduled-event) listener that enables Workers to be executed on a schedule. Cron Triggers are ideal for running periodic jobs for maintenance or calling third-party APIs to collect up-to-date data. Workers scheduled by Cron Triggers will run on underutilized machines to make the best use of Cloudflare's capacity and route traffic efficiently.
+Cron Triggers allow users to map a cron expression to a Worker script using a [ScheduledEvent](/workers/runtime-apis/scheduled-event/) listener that enables Workers to be executed on a schedule. Cron Triggers are ideal for running periodic jobs for maintenance or calling third-party APIs to collect up-to-date data. Workers scheduled by Cron Triggers will run on underutilized machines to make the best use of Cloudflare's capacity and route traffic efficiently.
 
 ## Adding Cron Triggers
 
-You can add Cron Triggers to scripts with the Cloudflare API, or in the dashboard in **Workers** > **Manage Workers** > select **your Worker** > [**Triggers**](https://dash.cloudflare.com/?to=/:account/workers). Refer to [Limits](/limits#number-of-schedules) to track the maximum number of Cron Triggers per Worker. If a script is managed with Wrangler, Cron Triggers should be exclusively managed through the `wrangler.toml` file.
+You can add Cron Triggers to scripts with the Cloudflare API, or in the dashboard in **Workers** > **Manage Workers** > select **your Worker** > [**Triggers**](https://dash.cloudflare.com/?to=/:account/workers). Refer to [Limits](/workers/limits/#number-of-schedules) to track the maximum number of Cron Triggers per Worker. If a script is managed with Wrangler, Cron Triggers should be exclusively managed through the `wrangler.toml` file.
 
 {{<Aside type="note" header="Requires a ScheduledEvent Listener">}}
-To respond to a Cron Trigger, you must add a [`"scheduled"` event](/runtime-apis/scheduled-event) listener to the Workers script.
+To respond to a Cron Trigger, you must add a [`"scheduled"` event](/workers/runtime-apis/scheduled-event/) listener to the Workers script.
 {{</Aside>}}
 
 ![workers-schedule-editor](./media/workers-schedule-editor.png)
@@ -42,32 +42,32 @@ Some common time intervals that may be useful for setting up your Cron Trigger:
 
 <Definitions>
 
-- `* * * * *`
+*   `* * * * *`
 
-  - Every minute
+    *   Every minute
 
-- `*/30 * * * *`
+*   `*/30 * * * *`
 
-  - Every 30 minutes
+    *   Every 30 minutes
 
-- `0 17 * * sun` or `0 17 * * 1`
+*   `0 17 * * sun` or `0 17 * * 1`
 
-  - 5PM on Sunday
+    *   5PM on Sunday
 
-- `10 7 * * mon-fri` or `10 7 * * 2-6`
+*   `10 7 * * mon-fri` or `10 7 * * 2-6`
 
-  - 7:10AM on weekdays
+    *   7:10AM on weekdays
 
-- `0 15 1 * *`
+*   `0 15 1 * *`
 
-  - 3PM on first day of the month
+    *   3PM on first day of the month
 
-- `0 18 * * 6L` or `0 18 * * friL`
+*   `0 18 * * 6L` or `0 18 * * friL`
 
-  - 6PM on the last Friday of the month
+    *   6PM on the last Friday of the month
 
-- `23 59 LW * *`
-  - 11:59PM on the last weekday of the month
+*   `23 59 LW * *`
+    *   11:59PM on the last weekday of the month
 
 </Definitions>
 
@@ -77,10 +77,10 @@ A recommended way for testing your Cron Trigger is to first deploy it to a test 
 
 ## Viewing past events
 
-Users can review the execution history of their Cron Triggers in **Past Events** under [**Triggers**](https://dash.cloudflare.com/?to=/:account/workers) or through Cloudflare's [GraphQL Analytics API](https://developers.cloudflare.com/analytics/graphql-api).
+Users can review the execution history of their Cron Triggers in **Past Events** under [**Triggers**](https://dash.cloudflare.com/?to=/:account/workers) or through Cloudflare's [GraphQL Analytics API](/analytics/graphql-api).
 
 ![workers-past-events](./media/workers-past-events.png)
 
 It can take up to 30 minutes before events are displayed in **Past Events** when creating a new Worker or changing a Worker's name.
 
-Refer to [Metrics and Analytics](/learning/metrics-and-analytics) for more information.
+Refer to [Metrics and Analytics](/workers/learning/metrics-and-analytics/) for more information.

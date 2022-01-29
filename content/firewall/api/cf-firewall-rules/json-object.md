@@ -156,12 +156,12 @@ Requests from the office IP range using the user agent to block would trigger bo
 
 Cloudflare prioritizes rules in descending order, such that priority 1 is first and rules with no priority are last. For rules of equal priority, Cloudflare orders them by action using the following order of precedence:
 
-1. `log`
-1. `bypass`
-1. `allow`
-1. `challenge`
-1. `js_challenge`
-1. `block`
+1.  `log`
+2.  `bypass`
+3.  `allow`
+4.  `challenge`
+5.  `js_challenge`
+6.  `block`
 
 In the example above if no priority is set, the `allow request from the office IP range` would apply because the _allow_ action has a higher precedence than _block_.
 

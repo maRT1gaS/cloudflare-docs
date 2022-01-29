@@ -6,7 +6,7 @@ title: API commands
 
 # API commands
 
-Use the following API commands to manage advanced certificates. If you are using our API for the first time, review our [API Quickstart](https://developers.cloudflare.com/api).
+Use the following API commands to manage advanced certificates. If you are using our API for the first time, review our [API Quickstart](/api).
 
 <table>
   <thead>

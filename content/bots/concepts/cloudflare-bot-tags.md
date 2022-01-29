@@ -7,7 +7,7 @@ title: Bot Tags
 
 # Bot Tags
 
-Bot Tags provide more detail about _why_ Cloudflare assigned a [bot score](/concepts/bot-score) to a request.
+Bot Tags provide more detail about _why_ Cloudflare assigned a [bot score](/bots/concepts/bot-score/) to a request.
 
 Use these tags to learn more about your bot traffic and better inform security settings.
 
@@ -31,7 +31,7 @@ The following values may be present in the `BotTags` log field:
 
 ## Enable bot tags
 
-To enable bot tags, include the `BotTags` log field when using our [Logpush service](https://developers.cloudflare.com/logs/about).
+To enable bot tags, include the `BotTags` log field when using our [Logpush service](/logs/about).
 
 ## Limitations
 

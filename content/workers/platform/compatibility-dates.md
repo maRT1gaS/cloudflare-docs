@@ -22,8 +22,8 @@ There is no need to update your `compatibility_date` if you do not want to. The 
 
 However, even though you do not need to update the `compatibility_date` field, it is a good practice to do so for two reasons:
 
-1. Sometimes, new features can only be made available to Workers that have a current `compatibility_date`. To access the latest features, you need to stay up-to-date.
-2. Generally, other than this page, the Workers documentation may only describe the current `compatibility_date`, omitting information about historical behavior. If your Worker uses an old `compatibility_date`, you will need to continuously refer to this page in order to check if any of the APIs you are using have changed.
+1.  Sometimes, new features can only be made available to Workers that have a current `compatibility_date`. To access the latest features, you need to stay up-to-date.
+2.  Generally, other than this page, the Workers documentation may only describe the current `compatibility_date`, omitting information about historical behavior. If your Worker uses an old `compatibility_date`, you will need to continuously refer to this page in order to check if any of the APIs you are using have changed.
 
 ## Compatibility flags
 
@@ -74,9 +74,9 @@ Newest changes are listed first.
   </tbody>
 </table>
 
-Originally, the Workers runtime did not detach the `ArrayBuffer`s from user-provided TypedArrays when using the [BYOB reader's `read()` method](/runtime-apis/streams/readablestreambyobreader#methods), as required by the Streams spec, meaning it was possible to inadvertently reuse the same buffer for multiple `read()` calls. This change makes Workers conform to the spec.
+Originally, the Workers runtime did not detach the `ArrayBuffer`s from user-provided TypedArrays when using the [BYOB reader's `read()` method](/workers/runtime-apis/streams/readablestreambyobreader/#methods), as required by the Streams spec, meaning it was possible to inadvertently reuse the same buffer for multiple `read()` calls. This change makes Workers conform to the spec.
 
-User code should never try to reuse an `ArrayBuffer` that has been passed into a [BYOB reader's `read()` method](/runtime-apis/streams/readablestreambyobreader#methods). Instead, user code can re-use the `ArrayBuffer` backing the result of the `read()` promise, as in the example below.
+User code should never try to reuse an `ArrayBuffer` that has been passed into a [BYOB reader's `read()` method](/workers/runtime-apis/streams/readablestreambyobreader/#methods). Instead, user code can re-use the `ArrayBuffer` backing the result of the `read()` promise, as in the example below.
 
 ```js
 // Consume and discard `readable` using a single 4KiB buffer.

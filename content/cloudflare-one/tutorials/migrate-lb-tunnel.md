@@ -22,7 +22,7 @@ If you are using Legacy Argo Tunnel today you can migrate to Named Argo Tunnel d
 
 10 minutes
 
-See additional documentation for working with [Kubernetes](/connections/connect-apps/routing-to-tunnel/kubernetes).
+See additional documentation for working with [Kubernetes](/cloudflare-one/connections/connect-apps/routing-to-tunnel/kubernetes/).
 
 ---
 
@@ -55,7 +55,7 @@ The Named Tunnel, documented below, model provides easier management and greater
 
 ## Create a Named Tunnel
 
-To migrate to the Named Tunnel model, first [download and authenticate](/connections/connect-apps) `cloudflared`. Install the agent within your environment in a location that can reach the service you plan to connect to Cloudflare.
+To migrate to the Named Tunnel model, first [download and authenticate](/cloudflare-one/connections/connect-apps/) `cloudflared`. Install the agent within your environment in a location that can reach the service you plan to connect to Cloudflare.
 
 To begin, create a Named Tunnel with the following command.
 
@@ -69,7 +69,7 @@ This command will create a Tunnel object in your Cloudflare account that is repr
 
 ## Create a configuration file
 
-Next, configure your Tunnel. The example below consists of a web service that is available at port 8000. The ingress rule will send traffic that `cloudflared` receives for the specified hostname to that port. You can also connect [multiple service](/tutorials/multi-origin) with a single instance of `cloudflared`.
+Next, configure your Tunnel. The example below consists of a web service that is available at port 8000. The ingress rule will send traffic that `cloudflared` receives for the specified hostname to that port. You can also connect [multiple service](/cloudflare-one/tutorials/multi-origin/) with a single instance of `cloudflared`.
 
 In the configuration file, you must specify the location of the credentials file generated previously when you created the Tunnel.
 

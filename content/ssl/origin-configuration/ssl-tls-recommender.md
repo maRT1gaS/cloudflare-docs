@@ -6,7 +6,7 @@ title: SSL/TLS Recommender
 
 # SSL/TLS Recommender
 
-The **SSL/TLS Recommender** helps you choose which [Encryption mode](/origin-configuration/ssl-modes) is best for your application.
+The **SSL/TLS Recommender** helps you choose which [Encryption mode](/ssl/origin-configuration/ssl-modes/) is best for your application.
 
 {{<Aside type="note">}}
 For more background, refer to the [introductory blog post](https://blog.cloudflare.com/ssl-tls-recommender).
@@ -16,15 +16,15 @@ For more background, refer to the [introductory blog post](https://blog.cloudfla
 
 To enable SSL/TLS recommendations:
 
-1. Log into the [Cloudflare dashboard](https://dash.cloudflare.com) and select your account and application.
-1. Navigate to **SSL/TLS**.
-1. For **SSL/TLS Recommender**, switch the toggle to **On**.
+1.  Log into the [Cloudflare dashboard](https://dash.cloudflare.com) and select your account and application.
+2.  Navigate to **SSL/TLS**.
+3.  For **SSL/TLS Recommender**, switch the toggle to **On**.
 
 ## How it works
 
 Once enabled, the SSL/TLS Recommender runs an origin scan using the user agent `Cloudflare-SSLDetector` and ignores your `robots.txt` file (except for rules explicitly targeting the user agent).
 
-Based on this initial scan, the Recommender may decide that you could use a stronger [SSL encryption mode](/origin-configuration/ssl-modes). It will never recommend a weaker option than what is currently configured.
+Based on this initial scan, the Recommender may decide that you could use a stronger [SSL encryption mode](/ssl/origin-configuration/ssl-modes/). It will never recommend a weaker option than what is currently configured.
 
 If so, it will send the zone owner an email with the recommended option and add a _Recommended by Cloudflare_ tag to that option on the **SSL/TLS** page. You are not required to use this recommendation.
 

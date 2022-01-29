@@ -18,7 +18,7 @@ A Web Application Firewall or WAF creates a shield between a web app and the Int
 
 ## Managed Rulesets
 
-The Cloudflare WAF includes [several Managed Rulesets](/managed-rulesets), provided by Cloudflare, that you can enable and configure.
+The Cloudflare WAF includes [several Managed Rulesets](/waf/managed-rulesets/), provided by Cloudflare, that you can enable and configure.
 
 When you enable these Managed Rulesets, you get immediate protection from a broad set of security rules that are regularly updated. Each of these rules has a default action that varies according to the severity of the rule.
 
@@ -33,21 +33,21 @@ You can define a configuration that affects an entire Managed Ruleset, or config
 Currently, you can only create and deploy custom rulesets via API.
 {{</Aside>}}
 
-You can [create custom rulesets](https://developers.cloudflare.com/ruleset-engine/custom-rulesets/create-custom-ruleset) with your own WAF rules that you can later [deploy to a phase entry point](/managed-rulesets/deploy-api#deploying-custom-rulesets).
+You can [create custom rulesets](/ruleset-engine/custom-rulesets/create-custom-ruleset) with your own WAF rules that you can later [deploy to a phase entry point](/waf/managed-rulesets/deploy-api/#deploying-custom-rulesets).
 
 ## Available phases
 
-The Web Application Firewall provides the following [phases](https://developers.cloudflare.com/ruleset-engine/#phases) where you can deploy WAF rules:
+The Web Application Firewall provides the following [phases](/ruleset-engine/#phases) where you can deploy WAF rules:
 
 - `http_request_firewall_custom`
 - `http_request_firewall_managed`
 
 These phases exist both at the account level and at the zone level. Considering the available phases and the two different levels, the WAF rules are evaluated in the following weight:
 
-1. Rules in the `http_request_firewall_custom` phase at the **account** level
-1. Rules in the `http_request_firewall_custom` phase at the **zone** level
-1. Rules in the `http_request_firewall_managed` phase at **account** level
-1. Rules in the `http_request_firewall_managed` phase at the **zone** level
+1.  Rules in the `http_request_firewall_custom` phase at the **account** level
+2.  Rules in the `http_request_firewall_custom` phase at the **zone** level
+3.  Rules in the `http_request_firewall_managed` phase at **account** level
+4.  Rules in the `http_request_firewall_managed` phase at the **zone** level
 
 ## Deploying rulesets to phases
 
@@ -72,15 +72,15 @@ You can **create** and **deploy** custom rulesets to the `http_request_firewall_
 Currently, creating and deploying custom rulesets is only available via API.
 {{</Aside>}}
 
-To learn more about phases, refer to [Phases](https://developers.cloudflare.com/ruleset-engine/#phases) in the Ruleset Engine documentation.
+To learn more about phases, refer to [Phases](/ruleset-engine/#phases) in the Ruleset Engine documentation.
 
 ---
 
 ## Get started
 
-To configure Managed Rulesets using the Cloudflare dashboard, refer to [Deploy Managed Rulesets for a zone in the dashboard](/managed-rulesets/deploy-zone-dashboard).
+To configure Managed Rulesets using the Cloudflare dashboard, refer to [Deploy Managed Rulesets for a zone in the dashboard](/waf/managed-rulesets/deploy-zone-dashboard/).
 
 You can also use the Rulesets API to deploy rulesets to the available phases:
 
-- Deploy Managed Rulesets to the `http_request_firewall_managed` phase — refer to [Work with Managed Rulesets](https://developers.cloudflare.com/ruleset-engine/managed-rulesets).
-- Create and deploy custom rulesets to the `http_request_firewall_custom` phase — refer to [Work with custom rulesets](https://developers.cloudflare.com/ruleset-engine/custom-rulesets).
+- Deploy Managed Rulesets to the `http_request_firewall_managed` phase — refer to [Work with Managed Rulesets](/ruleset-engine/managed-rulesets).
+- Create and deploy custom rulesets to the `http_request_firewall_custom` phase — refer to [Work with custom rulesets](/ruleset-engine/custom-rulesets).

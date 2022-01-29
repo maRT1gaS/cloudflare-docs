@@ -89,9 +89,9 @@ If your traffic is proxied, you have access to all the fields listed under **Pro
 - `Timestamp`
 - `Header`
 
-For the most up to date list of these fields, [create a load balancing rule](../create-rules) in the UI.
+For the most up to date list of these fields, [create a load balancing rule](/load-balancing/create-rules/) in the UI.
 
-For more details about the field type or properties, refer to our [Firewall rules documentation](https://developers.cloudflare.com/firewall/cf-firewall-language/fields).
+For more details about the field type or properties, refer to our [Firewall rules documentation](/firewall/cf-firewall-language/fields).
 
 ## Unproxied traffic
 
@@ -179,4 +179,4 @@ Cloudflare Load Balancers support the following unproxied fields:
 
 - **Grouping symbols** allow you to organize expressions, enforce operator precedence, and nest expressions.
 
-For examples and usage, refer to [Operators and grouping symbols](https://developers.cloudflare.com/firewall/cf-firewall-language/operators) in the Firewall Rules documentation.
+For examples and usage, refer to [Operators and grouping symbols](/firewall/cf-firewall-language/operators) in the Firewall Rules documentation.

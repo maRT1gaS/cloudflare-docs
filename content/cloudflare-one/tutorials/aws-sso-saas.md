@@ -16,7 +16,7 @@ For this tutorial, you will need:
 - A Cloudflare for Teams account
 - An integrated IdP
 - Admin access to an AWS account
-{{</Aside>}}
+  {{</Aside>}}
 
 **⏲️ Time to complete:**
 
@@ -24,85 +24,85 @@ For this tutorial, you will need:
 
 ## Configure AWS
 
-1. In the AWS admin panel, search for `SSO`.
+1.  In the AWS admin panel, search for `SSO`.
 
-   ![AWS SSO](../static/zero-trust-security/aws-sso-saas/aws-sso-search.png)
+    ![AWS SSO](../static/zero-trust-security/aws-sso-saas/aws-sso-search.png)
 
-1. Add **AWS Single Sign** on to your AWS account.
+2.  Add **AWS Single Sign** on to your AWS account.
 
-1. Click **Choose an identity source**.
+3.  Click **Choose an identity source**.
 
-1. Change the identity source to **External Identity provider**.
+4.  Change the identity source to **External Identity provider**.
 
-1. Click **Show individual metadata values**. These will be the fields that are added to the Cloudflare Access for SaaS app.
+5.  Click **Show individual metadata values**. These will be the fields that are added to the Cloudflare Access for SaaS app.
 
-   ![AWS metadata](../static/zero-trust-security/aws-sso-saas/aws-metadata.png)
+    ![AWS metadata](../static/zero-trust-security/aws-sso-saas/aws-metadata.png)
 
-1. Copy the **AWS SSO ACS URL**.
+6.  Copy the **AWS SSO ACS URL**.
 
 ## Configure Cloudflare
 
-1. In a separate tab or window, open the [Cloudflare for Teams Dashboard](https://dash.teams.cloudflare.com) and navigate to **Access** > **Applications**.
+1.  In a separate tab or window, open the [Cloudflare for Teams Dashboard](https://dash.teams.cloudflare.com) and navigate to **Access** > **Applications**.
 
-1. Select _SaaS_ as the application type to begin creating a SaaS application.
+2.  Select _SaaS_ as the application type to begin creating a SaaS application.
 
-1. Copy the following fields from your AWS account and input them in the Cloudflare for Teams application configuration:
+3.  Copy the following fields from your AWS account and input them in the Cloudflare for Teams application configuration:
 
-   | AWS value              | Cloudflare value                   |
-   | ---------------------- | ---------------------------------- |
-   | **AWS SSO ACS URL**    | **Assertion Consumer Service URL** |
-   | **AWS SSO Issuer URL** | **Entity ID**                      |
+    | AWS value              | Cloudflare value                   |
+    | ---------------------- | ---------------------------------- |
+    | **AWS SSO ACS URL**    | **Assertion Consumer Service URL** |
+    | **AWS SSO Issuer URL** | **Entity ID**                      |
 
-   The **Name ID Format** must be set to: Email.
+    The **Name ID Format** must be set to: Email.
 
-   ![AWS application](../static/zero-trust-security/aws-sso-saas/aws-application.png)
+    ![AWS application](../static/zero-trust-security/aws-sso-saas/aws-application.png)
 
-1. (Optional) Additional Attribute Statements can be passed from your IdP to AWS SSO. More information about AWS Attribute mapping can be found at [Attribute mappings - AWS Single Sign-On](https://docs.aws.amazon.com/singlesignon/latest/userguide/attributemappingsconcept.html#supportedidpattributes).
+4.  (Optional) Additional Attribute Statements can be passed from your IdP to AWS SSO. More information about AWS Attribute mapping can be found at [Attribute mappings - AWS Single Sign-On](https://docs.aws.amazon.com/singlesignon/latest/userguide/attributemappingsconcept.html#supportedidpattributes).
 
-1. Copy the Cloudflare IdP metadata values and save them for the Final AWS configuration:
+5.  Copy the Cloudflare IdP metadata values and save them for the Final AWS configuration:
 
-   ![AWS Cloudflare metadata](../static/zero-trust-security/aws-sso-saas/aws-cloudflare-metadata.png)
+    ![AWS Cloudflare metadata](../static/zero-trust-security/aws-sso-saas/aws-cloudflare-metadata.png)
 
-1. Click **Next**.
+6.  Click **Next**.
 
-1. Now create a [Zero Trust policy](/policies/zero-trust) to determine who has access to your application.
+7.  Now create a [Zero Trust policy](/cloudflare-one/policies/zero-trust/) to determine who has access to your application.
 
-1. Save your policy and return to the AWS SSO dashboard.
+8.  Save your policy and return to the AWS SSO dashboard.
 
 ## Complete the AWS configuration
 
-1. Paste the Cloudflare IdP metadata into your AWS account with these mappings:
+1.  Paste the Cloudflare IdP metadata into your AWS account with these mappings:
 
-   | Cloudflare value     | AWS value           |
-   | -------------------- | ------------------- |
-   | **SSO Endpoint**     | **IdP Sign-in URL** |
-   | **Access Entity ID** | **IdP Issuer URL**  |
-   | **Public Key**       | **IdP Certificate** |
+    | Cloudflare value     | AWS value           |
+    | -------------------- | ------------------- |
+    | **SSO Endpoint**     | **IdP Sign-in URL** |
+    | **Access Entity ID** | **IdP Issuer URL**  |
+    | **Public Key**       | **IdP Certificate** |
 
-   {{<Aside>}}
-   The Public key must be transformed into a fingerprint. To do that:
+    {{<Aside>}}
+    The Public key must be transformed into a fingerprint. To do that:
 
-   1. Copy the Public Key Value.
-   1. Paste the Public Key into VIM or another code editor.
-   1. Wrap the value in `-----BEGIN CERTIFICATE-----` and `-----END CERTIFICATE-----`.
-   1. Set the file extension to `.crt` and save.
+    1.  Copy the Public Key Value.
+    2.  Paste the Public Key into VIM or another code editor.
+    3.  Wrap the value in `-----BEGIN CERTIFICATE-----` and `-----END CERTIFICATE-----`.
+    4.  Set the file extension to `.crt` and save.
 
-   {{</Aside>}}
+    {{</Aside>}}
 
-1. Click **Next: Review**.
+2.  Click **Next: Review**.
 
-1. Set Provisioning to _Manual_.
+3.  Set Provisioning to _Manual_.
 
-   ![AWS settings](../static/zero-trust-security/aws-sso-saas/aws-settings.png)
+    ![AWS settings](../static/zero-trust-security/aws-sso-saas/aws-settings.png)
 
-   {{<Aside type="Warning" header="Important">}}
-   Access for SaaS does not currently support System for Cross-domain Identity Management (SCIM). Please make sure that:
+    {{<Aside type="Warning" header="Important">}}
+    Access for SaaS does not currently support System for Cross-domain Identity Management (SCIM). Please make sure that:
 
-   1. Users are created in both your identity provider and AWS
-   1. Users have matching usernames in your identity provider and AWS.
-   1. Usernames are email addresses. This is the only format AWS supports with third-party SSO providers.
+    1.  Users are created in both your identity provider and AWS
+    2.  Users have matching usernames in your identity provider and AWS.
+    3.  Usernames are email addresses. This is the only format AWS supports with third-party SSO providers.
 
-   {{</Aside>}}
+    {{</Aside>}}
 
 ## Test your connection
 

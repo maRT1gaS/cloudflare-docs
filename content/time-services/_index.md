@@ -14,15 +14,15 @@ meta:
 Learn more about Cloudflare’s suite of time services.
 
 {{<button-group>}}
-  {{<button type="primary" href="/ntp">}}
-    NTP
-  {{</button>}}
-  {{<button type="primary" href="/nts">}}
-    NTS
-  {{</button>}}
-  {{<button type="primary" href="/roughtime">}}
-    Roughtime
-  {{</button>}}
+{{<button type="primary" href="/time-services/ntp/">}}
+NTP
+{{</button>}}
+{{<button type="primary" href="/time-services/nts/">}}
+NTS
+{{</button>}}
+{{<button type="primary" href="/time-services/roughtime/">}}
+Roughtime
+{{</button>}}
 {{</button-group>}}
 
 </ContentColumn>

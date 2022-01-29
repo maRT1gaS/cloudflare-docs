@@ -63,12 +63,12 @@ By default, Cloudflare proxies traffic destined for the HTTP/HTTPS ports listed 
 If traffic for your domain is destined for a different port than listed above, either:
 
 - Add the subdomain as a [gray-clouded record](https://support.cloudflare.com/hc/en-us/articles/200169626) via your Cloudflare DNS app, or
-- Enable [Cloudflare Spectrum](https://developers.cloudflare.com/spectrum/get-started).
+- Enable [Cloudflare Spectrum](/spectrum/get-started).
 
 Block traffic on ports other than 80 and 443 in Cloudflare paid plans by doing one of the following:
 
 - If you are using [Cloudflare Firewall](https://support.cloudflare.com/hc/en-us/articles/200172016), enable rule ID 100015: "Anomaly:Port - Non Standard Port (not 80 or 443)".
-- If you are using the new [Cloudflare Web Application Firewall (WAF)](https://developers.cloudflare.com/waf/), create a [Custom Firewall rule](https://developers.cloudflare.com/waf/custom-rules/custom-firewall) for this purpose (rule ID 100015 was deprecated in the new WAF). For example, you could use a rule configuration similar to the following:
+- If you are using the new [Cloudflare Web Application Firewall (WAF)](/waf/), create a [Custom Firewall rule](/waf/custom-rules/custom-firewall) for this purpose (rule ID 100015 was deprecated in the new WAF). For example, you could use a rule configuration similar to the following:
   - Expression: `not (cf.edge.server_port in {80 443})`
   - Action: _Block_
 
@@ -79,7 +79,7 @@ Ports 80 and 443 are the only ports compatible with:
 - [Cloudflare Caching](https://support.cloudflare.com/hc/en-us/articles/360021806811)
 
 {{<Aside type="note">}}
-[Cloudflare Access](https://developers.cloudflare.com/cloudflare-one/) does not support port numbers in URLs. Port numbers are stripped from requests for URLs protected through Cloudflare Access.
+[Cloudflare Access](/cloudflare-one/) does not support port numbers in URLs. Port numbers are stripped from requests for URLs protected through Cloudflare Access.
 {{</Aside>}}
 
 ## Related resources

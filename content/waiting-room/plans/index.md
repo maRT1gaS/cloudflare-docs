@@ -72,4 +72,4 @@ The features available for a waiting room depend on your plan type. You can only
 
 ## How do I get started?
 
-To get started with Waiting Room, review our [setup guide](/get-started).
+To get started with Waiting Room, review our [setup guide](/waiting-room/get-started/).

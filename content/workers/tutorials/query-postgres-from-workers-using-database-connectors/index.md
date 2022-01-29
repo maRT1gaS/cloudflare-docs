@@ -24,8 +24,8 @@ For a quick start, you will use Docker to run a local instance of Postgres and P
 
 To get started:
 
-1. Run the following `git` command to clone a basic [Postgres database connector](https://github.com/cloudflare/worker-template-postgres) project.
-1. After running the `git clone` command, `cd` into the new project.
+1.  Run the following `git` command to clone a basic [Postgres database connector](https://github.com/cloudflare/worker-template-postgres) project.
+2.  After running the `git clone` command, `cd` into the new project.
 
 ```sh
 $ git clone https://github.com/cloudflare/worker-template-postgres/
@@ -51,14 +51,14 @@ Running this command will:
 ### Start the Postgres server
 
 {{<Aside type="warning" header="Warning">}}
-Cloudflare Tunnel will be accessible from the Internet once you run the following `docker compose` command. Cloudflare recommends that you secure your `TUNNEL_HOSTNAME` behind [Cloudflare Access](https://developers.cloudflare.com/cloudflare-one/applications/configure-apps/self-hosted-apps) before you continue.
+Cloudflare Tunnel will be accessible from the Internet once you run the following `docker compose` command. Cloudflare recommends that you secure your `TUNNEL_HOSTNAME` behind [Cloudflare Access](/cloudflare-one/applications/configure-apps/self-hosted-apps) before you continue.
 {{</Aside>}}
 
 You can find a prepared `docker-compose` file that does not require any changes in `scripts/postgres` with the following services:
 
-1. **postgres**
-1. **pgbouncer** - Placed in front of Postgres to provide connection pooling.
-1. **cloudflared** - Allows your applications to connect securely, through a encrypted tunnel, without opening any local ports.
+1.  **postgres**
+2.  **pgbouncer** - Placed in front of Postgres to provide connection pooling.
+3.  **cloudflared** - Allows your applications to connect securely, through a encrypted tunnel, without opening any local ports.
 
 Run the following commands to start all services. Replace `postgres-tunnel.example.com` with a hostname on your Cloudflare zone to route traffic through this tunnel.
 
@@ -159,7 +159,7 @@ return new Response(JSON.stringify(result));
 In `wrangler.toml`, enter your Cloudflare account ID in the line containing `account_id`:
 
 {{<Aside type="note">}}
-[Refer to our Quick Start guide](https://developers.cloudflare.com/workers/get-started/guide#7-configure-your-project-for-deployment) if you do not know where to find your Cloudflare Account ID.
+[Refer to our Quick Start guide](/workers/get-started/guide#7-configure-your-project-for-deployment) if you do not know where to find your Cloudflare Account ID.
 {{</Aside>}}
 
 ```toml
@@ -183,7 +183,7 @@ $ wrangler publish
 
 ### Set secrets
 
-Create and save [a Client ID and a Client Secret](https://developers.cloudflare.com/cloudflare-one/identity/service-auth/service-tokens) to Worker secrets in case your Tunnel is protected by Cloudflare Access.
+Create and save [a Client ID and a Client Secret](/cloudflare-one/identity/service-auth/service-tokens) to Worker secrets in case your Tunnel is protected by Cloudflare Access.
 
 ```sh
 $ wrangler secret put CF_CLIENT_ID

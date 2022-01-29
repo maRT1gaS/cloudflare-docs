@@ -28,13 +28,13 @@ For an up-to-date list of monitor properties, refer to [Monitor properties](http
 
 ## Create monitors
 
-For step-by-step guidance, refer to [Create monitors](/how-to/create-monitor).
+For step-by-step guidance, refer to [Create monitors](/load-balancing/how-to/create-monitor/).
 
 ---
 
 ## Host header prioritization
 
-When a load balancer runs health checks, headers set on an origin override headers set on a monitor. For more details, refer to [Override HTTP Host headers](/additional-options/override-http-host-headers).
+When a load balancer runs health checks, headers set on an origin override headers set on a monitor. For more details, refer to [Override HTTP Host headers](/load-balancing/additional-options/override-http-host-headers/).
 
 ---
 

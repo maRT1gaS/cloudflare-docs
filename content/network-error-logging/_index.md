@@ -11,7 +11,7 @@ meta:
 Network Error Logging (NEL) is a browser-based reporting system that allows users to report their own failures to an external endpoint. You can use Network Error Logging to gain insight into connectivity issues on the Internet to learn when and where an incident is happening, who is impacted, and how they are being impacted.
 
 {{<Aside type="note" header="Note">}}
-Network Error Logging is currently in a closed beta for Enterprise users. To sign up for Network Error Logging, refer to [Get started](/get-started).
+Network Error Logging is currently in a closed beta for Enterprise users. To sign up for Network Error Logging, refer to [Get started](/network-error-logging/get-started/).
 {{</Aside>}}
 
 ## The last mile
@@ -24,9 +24,9 @@ The last mile is the path from a user to the first point of ingress to the resou
 
 Cloudflare uses geolocation lookups to extract the following information from every client IP in a NEL report:
 
-- Client ASN
-- Client country
-- Client metro area
+*   Client ASN
+*   Client country
+*   Client metro area
 
 Cloudflare uses internal lookups to associate the above data with a customer domain and customer account.
 

@@ -20,17 +20,18 @@ Most standard fields use the same naming conventions as [Wireshark display field
 
 - Wireshark supports [CIDR (Classless Inter-Domain Routing) notation](https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) for expressing IP address ranges in equality comparisons (`ip.src == 1.2.3.0/24`, for example). Cloudflare does not.
 
-  To evaluate a range of addresses using CIDR notation, use the `in` [comparison operator](/cf-firewall-language/operators/#comparison-operators) as in this example: `ip.src in {1.2.3.0/24 4.5.6.0/24}`.
+  To evaluate a range of addresses using CIDR notation, use the `in` [comparison operator](/firewall/cf-firewall-language/operators/#comparison-operators) as in this example: `ip.src in {1.2.3.0/24 4.5.6.0/24}`.
 
 - In Wireshark, `ssl` is a protocol field containing hundreds of other fields of various types that are available for comparison in multiple ways. However, in Firewall Rules `ssl` is a single Boolean field that indicates whether the connection from the client to Cloudflare is encrypted.
 
 - The Cloudflare Firewall Rules language does not support the `slice` operator.
 
 {{<Aside type="note" header="Availability notes">}}
+
 - Access to `ip.geoip.is_in_european_union`, `ip.geoip.subdivision_1_iso_code`, and `ip.geoip.subdivision_2_iso_code` fields requires a Cloudflare Business or Enterprise plan.
 
 - Access to `http.request.cookies` field requires a Cloudflare Pro, Business, or Enterprise plan.
-{{</Aside>}}
+  {{</Aside>}}
 
 The Cloudflare Firewall Rules language supports these standard fields:
 
@@ -584,7 +585,7 @@ The Cloudflare Firewall Rules language supports these standard fields:
 Dynamic fields represent computed or derived values, typically related to threat intelligence about an HTTP request.
 
 {{<Aside type="note">}}
-Access to `cf.bot_management.verified_bot` and `cf.bot_management.score` fields requires a Cloudflare Enterprise plan with [Bot Management](https://developers.cloudflare.com/bots/get-started/bm-subscription) enabled.
+Access to `cf.bot_management.verified_bot` and `cf.bot_management.score` fields requires a Cloudflare Enterprise plan with [Bot Management](/bots/get-started/bm-subscription) enabled.
 {{</Aside>}}
 
 The Cloudflare Firewall Rules language supports these dynamic fields:
@@ -1117,7 +1118,7 @@ The Cloudflare Firewall Rules language supports these dynamic fields:
 
 ## URI argument and value fields
 
-The Cloudflare Firewall Rules language includes URI argument and value fields associated with HTTP requests. Many of these fields return [arrays](/cf-firewall-language/values#arrays) containing the respective values.
+The Cloudflare Firewall Rules language includes URI argument and value fields associated with HTTP requests. Many of these fields return [arrays](/firewall/cf-firewall-language/values/#arrays) containing the respective values.
 
 The Cloudflare Firewall Rules language supports these URI argument and value fields:
 
@@ -1280,7 +1281,7 @@ The Cloudflare Firewall Rules language supports these URI argument and value fie
 
 ## HTTP header fields
 
-The Firewall Rules language includes fields that represent properties of HTTP request headers. Many of these return [arrays](/cf-firewall-language/values#arrays) containing the respective values.
+The Firewall Rules language includes fields that represent properties of HTTP request headers. Many of these return [arrays](/firewall/cf-firewall-language/values/#arrays) containing the respective values.
 
 The Cloudflare Firewall Rules language supports these HTTP header fields:
 
@@ -1495,7 +1496,7 @@ The Cloudflare Firewall Rules language supports these HTTP header fields:
 Access to HTTP body is an add-on product of the Cloudflare Enterprise plan.
 {{</Aside>}}
 
-The Firewall Rules language includes fields that represent properties of an HTTP request body. Many of these return [arrays](/cf-firewall-language/values#arrays) containing the respective values.
+The Firewall Rules language includes fields that represent properties of an HTTP request body. Many of these return [arrays](/firewall/cf-firewall-language/values/#arrays) containing the respective values.
 
 {{<Aside type="warning">}}
 The value of `http.request.body.*` fields has a maximum size of 128 KB, which means that you cannot define expressions that rely on request body data beyond the first 128 KB. If the request body is larger, the body fields will contain a truncated value and the `http.request.body.truncated` field will be set to `true`.

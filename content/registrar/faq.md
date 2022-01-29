@@ -20,8 +20,8 @@ Below you will find answers to our most commonly asked questions on Cloudflare R
 
 Domain transfers sometimes fail. Your account team can help you address what failed so that you can complete the transfer to Cloudflare.
 
-1. Make sure that you entered the auth code for that domain. If you need to reenter it, you can do so from your **Account Home** > **Registrar** > **Transfer** page.
-1. You can retry the transfer from the transfer launch page.
+1.  Make sure that you entered the auth code for that domain. If you need to reenter it, you can do so from your **Account Home** > **Registrar** > **Transfer** page.
+2.  You can retry the transfer from the transfer launch page.
 
 If you cannot solve the issue, open a support ticket or contact your account team.
 

@@ -79,7 +79,7 @@ The SDK provides an API for programmatically controlling the player and listenin
 
 - `defaultTextTrack`
 
-  - Will initialize the player with the specified language code's text track enabled. The value should be the BCP-47 language code that was used to [upload the text track](/uploading-videos/adding-captions). If the specified language code has no captions available, the player will behave as though no language code had been provided.
+  - Will initialize the player with the specified language code's text track enabled. The value should be the BCP-47 language code that was used to [upload the text track](/stream/uploading-videos/adding-captions/). If the specified language code has no captions available, the player will behave as though no language code had been provided.
 
     {{<Aside>}}
     This will _only_ work once during initialization. Beyond that point the user has full control over their text track settings.

@@ -8,7 +8,7 @@ meta:
 
 # Load Balancing expressions
 
-[Load Balancing rules](/additional-options/load-balancing-rules) use two kinds of expressions:
+[Load Balancing rules](/load-balancing/additional-options/load-balancing-rules/) use two kinds of expressions:
 
 - [Simple expressions](#simple-expressions) compare a value from an HTTP request to a value defined in the expression. A simple expression is identified by the presence of a **comparison operator** (_equals_ or _less than_, for example).
 
@@ -20,9 +20,9 @@ meta:
 
 Simple expressions are composed of three elements:
 
-1. A **field** that represents a property of an HTTP request.
-2. A representative **value** for that field which Cloudflare compares to the actual request value.
-3. A **comparison operator**, which specifies how the value defined in the expression must relate to the actual value from the request for the operator to return `true`.
+1.  A **field** that represents a property of an HTTP request.
+2.  A representative **value** for that field which Cloudflare compares to the actual request value.
+3.  A **comparison operator**, which specifies how the value defined in the expression must relate to the actual value from the request for the operator to return `true`.
 
 When the comparison operator returns `true`, the request matches the expression.
 
@@ -38,7 +38,7 @@ In general, simple expressions use this pattern:
 <field> <operator> <value>
 ```
 
-For more details, refer to [Supported fields and operators](/additional-options/load-balancing-rules/reference).
+For more details, refer to [Supported fields and operators](/load-balancing/additional-options/load-balancing-rules/reference/).
 
 ---
 
@@ -61,7 +61,7 @@ In general, compound expressions use this pattern:
 
 A compound expression can be an operand of a logical operator. This allows multiple operators to construct a compound expression from many individual expressions.
 
-For more details, refer to [Supported fields and operators](/additional-options/load-balancing-rules/reference).
+For more details, refer to [Supported fields and operators](/load-balancing/additional-options/load-balancing-rules/reference/).
 
 ---
 
@@ -86,7 +86,7 @@ The **Expression Preview** displays the expression in text:
 and (http.request.uri.query contains "webserver")
 ```
 
-For a walkthrough, refer to [Creating Load Balancing rules](/additional-options/load-balancing-rules/create-rules).
+For a walkthrough, refer to [Creating Load Balancing rules](/load-balancing/additional-options/load-balancing-rules/create-rules/).
 
 ### Expression Editor
 
@@ -110,4 +110,4 @@ For example, you might create a list of known office IP addresses and use it in 
 
 Cloudflare stores your lists at the account level and sends to the edge, so you can view, manage, and incorporate them into firewall rules for any of your zones.
 
-For more details, refer to [Rules Lists](https://developers.cloudflare.com/firewall/cf-firewall-rules/rules-lists) in the Firewall Rules documentation.
+For more details, refer to [Rules Lists](/firewall/cf-firewall-rules/rules-lists) in the Firewall Rules documentation.

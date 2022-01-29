@@ -6,11 +6,11 @@ title: Define WAF exceptions via API
 
 # Define WAF exceptions via API
 
-To define a WAF exception via API, create a rule with `skip` action in a [phase entry point ruleset](https://developers.cloudflare.com/ruleset-engine/#phases) of the `http_request_firewall_managed` phase. You can define WAF exceptions at the account level and at the zone level.
+To define a WAF exception via API, create a rule with `skip` action in a [phase entry point ruleset](/ruleset-engine/#phases) of the `http_request_firewall_managed` phase. You can define WAF exceptions at the account level and at the zone level.
 
-To configure the WAF exception, define the `action_parameters` object according to the [exception type](/managed-rulesets/waf-exceptions#types-of-waf-exceptions).
+To configure the WAF exception, define the `action_parameters` object according to the [exception type](/waf/managed-rulesets/waf-exceptions/#types-of-waf-exceptions).
 
-Refer to [Add rules to phase entry point rulesets](https://developers.cloudflare.com/ruleset-engine/basic-operations/add-rule-phase-rulesets) for more information on adding rules using the [Rulesets API](https://developers.cloudflare.com/ruleset-engine/rulesets-api).
+Refer to [Add rules to phase entry point rulesets](/ruleset-engine/basic-operations/add-rule-phase-rulesets) for more information on adding rules using the [Rulesets API](/ruleset-engine/rulesets-api).
 
 {{<Aside type="note" header="Rule execution order">}}
 Rules with `skip` action only apply to rules with `execute` action listed **after** them. If you add a rule with `skip` action at the end of the rules list of a phase entry point ruleset, nothing will be skipped.

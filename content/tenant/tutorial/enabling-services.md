@@ -1,9 +1,9 @@
 ---
-title: "3: Enabling services"
+title: '3: Enabling services'
 weight: 2
 pcx-content-type: tutorial
 meta:
-  title: "Step 3: Enabling services"
+  title: 'Step 3: Enabling services'
 ---
 
 # Step 3: Enabling services

@@ -13,9 +13,9 @@ Once you have registered a domain with Cloudflare Registrar, you can renew that 
 
 If you want your domains to renew automatically, keep the default settings for your domain (**Auto Renew** should be set to **On**). To find this setting:
 
-1. Log in to the [Cloudflare dashboard](https://dash.cloudflare.com/login) and select the account and domain you want to renew.
-1. From **Overview**, scroll down to **Domain Registration** and select **Manage domain**.
-1. In **Registration**, make sure the toggle in **Auto Renew** is set to **On**.
+1.  Log in to the [Cloudflare dashboard](https://dash.cloudflare.com/login) and select the account and domain you want to renew.
+2.  From **Overview**, scroll down to **Domain Registration** and select **Manage domain**.
+3.  In **Registration**, make sure the toggle in **Auto Renew** is set to **On**.
 
 Cloudflare renews these domains automatically 30 days before their expiration date. You can also [manually renew](#renew-a-domain-manually) a domain at any time.
 
@@ -29,11 +29,11 @@ If you want to delete your domain from Cloudflare, **disable** Auto-Renew first.
 
 You can renew a domain at any time. To renew a domain registered with Cloudflare:
 
-1. Log in to the [Cloudflare dashboard](https://dash.cloudflare.com/login) and select the account and domain you want to renew.
-1. From **Overview**, scroll down to **Domain Registration** and select **Manage domain**.
-1. In the **Registration** > **Domain Registration** card, select **Add years**.
-1. In **Renew for**, choose a number of years to renew your domain (up to 10 years).
-1. Select **Renew** > **Purchase**.
+1.  Log in to the [Cloudflare dashboard](https://dash.cloudflare.com/login) and select the account and domain you want to renew.
+2.  From **Overview**, scroll down to **Domain Registration** and select **Manage domain**.
+3.  In the **Registration** > **Domain Registration** card, select **Add years**.
+4.  In **Renew for**, choose a number of years to renew your domain (up to 10 years).
+5.  Select **Renew** > **Purchase**.
 
 Once Cloudflare validates your payment, your domain moves to a status of **Renewal Pending**. The status changes back to **Active** after the renewal is finished.
 

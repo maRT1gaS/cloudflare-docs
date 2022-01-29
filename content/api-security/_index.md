@@ -17,10 +17,10 @@ APIs have become the [backbone of popular web services](https://blog.postman.com
 
 As APIs have become more prevalent, however, so have their problems:
 
-- Many companies have [thousands of APIs](products/api-discovery), including ones they do not even know about.
-- To support a large base of users, many APIs are protected by a [negative security model](products/api-shield) that makes them vulnerable to credential-stuffing attacks and automated scanning tools.
-- With so many endpoints and users, it’s difficult to recognize brute-force attacks against [specific endpoints](products/volumetric-abuse-detection).
-- Sophisticated attacks are even harder to recognize, often because even development teams are unaware of common and uncommon [usage patterns](products/sequential-abuse-detection).
+*   Many companies have [thousands of APIs](/api-security/products/api-discovery/), including ones they do not even know about.
+*   To support a large base of users, many APIs are protected by a [negative security model](/api-security/products/api-shield/) that makes them vulnerable to credential-stuffing attacks and automated scanning tools.
+*   With so many endpoints and users, it’s difficult to recognize brute-force attacks against [specific endpoints](/api-security/products/volumetric-abuse-detection/).
+*   Sophisticated attacks are even harder to recognize, often because even development teams are unaware of common and uncommon [usage patterns](/api-security/products/sequential-abuse-detection/).
 
 ## Features
 

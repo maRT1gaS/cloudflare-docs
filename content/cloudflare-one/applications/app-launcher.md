@@ -8,7 +8,7 @@ title: App Launcher
 
 With the App Launcher portal, users can easily open all applications that they have access to from a single dashboard.
 
-The App Launcher is available at a [team domain](/glossary#team-domain) unique to your Cloudflare Access account. The domain will resemble `mycompany.cloudflareaccess.com`, where `mycompany` is the organization name you created for Cloudflare Access.
+The App Launcher is available at a [team domain](/cloudflare-one/glossary/#team-domain) unique to your Cloudflare Access account. The domain will resemble `mycompany.cloudflareaccess.com`, where `mycompany` is the organization name you created for Cloudflare Access.
 
 Users log in using one of the identity providers configured for the account. Once Access authenticates the user, the App Launcher displays applications they are authorized to use, in the form of application tiles. Clicking on an application tile launches the application’s hostname, sending the user to that tool as part of their SSO flow.
 
@@ -24,12 +24,12 @@ The App Launcher policy defines which users can access the portal. It does not i
 
 To enable the App Launcher:
 
-1. On the [Teams dashboard](https://dash.teams.cloudflare.com), navigate to **Settings > Authentication**.
+1.  On the [Teams dashboard](https://dash.teams.cloudflare.com), navigate to **Settings > Authentication**.
 
-1. Under the **App Launcher** card, click **Manage**.
+2.  Under the **App Launcher** card, click **Manage**.
 
-1. Build a rule to define who should access the App Launcher.
+3.  Build a rule to define who should access the App Launcher.
 
-1. Click **Save**.
+4.  Click **Save**.
 
 The App Launcher is now configured. You can always edit your App Launcher rules by navigating to **Settings > Authentication**, and clicking **Manage**.

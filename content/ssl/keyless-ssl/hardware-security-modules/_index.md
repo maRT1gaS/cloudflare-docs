@@ -8,7 +8,7 @@ title: Hardware security modules
 
 In addition to private keys stored on disk, Keyless SSL supports keys stored in a Hardware Security Module (HSM) via the PKCS#11 standard. Keyless uses PKCS#11 for signing and decrypting payloads without having direct access to the private keys.
 
----
+***
 
 ## Why use Keyless SSL with an HSM?
 
@@ -16,7 +16,7 @@ Hardware Security Modules (HSMs) facilitate a higher level of protection for you
 
 Moreover, many HSMs are also capable of generating keys and producing cryptographically secure randomness. Some are purpose-built to perform cryptographic computations more efficiently.
 
----
+***
 
 ## Communicating using PKCS#11
 
@@ -24,23 +24,23 @@ The key server communicates with HSMs via PKCS#11, so any HSM supporting the sta
 
 ### Initial configuration
 
-For more details on initializing your PKCS#11 token, refer to [Configuration](/keyless-ssl/hardware-security-modules/configuration).
+For more details on initializing your PKCS#11 token, refer to [Configuration](/ssl/keyless-ssl/hardware-security-modules/configuration/).
 
 ### Compatibility
 
 We have verified interoperability with the following modules:
 
-- [Gemalto SafeNet Luna](https://cpl.thalesgroup.com/compliance/fips-common-criteria-validations)
-- [SoftHSMv2](https://github.com/opendnssec/SoftHSMv2)
-- [Entrust nShield Connect](https://www.entrust.com/digital-security/hsm)
-- [YubiKey Neo](https://www.yubico.com/product/yubikey-neo/)
+*   [Gemalto SafeNet Luna](https://cpl.thalesgroup.com/compliance/fips-common-criteria-validations)
+*   [SoftHSMv2](https://github.com/opendnssec/SoftHSMv2)
+*   [Entrust nShield Connect](https://www.entrust.com/digital-security/hsm)
+*   [YubiKey Neo](https://www.yubico.com/product/yubikey-neo/)
 
 We’ve also tested with the following Cloud HSM offerings:
 
-- [AWS CloudHSM](aws-cloud-hsm)
-- [IBM Cloud HSM](ibm-cloud-hsm)
-- [Azure Dedicated HSM](azure-dedicated-hsm)
-- [Azure Managed HSM](azure-managed-hsm)
-- [Google Cloud HSM](google-cloud-hsm)
+*   [AWS CloudHSM](/ssl/aws-cloud-hsm/)
+*   [IBM Cloud HSM](/ssl/ibm-cloud-hsm/)
+*   [Azure Dedicated HSM](/ssl/azure-dedicated-hsm/)
+*   [Azure Managed HSM](/ssl/azure-managed-hsm/)
+*   [Google Cloud HSM](/ssl/google-cloud-hsm/)
 
 If you have deployed Keyless SSL with an HSM model not listed above, please email keyless@cloudflare.com with details.

@@ -37,4 +37,4 @@ You may specify individual email addresses, or entire domain names. When finishe
 
 ## Setup an isolation policy
 
-Your Cloudflare for Teams account has now been created. Continue to [isolation policies](/administration/isolation-policies).
+Your Cloudflare for Teams account has now been created. Continue to [isolation policies](/browser-isolation/administration/isolation-policies/).

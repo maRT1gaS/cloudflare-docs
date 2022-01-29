@@ -7,7 +7,7 @@ title: WARP settings
 # WARP settings
 
 {{<Aside type="note">}}
-If you are deploying [WARP in Managed mode](/connections/connect-devices/warp/deployment/mdm-deployment), refer to this [list of parameters](/connections/connect-devices/warp/deployment/mdm-deployment/parameters) instead. Any settings you configure on the Teams Dashboard will be overridden by an MDM deployment. To ensure Dashboard settings are applied as intended, remove the corresponding parameters from your MDM deployment.
+If you are deploying [WARP in Managed mode](/cloudflare-one/connections/connect-devices/warp/deployment/mdm-deployment/), refer to this [list of parameters](/cloudflare-one/connections/connect-devices/warp/deployment/mdm-deployment/parameters/) instead. Any settings you configure on the Teams Dashboard will be overridden by an MDM deployment. To ensure Dashboard settings are applied as intended, remove the corresponding parameters from your MDM deployment.
 {{</Aside>}}
 
 To manage WARP settings and device connectivity preferences, navigate to **Settings** > **Devices** on the Teams Dashboard.
@@ -18,9 +18,9 @@ To manage WARP settings and device connectivity preferences, navigate to **Setti
 <summary>Feature availability</summary>
 <div>
 
-| Operating Systems     | [WARP mode required](/connections/connect-devices/warp#warp-client-modes) | [Teams plans](https://www.cloudflare.com/teams-pricing/) |
-| --------------------- | ------------------------------------------------------------------------- | -------------------------------------------------------- |
-| macOS, Windows, Linux | Any mode                                                                  | All plans                                                |
+| Operating Systems     | [WARP mode required](/cloudflare-one/connections/connect-devices/warp/#warp-client-modes) | [Teams plans](https://www.cloudflare.com/teams-pricing/) |
+| --------------------- | ----------------------------------------------------------------------------------------- | -------------------------------------------------------- |
+| macOS, Windows, Linux | Any mode                                                                                  | All plans                                                |
 
 </div>
 </details>
@@ -37,9 +37,9 @@ You can also set a timeout to define how long the WARP client is allowed to be p
 
 When you want to allow a user to disable the WARP client:
 
-1. Log in to the Teams Dashboard and ensure the **Admin override** toggle is enabled.
-1. Retrieve the 7-digit override code for their device by navigating to **My Team** > **Devices** > **Connected devices**, clicking on **View** for the desired device, and scrolling down to **User details**.
-1. Copy the code and share it with the end user for them to enter on their device.
+1.  Log in to the Teams Dashboard and ensure the **Admin override** toggle is enabled.
+2.  Retrieve the 7-digit override code for their device by navigating to **My Team** > **Devices** > **Connected devices**, clicking on **View** for the desired device, and scrolling down to **User details**.
+3.  Copy the code and share it with the end user for them to enter on their device.
 
 Users will then need to open the WARP client on their devices, navigate to **Preferences** > **Advanced** > **Enter code**, and enter the override code in the pop-up window. The WARP client will now show as `Disconnected` and will mention the time when it will automatically reconnect.
 
@@ -49,20 +49,20 @@ Users will then need to open the WARP client on their devices, navigate to **Pre
 <summary>Feature availability</summary>
 <div>
 
-| Operating Systems | [WARP mode required](/connections/connect-devices/warp#warp-client-modes) | [Teams plans](https://www.cloudflare.com/teams-pricing/) |
-| ----------------- | ------------------------------------------------------------------------- | -------------------------------------------------------- |
-| All systems       | Any mode                                                                  | All plans                                                |
+| Operating Systems | [WARP mode required](/cloudflare-one/connections/connect-devices/warp/#warp-client-modes) | [Teams plans](https://www.cloudflare.com/teams-pricing/) |
+| ----------------- | ----------------------------------------------------------------------------------------- | -------------------------------------------------------- |
+| All systems       | Any mode                                                                                  | All plans                                                |
 
 </div>
 </details>
 
 Cloudflare for Teams allows you to establish which users in your organization can enroll new devices or revoke access to connected devices. To do that, you can create a device enrollment rule on the Teams Dashboard:
 
-1. Navigate to **Settings** > **Devices**.
-1. In the **Device enrollment permissions** card, click **Manage**.
-1. In the rule builder, configure one or more rules to define who can enroll or revoke devices.
-1. Set a session duration. Once the session expires, users will be asked to log in when attempting to connect a device.
-1. Click **Save**.
+1.  Navigate to **Settings** > **Devices**.
+2.  In the **Device enrollment permissions** card, click **Manage**.
+3.  In the rule builder, configure one or more rules to define who can enroll or revoke devices.
+4.  Set a session duration. Once the session expires, users will be asked to log in when attempting to connect a device.
+5.  Click **Save**.
 
 ## Captive portal detection
 
@@ -70,9 +70,9 @@ Cloudflare for Teams allows you to establish which users in your organization ca
 <summary>Feature availability</summary>
 <div>
 
-| Operating Systems | [WARP mode required](/connections/connect-devices/warp#warp-client-modes) | [Teams plans](https://www.cloudflare.com/teams-pricing/) |
-| ----------------- | ------------------------------------------------------------------------- | -------------------------------------------------------- |
-| macOS, Windows    | WARP with Gateway                                                         | All plans                                                |
+| Operating Systems | [WARP mode required](/cloudflare-one/connections/connect-devices/warp/#warp-client-modes) | [Teams plans](https://www.cloudflare.com/teams-pricing/) |
+| ----------------- | ----------------------------------------------------------------------------------------- | -------------------------------------------------------- |
+| macOS, Windows    | WARP with Gateway                                                                         | All plans                                                |
 
 </div>
 </details>
@@ -87,14 +87,14 @@ When the toggle is enabled, the WARP client will automatically turn off when it 
 <summary>Feature availability</summary>
 <div>
 
-| Operating Systems     | [WARP mode required](/connections/connect-devices/warp#warp-client-modes) | [Teams plans](https://www.cloudflare.com/teams-pricing/) |
-| --------------------- | ------------------------------------------------------------------------- | -------------------------------------------------------- |
-| macOS, Windows, Linux | WARP with Gateway                                                         | All plans                                                |
+| Operating Systems     | [WARP mode required](/cloudflare-one/connections/connect-devices/warp/#warp-client-modes) | [Teams plans](https://www.cloudflare.com/teams-pricing/) |
+| --------------------- | ----------------------------------------------------------------------------------------- | -------------------------------------------------------- |
+| macOS, Windows, Linux | WARP with Gateway                                                                         | All plans                                                |
 
 </div>
 </details>
 
-When the toggle is enabled, users have the option to turn off the [Gateway with WARP](/connections/connect-devices/warp#gateway-with-warp-default) mode and switch to [Gateway with DoH mode](/connections/connect-devices/warp#gateway-with-doh). When the toggle is disabled, end users will not be able to switch between WARP modes.
+When the toggle is enabled, users have the option to turn off the [Gateway with WARP](/cloudflare-one/connections/connect-devices/warp/#gateway-with-warp-default) mode and switch to [Gateway with DoH mode](/cloudflare-one/connections/connect-devices/warp/#gateway-with-doh). When the toggle is disabled, end users will not be able to switch between WARP modes.
 
 ---
 
@@ -111,9 +111,9 @@ When the toggle is enabled, users have the option to turn off the [Gateway with 
 </div>
 </details>
 
-1. Navigate to **Settings** > **Network**.
-1. Scroll down to **L7 Firewall**.
-1. Set the **Proxy** switch to _Enabled_.
+1.  Navigate to **Settings** > **Network**.
+2.  Scroll down to **L7 Firewall**.
+3.  Set the **Proxy** switch to _Enabled_.
 
 ## Integrated experiences
 

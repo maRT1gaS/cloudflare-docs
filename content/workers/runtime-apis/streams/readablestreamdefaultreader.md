@@ -11,9 +11,9 @@ meta:
 
 ## Background
 
-A reader is used when you want to read from a [ReadableStream](/runtime-apis/streams/readablestream), rather than piping its output to a [WritableStream](/runtime-apis/streams/writablestream).
+A reader is used when you want to read from a [ReadableStream](/workers/runtime-apis/streams/readablestream/), rather than piping its output to a [WritableStream](/workers/runtime-apis/streams/writablestream/).
 
-A `ReadableStreamDefaultReader` is not instantiated via its constructor. Rather, it is retrieved from a [`ReadableStream`](/runtime-apis/streams/readablestream):
+A `ReadableStreamDefaultReader` is not instantiated via its constructor. Rather, it is retrieved from a [`ReadableStream`](/workers/runtime-apis/streams/readablestream/):
 
 ```js
 const { readable, writable } = new TransformStream();
@@ -43,7 +43,7 @@ const reader = readable.getReader();
     <PropMeta>optional</PropMeta>)
   </Code> <Type>void</Type>
 
-  - Cancels the stream. `reason` is an optional human-readable string indicating the reason for cancellation. `reason` will be passed to the underlying source’s cancel algorithm -- if this readable stream is one side of a [TransformStream](/runtime-apis/streams/transformstream), then its cancel algorithm causes the transform’s writable side to become errored with `reason`.
+  - Cancels the stream. `reason` is an optional human-readable string indicating the reason for cancellation. `reason` will be passed to the underlying source’s cancel algorithm -- if this readable stream is one side of a [TransformStream](/workers/runtime-apis/streams/transformstream/), then its cancel algorithm causes the transform’s writable side to become errored with `reason`.
 
     {{<Aside type="warning" header="Warning">}}
     Any data not yet read is lost.
@@ -58,5 +58,5 @@ const reader = readable.getReader();
 
 ## See also
 
-- [Using Streams.](/learning/using-streams)
+- [Using Streams.](/workers/learning/using-streams/)
 - [Readable streams in the WHATWG Streams API specification.](https://streams.spec.whatwg.org/#rs-model)

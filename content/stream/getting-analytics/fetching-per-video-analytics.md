@@ -35,9 +35,9 @@ You can also filter the data using the following operators:
 | -------- | ------------------------ | ----------- |
 | ==       | Equals                   | %3D%3D      |
 | !=       | Does not equals          | !%3D        |
-| \>       | Greater Than             | %3E         |
+| >        | Greater Than             | %3E         |
 | <        | Less Than                | %3C         |
-| \>=      | Greater than or equal to | %3E%3D      |
+| >=       | Greater than or equal to | %3E%3D      |
 | <=       | Less than or equal to    | %3C%3D      |
 
 </TableWrap>

@@ -14,25 +14,25 @@ Having access to Cloudflare’s provisioning capabilities allows you to more eas
   {{</button>}}
 </p>
 
----
+***
 
-## [Step 1: Provisioning resources](/tutorial/provisioning-resources)
+## [Step 1: Provisioning resources](/tenant/tutorial/provisioning-resources/)
 
-- Creating accounts
-- Creating zones
+*   Creating accounts
+*   Creating zones
 
-## [Step 2: User access](/tutorial/user-access)
+## [Step 2: User access](/tenant/tutorial/user-access/)
 
-- Determining how users will access Cloudflare resources
-- Creating users
-- Inviting users to provisioned accounts
+*   Determining how users will access Cloudflare resources
+*   Creating users
+*   Inviting users to provisioned accounts
 
-## [Step 3: Enabling services](/tutorial/enabling-services)
+## [Step 3: Enabling services](/tenant/tutorial/enabling-services/)
 
-- Creating services
-- Modifying an account’s service
-- Removing services
+*   Creating services
+*   Modifying an account’s service
+*   Removing services
 
-## [Step 4: Service configuration](/tutorial/service-configuration)
+## [Step 4: Service configuration](/tenant/tutorial/service-configuration/)
 
-- Modifying zone settings and other services
+*   Modifying zone settings and other services

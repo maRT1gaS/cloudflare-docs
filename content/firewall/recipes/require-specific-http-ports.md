@@ -5,11 +5,11 @@ title: Require specific HTTP ports
 
 # Require specific HTTP ports
 
-By default, Cloudflare allows requests on a number of different HTTP ports (refer to [Network ports](https://developers.cloudflare.com/fundamentals/get-started/network-ports).
+By default, Cloudflare allows requests on a number of different HTTP ports (refer to [Network ports](/fundamentals/get-started/network-ports).
 
-You can target requests based on their HTTP port with the `cf.edge.server_port` [dynamic field](/cf-firewall-language/fields/#dynamic-fields).
+You can target requests based on their HTTP port with the `cf.edge.server_port` [dynamic field](/firewall/cf-firewall-language/fields/#dynamic-fields).
 
-Use the `in` [comparison operator](/cf-firewall-language/operators/#comparison-operators) to target a set of ports.
+Use the `in` [comparison operator](/firewall/cf-firewall-language/operators/#comparison-operators) to target a set of ports.
 
 This example blocks requests to `www.example.com` that are not on ports 80 or 443:
 

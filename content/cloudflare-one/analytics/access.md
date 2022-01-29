@@ -21,7 +21,7 @@ To see an in-depth breakdown of SaaS applications your users have visited, click
 ![Shadow IT view](../static/documentation/shadow-it-view.png)
 
 - **Application**. This field shows each SaaS application's name and logo.
-- **Application type**. This field shows the [application type](/policies/filtering/http-policies/application-app-types#app-types) Teams has assigned to each application.
+- **Application type**. This field shows the [application type](/cloudflare-one/policies/filtering/http-policies/application-app-types/#app-types) Teams has assigned to each application.
 - **Application status**. This field shows an [application's status](#application-status).
 - **Secured**. This field shows whether the application is currently secured behind Access.
 - **Users**. This field shows how many users have connected to the application over the period of time you have specified in the Shadow IT Discovery overview page.
@@ -45,11 +45,11 @@ Within Shadow IT Discovery, applications are labeled according to their status. 
 
 You may need to update an application's status based on your organization's preferences. To change an application's status:
 
-1. From the **Application profile** view, click the status button under the application name.
+1.  From the **Application profile** view, click the status button under the application name.
 
-   ![Shadow IT application status](../static/documentation/shadow-it-app-profile.png)
+    ![Shadow IT application status](../static/documentation/shadow-it-app-profile.png)
 
-1. Select the status you want to assign to your application.
+2.  Select the status you want to assign to your application.
 
 The application's status will now be updated across charts and visualizations within Shadow IT Discovery.
 
@@ -57,10 +57,10 @@ The application's status will now be updated across charts and visualizations wi
 
 To change the status of multiple applications to Approved, Unapproved, In review or Unreviewed at the same time:
 
-1. From the **Shadow IT view**, select the checkboxes of all applications for which you would like to change the status.
+1.  From the **Shadow IT view**, select the checkboxes of all applications for which you would like to change the status.
 
-1. Click **Update Status**.
+2.  Click **Update Status**.
 
-1. Select the status you want to assign to your applications.
+3.  Select the status you want to assign to your applications.
 
 Each application's status will now be updated across charts and visualizations within Shadow IT Discovery.

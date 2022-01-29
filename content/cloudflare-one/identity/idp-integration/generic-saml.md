@@ -21,20 +21,20 @@ Depending on the identity provider you would like to integrate, the following st
 
 The typical setup requirements are:
 
-1. Create a new integration in the identity provider with the type set as **SAML**.
-1. Set the Entity/Issuer ID to: `https://<your-team-name>.cloudflareaccess.com/cdn-cgi/access/callback`, where `<your-team-name>` should be your Cloudflare for Teams [team name](/glossary#team-name).
-1. Set the Single Sign On URL (or similarly named) to: `https://<your-team-name>.cloudflareaccess.com/cdn-cgi/access/callback`, where `<your-team-name>` should be your Cloudflare for Teams [team name](/glossary#team-name).
-1. Set the Name ID/Email format to `emailAddress`.
-1. [Optional] Set the signature policy to _Always Sign_.
-1. [Optional] If your identity provider supports metadata file configuration, use the endpoint: `https://<your-team-name>.cloudflareaccess.com/cdn-cgi/access/saml-metadata` to download and generate an XML file. Upload this XML file to the identity provider.
+1.  Create a new integration in the identity provider with the type set as **SAML**.
+2.  Set the Entity/Issuer ID to: `https://<your-team-name>.cloudflareaccess.com/cdn-cgi/access/callback`, where `<your-team-name>` should be your Cloudflare for Teams [team name](/cloudflare-one/glossary/#team-name).
+3.  Set the Single Sign On URL (or similarly named) to: `https://<your-team-name>.cloudflareaccess.com/cdn-cgi/access/callback`, where `<your-team-name>` should be your Cloudflare for Teams [team name](/cloudflare-one/glossary/#team-name).
+4.  Set the Name ID/Email format to `emailAddress`.
+5.  \[Optional] Set the signature policy to _Always Sign_.
+6.  \[Optional] If your identity provider supports metadata file configuration, use the endpoint: `https://<your-team-name>.cloudflareaccess.com/cdn-cgi/access/saml-metadata` to download and generate an XML file. Upload this XML file to the identity provider.
 
 ## Add a SAML identity provider to the Teams Dashboard
 
-1. On the Teams Dashboard, navigate to **Settings** > **Authentication**.
-1. In the Login methods card, click **Add new** and select _SAML_.
-1. Choose a descriptive name for your identity provider.
-1. Enter the Single Sign on URL, IdP Entity ID or Issuer URL, and Signing certificate.
-1. If you do not wish to enter any of the [additional SAML configurations](#additional-saml-configurations), click **Save**.
+1.  On the Teams Dashboard, navigate to **Settings** > **Authentication**.
+2.  In the Login methods card, click **Add new** and select _SAML_.
+3.  Choose a descriptive name for your identity provider.
+4.  Enter the Single Sign on URL, IdP Entity ID or Issuer URL, and Signing certificate.
+5.  If you do not wish to enter any of the [additional SAML configurations](#additional-saml-configurations), click **Save**.
 
 ## Additional SAML configurations
 
@@ -46,7 +46,7 @@ This optional configuration signs the Access JWT with the Cloudflare Access publ
 
 ### Email attribute name
 
-Many [Zero Trust policies](/policies/zero-trust) depend on a user’s email address. Some identity providers have a different naming for the email address attribute (for example, `Email`, `e-mail`, `emailAddress`). This can typically be checked in the identity provider's SAML test option.
+Many [Zero Trust policies](/cloudflare-one/policies/zero-trust/) depend on a user’s email address. Some identity providers have a different naming for the email address attribute (for example, `Email`, `e-mail`, `emailAddress`). This can typically be checked in the identity provider's SAML test option.
 
 Example in Okta:
 

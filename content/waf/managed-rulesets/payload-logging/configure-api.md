@@ -14,30 +14,30 @@ You can use the [Rulesets API](https://api.cloudflare.com/) to configure payload
 
 To configure:
 
-1. Use the [Update rule in ruleset](https://developers.cloudflare.com/ruleset-engine/rulesets-api/update-rule) API method to update the rule that executes the Managed Ruleset.
+1.  Use the [Update rule in ruleset](/ruleset-engine/rulesets-api/update-rule) API method to update the rule that executes the Managed Ruleset.
 
-1. In the configuration of the rule that executes the Managed Ruleset, include a `matched_data` object in `action_parameters` to configure payload logging.
+2.  In the configuration of the rule that executes the Managed Ruleset, include a `matched_data` object in `action_parameters` to configure payload logging.
 
-   The `matched_data` object has the following structure:
+    The `matched_data` object has the following structure:
 
-   ```json
-   ---
-   highlight: [5,6,7]
-   ---
-   {
-     // ...
-     "action_parameters": {
-       // ...
-       "matched_data": {
-         "public_key": "<PUBLIC_KEY_VALUE>"
-       }
-     }
-   }
-   ```
+    ```json
+    ---
+    highlight: [5,6,7]
+    ---
+    {
+      // ...
+      "action_parameters": {
+        // ...
+        "matched_data": {
+          "public_key": "<PUBLIC_KEY_VALUE>"
+        }
+      }
+    }
+    ```
 
-   Replace `<PUBLIC_KEY_VALUE>` with the public key you want to use for payload logging.
+    Replace `<PUBLIC_KEY_VALUE>` with the public key you want to use for payload logging.
 
-You can generate a public key [in the command line](/managed-rulesets/payload-logging/command-line/generate-key-pair) or [in the Cloudflare dashboard](/managed-rulesets/payload-logging/configure).
+You can generate a public key [in the command line](/waf/managed-rulesets/payload-logging/command-line/generate-key-pair/) or [in the Cloudflare dashboard](/waf/managed-rulesets/payload-logging/configure/).
 
 ### Example
 
@@ -107,7 +107,7 @@ header: Response
 }
 ```
 
-For more information on deploying Managed Rulesets via API, see [Deploy a Managed Ruleset](https://developers.cloudflare.com/ruleset-engine/managed-rulesets/deploy-managed-ruleset) in the Ruleset Engine documentation.
+For more information on deploying Managed Rulesets via API, see [Deploy a Managed Ruleset](/ruleset-engine/managed-rulesets/deploy-managed-ruleset) in the Ruleset Engine documentation.
 
 ---
 
@@ -115,9 +115,9 @@ For more information on deploying Managed Rulesets via API, see [Deploy a Manage
 
 To disable payload logging for a Managed Ruleset:
 
-1. Use the [Update rule in ruleset](https://developers.cloudflare.com/ruleset-engine/rulesets-api/update-rule) API method to update the rule that executes the Managed Ruleset.
+1.  Use the [Update rule in ruleset](/ruleset-engine/rulesets-api/update-rule) API method to update the rule that executes the Managed Ruleset.
 
-1. Modify the rule definition so that there is no `matched_data` object in `action_parameters`.
+2.  Modify the rule definition so that there is no `matched_data` object in `action_parameters`.
 
 The following example rule executes a Managed Ruleset with payload logging disabled:
 

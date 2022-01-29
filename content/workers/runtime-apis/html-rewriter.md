@@ -475,7 +475,7 @@ This is what selectors are and what they are used for.
 
   - an E element whose foo attribute value contains the substring bar
 
-- <Code>E[foo&#124;="en"]</Code>
+- <Code>E\[foo|="en"]</Code>
 
   - an E element whose foo attribute value is a hyphen-separated list of values beginning with en
 
@@ -520,5 +520,5 @@ async function handle(request) {
 ## See also
 
 - [Introducing `HTMLRewriter`](https://blog.cloudflare.com/introducing-htmlrewriter/)
-- [Tutorial: Localize a Website](/tutorials/localize-a-website)
-- [Example: rewrite links](/examples/rewrite-links)
+- [Tutorial: Localize a Website](/workers/tutorials/localize-a-website/)
+- [Example: rewrite links](/workers/examples/rewrite-links/)

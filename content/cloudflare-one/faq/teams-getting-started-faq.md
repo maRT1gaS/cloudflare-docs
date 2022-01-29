@@ -4,7 +4,7 @@ pcx-content-type: faq
 title: Getting started with Teams
 ---
 
-[❮ Back to FAQ](/faq)
+[❮ Back to FAQ](/cloudflare-one/faq/)
 
 # Getting started with Teams
 
@@ -14,7 +14,7 @@ You can sign up today at [this link](https://dash.cloudflare.com/sign-up/teams).
 
 ## What's a team domain/team name?
 
-Your team domain is a unique subdomain assigned to your Cloudflare account; for example, `<your-team-name>.cloudflareaccess.com`. Setting up a team domain is an essential step in your Teams configuration. This is where your users will find the apps you've secured behind Teams — displayed in the [App Launcher](/applications/app-launcher) — and will be able to make login requests to them. The customizable portion of your team domain is called **team name**. You can change this name at any time in the Teams dashboard, under the **Authentication** tab.
+Your team domain is a unique subdomain assigned to your Cloudflare account; for example, `<your-team-name>.cloudflareaccess.com`. Setting up a team domain is an essential step in your Teams configuration. This is where your users will find the apps you've secured behind Teams — displayed in the [App Launcher](/cloudflare-one/applications/app-launcher/) — and will be able to make login requests to them. The customizable portion of your team domain is called **team name**. You can change this name at any time in the Teams dashboard, under the **Authentication** tab.
 
 | team name        | team domain                             |
 | ---------------- | --------------------------------------- |

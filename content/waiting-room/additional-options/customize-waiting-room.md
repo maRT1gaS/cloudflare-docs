@@ -14,15 +14,15 @@ Cloudflare offers options to customize the appearance of your waiting room:
 - [Custom waiting room](#custom-waiting-room): Edit template text or create your own HTML code:
   - Customize both HTML or CSS content, including fonts, colors, static images, additional languages and more.
   - Edit content directly in the dashboard or import relevant files.
-- [Support mobile app traffic](/additional-options/mobile-traffic): Toggle to also enable a JSON response with a user's status in the waiting room.
+- [Support mobile app traffic](/waiting-room/additional-options/mobile-traffic/): Toggle to also enable a JSON response with a user's status in the waiting room.
 
 ## Default waiting room
 
 To choose the default, unbranded waiting room:
 
-1. Select a waiting room.
-1. Go to the **Customization** step.
-1. Click **Default Waiting Room**.
+1.  Select a waiting room.
+2.  Go to the **Customization** step.
+3.  Click **Default Waiting Room**.
 
 ## Custom waiting room
 
@@ -32,9 +32,9 @@ Only certain customers can customize their waiting rooms. For more details, see 
 
 To customize a waiting room:
 
-1. Select a waiting room.
-1. Go to the **Customization** step.
-1. Click **Custom Waiting Room**.
+1.  Select a waiting room.
+2.  Go to the **Customization** step.
+3.  Click **Custom Waiting Room**.
 
 You can edit the HTML code directly in the text box:
 
@@ -46,8 +46,8 @@ The template text contains [code to display the wait time](#display-wait-time). 
 
 ### Upload an HTML file
 
-1. Click **Import** to upload a HTML file from your computer.
-1. Select the file in the dialog and click **Open**.
+1.  Click **Import** to upload a HTML file from your computer.
+2.  Select the file in the dialog and click **Open**.
 
 Make further edits in the text box. Include the [code to display the wait time](#display-wait-time) to display the estimated queue time on the waiting room page or create your own custom page using [available variables](#available-variables).
 
@@ -106,10 +106,10 @@ If you are using images or other resources for your customized waiting room, **d
 
 To preview the appearance of a waiting room:
 
-1. In your application, go to **Traffic** > **Waiting Rooms**.
-1. Either [create a waiting room](/how-to/create-via-dashboard) or [edit an existing one](/how-to/edit-delete-waiting-room).
-1. Go to the **Review** step.
-1. Click **Preview Waiting Room**:
+1.  In your application, go to **Traffic** > **Waiting Rooms**.
+2.  Either [create a waiting room](/waiting-room/how-to/create-via-dashboard/) or [edit an existing one](/waiting-room/how-to/edit-delete-waiting-room/).
+3.  Go to the **Review** step.
+4.  Click **Preview Waiting Room**:
 
 - Choose **Queueing** to display the waiting room appearance when it is enabled on the dashboard and **Queue all** is not enabled.
 - Choose **Queue All** to display the waiting room appearance when it is enabled on the dashboard and **Queue all** is enabled. When **Queue all** is enabled for a waiting room, the estimated wait time is not displayed.

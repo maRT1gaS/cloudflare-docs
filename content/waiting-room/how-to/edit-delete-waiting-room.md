@@ -6,7 +6,7 @@ title: Edit and delete waiting rooms
 
 # Edit and delete waiting rooms
 
-You can manage your waiting rooms using the [Waiting Rooms dashboard](/how-to/waiting-room-dashboard) or the [API](/reference/waiting-room-api).
+You can manage your waiting rooms using the [Waiting Rooms dashboard](/waiting-room/how-to/waiting-room-dashboard/) or the [API](/waiting-room/reference/waiting-room-api/).
 
 {{<Aside type="note">}}
 For details about updating an active waiting room, see <a href="/reference/best-practices">Best practices</a>.
@@ -16,18 +16,18 @@ For details about updating an active waiting room, see <a href="/reference/best-
 
 ### Edit a waiting room
 
-1. In your application, go to **Traffic** > **Waiting Rooms**.
-1. On a record, click **Edit**.
-1. Click **Settings**.
-1. Edit the settings. For a description of settings, refer to [Configuration settings](/reference/configuration-settings/).
-1. Click **Next**. If you have access to [customized templates](../customize-waiting-room), you could also adjust the template.
-1. Once you get to **Review**, click **Save**.
+1.  In your application, go to **Traffic** > **Waiting Rooms**.
+2.  On a record, click **Edit**.
+3.  Click **Settings**.
+4.  Edit the settings. For a description of settings, refer to [Configuration settings](/waiting-room/reference/configuration-settings/).
+5.  Click **Next**. If you have access to [customized templates](/waiting-room/customize-waiting-room/), you could also adjust the template.
+6.  Once you get to **Review**, click **Save**.
 
 ### Delete a waiting room
 
-1. In your application, go to **Traffic** > **Waiting Rooms**.
-1. On a record, click **Delete**.
-1. Select **Delete** again.
+1.  In your application, go to **Traffic** > **Waiting Rooms**.
+2.  On a record, click **Delete**.
+3.  Select **Delete** again.
 
 ## Using the API
 

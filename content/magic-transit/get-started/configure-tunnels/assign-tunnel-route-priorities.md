@@ -6,7 +6,7 @@ title: Assign tunnel routes
 
 # Assign tunnel routes
 
-Magic Transit uses a static configuration to route your traffic through [Generic Routing Encapsulation (GRE) tunnels](/about/tunnels-and-encapsulation) from Cloudflare’s edge to your data centers.
+Magic Transit uses a static configuration to route your traffic through [Generic Routing Encapsulation (GRE) tunnels](/magic-transit/about/tunnels-and-encapsulation/) from Cloudflare’s edge to your data centers.
 
 You must assign a route priority to each GRE tunnel–subnet pair in your GRE configuration using the following guidelines:
 
@@ -84,7 +84,7 @@ You must assign a route priority to each GRE tunnel–subnet pair in your GRE co
   </div>
 </details>
 
-For more on how Cloudflare uses ECMP packet forwarding, refer to [Traffic steering](/about/traffic-steering).
+For more on how Cloudflare uses ECMP packet forwarding, refer to [Traffic steering](/magic-transit/about/traffic-steering/).
 
 ## Map route prefixes smaller than /24
 
@@ -107,17 +107,17 @@ You can also create and edit static routes using [Magic Transit Static Routes AP
 
 ### Create a static route
 
-1. Log in to your [Cloudflare dashboard](https://dash.cloudflare.com/login) and select **Magic Transit**.
-1. Next to **Static routes configuration**, click **Configure**.
-1. On the **Static Routes** page, click **Create** to add a new route.
-1. Enter the information for your route.
-1. While optional, we highly recommend testing your route before adding it by clicking **Test routes**.
-1. If your test was successful, click **Add routes** when you are done.
+1.  Log in to your [Cloudflare dashboard](https://dash.cloudflare.com/login) and select **Magic Transit**.
+2.  Next to **Static routes configuration**, click **Configure**.
+3.  On the **Static Routes** page, click **Create** to add a new route.
+4.  Enter the information for your route.
+5.  While optional, we highly recommend testing your route before adding it by clicking **Test routes**.
+6.  If your test was successful, click **Add routes** when you are done.
 
 ### Edit a static route
 
-1. After navigating to the **Static routes configuration** page, click **Edit** next to the route you want to modify.
-1. Enter the updated route information and click **Edit routes** when you are done.
+1.  After navigating to the **Static routes configuration** page, click **Edit** next to the route you want to modify.
+2.  Enter the updated route information and click **Edit routes** when you are done.
 
 ## Scoped routes for GRE tunnels
 

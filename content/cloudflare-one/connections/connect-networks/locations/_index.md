@@ -7,21 +7,21 @@ title: Locations
 # Locations
 
 {{<Aside type="Warning" header="Warning">}}
-Deploying Gateway DNS filtering using static IP addresses may prevent users from connecting to public Wi-Fi networks through captive portals. To avoid this issue, use the [WARP client](/connections/connect-devices/warp) to connect your devices to Teams.
+Deploying Gateway DNS filtering using static IP addresses may prevent users from connecting to public Wi-Fi networks through captive portals. To avoid this issue, use the [WARP client](/cloudflare-one/connections/connect-devices/warp/) to connect your devices to Teams.
 {{</Aside>}}
 
 Locations are usually physical entities like offices, homes, retail stores, movie theatres, or data centers. The fastest way to start sending DNS queries from a location and protect it from security threats is by changing the DNS resolvers at the router.
 
-- If you have an IPv6 network, you can change your DNS resolvers to the dedicated IPv6 address for your location.
+*   If you have an IPv6 network, you can change your DNS resolvers to the dedicated IPv6 address for your location.
 
-- If you don’t have an IPv6 network, you can set up a location by changing the DNS resolvers to:
+*   If you don’t have an IPv6 network, you can set up a location by changing the DNS resolvers to:
 
-  - **172.64.36.1**
-  - **172.64.36.2**
+    *   **172.64.36.1**
+    *   **172.64.36.2**
 
 If you want to send your DNS queries over an encrypted connection, you can use the hostname that we provide in the dashboard to send queries using DNS over HTTPS.
 
-- [Add a location](/connections/connect-networks/locations/configuring-a-location)
+*   [Add a location](/cloudflare-one/connections/connect-networks/locations/configuring-a-location/)
 
 ## How Gateway matches queries to locations
 
@@ -29,11 +29,11 @@ Gateway uses different ways to match a DNS query to locations depending on the t
 
 ![Determine location](../../../static/documentation/policies/gateway-determine-location-dns.png)
 
-1. **Step 1**: Gateway checks whether the query was sent using DNS over HTTPS. If yes, Gateway looks up the location by its unique hostname.
+1.  **Step 1**: Gateway checks whether the query was sent using DNS over HTTPS. If yes, Gateway looks up the location by its unique hostname.
 
-2. **Step 2**: if the query wasn't sent with DNS over HTTPS, Gateway checks whether it was sent over IPv4. If yes, it looks up the location by the source IPv4 address.
+2.  **Step 2**: if the query wasn't sent with DNS over HTTPS, Gateway checks whether it was sent over IPv4. If yes, it looks up the location by the source IPv4 address.
 
-3. **Step 3**: If the query wasn't sent over IPv4, it means it was sent over IPv6. Gateway will look up the location associated with the DNS query based on the destination IPv6 address.
+3.  **Step 3**: If the query wasn't sent over IPv4, it means it was sent over IPv6. Gateway will look up the location associated with the DNS query based on the destination IPv6 address.
 
 ## Location attributes
 
@@ -67,7 +67,7 @@ When you create a location, your location will receive a unique IPv6 address. Cl
 
 On your router/device/forwarder/daemon forward DNS queries to the corresponding IPv6 address for the location.
 
-See how you can start sending DNS queries by visiting the [setup instructions](/connections/connect-networks/locations/configuring-a-location/).
+See how you can start sending DNS queries by visiting the [setup instructions](/cloudflare-one/connections/connect-networks/locations/configuring-a-location/).
 
 ### DNS over TLS
 

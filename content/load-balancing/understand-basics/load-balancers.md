@@ -26,15 +26,15 @@ This setup ensures uninterrupted service and helps with planned outtages, but it
 
 To set up a load balancer with **active-passive failover**:
 
-1. Create a load balancer with two origin pools (`primary` and `secondary`).
-1. In the list of origin pools, set the following weight:
-   1. `primary`
-   1. `secondary`
-1. For **Traffic Steering**, select [**Off**](/understand-basics/traffic-steering#off---standard-failover).
+1.  Create a load balancer with two origin pools (`primary` and `secondary`).
+2.  In the list of origin pools, set the following weight:
+    1.  `primary`
+    2.  `secondary`
+3.  For **Traffic Steering**, select [**Off**](/load-balancing/understand-basics/traffic-steering/#off---standard-failover).
 
 With this setup, your load balancer will direct all traffic to `primary` until `primary` has fewer available origins than specified in its **Health Threshold**. Only then will your load balancer direct traffic to `secondary`.
 
-In the event that all pools are marked down, Cloudflare uses the **fallback pool**, which is the option of last resort for successfully sending traffic to an origin. Since the fallback pool is a last resort, its health is not taken into account, and Cloudflare reports its status as **No Health**. You can select the fallback pool via the API or in the Cloudflare dashboard. For more on working with fallback pools, see [_Traffic steering_](/understand-basics/traffic-steering).
+In the event that all pools are marked down, Cloudflare uses the **fallback pool**, which is the option of last resort for successfully sending traffic to an origin. Since the fallback pool is a last resort, its health is not taken into account, and Cloudflare reports its status as **No Health**. You can select the fallback pool via the API or in the Cloudflare dashboard. For more on working with fallback pools, see [_Traffic steering_](/load-balancing/understand-basics/traffic-steering/).
 
 ### Active - Active Failover
 
@@ -44,8 +44,8 @@ This setup speeds up overall requests, but is more vulnerable to planned or unpl
 
 To set up a load balancer with **active-active failover**, either:
 
-- Create a load balancer with a single origin pool (`primary`) with multiple origins (`origin-1` and `origin-2`) and set the same [**Weight**](/understand-basics/weighted-load-balancing) for each origin.
-- Create a load balancer with two origin pools (`primary` and `secondary`) and — for [**Traffic Steering**](/understand-basics/traffic-steering) — select any option except for **Off**.
+- Create a load balancer with a single origin pool (`primary`) with multiple origins (`origin-1` and `origin-2`) and set the same [**Weight**](/load-balancing/understand-basics/weighted-load-balancing/) for each origin.
+- Create a load balancer with two origin pools (`primary` and `secondary`) and — for [**Traffic Steering**](/load-balancing/understand-basics/traffic-steering/) — select any option except for **Off**.
 
 {{<Aside type="note">}}
 For more background reading on server failover and common configurations, see our <a href="https://www.cloudflare.com/learning/performance/what-is-server-failover/">Learning Center</a>.
@@ -53,7 +53,7 @@ For more background reading on server failover and common configurations, see ou
 
 ## Load balancing and existing DNS records
 
-For details about DNS records, refer to [DNS records for load balancing](/reference/dns-records).
+For details about DNS records, refer to [DNS records for load balancing](/load-balancing/reference/dns-records/).
 
 ## HTTP keep-alive (persistent HTTP connection)
 
@@ -63,7 +63,7 @@ Ensure HTTP Keep-Alive connections are enabled on your origin. Cloudflare reuses
 
 ### Session cookies
 
-**When using HTTP cookies to track and bind user sessions to a specific server**, configure [Session Affinity](../session-affinity) to parse HTTP requests by cookie header. Doing so directs each request to the correct application server even when HTTP requests share the same TCP connection due to keep-alive.
+**When using HTTP cookies to track and bind user sessions to a specific server**, configure [Session Affinity](/load-balancing/session-affinity/) to parse HTTP requests by cookie header. Doing so directs each request to the correct application server even when HTTP requests share the same TCP connection due to keep-alive.
 
 **For example, F5 BIG-IP load balancers set a session cookie at the beginning of a TCP connection** (if none exists) and then ignore all cookies from subsequent HTTP requests on the same TCP connection. This tends to break session affinity because Cloudflare sends multiple HTTP sessions on the same TCP connection. Configuring the load balancer to parse HTTP requests by cookie headers avoids this issue.
 
@@ -71,7 +71,7 @@ Ensure HTTP Keep-Alive connections are enabled on your origin. Cloudflare reuses
 
 ## Create load balancers
 
-For step-by-step guidance, refer to [Create a load balancer](/how-to/create-load-balancer).
+For step-by-step guidance, refer to [Create a load balancer](/load-balancing/how-to/create-load-balancer/).
 
 ---
 

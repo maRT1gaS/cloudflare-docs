@@ -8,44 +8,59 @@ title: Facebook
 
 Use these steps to set up Facebook as your identity provider.
 
-1. Go to go to [developers.facebook.com](https://developers.facebook.com/).
-1. Click **Create App** at the top-right.
+1.  Go to go to [developers.facebook.com](https://developers.facebook.com/).
 
-   ![Facebook IdP Login page](../../static/documentation/identity/facebook/fb1.png)
+2.  Click **Create App** at the top-right.
 
-   The **Create a New App ID** card displays.
+    ![Facebook IdP Login page](../../static/documentation/identity/facebook/fb1.png)
 
-1. Enter the **Display Name** and **Contact Email**.
-1. Click **Create App ID**. The **Create a New App ID** window displays.
-1. Enter the CAPTCHA code to proceed.
-1. Click **Submit**.
-1. On the **Facebook Login** card, click **Set Up**.
+    The **Create a New App ID** card displays.
 
-   ![Facebook Add a Product](../../static/documentation/identity/facebook/fb3.png)
+3.  Enter the **Display Name** and **Contact Email**.
 
-   A Quickstart card displays offering platform choices.
+4.  Click **Create App ID**. The **Create a New App ID** window displays.
 
-1. Click **Web**. The **Web** tab displays.
-1. Enter your **Site URL**.
-1. Click **Save**.
-1. Click **Continue**. Ignore any JavaScript page that suggests that you install it on your site.
-1. Click **Settings > Basic** on the left-hand menu.
+5.  Enter the CAPTCHA code to proceed.
 
-   ![Facebook Settings](../../static/documentation/identity/facebook/fb6.png)
+6.  Click **Submit**.
 
-1. On the Teams dashboard, navigate to **Settings > Authentication**.
-1. Under **Login methods**, click **Add new**.
-1. Copy the App ID and App Secret into the **OAuth ID** and **OAuth Secret** fields.
-1. Click **Save**.
-1. On [developers.facebook.com](https://developers.facebook.com/), set the **Use Strict Mode for Redirect URIs** slider to **Yes**.
-1. In the **Valid OAuth redirect URIs** field, enter your [team domain](/glossary#team-domain), followed by this callback at the end of the path: `/cdn-cgi/access/callback`. For example:
+7.  On the **Facebook Login** card, click **Set Up**.
 
-   ```txt
-   https://<your-team-name>.cloudflareaccess.com/cdn-cgi/access/callback
-   ```
+    ![Facebook Add a Product](../../static/documentation/identity/facebook/fb3.png)
 
-1. Click **Save Changes**.
-1. On the Teams dashboard, click **Save**.
+    A Quickstart card displays offering platform choices.
+
+8.  Click **Web**. The **Web** tab displays.
+
+9.  Enter your **Site URL**.
+
+10. Click **Save**.
+
+11. Click **Continue**. Ignore any JavaScript page that suggests that you install it on your site.
+
+12. Click **Settings > Basic** on the left-hand menu.
+
+    ![Facebook Settings](../../static/documentation/identity/facebook/fb6.png)
+
+13. On the Teams dashboard, navigate to **Settings > Authentication**.
+
+14. Under **Login methods**, click **Add new**.
+
+15. Copy the App ID and App Secret into the **OAuth ID** and **OAuth Secret** fields.
+
+16. Click **Save**.
+
+17. On [developers.facebook.com](https://developers.facebook.com/), set the **Use Strict Mode for Redirect URIs** slider to **Yes**.
+
+18. In the **Valid OAuth redirect URIs** field, enter your [team domain](/cloudflare-one/glossary/#team-domain), followed by this callback at the end of the path: `/cdn-cgi/access/callback`. For example:
+
+    ```txt
+    https://<your-team-name>.cloudflareaccess.com/cdn-cgi/access/callback
+    ```
+
+19. Click **Save Changes**.
+
+20. On the Teams dashboard, click **Save**.
 
 To test that your connection is working, navigate to **Authentication > Login methods** and click **Test** next to Facebook.
 

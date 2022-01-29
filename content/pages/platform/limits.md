@@ -28,7 +28,7 @@ The maximum file size for a single Cloudflare Pages site asset is 25MB.
 
 ## Preview deployments
 
-You can have an unlimited number of [preview deployments](/platform/preview-deployments) active on your project at a time.
+You can have an unlimited number of [preview deployments](/pages/platform/preview-deployments/) active on your project at a time.
 
 ## Users
 

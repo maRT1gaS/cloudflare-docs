@@ -45,7 +45,7 @@ Your Linux distro's package manager may include Zola. If this is the case, you c
 $ pkg install zola
 ```
 
-If your package manager does not include Zola or you would like to download a release directly, refer to the [**Manual**](/framework-guides/deploy-a-zola-site#manual-installation) section below.
+If your package manager does not include Zola or you would like to download a release directly, refer to the [**Manual**](/pages/framework-guides/deploy-a-zola-site/#manual-installation) section below.
 
 ### Manual installation
 
@@ -63,12 +63,14 @@ $ zola init my-zola-project
 
 Upon running `zola init`, you will prompted with three questions:
 
-1. What is the URL of your site? (https://example.com):
-   You can leave this one blank for now.
+1.  What is the URL of your site? (https://example.com):
+    You can leave this one blank for now.
 
-2. Do you want to enable Sass compilation? [Y/n]: Y
-3. Do you want to enable syntax highlighting? [y/N]: y
-4. Do you want to build a search index of the content? [y/N]: y
+2.  Do you want to enable Sass compilation? \[Y/n]: Y
+
+3.  Do you want to enable syntax highlighting? \[y/N]: y
+
+4.  Do you want to build a search index of the content? \[y/N]: y
 
 <TutorialsBeforeYouStart />
 
@@ -103,7 +105,7 @@ For example, `ZOLA_VERSION`: `0.14.0`.
 After configuring your site, you can begin your first deploy. You should see Cloudflare Pages installing `zola`, your project dependencies, and building your site, before deploying it.
 
 {{<Aside type="note">}}
-For the complete guide to deploying your first site to Cloudflare Pages, refer to the [Get started guide](/get-started).
+For the complete guide to deploying your first site to Cloudflare Pages, refer to the [Get started guide](/pages/get-started/).
 {{</Aside>}}
 
 After deploying your site, you will receive a unique subdomain for your project on `*.pages.dev`.
@@ -117,8 +119,8 @@ For example:
 base_url = "https://my-zola-project.pages.dev"
 ```
 
-Every time you commit new code to your Zola site, Cloudflare Pages will automatically rebuild your project and deploy it. You will also get access to [preview deployments](/platform/preview-deployments) on new pull requests, so you can preview how changes look to your site before deploying them to production.
+Every time you commit new code to your Zola site, Cloudflare Pages will automatically rebuild your project and deploy it. You will also get access to [preview deployments](/pages/platform/preview-deployments/) on new pull requests, so you can preview how changes look to your site before deploying them to production.
 
 ## Learn more
 
-By completing this guide, you have successfully deployed your Zola site to Cloudflare Pages. To get started with other frameworks, [refer to the list of Framework guides](/framework-guides).
+By completing this guide, you have successfully deployed your Zola site to Cloudflare Pages. To get started with other frameworks, [refer to the list of Framework guides](/pages/framework-guides/).

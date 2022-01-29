@@ -6,7 +6,7 @@ pcx-content-type: tutorial
 title: Localize a website with HTMLRewriter
 ---
 
-import TutorialsBeforeYouStart from '../../_partials/_tutorials-before-you-start.md';
+import TutorialsBeforeYouStart from '../../\_partials/\_tutorials-before-you-start.md';
 
 # Localize a website with HTMLRewriter
 
@@ -14,7 +14,7 @@ import TutorialsBeforeYouStart from '../../_partials/_tutorials-before-you-start
 
 ## Overview
 
-The [`HTMLRewriter`](/runtime-apis/html-rewriter) class built into the Cloudflare Workers runtime allows for parsing and rewriting of HTML at the Cloudflare edge network. This gives developers the ability to efficiently and transparently customize their Workers applications.
+The [`HTMLRewriter`](/workers/runtime-apis/html-rewriter/) class built into the Cloudflare Workers runtime allows for parsing and rewriting of HTML at the Cloudflare edge network. This gives developers the ability to efficiently and transparently customize their Workers applications.
 
 In this tutorial, you will build an example internationalization and localization engine (commonly referred to as **i18n** and **l10n**) for your application, serve the content of your site, and automatically translate the content based your visitors’ location in the world.
 
@@ -39,7 +39,7 @@ theme: dark
 ~/i18n-example $
 ```
 
-The `--site` flag tells Wrangler that you want to build a [Workers Sites](/platform/sites) project. This means that there will be both a Workers script and a static site component, which includes any HTML and page assets that you want to serve to the user. Inside the Workers script, you can customize the HTML response using `HTMLRewriter`.
+The `--site` flag tells Wrangler that you want to build a [Workers Sites](/workers/platform/sites/) project. This means that there will be both a Workers script and a static site component, which includes any HTML and page assets that you want to serve to the user. Inside the Workers script, you can customize the HTML response using `HTMLRewriter`.
 
 The newly generated `i18n-example` project will contain two folders: `public`, which is our static HTML, and `workers-site`:
 
@@ -93,9 +93,9 @@ Another feature of this project is based on the `Accept-Language` header, which 
 
 Begin with the `workers-site/index.js` file. Your Workers application in this tutorial will live entirely in this file.
 
-Inside of this file, the default code for running a [Workers Site](/platform/sites) has been provided. The crucial part of the generated code lives in the `handleEvent` function. The `getAssetFromKV` function retrieves a website asset uploaded from your local `./public` folder, makes it live on Workers KV, and returns it to the user. For now, ignore `getAssetFromKV` (though if you would like to learn more, refer to [the documentation](/platform/sites/start-from-worker).
+Inside of this file, the default code for running a [Workers Site](/workers/platform/sites/) has been provided. The crucial part of the generated code lives in the `handleEvent` function. The `getAssetFromKV` function retrieves a website asset uploaded from your local `./public` folder, makes it live on Workers KV, and returns it to the user. For now, ignore `getAssetFromKV` (though if you would like to learn more, refer to [the documentation](/workers/platform/sites/start-from-worker/).
 
-To implement translations on the site, take the HTML response retrieved from KV and pass it into a new instance of `HTMLRewriter`. When instantiating `HTMLRewriter`, you can attach handlers using the `on` function. For this tutorial, you will use the `[data-i18n-key]` selector (refer to the [documentation](/runtime-apis/html-rewriter) for more advanced usage) to locate all elements with the `data-i18n-key` attribute, which signifies their need for translation. Any matching element will be passed to an instance of your `ElementHandler` class, which will contain the translation logic. With the created instance of `HTMLRewriter`, the `transform` function takes a `response` and can be returned to the client:
+To implement translations on the site, take the HTML response retrieved from KV and pass it into a new instance of `HTMLRewriter`. When instantiating `HTMLRewriter`, you can attach handlers using the `on` function. For this tutorial, you will use the `[data-i18n-key]` selector (refer to the [documentation](/workers/runtime-apis/html-rewriter/) for more advanced usage) to locate all elements with the `data-i18n-key` attribute, which signifies their need for translation. Any matching element will be passed to an instance of your `ElementHandler` class, which will contain the translation logic. With the created instance of `HTMLRewriter`, the `transform` function takes a `response` and can be returned to the client:
 
 ```js
 ---
@@ -165,15 +165,15 @@ class ElementHandler {
 }
 ```
 
-To review that everything looks as expected, use the preview functionality built into Wrangler. Call [`wrangler dev`](/cli-wrangler/commands#dev) to open up a live preview of your project. `wrangler dev` is refreshed after every code change that you make.
+To review that everything looks as expected, use the preview functionality built into Wrangler. Call [`wrangler dev`](/workers/cli-wrangler/commands/#dev) to open up a live preview of your project. `wrangler dev` is refreshed after every code change that you make.
 
 You can expand on this simple translation functionality to provide country-specific translations, based on the incoming request’s `Accept-Language` header. By taking this header, parsing it, and passing the parsed language into our `ElementHandler`, you can retrieve a translated string in our user’s home language, provided that it’s defined in `strings`.
 
 To implement this:
 
-1. Update the `strings` object, adding a second layer of key-value pairs and allowing strings to be looked up in the format `strings[country][key]`.
-2. Pass a `countryStrings` object into our `ElementHandler`, so that it can be used during the parsing process.
-3. Grab the `Accept-Language` header from an incoming request, parse it, and pass the parsed language to `ElementHandler`.
+1.  Update the `strings` object, adding a second layer of key-value pairs and allowing strings to be looked up in the format `strings[country][key]`.
+2.  Pass a `countryStrings` object into our `ElementHandler`, so that it can be used during the parsing process.
+3.  Grab the `Accept-Language` header from an incoming request, parse it, and pass the parsed language to `ElementHandler`.
 
 To parse the `Accept-Language` header, install the [`accept-language-parser`](https://www.npmjs.com/package/accept-language-parser) NPM package:
 
@@ -267,7 +267,7 @@ async function handleEvent(event) {
 
 Your simple i18n tool built on Cloudflare Workers is complete and it is time to deploy it to your domain.
 
-To deploy your `*.workers.dev` subdomain, you need to configure the `wrangler.toml` configuration file in your project. First, add your Cloudflare [account ID](/get-started/guide#6a-obtaining-your-account-id-and-zone-id). Set this ID at the top part of your project’s `wrangler.toml` file:
+To deploy your `*.workers.dev` subdomain, you need to configure the `wrangler.toml` configuration file in your project. First, add your Cloudflare [account ID](/workers/get-started/guide/#6a-obtaining-your-account-id-and-zone-id). Set this ID at the top part of your project’s `wrangler.toml` file:
 
 ```toml
 ---
@@ -313,4 +313,4 @@ theme: dark
 
 In this tutorial, you built and published an i18n tool using `HTMLRewriter`. To review the full source code for this application, refer to the [repository on GitHub](https://github.com/signalnerve/i18n-example-workers).
 
-If you want to get started building your own projects, review the existing list of [Quickstart templates](/get-started/quickstarts).
+If you want to get started building your own projects, review the existing list of [Quickstart templates](/workers/get-started/quickstarts/).

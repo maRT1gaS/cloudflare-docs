@@ -60,10 +60,10 @@ $ sanity deploy
 
 Once you have deployed your Sanity studio:
 
-1. Go into Sanity's management panel ([manage.sanity.io](https://manage.sanity.io)).
-2. Find your project.
-3. Select **API**.
-4. Add `http://localhost:3000` as an allowed CORS origin for your project.
+1.  Go into Sanity's management panel ([manage.sanity.io](https://manage.sanity.io)).
+2.  Find your project.
+3.  Select **API**.
+4.  Add `http://localhost:3000` as an allowed CORS origin for your project.
 
 This means that requests that come to your Sanity dataset from your Nuxt application will be whitelisted.
 
@@ -423,7 +423,7 @@ After you've pushed your project to GitHub, deploy your site to Pages by logging
 
 When your site has been deployed, you will receive a unique URL to view it in production.
 
-In order to automatically deploy your project when your Sanity.io data changes, you can use [Deploy Hooks](/platform/deploy-hooks). Create a new Deploy Hook URL in your **Pages project** > **Settings**. In your Sanity project's Settings page, find the **Webhooks** section, and add the Deploy Hook URL, as seen below:
+In order to automatically deploy your project when your Sanity.io data changes, you can use [Deploy Hooks](/pages/platform/deploy-hooks/). Create a new Deploy Hook URL in your **Pages project** > **Settings**. In your Sanity project's Settings page, find the **Webhooks** section, and add the Deploy Hook URL, as seen below:
 
 ![Creating a deploy hook in Sanity.io](./hooks.png)
 
@@ -436,4 +436,4 @@ By completing this guide, you have successfully deployed your own blog, powered 
 - Blog frontend: https://github.com/signalnerve/nuxt-sanity-blog
 - Sanity dataset: https://github.com/signalnerve/sanity-blog-schema
 
-If you enjoyed this tutorial, you may be interested in learning how you can use Cloudflare Workers, our powerful serverless function platform, to augment your existing site. [Refer to the tutorial to learn more.](/tutorials/build-an-api-with-workers)
+If you enjoyed this tutorial, you may be interested in learning how you can use Cloudflare Workers, our powerful serverless function platform, to augment your existing site. [Refer to the tutorial to learn more.](/pages/tutorials/build-an-api-with-workers/)

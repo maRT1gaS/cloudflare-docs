@@ -11,7 +11,7 @@ It’s perfect for deploying applications built with static site generators like
 
 To deploy with Workers Sites, select from one of these **three routes** depending on the state of your target project:
 
----
+***
 
 ## 1. Deploy an existing static site
 
@@ -23,7 +23,7 @@ If you have an existing project or static assets that you want to deploy with Wo
   {{</button>}}
 </p>
 
----
+***
 
 ## 2. Start from scratch
 
@@ -35,7 +35,7 @@ If you’re ready to start a brand new project, starting from scratch with Worke
   {{</button>}}
 </p>
 
----
+***
 
 ## 3. Add static assets to an existing Workers project
 
@@ -48,5 +48,5 @@ If you already have an application deployed to Workers, this guide will show you
 </p>
 
 {{<Aside>}}
-**Note:** Workers Sites is built on Workers KV, and usage rates may apply. See the [Pricing page](/platform/pricing) to learn more.
+**Note:** Workers Sites is built on Workers KV, and usage rates may apply. See the [Pricing page](/workers/platform/pricing/) to learn more.
 {{</Aside>}}

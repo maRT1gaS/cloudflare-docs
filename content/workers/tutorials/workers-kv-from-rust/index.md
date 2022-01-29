@@ -18,9 +18,9 @@ import TutorialsBeforeYouStart from '../../_partials/_tutorials-before-you-start
 
 To get started:
 
-1. Run the following `wrangler` command to generate a basic project using the [rustwasm-worker template](https://github.com/cloudflare/rustwasm-worker-template/).
-2. After running the `wrangler generate` command, `cd` into the new project.
-3. Use the current state of the git repository as the initial commit by running the `git add` and `git commit` commands in your terminal.
+1.  Run the following `wrangler` command to generate a basic project using the [rustwasm-worker template](https://github.com/cloudflare/rustwasm-worker-template/).
+2.  After running the `wrangler generate` command, `cd` into the new project.
+3.  Use the current state of the git repository as the initial commit by running the `git add` and `git commit` commands in your terminal.
 
 ```sh
 $ wrangler generate workers-kv-from-rust https://github.com/cloudflare/rustwasm-worker-template/
@@ -280,9 +280,9 @@ Additionally, the example handler will read from KV when on `GET` requests, usin
 {{<Aside type="note" header="Important changes">}}
 When compared to the `handle` function from the previous snippet, be aware of these important changes:
 
-1. The `handle` function is asynchronous.
-2. The `Url` and `UrlSearchParams` features are in use – they must be declared in the `Cargo.toml` feature set.
-{{</Aside>}}
+1.  The `handle` function is asynchronous.
+2.  The `Url` and `UrlSearchParams` features are in use – they must be declared in the `Cargo.toml` feature set.
+    {{</Aside>}}
 
 The finalized `handle` function:
 
@@ -321,7 +321,7 @@ pub async fn handle(kv: WorkersKvJs, req: JsValue) -> Result<Response, JsValue> 
 }
 ```
 
-You can use [`wrangler dev`](/cli-wrangler/commands#dev) to test the Worker:
+You can use [`wrangler dev`](/workers/cli-wrangler/commands/#dev) to test the Worker:
 
 ```sh
 $ curl 'localhost:8787/foo'

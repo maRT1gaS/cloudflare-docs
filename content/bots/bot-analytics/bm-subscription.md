@@ -35,13 +35,13 @@ Bot Analytics shows up to one week of data at a time and can display data up to 
 
 Bot Management customers can use Bot Analytics to:
 
-- Understand traffic during [your onboarding phase](../../get-started/bm-subscription#enable-bot-management-for-enterprise)
+- Understand traffic during [your onboarding phase](/bots/get-started/bm-subscription/#enable-bot-management-for-enterprise)
 - Tune Firewall Rules to be effective but not overly aggressive
 - Study recent attacks to find trends and detailed information
 - Learn more about Cloudflare’s detection engines with real data
 
 ## API
 
-Data from Bot Analytics is also available via the GraphQL API. You can access bot scores, bot sources, [Bot Tags](../../about/cloudflare-bot-tags), and bot _decisions_ (_automated_, _likely automated_, etc.).
+Data from Bot Analytics is also available via the GraphQL API. You can access bot scores, bot sources, [Bot Tags](/bots/about/cloudflare-bot-tags/), and bot _decisions_ (_automated_, _likely automated_, etc.).
 
-Read the [GraphQL Analytics API documentation](https://developers.cloudflare.com/analytics/graphql-api) for more information about GraphQL and basic querying.
+Read the [GraphQL Analytics API documentation](/analytics/graphql-api) for more information about GraphQL and basic querying.

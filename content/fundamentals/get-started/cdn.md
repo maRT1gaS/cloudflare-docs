@@ -24,4 +24,4 @@ There are many reasons to use [Cloudflare’s CDN](https://www.cloudflare.com/fe
 
 Cloudflare makes customer websites faster by storing a copy of the website’s content on the servers of our globally distributed data centers.
 
-For more information about caching, refer to the [Cache documentation](https://developers.cloudflare.com/cache/).
+For more information about caching, refer to the [Cache documentation](/cache/).

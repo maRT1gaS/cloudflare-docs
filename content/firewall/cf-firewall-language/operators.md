@@ -12,7 +12,7 @@ The Cloudflare Firewall Rules language supports comparison and logical operators
 - [Comparison operators](#comparison-operators) specify how values defined in an expression must relate to the actual HTTP request value for the expression to return `true`.
 - [Logical operators](#logical-operators) combine two expressions to form a compound expression and use order of precedence to determine how an expression is evaluated.
 
-[Grouping symbols](/cf-firewall-language/operators/#grouping-symbols) allow you to organize expressions, enforce precedence, and nest expressions.
+[Grouping symbols](/firewall/cf-firewall-language/operators/#grouping-symbols) allow you to organize expressions, enforce precedence, and nest expressions.
 
 ## Comparison operators
 
@@ -341,15 +341,15 @@ Expression1 and Expression2 or Expression3
 
 If these operators had no order of precedence, it would not be clear which of two interpretations is correct:
 
-1. Match when Expression 1 and Expression 2 are both true **or** when Expression 3 is true.
-2. Match when Expression 1 is true **and** either Expression 2 or Expression 3 is true.
+1.  Match when Expression 1 and Expression 2 are both true **or** when Expression 3 is true.
+2.  Match when Expression 1 is true **and** either Expression 2 or Expression 3 is true.
 
 Since the logical `and` operator has precedence over logical `or`, the `and` operator must be evaluated first. Interpretation 1 is correct.
 
 ## Grouping symbols
 
 {{<Aside type="warning" header="Important">}}
-Only the [Expression Editor](/cf-dashboard/expression-preview-editor/) and the [Cloudflare API](/api/) support grouping symbols. The [Expression Builder](/cf-dashboard/create-edit-delete-rules/) does not.
+Only the [Expression Editor](/firewall/cf-dashboard/expression-preview-editor/) and the [Cloudflare API](/firewall/api/) support grouping symbols. The [Expression Builder](/firewall/cf-dashboard/create-edit-delete-rules/) does not.
 {{</Aside>}}
 
 The Firewall Rules language supports parentheses (`(`,`)`) as grouping symbols. Grouping symbols allow you to organize expressions, enforce precedence, and nest expressions.

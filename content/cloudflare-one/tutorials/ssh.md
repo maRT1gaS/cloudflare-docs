@@ -21,7 +21,7 @@ You can connect to machines over SSH using Cloudflare's Zero Trust platform.
 
 ## Before you start
 
-1. [Add a website to Cloudflare](https://support.cloudflare.com/hc/en-us/articles/201720164-Creating-a-Cloudflare-account-and-adding-a-website)
+1.  [Add a website to Cloudflare](https://support.cloudflare.com/hc/en-us/articles/201720164-Creating-a-Cloudflare-account-and-adding-a-website)
 
 ---
 
@@ -51,7 +51,7 @@ Finally, click **Save** to save the policy. You can return to edit the policy to
 
 Cloudflare Tunnel creates a secure, outbound-only, connection between this machine and Cloudflare's network. With an outbound-only model, you can prevent any direct access to this machine and lock down any externally exposed points of ingress. And with that, no open firewall ports.
 
-Cloudflare Tunnel is made possible through a lightweight daemon from Cloudflare called `cloudflared`. Download and then install `cloudflared` with the commands below. You can find instructions for installing `cloudflared` on other operating systems [here](https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/install-and-setup/installation). The release history can be found [here](https://github.com/cloudflare/cloudflared/releases).
+Cloudflare Tunnel is made possible through a lightweight daemon from Cloudflare called `cloudflared`. Download and then install `cloudflared` with the commands below. You can find instructions for installing `cloudflared` on other operating systems [here](/cloudflare-one/connections/connect-apps/install-and-setup/installation). The release history can be found [here](https://github.com/cloudflare/cloudflared/releases).
 
 For example, `cloudflared` can be installed on Debian and its derivatives with these commands:
 
@@ -74,7 +74,7 @@ Choose any hostname presented in the list. Cloudflare will issue a certificate s
 
 ## Create a Tunnel
 
-Next, [create a Tunnel](/connections/connect-apps/create-tunnel) on the server with the command below.
+Next, [create a Tunnel](/cloudflare-one/connections/connect-apps/create-tunnel/) on the server with the command below.
 
 ```sh
 $ cloudflared tunnel create <NAME>
@@ -90,7 +90,7 @@ $ cloudflared tunnel list
 
 ## Configure the Tunnel
 
-You can now [configure the Tunnel](/connections/connect-apps/configuration) to serve traffic.
+You can now [configure the Tunnel](/cloudflare-one/connections/connect-apps/configuration/) to serve traffic.
 
 Create a `YAML` file that `cloudflared` can reach. By default, `cloudflared` will look for the file in the same folder where `cloudflared` has been installed.
 
@@ -114,7 +114,7 @@ ingress:
 
 ## Route to the Tunnel
 
-You can now create a DNS record that will route traffic to this Tunnel. Multiple DNS records can point to a single Tunnel and will send traffic to the service configured as long as the hostname is defined with an [ingress rule](/connections/connect-apps/configuration/ingress).
+You can now create a DNS record that will route traffic to this Tunnel. Multiple DNS records can point to a single Tunnel and will send traffic to the service configured as long as the hostname is defined with an [ingress rule](/cloudflare-one/connections/connect-apps/configuration/ingress/).
 
 Navigate to `dash.cloudflare.com` and choose the hostname where you want to create a Tunnel. This should match the hostname of the Access policy. Click **+ Add record**.
 
@@ -136,7 +136,7 @@ You can now run the Tunnel to connect the target service to Cloudflare. Use the 
 cloudflared tunnel run <NAME>
 ```
 
-We recommend that you run `cloudflared` [as a service](/connections/connect-apps/run-tunnel/run-as-service) that is configured to launch on start.
+We recommend that you run `cloudflared` [as a service](/cloudflare-one/connections/connect-apps/run-tunnel/run-as-service/) that is configured to launch on start.
 
 ## Connect from a client machine
 
@@ -146,9 +146,7 @@ You can now connect from a client machine using `cloudflared`.
 
 This example uses a macOS laptop. On macOS, you can install `cloudflared` with the following command using Homebrew.
 
-```
-$ brew install cloudflare/cloudflare/cloudflared
-```
+    $ brew install cloudflare/cloudflare/cloudflared
 
 While you need to install `cloudflared`, you do not need to wrap your SSH commands in any unique way. Instead, you will need to make a one-time change to your SSH configuration file.
 

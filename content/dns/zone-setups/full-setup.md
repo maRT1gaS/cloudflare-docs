@@ -9,7 +9,7 @@ title: Full setup
 To use Cloudflare for your authoritative DNS, update the administration settings at your current registrar.
 
 {{<Aside type="note" header="Note:">}}
-If you are using [Cloudflare Registrar](https://developers.cloudflare.com/registrar), you do not need to update your authoritative nameservers. Registrar uses Cloudflare for authoritative DNS by default.
+If you are using [Cloudflare Registrar](/registrar), you do not need to update your authoritative nameservers. Registrar uses Cloudflare for authoritative DNS by default.
 {{</Aside>}}
 
 ---
@@ -33,17 +33,20 @@ Once you have added an application to Cloudflare, that application will receive 
 
 #### Get nameserver names
 
-1. Log in to the [Cloudflare dashboard](https://dash.cloudflare.com) and select your account and domain.
-1. On **Overview**, copy the information from **Replace with Cloudflare's nameservers**.
+1.  Log in to the [Cloudflare dashboard](https://dash.cloudflare.com) and select your account and domain.
+2.  On **Overview**, copy the information from **Replace with Cloudflare's nameservers**.
 
-   ![get nameserver names from the Overview page of your domain](../static/nameserver-names.png)
+    ![get nameserver names from the Overview page of your domain](../static/nameserver-names.png)
 
 #### Update your registrar
 
 1.  Log into the admin account for your domain registrar. If you do not know your provider, use [ICANN WHOIS](https://whois.icann.org/).
-1.  Disable **DNSSEC** for your domain.
-1.  Remove your existing nameservers.
-1.  Create new nameservers. If these names are not [copied exactly](#get-nameserver-names), your DNS will not resolve correctly.
+
+2.  Disable **DNSSEC** for your domain.
+
+3.  Remove your existing nameservers.
+
+4.  Create new nameservers. If these names are not [copied exactly](#get-nameserver-names), your DNS will not resolve correctly.
 
               <details>
 
@@ -94,13 +97,13 @@ Once you have added an application to Cloudflare, that application will receive 
 
           </details>
 
-1.  Wait 24 hours while your registrar updates your nameservers. You will receive an email when your site is active on Cloudflare.
+5.  Wait 24 hours while your registrar updates your nameservers. You will receive an email when your site is active on Cloudflare.
 
 #### Verify changes
 
 To check whether you correctly changed your nameservers, you can log in to the [Cloudflare dashboard](https://dash.cloudflare.com) or use a [third-party tool](https://www.whatsmydns.net/).
 
-If you see unexpected results, refer to [Nameserver FAQs](/zone-setups/troubleshooting#nameservers).
+If you see unexpected results, refer to [Nameserver FAQs](/dns/zone-setups/troubleshooting/#nameservers).
 
 ---
 

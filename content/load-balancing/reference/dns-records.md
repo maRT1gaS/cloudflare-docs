@@ -8,7 +8,7 @@ meta:
 
 # DNS records for load balancing
 
-When you [create a load balancer](/create-load-balancer-ui), we automatically create an LB DNS record for the specified **Hostname**. This functionality allows you to use a hostname with or without an existing DNS record (A, AAAA, CNAME).
+When you [create a load balancer](/load-balancing/create-load-balancer-ui/), we automatically create an LB DNS record for the specified **Hostname**. This functionality allows you to use a hostname with or without an existing DNS record (A, AAAA, CNAME).
 
 ## Priority order
 
@@ -49,10 +49,10 @@ In both cases, disabling your load balancer prevents traffic from going to any a
 
 ### Proxied domains
 
-If you [changed your nameservers](https://support.cloudflare.com/hc/articles/205195708) to point to Cloudflare, you get an SSL certificate by default. Cloudflare has already issued an [SSL certificate](https://developers.cloudflare.com/ssl/edge-certificates/universal-ssl) covering your root domain and up to one level of subdomain (`subdomain.example.com`).
+If you [changed your nameservers](https://support.cloudflare.com/hc/articles/205195708) to point to Cloudflare, you get an SSL certificate by default. Cloudflare has already issued an [SSL certificate](/ssl/edge-certificates/universal-ssl) covering your root domain and up to one level of subdomain (`subdomain.example.com`).
 
 ### Non-proxied domains
 
 If your domain is using a [CNAME setup](https://support.cloudflare.com/hc/articles/360020348832) where traffic is not proxied through Cloudflare, you need to take additional actions to get an SSL certificate.
 
-To get an SSL certificate, [create a proxied DNS record](https://developers.cloudflare.com/ssl/edge-certificates/universal-ssl/enable-universal-ssl#non-authoritative-partial-domains) for the hostname associated with the load balancer. You may also want to add [Domain Control Validation (DCV)](https://developers.cloudflare.com/ssl/edge-certificates/universal-ssl/changing-dcv-method) records to prevent any downtime.
+To get an SSL certificate, [create a proxied DNS record](/ssl/edge-certificates/universal-ssl/enable-universal-ssl#non-authoritative-partial-domains) for the hostname associated with the load balancer. You may also want to add [Domain Control Validation (DCV)](/ssl/edge-certificates/universal-ssl/changing-dcv-method) records to prevent any downtime.

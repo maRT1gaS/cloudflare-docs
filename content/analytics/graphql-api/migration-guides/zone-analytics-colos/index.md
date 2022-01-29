@@ -23,9 +23,9 @@ $ curl -H "Authorization: Bearer $API_TOKEN" "https://api.cloudflare.com/client/
 
 This query says:
 
-- Given an `API_TOKEN` which has Analytics Read access to `ZONE_ID`.
-- Fetch colos analytics for `ZONE_ID` with a time range that starts on
-  `2020-12-10T00:00:00Z` (`since` paramenter) to now.
+*   Given an `API_TOKEN` which has Analytics Read access to `ZONE_ID`.
+*   Fetch colos analytics for `ZONE_ID` with a time range that starts on
+    `2020-12-10T00:00:00Z` (`since` paramenter) to now.
 
 The question that we want to answer is: "what is the number of requests for ZHR
 per hour?" Using the colos endpoint response data and some wrangling by jq we

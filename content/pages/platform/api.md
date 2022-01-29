@@ -6,7 +6,7 @@ title: REST API
 
 # REST API
 
-The [Pages API](https://api.cloudflare.com/#pages-project-properties) empowers you to build automations and integrate Pages with your development workflow. At a high level, the API endpoints let you manage deployments and builds and configure projects. Cloudflare supports [Deploy Hooks](/platform/deploy-hooks) for headless CMS deployments. Refer to the [API documentation](https://api.cloudflare.com/) for a full breakdown of object types and endpoints.
+The [Pages API](https://api.cloudflare.com/#pages-project-properties) empowers you to build automations and integrate Pages with your development workflow. At a high level, the API endpoints let you manage deployments and builds and configure projects. Cloudflare supports [Deploy Hooks](/pages/platform/deploy-hooks/) for headless CMS deployments. Refer to the [API documentation](https://api.cloudflare.com/) for a full breakdown of object types and endpoints.
 
 ## How to use the API
 
@@ -18,17 +18,15 @@ Go to the [API Tokens](https://dash.cloudflare.com/profile/api-tokens) page and 
 
 Now, you can authenticate and make requests to the API using your email and key in the request headers. For example, here is an API request to get all deployments in a project.
 
-```
-curl --location --request GET 'https://api.cloudflare.com/client/v4/accounts/{account_id}/pages/projects/{project_name}/deployments' \
---header 'X-Auth-Email: {email}' \
---header 'X-Auth-Key: {auth_key}' \
-```
+    curl --location --request GET 'https://api.cloudflare.com/client/v4/accounts/{account_id}/pages/projects/{project_name}/deployments' \
+    --header 'X-Auth-Email: {email}' \
+    --header 'X-Auth-Key: {auth_key}' \
 
 Try it with one of your projects by replacing `{account_id}`, `{project_name}`, `{email}`, and `{auth_key}`. You can find your `account_id` in the [Workers dashboard](https://dash.cloudflare.com/?to=/:account/workers).
 
 ## Examples
 
-The API is even more powerful when combined with Cloudflare Workers: the easiest way to deploy serverless functions on Cloudflare's global network. The following section includes three code examples on how to use the Pages API. To build and deploy these samples, refer to the [Get started guide](https://developers.cloudflare.com/workers/get-started/guide).
+The API is even more powerful when combined with Cloudflare Workers: the easiest way to deploy serverless functions on Cloudflare's global network. The following section includes three code examples on how to use the Pages API. To build and deploy these samples, refer to the [Get started guide](/workers/get-started/guide).
 
 ### Triggering a new build every hour
 
@@ -59,7 +57,7 @@ async function handleScheduled(request) {
 }
 ```
 
-After you have deployed the JavaScript Worker, set a cron trigger through the Workers dashboard to run this script periodically. Refer to the [Cron Triggers guide](https://developers.cloudflare.com/workers/platform/cron-triggers) for more details.
+After you have deployed the JavaScript Worker, set a cron trigger through the Workers dashboard to run this script periodically. Refer to the [Cron Triggers guide](/workers/platform/cron-triggers) for more details.
 
 ### Deleting old deployments after a week
 
@@ -111,7 +109,7 @@ async function handleScheduled(request) {
 }
 ```
 
-After you have deployed the JavaScript Worker, you can set a cron trigger through the Workers dashboard to run this script periodically. Refer to the [Cron Triggers guide](https://developers.cloudflare.com/workers/platform/cron-triggers) for more details.
+After you have deployed the JavaScript Worker, you can set a cron trigger through the Workers dashboard to run this script periodically. Refer to the [Cron Triggers guide](/workers/platform/cron-triggers) for more details.
 
 ### Sharing project information
 
@@ -180,5 +178,5 @@ async function handleRequest(request) {
 ## Related resources
 
 - [Pages API Docs](https://api.cloudflare.com/#pages-project-properties)
-- [Workers Getting Started Guide](https://developers.cloudflare.com/workers/get-started/guide)
-- [Workers Cron Triggers](https://developers.cloudflare.com/workers/platform/cron-triggers)
+- [Workers Getting Started Guide](/workers/get-started/guide)
+- [Workers Cron Triggers](/workers/platform/cron-triggers)

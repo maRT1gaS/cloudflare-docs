@@ -35,22 +35,18 @@ ensures links are relative.
 
 Add a file `_includes/base.html` with the contents:
 
-```
-{% assign base = '' %}
-{% assign depth = page.url | split: '/' | size | minus: 1 %}
-{% if    depth <= 1 %}{% assign base = '.' %}
-{% elsif depth == 2 %}{% assign base = '..' %}
-{% elsif depth == 3 %}{% assign base = '../..' %}
-{% elsif depth == 4 %}{% assign base = '../../..' %}{% endif %}
-```
+    {% assign base = '' %}
+    {% assign depth = page.url | split: '/' | size | minus: 1 %}
+    {% if    depth <= 1 %}{% assign base = '.' %}
+    {% elsif depth == 2 %}{% assign base = '..' %}
+    {% elsif depth == 3 %}{% assign base = '../..' %}
+    {% elsif depth == 4 %}{% assign base = '../../..' %}{% endif %}
 
 This snippet computes the relative path back to the root of the website from the
 current page. Update any pages that need to link to the root by adding this at
 the top:
 
-```
-{%- include base.html -%}
-```
+    {%- include base.html -%}
 
 and prefixing any links with `{{base}}`. So for example, we'd change
 `href="/css/main.css"` to be `href="{{base}}/css/main.css"`

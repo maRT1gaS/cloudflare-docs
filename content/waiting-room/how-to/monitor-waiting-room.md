@@ -53,33 +53,31 @@ GET zones/{zone_identifier}/waiting_rooms/{identifier}
 
 The endpoint above [fetches all settings](https://api.cloudflare.com/#waiting-room-waiting-room-details) for a configured waiting room:
 
-```
-  "success": true,
-  "errors": [],
-  "messages": [],
-  "result": {
-    "id": "REDACTED",
-    "created_on": "2014-01-01T05:20:00.12345Z",
-    "modified_on": "2014-01-01T05:20:00.12345Z",
-    "name": "shop_waiting_room",
-    "description": "Waiting room for webshop",
-    "suspended": false,
-    "host": "shop.example.com",
-    "path": "/shop",
-    "queue_all": true,
-    "new_users_per_minute": 200,
-    "total_active_users": 300,
-    "session_duration": 1,
-    "disable_session_renewal": false,
-    "json_response_enabled": false,
-    "queueing_method": "random",
-    "cookie_attributes": {
-      "samesite": "auto",
-      "secure": "auto"
-    },
-    "custom_page_html": "{{#waitTimeKnown}} {{waitTime}} mins {{/waitTimeKnown}} {{^waitTimeKnown}} Queue all enabled {{/waitTimeKnown}}"
-  }
-```
+      "success": true,
+      "errors": [],
+      "messages": [],
+      "result": {
+        "id": "REDACTED",
+        "created_on": "2014-01-01T05:20:00.12345Z",
+        "modified_on": "2014-01-01T05:20:00.12345Z",
+        "name": "shop_waiting_room",
+        "description": "Waiting room for webshop",
+        "suspended": false,
+        "host": "shop.example.com",
+        "path": "/shop",
+        "queue_all": true,
+        "new_users_per_minute": 200,
+        "total_active_users": 300,
+        "session_duration": 1,
+        "disable_session_renewal": false,
+        "json_response_enabled": false,
+        "queueing_method": "random",
+        "cookie_attributes": {
+          "samesite": "auto",
+          "secure": "auto"
+        },
+        "custom_page_html": "{{#waitTimeKnown}} {{waitTime}} mins {{/waitTimeKnown}} {{^waitTimeKnown}} Queue all enabled {{/waitTimeKnown}}"
+      }
 
 The value of `suspended` indicates whether a waiting room is activated or suspended:
 

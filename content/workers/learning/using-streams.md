@@ -8,7 +8,7 @@ title: Using Streams
 
 The [Streams API](https://developer.mozilla.org/en-US/docs/Web/API/Streams_API) is a web standard API that allows JavaScript to programmatically access and process streams of data.
 
-Workers scripts do not need to prepare an entire response body before delivering it to `event.respondWith()`. You can use [`TransformStream`](/runtime-apis/streams/transformstream) to stream a response body after sending the front matter (that is, HTTP status line and headers). This allows you to minimize:
+Workers scripts do not need to prepare an entire response body before delivering it to `event.respondWith()`. You can use [`TransformStream`](/workers/runtime-apis/streams/transformstream/) to stream a response body after sending the front matter (that is, HTTP status line and headers). This allows you to minimize:
 
 - The visitor’s time-to-first-byte.
 - The buffering done in the Workers script.
@@ -19,7 +19,7 @@ Minimizing buffering is especially important for processing or transforming resp
 By default, Cloudflare Workers is capable of streaming responses using the [Streams APIs](https://developer.mozilla.org/en-US/docs/Web/API/Streams_API). To maintain the streaming behavior, you should only modify the response body using the methods in the Streams APIs. If your Worker only forwards subrequest responses to the client verbatim without reading their body text, then its body handling is already optimal and you do not have to use these APIs.
 {{</Aside>}}
 
-The two primitives developers use to perform active streaming are [`TransformStream`](/runtime-apis/streams/transformstream) and the [`ReadableStream.pipeTo()`](/runtime-apis/streams/readablestream#methods) method.
+The two primitives developers use to perform active streaming are [`TransformStream`](/workers/runtime-apis/streams/transformstream/) and the [`ReadableStream.pipeTo()`](/workers/runtime-apis/streams/readablestream/#methods) method.
 
 A basic pass-through usage of streams:
 
@@ -53,13 +53,13 @@ The runtime can continue running a function (`response.body.pipeTo(writable)`) a
 ## Common issues
 
 {{<Aside type="warning" header="Warning">}}
-The Streams API is only available inside of the [Request context](/runtime-apis/request), inside the `fetch` event listener callback.
+The Streams API is only available inside of the [Request context](/workers/runtime-apis/request/), inside the `fetch` event listener callback.
 {{</Aside>}}
 
 ---
 
 ## Related resources
 
-- [Streams API Reference](/runtime-apis/streams)
+- [Streams API Reference](/workers/runtime-apis/streams/)
 - [MDN’s Streams API documentation](https://developer.mozilla.org/en-US/docs/Web/API/Streams_API)
 - [Streams API Specification](https://streams.spec.whatwg.org/)

@@ -14,7 +14,7 @@ Cloudflare Logpush supports pushing logs to a limited set of services providers.
 
 ## Manage via the Cloudflare dashboard
 
-Refer to [Enable destinations](/get-started/enable-destinations/) for the list of services you can configure to use with Logpush through the Cloudflare dashboard. Interested in a different service? Take this [survey](https://docs.google.com/forms/d/e/1FAIpQLScwOSabROywVajpMX2ZYCVl3saYs11cP4NIC8QR-wmOAnxOtA/viewform).
+Refer to [Enable destinations](/logs/get-started/enable-destinations/) for the list of services you can configure to use with Logpush through the Cloudflare dashboard. Interested in a different service? Take this [survey](https://docs.google.com/forms/d/e/1FAIpQLScwOSabROywVajpMX2ZYCVl3saYs11cP4NIC8QR-wmOAnxOtA/viewform).
 
 ## Manage via API
 
@@ -26,11 +26,11 @@ With Logpush, you can create a job to upload logs of the metadata Cloudflare col
 
 To get started:
 
-1. Set up a storage provider and grant Cloudflare access. Your storage provider may request your Cloudflare API credentials and other information including:
+1.  Set up a storage provider and grant Cloudflare access. Your storage provider may request your Cloudflare API credentials and other information including:
 
-   - Email address
-   - Cloudflare API key
-   - Zone ID
-   - Destination access details for your cloud service provider
+    - Email address
+    - Cloudflare API key
+    - Zone ID
+    - Destination access details for your cloud service provider
 
-1. Configure your Logpush job. For more information on how to configure a Logpush job, refer to [Logpush API configuration](/reference/logpush-api-configuration).
+2.  Configure your Logpush job. For more information on how to configure a Logpush job, refer to [Logpush API configuration](/logs/reference/logpush-api-configuration/).

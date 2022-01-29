@@ -20,7 +20,7 @@ You can use Cloudflare Gateway to block DNS queries a entire top level domain (T
 
 ## Before you start
 
-1. [Add Gateway to your account](/setup)
+1.  [Add Gateway to your account](/cloudflare-one/setup/)
 
 ## Build a policy to block by TLD
 
@@ -32,9 +32,7 @@ Click **Create a policy**. In the policy builder, name the policy and optionally
 
 Choose `Domain` in the Selector, `matches regex` in the Operator, and input the following value:
 
-```
-[.]fail
-```
+    [.]fail
 
 Replacing `fail` with the TLD you intend to block.
 
@@ -49,7 +47,7 @@ Finish the policy by clicking **Create policy**.
 Input the TLD you need to block. If you need to block `.fail` remove the leading `.` and only input `fail`. Click **Add to policy** and save the policy.
 
 {{<Aside type="note">}}
-For more information on how policies work with regular expressions, refer to [Can I use regular expressions to build policies?](/faq/teams-policies-faq#can-i-use-regular-expressions-to-build-policies)
+For more information on how policies work with regular expressions, refer to [Can I use regular expressions to build policies?](/cloudflare-one/faq/teams-policies-faq/#can-i-use-regular-expressions-to-build-policies)
 {{</Aside>}}
 
 ## Review logs

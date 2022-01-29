@@ -22,7 +22,7 @@ let response = new Response(body, init);
     - <TypeLink href="https://developer.mozilla.org/en-US/docs/Web/API/BufferSource">
         BufferSource
       </TypeLink> &nbsp;
-    - <TypeLink href="https://developer.mozilla.org/en-US/docs/Web/API/FormData">FormData</TypeLink> &nbsp;
+    - <TypeLink href="https://developer.mozilla.org/en-US/docs/Web/API/FormData">FormData</TypeLink>  
     - <TypeLink href="https://developer.mozilla.org/en-US/docs/Web/API/ReadableStream">
         ReadableStream
       </TypeLink> &nbsp;
@@ -52,7 +52,7 @@ Valid options for the `options` object include:
   - The status message associated with the status code, like, `OK`.
 
 - `headers` <TypeLink href="/runtime-apis/request#parameters">Headers</TypeLink> | <TypeLink href="https://developer.mozilla.org/en-US/docs/Web/API/ByteString">ByteString</TypeLink>
-  - Any headers to add to your response that are contained within a [`Headers`](/runtime-apis/request#parameters) object or object literal of [`ByteString`](https://developer.mozilla.org/en-US/docs/Web/API/ByteString) key/value pairs.
+  - Any headers to add to your response that are contained within a [`Headers`](/workers/runtime-apis/request/#parameters) object or object literal of [`ByteString`](https://developer.mozilla.org/en-US/docs/Web/API/ByteString) key/value pairs.
 
 </Definitions>
 
@@ -108,25 +108,25 @@ Valid options for the `options` object include:
 <Definitions>
 
 - <Code>arrayBuffer()</Code> <TypeLink href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer">
-    Promise{`<ArrayBuffer>`}
+    Promise{`<ArrayBuffer>`}{' '}
   </TypeLink>
 
   - Takes a [`Response`](#response) stream, reads it to completion, and returns a promise that resolves with an [`ArrayBuffer`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer).
 
 - <Code>formData()</Code> <TypeLink href="https://developer.mozilla.org/en-US/docs/Web/API/FormData">
-    Promise{`<FormData>`}
+    Promise{`<FormData>`}{' '}
   </TypeLink>
 
   - Takes a [`Response`](#response) stream, reads it to completion, and returns a promise that resolves with a [`FormData`](https://developer.mozilla.org/en-US/docs/Web/API/FormData) object.
 
 - <Code>json()</Code> <TypeLink href="https://developer.mozilla.org/en-US/docs/Web/">
-    Promise{`<JSON>`}
+    Promise{`<JSON>`}{' '}
   </TypeLink>
 
   - Takes a [`Response`](#response) stream, reads it to completion, and returns a promise that resolves with the result of parsing the body text as [`JSON`](https://developer.mozilla.org/en-US/docs/Web/)
 
 - <Code>text()</Code> <TypeLink href="https://developer.mozilla.org/en-US/docs/Web/API/USVString">
-    Promise{`<USVString>`}
+    Promise{`<USVString>`}{' '}
   </TypeLink>
 
   - Takes a [`Response`](#response) stream, reads it to completion, and returns a promise that resolves with a [`USVString`](https://developer.mozilla.org/en-US/docs/Web/API/USVString) (text).
@@ -137,6 +137,6 @@ Valid options for the `options` object include:
 
 ## Additional information
 
-- [Examples: Modify response](/examples/modify-response)
-- [Examples: Conditional response](/examples/conditional-response)
-- [Reference: `Request`](/runtime-apis/request)
+- [Examples: Modify response](/workers/examples/modify-response/)
+- [Examples: Conditional response](/workers/examples/conditional-response/)
+- [Reference: `Request`](/workers/runtime-apis/request/)

@@ -16,19 +16,19 @@ Cloudflare Access supports social identity providers that do not require adminis
 
 ## Set up IdPs on the Teams dashboard
 
-1. On the [Teams dashboard](https://dash.teams.cloudflare.com), navigate to **Settings > Authentication**.
+1.  On the [Teams dashboard](https://dash.teams.cloudflare.com), navigate to **Settings > Authentication**.
 
-1. In the **Login methods** card, click **Add new**.
+2.  In the **Login methods** card, click **Add new**.
 
-1. Select the identity provider you want to add. You can add multiple providers of the same type.
+3.  Select the identity provider you want to add. You can add multiple providers of the same type.
 
-1. Fill in the necessary fields to set up your identity provider.
+4.  Fill in the necessary fields to set up your identity provider.
 
 Each identity provider will have different required fields for you to fill in. If you need help, step-by-step instructions can be expanded below the input form.
 
 If you do not see your identity provider listed, but they support SAML or OAuth, these providers can typically still be enabled. If they support SAML select the SAML option. If they support OAuth select the **OpenID Connect** option.
 
-1. Once you have filled in the necessary fields, click **Save**.
+1.  Once you have filled in the necessary fields, click **Save**.
 
 Your IdP will now be listed in the **Login methods** card.
 

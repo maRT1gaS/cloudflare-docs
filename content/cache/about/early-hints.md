@@ -17,9 +17,9 @@ For more information about Early Hints, refer to the [Early Hints blog](https://
 
 ## Sign up for Early Hints Beta
 
-1. Log in to your [Cloudflare dashboard](https://dash.cloudflare.com) and select your domain.
-1. From the dashboard, click **Speed** > **Optimization**.
-1. Under **Optimized Delivery**, click **Join the beta**.
+1.  Log in to your [Cloudflare dashboard](https://dash.cloudflare.com) and select your domain.
+2.  From the dashboard, click **Speed** > **Optimization**.
+3.  Under **Optimized Delivery**, click **Join the beta**.
 
 After you sign up, you will be added to a list of beta users, and the feature will be enabled in batches from the list. After admission into the Beta, you can toggle Early Hints on or off from **Optimized Delivery**.
 

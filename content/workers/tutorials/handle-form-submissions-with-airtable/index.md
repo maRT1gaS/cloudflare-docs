@@ -103,7 +103,7 @@ If you've chosen to work with the [sample codebase on GitHub](https://github.com
 In `wrangler.toml`, add your Cloudflare account ID:
 
 {{<Aside>}}
-[Check out our Quick Start guide](https://developers.cloudflare.com/workers/get-started/guide#7-configure-your-project-for-deployment) if you're unsure where to find your Cloudflare Account ID.
+[Check out our Quick Start guide](/workers/get-started/guide#7-configure-your-project-for-deployment) if you're unsure where to find your Cloudflare Account ID.
 {{</Aside>}}
 
 ```toml
@@ -171,9 +171,9 @@ Enter the secret text you would like assigned to the variable AIRTABLE_API_KEY o
 
 Before we continue, let's review the keys that we should have from Airtable:
 
-1. _Airtable Table Name:_ the name for your table, e.g. "Form Submissions".
-2. _Airtable Base ID:_ the alphanumeric base ID found at the top of your base's API page.
-3. _Airtable API Key:_ the private API key found in example API requests on the Airtable API documentation page.
+1.  _Airtable Table Name:_ the name for your table, e.g. "Form Submissions".
+2.  _Airtable Base ID:_ the alphanumeric base ID found at the top of your base's API page.
+3.  _Airtable API Key:_ the private API key found in example API requests on the Airtable API documentation page.
 
 ## Submit data to Airtable
 
@@ -319,7 +319,7 @@ You can find the source for this project—both the front-end UI, as well as the
 
 See what else you can build with Workers with some of our other resources below!
 
-- [Build a Slackbot](https://developers.cloudflare.com/workers/tutorials/build-a-slackbot)
-- [Build a To-Do List Jamstack App](https://developers.cloudflare.com/workers/tutorials/build-a-jamstack-app)
-- [Build a blog using Nuxt.js and Sanity.io on Cloudflare Pages](https://developers.cloudflare.com/pages/tutorials/build-a-blog-using-nuxt-and-sanity)
+- [Build a Slackbot](/workers/tutorials/build-a-slackbot)
+- [Build a To-Do List Jamstack App](/workers/tutorials/build-a-jamstack-app)
+- [Build a blog using Nuxt.js and Sanity.io on Cloudflare Pages](/pages/tutorials/build-a-blog-using-nuxt-and-sanity)
 - [James Quick's video on building a Cloudflare Workers + Airtable integration](https://www.youtube.com/watch?v=tFQ2kbiu1K4)

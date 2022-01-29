@@ -15,9 +15,9 @@ meta:
 
 `BYOB` is an abbreviation of "bring your own buffer." A `ReadableStreamBYOBReader` allows reading into a developer-supplied buffer, thus minimizing copies.
 
-An instance of `ReadableStreamBYOBReader` is functionally identical to [`ReadableStreamDefaultReader`](/runtime-apis/streams/readablestreamdefaultreader) with the exception of the `read` method.
+An instance of `ReadableStreamBYOBReader` is functionally identical to [`ReadableStreamDefaultReader`](/workers/runtime-apis/streams/readablestreamdefaultreader/) with the exception of the `read` method.
 
-A `ReadableStreamBYOBReader` is not instantiated via its constructor. Rather, it is retrieved from a [`ReadableStream`](/runtime-apis/streams/readablestream):
+A `ReadableStreamBYOBReader` is not instantiated via its constructor. Rather, it is retrieved from a [`ReadableStream`](/workers/runtime-apis/streams/readablestream/):
 
 ```js
 const { readable, writable } = new TransformStream();
@@ -40,16 +40,16 @@ const reader = readable.getReader({ mode: 'byob' });
 
 ## Common issues
 
-  {{<Aside type="warning" header="Warning">}}
+{{<Aside type="warning" header="Warning">}}
 `read` provides no control over the minimum number of bytes that should be read into the buffer. Even if you allocate a 1MiB buffer, the kernel is perfectly within its rights to fulfill this read with a single byte, whether or not an EOF immediately follows.
 
 In practice, we have found that `read` typically fills only 1% of the provided buffer.
 
 Workers team is considering implementing or proposing a change to the Streams API to allow users to specify `minBytes` that should be read into the buffer before resolving the read.
 
-  {{</Aside>}}
+{{</Aside>}}
 
 ## See also
 
-- [Using Streams.](/learning/using-streams)
+- [Using Streams.](/workers/learning/using-streams/)
 - [Background about BYOB readers in the Streams API WHATWG specification.](https://streams.spec.whatwg.org/#byob-readers)

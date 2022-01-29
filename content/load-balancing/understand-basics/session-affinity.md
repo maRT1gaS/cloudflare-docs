@@ -18,19 +18,19 @@ Cloudflare only supports cookie-based session affinity. Other methods, such as T
 
 Session Affinity automatically directs requests from the same client to the same origin web server:
 
-1. When a client makes its first request, Cloudflare sets a `CFLib` cookie on the client (to track the associated origin web server).
-1. Subsequent requests by the same client are forwarded to that origin for the duration of the cookie and as long as the origin server remains healthy.
-1. If the cookie expires or the origin server becomes unhealthy, Cloudflare sets a new cookie tracking the new failover origin.
+1.  When a client makes its first request, Cloudflare sets a `CFLib` cookie on the client (to track the associated origin web server).
+2.  Subsequent requests by the same client are forwarded to that origin for the duration of the cookie and as long as the origin server remains healthy.
+3.  If the cookie expires or the origin server becomes unhealthy, Cloudflare sets a new cookie tracking the new failover origin.
 
 All sessions default to 23 hours unless you set a custom session _Time to live_ (TTL).
 
-The session cookie is secure when [Always Use HTTPS](https://developers.cloudflare.com/ssl/edge-certificates/additional-options/always-use-https) is enabled. Additionally, HttpOnly is always enabled for the cookie to prevent cross-site scripting attacks.
+The session cookie is secure when [Always Use HTTPS](/ssl/edge-certificates/additional-options/always-use-https) is enabled. Additionally, HttpOnly is always enabled for the cookie to prevent cross-site scripting attacks.
 
 ---
 
 ## Enabling Session Affinity from the Cloudflare dashboard
 
-Enable Session Affinity when you [create or edit a load balancer](/create-load-balancer-ui), during the **Hostname** step.
+Enable Session Affinity when you [create or edit a load balancer](/load-balancing/create-load-balancer-ui/), during the **Hostname** step.
 
 If you enable Session Affinity, choose one of the following options:
 
@@ -38,15 +38,15 @@ If you enable Session Affinity, choose one of the following options:
 - **By Cloudflare cookie and Client IP fallback**: Sets a `CFLib` cookie, but also uses the client IP address when no session affinity cookie is provided
 
 {{<Aside type="warning" header="Important">}}
-Session Affinity with Client IP fallback is not supported for load balancers in [DNS-only mode (gray cloud)](/understand-basics/proxy-modes).
+Session Affinity with Client IP fallback is not supported for load balancers in [DNS-only mode (gray cloud)](/load-balancing/understand-basics/proxy-modes/).
 {{</Aside>}}
 
 ### Origin Drain
 
-Drain or remove all traffic from an origin without affecting any active customers using Origin Drain. For more details on origin drain, refer to [Performing planned maintenance](/additional-options/planned-maintenance#gradual-rotation).
+Drain or remove all traffic from an origin without affecting any active customers using Origin Drain. For more details on origin drain, refer to [Performing planned maintenance](/load-balancing/additional-options/planned-maintenance/#gradual-rotation).
 
 {{<Aside type="warning" header="Important">}}
-Origin drain is not supported for load balancers in [DNS-only mode (gray cloud)](/understand-basics/proxy-modes).
+Origin drain is not supported for load balancers in [DNS-only mode (gray cloud)](/load-balancing/understand-basics/proxy-modes/).
 {{</Aside>}}
 
 ---
@@ -60,4 +60,4 @@ Session affinity is a property of load balancers, which you can set with the fol
 
 Customize the behavior of session affinity by using the `session_affinity`, `session_affinity_ttl`, and `session_affinity_attributes` parameters.
 
-For more details on API commands in context, refer to [Create a load balancer with the API](/create-load-balancer-api/).
+For more details on API commands in context, refer to [Create a load balancer with the API](/load-balancing/create-load-balancer-api/).

@@ -21,4 +21,4 @@ Unless otherwise noted, fields are available in both Logpush v1 (Logpush prior t
 
 <DirectoryListing path="/reference/log-fields/account" />
 
-For more information on logs available in Cloudflare for Teams, refer to [Teams logs](https://developers.cloudflare.com/cloudflare-one/analytics/logs).
+For more information on logs available in Cloudflare for Teams, refer to [Teams logs](/cloudflare-one/analytics/logs).

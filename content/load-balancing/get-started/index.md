@@ -18,7 +18,7 @@ import LBCreateAPI from '../_partials/_load-balancer-create-api.md';
 
 # Get started
 
-This guide is meant for organizations setting up their first load balancer. If you already have active load balancers, refer to [Basic tasks](/how-to) for general help or [Additional configurations](/additional-options) for more advanced setups.
+This guide is meant for organizations setting up their first load balancer. If you already have active load balancers, refer to [Basic tasks](/load-balancing/how-to/) for general help or [Additional configurations](/load-balancing/additional-options/) for more advanced setups.
 
 ---
 
@@ -98,11 +98,11 @@ Before directing any traffic to your pools, make sure that your pools and monito
 <summary>Confirm pool health (dashboard)</summary>
 <div>
 
-1. Navigate to **Traffic** > **Load Balancing**.
-1. Click **Manage Pools**.
-1. For pools and individual origins, review the values in the **Health** and **Origin Health** columns.
+1.  Navigate to **Traffic** > **Load Balancing**.
+2.  Click **Manage Pools**.
+3.  For pools and individual origins, review the values in the **Health** and **Origin Health** columns.
 
-For more information on pool and origin health statuses, refer to [How a pool becomes unhealthy](/understand-basics/health-details#how-a-pool-becomes-unhealthy).
+For more information on pool and origin health statuses, refer to [How a pool becomes unhealthy](/load-balancing/understand-basics/health-details/#how-a-pool-becomes-unhealthy).
 
 </div>
 
@@ -122,7 +122,7 @@ For troubleshooting a specific pool's health, use the [Pool Health Details](http
 
 If you notice that healthy pools are being marked unhealthy:
 
-- Review [how origins and pools become unhealthy](/understand-basics/health-details).
+- Review [how origins and pools become unhealthy](/load-balancing/understand-basics/health-details/).
 - Refer to the [Troubleshooting FAQ](https://support.cloudflare.com/hc/articles/4407016052493).
 
 ## Step 4 — Create a load balancer on a test subdomain
@@ -162,7 +162,7 @@ Either option would use your load balancer to distribute requests going to `test
 
 ## Step 5 — Review load balancing analytics
 
-As you send sample requests to your test domain, review the [load balancing analytics](/reference/load-balancing-analytics) page to make sure your load balancer is distributing requests like you were expecting.
+As you send sample requests to your test domain, review the [load balancing analytics](/load-balancing/reference/load-balancing-analytics/) page to make sure your load balancer is distributing requests like you were expecting.
 
 ## Step 6 — Deploy your load balancer on live traffic
 

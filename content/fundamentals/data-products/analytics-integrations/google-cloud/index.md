@@ -9,7 +9,7 @@ weight: 100
 
 This tutorial covers how to configure certain Google Cloud Platform (GCP) components so that you can analyze your Cloudflare Logs data.
 
-Before proceeding, you need to enable [Cloudflare Logpush in Google Cloud Storage](https://developers.cloudflare.com/logs/get-started/enable-destinations/google-cloud-storage) to ensure your log data is available for analyzing.
+Before proceeding, you need to enable [Cloudflare Logpush in Google Cloud Storage](/logs/get-started/enable-destinations/google-cloud-storage) to ensure your log data is available for analyzing.
 
 The components we'll use in this tutorial include:
 
@@ -39,11 +39,11 @@ To a create a cloud function to import data from Google Cloud Storage into Googl
 
 To clone and deploy the cloud function:
 
-1. Run the Google Cloud Platform shell by opening the **Google Cloud Platform** console and clicking the **Google Shell** icon (_Activate Cloud Shell_).
+1.  Run the Google Cloud Platform shell by opening the **Google Cloud Platform** console and clicking the **Google Shell** icon (_Activate Cloud Shell_).
 
-2. Run the following command to download the _master_ zipped archive, uncompress the files to new a directory, and change the command line prompt to the new directory: `curl -LO "https://github.com/cloudflare/cloudflare-gcp/archive/master.zip" && unzip master.zip && cd cloudflare-gcp-master/logpush-to-bigquery`
+2.  Run the following command to download the _master_ zipped archive, uncompress the files to new a directory, and change the command line prompt to the new directory: `curl -LO "https://github.com/cloudflare/cloudflare-gcp/archive/master.zip" && unzip master.zip && cd cloudflare-gcp-master/logpush-to-bigquery`
 
-3. Next, edit the `deploy.sh` file and make sure that:
+3.  Next, edit the `deploy.sh` file and make sure that:
 
 - **BUCKET_NAME** is set to the bucket you created when you configured Cloudflare Logpush with Google Cloud Platform.
 
@@ -63,11 +63,11 @@ To clone and deploy the cloud function:
   .
   ```
 
-4. Then in the **Google Shell**, run the following command to deploy your instance of the cloud function:
+4.  Then in the **Google Shell**, run the following command to deploy your instance of the cloud function:
 
-   ```bash
-   sh ./deploy.sh
-   ```
+    ```bash
+    sh ./deploy.sh
+    ```
 
 Once you've deployed your new cloud function, verify that it appears in the **Cloud Functions** interface by navigating to **Google Cloud Platform** > **Compute** > **Cloud Functions**.
 
@@ -79,17 +79,17 @@ If everything is configured correctly, you can now query any request or visualiz
 
 To add fields in Cloud Function, edit the `schema.json` file.
 
-1. Open Google Cloud Function.
+1.  Open Google Cloud Function.
 
-2. Select the function you want to update.
+2.  Select the function you want to update.
 
-3. Click **EDIT** on the Function details page.
+3.  Click **EDIT** on the Function details page.
 
-4. Select `schema.json` from the list of files.
+4.  Select `schema.json` from the list of files.
 
-5. In the file editor, enter the `name`, `type`, and `mode` of any fields you would like to add. Follow the format shown in the file.
+5.  In the file editor, enter the `name`, `type`, and `mode` of any fields you would like to add. Follow the format shown in the file.
 
-6. Click **Deploy**.
+6.  Click **Deploy**.
 
 To debug in Cloud Function, click **VIEW LOGS** on the Function details page. This will take you to the Logs Viewer, where any errors will appear.
 
@@ -97,19 +97,19 @@ To debug in Cloud Function, click **VIEW LOGS** on the Function details page. Th
 
 To add fields in BigQuery, edit the schema.
 
-1. Open BigQuery.
+1.  Open BigQuery.
 
-2. In the menu, expand **your-project-name**.
+2.  In the menu, expand **your-project-name**.
 
-3. Expand **cloudflare_data** and click **cf_analytics_logs**.
+3.  Expand **cloudflare_data** and click **cf_analytics_logs**.
 
-4. Select the **Schema** tab.
+4.  Select the **Schema** tab.
 
-5. Scroll to the bottom of the page, and click **Edit schema**.
+5.  Scroll to the bottom of the page, and click **Edit schema**.
 
-6. On the pop-up page, click **Add field**. Enter the field **Name** and select the field **Type** and **Mode** from the dropdowns.
+6.  On the pop-up page, click **Add field**. Enter the field **Name** and select the field **Type** and **Mode** from the dropdowns.
 
-7. Click **Save**.
+7.  Click **Save**.
 
 ## Task 2 - Analyze log data with Google Data Studio
 
@@ -139,21 +139,21 @@ The following dashboards are included in the Insights template:
 
 To create a report for your log data based on the Cloudflare template:
 
-1. In Data Studio, open the Cloudflare [template](https://datastudio.google.com/u/0/reporting/1ez3m7Yf8AZLfM6aYRjfgF0pPpRvOwhTh/page/mAzI/preview) and click **Use Template**. A _Create new report_ dialog opens.
+1.  In Data Studio, open the Cloudflare [template](https://datastudio.google.com/u/0/reporting/1ez3m7Yf8AZLfM6aYRjfgF0pPpRvOwhTh/page/mAzI/preview) and click **Use Template**. A _Create new report_ dialog opens.
 
-2. Under the **New Data Source** dropdown, select **Create New Data Source**. A page opens where you can enter additional configuration details.
+2.  Under the **New Data Source** dropdown, select **Create New Data Source**. A page opens where you can enter additional configuration details.
 
-3. Under **Google Connectors**, locate the **BigQuery** card and click **Select**.
+3.  Under **Google Connectors**, locate the **BigQuery** card and click **Select**.
 
-4. Next under **MY PROJECTS**, select your **Project**, **Dataset**, and **Table**.
+4.  Next under **MY PROJECTS**, select your **Project**, **Dataset**, and **Table**.
 
-5. Click **Connect** in the upper right.
+5.  Click **Connect** in the upper right.
 
-6. In the list of Cloudflare Logs fields, locate _EdgeStartTimestamp_, click the three vertical dots and select **Duplicate**. This creates _Copy of EdgeStartTimestamp_ right below _EdgeStartTimestamp_.
+6.  In the list of Cloudflare Logs fields, locate _EdgeStartTimestamp_, click the three vertical dots and select **Duplicate**. This creates _Copy of EdgeStartTimestamp_ right below _EdgeStartTimestamp_.
 
-7. Update the **Type** for _Copy of EdgeStartTimestamp_ to set it to _Date & Time_ > _Date Hour (YYYYMMDDHH)_.
+7.  Update the **Type** for _Copy of EdgeStartTimestamp_ to set it to _Date & Time_ > _Date Hour (YYYYMMDDHH)_.
 
-8. Next, update the **Type** for each of the following fields as indicated below:
+8.  Next, update the **Type** for each of the following fields as indicated below:
 
 <table style="bweight: solid 2px darkgrey; width: 100%;">
   <thead style="background: #ffeadf;">
@@ -210,32 +210,32 @@ To create a report for your log data based on the Cloudflare template:
   </tbody>
 </table>
 
-9. Next, add a new field to identify and calculate threat. In the top right corner, click **+ ADD A FIELD**, then in the add field UI:
-   _ For **Field Name**, type *Threats*.
-   _ In the **Formula** text box, paste the following code:
+9.  Next, add a new field to identify and calculate threat. In the top right corner, click **+ ADD A FIELD**, then in the add field UI:
+    \_ For **Field Name**, type _Threats_.
+    \_ In the **Formula** text box, paste the following code:
 
-   ```bash
-   CASE
-   WHEN EdgePathingSrc = "user" AND EdgePathingOp = "ban" AND EdgePathingStatus = "ip" THEN "ip block"
-   WHEN EdgePathingSrc = "user" AND EdgePathingOp = "ban" AND EdgePathingStatus = "ctry" THEN "country block"
-   WHEN EdgePathingSrc = "user" AND EdgePathingOp = "ban" AND EdgePathingStatus = "zl" THEN "routed by zone lockdown"
-    WHEN EdgePathingSrc = "user" AND EdgePathingOp = "ban" AND EdgePathingStatus = "ua" THEN "blocked user agent"
-   WHEN EdgePathingSrc = "user" AND EdgePathingOp = "ban" AND EdgePathingStatus = "rateLimit" THEN "rate-limiting rule"
-    WHEN EdgePathingSrc = "bic" AND EdgePathingOp = "ban" AND EdgePathingStatus = "unknown" THEN "browser integrity check"
-   WHEN EdgePathingSrc = "hot" AND EdgePathingOp = "ban" AND EdgePathingStatus = "unknown" THEN "blocked hotlink"
-   WHEN EdgePathingSrc = "macro" AND EdgePathingOp = "chl" AND EdgePathingStatus = "captchaFail" THEN "CAPTCHA challenge failed"
-   WHEN EdgePathingSrc = "macro" AND EdgePathingOp = "chl" AND EdgePathingStatus = "jschlFail" THEN "java script challenge failed"
-   WHEN EdgePathingSrc = "filterBasedFirewall" AND EdgePathingOp = "ban" AND EdgePathingStatus = "unknown" THEN "blocked by filter based firewall"
-   WHEN EdgePathingSrc = "filterBasedFirewall" AND EdgePathingOp = "chl" THEN "challenged by filter based firewall"
-   Else "Other"
-   END
-   ```
+    ```bash
+    CASE
+    WHEN EdgePathingSrc = "user" AND EdgePathingOp = "ban" AND EdgePathingStatus = "ip" THEN "ip block"
+    WHEN EdgePathingSrc = "user" AND EdgePathingOp = "ban" AND EdgePathingStatus = "ctry" THEN "country block"
+    WHEN EdgePathingSrc = "user" AND EdgePathingOp = "ban" AND EdgePathingStatus = "zl" THEN "routed by zone lockdown"
+     WHEN EdgePathingSrc = "user" AND EdgePathingOp = "ban" AND EdgePathingStatus = "ua" THEN "blocked user agent"
+    WHEN EdgePathingSrc = "user" AND EdgePathingOp = "ban" AND EdgePathingStatus = "rateLimit" THEN "rate-limiting rule"
+     WHEN EdgePathingSrc = "bic" AND EdgePathingOp = "ban" AND EdgePathingStatus = "unknown" THEN "browser integrity check"
+    WHEN EdgePathingSrc = "hot" AND EdgePathingOp = "ban" AND EdgePathingStatus = "unknown" THEN "blocked hotlink"
+    WHEN EdgePathingSrc = "macro" AND EdgePathingOp = "chl" AND EdgePathingStatus = "captchaFail" THEN "CAPTCHA challenge failed"
+    WHEN EdgePathingSrc = "macro" AND EdgePathingOp = "chl" AND EdgePathingStatus = "jschlFail" THEN "java script challenge failed"
+    WHEN EdgePathingSrc = "filterBasedFirewall" AND EdgePathingOp = "ban" AND EdgePathingStatus = "unknown" THEN "blocked by filter based firewall"
+    WHEN EdgePathingSrc = "filterBasedFirewall" AND EdgePathingOp = "chl" THEN "challenged by filter based firewall"
+    Else "Other"
+    END
+    ```
 
-   \* Click **Save** in the lower right corner.
+    \* Click **Save** in the lower right corner.
 
 10. Finally, add another new field for grouping status error codes. In the top right corner, click **+ ADD A FIELD**, then in the add field UI:
-    _ For **Field Name**, type *EdgeResponseStatus_Class*.
-    _ In the **Formula** text box, paste the following code:
+    \_ For **Field Name**, type _EdgeResponseStatus_Class_.
+    \_ In the **Formula** text box, paste the following code:
 
     ```bash
     CASE
@@ -260,29 +260,29 @@ After you've added your report, you will notice that not all report components r
 
 To update Data Studio with fields added to BigQuery, refresh fields for the data source.
 
-1. In Data Studio, open the Cloudflare dashboard in **Edit** mode.
+1.  In Data Studio, open the Cloudflare dashboard in **Edit** mode.
 
-2. Expand the **Resource** menu and select **Manage added data sources**.
+2.  Expand the **Resource** menu and select **Manage added data sources**.
 
-3. Click the **EDIT** action for the data source that you want to update.
+3.  Click the **EDIT** action for the data source that you want to update.
 
-4. Click **REFRESH FIELDS** below the table. A window with **Field changes found** in BigQuery will pop up.
+4.  Click **REFRESH FIELDS** below the table. A window with **Field changes found** in BigQuery will pop up.
 
-5. To add the new fields, click **APPLY**.
+5.  To add the new fields, click **APPLY**.
 
 You can also create custom fields directly in Data Studio.
 
-1. In Data Studio, open the Cloudflare dashboard in **Edit** mode.
+1.  In Data Studio, open the Cloudflare dashboard in **Edit** mode.
 
-2. Expand the **Resource** menu and select **Manage added data sources**.
+2.  Expand the **Resource** menu and select **Manage added data sources**.
 
-3. Click the **EDIT** action for the data source that you want to add a custom field to.
+3.  Click the **EDIT** action for the data source that you want to add a custom field to.
 
-4. Click **ADD A FIELD** above the table.
+4.  Click **ADD A FIELD** above the table.
 
-5. Enter a formula in the **Formula** editor.
+5.  Enter a formula in the **Formula** editor.
 
-6. Click **SAVE**.
+6.  Click **SAVE**.
 
 #### Fix invalid metric or dimension errors
 
@@ -343,13 +343,13 @@ The following table summarizes which specific components require to be fixed:
 
 For each of the report components listed above:
 
-1. Select the report component affected.
+1.  Select the report component affected.
 
-2. On the menu to the right, under the **Data** tab, locate and click **Invalid Dimension** or **Invalid Metric** (as applicable). The **Field Picker** panel opens.
+2.  On the menu to the right, under the **Data** tab, locate and click **Invalid Dimension** or **Invalid Metric** (as applicable). The **Field Picker** panel opens.
 
-3. Search or type for the field to add, then click to select it.
+3.  Search or type for the field to add, then click to select it.
 
-4. To finish, click away from the panel to return to the main report.
+4.  To finish, click away from the panel to return to the main report.
 
 The component should now render correctly.
 
@@ -363,12 +363,12 @@ This fix applies to report page: **3 Reliability Cloudflare**, for the following
 
 To update the filter associated with each scorecard:
 
-1. Select the report component affected.
+1.  Select the report component affected.
 
-2. On the menu to the right, under the **Data** tab, locate the **Filters** > **Scorecard Filter** section and click the **pencil** next to the filter name to edit it. The **Edit Filter** panel opens.
+2.  On the menu to the right, under the **Data** tab, locate the **Filters** > **Scorecard Filter** section and click the **pencil** next to the filter name to edit it. The **Edit Filter** panel opens.
 
-3. In the filtering criteria section, click the dropdown and scroll or search for the field _EdgeResponseStatusClass_ and select it.
+3.  In the filtering criteria section, click the dropdown and scroll or search for the field _EdgeResponseStatusClass_ and select it.
 
-4. To finish, click **Save** in the lower right corner.
+4.  To finish, click **Save** in the lower right corner.
 
 The component should now render correctly.

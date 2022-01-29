@@ -12,13 +12,13 @@ To deploy multiple instances in this replica model, you can create and configure
 
 To deploy multiple `cloudflared` replicas:
 
-1. Run the following command:
+1.  Run the following command:
 
 ```bash
 $ cloudflared tunnel create <NAME>
 ```
 
-1. Next, run your newly created Named Tunnel.
+1.  Next, run your newly created Named Tunnel.
 
 ```bash
 $ cloudflared tunnel run <NAME>
@@ -26,7 +26,7 @@ $ cloudflared tunnel run <NAME>
 
 This will generate a unique `connector_id` for `cloudflared`.
 
-1. In a separate window, run the same command to initialize another `cloudflared` instance:
+1.  In a separate window, run the same command to initialize another `cloudflared` instance:
 
 ```bash
 $ cloudflared tunnel run <NAME>
@@ -34,7 +34,7 @@ $ cloudflared tunnel run <NAME>
 
 This will also generate a unique `connector_id` for `cloudflared`.
 
-1. Next, run `tunnel info` to show each `cloudflared` running your tunnel:
+1.  Next, run `tunnel info` to show each `cloudflared` running your tunnel:
 
 ```bash
 $ cloudflared tunnel info <NAME>

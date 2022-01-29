@@ -22,16 +22,21 @@ A partial (CNAME) setup is only available to customers on a Business or Enterpri
 
 ### Add your domain to Cloudflare
 
-1. Create a Cloudflare account and [add your domain](https://support.cloudflare.com/hc/articles/201720164).
-1. For your **Plan**, choose **Business** or **Enterprise**.
-1. Add your domain to Cloudflare. You should land on the **Overview** page.
-1. Ignore the instructions to change your nameservers.
-1. For **Advanced Actions**, click **Convert to CNAME DNS Setup**.
+1.  Create a Cloudflare account and [add your domain](https://support.cloudflare.com/hc/articles/201720164).
 
-   ![On your domain's overview page, click Convert to CNAME DNS Setup](../static/dns_cname_setup.png)
+2.  For your **Plan**, choose **Business** or **Enterprise**.
 
-1. Click **Convert**.
-1. Save the information from the **Verification TXT Record**. If you lose the information, you can also access it by going to **DNS** > **Verification TXT Record**.
+3.  Add your domain to Cloudflare. You should land on the **Overview** page.
+
+4.  Ignore the instructions to change your nameservers.
+
+5.  For **Advanced Actions**, click **Convert to CNAME DNS Setup**.
+
+    ![On your domain's overview page, click Convert to CNAME DNS Setup](../static/dns_cname_setup.png)
+
+6.  Click **Convert**.
+
+7.  Save the information from the **Verification TXT Record**. If you lose the information, you can also access it by going to **DNS** > **Verification TXT Record**.
 
 ---
 
@@ -45,14 +50,14 @@ That record must remain in place for as long as your are using Cloudflare.
 
 ### Provision an SSL certificate (optional)
 
-To provision a Universal SSL certificate through Cloudflare, follow [these instructions](https://developers.cloudflare.com/ssl/edge-certificates/universal-ssl/enable-universal-ssl#non-authoritative-partial-domains).
+To provision a Universal SSL certificate through Cloudflare, follow [these instructions](/ssl/edge-certificates/universal-ssl/enable-universal-ssl#non-authoritative-partial-domains).
 
 ---
 
 ### Add DNS records
 
-1.  In Cloudflare, [add an **A** or **CNAME** record](/manage-dns-records#create-dns-records).
-1.  At your authoritative DNS provider:
+1.  In Cloudflare, [add an **A** or **CNAME** record](/dns/manage-dns-records/#create-dns-records).
+2.  At your authoritative DNS provider:
 
         1.  Remove any existing **A** records for your domain.
         1.  Add a **CNAME** record for `{your-hostname}.cdn.cloudflare.net`.

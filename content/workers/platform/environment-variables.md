@@ -10,7 +10,7 @@ In the Workers platform, environment variables, secrets, and KV namespaces are k
 
 ## Environmental variables with module workers
 
-When deploying a Module Worker, any [bindings](/platform/environment-variables) will not be available as global runtime variables. Instead, they are passed to the handler as a [parameter](#parameters) – refer to the `FetchEvent` [documentation for further comparisons and examples](/runtime-apis/fetch-event#bindings-1).
+When deploying a Module Worker, any [bindings](/workers/platform/environment-variables/) will not be available as global runtime variables. Instead, they are passed to the handler as a [parameter](#parameters) – refer to the `FetchEvent` [documentation for further comparisons and examples](/workers/runtime-apis/fetch-event/#bindings-1).
 
 ## Environment variables via wrangler
 
@@ -58,7 +58,7 @@ console.log(STRIPE_TOKEN);
 
 ### Adding secrets via wrangler
 
-Secrets are defined by running [`wrangler secret put <NAME>`](/cli-wrangler/commands#secret) in your terminal, where `<NAME>` is the name of your binding. You may assign environment-specific secrets by re-running the command `wrangler secret put <NAME> -e` or `wrangler secret put <NAME> --env`. Keep a list of the secrets used in your code in your `wrangler.toml` file, like the example under `[secrets]`:
+Secrets are defined by running [`wrangler secret put <NAME>`](/workers/cli-wrangler/commands/#secret) in your terminal, where `<NAME>` is the name of your binding. You may assign environment-specific secrets by re-running the command `wrangler secret put <NAME> -e` or `wrangler secret put <NAME> --env`. Keep a list of the secrets used in your code in your `wrangler.toml` file, like the example under `[secrets]`:
 
 ```toml
 ---
@@ -76,13 +76,12 @@ workers_dev = true
 # GTOKEN_KID
 ```
 
-{{<Aside type="warning">}}
-\* **Warning:** Do not use plaintext environment variables to store sensitive information. Use [`wrangler secret put`](/cli-wrangler/commands#secret) instead.
+{{<Aside type="warning">}} \* **Warning:** Do not use plaintext environment variables to store sensitive information. Use [`wrangler secret put`](/workers/cli-wrangler/commands/#secret) instead.
 {{</Aside>}}
 
 ### Adding KV namespaces via wrangler
 
-KV namespaces are defined via the [`kv_namespaces`](/cli-wrangler/configuration#kv_namespaces) configuration in your `wrangler.toml` and are always provided as [KV runtime instances](/runtime-apis/kv).
+KV namespaces are defined via the [`kv_namespaces`](/workers/cli-wrangler/configuration/#kv_namespaces) configuration in your `wrangler.toml` and are always provided as [KV runtime instances](/workers/runtime-apis/kv/).
 
 ```toml
 ---
@@ -114,11 +113,11 @@ Add environment variables by logging into [Cloudflare dashboard](https://dash.cl
 
 To add environment variables, such as `vars` and `secret`:
 
-1. Go to your **Workers script** > **Settings** > **Add variable** under **Environment Variables**.
-2. Input a **Variable name** and its **value**, which will be made available to your Worker.
-3. If your variable is a secret, select **Encrypt** to protect its value. This will prevent the value from being visible via `wrangler` and the dashboard.
-4. (Optional) To add multiple environment variables, select **Add variable**.
-5. Select **Save** to implement your changes.
+1.  Go to your **Workers script** > **Settings** > **Add variable** under **Environment Variables**.
+2.  Input a **Variable name** and its **value**, which will be made available to your Worker.
+3.  If your variable is a secret, select **Encrypt** to protect its value. This will prevent the value from being visible via `wrangler` and the dashboard.
+4.  (Optional) To add multiple environment variables, select **Add variable**.
+5.  Select **Save** to implement your changes.
 
 ![env variables dash](./media/env_variables_dash.png)
 
@@ -130,11 +129,11 @@ Do not select **Encrypt** when adding environment variables if your variable is 
 
 To add KV namespace bindings:
 
-1. Go to your **Workers script** > **Settings** > **Add binding** under **KV Namespace Bindings**.
-2. Choose a **Variable name**. This will be the way the variable name will be referenced in your Worker script.
-3. Next, select a **KV namespace** from the dropdown.
-4. Select **Add binding** to add multiple bindings.
-5. When you are finished, select **Save** to implement your changes.
+1.  Go to your **Workers script** > **Settings** > **Add binding** under **KV Namespace Bindings**.
+2.  Choose a **Variable name**. This will be the way the variable name will be referenced in your Worker script.
+3.  Next, select a **KV namespace** from the dropdown.
+4.  Select **Add binding** to add multiple bindings.
+5.  When you are finished, select **Save** to implement your changes.
 
 ![kv namespace bindings](./media/kv_namespace_bindings.png)
 

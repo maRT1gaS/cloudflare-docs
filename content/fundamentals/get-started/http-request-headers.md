@@ -26,7 +26,7 @@ This header will only be sent on the traffic from Cloudflare's edge to your orig
 There is no difference between the `True-Client-IP` and `CF-Connecting-IP` headers besides the name of the header. Some Enterprise customers with legacy devices need `True-Client-IP` to avoid updating firewalls or load-balancers to read a custom header name.
 
 {{<Aside type="warning">}}
-If you are using Cloudflare in a stacked CDN and authenticating HTTP requests based on the IP address value in the `True-Client-IP` header, you must [enable `True-Client-IP`](https://support.cloudflare.com/hc/articles/206776727#h_4bf7CC7xR9dZJjR4y6wwcG). If you do not enable this feature, the `True-Client-IP` header can be spoofed to any value. Alternatively, if you do not want to receive the `True-Client-IP` header, use a [Transform Rule](https://developers.cloudflare.com/rules/transform) to remove this HTTP request header.
+If you are using Cloudflare in a stacked CDN and authenticating HTTP requests based on the IP address value in the `True-Client-IP` header, you must [enable `True-Client-IP`](https://support.cloudflare.com/hc/articles/206776727#h_4bf7CC7xR9dZJjR4y6wwcG). If you do not enable this feature, the `True-Client-IP` header can be spoofed to any value. Alternatively, if you do not want to receive the `True-Client-IP` header, use a [Transform Rule](/rules/transform) to remove this HTTP request header.
 {{</Aside>}}
 
 </div>

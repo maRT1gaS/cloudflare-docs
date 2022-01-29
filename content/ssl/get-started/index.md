@@ -28,20 +28,19 @@ Follow the steps below to enable SSL/TLS protection for your application.
 
 Cloudflare offers a variety of options for your application's edge certificates:
 
-- [**Universal certificates**](/edge-certificates/universal-ssl): <UniversalSSLDefinition/>
-- [**Advanced certificates**](/edge-certificates/advanced-certificate-manager) (which supercede legacy [Dedicated Certificates](https://support.cloudflare.com/hc/articles/228009108)): <ACMDefinition/>
-- [**Custom certificates**](/edge-certificates/custom-certificates): <CustomCertificateDefinition/>
-- [**Keyless certificates**](/keyless-ssl) (Enterprise only): <KeylessSSLDefinition/>
+- [**Universal certificates**](/ssl/edge-certificates/universal-ssl/): <UniversalSSLDefinition/>
+- [**Advanced certificates**](/ssl/edge-certificates/advanced-certificate-manager/) (which supercede legacy [Dedicated Certificates](https://support.cloudflare.com/hc/articles/228009108)): <ACMDefinition/>
+- [**Custom certificates**](/ssl/edge-certificates/custom-certificates/): <CustomCertificateDefinition/>
+- [**Keyless certificates**](/ssl/keyless-ssl/) (Enterprise only): <KeylessSSLDefinition/>
 
-{{<Aside type="note" header="Note:">}}
-<SSLforSaaSDefinition />
+{{<Aside type="note" header="Note:">}} <SSLforSaaSDefinition />
 
-For more details, refer to [SSL for SaaS (managed hostnames)](/ssl-for-saas).
+For more details, refer to [SSL for SaaS (managed hostnames)](/ssl/ssl-for-saas/).
 {{</Aside>}}
 
 ## Step 2 — Choose your encryption mode
 
-Once you have chosen your edge certificate, [choose an encryption mode](/origin-configuration/ssl-modes) to specify how Cloudflare should encrypt connections between a) visitors and Cloudflare and b) Cloudflare and your origin server.
+Once you have chosen your edge certificate, [choose an encryption mode](/ssl/origin-configuration/ssl-modes/) to specify how Cloudflare should encrypt connections between a) visitors and Cloudflare and b) Cloudflare and your origin server.
 
 {{<Aside type="warning" header="Warning:">}}
 Before choosing an encryption mode, make sure you have changed relevant settings on your application or origin server. Otherwise, visitors may encounter errors on your site.
@@ -51,6 +50,6 @@ Before choosing an encryption mode, make sure you have changed relevant settings
 
 After you have chosen your edge certificate and updated your encryption mode, review the following Cloudflare settings:
 
-- [Edge certificates](/edge-certificates/additional-options): Customize different aspects of your edge certificates, from enabling **Opportunistic Encryption** to specifying a **Minimum TLS Version**.
-- [Authenticated origin pull](/origin-configuration/authenticated-origin-pull): Ensure all requests to your origin server originate from the Cloudflare network.
-- [Notifications](/notifications): Set up alerts related to certificate validation status, issuance, deployment, renewal, and expiration.
+- [Edge certificates](/ssl/edge-certificates/additional-options/): Customize different aspects of your edge certificates, from enabling **Opportunistic Encryption** to specifying a **Minimum TLS Version**.
+- [Authenticated origin pull](/ssl/origin-configuration/authenticated-origin-pull/): Ensure all requests to your origin server originate from the Cloudflare network.
+- [Notifications](/ssl/notifications/): Set up alerts related to certificate validation status, issuance, deployment, renewal, and expiration.

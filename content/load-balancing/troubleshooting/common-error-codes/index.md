@@ -152,19 +152,17 @@ If using the dashboard, you will not be able to create additional objects.
 
 If you're using the **Cloudflare API**, you will receive this error message.
 
-```
-{
-  "result": null,
-  "success": false,
-  "errors": [
     {
-      "code": 1006,
-      "message": "Quota exceeded. You are currently allowed 5 monitors. Please re-use or delete any unused monitors."
+      "result": null,
+      "success": false,
+      "errors": [
+        {
+          "code": 1006,
+          "message": "Quota exceeded. You are currently allowed 5 monitors. Please re-use or delete any unused monitors."
+        }
+      ],
+      "messages": []
     }
-  ],
-  "messages": []
-}
-```
 
 ### Solution
 

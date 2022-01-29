@@ -13,9 +13,9 @@ Cloudflare Notifications help you stay up to date with your Cloudflare account. 
 
 The available Notification features vary according to your plan:
 
-- Free plans can set up email-based Notifications.
-- Business and higher plans can also [access PagerDuty](/notifications/create-notifications/create-pagerduty).
-- Professional and higher plans can also [use webhooks](/notifications/create-notifications/configure-webhooks).
+*   Free plans can set up email-based Notifications.
+*   Business and higher plans can also [access PagerDuty](/fundamentals/notifications/create-notifications/create-pagerduty/).
+*   Professional and higher plans can also [use webhooks](/fundamentals/notifications/create-notifications/configure-webhooks/).
 
 ## Where to find the Notifications section
 
@@ -25,6 +25,6 @@ Notifications are available in your [Cloudflare dashboard](https://dash.cloudfla
 
 ## What to do when receiving Notifications
 
-Go to our [Types of Notifications](notification-available/) section to know more about what each Notification does and what do to when receiving one.
+Go to our [Types of Notifications](/fundamentals/notification-available/) section to know more about what each Notification does and what do to when receiving one.
 
 </ContentColumn>

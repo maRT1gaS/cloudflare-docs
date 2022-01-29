@@ -10,7 +10,7 @@ Teams allows you to create unique rules for parts of an application that share a
 
 When multiple rules are set for a common root path, the more specific rule takes precedence. For example, when setting rules for `dashboard.com/eng` and `dashboard.com/eng/exec` separately, the more specific rule for `dashboard.com/eng/exec` takes precedence, and no rule is inherited from `dashboard.com/eng`. If no separate, specific rule is set for `dashboard.com/eng/exec`, it will inherit any rules set for `dashboard.com/eng`.
 
-In the Teams dashboard, when adding a [self-hosted web application](/applications/configure-apps/self-hosted-apps), you can choose to protect the entire website by entering its apex domain, or alternatively, you can specify any subdomains and paths in the dedicated fields.
+In the Teams dashboard, when adding a [self-hosted web application](/cloudflare-one/applications/configure-apps/self-hosted-apps/), you can choose to protect the entire website by entering its apex domain, or alternatively, you can specify any subdomains and paths in the dedicated fields.
 
 ![Application domain](../../static/documentation/applications/path-subdomain.png)
 
@@ -89,4 +89,5 @@ You cannot use wildcards to partially match subdomain and path names. Using aste
 | ------------------- | -------------------------------------------- |
 | `example.com/cat-*` | `example.com/cat`, `example.com/cat-food`    |
 | `*ing.example.com`  | `ing.example.com`, `engineering.example.com` |
+
 {{</Aside>}}

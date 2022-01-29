@@ -20,11 +20,11 @@ It is a simple concept, but like the Wireshark Display Filter language that insp
 
 ## Working with Firewall Rules
 
-To configure Firewall Rules from the Cloudflare dashboard, use the **Firewall Rules** tab in the **Firewall** app. For more, see [_Manage rules in the Cloudflare dashboard_](/cf-dashboard).
+To configure Firewall Rules from the Cloudflare dashboard, use the **Firewall Rules** tab in the **Firewall** app. For more, see [*Manage rules in the Cloudflare dashboard*](/firewall/cf-dashboard/).
 
-To configure Firewall Rules with the Cloudflare API, use the Firewall Rules API. Use the Cloudflare Filters API to manage expressions. For more, see [_Manage rules via the APIs_](/api).
+To configure Firewall Rules with the Cloudflare API, use the Firewall Rules API. Use the Cloudflare Filters API to manage expressions. For more, see [*Manage rules via the APIs*](/firewall/api/).
 
-You can also manage Firewall Rules through Terraform. For more, see [_Getting Started with Terraform_](https://blog.cloudflare.com/getting-started-with-terraform-and-cloudflare-part-1/).
+You can also manage Firewall Rules through Terraform. For more, see [*Getting Started with Terraform*](https://blog.cloudflare.com/getting-started-with-terraform-and-cloudflare-part-1/).
 
 ### Firewall Rules tab
 
@@ -34,7 +34,7 @@ The **Rules List** gives you a snapshot of recent activity and allows you to man
 
 #### Challenge Solve Rate (CSR)
 
-The **Rules List** displays each rule's **CSR** (Challenge Solve Rate), which is the percentage of issued challenges that were solved. This metric applies to rules configured with _Challenge (Captcha)_ or _JS Challenge_ actions, and it is calculated as follows:
+The **Rules List** displays each rule's **CSR** (Challenge Solve Rate), which is the percentage of issued challenges that were solved. This metric applies to rules configured with *Challenge (Captcha)* or *JS Challenge* actions, and it is calculated as follows:
 
 <p>
   <var>CSR</var> = <var>number of challenges solved</var> / <var>number of challenges issued</var>
@@ -48,13 +48,13 @@ A low CSR means that Cloudflare is issuing a low number of CAPTCHA challenges to
 
 You should aim for a low Challenge Solve Rate. Review the CSR of your CAPTCHA rules periodically and adjust them if necessary:
 
-- If the rate is higher than expected, for example regarding a Bot Management rule, consider relaxing the rule criteria so that you issue fewer challenges to human visitors.
-- If the rate is 0%, no CAPTCHA challenges are being solved. This means that you have no human visitors whose requests match the rule filter. Consider changing the rule action to _Block_.
+*   If the rate is higher than expected, for example regarding a Bot Management rule, consider relaxing the rule criteria so that you issue fewer challenges to human visitors.
+*   If the rate is 0%, no CAPTCHA challenges are being solved. This means that you have no human visitors whose requests match the rule filter. Consider changing the rule action to *Block*.
 
 {{<Aside type="warning" header="Important">}}
 Currently, Cloudflare does not calculate the CSR of Managed Challenges.
 
-For customers on a Free plan, any rules configured with the _Challenge (Captcha)_ action now use Managed Challenges. For more information, see [Understanding Cloudflare Captchas and Challenge Passage](https://support.cloudflare.com/hc/articles/200170136#managed-challenge).
+For customers on a Free plan, any rules configured with the *Challenge (Captcha)* action now use Managed Challenges. For more information, see [Understanding Cloudflare Captchas and Challenge Passage](https://support.cloudflare.com/hc/articles/200170136#managed-challenge).
 {{</Aside>}}
 
 ### Expression Builder
@@ -65,17 +65,17 @@ Both the **Create Firewall** and **Edit Firewall** panels include the visual **E
 
 ### Expression Editor
 
-Advanced users will appreciate the **Expression Editor** (shown below), which trades the visual simplicity of the builder for the raw power of the [Cloudflare Firewall Rules language](https://developers.cloudflare.com/firewall/cf-firewall-language). The editor also supports advanced features, such as grouping symbols, for constructing highly sophisticated, targeted rules.
+Advanced users will appreciate the **Expression Editor** (shown below), which trades the visual simplicity of the builder for the raw power of the [Cloudflare Firewall Rules language](/firewall/cf-firewall-language). The editor also supports advanced features, such as grouping symbols, for constructing highly sophisticated, targeted rules.
 
 ![Expression Editor](../images/firewall-rules-intro-exp-editor.png)
 
 ### Firewall Rules APIs
 
-Power users, particularly those who develop large numbers of firewall rules, can use the Cloudflare API to programmatically manage Firewall Rules (see [_Manage rules via the API_](https://developers.cloudflare.com/firewall/api)).
+Power users, particularly those who develop large numbers of firewall rules, can use the Cloudflare API to programmatically manage Firewall Rules (see [*Manage rules via the API*](/firewall/api)).
 
 ## Entitlements
 
-Cloudflare Firewall Rules is available to all customers. Keep in mind that the number of firewall rules you can have active on your account is based on your type of plan, as is support for the _Log_ action and support for regular expressions.
+Cloudflare Firewall Rules is available to all customers. Keep in mind that the number of firewall rules you can have active on your account is based on your type of plan, as is support for the *Log* action and support for regular expressions.
 
 This table outlines the Firewall Rules features and entitlements available with each customer plan:
 
@@ -152,12 +152,12 @@ This table outlines the Firewall Rules features and entitlements available with 
 
 ## Get started
 
-Unless you are already an advanced user, review [expressions](/cf-firewall-rules/fields-and-expressions/) and [actions](/cf-firewall-rules/actions/), which form the foundation of Firewall Rules.
+Unless you are already an advanced user, review [expressions](/firewall/cf-firewall-rules/fields-and-expressions/) and [actions](/firewall/cf-firewall-rules/actions/), which form the foundation of Firewall Rules.
 
-To get started building your own firewall rules, see [_Manage Firewall Rules in the dashboard_](/cf-dashboard/create-edit-delete-rules/).
+To get started building your own firewall rules, see [*Manage Firewall Rules in the dashboard*](/firewall/cf-dashboard/create-edit-delete-rules/).
 
 Those eager to dive straight into the technical details can refer to these topics:
 
-- [_Common use cases_](https://developers.cloudflare.com/firewall/recipes)
-- [_Firewall Rules language_](https://developers.cloudflare.com/firewall/cf-firewall-language)
-- [_Manage rules via the APIs_](https://developers.cloudflare.com/firewall/api/)
+*   [*Common use cases*](/firewall/recipes)
+*   [*Firewall Rules language*](/firewall/cf-firewall-language)
+*   [*Manage rules via the APIs*](/firewall/api/)

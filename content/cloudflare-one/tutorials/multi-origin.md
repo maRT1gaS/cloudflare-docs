@@ -8,7 +8,7 @@ title: Connect multiple HTTP origins
 
 # Connect multiple HTTP origins
 
-You can use [Cloudflare Tunnel](/connections/connect-apps) to connect one or more applications and servers to Cloudflare's network. Cloudflare Tunnel relies on a piece of software, `cloudflared`, to create those connections. Instead of pointing a DNS record to a public IP address and relying on IP-based network firewall rules, Cloudflare Tunnel ensures traffic to your origin server passes through Cloudflare's network where firewall or Zero Trust rules can be applied.
+You can use [Cloudflare Tunnel](/cloudflare-one/connections/connect-apps/) to connect one or more applications and servers to Cloudflare's network. Cloudflare Tunnel relies on a piece of software, `cloudflared`, to create those connections. Instead of pointing a DNS record to a public IP address and relying on IP-based network firewall rules, Cloudflare Tunnel ensures traffic to your origin server passes through Cloudflare's network where firewall or Zero Trust rules can be applied.
 
 You can deploy a single instance of `cloudflared` to proxy traffic to a single service with a single hostname or multiple destinations for multiple hostnames.
 
@@ -30,7 +30,7 @@ In this example, two resources are running and need to be connected to the Inter
 - a [Hugo site](https://gohugo.io/getting-started/quick-start/). Hugo, a static site generator, provides a built-in server that can be used for testing changes. That server is available at `localhost:1313`.
 - Grafana, a charting application. Grafana is available at `localhost:3000`
 
-Start by [downloading and installing](/connections/connect-apps/install-and-setup) the Cloudflare Tunnel daemon, `cloudflared`. On Mac, you can do so by running the following `brew` command. If you do not have Homebrew, follow the [documentation](https://docs.brew.sh/Installation) to install it.
+Start by [downloading and installing](/cloudflare-one/connections/connect-apps/install-and-setup/) the Cloudflare Tunnel daemon, `cloudflared`. On Mac, you can do so by running the following `brew` command. If you do not have Homebrew, follow the [documentation](https://docs.brew.sh/Installation) to install it.
 
 `$ brew install cloudflare/cloudflare/cloudflared`
 
@@ -50,7 +50,7 @@ You can now use `cloudflared` to control Cloudflare Tunnel connections in your C
 
 ## Create a Tunnel
 
-You can now [create a Tunnel](/connections/connect-apps/create-tunnel) that will connect `cloudflared` to Cloudflare's edge. You'll configure the details of that Tunnel in the next step.
+You can now [create a Tunnel](/cloudflare-one/connections/connect-apps/create-tunnel/) that will connect `cloudflared` to Cloudflare's edge. You'll configure the details of that Tunnel in the next step.
 
 Run the following command to create a Tunnel. You can replace `new-website` with any name that you choose. This command requires the `cert.pem` file.
 
@@ -62,7 +62,7 @@ Cloudflare will create the Tunnel with that name and generate an ID and credenti
 
 ## Configure `cloudflared`
 
-You can now [configure](/connections/connect-apps/configuration) `cloudflared` to route traffic to both applications for one or many hostnames using [ingress rules](/connections/connect-apps/configuration/ingress).
+You can now [configure](/cloudflare-one/connections/connect-apps/configuration/) `cloudflared` to route traffic to both applications for one or many hostnames using [ingress rules](/cloudflare-one/connections/connect-apps/configuration/ingress/).
 
 By default, `cloudflared` expects the configuration file at a specific location: `~/.cloudflared/config.yml`. You can modify this location if you want. For this example, we'll keep the default. Create or edit your configuration file using a text editor.
 
@@ -92,15 +92,15 @@ You can run the following command to validate the configuration file before you 
 
 ## Run Cloudflare Tunnel
 
-At this point, you have created and configured your Cloudflare Tunnel connection. You can now [run](/connections/connect-apps/run-tunnel) that Tunnel. Running it will create connections to Cloudflare's edge. Those connections will not respond to traffic, yet. You'll add DNS records in the next step to share the resource across the Internet.
+At this point, you have created and configured your Cloudflare Tunnel connection. You can now [run](/cloudflare-one/connections/connect-apps/run-tunnel/) that Tunnel. Running it will create connections to Cloudflare's edge. Those connections will not respond to traffic, yet. You'll add DNS records in the next step to share the resource across the Internet.
 
 `$ cloudflared tunnel run`
 
-We recommend running `cloudflared` [as a service](/connections/connect-apps/run-tunnel/run-as-service) in production. You can also run `cloudflared` [with the Cloudflare Load Balancer](/tutorials/migrate-lb-tunnel) alongside traditional, IP-exposed, origin servers during a migration for a zero-downtime cutover.
+We recommend running `cloudflared` [as a service](/cloudflare-one/connections/connect-apps/run-tunnel/run-as-service/) in production. You can also run `cloudflared` [with the Cloudflare Load Balancer](/cloudflare-one/tutorials/migrate-lb-tunnel/) alongside traditional, IP-exposed, origin servers during a migration for a zero-downtime cutover.
 
 ## Create or modify DNS records
 
-You can now [route traffic](/connections/connect-apps/routing-to-tunnel) to your Tunnel, and on to both applications, using Cloudflare DNS. Visit the [Cloudflare dashboard](https://dash.cloudflare.com), select a website, and click on the `DNS` tab.
+You can now [route traffic](/cloudflare-one/connections/connect-apps/routing-to-tunnel/) to your Tunnel, and on to both applications, using Cloudflare DNS. Visit the [Cloudflare dashboard](https://dash.cloudflare.com), select a website, and click on the `DNS` tab.
 
 Click `+Add record` and choose `CNAME`. In the `Name` field, add the name of the subdomain of your new site. In this example, that would be `grafana` and `blog`.
 

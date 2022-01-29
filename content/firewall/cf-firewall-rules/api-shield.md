@@ -35,13 +35,13 @@ Specify the API hosts and Cloudflare will block all requests that do not have a 
 
 To protect your application with mTLS authentication, use this workflow:
 
-1. Use Cloudflare's fully hosted public key infrastructure (PKI) to [create a client certificate in the Cloudflare dashboard](https://developers.cloudflare.com/ssl/client-certificates/create-a-client-certificate).
+1.  Use Cloudflare's fully hosted public key infrastructure (PKI) to [create a client certificate in the Cloudflare dashboard](/ssl/client-certificates/create-a-client-certificate).
 
-1. [Configure your mobile app or IoT device](https://developers.cloudflare.com/ssl/client-certificates/configure-your-mobile-app-or-iot-device) to use your Cloudflare-issued client certificate.
+2.  [Configure your mobile app or IoT device](/ssl/client-certificates/configure-your-mobile-app-or-iot-device) to use your Cloudflare-issued client certificate.
 
-1. [Enable mTLS](https://developers.cloudflare.com/ssl/client-certificates/enable-mtls) for the hosts you wish to protect.
+3.  [Enable mTLS](/ssl/client-certificates/enable-mtls) for the hosts you wish to protect.
 
-1. Create Cloudflare firewall rules that [require API requests to present a valid client certificate](/recipes/require-valid-client-certificate). The **Firewall** app in the Cloudflare dashboard provides a dedicated interface where you can [create mTLS rules](/cf-dashboard/create-mtls-rule).
+4.  Create Cloudflare firewall rules that [require API requests to present a valid client certificate](/firewall/recipes/require-valid-client-certificate/). The **Firewall** app in the Cloudflare dashboard provides a dedicated interface where you can [create mTLS rules](/firewall/cf-dashboard/create-mtls-rule/).
 
 {{<Aside type="warning" header="Important">}}
 API Shield's Mutual TLS requires Cloudflare-issued certificates. You can use mTLS with any fully managed certificate authority (CA) where Cloudflare issues the client certificates.
@@ -63,7 +63,7 @@ Schema Validation allows you to check if incoming traffic complies with a previo
 
 API Shield supports API Schemas using OpenAPI Specification v3. The accepted file formats are YAML (`.yml` or `.yaml` file extension) and JSON (`.json` file extension).
 
-To configure Schema Validation for one or more hosts using the dashboard, check [Configure Schema Validation](/cf-dashboard/configure-schema-validation).
+To configure Schema Validation for one or more hosts using the dashboard, check [Configure Schema Validation](/firewall/cf-dashboard/configure-schema-validation/).
 
 {{<Aside type="warning" header="Important">}}
 Currently, API Shield cannot validate some features of API Schemas, including the following: request body validations, all responses, external references, non-basic path templating, or unique items.

@@ -24,7 +24,7 @@ Default values indicated by <Type>=value</Type>.
 
 - `$NAME` <Type>=worker</Type> <PropMeta>optional</PropMeta>
 
-  - The name of the Workers project. This is both the directory name and `name` property in the generated `wrangler.toml` [configuration](/cli-wrangler/configuration) file.
+  - The name of the Workers project. This is both the directory name and `name` property in the generated `wrangler.toml` [configuration](/workers/cli-wrangler/configuration/) file.
 
 - `$TEMPLATE` <Type>=https://github.com/cloudflare/worker-template</Type> <PropMeta>optional</PropMeta>
 
@@ -35,7 +35,7 @@ Default values indicated by <Type>=value</Type>.
   - The type of project; one of `webpack`, `javascript`, or `rust`.
 
 - `--site` <PropMeta>optional</PropMeta>
-  - When defined, the default `$TEMPLATE` value is changed to [`cloudflare/worker-sites-template`](https://github.com/cloudflare/worker-sites-template). This scaffolds a [Workers Site](/platform/sites) project.
+  - When defined, the default `$TEMPLATE` value is changed to [`cloudflare/worker-sites-template`](https://github.com/cloudflare/worker-sites-template). This scaffolds a [Workers Site](/workers/platform/sites/) project.
 
 </Definitions>
 
@@ -55,14 +55,14 @@ Default values indicated by <Type>=value</Type>.
 
 - `$NAME` <Type>=(Name of working directory)</Type> <PropMeta>optional</PropMeta>
 
-  - The name of the Workers project. This is both the directory name and `name` property in the generated `wrangler.toml` [configuration](/cli-wrangler/configuration) file.
+  - The name of the Workers project. This is both the directory name and `name` property in the generated `wrangler.toml` [configuration](/workers/cli-wrangler/configuration/) file.
 
 - `--type=$TYPE` <Type>=webpack</Type> <PropMeta>optional</PropMeta>
 
   - The type of project; one of `webpack`, `javascript`, or `rust`.
 
 - `--site` <PropMeta>optional</PropMeta>
-  - When defined, the default `$TEMPLATE` value is changed to [`cloudflare/worker-sites-template`](https://github.com/cloudflare/worker-sites-template). This scaffolds a [Workers Site](/platform/sites) project.
+  - When defined, the default `$TEMPLATE` value is changed to [`cloudflare/worker-sites-template`](https://github.com/cloudflare/worker-sites-template). This scaffolds a [Workers Site](/workers/platform/sites/) project.
 
 </Definitions>
 
@@ -70,9 +70,9 @@ Default values indicated by <Type>=value</Type>.
 
 ## build
 
-Build your project (if applicable). This command looks at your `wrangler.toml` file and reacts to the [`"type"` value](/cli-wrangler/configuration#keys) specified.
+Build your project (if applicable). This command looks at your `wrangler.toml` file and reacts to the [`"type"` value](/workers/cli-wrangler/configuration/#keys) specified.
 
-When using `type = "webpack"`, Wrangler will build the Worker using its internal webpack installation. When using `type = "javascript"` , the [`build.command`](/cli-wrangler/configuration#build-1), if defined, will run.
+When using `type = "webpack"`, Wrangler will build the Worker using its internal webpack installation. When using `type = "javascript"` , the [`build.command`](/workers/cli-wrangler/configuration/#build-1), if defined, will run.
 
 ```sh
 $ wrangler build [--env $ENVIRONMENT_NAME]
@@ -81,7 +81,7 @@ $ wrangler build [--env $ENVIRONMENT_NAME]
 <Definitions>
 
 - `--env` <PropMeta>optional</PropMeta>
-  - If defined, Wrangler will load the matching environment's configuration before building. Refer to [Environments](/platform/environments) for more information.
+  - If defined, Wrangler will load the matching environment's configuration before building. Refer to [Environments](/workers/platform/environments/) for more information.
 
 </Definitions>
 
@@ -146,7 +146,7 @@ You can also use environment variables to authenticate, or `wrangler login` to a
 
 ## publish
 
-Publish your Worker to Cloudflare. Several keys in your `wrangler.toml` file determine whether you are publishing to a `*.workers.dev` subdomain or a custom domain. However, custom domains must be proxied (orange-clouded) through Cloudflare. Refer to the [Get started guide](/get-started/guide#optional-configure-for-deploying-to-a-registered-domain) for more information.
+Publish your Worker to Cloudflare. Several keys in your `wrangler.toml` file determine whether you are publishing to a `*.workers.dev` subdomain or a custom domain. However, custom domains must be proxied (orange-clouded) through Cloudflare. Refer to the [Get started guide](/workers/get-started/guide/#optional-configure-for-deploying-to-a-registered-domain) for more information.
 
 ```sh
 $ wrangler publish [--env $ENVIRONMENT_NAME]
@@ -155,7 +155,7 @@ $ wrangler publish [--env $ENVIRONMENT_NAME]
 <Definitions>
 
 - `--env` <PropMeta>optional</PropMeta>
-  - If defined, Wrangler will load the matching environment's configuration before building and deploying. Refer to [Environments](/platform/environments) for more information.
+  - If defined, Wrangler will load the matching environment's configuration before building and deploying. Refer to [Environments](/workers/platform/environments/) for more information.
 
 </Definitions>
 
@@ -165,7 +165,7 @@ To use this command, the following fields are required in your `wrangler.toml` f
 
 - `name` <Type>string</Type>
 
-  - The name of the Workers project. This is both the directory name and `name` property in the generated `wrangler.toml` [configuration](/cli-wrangler/configuration) file.
+  - The name of the Workers project. This is both the directory name and `name` property in the generated `wrangler.toml` [configuration](/workers/cli-wrangler/configuration/) file.
 
 - `type` <Type>string</Type>
 
@@ -176,7 +176,7 @@ To use this command, the following fields are required in your `wrangler.toml` f
 
 </Definitions>
 
-You can publish to [&lt;your-worker&gt;.&lt;your-subdomain&gt;.workers.dev](https://workers.dev) or to a custom domain.
+You can publish to [\<your-worker>.\<your-subdomain>.workers.dev](https://workers.dev) or to a custom domain.
 
 When you publish changes to an existing Worker script, all new requests will automatically route to the updated version of the Worker without downtime. Any inflight requests will continue running on the previous version until completion. Once all inflight requests have finished complete, the previous Worker version will be purged and will no longer handle requests.
 
@@ -218,7 +218,7 @@ Make sure to use only `route` or `routes`, not both.
 
 ### Publishing the same code to multiple domains
 
-To publish your code to multiple domains, refer to the [documentation for environments](/platform/environments).
+To publish your code to multiple domains, refer to the [documentation for environments](/workers/platform/environments/).
 
 ---
 
@@ -234,7 +234,7 @@ $ wrangler dev [--env $ENVIRONMENT_NAME] [--ip <ip>] [--port <port>] [--host <ho
 
 - `--env` <PropMeta>optional</PropMeta>
 
-  - If defined, Wrangler will load the matching environment's configuration. Refer to [Environments](/platform/environments) for more information.
+  - If defined, Wrangler will load the matching environment's configuration. Refer to [Environments](/workers/platform/environments/) for more information.
 
 - `--ip` <PropMeta>optional</PropMeta>
 
@@ -257,7 +257,7 @@ $ wrangler dev [--env $ENVIRONMENT_NAME] [--ip <ip>] [--port <port>] [--host <ho
 
 </Definitions>
 
-These arguments can also be set in your `wrangler.toml` file. Refer to the [`wrangler dev` configuration](/cli-wrangler/configuration#dev) documentation for more information.
+These arguments can also be set in your `wrangler.toml` file. Refer to the [`wrangler dev` configuration](/workers/cli-wrangler/configuration/#dev) documentation for more information.
 
 ### Usage
 
@@ -287,7 +287,7 @@ $ wrangler tail [--format $FORMAT] [--status $STATUS] [OPTIONS]
 - `--format $FORMAT` <Type>json|pretty</Type>
   - The format of the log entries.
 - `--status $STATUS`
-  - Filter by invocation status [possible values: `ok`, `error`, `canceled`].
+  - Filter by invocation status \[possible values: `ok`, `error`, `canceled`].
 - `--header $HEADER`
   - Filter by HTTP header.
 - `--method $METHOD`
@@ -304,7 +304,7 @@ After starting `wrangler tail` in a directory with a project, you will receive a
 Like all Wrangler commands, run `wrangler tail` from your Worker’s root directory (the directory with your `wrangler.toml` file).
 
 {{<Aside type="warning" header="Legacy issues with existing cloudflared configuration">}}
-`wrangler tail` versions older than version 1.19.0 use `cloudflared` to run. Cloudflare recommends [updating to the latest wrangler version](/cli-wrangler/install-update#update) to avoid any issues.
+`wrangler tail` versions older than version 1.19.0 use `cloudflared` to run. Cloudflare recommends [updating to the latest wrangler version](/workers/cli-wrangler/install-update/#update) to avoid any issues.
 {{</Aside>}}
 
 ---
@@ -323,7 +323,7 @@ Default values indicated by <Type>=value</Type>.
 
 - `--env $ENVIRONMENT_NAME` <PropMeta>optional</PropMeta>
 
-  - If defined, Wrangler will load the matching environment's configuration. Refer to [Environments](/platform/environments) for more information.
+  - If defined, Wrangler will load the matching environment's configuration. Refer to [Environments](/workers/platform/environments/) for more information.
 
 - `--watch` <PropMeta>recommended</PropMeta>
 
@@ -340,7 +340,7 @@ Default values indicated by <Type>=value</Type>.
 
 ### kv_namespaces
 
-If you are using [kv_namespaces](/cli-wrangler/configuration#kv_namespaces) with `wrangler preview`, you will need to specify a `preview_id` in your `wrangler.toml` file before you can start the session. This is so that you do not accidentally write changes to your production namespace while you are developing. You may make `preview_id` equal to `id` if you would like to preview with your production namespace, but you should ensure that you are not writing values to KV that would break your production Worker.
+If you are using [kv_namespaces](/workers/cli-wrangler/configuration/#kv_namespaces) with `wrangler preview`, you will need to specify a `preview_id` in your `wrangler.toml` file before you can start the session. This is so that you do not accidentally write changes to your production namespace while you are developing. You may make `preview_id` equal to `id` if you would like to preview with your production namespace, but you should ensure that you are not writing values to KV that would break your production Worker.
 
 To create a `preview_id` run:
 
@@ -387,7 +387,7 @@ Default values indicated by <Type>=value</Type>.
 <Definitions>
 
 - `--env $ENVIRONMENT_NAME` <PropMeta>optional</PropMeta>
-  - If defined, the changes will only apply to the specified environment. Refer to [Environments](/platform/environments) for more information.
+  - If defined, the changes will only apply to the specified environment. Refer to [Environments](/workers/platform/environments/) for more information.
 
 </Definitions>
 
@@ -406,7 +406,7 @@ Default values indicated by <Type>=value</Type>.
   - The hash of the route ID to delete.
 
 - `--env $ENVIRONMENT_NAME` <PropMeta>optional</PropMeta>
-  - If defined, the changes will only apply to the specified environment. Refer to [Environments](/platform/environments) for more information.
+  - If defined, the changes will only apply to the specified environment. Refer to [Environments](/workers/platform/environments/) for more information.
 
 </Definitions>
 
@@ -448,7 +448,7 @@ $ echo "-----BEGIN PRIVATE KEY-----\nM...==\n-----END PRIVATE KEY-----\n" | wran
   - The variable name to be accessible in the script.
 
 - `--env $ENVIRONMENT_NAME` <PropMeta>optional</PropMeta>
-  - If defined, the changes will only apply to the specified environment. Refer to [Environments](/platform/environments) for more information.
+  - If defined, the changes will only apply to the specified environment. Refer to [Environments](/workers/platform/environments/) for more information.
 
 </Definitions>
 
@@ -467,7 +467,7 @@ $ wrangler secret delete <name> --env ENVIRONMENT_NAME
   - The variable name to be accessible in the script.
 
 - `--env $ENVIRONMENT_NAME` <PropMeta>optional</PropMeta>
-  - If defined, the changes will only apply to the specified environment. Refer to [Environments](/platform/environments) for more information.
+  - If defined, the changes will only apply to the specified environment. Refer to [Environments](/workers/platform/environments/) for more information.
 
 </Definitions>
 
@@ -482,7 +482,7 @@ $ wrangler secret list --env ENVIRONMENT_NAME
 <Definitions>
 
 - `--env $ENVIRONMENT_NAME` <PropMeta>optional</PropMeta>
-  - If defined, only the specified environemnt's secrets will be listed. Refer to [Environments](/platform/environments) for more information.
+  - If defined, only the specified environemnt's secrets will be listed. Refer to [Environments](/workers/platform/environments/) for more information.
 
 </Definitions>
 
@@ -563,19 +563,19 @@ Since `--namespace-id` is always unique (unlike binding names), you do not need 
 
 Most `kv` commands require you to specify a namespace. A namespace can be specified in two ways:
 
-1. With a `--binding`:
+1.  With a `--binding`:
 
-   ```sh
-   $ wrangler kv:key get --binding=MY_KV "my key"
-   ```
+    ```sh
+    $ wrangler kv:key get --binding=MY_KV "my key"
+    ```
 
-   - This can be combined with `--preview` flag to interact with a preview namespace instead of a production namespace.
+    - This can be combined with `--preview` flag to interact with a preview namespace instead of a production namespace.
 
-1. With a `--namespace-id`:
+2.  With a `--namespace-id`:
 
-   ```sh
-   $ wrangler kv:key get --namespace-id=06779da6940b431db6e566b4846d64db "my key"
-   ```
+    ```sh
+    $ wrangler kv:key get --namespace-id=06779da6940b431db6e566b4846d64db "my key"
+    ```
 
 Most `kv` subcommands also allow you to specify an environment with the optional `--env` flag. This allows you to publish Workers running the same code but with different namespaces. For example, you could use separate staging and production namespaces for KV data in your `wrangler.toml` file:
 
@@ -603,7 +603,7 @@ With the `wrangler.toml` file above, you can specify `--env production` when you
 $ wrangler kv:key get --binding "MY_KV" --env=production "my key"
 ```
 
-To learn more about environments, refer to [Environments](/platform/environments).
+To learn more about environments, refer to [Environments](/workers/platform/environments/).
 
 ### `kv:namespace`
 
@@ -623,7 +623,7 @@ $ wrangler kv:namespace create $NAME [--env=$ENVIRONMENT_NAME] [--preview]
 
 - `--env $ENVIRONMENT_NAME` <PropMeta>optional</PropMeta>
 
-  - If defined, the changes will only apply to the specified environment. Refer to [Environments](/platform/environments) for more information.
+  - If defined, the changes will only apply to the specified environment. Refer to [Environments](/workers/platform/environments/) for more information.
 
 - `--preview` <PropMeta>optional</PropMeta>
   - Interact with a preview namespace (the `preview_id` value) instead of production.
@@ -697,7 +697,7 @@ $ wrangler kv:namespace delete --binding= [--namespace-id=]
 
 - `--env $ENVIRONMENT_NAME` <PropMeta>optional</PropMeta>
 
-  - If defined, the changes will only apply to the specified environment. Refer to [Environments](/platform/environments) for more information.
+  - If defined, the changes will only apply to the specified environment. Refer to [Environments](/workers/platform/environments/) for more information.
 
 - `--preview` <PropMeta>optional</PropMeta>
   - Interact with a preview namespace instead of production.
@@ -753,7 +753,7 @@ $ wrangler kv:key put --binding= [--namespace-id=] $KEY $VALUE
 
 - `--env $ENVIRONMENT_NAME` <PropMeta>optional</PropMeta>
 
-  - If defined, the changes will only apply to the specified environment. Refer to [Environments](/platform/environments) for more information.
+  - If defined, the changes will only apply to the specified environment. Refer to [Environments](/workers/platform/environments/) for more information.
 
 - `--preview` <PropMeta>optional</PropMeta>
 
@@ -814,7 +814,7 @@ $ wrangler kv:key list --binding= [--namespace-id=] [--prefix] [--env]
 
 - `--env $ENVIRONMENT_NAME` <PropMeta>optional</PropMeta>
 
-  - If defined, the changes will only apply to the specified environment. Refer to [Environments](/platform/environments) for more information.
+  - If defined, the changes will only apply to the specified environment. Refer to [Environments](/workers/platform/environments/) for more information.
 
 - `--prefix` <PropMeta>optional</PropMeta>
   - A prefix to filter listed keys.
@@ -862,7 +862,7 @@ $ wrangler kv:key get --binding= [--env=] [--preview] [--namespace-id=] "$KEY"
 
 - `--env $ENVIRONMENT_NAME` <PropMeta>optional</PropMeta>
 
-  - If defined, the operation will only apply to the specified environment. Refer to [Environments](/platform/environments) for more information.
+  - If defined, the operation will only apply to the specified environment. Refer to [Environments](/workers/platform/environments/) for more information.
 
 - `--preview` <PropMeta>optional</PropMeta>
   - Interact with a preview namespace instead of production. Pass this to use your `wrangler.toml` file’s `kv_namespaces.preview_id` instead of `kv_namespaces.id`
@@ -943,7 +943,7 @@ $ wrangler kv:bulk put --binding= [--env=] [--preview] [--namespace-id=] $FILENA
 
 - `--env $ENVIRONMENT_NAME` <PropMeta>optional</PropMeta>
 
-  - If defined, the changes will only apply to the specified environment. Refer to [Environments](/platform/environments) for more information.
+  - If defined, the changes will only apply to the specified environment. Refer to [Environments](/workers/platform/environments/) for more information.
 
 - `--preview` <PropMeta>optional</PropMeta>
   - Interact with a preview namespace instead of production. Pass this to use your `wrangler.toml` file’s `kv_namespaces.preview_id` instead of `kv_namespaces.id`
@@ -1033,7 +1033,7 @@ $ wrangler kv:bulk delete --binding= [--env=] [--preview] [--namespace-id=] $FIL
 
 - `--env $ENVIRONMENT_NAME` <PropMeta>optional</PropMeta>
 
-  - If defined, the changes will only apply to the specified environment. Refer to [Environments](/platform/environments) for more information.
+  - If defined, the changes will only apply to the specified environment. Refer to [Environments](/workers/platform/environments/) for more information.
 
 - `--preview` <PropMeta>optional</PropMeta>
   - Interact with a preview namespace instead of production. Pass this to use your `wrangler.toml` file’s `kv_namespaces.preview_id` instead of `kv_namespaces.id`

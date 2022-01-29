@@ -8,11 +8,11 @@ title: Serve private images using signed URL tokens
 
 If an image is marked to require a signed URL, it cannot be accessed without a token _unless_ it is being requested for a Variant that is set to always allow public access.
 
-1. To get started, get the default Key from your **Images** dashboard:
+1.  To get started, get the default Key from your **Images** dashboard:
 
 ![Screenshot of the keys page on the Cloudflare Images dashboard](../../static/keys.png)
 
-2. Next, use the key to generate an expiring tokenized URL. Here is an example Worker script that takes in a regular URL without a signed token and returns a tokenized URL that expires after one day:
+2.  Next, use the key to generate an expiring tokenized URL. Here is an example Worker script that takes in a regular URL without a signed token and returns a tokenized URL that expires after one day:
 
 ```js
 const KEY = 'YOUR_KEY_FROM_IMAGES_DASHBOARD';

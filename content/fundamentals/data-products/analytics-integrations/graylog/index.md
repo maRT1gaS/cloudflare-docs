@@ -10,7 +10,7 @@ This tutorial explains how to analyze [Cloudflare Logs](https://www.cloudflare.c
 
 ## Overview
 
-If you haven't used Cloudflare Logs before, visit our [Logs documentation](https://developers.cloudflare.com/logs) for
+If you haven't used Cloudflare Logs before, visit our [Logs documentation](/logs) for
 more details. Contact your Cloudflare Customer Account Team to enable logs for
 your account.
 
@@ -20,7 +20,7 @@ Before sending your Cloudflare log data to Graylog, make sure that you:
 
 - Have an existing Graylog installation. Both single-node and cluster configurations are supported
 - Have a Cloudflare Enterprise account with Cloudflare Logs enabled
-- Configure [Logpush](https://developers.cloudflare.com/logs/about)
+- Configure [Logpush](/logs/about)
 
 {{<Aside type="note" header="Note">}}
 Cloudflare logs are HTTP/HTTPS request logs in JSON format and are gathered from our 200+ data centers globally. By default, timestamps are returned as Unix nanosecond integers. All timestamp formats are supported by Graylog.
@@ -30,9 +30,9 @@ Cloudflare logs are HTTP/HTTPS request logs in JSON format and are gathered from
 
 Before getting Cloudflare logs into Graylog:
 
-1. Configure Cloudflare [Logpush](https://developers.cloudflare.com/logs/about/) to push logs with all desired fields to an AWS S3 bucket of your choice.
-2. Download the latest [Graylog Integration for Cloudflare](https://github.com/Graylog2/graylog-s3-lambda/blob/master/content-packs/cloudflare/cloudflare-logpush-content-pack.json).
-3. Decompress the zip file.
+1.  Configure Cloudflare [Logpush](/logs/about/) to push logs with all desired fields to an AWS S3 bucket of your choice.
+2.  Download the latest [Graylog Integration for Cloudflare](https://github.com/Graylog2/graylog-s3-lambda/blob/master/content-packs/cloudflare/cloudflare-logpush-content-pack.json).
+3.  Decompress the zip file.
 
 Once decompressed, the integration package includes:
 
@@ -70,7 +70,7 @@ Once decompressed, the integration package includes:
 
     **Note:** If your Graylog cluster is running in a VPC, you may need to add the _AWSLambdaVPCAccessExecutionRole_ managed role to allow the Lambda function to route traffic to the VPC.
 
-4.  Once you've created the Lambda function, upload the function code **_graylog-s3-lambda.jar_** downloaded in [Task 1](#task1).  Specify the following method for the Handler: _org.graylog.integrations.s3.GraylogS3Function::handleRequest_.
+4\. Once you've created the Lambda function, upload the function code **_graylog-s3-lambda.jar_** downloaded in [Task 1](#task1). Specify the following method for the Handler: _org.graylog.integrations.s3.GraylogS3Function::handleRequest_.
 
 5.  Specify at least the following required environment variables to configure the Lambda function for your Graylog cluster:
 
@@ -115,13 +115,16 @@ The following components install with the content pack:
 To import the content pack:
 
 1.  Locate the _cloudflare-logpush-content-pack.json_ file that you downloaded and extracted in [Task 1](#task1).
+
 2.  In Graylog, go to **System** > **Content Packs** and click **Upload**in the top right. Once uploaded, the Cloudflare Logpush content pack will appear in the list of uploaded content packs.
     ![Graylog content packs](../../../static/images/graylog/screenshots/graylog-content-packs.png)
+
 3.  Click **Install**.
     ![Graylog content packs uploaded](../../../static/images/graylog/screenshots/graylog-content-packs-uploaded.png)
+
 4.  In the **Install** dialog, enter an optional install comment, and verify that the correct values are entered for all configuration parameters.
 
-    - A path is required for the MaxMind™️ database, available at [https://dev.maxmind.com/geoip/](https://dev.maxmind.com/geoip/).
+    - A path is required for the MaxMind™️ database, available at <https://dev.maxmind.com/geoip/>.
     - A path is also required for the _Threat Lookup_ CSV file, extracted in [Task 1](#task1).
 
     ![Graylog content pack install](../../../static/images/graylog/screenshots/graylog-content-pack-install.png)
@@ -184,7 +187,7 @@ Use this dashboard to detect and mitigate bad bots so that you can prevent crede
 
 {{<Aside type="note" header="Note">}}
 To get bot requests identified correctly, use only one Cloudflare
-Firewall Rule, configured with the action _Challenge (Captcha)_. To lear more, consult the [Cloudflare Firewall Rules documentation](https://developers.cloudflare.com/firewall/cf-firewall-rules/).
+Firewall Rule, configured with the action _Challenge (Captcha)_. To lear more, consult the [Cloudflare Firewall Rules documentation](/firewall/cf-firewall-rules/).
 {{</Aside>}}
 
 Use this dashboard to:

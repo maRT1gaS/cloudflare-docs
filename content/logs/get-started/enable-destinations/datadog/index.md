@@ -18,28 +18,28 @@ Enable Logpush to Datadog via the dashboard.
 
 To enable the Cloudflare Logpush service:
 
-1. Log in to the Cloudflare dashboard.
+1.  Log in to the Cloudflare dashboard.
 
-1. Select the Enterprise domain you want to use with Logpush.
+2.  Select the Enterprise domain you want to use with Logpush.
 
-1. Go to **Analytics** > **Logs**.
+3.  Go to **Analytics** > **Logs**.
 
-1. Click **Connect a service**. A modal window opens where you will need to complete several steps.
+4.  Click **Connect a service**. A modal window opens where you will need to complete several steps.
 
-1. Select the data set you want to push to a storage service.
+5.  Select the data set you want to push to a storage service.
 
-1. Select the data fields to include in your logs. You can add or remove fields later by modifying your settings in **Logs** > **Logpush**.
+6.  Select the data fields to include in your logs. You can add or remove fields later by modifying your settings in **Logs** > **Logpush**.
 
-1. Select **Datadog**.
+7.  Select **Datadog**.
 
-1. Enter or select the following destination information:
+8.  Enter or select the following destination information:
 
-   - **Datadog URL Endpoint**
-   - **Datadog API Key**
+    - **Datadog URL Endpoint**
+    - **Datadog API Key**
 
-1. Click **Validate access**.
+9.  Click **Validate access**.
 
-1. Click **Save and Start Pushing** to finish enabling Logpush.
+10. Click **Save and Start Pushing** to finish enabling Logpush.
 
 Once connected, Cloudflare lists Datadog as a connected service under **Logs** > **Logpush**. Edit or remove connected services from here.
 
@@ -47,8 +47,8 @@ Once connected, Cloudflare lists Datadog as a connected service under **Logs** >
 
 To set up a Datadog Logpush job:
 
-1. Create a job with the appropriate endpoint URL and authentication parameters
-1. Enable the job to begin pushing logs
+1.  Create a job with the appropriate endpoint URL and authentication parameters
+2.  Enable the job to begin pushing logs
 
 {{<Aside type="note" header="Note">}}
 Unlike configuring Logpush jobs for AWS S3, GCS, or Azure, there is no ownership challenge when configuring Logpush to Datadog.
@@ -72,8 +72,8 @@ To create a job, make a `POST` request to the Logpush jobs endpoint with the fol
 "datadog://<DATADOG_ENDPOINT_URL>?header_DD-API-KEY=<DATADOG_API_KEY>&ddsource=cloudflare&service=<SERVICE>&host=<HOST>&ddtags=<TAGS>"
 ```
 
-- `dataset` - the category of logs you want to receive. See [Log fields](/reference/log-fields) for the full list of supported datasets.
-- `logpull_options` (optional) - To configure fields, sample rate, and timestamp format, see [Logpush API options](/get-started/logpush-configuration-api/understanding-logpush-api#options)
+- `dataset` - the category of logs you want to receive. See [Log fields](/logs/reference/log-fields/) for the full list of supported datasets.
+- `logpull_options` (optional) - To configure fields, sample rate, and timestamp format, see [Logpush API options](/logs/get-started/logpush-configuration-api/understanding-logpush-api/#options)
 
 Example request using cURL:
 

@@ -22,17 +22,17 @@ The Expression Editor is located in the **Create Firewall Rule** and **Edit Fire
 
 To edit an expression in the editor:
 
-1. In the **Firewall Rules** tab, use the **Create a Firewall rule** button to create a new rule, or click the **wrench** icon to edit an existing rule.
+1.  In the **Firewall Rules** tab, use the **Create a Firewall rule** button to create a new rule, or click the **wrench** icon to edit an existing rule.
 
-   ![Firewall Rules tab](../images/firewall-rules-expressions-editor-1.png)
+    ![Firewall Rules tab](../images/firewall-rules-expressions-editor-1.png)
 
-   The **Create Firewall Rule** page displays.
+    The **Create Firewall Rule** page displays.
 
-1. To switch to the Expression Editor in the **Create Firewall Rule** page, click **Edit expression**.
+2.  To switch to the Expression Editor in the **Create Firewall Rule** page, click **Edit expression**.
 
-   ![Edit Expression link in Create Firewall Rule page](../images/firewall-rules-expressions-editor-2.png)
+    ![Edit Expression link in Create Firewall Rule page](../images/firewall-rules-expressions-editor-2.png)
 
-1. Use the text input to edit your expression. To commit your changes, click **Deploy** or **Save as draft**.
+3.  Use the text input to edit your expression. To commit your changes, click **Deploy** or **Save as draft**.
 
 To switch from the editor to the Expression Builder, click **Use expression builder**.
 
@@ -42,7 +42,7 @@ In general, you can switch back and forth between the Expression Builder and the
 
 ## Create nested expressions
 
-A key advantage of the Expression Editor is support for parentheses as [grouping symbols](/cf-firewall-language/operators/#grouping-symbols), which allow you to explicitly group and nest expressions and, in turn, create highly targeted expressions.
+A key advantage of the Expression Editor is support for parentheses as [grouping symbols](/firewall/cf-firewall-language/operators/#grouping-symbols), which allow you to explicitly group and nest expressions and, in turn, create highly targeted expressions.
 
 This example a rule that challenges any visitor who is not from Malaysia and tries to access WordPress URI paths.
 
@@ -56,4 +56,4 @@ Cloudflare validates all expressions before saving them, so if your expression i
 
 ![Error message](../images/firewall-rules-expressions-editor-6.png)
 
-The Expression Editor supports the entire Firewall Rules Language. For a complete listing of supported fields and operators, as well as guidance on using grouping symbols, see [_Firewall Rules language_](/cf-firewall-language).
+The Expression Editor supports the entire Firewall Rules Language. For a complete listing of supported fields and operators, as well as guidance on using grouping symbols, see [_Firewall Rules language_](/firewall/cf-firewall-language/).

@@ -17,7 +17,7 @@ Before you can create Tokens via the API you need to generate the initial Token 
 It is highly recommended when using this template to not grant other permissions to the token. This token should be safeguarded given it can create tokens with access to any resource the user has.
 {{</Aside>}}
 
-Limiting the use of the token via IP filtering or TTL is also recommended to reduce the potential for abuse in the event that the token is compromised. See [adding restrictions](/tokens/advanced/restrictions) for more information.
+Limiting the use of the token via IP filtering or TTL is also recommended to reduce the potential for abuse in the event that the token is compromised. See [adding restrictions](/api/tokens/advanced/restrictions/) for more information.
 
 ## Creating API tokens with the API
 
@@ -25,9 +25,9 @@ Once an API Token is created that can create other tokens, the next step is usin
 
 Creating a Token requires defining two sections of config and then sending the API request.
 
-1. Define the policy
-2. Define the restrictions
-3. Create the token
+1.  Define the policy
+2.  Define the restrictions
+3.  Create the token
 
 ### Define the Access Policy
 
@@ -62,9 +62,9 @@ Now to define each field of the policy:
 
 - `id` - This is a unique identifier for the policy generated after creation and is read-only
 - `effect` - Whether this policy is allowing or denying access. If only creating 1 policy then `allow` should be used. The evaluation order for policies is as follows:
-  1. Explicit `DENY` Policies
-  2. Explicit `ALLOW` Policies
-  3. Implicit `DENY ALL`
+  1.  Explicit `DENY` Policies
+  2.  Explicit `ALLOW` Policies
+  3.  Implicit `DENY ALL`
 - `resources` - This is where you define what resources are allowed to be configured. More detail below.
 - `permission_groups` - This defines what permissions will the policy grant to the included resources. More detail below.
 
@@ -95,11 +95,11 @@ For user resources, the only option is referencing one's self which is done with
 
 ### Permission groups
 
-The last piece to defining a policy is what Permission Groups should be applied. You can see the full list of permission groups either in [the docs here](../../create/permissions), or [fetched via the API](https://api.cloudflare.com/#permission-groups-list-permission-groups). It is only required to pass the `id` of the permission group in the policy. Permission Groups are scoped to specific resources, so a permission group in a policy will only apply to the resource type it is scoped for.
+The last piece to defining a policy is what Permission Groups should be applied. You can see the full list of permission groups either in [the docs here](/api/create/permissions/), or [fetched via the API](https://api.cloudflare.com/#permission-groups-list-permission-groups). It is only required to pass the `id` of the permission group in the policy. Permission Groups are scoped to specific resources, so a permission group in a policy will only apply to the resource type it is scoped for.
 
 ### Define the restrictions
 
-Last in defining the token is setting up any limitations on how the token can be used. Currently, API Tokens allow for IP filtering and TTLs. You can find general info in [Restricting Token Use](/tokens/advanced/restrictions).
+Last in defining the token is setting up any limitations on how the token can be used. Currently, API Tokens allow for IP filtering and TTLs. You can find general info in [Restricting Token Use](/api/tokens/advanced/restrictions/).
 
 When defining TTLs you can set the time at which a token becomes active, `not_before` and the time when it expires, `expires_on`. Both of these fields take timestamps in UTC in the following format: `"2018-07-01T05:20:00Z"`.
 

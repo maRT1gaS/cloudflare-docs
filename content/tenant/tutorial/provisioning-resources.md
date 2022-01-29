@@ -1,9 +1,9 @@
 ---
-title: "1: Provisioning resources"
+title: '1: Provisioning resources'
 weight: 0
 pcx-content-type: tutorial
 meta:
-  title: "Step 1: Provisioning resources"
+  title: 'Step 1: Provisioning resources'
 ---
 
 # Step 1: Provisioning resources

@@ -6,15 +6,15 @@ title: Configure your mobile app or IoT device
 
 # Configure your mobile app or IoT device
 
-This tutorial demonstrates how to configure your Internet-of-things (IoT) device and mobile application to use client certificates with [API Shield™](https://developers.cloudflare.com/firewall/cf-firewall-rules/api-shield).
+This tutorial demonstrates how to configure your Internet-of-things (IoT) device and mobile application to use client certificates with [API Shield™](/firewall/cf-firewall-rules/api-shield).
 
 ## Scenario details
 
 This walkthrough uses the example of a device that captures temperature readings and transmits them by sending a POST request to a Cloudflare-protected API. A mobile application built in Swift for iOS retrieves those readings and displays them.
 
-To keep this example simple, the API is implemented as a Cloudflare Worker (borrowing code from the [To-Do List tutorial on building a jamstack app](https://developers.cloudflare.com/workers/tutorials/build-a-jamstack-app)).
+To keep this example simple, the API is implemented as a Cloudflare Worker (borrowing code from the [To-Do List tutorial on building a jamstack app](/workers/tutorials/build-a-jamstack-app)).
 
-Temperatures are stored in [Workers KV](https://developers.cloudflare.com/workers/learning/how-kv-works) using the source IP address as a key, but you can easily use a [value from the client certificate](https://developers.cloudflare.com/access/service-auth/mtls-headers/), such as the fingerprint.
+Temperatures are stored in [Workers KV](/workers/learning/how-kv-works) using the source IP address as a key, but you can easily use a [value from the client certificate](/access/service-auth/mtls-headers/), such as the fingerprint.
 
 The example API code below saves a temperature and timestamp into KV when a POST is made and returns the most recent five temperatures when a GET request is made.
 
@@ -143,7 +143,7 @@ $ curl -s https://shield.upinatoms.com/temps | jq .
 
 Before you can use API Shield to protect your API or web application, you must create Cloudflare-issued client certificates.
 
-You can [create a client certificate in the Cloudflare dashboard](/client-certificates/create-a-client-certificate).
+You can [create a client certificate in the Cloudflare dashboard](/ssl/client-certificates/create-a-client-certificate/).
 
 However, since most developers working at scale generate their own private keys and certificate signing requests via API, this example uses the Cloudflare API to create client certificates.
 
@@ -408,10 +408,10 @@ Response status code: 201
 
 ## Step 5 — Enable mTLS
 
-After creating Cloudflare-issued certificates, the next step is to [enable mTLS](../enable-mtls) for the hosts you want to protect with API Shield.
+After creating Cloudflare-issued certificates, the next step is to [enable mTLS](/ssl/enable-mtls/) for the hosts you want to protect with API Shield.
 
 ---
 
 ## Step 6 — Configure API Shield to require client certificates
 
-To configure API Shield to require client certificates, [create a mTLS rule](https://developers.cloudflare.com/firewall/cf-dashboard/create-mtls-rule).
+To configure API Shield to require client certificates, [create a mTLS rule](/firewall/cf-dashboard/create-mtls-rule).

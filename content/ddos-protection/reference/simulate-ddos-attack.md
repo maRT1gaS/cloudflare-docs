@@ -6,7 +6,7 @@ title: Simulating test DDoS attacks
 
 # Simulating test DDoS attacks
 
-After onboarding to Cloudflare, you may want to simulate DDoS attacks against your Internet properties to test the protection, [reporting](/reference/reports), and [alerting](/reference/alerts) mechanisms. Follow the guidelines in this section to simulate a DDoS attack.
+After onboarding to Cloudflare, you may want to simulate DDoS attacks against your Internet properties to test the protection, [reporting](/ddos-protection/reference/reports/), and [alerting](/ddos-protection/reference/alerts/) mechanisms. Follow the guidelines in this section to simulate a DDoS attack.
 
 You can only launch DDoS attacks against your own Internet properties — your zone, Spectrum application, or IP range (depending on your Cloudflare services) — and provided that:
 

@@ -10,9 +10,9 @@ This tutorial explains how to analyze [Cloudflare Logs](https://www.cloudflare.c
 
 ## Overview
 
-If you have not used Cloudflare Logs before, refer to the [Logs documentation](https://developers.cloudflare.com/logs) for more details. Contact your Cloudflare Customer Account Team to enable logs for your account.
+If you have not used Cloudflare Logs before, refer to the [Logs documentation](/logs) for more details. Contact your Cloudflare Customer Account Team to enable logs for your account.
 
-This tutorial uses Cloudflare Logpush to send logs to [Google Cloud Storage Bucket and Cloud Function](/data-products/analytics-integrations/google-cloud/) and then import them into Google Big Query.
+This tutorial uses Cloudflare Logpush to send logs to [Google Cloud Storage Bucket and Cloud Function](/fundamentals/data-products/analytics-integrations/google-cloud/) and then import them into Google Big Query.
 
 ### Prerequisites
 
@@ -20,7 +20,7 @@ Before sending your Cloudflare log data to Looker, make sure that you:
 
 - Have an existing Looker account
 - Have a Cloudflare Enterprise account with Cloudflare Logs enabled
-- Configure [Logpush](https://developers.cloudflare.com/logs/about) or [Logpull](https://developers.cloudflare.com/logs/logpull)
+- Configure [Logpush](/logs/about) or [Logpull](/logs/logpull)
 - Load your data in a [database supported by Looker](https://looker.com/solutions/other-databases)
 
 {{<Aside type="note" header="Note">}}
@@ -37,23 +37,23 @@ Once you load Cloudflare logs into your database, [connect the database to Looke
 
 To create your new LookML project:
 
-1. Log in to your Looker account.
+1.  Log in to your Looker account.
 
-2. In the menu bar, click **Develop** and make sure **Development Mode** is set to _ON_.
+2.  In the menu bar, click **Develop** and make sure **Development Mode** is set to _ON_.
 
-3. Next, also under **Develop**, click **Manage LookML Projects**.
+3.  Next, also under **Develop**, click **Manage LookML Projects**.
 
-4. At the top right of the LookML Projects page, click **New LookML Project**.
+4.  At the top right of the LookML Projects page, click **New LookML Project**.
 
-5. In the **New Project** dialog, enter a project name.
+5.  In the **New Project** dialog, enter a project name.
 
-6. For **Starting Point**, choose _Clone Public Git Repository**.**_
+6.  For **Starting Point**, choose \*Clone Public Git Repository\*\*.\*\*\*
 
-7. Enter the _cloudflare_block_ URL for the public Git repository `git://github.com/llooker/cloudflare_block.git`.
+7.  Enter the _cloudflare_block_ URL for the public Git repository `git://github.com/llooker/cloudflare_block.git`.
 
-8. Click **Create Project**. Looker will pull all of the repository files into a new LookML project.
+8.  Click **Create Project**. Looker will pull all of the repository files into a new LookML project.
 
-9. Next, open the project.
+9.  Next, open the project.
 
 10. Click **Deploy from Remote** to pull all remote changes into your local version of the repository.
     ![Looker manage LookML projects](../../../static/images/looker/screenshots/develop-look-ml-project.png)
@@ -62,10 +62,10 @@ To create your new LookML project:
 
 To update the connection name in the LookML files:
 
-1. In your LookML **cloudflare_looker** model file, replace the **connection** name with yours, for example:
-   `connection: "bigquery_lpr"`.
+1.  In your LookML **cloudflare_looker** model file, replace the **connection** name with yours, for example:
+    `connection: "bigquery_lpr"`.
 
-2. Check if any table names need to be updated to your database connection names as well. If you decide to rename the filenames for explore, model name, and view, make sure to update all mentions within the other files. Otherwise, you might encounter errors.
+2.  Check if any table names need to be updated to your database connection names as well. If you decide to rename the filenames for explore, model name, and view, make sure to update all mentions within the other files. Otherwise, you might encounter errors.
 
 ## Task 4 - View the Dashboards
 

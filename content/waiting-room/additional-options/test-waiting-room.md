@@ -8,8 +8,8 @@ title: Test a waiting room
 
 Follow this tutorial to ensure your Waiting Room queues and admits users as expected.
 
-{{<Aside type="warning" header="Warning:">}}  This tutorial uses an open-sourced load testing tool that is not created or supported by
-  Cloudflare.{{</Aside>}}
+{{<Aside type="warning" header="Warning:">}} This tutorial uses an open-sourced load testing tool that is not created or supported by
+Cloudflare.{{</Aside>}}
 
 ---
 
@@ -17,9 +17,9 @@ Follow this tutorial to ensure your Waiting Room queues and admits users as expe
 
 Before you start this tutorial, ensure you have:
 
-- Fulfilled all the [prerequisites](../../about#prerequisites)
-- Previously [created a waiting room](/get-started)
-- Updated the [sample script](#1-download-sample-script) to ensure your waiting room captures when a "simulated user" enters and is released from your waiting room (if you [customized the design](/additional-options/customize-waiting-room) of your waiting room)
+- Fulfilled all the [prerequisites](/waiting-room/about/#prerequisites)
+- Previously [created a waiting room](/waiting-room/get-started/)
+- Updated the [sample script](#1-download-sample-script) to ensure your waiting room captures when a "simulated user" enters and is released from your waiting room (if you [customized the design](/waiting-room/additional-options/customize-waiting-room/) of your waiting room)
 
 ---
 
@@ -139,4 +139,4 @@ In this example, you can clearly see when the script entered the second phase â€
 
 ## 4. Adjust waiting room (optional)
 
-Based on the results of your test, you may want to adjust [the settings](/reference/configuration-settings) of your waiting room.
+Based on the results of your test, you may want to adjust [the settings](/waiting-room/reference/configuration-settings/) of your waiting room.

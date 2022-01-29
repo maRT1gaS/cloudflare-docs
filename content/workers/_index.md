@@ -12,15 +12,15 @@ meta:
 Cloudflare Workers provides a [serverless](https://www.cloudflare.com/learning/serverless/what-is-serverless/) execution environment that allows you to create entirely new applications or augment existing ones without configuring or maintaining infrastructure.
 
 {{<button-group>}}
-  {{<button type="primary" href="/get-started/guide">}}
-    Get started
-  {{</button>}}
-  {{<button type="secondary" href="/tutorials">}}
-    View the tutorials
-  {{</button>}}
+{{<button type="primary" href="/workers/get-started/guide/">}}
+Get started
+{{</button>}}
+{{<button type="secondary" href="/workers/tutorials/">}}
+View the tutorials
+{{</button>}}
 {{</button-group>}}
 
----
+***
 
 ## Installing the Workers CLI
 
@@ -36,9 +36,9 @@ or install with yarn:
 $ yarn global add @cloudflare/wrangler
 ```
 
-Read more about [installing `wrangler`](/cli-wrangler/install-update).
+Read more about [installing `wrangler`](/workers/cli-wrangler/install-update/).
 
----
+***
 
 ## Playground
 
@@ -55,24 +55,24 @@ async function handleRequest(request) {
 ```
 
 {{<button-group>}}
-  {{<button type="primary" href="https://cloudflareworkers.com/#36ebe026bf3510a2e5acace89c09829f:about:blank">}}
-    Launch playground
-  {{</button>}}
-  {{<button type="secondary" href="/learning/playground">}}
-    Learn more
-  {{</button>}}
+{{<button type="primary" href="https://cloudflareworkers.com/#36ebe026bf3510a2e5acace89c09829f:about:blank">}}
+Launch playground
+{{</button>}}
+{{<button type="secondary" href="/workers/learning/playground/">}}
+Learn more
+{{</button>}}
 {{</button-group>}}
 
----
+***
 
 ## Popular pages
 
-- [Learning: How Workers works](/learning/how-workers-works) – learn how Cloudflare’s global network powers Workers
-- [Pricing](/platform/pricing) – learn about the Free and Bundled plans
-- [Reference: HTMLRewriter](/runtime-apis/html-rewriter) – parse and transform HTML from inside a Worker
-- [Limits](/platform/limits) – learn about plan limits (e.g. free plans get 100,000 req/day)
+*   [Learning: How Workers works](/workers/learning/how-workers-works/) – learn how Cloudflare’s global network powers Workers
+*   [Pricing](/workers/platform/pricing/) – learn about the Free and Bundled plans
+*   [Reference: HTMLRewriter](/workers/runtime-apis/html-rewriter/) – parse and transform HTML from inside a Worker
+*   [Limits](/workers/platform/limits/) – learn about plan limits (e.g. free plans get 100,000 req/day)
 
----
+***
 
 ## Community
 
@@ -82,6 +82,6 @@ async function handleRequest(request) {
 
 [Follow @CloudflareDev on Twitter](https://twitter.com/cloudflaredev) to learn about product announcements, new tutorials, and what is new in Cloudflare Workers.
 
----
+***
 
-These docs are built with the [Cloudflare Docs Engine](https://developers.cloudflare.com/docs-engine/).
+These docs are built with the [Cloudflare Docs Engine](/docs-engine/).

@@ -16,8 +16,8 @@ Images you upload to Cloudflare Images are not attached to any domain in your Cl
 
 Once you have an Images subscription, to make your first request to the Images API, you must obtain these pieces of information:
 
-- Your Cloudflare Account ID.
-- Your Global API Key or API Token.
+*   Your Cloudflare Account ID.
+*   Your Global API Key or API Token.
 
 Once you have this information, you are ready to upload your first image to Cloudflare Images using the API:
 

@@ -21,7 +21,7 @@ Your waiting room orders visitors according to when they entered the waiting roo
 
 ![FIFO diagram](../static/fifo-queueing-method.png)
 
-Technically, each user receives a [cookie](/reference/waiting-room-cookie) that contains a timestamp of when their request first hit an actively queueing waiting room. Cloudflare uses that timestamp to order visitors and provide the estimated wait time.
+Technically, each user receives a [cookie](/waiting-room/reference/waiting-room-cookie/) that contains a timestamp of when their request first hit an actively queueing waiting room. Cloudflare uses that timestamp to order visitors and provide the estimated wait time.
 
 Use this method when you want to reward visitors who get in the queue first and wait longer.
 
@@ -35,7 +35,7 @@ Use this method when you want to distribute products or services more equitably.
 
 ## API-only queueing methods
 
-The following queueing methods are only available via the API and are commonly used when you [create an event](/additional-options/create-events).
+The following queueing methods are only available via the API and are commonly used when you [create an event](/waiting-room/additional-options/create-events/).
 
 ### Passthrough
 

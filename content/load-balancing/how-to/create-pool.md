@@ -14,7 +14,7 @@ import PoolCreateAPI from '../_partials/_pool-create-api.md';
 
 <PoolDefinition />
 
-For more details about pools, refer to [Origin pools](/understand-basics/pools).
+For more details about pools, refer to [Origin pools](/load-balancing/understand-basics/pools/).
 
 ## Via the dashboard
 

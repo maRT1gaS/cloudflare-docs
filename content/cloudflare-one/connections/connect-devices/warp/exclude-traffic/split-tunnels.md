@@ -10,9 +10,9 @@ title: Split Tunnels
 <summary>Feature availability</summary>
 <div>
 
-| Operating Systems | [WARP mode required](/connections/connect-devices/warp#warp-client-modes) | [Teams plans](https://www.cloudflare.com/teams-pricing/) |
-| ----------------- | ------------------------------------------------------------------------- | -------------------------------------------------------- |
-| All systems       | WARP with Gateway                                                         | All plans                                                |
+| Operating Systems | [WARP mode required](/cloudflare-one/connections/connect-devices/warp/#warp-client-modes) | [Teams plans](https://www.cloudflare.com/teams-pricing/) |
+| ----------------- | ----------------------------------------------------------------------------------------- | -------------------------------------------------------- |
+| All systems       | WARP with Gateway                                                                         | All plans                                                |
 
 </div>
 </details>
@@ -27,16 +27,16 @@ Also, changing between Include and Exclude modes will immediately delete your ex
 
 To set up Split Tunnels:
 
-1. On the Teams Dashboard, navigate to **Settings** > **Network**.
+1.  On the Teams Dashboard, navigate to **Settings** > **Network**.
 
-1. Under **Split Tunnels**, select the mode you want to choose.
+2.  Under **Split Tunnels**, select the mode you want to choose.
 
-   - **(default) Exclude IPs and domains**. All traffic will be sent to Cloudflare Gateway ecept for the IPs and domains you specify.
-   - **Include IPs and Domains**. Only traffic destined to the IP address or domains you specify will be sent to Cloudflare Gateway.
+    - **(default) Exclude IPs and domains**. All traffic will be sent to Cloudflare Gateway ecept for the IPs and domains you specify.
+    - **Include IPs and Domains**. Only traffic destined to the IP address or domains you specify will be sent to Cloudflare Gateway.
 
-1. If you want to add or remove items from your Split Tunnels configuration, click **Manage**.
+3.  If you want to add or remove items from your Split Tunnels configuration, click **Manage**.
 
-   On this page, you will find a list of the IPs and domains Cloudflare for Teams excludes or includes, depending on the mode you have selected. Add or remove any desired items and click **Save**.
+    On this page, you will find a list of the IPs and domains Cloudflare for Teams excludes or includes, depending on the mode you have selected. Add or remove any desired items and click **Save**.
 
 ### Add an IP address
 
@@ -59,11 +59,11 @@ Valid domains include:
 {{<Aside header="Warning about using domains in Split Tunnels">}}
 Domain-based split tunneling works alongside DNS by dynamically excluding or including the route to the IP address(es) returned in the DNS lookup request. This has a few ramifications you should be aware of before deploying in your organization:
 
-1. Routes excluded or included from WARP and Gateway visibility may change day to day, and may be different for each user depending on where they are.
-2. You may inadvertently exclude or include additional hostnames that happen to share an IP address.
-3. Most services are a collection of hostnames. Until Split Tunnels mode supports [App Types](/policies/filtering/http-policies/application-app-types), you will need to ensure you add all domains used by a particular app or service.
-4. If a DNS result has been previously cached it will not be dynamically added in the Split Tunnel result until the next time the DNS lookup happens.
-{{</Aside>}}
+1.  Routes excluded or included from WARP and Gateway visibility may change day to day, and may be different for each user depending on where they are.
+2.  You may inadvertently exclude or include additional hostnames that happen to share an IP address.
+3.  Most services are a collection of hostnames. Until Split Tunnels mode supports [App Types](/cloudflare-one/policies/filtering/http-policies/application-app-types/), you will need to ensure you add all domains used by a particular app or service.
+4.  If a DNS result has been previously cached it will not be dynamically added in the Split Tunnel result until the next time the DNS lookup happens.
+    {{</Aside>}}
 
 ### Important platform differences
 

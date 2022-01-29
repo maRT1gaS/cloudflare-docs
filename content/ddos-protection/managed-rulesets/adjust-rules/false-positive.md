@@ -13,7 +13,8 @@ In these cases, Cloudflare’s DDoS Protection systems may flag that traffic as 
 To remedy a false positive:
 
 1.  Log in to the [Cloudflare dashboard](https://dash.cloudflare.com) and select your account.
-1.  Navigate to the analytics dashboard and apply filters to the displayed data.
+
+2.  Navigate to the analytics dashboard and apply filters to the displayed data.
 
               <details>
 
@@ -45,13 +46,19 @@ To remedy a false positive:
 
         </details>
 
-1.  Scroll down to the **Activity log**.
-1.  Click **Edit columns** and enable **Rule ID**\*.
-1.  Copy the rule ID from one of the DDoS log entries.
-1.  Navigate to **Firewall** > **DDoS** and click **Configure** next to the Managed Ruleset containing the rule you will adjust.
-1.  Click **Browse rules** and paste the Rule ID in the search field.
-1.  Decrease the rule’s **Sensitivity Level** to _Essentially Off_ or change the action of the rule to _Log_.
-1.  Click **Next** and then **Save**.
+3.  Scroll down to the **Activity log**.
+
+4.  Click **Edit columns** and enable **Rule ID**\*.
+
+5.  Copy the rule ID from one of the DDoS log entries.
+
+6.  Navigate to **Firewall** > **DDoS** and click **Configure** next to the Managed Ruleset containing the rule you will adjust.
+
+7.  Click **Browse rules** and paste the Rule ID in the search field.
+
+8.  Decrease the rule’s **Sensitivity Level** to _Essentially Off_ or change the action of the rule to _Log_.
+
+9.  Click **Next** and then **Save**.
 
 _\* Not available in Network Analytics dashboard yet._
 
@@ -59,12 +66,12 @@ _\* Not available in Network Analytics dashboard yet._
 The **DDoS** tab under **Firewall** is currently only available to the WAF/CDN customers.
 {{</Aside>}}
 
-Once saved, the rule takes effect within one or two minutes. The rule adjustment should provide immediate remedy, which you can view in the [analytics dashboard](/reference/analytics).
+Once saved, the rule takes effect within one or two minutes. The rule adjustment should provide immediate remedy, which you can view in the [analytics dashboard](/ddos-protection/reference/analytics/).
 
 ## Updating the adjusted rules at a later date
 
-Later, you can change the [sensitivity level](/managed-rulesets/network/override-parameters#sensitivity) of the rule causing the false positives to avoid future issues, and change the rule action back to its default value.
+Later, you can change the [sensitivity level](/ddos-protection/managed-rulesets/network/override-parameters/#sensitivity) of the rule causing the false positives to avoid future issues, and change the rule action back to its default value.
 
 {{<Aside type="note" header="Recommendation: Enable DDoS alerts">}}
-Cloudflare recommends that you enable [DDoS alerts](/reference/alerts) to get real-time notifications on detected and mitigated attacks automatically performed by Cloudflare’s systems. When you receive these notifications, you can review if it is in fact a real DDoS attack, or if it is a false positive, and then take action to remedy it.
+Cloudflare recommends that you enable [DDoS alerts](/ddos-protection/reference/alerts/) to get real-time notifications on detected and mitigated attacks automatically performed by Cloudflare’s systems. When you receive these notifications, you can review if it is in fact a real DDoS attack, or if it is a false positive, and then take action to remedy it.
 {{</Aside>}}

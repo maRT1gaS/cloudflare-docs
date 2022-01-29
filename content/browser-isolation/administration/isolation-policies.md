@@ -9,13 +9,13 @@ Browser Isolation is enabled by configuring a HTTP policy with an Isolate action
 
 ## Before you start
 
-The Cloudflare Gateway L7 firewall will intercept and inspect all HTTP and HTTPS traffic over ports 80 and 443. The inspection of HTTPS traffic requires breaking the TLS connection between the user and the origin server. Cloudflare Gateway presents a certificate to the user and securely connects to the origin on their behalf; however, this requires the Cloudflare certificate to be installed and trusted on each user's device. See [Install Cloudflare Root CA for more information](https://developers.cloudflare.com/gateway/connecting-to-gateway/install-cloudflare-cert).
+The Cloudflare Gateway L7 firewall will intercept and inspect all HTTP and HTTPS traffic over ports 80 and 443. The inspection of HTTPS traffic requires breaking the TLS connection between the user and the origin server. Cloudflare Gateway presents a certificate to the user and securely connects to the origin on their behalf; however, this requires the Cloudflare certificate to be installed and trusted on each user's device. See [Install Cloudflare Root CA for more information](/gateway/connecting-to-gateway/install-cloudflare-cert).
 
 ## Manage HTTP policies
 
-1. On the Teams dashboard, navigate to the Policies tab.
-2. Select the **HTTP** tab.
-3. Select **Add a Rule**.
+1.  On the Teams dashboard, navigate to the Policies tab.
+2.  Select the **HTTP** tab.
+3.  Select **Add a Rule**.
 
 Administrators are able to create up to 50 rules in their HTTP policy.
 
@@ -62,11 +62,11 @@ Isolation policies are applied to requests that include `Accept: text/html*`. Th
 In the settings (Gateway → Policies → Settings) page, click the toggle to enable filtering once clients have been deployed and certificates installed. If you do not enable filtering, your rules will not apply.
 
 {{<Aside>}}
-Note: It usually takes about 60 seconds for a new policy to be configured for users and you may need to restart your web browser to establish a [filtered connection](/feedback/faq#how-long-does-it-take-for-l7-firewall-policies-to-apply) for open websites.
+Note: It usually takes about 60 seconds for a new policy to be configured for users and you may need to restart your web browser to establish a [filtered connection](/browser-isolation/feedback/faq/#how-long-does-it-take-for-l7-firewall-policies-to-apply) for open websites.
 {{</Aside>}}
 
 ## Start browsing
 
-If you have not already installed the WARP client and Cloudflare Root CA on your device, follow the [installation](/installation) steps.
+If you have not already installed the WARP client and Cloudflare Root CA on your device, follow the [installation](/browser-isolation/installation/) steps.
 
-Next use your normal browser with the WARP client enabled to start using an isolated browser. See [usage](/usage).
+Next use your normal browser with the WARP client enabled to start using an isolated browser. See [usage](/browser-isolation/usage/).

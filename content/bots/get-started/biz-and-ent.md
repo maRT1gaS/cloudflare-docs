@@ -28,7 +28,7 @@ Super Bot Fight Mode is included in your Business or Enterprise subscription. Wh
 
 ## Analytics
 
-For more on analytics, see [Bot Analytics](/bot-analytics/biz-and-ent/).
+For more on analytics, see [Bot Analytics](/bots/bot-analytics/biz-and-ent/).
 
 ## Ruleset Engine
 

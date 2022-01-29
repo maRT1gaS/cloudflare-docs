@@ -1,17 +1,17 @@
 ---
-title: "2: User access"
+title: '2: User access'
 weight: 1
 pcx-content-type: tutorial
 meta:
-  title: "Step 2: User access"
+  title: 'Step 2: User access'
 ---
 
 # Step 2: User access
 
 There are two ways to manage how external customers access Cloudflare.
 
-1. By giving them direct Cloudflare dashboard access.
-2. By building an interface that they directly interact with.
+1.  By giving them direct Cloudflare dashboard access.
+2.  By building an interface that they directly interact with.
 
 The first method gives customers control over all aspects of Cloudflare, while the latter allows you to integrate your customer's Cloudflare experience into a dashboard you control and they may already be familiar with.
 

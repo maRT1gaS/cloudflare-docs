@@ -12,29 +12,29 @@ Using these two selectors in the HTTP rule builder, you can have more granular c
 
 ## Creating rules with applications and app types
 
-1. On the [Teams dashboard](http://dash.teams.cloudflare.com), navigate to **Gateway > Policies**.
+1.  On the [Teams dashboard](http://dash.teams.cloudflare.com), navigate to **Gateway > Policies**.
 
-1. Navigate to the **HTTP tab**.
+2.  Navigate to the **HTTP tab**.
 
-1. [Create a new rule](/policies/filtering/http-policies/policy-management#create-your-first-http-policy), or edit an existing one.
+3.  [Create a new rule](/cloudflare-one/policies/filtering/http-policies/policy-management/#create-your-first-http-policy), or edit an existing one.
 
-1. In the **Selector** drop-down menu, select the _Application_ option.
+4.  In the **Selector** drop-down menu, select the _Application_ option.
 
-1. In the **Operator** drop-down menu, select _in_ or _not in_, depending on whether you want to include or exclude applications or app types from your rule.
+5.  In the **Operator** drop-down menu, select _in_ or _not in_, depending on whether you want to include or exclude applications or app types from your rule.
 
-1. In the **Value** drop-down menu, check the applications or app types you would like to control with your rule.
+6.  In the **Value** drop-down menu, check the applications or app types you would like to control with your rule.
 
 ![Applications](../../../static/documentation/policies/http-applications-operator-value.png)
 
-1. Next, select an **[Action](#supported-actions-for-applications)** for your rule.
+1.  Next, select an **[Action](#supported-actions-for-applications)** for your rule.
 
-1. Click **Create rule** to finalize your changes.
+2.  Click **Create rule** to finalize your changes.
 
 ## Supported applications and app types
 
 ### Applications
 
-A full list of supported applications and their respective app types are available to download [here](../../../static/documentation/applications.csv).
+A full list of supported applications and their respective app types are available to download [here](/cloudflare-one/static/documentation/applications.csv/).
 
 ### App types
 
@@ -68,20 +68,17 @@ Some applications are incompatible with TLS decryption for a variety of reasons,
 
 This is a countermeasure to man-in-the-middle attacks where an attacker presents a trusted, but false, certificate on behalf of the origin in oder to decrypt the traffic. This is exactly what TLS interception in a Secure Web Gateway does, although for the purposes of securing a user's web traffic.
 
-Gateway automatically groups applications incompatible with TLS decryption into the _Do Not Decrypt_ app type. To ensure that traffic gets through to these applications, you can create an [HTTP rule](/policies/filtering/http-policies/application-app-types), select _Application_ as a **Selector**, _in_ as an **Operator**, and check the _Do Not Decrypt_ app type in the **Value** field. Then, set the rule action to _Do Not Inspect_.
+Gateway automatically groups applications incompatible with TLS decryption into the _Do Not Decrypt_ app type. To ensure that traffic gets through to these applications, you can create an [HTTP rule](/cloudflare-one/policies/filtering/http-policies/application-app-types/), select _Application_ as a **Selector**, _in_ as an **Operator**, and check the _Do Not Decrypt_ app type in the **Value** field. Then, set the rule action to _Do Not Inspect_.
 
 Gateway periodically updates the _Do Not Decrypt_ app type to include new applications. By creating this _Do Not Inspect_ rule and selecting all applications within the _Do Not Decrypt_ app type, you'll ensure that your rule will apply to any new applications that will be added to the app type.
 
 ![Do not decrypt HTTP rule](../../../static/documentation/faq/do-not-decrypt.png)
 
-{{<Aside>}}
-<b>Google Drive for Desktop</b> allows you to configure the app to trust the <a href="/connections/connect-devices/warp/install-cloudflare-cert">
-  Cloudflare Root Certificate
-</a> Gateway presents. Doing so will allow you to inspect the traffic to and from Google Drive, instead
+{{<Aside>}} <b>Google Drive for Desktop</b> allows you to configure the app to trust the <a href="/connections/connect-devices/warp/install-cloudflare-cert">
+Cloudflare Root Certificate </a> Gateway presents. Doing so will allow you to inspect the traffic to and from Google Drive, instead
 of setting up a <i>Do Not Inspect</i> rule and lose visibility on that traffic. To trust the Cloudflare
 Root Certificate in Google Drive, check out these <a href="https://support.google.com/a/answer/7644837">
-  instructions for TrustedRootCertsFile
-</a>
+instructions for TrustedRootCertsFile </a>
 .
 {{</Aside>}}
 

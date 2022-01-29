@@ -12,45 +12,51 @@ Yandex is a web search engine that also offers identity provider (IdP) services.
 
 To set up Yandex for Cloudflare Access:
 
-1. Log into your Yandex account.
-1. Select **Open a new OAuth Application**.
+1.  Log into your Yandex account.
 
-   ![Yandex OAuth page](../../static/documentation/identity/yandex/yandex-1.png)
+2.  Select **Open a new OAuth Application**.
 
-1. Select **New client**.
-1. Complete the required fields.
-1. Choose **Yandex.Passport API** to set the basic scopes.
-1. Select the **Access to email address**, **Access to user avatar,** and **Access to username, first name and surname, gender** options.
+    ![Yandex OAuth page](../../static/documentation/identity/yandex/yandex-1.png)
 
-   ![Yandex OAuth fields](../../static/documentation/identity/yandex/yandex-2.png)
+3.  Select **New client**.
 
-1. Select **Platform** and click **Web Services.**
-1. In the **Callback URL #1** field, enter your [team domain](/glossary#team-domain) followed by this callback at the end of the path: `/cdn-cgi/access/callback`. For example:
+4.  Complete the required fields.
 
-   ```txt
-   https://<your-team-name>.cloudflareaccess.com/cdn-cgi/access/callback
-   ```
+5.  Choose **Yandex.Passport API** to set the basic scopes.
 
-   ![Yandex scopes](../../static/documentation/identity/yandex/yandex-3.png)
+6.  Select the **Access to email address**, **Access to user avatar,** and **Access to username, first name and surname, gender** options.
 
-1. Click **Add**.
-1. Scroll to the **Platforms** card, and click **Submit**.
+    ![Yandex OAuth fields](../../static/documentation/identity/yandex/yandex-2.png)
 
-   **Yandex OAuth** card titled **Cloudflare Access App** displays.
+7.  Select **Platform** and click **Web Services.**
 
-1. Copy the **ID** and **Password**.
+8.  In the **Callback URL #1** field, enter your [team domain](/cloudflare-one/glossary/#team-domain) followed by this callback at the end of the path: `/cdn-cgi/access/callback`. For example:
 
-   ![Yandex Platform card](../../static/documentation/identity/yandex/yandex-4.png)
+    ```txt
+    https://<your-team-name>.cloudflareaccess.com/cdn-cgi/access/callback
+    ```
 
-1. On the Teams dashboard, navigate to **Settings > Authentication**.
+    ![Yandex scopes](../../static/documentation/identity/yandex/yandex-3.png)
 
-1. Under **Login methods**, click **Add new**.
+9.  Click **Add**.
 
-1. Select Yandex.
+10. Scroll to the **Platforms** card, and click **Submit**.
 
-1. Paste the ID and password in the appropriate fields.
+    **Yandex OAuth** card titled **Cloudflare Access App** displays.
 
-1. Click **Save**.
+11. Copy the **ID** and **Password**.
+
+    ![Yandex Platform card](../../static/documentation/identity/yandex/yandex-4.png)
+
+12. On the Teams dashboard, navigate to **Settings > Authentication**.
+
+13. Under **Login methods**, click **Add new**.
+
+14. Select Yandex.
+
+15. Paste the ID and password in the appropriate fields.
+
+16. Click **Save**.
 
 ## Example API Config
 
