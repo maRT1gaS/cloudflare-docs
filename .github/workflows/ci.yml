@@ -15,23 +15,29 @@ on:
       - dev # todo
 
 jobs:
-  test:
-    name: Node.js v16
+  lint:
+    name: Lint
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
         with:
           node-version: 16
-
       - name: (env) pnpm
         run: curl -L https://raw.githubusercontent.com/pnpm/self-installer/master/install.js | node
+      - run: pnpm install
+      # - run: pnpm run lint
 
-      - name: Install
-        run: pnpm install
-
-      # - name: Lint
-      #   run: pnpm run lint
-
-      - name: Compiles
-        run: pnpm run build
+  compile:
+    name: Compiles
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 1
+      - name: (env) setup
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: '0.92.0'
+          extended: true
+      - run: hugo --minify
