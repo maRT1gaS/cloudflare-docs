@@ -5,4 +5,5 @@ import * as navs from './navlinks';
 navs.init();
 timeago.init();
 
+events.focus();
 events.mobile();
