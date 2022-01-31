@@ -16,13 +16,23 @@
 - [ ] (bongo) fix `dev` assets
 - [ ] (bongo) allow `bongo:foo/bar` and `bongo:foo-bar`
 
+---
+
 - [ ] (sidebar) dropdown JS
-- [ ] (sidebar) mobile toggle JS
+- [x] (sidebar) mobile toggle JS
+- [ ] (sidebar) frontmatter for "no subnavs"
+- [ ] (sidebar) mark "active" root subnav on load
+
 - [ ] (topbar) position for feedback
+- [ ] (topbar) algolia search
+- [ ] (topbar) search shift+S keybind
+
 - [ ] table of contents add/customize
 - [ ] update all code snippets --> customize output? probabyl not, change css instead
+
 - [ ] (baseof) icons / static product images
 - [ ] (baseof) sitemap, manifest, etc
+- [x] developers.cloudflare homepage
 
 
 https://github.com/cloudflare/cloudflare-docs-engine/tree/master/src/components/mdx
