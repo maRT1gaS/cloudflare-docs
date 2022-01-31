@@ -7,3 +7,4 @@ timeago.init();
 
 events.focus();
 events.mobile();
+events.dropdowns();

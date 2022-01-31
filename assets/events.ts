@@ -24,3 +24,35 @@ export function focus() {
     (ev.target as HTMLElement).removeAttribute(attr);
   });
 }
+
+export function dropdowns() {
+  let attr = 'data-expanded';
+
+  addEventListener('focusin', console.log);
+
+  document.querySelectorAll('.Dropdown').forEach(div => {
+    let btn = div.querySelector('button');
+
+    if (btn) {
+      let clickaway: EventListener = ev => {
+        ev.stopPropagation();
+        removeEventListener('click', clickaway);
+        div.setAttribute(attr, 'false');
+        btn.setAttribute(attr, 'false');
+      }
+
+      btn.addEventListener('click', ev => {
+        if (div.getAttribute(attr) === 'true') {
+          clickaway(ev);
+        } else {
+          ev.stopPropagation();
+          addEventListener('click', clickaway);
+          div.setAttribute(attr, 'true');
+          btn.setAttribute(attr, 'true');
+          // TODO: focus first
+          // TODO: keyboard listeners
+        }
+      });
+    }
+  });
+}
