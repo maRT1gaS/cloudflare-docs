@@ -27,7 +27,7 @@
 - [ ] (topbar) algolia search
 - [ ] (topbar) search shift+S keybind
 
-- [ ] table of contents add/customize
+- [x] table of contents add/customize
 - [ ] update all code snippets --> customize output? probabyl not, change css instead
 
 - [ ] (baseof) icons / static product images
