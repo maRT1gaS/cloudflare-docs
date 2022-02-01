@@ -1,6 +1,7 @@
 ---
 weight: 4
 title: Tutorials
+hideChildren: true
 pcx-content-type: navigation
 ---
 

@@ -20,7 +20,7 @@
 
 - [-] (sidebar) dropdown JS
 - [x] (sidebar) mobile toggle JS
-- [ ] (sidebar) frontmatter for "no subnavs"
+- [x] (sidebar) frontmatter for "no subnavs"
 - [x] (sidebar) mark "active" root subnav on load
 
 - [ ] (topbar) position for feedback

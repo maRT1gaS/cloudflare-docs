@@ -1,6 +1,7 @@
 {{- $current := .Context.Permalink -}}
 {{- $active := (eq .Active $current) -}}
 {{- $isExpand := (and .Context.IsSection (hasPrefix .Active $current)) -}}
+{{- $hasChildren := (and .Context.IsSection (ne .Context.Params.hidechildren true)) -}}
 
 {{- if $active -}}
 <li class="DocsSidebar--nav-item" is-active>
@@ -9,7 +10,7 @@
 {{- else -}}
 <li class="DocsSidebar--nav-item">
 {{- end -}}
-  {{- if .Context.IsSection -}}
+  {{- if $hasChildren -}}
   <button class="Button DocsSidebar--nav-expand-collapse-button">
     <span class="DocsSidebar--nav-expand-collapse-button-content" aria-hidden="true"></span>
     <span is-visually-hidden>Expand: {{ .Context.Title }}</span>
@@ -21,7 +22,7 @@
     <span class="DocsSidebar--nav-link-text">{{ .Context.Title }}</span>
   </a>
 
-  {{- if .Context.IsSection -}}
+  {{- if $hasChildren -}}
     {{- $active := .Active -}}
     {{- $next := (add .Depth 1) -}}
     {{- if and $isExpand (ne .Active $current) -}}
