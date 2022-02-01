@@ -4,7 +4,7 @@
 export function init() {
   document.querySelectorAll<HTMLButtonElement>('.DocsSidebar--nav-expand-collapse-button').forEach(btn => {
     let item = btn.parentNode; // .DocsSidebar--nav-item
-    if (item) item.addEventListener('click', toggle);
+    if (item) btn.addEventListener('click', toggle);
   });
 }
 
