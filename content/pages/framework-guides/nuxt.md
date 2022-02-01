@@ -3,7 +3,6 @@ pcx-content-type: how-to
 title: Deploy a Nuxt.js site
 ---
 
-import TutorialsBeforeYouStart from '../_partials/_tutorials-before-you-start.md';
 
 # Deploy a Nuxt.js site
 
@@ -20,7 +19,7 @@ $ npx create-nuxt-app my-nuxt-app
 $ cd my-nuxt-app
 ```
 
-<TutorialsBeforeYouStart />
+{{<render file="_tutorials-before-you-start.md">}}
 
 ## Creating a GitHub repository
 

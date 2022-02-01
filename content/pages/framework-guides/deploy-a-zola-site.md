@@ -3,7 +3,6 @@ pcx-content-type: how-to
 title: Deploy a Zola site
 ---
 
-import TutorialsBeforeYouStart from '../_partials/_tutorials-before-you-start.md';
 
 # Deploy a Zola site
 
@@ -72,7 +71,7 @@ Upon running `zola init`, you will prompted with three questions:
 
 4.  Do you want to build a search index of the content? \[y/N]: y
 
-<TutorialsBeforeYouStart />
+{{<render file="_tutorials-before-you-start.md">}}
 
 ## Creating a GitHub repository
 

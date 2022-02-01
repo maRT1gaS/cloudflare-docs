@@ -4,11 +4,10 @@ pcx-content-type: concept
 title: Load balancers
 ---
 
-import LBDefinition from '../_partials/_load-balancer-definition.md';
 
 # Load balancers
 
-<LBDefinition />
+{{<render file="_load-balancer-definition.md">}}
 
 {{<Aside type="note">}}
 For more background information on what load balancers are and how they work, check out our <a href="https://www.cloudflare.com/learning/performance/what-is-load-balancing/">Learning Center</a>.

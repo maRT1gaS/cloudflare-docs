@@ -6,10 +6,6 @@ meta:
   title: What kinds of Notifications are available?
 ---
 
-import SSLTroubleshoot from '../_partials/_troubleshoot-ssl';
-import DDOS from '../_partials/_ddos';
-import Errors5xx from '../_partials/_errors';
-
 # What kinds of Notifications are available?
 
 Available Notifications depend on your Cloudflare plan. We offer a variety of Notifications for our products and services, such as Billing, Denial-of-Service protection, Magic Transit, and SSL/TLS.
@@ -36,7 +32,7 @@ Enterprise plans.
 **What should you do if you receive one?**
 
 1.  Use the link in the Notification you received to see which error codes Cloudflare is seeing from your origin.
-2.  <Errors5xx />
+2.  Refer to [Troubleshooting Cloudflare 5XX errors](https://support.cloudflare.com/hc/articles/115003011431) to learn how to troubleshoot these errors.
 
 </div>
 </details>
@@ -55,7 +51,7 @@ Free plan.
 
 **What should you do if you receive one?**
 
-<SSLTroubleshoot />
+You only need to take action if notified that you have a certificate that failed. You can find the reasons why a certificate is not being issued in [Troubleshooting SSL errors](https://support.cloudflare.com/hc/articles/200170566#h_c1a6e78e-150d-4db6-89ab-eec7cb1ab03f).
 
 </div>
 </details>
@@ -112,7 +108,7 @@ Professional or higher plans.
 
 **What should you do if you receive one?**
 
-<DDOS />
+No action needed. Refer to [Understanding Cloudflare DDoS alerts](https://support.cloudflare.com/hc/articles/360053216191) for more information.
 
 </div>
 </details>
@@ -131,7 +127,7 @@ Purchase of Magic Transit and/or BYOIP.
 
 **What should you do if you receive one?**
 
-<DDOS />
+{{<render file="_origin-ddos.md">}}
 
 </div>
 </details>

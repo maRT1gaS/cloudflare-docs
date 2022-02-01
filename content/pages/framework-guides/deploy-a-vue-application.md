@@ -3,7 +3,6 @@ pcx-content-type: how-to
 title: Deploy a Vue application
 ---
 
-import TutorialsBeforeYouStart from '../_partials/_tutorials-before-you-start.md';
 
 # Deploy a Vue application
 
@@ -20,7 +19,7 @@ $ npm install -g @vue/cli
 $ vue create my-vue-app
 ```
 
-<TutorialsBeforeYouStart />
+{{<render file="_tutorials-before-you-start.md">}}
 
 ## Creating a GitHub repository
 

@@ -4,25 +4,22 @@ pcx-content-type: how-to
 title: Create a load balancer
 ---
 
-import LBDefinition from '../_partials/_load-balancer-definition.md';
-import LBCreate from '../_partials/_load-balancer-create.md';
-import LBCreateAPI from '../_partials/_load-balancer-create-api.md';
 
 # Create a load balancer
 
-<LBDefinition />
+{{<render file="_load-balancer-definition.md">}}
 
 For more details about load balancers, refer to [Load balancers](/load-balancing/understand-basics/load-balancers/).
 
 ## Via the dashboard
 
-<LBCreate />
+{{<render file="_load-balancer-create.md">}}
 
 ---
 
 ## Via the API
 
-<LBCreateAPI />
+{{<render file="_load-balancer-create-api.md">}}
 
 ## Sharing your load balancer with other sites
 

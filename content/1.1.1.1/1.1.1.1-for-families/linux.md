@@ -6,8 +6,6 @@ meta:
   title: Set up 1.1.1.1 for Families - Linux
 ---
 
-import CaptivePortals from '../_partials/_captive-portals.md';
-
 # Set up 1.1.1.1 for Families - Linux
 
 Follow these steps to configure 1.1.1.1 for Families in Ubuntu and Debian.
@@ -184,6 +182,8 @@ Follow these steps to configure 1.1.1.1 for Families in Ubuntu and Debian.
 
 4.  Press the <kbd>ESC</kbd> key on your keyboard to save and exit Vim. Then, type:
 
-        :wq
+     ```txt
+     :wq
+     ```
 
-<CaptivePortals />
+{{<render file="_captive-portals.md">}}

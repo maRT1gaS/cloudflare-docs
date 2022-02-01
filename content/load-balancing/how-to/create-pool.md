@@ -6,20 +6,16 @@ meta:
   title: Create an origin server pool
 ---
 
-import PoolDefinition from '../_partials/_pool-definition.md';
-import PoolCreate from '../_partials/_pool-create.md';
-import PoolCreateAPI from '../_partials/_pool-create-api.md';
-
 # Create an origin server pool
 
-<PoolDefinition />
+{{<render file="_pool-definition.md">}}
 
 For more details about pools, refer to [Origin pools](/load-balancing/understand-basics/pools/).
 
 ## Via the dashboard
 
-<PoolCreate />
+{{<render file="_pool-create.md">}}
 
 ## Via the API
 
-<PoolCreateAPI />
+{{<render file="_pool-create-api.md">}}

@@ -4,11 +4,9 @@ pcx-content-type: how-to
 title: Certificate Signing Requests (CSRs)
 ---
 
-import CSRDefinition from '../../_partials/_csr-definition.md';
-
 # Certificate Signing Requests (CSRs)
 
-<CSRDefinition />
+{{<render file="_csr-definition.md">}}
 
 A CSR contains information about your domain: your organization name and address, the common name (domain name), and Subject Alternative Names (SANs).
 

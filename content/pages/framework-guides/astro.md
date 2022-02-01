@@ -3,7 +3,6 @@ pcx-content-type: how-to
 title: Deploy an Astro site
 ---
 
-import TutorialsBeforeYouStart from '../_partials/_tutorials-before-you-start.md';
 
 # Deploy an Astro site
 
@@ -26,7 +25,7 @@ $ npm init astro
 
 During `init`, Astro will ask you which project type you would like to set up. Your answers will not affect the rest of this tutorial. Select an answer ideal for your project.
 
-<TutorialsBeforeYouStart />
+{{<render file="_tutorials-before-you-start.md">}}
 
 ## Creating a GitHub repository
 

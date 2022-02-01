@@ -6,16 +6,9 @@ meta:
   title: Domain Control Validation (DCV) — SSL/TLS
 ---
 
-import DCVDefinition from '../_partials/_dcv-definition.md';
-import CNAMECertValidation from '../_partials/_cname-cert-verification.md';
-import GenericValidationProcess from '../_partials/_generic-validation-process.md';
-import EmailValidationDefinition from '../_partials/_email-validation-definition.md';
-import TXTValidationDefinition from '../_partials/_txt-validation-definition.md';
-import EmailValidationProcess from '../_partials/_email-validation-process.md';
-
 # Domain Control Validation (DCV) — SSL/TLS
 
-<DCVDefinition />
+{{<render file="_dcv-definition.md">}}
 
 ## DCV exceptions
 
@@ -51,7 +44,7 @@ If you are using proxied (orange-clouded) DNS records and can tolerate a few min
 <summary>What happens after you create your records</summary>
 <div>
 
-<CNAMECertValidation />
+{{<render file="_cname-cert-verification.md">}}
 
 </div>
 
@@ -61,7 +54,7 @@ Though this process happens relatively quickly, your application may experience 
 
 #### TXT
 
-<TXTValidationDefinition />
+{{<render file="_txt-validation-definition.md">}}
 
 <GenericProcess />
 
@@ -72,14 +65,14 @@ At your authoritative DNS provider, create a TXT record named the **name** and c
 
 #### Email
 
-<EmailValidationDefinition />
+{{<render file="_email-validation-definition.md">}}
 
-<GenericValidationProcess />
+{{<render file="_generic-validation-process.md">}}
 
 - API: `emails`
 - Dashboard: When viewing an individual certificate at **SSL/TLS** > **Edge Certificates**, refer to the value for **Certificate validation email recipients**.
 
-<EmailValidationProcess />
+{{<render file="_email-validation-process.md">}}
 
 ### Verify DCV status
 

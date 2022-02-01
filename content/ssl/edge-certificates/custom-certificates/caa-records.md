@@ -4,11 +4,9 @@ pcx-content-type: how to
 title: Add CAA records
 ---
 
-import CAADefinition from '../../_partials/_caa-records-definition.md';
-
 # Add CAA records
 
-<CAADefinition />
+{{<render file="_caa-records-definition.md">}}
 
 For additional security, set up [Certificate Transparency Monitoring](/ssl/edge-certificates/additional-options/certificate-transparency-monitoring/) as well.
 

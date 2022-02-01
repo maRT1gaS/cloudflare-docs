@@ -6,9 +6,6 @@ meta:
   title: Set up 1.1.1.1 - Windows 10
 ---
 
-import CaptivePortals from '../_partials/_captive-portals.md';
-import Encrypted from '../_partials/_encrypted.md';
-
 # Set up 1.1.1.1 - Windows 10
 
 Follow these steps to configure 1.1.1.1:
@@ -49,5 +46,5 @@ Follow these steps to configure 1.1.1.1:
 
 13. Click **Close**.
 
-<CaptivePortals />
-<Encrypted />
+{{<render file="_captive-portals.md">}}
+{{<render file="_encrypted.md">}}

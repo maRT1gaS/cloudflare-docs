@@ -6,7 +6,6 @@ meta:
   title: Get started with Bot Management for Enterprise
 ---
 
-import StaticResourcesBM from '../_partials/_static-resources-bm.md';
 
 # Get started with Bot Management for Enterprise
 
@@ -113,7 +112,7 @@ You can adjust your Firewall Rules at any point. Set aside time to review [Bot A
 
 ### Static resources
 
-<StaticResourcesBM />
+{{<render file="_static-resources-bm.md">}}
 
 For more details, see [Static resource protection](/bots/reference/static-resources/).
 

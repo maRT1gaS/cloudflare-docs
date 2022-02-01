@@ -3,7 +3,6 @@ pcx-content-type: how-to
 title: Deploy an Angular application
 ---
 
-import TutorialsBeforeYouStart from '../_partials/_tutorials-before-you-start.md';
 
 # Deploy an Angular application
 
@@ -37,7 +36,7 @@ $ cd my-angular-app
 
 With both approaches, the Angular CLI will prompt you for customization choices. Your answers will not affect the rest of this tutorial. Choose the option that is ideal for your project.
 
-<TutorialsBeforeYouStart />
+{{<render file="_tutorials-before-you-start.md">}}
 
 ## Creating a GitHub repository
 

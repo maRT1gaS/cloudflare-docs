@@ -4,11 +4,9 @@ pcx-content-type: how-to
 title: Always Use HTTPS
 ---
 
-import AlwaysUseHTTPSDefinition from '../../_partials/_always-use-https-definition.md';
-
 # Always Use HTTPS
 
-<AlwaysUseHTTPSDefinition />
+{{<render file="_always-use-https-definition.md">}}
 
 ## How to redirect all visitors to HTTPS/SSL
 

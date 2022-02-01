@@ -4,8 +4,6 @@ pcx-content-type: reference
 title: Encryption modes
 ---
 
-import SSLModeErrors from '../_partials/_ssl-mode-errors.md';
-
 # Encryption modes
 
 The modes listed below control the scheme (`http://` or `https://`) that Cloudflare uses to connect to your origin web server, and how SSL certificates presented by your origin will be validated.
@@ -68,7 +66,7 @@ Choose this option when you cannot set up an SSL certificate on your origin or y
 
 ### Required setup
 
-<SSLModeErrors />
+{{<render file="_ssl-mode-errors.md">}}
 
 ### Limitations
 
@@ -92,7 +90,7 @@ Before enabling **Full** mode, make sure your origin allows HTTPS connections on
 
 To prevent any unencrypted requests from reaching your origin, enable [Always Use HTTPS](/ssl/edge-certificates/additional-options/always-use-https/).
 
-<SSLModeErrors />
+{{<render file="_ssl-mode-errors.md">}}
 
 ### Limitations
 
@@ -126,7 +124,7 @@ To prevent any unencrypted requests from reaching your origin, enable [Always Us
 
 ### Limitations
 
-<SSLModeErrors />
+{{<render file="_ssl-mode-errors.md">}}
 
 ![SSL Encryption set to Full (strict)](../static/ssl-encryption-mode-full-strict.png)
 
@@ -150,7 +148,7 @@ The setup is the same as [**Full (strict)** mode](#full-strict), but you select 
 
 ### Limitations
 
-<SSLModeErrors />
+{{<render file="_ssl-mode-errors.md">}}
 
 ## ERR_SSL_VERSION_OR_CIPHER_MISMATCH
 

@@ -4,11 +4,9 @@ pcx-content-type: how-to
 title: TLS 1.3
 ---
 
-import TLS13Definition from '../../_partials/_tls-13-definition.md';
-
 # TLS 1.3
 
-<TLS13Definition />
+{{<render file="_tls-13-definition.md">}}
 
 ## What is TLS 1.3?
 

@@ -4,11 +4,10 @@ pcx-content-type: concept
 title: Monitors
 ---
 
-import MonitorDefinition from '../_partials/_monitor-definition.md';
 
 # Monitors
 
-<MonitorDefinition />
+{{<render file="_monitor-definition.md">}}
 
 ![Dynamic load balancing involves pools, origins, monitors, and health checks](../static/images/load-balancer-components.png)
 

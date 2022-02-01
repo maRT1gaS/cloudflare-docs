@@ -5,12 +5,9 @@ type: overview
 title: API Discovery
 ---
 
-import Availability from '../_partials/_availability.md';
-import BlogBlurb from '../_partials/_blog-post.md';
-
 # API Discovery
 
-<Availability />
+{{<render file="_availability.md">}}
 
 Most development teams struggle to keep track of their APIs. Cloudflare API Discovery helps you map out and understand your attack surface area.
 
@@ -35,7 +32,7 @@ API Discovery runs this process across all your authenticated endpoints, eventua
 
 This process currently requires a session identifier, like an authorization token available as a request header. Once you have finished API Discovery, your APIs are ready for protection from [volumetric](/api-security/volumetric-abuse-detection/) and [sequential](/api-security/sequential-abuse-detection/) attacks.
 
-<BlogBlurb />
+{{<render file="_blog-post.md">}}
 
 ## API requests
 

@@ -5,18 +5,9 @@ hidden: true
 title: Protect your origin server — Enterprise
 ---
 
-import OriginHealthOverview from '../../_partials/_origin-health-overview';
-import OriginHealthCheck from '../../_partials/_origin-health-check';
-import OriginLBAlert from '../../_partials/_origin-lb-alert';
-import DDoS from '../../_partials/_origin-ddos';
-import FirewallOptions from '../../_partials/_origin-firewall-options';
-import Caching from '../../_partials/_origin-caching';
-import LoadBalancing from '../../_partials/_origin-load-balancing';
-import WaitingRoom from '../../_partials/_origin-waiting-room';
-
 # Protect your origin server — Enterprise
 
-<OriginHealthOverview />
+{{<render file="_origin-health-overview.md">}}
 
 ## Secure origin connections
 
@@ -32,24 +23,24 @@ When you secure origin connections, it prevents attackers from discovering and o
 
 For passive monitoring, [create notifications](/fundamentals/notifications/configure-create/create-notifications/) for **Origin Error Rate Alerts** to receive alerts when your origin returns 5xx codes above a configurable threshold and **Passive Origin Monitoring** to see when Cloudflare is unable to reach your origin for a few minutes.
 
-<OriginHealthCheck />
+{{<render file="_origin-health-check.md">}}
 
-<OriginLBAlert />
+{{<render file="_origin-lb-alert.md">}}
 
 ## Reduce origin traffic
 
 ### Block traffic
 
-<DDoS />
+{{<render file="_origin-ddos.md">}}
 
-<FirewallOptions />
+{{<render file="_origin-firewall-options.md">}}
 
 ### Increase caching
 
-<Caching />
+{{<render file="_origin-caching.md">}}
 
 ### Distribute traffic
 
-<LoadBalancing />
+{{<render file="_origin-load-balancing.md">}}
 
-<WaitingRoom />
+{{<render file="_origin-waiting-room.md">}}

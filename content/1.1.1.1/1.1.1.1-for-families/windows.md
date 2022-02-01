@@ -6,8 +6,6 @@ meta:
   title: Set up 1.1.1.1 for Families - Windows 10
 ---
 
-import CaptivePortals from '../_partials/_captive-portals.md';
-
 # Set up 1.1.1.1 for Families - Windows 10
 
 Follow these steps to configure 1.1.1.1 for Families:
@@ -112,4 +110,4 @@ Follow these steps to configure 1.1.1.1 for Families:
 
 8.  Click **OK**.
 
-<CaptivePortals />
+{{<render file="_captive-portals.md">}}

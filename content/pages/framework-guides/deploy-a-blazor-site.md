@@ -3,7 +3,6 @@ pcx-content-type: how-to
 title: Deploy a Blazor Site
 ---
 
-import TutorialsBeforeYouStart from '../_partials/_tutorials-before-you-start.md';
 
 # Deploy a Blazor Site
 
@@ -32,7 +31,7 @@ To deploy, Cloudflare Pages will need a way to build the Blazor project. In the 
     ./dotnet6/dotnet --version
     ./dotnet6/dotnet publish -c Release -o output
 
-<TutorialsBeforeYouStart />
+{{<render file="_tutorials-before-you-start.md">}}
 
 ## Creating a GitHub repository
 

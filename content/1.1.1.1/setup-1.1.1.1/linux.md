@@ -6,8 +6,6 @@ meta:
   title: Set up 1.1.1.1 - Linux
 ---
 
-import CaptivePortals from '../_partials/_captive-portals.md';
-
 # Set up 1.1.1.1 - Linux
 
 Follow these steps to configure 1.1.1.1 in Ubuntu and Debian:
@@ -68,8 +66,8 @@ For IPv6:
 
 1.  Press the <kbd>ESC</kbd> key on your keyboard to save and exit Vim. Then, type:
 
-<!---->
-
+    ```txt
     :wq
+    ```
 
-<CaptivePortals />
+{{<render file="_captive-portals.md">}}

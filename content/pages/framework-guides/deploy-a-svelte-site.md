@@ -3,7 +3,6 @@ pcx-content-type: how-to
 title: Deploy a Svelte site
 ---
 
-import TutorialsBeforeYouStart from '../_partials/_tutorials-before-you-start.md';
 
 # Deploy a Svelte site
 
@@ -27,7 +26,7 @@ $ cd my-svelte-app
 
 During `init`, SvelteKit will prompt you for customization choices. Your answers will not affect the rest of this tutorial. Choose the option that is ideal for your project.
 
-<TutorialsBeforeYouStart />
+{{<render file="_tutorials-before-you-start.md">}}
 
 ## Creating a GitHub repository
 

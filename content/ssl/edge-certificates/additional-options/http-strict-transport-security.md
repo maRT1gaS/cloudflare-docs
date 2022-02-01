@@ -5,11 +5,9 @@ type: overview
 title: HTTP Strict Transport Security (HSTS)
 ---
 
-import HSTSDefinition from '../../_partials/_hsts-definition.md';
-
 # HTTP Strict Transport Security (HSTS)
 
-<HSTSDefinition />
+{{<render file="_hsts-definition.md">}}
 
 HSTS adds an HTTP header that directs [compliant web browsers](/ssl/ssl-tls/browser-compatibility/) to:
 

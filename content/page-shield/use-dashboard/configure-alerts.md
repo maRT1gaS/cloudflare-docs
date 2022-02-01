@@ -6,15 +6,12 @@ meta:
   title: Configure Page Shield alerts
 ---
 
-import AlertsIntro from '../_partials/_alerts-intro.md';
-import ConfigureAlerts from '../_partials/_alerts-configure.md';
-
 # Configure Page Shield alerts
 
-<AlertsIntro />
+{{<render file="_alerts-intro.md">}}
 
 {{<Aside type="note">}}
 Only available to customers on Business and Enterprise plans.
 {{</Aside>}}
 
-<ConfigureAlerts />
+{{<render file="_alerts-configure.md">}}

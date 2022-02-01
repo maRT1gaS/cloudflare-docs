@@ -4,9 +4,6 @@ pcx-content-type: how-to
 title: Manage advanced certificates
 ---
 
-import DCVDefinition from '../../_partials/_dcv-definition.md';
-import CipherSuitesDefinition from '../../_partials/_cipher-suites-definition.md';
-
 # Manage advanced certificates
 
 ## Create a certificate
@@ -61,7 +58,7 @@ To restart validation for a certificate in a `validation_timed_out` status, send
 
 ## Restrict cipher suites
 
-<CipherSuitesDefinition />
+{{<render file="_cipher-suites-definition.md">}}
 
 For more details, refer to [Disable cipher suites](/ssl/ssl-tls/cipher-suites/#disable-cipher-suites).
 
@@ -69,7 +66,7 @@ For more details, refer to [Disable cipher suites](/ssl/ssl-tls/cipher-suites/#d
 
 ## Perform domain control validation (DCV)
 
-<DCVDefinition />
+{{<render file="_dcv-definition.md">}}
 
 Normally, you only need to update DCV if you have your application on a partial setup (Cloudflare does not run your authoritative nameservers).
 

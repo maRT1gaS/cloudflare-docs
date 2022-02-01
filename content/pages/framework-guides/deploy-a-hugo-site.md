@@ -3,7 +3,6 @@ pcx-content-type: how-to
 title: Deploy a Hugo site
 ---
 
-import TutorialsBeforeYouStart from '../_partials/_tutorials-before-you-start.md';
 
 # Deploy a Hugo site
 
@@ -55,7 +54,7 @@ The Hugo GitHub repository contains pre-built versions of the Hugo command-line 
 
 For more instruction on installing these releases, refer to [Hugo's install guide](https://gohugo.io/getting-started/installing/).
 
-<TutorialsBeforeYouStart />
+{{<render file="_tutorials-before-you-start.md">}}
 
 ## Creating a new project
 

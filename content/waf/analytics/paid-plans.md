@@ -6,31 +6,25 @@ meta:
   title: Firewall Analytics — Paid plans
 ---
 
-import FilterReportDuration from '../_partials/_analytics-filter-report-duration.md';
-import CreateFirewallRule from '../_partials/_analytics-create-firewall-rule.md';
-import ShareFilters from '../_partials/_analytics-share-url.md';
-import ActivityLog from '../_partials/_analytics-activity-log.md';
-import ExportData from '../_partials/_analytics-export-data.md';
-
 # Firewall Analytics — Paid plans
 
 ## Adjusting displayed data
 
 You can apply multiple filters and exclusions to narrow the scope of Firewall Analytics, as well as adjust the report duration. Modifying the duration, filters, or exclusions affects the analytics data displayed on the entire page including the **Activity Log** and all graphs, except for the **Denial-of-service attacks mitigated** graph.
 
-![Add a new filter in Firewall Analytics](../images/analytics-add-filter.png)
+![Add a new filter in Firewall Analytics](/waf/images/analytics-add-filter.png)
 
-<FilterReportDuration />
+{{<render file="_analytics-filter-report-duration.md">}}
 
 ## Create Firewall Rule from current filters
 
-<CreateFirewallRule />
+{{<render file="_analytics-create-firewall-rule.md">}}
 
 ## Events summary
 
 The **Events summary** section provides the number of Firewall events on traffic during the selected time period, grouped according to the selected dimension (for example, **Action**, **Host**, **Country**, or **ASN**).
 
-![Filter Firewall Analytics by action](../images/analytics-events-summary.png)
+![Filter Firewall Analytics by action](/waf/images/analytics-events-summary.png)
 
 You can adjust the displayed data according to one of the values by clicking **Filter** or **Exclude** when hovering the legend.
 
@@ -52,13 +46,12 @@ A deleted Firewall Rule or Rate Limiting rule will show as `Rule unavailable` un
 
 ## Activity log
 
-<ActivityLog />
-
-<ExportData />
+{{<render file="_analytics-activity-log.md">}}
+{{<render file="_analytics-export-data.md">}}
 
 ## Share Firewall Analytics filters
 
-<ShareFilters />
+{{<render file="_analytics-share-url.md">}}
 
 ## Print or download PDF report
 

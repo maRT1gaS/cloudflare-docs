@@ -4,11 +4,9 @@ pcx-content-type: concept
 title: Certificate Transparency Monitoring
 ---
 
-import CertTransparencyDefinition from '../../_partials/_cert-transparency-monitoring-definition.md';
-
 # Certificate Transparency Monitoring
 
-<CertTransparencyDefinition />
+{{<render file="_cert-transparency-monitoring-definition.md">}}
 
 {{<Aside type="note">}}
 If you use a shared certificate, you may receive notifications for domains or subdomains that do not belong to you.

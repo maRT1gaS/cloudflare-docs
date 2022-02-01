@@ -3,7 +3,6 @@ pcx-content-type: how-to
 title: Deploy an Eleventy site
 ---
 
-import TutorialsBeforeYouStart from '../_partials/_tutorials-before-you-start.md';
 
 # Deploy an Eleventy site
 
@@ -27,7 +26,7 @@ $ cd my-blog-name
 $ npm install
 ```
 
-<TutorialsBeforeYouStart />
+{{<render file="_tutorials-before-you-start.md">}}
 
 ## Creating a GitHub repository
 

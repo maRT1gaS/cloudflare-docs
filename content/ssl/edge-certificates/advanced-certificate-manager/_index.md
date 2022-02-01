@@ -4,13 +4,11 @@ pcx-content-type: concept
 title: Advanced Certificate Manager
 ---
 
-import ACMDefinition from '../../\_partials/\_acm-definition.md';
-
 # Advanced Certificate Manager
 
 Advanced Certificate Manager offers a flexible and customizable way to issue and manage certificates.
 
-<ACMDefinition />
+{{<render file="_acm-definition.md">}}
 
 {{<Aside type="note" header="Note">}}
 Advanced certificates supercede legacy [Dedicated SSL certificates](https://support.cloudflare.com/hc/articles/228009108).

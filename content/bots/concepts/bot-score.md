@@ -4,7 +4,6 @@ pcx-content-type: concept
 title: Bot scores
 ---
 
-import BMBotDetectionEngines from '../_partials/_bm-bot-detection-engines.md';
 
 # Bot scores
 
@@ -31,7 +30,7 @@ Customers with a Pro plan or higher can automatically see bot traffic divided in
 The following detection engines only apply to Enterprise Bot Management. For specific details about the engines included in your plan, refer to [Plans](/bots/plans/).
 {{</Aside>}}
 
-<BMBotDetectionEngines />
+{{<render file="_bm-bot-detection-engines.md">}}
 
 ## Comparison to Threat Score
 

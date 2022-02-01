@@ -3,7 +3,6 @@ pcx-content-type: how-to
 title: Deploy a React application
 ---
 
-import TutorialsBeforeYouStart from '../_partials/_tutorials-before-you-start.md';
 
 # Deploy a React application
 
@@ -19,7 +18,7 @@ Create a new project using `npx`, giving it the title `my-react-app` in your ter
 $ npx create-react-app my-react-app
 ```
 
-<TutorialsBeforeYouStart />
+{{<render file="_tutorials-before-you-start.md">}}
 
 ## Creating a GitHub repository
 

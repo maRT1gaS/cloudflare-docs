@@ -6,9 +6,6 @@ meta:
   title: Get started with Cloudflare Page Shield
 ---
 
-import AlertsIntro from '../_partials/_alerts-intro.md';
-import ConfigureAlerts from '../_partials/_alerts-configure.md';
-
 # Get started with Cloudflare Page Shield
 
 ## Activate Page Shield
@@ -27,6 +24,6 @@ For guidance on using Page Shield's Script Monitor dashboard, refer to [Monitor 
 Only available to customers on Business and Enterprise plans.
 {{</Aside>}}
 
-<AlertsIntro />
+{{<render file="_alerts-intro.md">}}
 
-<ConfigureAlerts />
+{{<render file="_alerts-configure.md">}}

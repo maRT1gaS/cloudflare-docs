@@ -8,7 +8,7 @@ title: Query Postgres from Workers using a database connector
 
 # Query Postgres from Workers using a database connector
 
-<TutorialsBeforeYouStart />
+{{<render file="_tutorials-before-you-start.md">}}
 
 ## Overview
 

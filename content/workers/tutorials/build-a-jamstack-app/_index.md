@@ -6,11 +6,9 @@ pcx-content-type: tutorial
 title: Build a Todo list JAMstack application
 ---
 
-import TutorialsBeforeYouStart from '../../\_partials/\_tutorials-before-you-start.md';
-
 # Build a Todo list JAMstack application
 
-<TutorialsBeforeYouStart />
+{{<render file="_tutorials-before-you-start.md">}}
 
 ## Overview
 

@@ -4,11 +4,9 @@ pcx-content-type: concept
 title: Automatic HTTPS Rewrites
 ---
 
-import AutomaticHTTPSRewritesDefinition from '../../_partials/_automatic-https-rewrites-definition.md';
-
 # Automatic HTTPS Rewrites
 
-<AutomaticHTTPSRewritesDefinition />
+{{<render file="_automatic-https-rewrites-definition.md">}}
 
 ## Additional details
 

@@ -4,14 +4,10 @@ pcx-content-type: how-to
 title: Create a monitor
 ---
 
-import MonitorDefinition from '../_partials/_monitor-definition.md';
-import MonitorCreate from '../_partials/_monitor-create.md';
-import MonitorPrepareServers from '../_partials/_monitor-prepare-server.md';
-import MonitorCreateAPI from '../_partials/_monitor-create-api.md';
 
 # Create a monitor
 
-<MonitorDefinition />
+{{<render file="_monitor-definition.md">}}
 
 For more details about monitors, refer to [Monitors](/load-balancing/understand-basics/monitors/).
 
@@ -21,11 +17,11 @@ For more details about monitors, refer to [Monitors](/load-balancing/understand-
 
 ### Set up the monitor
 
-<MonitorCreate />
+{{<render file="_monitor-create.md">}}
 
 ### Prepare your servers
 
-<MonitorPrepareServers />
+{{<render file="_monitor-prepare-server.md">}}
 
 ### Attach the monitor to a pool
 
@@ -51,11 +47,11 @@ Once your monitor is created, you need to attach it to an origin pool:
 
 ### Set up the monitor
 
-<MonitorCreateAPI />
+{{<render file="_monitor-create-api.md">}}
 
 ### Prepare your servers
 
-<MonitorPrepareServers />
+{{<render file="_monitor-prepare-server.md">}}
 
 ### Attach the monitor to a pool
 
