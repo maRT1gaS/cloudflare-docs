@@ -13,12 +13,17 @@ export function init() {
   });
 }
 
+type ListItem = HTMLLIElement & {
+  timer?: NodeJS.Timeout | void;
+}
+
 function toggle(ev: Event) {
   let attr = 'is-expanded';
 
-  let item = (ev.target as HTMLLIElement).closest('li')!;
-  let isExpanded = item.hasAttribute(attr);
+  let item: ListItem = (ev.target as HTMLLIElement).closest('li')!;
+  if (item.timer) item.timer = clearTimeout(item.timer);
 
+  let isExpanded = item.hasAttribute(attr);
   let aria = item.querySelector('span[is-visually-hidden]');
   aria!.textContent = isExpanded ? 'Expand' : 'Collapse';
 
@@ -40,7 +45,7 @@ function toggle(ev: Event) {
   }, 1);
 
   if (!isExpanded) {
-    setTimeout(() => {
+    item.timer = setTimeout(() => {
       container.style.height = 'auto';
       container.classList.add('DocsSidebar--nav-item-collapse-entered');
     }, 400);
