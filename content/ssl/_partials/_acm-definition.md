@@ -1,0 +1,7 @@
+---
+_build:
+  publishResources: false
+  render: never
+  list: never
+---
+Use Advanced Certificate Manager when you want something more customizable than [Universal SSL](/edge-certificates/universal-ssl) but still want the convenience of SSL certificate issuance and renewal.

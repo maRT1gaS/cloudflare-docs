@@ -1,0 +1,7 @@
+---
+_build:
+  publishResources: false
+  render: never
+  list: never
+---
+If you would like to request an immediate recheck, [rather than wait for the next retry](/ssl-for-saas/reference/validation-backoff-schedule), send a [PATCH request](https://api.cloudflare.com/#custom-hostname-for-a-zone-edit-custom-hostname) with the same values as your initial `POST` request.
