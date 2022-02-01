@@ -24,17 +24,25 @@ function toggle(ev: Event) {
 
   let container = item.querySelector('div')!; // .DocsSidebar--nav-item-collapse-container
   container.className = 'DocsSidebar--nav-item-collapse-container';
-  container.style.cssText = 'min-height:0px;transition-duration:400ms;height:0';
+  container.style.cssText = 'min-height:0px;transition-duration:400ms;';
 
-  if (isExpanded) {
-    // minimize
-    item.removeAttribute(attr);
-  } else {
-    // expand
-    item.setAttribute(attr, '');
+  // .DocsSidebar--nav-item-collapse-wrapper
+  let sizes = [0, container.firstElementChild!.clientHeight];
 
-    let wrapper = container.firstElementChild!; // .DocsSidebar--nav-item-collapse-wrapper
-    setTimeout(() => container.style.height = wrapper.clientHeight + 'px', 1);
-    setTimeout(() => container.classList.add('DocsSidebar--nav-item-collapse-entered'), 400);
+  item.toggleAttribute(attr, !isExpanded);
+
+  let initial = +isExpanded;
+  // expanded:: height -> 0 || minimize:: 0 -> height
+  container.style.height = sizes[initial] + 'px';
+
+  setTimeout(() => {
+    container.style.height = sizes[1 - initial] + 'px';
+  }, 1);
+
+  if (!isExpanded) {
+    setTimeout(() => {
+      container.style.height = 'auto';
+      container.classList.add('DocsSidebar--nav-item-collapse-entered');
+    }, 400);
   }
 }
