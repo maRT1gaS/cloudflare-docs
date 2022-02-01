@@ -1,6 +1,14 @@
-{{- $active := (eq .Active .Context.Permalink) -}}
+{{- $current := .Context.Permalink -}}
+{{- $active := (eq .Active $current) -}}
+{{- $isExpand := (and .Context.IsSection (hasPrefix .Active $current)) -}}
 
-<li class="DocsSidebar--nav-item"{{ if $active }} is-active{{ end }}>
+{{- if $active -}}
+<li class="DocsSidebar--nav-item" is-active>
+{{- else if $isExpand -}}
+<li class="DocsSidebar--nav-item" is-active-root is-expanded>
+{{- else -}}
+<li class="DocsSidebar--nav-item">
+{{- end -}}
   {{- if .Context.IsSection -}}
   <button class="Button DocsSidebar--nav-expand-collapse-button">
     <span class="DocsSidebar--nav-expand-collapse-button-content" aria-hidden="true"></span>
@@ -8,15 +16,19 @@
   </button>
   {{- end -}}
 
-  <a {{ if $active }}aria-current="page" {{ end }}class="DocsSidebar--nav-link" href="{{ .Context.Permalink }}"{{ if $active }} is-active{{ end }}>
+  <a {{ if $active }}aria-current="page" {{ end }}class="DocsSidebar--nav-link" href="{{ $current }}"{{ if $active }} is-active{{ end }}>
     <span class="DocsSidebar--nav-link-highlight"></span>
     <span class="DocsSidebar--nav-link-text">{{ .Context.Title }}</span>
   </a>
 
   {{- if .Context.IsSection -}}
-    {{- $active := .Active }}
-    {{- $next := (add .Depth 1) }}
-    <div class="DocsSidebar--nav-item-collapse-container DocsSidebar--nav-item-collapse-hidden" style="min-height:0px">
+    {{- $active := .Active -}}
+    {{- $next := (add .Depth 1) -}}
+    {{- if and $isExpand (ne .Active $current) -}}
+    <div class="DocsSidebar--nav-item-collapse-container DocsSidebar--nav-item-collapse-expanded" style="min-height:0px;transition-duration:400ms" is-expanded>
+    {{- else -}}
+    <div class="DocsSidebar--nav-item-collapse-container DocsSidebar--nav-item-collapse-hidden" style="min-height:0px;">
+    {{- end -}}
       <div class="DocsSidebar--nav-item-collapse-wrapper">
         <div class="DocsSidebar--nav-item-collapse-wrapperInner">
           <div class="DocsSidebar--nav-item-collapse-content">

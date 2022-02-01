@@ -5,6 +5,11 @@ export function init() {
   document.querySelectorAll<HTMLButtonElement>('.DocsSidebar--nav-expand-collapse-button').forEach(btn => {
     let item = btn.parentNode; // .DocsSidebar--nav-item
     if (item) btn.addEventListener('click', toggle);
+
+    let div = item.querySelector('div'); // .DocsSidebar--nav-item-collapse-container
+    if (div && div.hasAttribute('is-expanded')) {
+      div.style.height = div.firstElementChild.clientHeight + 'px'!;
+    }
   });
 }
 

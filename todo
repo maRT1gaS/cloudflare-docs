@@ -3,7 +3,7 @@
 - [x] frontmatter for code snippets (highlight, theme, etc)
 - [ ] (BIG) convert all engine components -> partials
 - [ ] (BIG) grab ALL markup output for 1:1 alignment
-- [ ] check mobile menus, etc
+- [x] check mobile menus, etc
 - [x] fix link hrefs
 - [x] sidenav anim
 - [ ] sidenav persist (`swaps` for content)
@@ -18,10 +18,10 @@
 
 ---
 
-- [ ] (sidebar) dropdown JS
+- [-] (sidebar) dropdown JS
 - [x] (sidebar) mobile toggle JS
 - [ ] (sidebar) frontmatter for "no subnavs"
-- [ ] (sidebar) mark "active" root subnav on load
+- [x] (sidebar) mark "active" root subnav on load
 
 - [ ] (topbar) position for feedback
 - [ ] (topbar) algolia search
