@@ -7,9 +7,7 @@ export function init() {
     if (item) btn.addEventListener('click', toggle);
 
     let div = item.querySelector('div'); // .DocsSidebar--nav-item-collapse-container
-    if (div && div.hasAttribute('is-expanded')) {
-      div.style.height = div.firstElementChild.clientHeight + 'px'!;
-    }
+    if (div && div.hasAttribute('is-expanded')) div.style.height = 'auto';
   });
 }
 
