@@ -2,6 +2,7 @@
 title: Plans
 weight: 3
 type: overview
+layout: list
 pcx-content-type: navigation
 meta:
   title: Cloudflare bot plans

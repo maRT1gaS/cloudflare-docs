@@ -1,5 +1,6 @@
 ---
 weight: 1000
+layout: list
 type: example
 summary: Send a POST request with JSON data. Use to share data with external servers.
 tags:

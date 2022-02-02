@@ -2,6 +2,7 @@
 title: Welcome
 weight: 0
 type: overview
+layout: list
 ---
 
 {{<content-column>}}

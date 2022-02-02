@@ -1,5 +1,6 @@
 ---
 weight: 1
+layout: list
 type: example
 summary: Return JSON directly from a Worker script, useful for building APIs and
   middleware.

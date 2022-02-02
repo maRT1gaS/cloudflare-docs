@@ -1,5 +1,6 @@
 ---
 weight: 1000
+layout: list
 type: example
 summary: Send two GET request to two urls and aggregates the responses into one
   response.

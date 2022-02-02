@@ -1,5 +1,6 @@
 ---
 weight: 1000
+layout: list
 type: example
 summary: Get all geolocation data fields and display them in HTML.
 tags:

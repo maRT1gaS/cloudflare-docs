@@ -2,6 +2,7 @@
 weight: 1
 pcx-content-type: navigation
 type: overview
+layout: list
 title: Products
 ---
 

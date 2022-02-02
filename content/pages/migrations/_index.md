@@ -1,5 +1,6 @@
 ---
 type: overview
+layout: list
 hideChildren: true
 weight: 4
 pcx-content-type: navigation

@@ -1,5 +1,6 @@
 ---
 weight: 1000
+layout: list
 type: example
 summary: Protect sensitive data to prevent data loss, and send alerts to a
   webhooks server in the event of a data breach.

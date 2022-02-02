@@ -1,5 +1,6 @@
 ---
 weight: 1000
+layout: list
 type: example
 summary: Push static assets to a client's browser without waiting for HTML to render.
 tags:

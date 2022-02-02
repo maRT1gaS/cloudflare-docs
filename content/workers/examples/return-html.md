@@ -1,5 +1,6 @@
 ---
 weight: 0
+layout: list
 type: example
 summary: Deliver an HTML page from an HTML string directly inside the Worker script.
 demo: https://returning-html.workers-sites-examples.workers.dev

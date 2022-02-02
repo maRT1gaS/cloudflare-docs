@@ -1,6 +1,7 @@
 ---
 title: 2021-03-06 – Emergency
 type: table
+layout: list
 weight: 945
 meta:
   title: 2021-03-06 – Emergency release

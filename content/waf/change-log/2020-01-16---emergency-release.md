@@ -1,6 +1,7 @@
 ---
 title: 2020-01-16 – Emergency
 type: table
+layout: list
 weight: 986
 meta:
   title: 2020-01-16 – Emergency release

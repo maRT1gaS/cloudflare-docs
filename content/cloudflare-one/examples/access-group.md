@@ -1,5 +1,6 @@
 ---
 weight: 3
+layout: list
 type: example
 summary: Use a pre-existing Access group.
 tags:

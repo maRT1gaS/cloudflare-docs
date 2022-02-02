@@ -1,5 +1,6 @@
 ---
 weight: 1000
+layout: list
 type: example
 summary: Block other websites from linking to your content. This is useful for
   protecting images.

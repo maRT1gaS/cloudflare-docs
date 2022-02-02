@@ -1,5 +1,6 @@
 ---
 weight: 1000
+layout: list
 type: example
 summary: Shows how to restrict access using the HTTP "Basic" schema.
 tags:

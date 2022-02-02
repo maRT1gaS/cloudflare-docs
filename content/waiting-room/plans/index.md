@@ -3,6 +3,7 @@ title: Plans
 weight: 2
 pcx-content-type: reference
 type: overview
+layout: list
 meta:
   title: Features by plan type
 ---

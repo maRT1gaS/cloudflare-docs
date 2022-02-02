@@ -2,6 +2,7 @@
 pcx-content-type: how-to
 weight: 15
 type: overview
+layout: list
 title: Create Rate Limiting rules via API
 ---
 

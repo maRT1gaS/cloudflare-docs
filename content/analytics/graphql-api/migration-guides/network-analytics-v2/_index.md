@@ -1,6 +1,7 @@
 ---
 weight: 13
 type: overview
+layout: list
 pcx-content-type: reference
 title: Network Analytics v1 to Network Analytics v2
 ---

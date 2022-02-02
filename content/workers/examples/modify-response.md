@@ -1,5 +1,6 @@
 ---
 weight: 1000
+layout: list
 type: example
 summary: Fetch and modify response properties which are immutable by creating a
   copy first.

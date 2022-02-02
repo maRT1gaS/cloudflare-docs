@@ -3,6 +3,7 @@ title: Generate a key pair
 pcx-content-type: how-to
 weight: 1
 type: overview
+layout: list
 meta:
   title: Generate a key pair in the command line
 ---

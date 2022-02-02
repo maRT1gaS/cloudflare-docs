@@ -2,6 +2,7 @@
 weight: 4
 pcx-content-type: reference
 type: overview
+layout: list
 title: Accessing User Properties
 ---
 

@@ -3,6 +3,7 @@ title: Welcome
 pcx-content-type: landing-page
 weight: 0
 type: overview
+layout: list
 meta:
   title: Cloudflare Time Services docs
 ---

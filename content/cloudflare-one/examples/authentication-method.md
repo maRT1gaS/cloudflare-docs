@@ -1,5 +1,6 @@
 ---
 weight: 3
+layout: list
 type: example
 summary: Allow access based on the "amr" identifier.
 tags:

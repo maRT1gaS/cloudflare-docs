@@ -1,5 +1,6 @@
 ---
 weight: 3
+layout: list
 type: example
 summary: The request will need to present the correct service token headers.
 tags:

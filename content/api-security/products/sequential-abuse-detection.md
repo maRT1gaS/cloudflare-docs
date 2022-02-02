@@ -2,6 +2,7 @@
 weight: 3
 pcx-content-type: concept
 type: overview
+layout: list
 title: Sequential Abuse Detection
 ---
 

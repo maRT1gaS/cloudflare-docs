@@ -1,5 +1,6 @@
 ---
 weight: 1000
+layout: list
 type: example
 summary: Resolve requests to your domain to a set of proxy third-party origin URLs.
 tags:

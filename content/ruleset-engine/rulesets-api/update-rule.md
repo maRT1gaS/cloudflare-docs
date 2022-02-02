@@ -3,6 +3,7 @@ title: Update a rule in a ruleset
 pcx-content-type: reference
 weight: 786
 type: overview
+layout: list
 ---
 
 # Update a rule in a ruleset

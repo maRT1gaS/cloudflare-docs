@@ -1,5 +1,6 @@
 ---
 weight: 3
+layout: list
 type: example
 summary: The request will need to present the headers for any service token
   created for this account.

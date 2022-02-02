@@ -1,6 +1,7 @@
 ---
 weight: 10
 type: table
+layout: list
 title: API tokens permissions
 ---
 

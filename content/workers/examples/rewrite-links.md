@@ -1,5 +1,6 @@
 ---
 weight: 1000
+layout: list
 type: example
 summary: Rewrite URL links in HTML using the HTMLRewriter. This is useful for
   JAMstack websites.

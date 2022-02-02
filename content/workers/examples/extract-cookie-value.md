@@ -1,5 +1,6 @@
 ---
 weight: 1000
+layout: list
 type: example
 summary: Given the cookie name, get the value of a cookie. You can also use
   cookies for A/B testing.

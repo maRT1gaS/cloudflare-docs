@@ -1,5 +1,6 @@
 ---
 weight: 1000
+layout: list
 type: example
 summary: Change the headers sent in a request or returned in a response.
 tags:

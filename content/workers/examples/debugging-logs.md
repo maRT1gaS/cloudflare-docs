@@ -1,5 +1,6 @@
 ---
 weight: 1000
+layout: list
 type: example
 summary: Send debugging information in an errored response to a logging service.
 tags:

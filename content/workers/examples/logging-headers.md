@@ -1,5 +1,6 @@
 ---
 weight: 1000
+layout: list
 type: example
 summary: Examine the contents of a Headers object by logging to console with a Map.
 tags:

@@ -3,6 +3,7 @@ title: Overview
 weight: 0
 pcx-content-type: landing-page
 type: overview
+layout: list
 meta:
   title: Cloudflare API Security
 ---

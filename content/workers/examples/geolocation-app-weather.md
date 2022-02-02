@@ -1,5 +1,6 @@
 ---
 weight: 1000
+layout: list
 type: example
 summary: Fetch weather data from an API using the user's geolocation data.
 tags:

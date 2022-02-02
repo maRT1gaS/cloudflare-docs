@@ -1,6 +1,7 @@
 ---
 weight: null
 type: overview
+layout: list
 pcx-content-type: reference
 title: JavaScript detections
 ---

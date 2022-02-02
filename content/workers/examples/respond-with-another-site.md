@@ -1,5 +1,6 @@
 ---
 weight: 11
+layout: list
 type: example
 summary: Respond to the Worker request with the response from another website
   (example.com in this example).

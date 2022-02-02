@@ -1,5 +1,6 @@
 ---
 weight: 1000
+layout: list
 type: example
 summary: Return a response based on the incoming request's URL, HTTP method,
   User Agent, IP address, ASN or device type.

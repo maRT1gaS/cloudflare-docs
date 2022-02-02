@@ -1,5 +1,6 @@
 ---
 weight: 1000
+layout: list
 type: example
 summary: Create a modified request with edited properties based off of an
   incoming request.

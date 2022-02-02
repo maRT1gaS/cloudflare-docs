@@ -2,6 +2,7 @@
 pcx-content-type: how-to
 weight: 2
 type: overview
+layout: list
 title: Create Custom Firewall rules via API
 ---
 

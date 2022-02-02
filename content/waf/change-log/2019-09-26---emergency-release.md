@@ -1,6 +1,7 @@
 ---
 title: 2019-09-26 – Emergency
 type: table
+layout: list
 weight: 999
 meta:
   title: 2019-09-26 – Emergency release

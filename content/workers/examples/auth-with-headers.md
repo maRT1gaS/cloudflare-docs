@@ -1,5 +1,6 @@
 ---
 weight: 1000
+layout: list
 type: example
 summary: Allow or deny a request based on a known pre-shared key in a header.
   This is not meant to replace the WebCrypto API.

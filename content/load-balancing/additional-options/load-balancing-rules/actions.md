@@ -2,6 +2,7 @@
 title: Actions
 weight: 30
 type: overview
+layout: list
 pcx-content-type: reference
 meta:
   title: Load Balancing actions

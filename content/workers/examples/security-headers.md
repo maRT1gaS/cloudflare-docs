@@ -1,5 +1,6 @@
 ---
 weight: 1000
+layout: list
 type: example
 summary: Set common security headers (X-XSS-Protection, X-Frame-Options,
   X-Content-Type-Options, Permissions-Policy, Referrer-Policy,

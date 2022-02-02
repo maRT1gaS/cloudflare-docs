@@ -1,5 +1,6 @@
 ---
 weight: 3
+layout: list
 type: example
 summary: Allow users with specific SAML attributes.
 tags:

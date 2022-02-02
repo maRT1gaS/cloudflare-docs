@@ -1,5 +1,6 @@
 ---
 weight: 1000
+layout: list
 type: example
 summary: Use the Cache API to store responses in Cloudflare's cache.
 tags:

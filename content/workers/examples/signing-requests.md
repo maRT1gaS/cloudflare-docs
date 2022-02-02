@@ -1,5 +1,6 @@
 ---
 weight: 1000
+layout: list
 type: example
 summary: Sign and verify a request using the HMAC and SHA-256 algorithms or
   return a 403.

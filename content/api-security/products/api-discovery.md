@@ -2,6 +2,7 @@
 weight: 0
 pcx-content-type: concept
 type: overview
+layout: list
 title: API Discovery
 ---
 

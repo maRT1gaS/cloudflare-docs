@@ -1,5 +1,6 @@
 ---
 weight: 2
+layout: list
 type: example
 summary: Send a request to a remote server, read HTML from the response, and
   serve that HTML.

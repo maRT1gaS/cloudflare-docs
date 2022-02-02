@@ -1,5 +1,6 @@
 ---
 weight: 1000
+layout: list
 type: example
 summary: Add the necessary CORS headers to a third party API response.
 tags:

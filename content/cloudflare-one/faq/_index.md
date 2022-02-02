@@ -1,6 +1,7 @@
 ---
 weight: 100
 type: overview
+layout: list
 pcx-content-type: navigation
 hideChildren: true
 title: FAQ

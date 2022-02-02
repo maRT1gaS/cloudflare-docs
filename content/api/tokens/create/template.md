@@ -1,6 +1,7 @@
 ---
 weight: 5
 type: table
+layout: list
 title: API token templates
 ---
 

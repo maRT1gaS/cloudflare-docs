@@ -2,6 +2,7 @@
 title: Overview
 weight: 0
 type: overview
+layout: list
 pcx-content-type: landing-page
 meta:
   title: Cloudflare Pages documentation

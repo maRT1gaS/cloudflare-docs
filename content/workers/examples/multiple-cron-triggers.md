@@ -1,5 +1,6 @@
 ---
 weight: 1000
+layout: list
 type: example
 summary: Set multiple Cron Triggers on three different schedules.
 tags:

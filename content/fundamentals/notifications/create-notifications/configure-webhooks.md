@@ -1,6 +1,7 @@
 ---
 pcx-content-type: how-to
 type: overview
+layout: list
 title: Configure webhooks
 ---
 

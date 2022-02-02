@@ -2,6 +2,7 @@
 title: Create a rule via API
 pcx-content-type: how-to
 type: overview
+layout: list
 weight: 2
 meta:
   title: Create an HTTP Request Header Modification Rule via API

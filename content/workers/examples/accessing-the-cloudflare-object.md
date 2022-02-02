@@ -1,5 +1,6 @@
 ---
 weight: 10
+layout: list
 type: example
 summary: Access custom Cloudflare properties and control how Cloudflare features
   are applied to every request.

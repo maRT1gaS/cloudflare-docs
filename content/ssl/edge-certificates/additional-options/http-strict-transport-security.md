@@ -2,6 +2,7 @@
 weight: 3
 pcx-content-type: interim
 type: overview
+layout: list
 title: HTTP Strict Transport Security (HSTS)
 ---
 

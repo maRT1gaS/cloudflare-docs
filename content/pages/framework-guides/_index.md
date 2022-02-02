@@ -1,5 +1,6 @@
 ---
 type: overview
+layout: list
 weight: 3
 pcx-content-type: navigation
 title: Framework guides

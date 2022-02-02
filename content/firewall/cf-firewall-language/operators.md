@@ -2,6 +2,7 @@
 pcx-content-type: reference
 weight: 610
 type: table
+layout: list
 title: Operators and grouping symbols
 ---
 

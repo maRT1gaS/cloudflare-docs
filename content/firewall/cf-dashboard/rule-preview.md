@@ -2,6 +2,7 @@
 title: Preview rules
 pcx-content-type: interim
 type: table
+layout: list
 weight: 330
 ---
 

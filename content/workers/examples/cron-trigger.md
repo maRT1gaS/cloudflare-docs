@@ -1,5 +1,6 @@
 ---
 weight: 1000
+layout: list
 type: example
 summary: Set a Cron Trigger for your Worker.
 tags:

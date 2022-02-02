@@ -3,6 +3,7 @@ title: Analytics
 weight: 6
 pcx-content-type: concept
 type: overview
+layout: list
 meta:
   title: Firewall Analytics
 ---

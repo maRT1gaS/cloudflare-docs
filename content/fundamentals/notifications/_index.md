@@ -1,6 +1,7 @@
 ---
 weight: 4
 type: overview
+layout: list
 pcx-content-type: landing-page
 title: Cloudflare Notifications
 ---

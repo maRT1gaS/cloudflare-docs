@@ -1,5 +1,6 @@
 ---
 type: overview
+layout: list
 weight: null
 pcx-content-type: reference
 title: Settings by plan
