@@ -8,7 +8,7 @@ title: Historical
 
 # Historical
 
-<TableWrap><table style="width: 100%">
+{{<table-wrap>}}<table style="width: 100%">
 
 <thead>
   <tr>
@@ -2470,4 +2470,4 @@ title: Historical
   </tr>
 </tbody>
 
-</table></TableWrap>
+</table>{{</table-wrap>}}

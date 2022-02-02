@@ -84,7 +84,7 @@ For an up-to-date list of load balancer properties, refer to [Load balancer prop
 
 The Cloudflare API supports the following commands for load balancers.
 
-<TableWrap>
+{{<table-wrap>}}
 
 <table>
   <thead>
@@ -169,4 +169,4 @@ The Cloudflare API supports the following commands for load balancers.
   </tbody>
 </table>
 
-</TableWrap>
+{{</table-wrap>}}

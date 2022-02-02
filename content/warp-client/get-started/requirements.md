@@ -11,7 +11,7 @@ meta:
 
 Bellow, you will find the system requirements for the operating systems supported by WARP.
 
-<TableWrap>
+{{<table-wrap>}}
 
 |               | Windows                                                                                           | macOS                                                                              | Linux                                                                   | iOS                                                                    | Android                                                                                                                |
 | ------------- | ------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ----------------------------------------------------------------------- | ---------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
@@ -22,4 +22,4 @@ Bellow, you will find the system requirements for the operating systems supporte
 | Network types | WiFi or Lan                                                                                       | WiFi or Lan                                                                        | WiFi or Lan                                                             | -                                                                      | -                                                                                                                      |
 | Download link | [Cloudflare_WARP_Release-x64.msi](https://www.cloudflarewarp.com/Cloudflare_WARP_Release-x64.msi) | [Download Cloudflare_WARP.zip](https://www.cloudflarewarp.com/Cloudflare_WARP.zip) | [cloudflare-warp package repository](https://pkg.cloudflareclient.com/) | [1.1.1.1: Faster Internet](https://apps.apple.com/us/app/id1423538627) | [1.1.1.1: Faster & Safer Internet](https://play.google.com/store/apps/details?id=com.cloudflare.onedotonedotonedotone) |
 
-</TableWrap>
+{{</table-wrap>}}

@@ -62,7 +62,7 @@ For more information on deploying Managed Rulesets and defining overrides, check
 ### Custom rulesets
 
 {{<Aside type="warning" header="Important">}}
-Currently, custom rulesets are only supported by the Cloudflare WAF.
+  Currently, custom rulesets are only supported by the Cloudflare WAF.
 {{</Aside>}}
 
 Use custom rulesets to define your own sets of rules. After creating a custom ruleset, deploy it to a phase by creating a rule that executes the ruleset.

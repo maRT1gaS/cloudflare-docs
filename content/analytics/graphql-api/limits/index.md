@@ -18,7 +18,7 @@ Use the table below to identify which data nodes are included in your customer p
 Access to Network Analytics `*NetworkAnalyticsAdaptiveGroups` nodes is only available to Enterprise customers using Cloudflare [Magic Transit](https://www.cloudflare.com/magic-transit/) or Cloudflare [Spectrum](/spectrum/).
 {{</Aside>}}
 
-<TableWrap>
+{{<table-wrap>}}
 
 | Data node                                     |     Free |      Pro | Business | Enterprise |
 | :-------------------------------------------- | -------: | -------: | -------: | ---------: |
@@ -49,7 +49,7 @@ Access to Network Analytics `*NetworkAnalyticsAdaptiveGroups` nodes is only avai
 | `spectrumNetworkAnalyticsAdaptiveGroups`      |      n/a |      n/a |      n/a |    90 days |
 | `synAvgPps1mGroups`                           |      n/a |      n/a |      n/a |     7 days |
 
-</TableWrap>
+{{</table-wrap>}}
 
 _\* These nodes are deprecated. Refer to [Data Sets](/analytics/graphql-api/features/data-sets/#deprecated-data-nodes) for more information._
 
@@ -59,7 +59,7 @@ To obtain specific information regarding account limits for a particular data no
 
 The example query below demonstrates how to retrieve account limits for the `browserPerf1mGroups` data node. The example queries the following fields:
 
-<TableWrap>
+{{<table-wrap>}}
 
 | Field               | Description                                                                                            |
 | :------------------ | :----------------------------------------------------------------------------------------------------- |
@@ -69,7 +69,7 @@ The example query below demonstrates how to retrieve account limits for the `bro
 | `maxPageSize`       | Defines the maximum number of records that can be returned in one query (varies by data node).         |
 | `notOlderThan`      | Limits how far back in the record a query can search (in seconds, varies by data set and plan).        |
 
-</TableWrap>
+{{</table-wrap>}}
 
 ### Example query
 

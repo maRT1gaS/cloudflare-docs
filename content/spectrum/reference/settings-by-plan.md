@@ -15,7 +15,7 @@ Spectrum properties requiring an Enterprise plan:
 
 </ContentColumn>
 
-<TableWrap>
+{{<table-wrap>}}
 
 | Name           | Type    | Description                                                                                                                                                                                                                                                                                                 | Example                                                            |
 | -------------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------ |
@@ -25,7 +25,7 @@ Spectrum properties requiring an Enterprise plan:
 | ip_firewall    | boolean | Enables IP Access Rules for this application.                                                                                                                                                                                                                                                               | true                                                               |
 | tls            | string  | Type of TLS termination for the application. Options are "off" (default, aka Passthrough), "flexible", "full", and "strict". See [Configuration Options](/spectrum/configuration-options/) for descriptions of each.                                                                                        | "full"                                                             |
 
-</TableWrap>
+{{</table-wrap>}}
 
 <ContentColumn>
 

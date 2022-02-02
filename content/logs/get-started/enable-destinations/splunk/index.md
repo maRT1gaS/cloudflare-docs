@@ -162,7 +162,7 @@ If you have the Cloudflare Web Application Firewall (WAF) turned on, you may see
 2.  Click **Create firewall rule** and enter a descriptive name for it (for example, Splunk).
 3.  Under **When incoming requests match...**, use the **Field**, **Operator**, and **Value** dropdowns to create a rule. After finishing each row, click **And** to create the next row of rules. Refer to the table below for the values you should input:
 
-  <TableWrap>
+  {{<table-wrap>}}
 
 | Field            | Operator   | Value                                                             |
 | ---------------- | ---------- | ----------------------------------------------------------------- |
@@ -173,7 +173,7 @@ If you have the Cloudflare Web Application Firewall (WAF) turned on, you may see
 | AS Num           | `equals`   | `132892`                                                          |
 | User Agent       | `equals`   | `Go-http-client/2.0`                                              |
 
-  </TableWrap>
+  {{</table-wrap>}}
 
 1.  After inputting the values as shown in the table, you should have an Expression Preview with the values you added for your specific rule. The example below reflects the hostname `splunk.cf-analytics.com`.
 

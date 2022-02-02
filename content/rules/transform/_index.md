@@ -43,14 +43,14 @@ Cloudflare Transform Rules are available to all customers. Keep in mind that sup
 
 This table outlines the Transform Rules features available with each customer plan:
 
-<TableWrap>
+{{<table-wrap>}}
 
 | Feature                    | Free | Pro | Business | Enterprise |
 | -------------------------- | ---- | --- | -------- | ---------- |
 | Active Transform Rules     | 2    | 5   | 10       | 20         |
 | Regular expression support | No   | No  | Yes      | Yes        |
 
-</TableWrap>
+{{</table-wrap>}}
 
 A Cloudflare user must have the [Firewall role](https://support.cloudflare.com/hc/articles/205065067#12345682) or one of the Administrator roles to access Transform Rules.
 

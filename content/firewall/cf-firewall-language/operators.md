@@ -30,7 +30,7 @@ The Cloudflare Firewall Rules language supports these comparison operators:
 Access to the `matches` operator requires a Cloudflare Business or Enterprise plan.
 {{</Aside>}}
 
-<TableWrap style="width:100%">
+{{<table-wrap style="width:100%">}}
   <table style="width:100%">
     <thead>
       <tr>
@@ -223,7 +223,7 @@ Access to the `matches` operator requires a Cloudflare Business or Enterprise pl
       </tr>
     </tbody>
   </table>
-</TableWrap>
+{{</table-wrap>}}
 
 ## Logical operators
 
@@ -237,7 +237,7 @@ Logical operators combine two or more expressions into a single compound express
 
 Each logical operator has an [order of precedence](#order-of-precedence). The order of precedence (along with [grouping symbols](#grouping-symbols)) determines the order in which Cloudflare evaluates logical operators in an expression. The `not` operator ranks first in order of precedence.
 
-<TableWrap>
+{{<table-wrap>}}
   <table style="width:100%">
     <thead>
       <tr>
@@ -323,7 +323,7 @@ Each logical operator has an [order of precedence](#order-of-precedence). The or
       </tr>
     </tbody>
   </table>
-</TableWrap>
+{{</table-wrap>}}
 
 ### Order of precedence
 

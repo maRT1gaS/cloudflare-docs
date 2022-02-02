@@ -38,7 +38,7 @@ When your application needs specialized routing (CNAME setup or custom hosts lik
 
 The Cloudflare API supports the following commands for pools. Examples are given for user-level endpoint but apply to the account-level endpoint as well.
 
-<TableWrap>
+{{<table-wrap>}}
 
 <table>
   <thead>
@@ -150,4 +150,4 @@ The Cloudflare API supports the following commands for pools. Examples are given
   </tbody>
 </table>
 
-</TableWrap>
+{{</table-wrap>}}

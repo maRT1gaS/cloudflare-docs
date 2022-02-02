@@ -3,6 +3,7 @@ pcx-content-type: reference
 type: table
 weight: 455
 title: Endpoints
+markup:
 ---
 
 # Endpoints
@@ -29,7 +30,7 @@ The Cloudflare Filters API supports the operations outlined below. Visit the ass
 
 </ContentColumn>
 
-<TableWrap style="width:100%">
+{{<table-wrap style="width:100%">}}
   <table style="table-layout:fixed; width:100%">
     <thead>
       <tr>
@@ -122,4 +123,5 @@ The Cloudflare Filters API supports the operations outlined below. Visit the ass
       </tr>
     </tbody>
   </table>
-</TableWrap>
+
+{{</table-wrap>}}

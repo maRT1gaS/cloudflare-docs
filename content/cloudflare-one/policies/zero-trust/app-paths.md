@@ -28,59 +28,59 @@ This is how to use wildcards effectively:
 
 Using a wildcard in the _subdomain_ field **does not cover the apex domain**.
 
-<TableWrap>
+{{<table-wrap>}}
 
 | Entry           | Covers                                  | Doesn't cover |
 | --------------- | --------------------------------------- | ------------- |
 | `*.example.com` | `alpha.example.com`, `beta.example.com` | `example.com` |
 
-</TableWrap>
+{{</table-wrap>}}
 
 ### Protect all paths of an apex domain
 
 If you want to protect an apex domain and all of the paths under it, leave the path field empty.
 
-<TableWrap>
+{{<table-wrap>}}
 
 | Entry         | Covers                                                 | Doesn't cover       |
 | ------------- | ------------------------------------------------------ | ------------------- |
 | `example.com` | `example.com`, `example.com/alpha`, `example.com/beta` | `alpha.example.com` |
 
-</TableWrap>
+{{</table-wrap>}}
 
 To protect all the paths under an apex domain, but not the apex domain itself, use a wildcard in the _path_ field.
 
-<TableWrap>
+{{<table-wrap>}}
 
 | Entry           | Covers                                  | Doesn't cover |
 | --------------- | --------------------------------------- | ------------- |
 | `example.com/*` | `example.com/alpha`, `example.com/beta` | `example.com` |
 
-</TableWrap>
+{{</table-wrap>}}
 
 ### Protect multi-level subdomains
 
 Using a wildcard in the _subdomain_ field to protect multi-level subdomains **does not cover that subdomain's top subdomain nor the apex domain**.
 
-<TableWrap>
+{{<table-wrap>}}
 
 | Entry                | Covers                                            | Doesn't cover                     |
 | -------------------- | ------------------------------------------------- | --------------------------------- |
 | `*.test.example.com` | `alpha.test.example.com`, `beta.test.example.com` | `example.com`, `test.example.com` |
 
-</TableWrap>
+{{</table-wrap>}}
 
 ### Protect multi-level paths
 
 Using a wildcard in the _path_ field to protect multi-level paths **does not cover that subpath's parent path nor the apex domain**.
 
-<TableWrap>
+{{<table-wrap>}}
 
 | Entry                 | Covers                                           | Doesn't cover                     |
 | --------------------- | ------------------------------------------------ | --------------------------------- |
 | `example.com/alpha/*` | `example.com/alpha/one`, `example.com/alpha/two` | `example.com`, `example.com/beta` |
 
-</TableWrap>
+{{</table-wrap>}}
 
 {{<Aside type="warning" header="Important">}}
 You cannot use wildcards to partially match subdomain and path names. Using asterisks in any way other than the ones outlined above **will cause the wildcard to be invalidated**. This means your application won't be effective, and neither will be any rules you may try to enforce on it at a later time.

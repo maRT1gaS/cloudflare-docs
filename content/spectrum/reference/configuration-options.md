@@ -101,7 +101,7 @@ The cipher suites below are ordered based on how they appear in the ClientHello,
 
 ## Supported Cipher suites by protocol
 
-<TableWrap>
+{{<table-wrap>}}
 
 | OpenSSL Name                        | TLS 1.1 | TLS 1.2 | TLS 1.3 |
 | ----------------------------------- | ------- | ------- | ------- |
@@ -115,6 +115,6 @@ The cipher suites below are ordered based on how they appear in the ClientHello,
 | AES128-SHA                          | ✅      | ✅      | ❌      |
 | AES256-SHA                          | ✅      | ✅      | ❌      |
 
-</TableWrap>
+{{</table-wrap>}}
 
 \[^1]: _Although TLS 1.3 uses the same cipher suite space as previous versions of TLS, TLS 1.3 cipher suites are defined differently, only specifying the symmetric ciphers, and cannot be used for TLS 1.2. Similarly, TLS 1.2 and lower cipher suites cannot be used with TLS 1.3 (IETF TLS 1.3 draft 21). BoringSSL also hard-codes cipher preferences in this order for TLS 1.3._

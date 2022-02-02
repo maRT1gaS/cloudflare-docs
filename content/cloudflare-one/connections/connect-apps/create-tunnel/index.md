@@ -31,7 +31,7 @@ The created Tunnel can serve traffic for multiple hostnames in your Cloudflare a
 
 Creating a Tunnel generates a credentials file for that specific Tunnel. This file is distinct from the cert.pem file. To run the Tunnel without managing DNS from `cloudflared`, you only need the credentials file.
 
-<TableWrap>
+{{<table-wrap>}}
 
 | Action                                                              | `cert.pem` | Credentials file |
 | ------------------------------------------------------------------- | ---------- | ---------------- |
@@ -42,7 +42,7 @@ Creating a Tunnel generates a credentials file for that specific Tunnel. This fi
 | Connect to load balancer<br/>pools from `cloudflared`               | Required   | -                |
 | Route traffic to a running Tunnel<br/>from the Cloudflare dashboard | Available  | Available        |
 
-</TableWrap>
+{{</table-wrap>}}
 
 ## List available Tunnels
 

@@ -25,7 +25,7 @@ A JSON response for the [Rules Lists API](https://api.cloudflare.com/#filters-pr
 
 This table summarizes the object properties:
 
-<TableWrap>
+{{<table-wrap>}}
   <table style="width: 100%">
     <thead>
       <tr>
@@ -130,7 +130,7 @@ This table summarizes the object properties:
       </tr>
     </tbody>
   </table>
-</TableWrap>
+{{</table-wrap>}}
 
 ## List item object structure and properties
 
@@ -148,7 +148,7 @@ A fully populated rules list item JSON object has the following structure:
 
 The JSON object properties for a list item are defined as follows:
 
-<TableWrap>
+{{<table-wrap>}}
   <table style="width: 100%">
     <thead>
       <tr>
@@ -224,6 +224,6 @@ The JSON object properties for a list item are defined as follows:
       </tr>
     </tbody>
   </table>
-</TableWrap>
+{{</table-wrap>}}
 
 For a detailed specification, see the [Cloudflare Lists API](https://api.cloudflare.com/#rules-lists-properties) documentation.

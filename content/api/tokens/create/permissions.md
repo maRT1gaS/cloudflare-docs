@@ -14,7 +14,7 @@ Below is a list of all the Token Permissions that are available to use. The curr
 
 ## User permissions
 
-<TableWrap>
+{{<table-wrap>}}
 
 | Name               | ID                               | Description                                         | Applicable Scope        |
 | ------------------ | -------------------------------- | --------------------------------------------------- | ----------------------- |
@@ -25,11 +25,11 @@ Below is a list of all the Token Permissions that are available to use. The curr
 | User Details Read  | 8acbe5bb0d54464ab867149d7f7cf8ac | Grants read access to user details                  | com.cloudflare.api.user |
 | User Details Write | 55a5e17cc99e4a3fa1f3432d262f2e55 | Grants write access to user details                 | com.cloudflare.api.user |
 
-</TableWrap>
+{{</table-wrap>}}
 
 ## Account permissions
 
-<TableWrap>
+{{<table-wrap>}}
 
 | Name                                                        | ID                               | Description                                                                                          | Applicable Scope                |
 | ----------------------------------------------------------- | -------------------------------- | ---------------------------------------------------------------------------------------------------- | ------------------------------- |
@@ -80,11 +80,11 @@ Below is a list of all the Token Permissions that are available to use. The curr
 | Zone Settings Write                                         | 3030687196b94b638145a3953da2b699 | Grants write access to zone settings                                                                 | com.cloudflare.api.account.zone |
 | Zone Write                                                  | e6d2666161e84845a636613608cee8d5 | Grants write access to zone management                                                               | com.cloudflare.api.account.zone |
 
-</TableWrap>
+{{</table-wrap>}}
 
 ## Zone permissions
 
-<TableWrap>
+{{<table-wrap>}}
 
 | Name                            | ID                               | Description                                                      | Applicable Scope                |
 | ------------------------------- | -------------------------------- | ---------------------------------------------------------------- | ------------------------------- |
@@ -112,4 +112,4 @@ Below is a list of all the Token Permissions that are available to use. The curr
 | Zone Settings Write             | 3030687196b94b638145a3953da2b699 | Grants write access to zone settings                             | com.cloudflare.api.account.zone |
 | Zone Write                      | e6d2666161e84845a636613608cee8d5 | Grants write access to zone management                           | com.cloudflare.api.account.zone |
 
-</TableWrap>
+{{</table-wrap>}}

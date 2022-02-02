@@ -29,7 +29,7 @@ You are strongly encouraged to verify IRR entries for the exact prefixes you'll 
 
 To verify your prefix and ASN route, use the tools and methods outlined in this table:
 
-<TableWrap><table>
+{{<table-wrap>}}<table>
 
   <thead>
     <tr>
@@ -63,7 +63,7 @@ To verify your prefix and ASN route, use the tools and methods outlined in this 
       <td>IRR route, origin, and source information.</td>
     </tr>
   </tbody>
-</table></TableWrap>
+</table>{{</table-wrap>}}
 
 ### WHOIS output example
 

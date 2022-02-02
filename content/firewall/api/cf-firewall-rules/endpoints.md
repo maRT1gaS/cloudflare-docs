@@ -29,7 +29,7 @@ The Cloudflare Firewall Rules API supports the operations outlined below. Visit 
 
 </ContentColumn>
 
-<TableWrap style="width:100%">
+{{<table-wrap style="width:100%">}}
   <table style="table-layout:fixed; width:100%">
     <thead>
       <tr>
@@ -128,4 +128,4 @@ The Cloudflare Firewall Rules API supports the operations outlined below. Visit 
       </tr>
     </tbody>
   </table>
-</TableWrap>
+{{</table-wrap>}}

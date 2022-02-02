@@ -13,7 +13,7 @@ Cloudflare Zaraz offers system properties that you can use when configuring the 
 
 </ContentColumn>
 
-<TableWrap>
+{{<table-wrap>}}
 
 | Property                                   | Type     | Description                                                                                                              |
 | ------------------------------------------ | -------- | ------------------------------------------------------------------------------------------------------------------------ |
@@ -40,4 +40,4 @@ Cloudflare Zaraz offers system properties that you can use when configuring the 
 | `system.misc.timestamp`                    | `number` | Returns Unix time in milliseconds.                                                                                       |
 | `client.__zarazTrack`                      | `string` | Returns the name of the event sent using the Events API. Refer to [Events API](/zaraz/events-api/) for more information. |
 
-</TableWrap>
+{{</table-wrap>}}

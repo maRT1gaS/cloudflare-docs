@@ -8,7 +8,7 @@ meta:
 
 # 2019-11-07 – Emergency release
 
-<TableWrap><table style="width: 100%">
+{{<table-wrap>}}<table style="width: 100%">
 
 <thead>
   <tr>
@@ -36,4 +36,4 @@ meta:
   </tr>
 </tbody>
 
-</table></TableWrap>
+</table>{{</table-wrap>}}

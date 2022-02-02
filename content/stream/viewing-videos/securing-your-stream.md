@@ -310,7 +310,7 @@ Once revoked all tokens created with that key will be invalidated.
 
 ## Supported Restrictions
 
-<TableWrap>
+{{<table-wrap>}}
 
 | Property Name | Description                                                                                                                                                                                                                                                |
 | ------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -319,7 +319,7 @@ Once revoked all tokens created with that key will be invalidated.
 | downloadable  | if true, the token can be used to download the mp4 (assuming the video has downloads enabled)                                                                                                                                                              |
 | accessRules   | An array that specifies one or more ip and geo restrictions. accessRules are evaluated first-to-last. If a Rule matches, the associated action is applied and no further rules are evaluated. A token may have at most 5 members in the accessRules array. |
 
-</TableWrap>
+{{</table-wrap>}}
 
 ### accessRules Schema
 

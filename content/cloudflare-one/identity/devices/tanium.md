@@ -37,13 +37,13 @@ The integration does not currently support Safari.
 
 ## Integrating Tanium Identity
 
-<TableWrap>
+{{<table-wrap>}}
 
 | Requirements                                                                             |
 | ---------------------------------------------------------------------------------------- |
 | You will need an active Tanium™ Core Platform deployment that runs version 7.2 or later. |
 
-</TableWrap>
+{{</table-wrap>}}
 
 Integrate your Tanium deployment with Cloudflare Access using public keys generated in the Tanium step-by-step documentation linked above.
 

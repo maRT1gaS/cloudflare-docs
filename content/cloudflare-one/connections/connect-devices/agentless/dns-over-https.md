@@ -16,13 +16,13 @@ Browsers can be configured to use any DoH endpoint. If you choose to configure D
 If you want to disable DoH for your organization so that Gateway can be enforced, create a policy to block [this canary domain](https://support.mozilla.org/en-US/kb/canary-domain-use-application-dnsnet).
 {{</Aside>}}
 
-<TableWrap>
+{{<table-wrap>}}
 
 | Before you start                                                                                                |
 | --------------------------------------------------------------------------------------------------------------- |
 | Obtain a location's [DoH subdomain](/cloudflare-one/glossary/#doh-subdomain) (previously known as a unique id). |
 
-</TableWrap>
+{{</table-wrap>}}
 
 With Firefox, you can send DNS queries using the DNS over HTTPS protocol.
 

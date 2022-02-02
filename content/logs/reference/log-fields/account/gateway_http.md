@@ -6,7 +6,7 @@ title: Gateway HTTP
 
 The descriptions below detail the fields available for `gateway_http`.
 
-<TableWrap>
+{{<table-wrap>}}
 
 | Field               | Value                                                                  | Type           |
 | ------------------- | ---------------------------------------------------------------------- | -------------- |
@@ -37,4 +37,4 @@ The descriptions below detail the fields available for `gateway_http`.
 | UserAgent           | Contents of the user agent header in the HTTP request                  | string         |
 | UserID              | User identity where the HTTP request originated from                   | string         |
 
-</TableWrap>
+{{</table-wrap>}}

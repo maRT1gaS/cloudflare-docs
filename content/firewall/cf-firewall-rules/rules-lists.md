@@ -32,7 +32,7 @@ Cloudflare scans public, open proxy lists for reachable, open proxies. After ver
 
 The number of Rules Lists you can create depends on the Cloudflare plans associated with the zones in your account. Regardless of plan, you can store up to a total of 10,000 items, spread across all of your lists.
 
-<TableWrap><table style="width: 100%">
+{{<table-wrap>}}<table style="width: 100%">
 
   <thead>
     <tr>
@@ -56,7 +56,7 @@ The number of Rules Lists you can create depends on the Cloudflare plans associa
       <td>10</td>
     </tr>
   </tbody>
-</table></TableWrap>
+</table>{{</table-wrap>}}
 
 {{<Aside header="Important">}}
 Access to the Open Proxy List in the rule builder and `cf.open_proxies` requires a Cloudflare Enterprise plan.

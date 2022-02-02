@@ -8,7 +8,7 @@ title: Analytics
 
 Cloudflare measures the following metrics for every connection.
 
-<TableWrap>
+{{<table-wrap>}}
 
 | Metric         | Name                                | Example | Unit                 |
 | -------------- | ----------------------------------- | ------- | -------------------- |
@@ -20,13 +20,13 @@ Cloudflare measures the following metrics for every connection.
 | duration90th   | 90th percentile connection duration | 1.0     | Time in milliseconds |
 | duration99th   | 99th percentile connection duration | 1.0     | Time in milliseconds |
 
-</TableWrap>
+{{</table-wrap>}}
 
 ## Additional dimensions
 
 You can divide your analytics further by the following dimensions.
 
-<TableWrap>
+{{<table-wrap>}}
 
 | Dimension | Name                          | Example                                                    |
 | --------- | ----------------------------- | ---------------------------------------------------------- |
@@ -35,13 +35,13 @@ You can divide your analytics further by the following dimensions.
 | coloName  | Colo Name                     | SFO                                                        |
 | ipVersion | IP version used by the client | 4, 6                                                       |
 
-</TableWrap>
+{{</table-wrap>}}
 
 ## Operators for filtering
 
 Use the operators below to filter data.
 
-<TableWrap>
+{{<table-wrap>}}
 
 | Operator | Name                     | URL Encoded |
 | -------- | ------------------------ | ----------- |
@@ -52,7 +52,7 @@ Use the operators below to filter data.
 | >=       | Greater than or equal to | %3E%3D      |
 | <=       | Less than or equal to    | %3C%3D      |
 
-</TableWrap>
+{{</table-wrap>}}
 
 Filters can be combined using OR and AND boolean logic.
 

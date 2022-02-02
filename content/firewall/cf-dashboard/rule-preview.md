@@ -46,7 +46,7 @@ In this screenshot, a rule that matches all User-Agents that contain the string 
 
 </ContentColumn>
 
-<TableWrap style="width:100%">
+{{<table-wrap style="width:100%">}}
   <table style="width: 100%">
     <thead>
       <tr>
@@ -267,4 +267,4 @@ In this screenshot, a rule that matches all User-Agents that contain the string 
       </tr>
     </tbody>
   </table>
-</TableWrap>
+{{</table-wrap>}}

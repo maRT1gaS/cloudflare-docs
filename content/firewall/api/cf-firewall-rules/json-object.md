@@ -30,7 +30,7 @@ A JSON response for the [Firewall Rules API](https://api.cloudflare.com/#firewal
 
 This table summarizes the object properties:
 
-<TableWrap style="width:100%">
+{{<table-wrap style="width:100%">}}
   <table style="width: 100%;">
     <thead>
       <tr>
@@ -141,7 +141,7 @@ This table summarizes the object properties:
       </tr>
     </tbody>
   </table>
-</TableWrap>
+{{</table-wrap>}}
 
 ## Avoiding priority conflicts
 

@@ -16,7 +16,7 @@ You can block security risks and content categories by creating DNS policies. On
 If you wish to block a hostname or URL that belongs to a security risk category, you need to block that category. If the security risk category is not configured as blocked, requests to that hostname or URL will appear in your Gateway logs as allowed requests.
 {{</Aside>}}
 
-<TableWrap>
+{{<table-wrap>}}
 
 | Category                     | Definition                                                                                                                                              |
 | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -34,11 +34,11 @@ If you wish to block a hostname or URL that belongs to a security risk category,
 | Spyware                      | Sites that are known to distribute or contain code that displays unwanted advertisements or that gathers user information without the user’s knowledge. |
 | Unreachable                  | Domains that resolve to unreachable IP addresses.                                                                                                       |
 
-</TableWrap>
+{{</table-wrap>}}
 
 ## DNS Content Categories
 
-<TableWrap>
+{{<table-wrap>}}
 
 | Category               | Definition                                                                                                                                    |
 | ---------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -72,11 +72,11 @@ If you wish to block a hostname or URL that belongs to a security risk category,
 | Violence               | Sites hosting and/or promoting violent content.                                                                                               |
 | Weather                | Sites related to weather.                                                                                                                     |
 
-</TableWrap>
+{{</table-wrap>}}
 
 ### DNS Category and Subcategory IDs
 
-<TableWrap>
+{{<table-wrap>}}
 
 | Category ID | Category Name          | Subcategory ID | Subcategory Name                           |
 | ----------- | ---------------------- | -------------- | ------------------------------------------ |
@@ -195,7 +195,7 @@ If you wish to block a hostname or URL that belongs to a security risk category,
 | 32          | Security Risks         | 124            | No Content                                 |
 | 32          | Security Risks         | 161            | Unreachable                                |
 
-</TableWrap>
+{{</table-wrap>}}
 
 ## Test a policy
 

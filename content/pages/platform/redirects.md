@@ -36,7 +36,7 @@ A project is limited to 100 total redirects. Each redirect declaration has a 100
 
 Cloudflare currently offers limited support for advanced redirects. More support will be added in the future.
 
-<TableWrap>
+{{<table-wrap>}}
 
 | Feature                             | Support | Example                                                         | Notes                                                                                             |
 | ----------------------------------- | ------- | --------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
@@ -51,7 +51,7 @@ Cloudflare currently offers limited support for advanced redirects. More support
 | Redirect by country or language     | No      | `/ /us 302 Country=us`                                          |                                                                                                   |
 | Redirect by cookie                  | No      | `/\* /preview/:splat 302 Cookie=preview`                        |                                                                                                   |
 
-</TableWrap>
+{{</table-wrap>}}
 
 ### Matching
 

@@ -79,7 +79,7 @@ Cloudflare Firewall Rules is available to all customers. Keep in mind that the n
 
 This table outlines the Firewall Rules features and entitlements available with each customer plan:
 
-<TableWrap>
+{{<table-wrap>}}
   <table>
     <thead>
       <tr>
@@ -148,7 +148,7 @@ This table outlines the Firewall Rules features and entitlements available with 
       </tr>
     </tbody>
   </table>
-</TableWrap>
+{{</table-wrap>}}
 
 ## Get started
 

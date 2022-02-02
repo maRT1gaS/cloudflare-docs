@@ -29,7 +29,7 @@ Cloudflare URL Normalization is similar to [rfc3986](https://www.ietf.org/rfc/rf
 
 The table below shows some examples of Cloudflare URL Normalization.
 
-<TableWrap>
+{{<table-wrap>}}
 
 | URL                                  | Normalized URL                    |
 | ------------------------------------ | --------------------------------- |
@@ -38,7 +38,7 @@ The table below shows some examples of Cloudflare URL Normalization.
 | `www.example.com\hello`              | `www.example.com/hello`           |
 | `www.example.com/./lang//en/hello./` | `www.example.com/lang/en/hello./` |
 
-</TableWrap>
+{{</table-wrap>}}
 
 Consider a firewall rule that blocks requests whose URLs match `www.example.com/hello`. The rule would not block a request containing an encoded element `www.example.com/%68ello`. Normalizing incoming URLs at the edge helps simplify Cloudflare Firewall Rules expressions that use URLs.
 

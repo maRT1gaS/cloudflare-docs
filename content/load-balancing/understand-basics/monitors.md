@@ -41,7 +41,7 @@ When a load balancer runs health checks, headers set on an origin override heade
 
 The Cloudflare API supports the following commands for monitors. Examples are given for user-level endpoint but apply to the account-level endpoint as well.
 
-<TableWrap>
+{{<table-wrap>}}
 
 <table>
   <thead>
@@ -137,4 +137,4 @@ The Cloudflare API supports the following commands for monitors. Examples are gi
   </tbody>
 </table>
 
-</TableWrap>
+{{</table-wrap>}}

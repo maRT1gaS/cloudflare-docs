@@ -8,7 +8,7 @@ title: Managed Rulesets
 
 Cloudflare provides the following Managed Rulesets in the WAF:
 
-<TableWrap><table style="table-layout:fixed; width:100%;">
+{{<table-wrap>}}<table style="table-layout:fixed; width:100%;">
 
   <thead>
     <tr>
@@ -30,7 +30,7 @@ Cloudflare provides the following Managed Rulesets in the WAF:
       <td>Cloudflare's implementation of the Open Web Application Security Project, or OWASP ModSecurity Core Rule Set. Cloudflare routinely monitors for updates from OWASP based on the latest version available from the official code repository.</td>
     </tr>
   </tbody>
-</table></TableWrap>
+</table>{{</table-wrap>}}
 
 {{<Aside type="note" header="Note">}}
 The Cloudflare OWASP Core Ruleset is designed to work as a single entity to calculate threat scores and execute actions based on the score. When a scoring rule in the ruleset matches a request, the threat score increases.
@@ -41,7 +41,7 @@ You can also activate or deactivate scoring rules by overriding the paranoia lev
 
 The following rulesets run in the response phase:
 
-<TableWrap><table style="table-layout:fixed; width:100%;">
+{{<table-wrap>}}<table style="table-layout:fixed; width:100%;">
 
   <thead>
     <tr>
@@ -55,7 +55,7 @@ The following rulesets run in the response phase:
       <td>Created by Cloudflare to address common data loss threats. These rules monitor the download of specific sensitive data — for example, financial and personally identifiable information. Available in <strong>Firewall</strong> > <strong>Data</strong>.</td>
     </tr>
   </tbody>
-</table></TableWrap>
+</table>{{</table-wrap>}}
 
 ## Phases of deployed Managed Rulesets
 

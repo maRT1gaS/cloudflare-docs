@@ -39,7 +39,7 @@ https://api.cloudflare.com/client/v4/zones/<zone_id>/logs/rayids/<ray_id>?[&fiel
 
 The following table describes the parameters available:
 
-<TableWrap>
+{{<table-wrap>}}
 
 | Parameter           | Description                                                                                                                                                                                                                                                                                                                   | Applies to                                | Required? |
 | ------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------- | --------- |
@@ -50,7 +50,7 @@ The following table describes the parameters available:
 | <em>fields</em>     | <p>- Comma-separated list of fields to return</p> <p>- If empty, the default list is returned</p>                                                                                                                                                                                                                             | <p>/logs/received</p> <p>/logs/rayids</p> | No        |
 | <em>timestamps</em> | <p>- Format in which timestamp fields will be returned</p> <p>- Value options are: <em>unixnano</em> (default), <em>unix</em>, <em>rfc3339</em></p> <p>- Timestamps retuned as integers for <em>unix</em> and <em>unixnano</em> and as strings for <em>rfc3339</em></p>                                                       | <p>/logs/received</p> <p>/logs/rayids</p> | No        |
 
-</TableWrap>
+{{</table-wrap>}}
 
 {{<Aside type="note" header="Note">}}
 The maximum time range from <em>start</em> to <em>end</em> can't exceed 1 hour. Because <em>start</em> is inclusive and <em>end</em> is exclusive, to get all the data for every minute, starting at 10AM, the proper values are:

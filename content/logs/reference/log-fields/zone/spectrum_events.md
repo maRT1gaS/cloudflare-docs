@@ -6,7 +6,7 @@ title: Spectrum events
 
 The descriptions below detail the fields available for `spectrum_events`.
 
-<TableWrap>
+{{<table-wrap>}}
 
 | Field                          | Value                                                                                                                                                                                        | Type                |
 | ------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------- | ----------------------- | ----------------------- | ---------------------- | ------------------------- | --------------------- | -------------------------- | ---------------------- | ------ |
@@ -42,4 +42,4 @@ The descriptions below detail the fields available for `spectrum_events`.
 | Status                         | A code indicating reason for connection closure                                                                                                                                              | int                 |
 | Timestamp                      | Timestamp at which the event took place                                                                                                                                                      | int or string       |
 
-</TableWrap>
+{{</table-wrap>}}

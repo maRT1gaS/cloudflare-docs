@@ -10,7 +10,7 @@ When creating a Cloudflare for Teams account, you will be given the Super Admini
 
 A member can be given one of six roles within a Teams account:
 
-<TableWrap>
+{{<table-wrap>}}
 
 | Role                                 | Permissions                                                                                                                                                                                   |
 | ------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -21,7 +21,7 @@ A member can be given one of six roles within a Teams account:
 | Cloudflare for Teams Read Only       | <ul><li>Can access Cloudflare for Teams in read only mode.</li></ul>                                                                                                                          |
 | Cloudflare for Teams Reporting       | <ul><li>Can access Cloudflare for Teams reporting data.</li></ul>                                                                                                                             |
 
-</TableWrap>
+{{</table-wrap>}}
 
 {{<Aside>}}
 Only Enterprise users can assign multiple roles to additional members.

@@ -10,7 +10,7 @@ The Firewall fields contain rules to block requests that contain specific types 
 
 ## FirewallMatchesActions
 
-<TableWrap>
+{{<table-wrap>}}
 
 | Value                                         | Action         | Description                                                                                 |
 | --------------------------------------------- | -------------- | ------------------------------------------------------------------------------------------- |
@@ -34,11 +34,11 @@ The Firewall fields contain rules to block requests that contain specific types 
 | <em>managedChallengeInteractiveSolved</em>    | Allow          | Allow once the managed challenged is solved via interactive interstitial page               |
 | <em>managedChallengeBypassed</em>             | Allow          | Challenge was not presented because visitor had clearance from previous challenge           |
 
-</TableWrap>
+{{</table-wrap>}}
 
 ## FirewallMatchesSources
 
-<TableWrap>
+{{<table-wrap>}}
 
 | Value                    | Description                                                                                                      |
 | ------------------------ | ---------------------------------------------------------------------------------------------------------------- |
@@ -63,4 +63,4 @@ The Firewall fields contain rules to block requests that contain specific types 
 | <em>firewallManaged</em> | Allow or block based on the Firewall Managed Rules product settings                                              |
 | <em>firewallCustom</em>  | Allow or block based on a rule configured in the Firewall Custom Rulesets                                        |
 
-</TableWrap>
+{{</table-wrap>}}

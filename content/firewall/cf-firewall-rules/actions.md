@@ -18,7 +18,7 @@ For example, the _Allow_ action takes precedence over the _Block_ action. In a c
 
 There are two exceptions to this behavior: the _Log_ and _Bypass_ actions. Unlike other actions, _Log_ and _Bypass_ do not terminate further evaluation within Firewall Rules. This means that if a request matches two different rules and one of those rules specifies the _Log_ or _Bypass_ action, the second action will be triggered instead, even though _Log_/_Bypass_ has precedence.
 
-<TableWrap>
+{{<table-wrap>}}
   <table style="width: 100%">
   <thead>
     <tr>
@@ -144,7 +144,7 @@ There are two exceptions to this behavior: the _Log_ and _Bypass_ actions. Unlik
     </tbody>
 
   </table>
-</TableWrap>
+{{</table-wrap>}}
 
 ## Choosing actions in the Rule Builder
 

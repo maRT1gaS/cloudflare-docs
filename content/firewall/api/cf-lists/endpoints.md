@@ -24,7 +24,7 @@ The Cloudflare Rules Lists API supports the operations outlined below. Visit the
 
 ## Manage lists
 
-<TableWrap>
+{{<table-wrap>}}
   <table style="table-layout:fixed; width:100%;">
     <thead>
       <tr>
@@ -107,7 +107,7 @@ The Cloudflare Rules Lists API supports the operations outlined below. Visit the
       </tr>
     </tbody>
   </table>
-</TableWrap>
+{{</table-wrap>}}
 
 ## Manage items in a list
 
@@ -117,7 +117,7 @@ Asynchronous Rules Lists operations return an `operation_id`, which you can use 
 
 When you make requests to a list while a bulk operation on that list is in progress, the requests are queued and processed in sequence (first in, first out). Requests for successful asynchronous operations return an HTTP 201 status code.
 
-<TableWrap>
+{{<table-wrap>}}
   <table style="table-layout:fixed; width:100%;">
     <thead>
       <tr>
@@ -219,4 +219,4 @@ When you make requests to a list while a bulk operation on that list is in progr
       </tr>
     </tbody>
   </table>
-</TableWrap>
+{{</table-wrap>}}

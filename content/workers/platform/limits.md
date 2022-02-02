@@ -8,7 +8,7 @@ title: Limits
 
 ## Account plan limits
 
-<TableWrap>
+{{<table-wrap>}}
 
 | Feature                                                                         | Free      | Paid      |
 | ------------------------------------------------------------------------------- | --------- | --------- |
@@ -21,7 +21,7 @@ title: Limits
 | [Number of Cron Triggers<br/>per script](#number-of-schedules)                  | 3         | 3         |
 | [Number of Cron Triggers<br/>per account](#number-of-schedules-account)         | 5         | 90        |
 
-</TableWrap>
+{{</table-wrap>}}
 
 ## Request limits
 
@@ -33,7 +33,7 @@ Cloudflare has network-wide limits on the request body size. This limit is tied 
 
 Cloudflare Enterprise customers may contact their account team or [Cloudflare Support](https://support.cloudflare.com/hc/articles/200172476) to request a limit beyond 500 MB.
 
-<TableWrap>
+{{<table-wrap>}}
 
 | Cloudflare Plan | Maximum body size |
 | --------------- | ----------------- |
@@ -42,7 +42,7 @@ Cloudflare Enterprise customers may contact their account team or [Cloudflare Su
 | Business        | 200MB             |
 | Enterprise      | 500MB             |
 
-</TableWrap>
+{{</table-wrap>}}
 
 ## Response limits
 
@@ -50,7 +50,7 @@ Cloudflare does not enforce response limits, but cache limits for [Cloudflare's 
 
 ## Worker limits
 
-<TableWrap>
+{{<table-wrap>}}
 
 | Feature                     | Free                                       | Bundled Usage Model                         | Unbound Usage Model                         |
 | --------------------------- | ------------------------------------------ | ------------------------------------------- | ------------------------------------------- | --- |
@@ -59,7 +59,7 @@ Cloudflare does not enforce response limits, but cache limits for [Cloudflare's 
 | [CPU runtime](#cpu-runtime) | 10 ms                                      | 50 ms HTTP request <br/> 50 ms Cron trigger | 30 s HTTP request <br/> 15 min Cron Trigger |     |
 | [Duration](#duration)       |                                            |                                             | No limit\*                                  |
 
-</TableWrap>
+{{</table-wrap>}}
 
 ### Bundled Usage Model
 
@@ -75,7 +75,7 @@ The Workers Unbound Usage Model has a significantly higher limit than the Bundle
 
 ## KV limits
 
-<TableWrap>
+{{<table-wrap>}}
 
 | Feature                               | Free                  | Paid       |
 | ------------------------------------- | --------------------- | ---------- |
@@ -89,7 +89,7 @@ The Workers Unbound Usage Model has a significantly higher limit than the Bundle
 | [Key metadata](#kv)                   | 1024 bytes            | 1024 bytes |
 | [Value size](#kv)                     | 25 MiB                | 25 MiB     |
 
-</TableWrap>
+{{</table-wrap>}}
 
 {{<Aside type="note" header="Free vs. Paid plan pricing">}}
 Refer to [KV pricing](/workers/platform/pricing/#workers-kv) to review the specific KV operations you are allowed under each plan with their pricing.
@@ -97,7 +97,7 @@ Refer to [KV pricing](/workers/platform/pricing/#workers-kv) to review the speci
 
 ## Cache API limits
 
-<TableWrap>
+{{<table-wrap>}}
 
 | Feature                       | Free   | Bundled |
 | ----------------------------- | ------ | ------- |
@@ -105,11 +105,11 @@ Refer to [KV pricing](/workers/platform/pricing/#workers-kv) to review the speci
 | [Calls/request](#cache-api)   | 50     | 50      |
 | [Storage/request](#cache-api) | 5 GB   | 5 GB    |
 
-</TableWrap>
+{{</table-wrap>}}
 
 ## Durable Objects limits
 
-<TableWrap>
+{{<table-wrap>}}
 
 | Feature                                 | Limit                                          |
 | --------------------------------------- | ---------------------------------------------- |
@@ -121,7 +121,7 @@ Refer to [KV pricing](/workers/platform/pricing/#workers-kv) to review the speci
 | [Value size](#durable-objects)          | 32 KiB                                         |
 | [CPU per request](#durable-objects)     | 30s                                            |
 
-</TableWrap>
+{{</table-wrap>}}
 
 ---
 

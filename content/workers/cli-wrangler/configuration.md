@@ -549,7 +549,7 @@ If your project is written using CommonJS modules, you will need to re-export yo
 
       - The module type, see the table below for acceptable options
 
-      <TableWrap>
+      {{<table-wrap>}}
 
       | `type`       | JavaScript type      |
       | ------------ | -------------------- |
@@ -559,7 +559,7 @@ If your project is written using CommonJS modules, you will need to re-export yo
       | Data         | `ArrayBuffer`        |
       | CompiledWasm | `WebAssembly.Module` |
 
-      </TableWrap>
+      {{</table-wrap>}}
 
     - `globs` <PropMeta>required</PropMeta>
 

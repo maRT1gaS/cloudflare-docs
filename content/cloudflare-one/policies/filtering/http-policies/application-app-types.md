@@ -38,7 +38,7 @@ A full list of supported applications and their respective app types are availab
 
 ### App types
 
-<TableWrap>
+{{<table-wrap>}}
 
 | Application type                               | Definition                                                                                                                                                                                                                                                                                                                    |
 | ---------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -60,7 +60,7 @@ A full list of supported applications and their respective app types are availab
 | Streaming                                      | Applications used for streaming video or audio.                                                                                                                                                                                                                                                                               |
 | [Do Not Decrypt](#do-not-decrypt-applications) | Applications that are incompatible with the TLS man-in the middle certificate that is required for Cloudflare Gateway's proxy to function. These applications either use certificate pinning or send non-web traffic such as Session Initiation Protocol (SIP) or Extensible Messaging and Presence Protocol (XMPP) over TLS. |
 
-</TableWrap>
+{{</table-wrap>}}
 
 #### Do Not Decrypt applications
 

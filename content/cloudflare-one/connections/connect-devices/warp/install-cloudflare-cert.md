@@ -193,23 +193,23 @@ The root certificate is now installed and ready to be used.
 
 4.  Tap **Advanced** > **Encryption & Credentials**.
 
-<TableWrap>
+{{<table-wrap>}}
 
 |                                                                                                     |                                                                                                   |
 | --------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
 | ![Android encrypt settings](../../../static/documentation/connections/android_advanced_encrypt.png) | ![Android cred settings](../../../static/documentation/connections/android_advanced_encrypt2.png) |
 
-</TableWrap>
+{{</table-wrap>}}
 
 5.  Tap **Install a certificate > CA certificate**.
 
-<TableWrap>
+{{<table-wrap>}}
 
 |                                                                                             |                                                                                   |
 | ------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
 | ![Android install cert](../../../static/documentation/connections/android_install_cert.png) | ![Android ca cert](../../../static/documentation/connections/android_ca_cert.png) |
 
-</TableWrap>
+{{</table-wrap>}}
 
 7.  Tap **Install Anyway**.
 
@@ -241,13 +241,13 @@ The root certificate is now installed and ready to be used.
 
 5.  Click **Security & location** then click **Credentials** then click **Install from SD card**.
 
-<TableWrap>
+{{<table-wrap>}}
 
 |                                                                                            |                                                                                    |                                                                                             |
 | ------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
 | ![Click security & location](../../../static/documentation/connections/chromeOS4_cert.png) | ![click credentials](../../../static/documentation/connections/chromeOS5_cert.png) | ![click install from SD card](../../../static/documentation/connections/chromeOS6_cert.png) |
 
-</TableWrap>
+{{</table-wrap>}}
 
 6.  In the file open dialog select the `Cloudflare_CA.crt` file downloaded in step #1 and click **Open**.
 

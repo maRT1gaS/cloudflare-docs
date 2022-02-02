@@ -24,7 +24,7 @@ To respond to a Cron Trigger, you must add a [`"scheduled"` event](/workers/runt
 
 Cloudflare supports cron expressions with five fields, along with most [Quartz scheduler](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html#introduction)-like cron syntax extensions:
 
-<TableWrap>
+{{<table-wrap>}}
 
 | Field         | Values                                                             | Characters   |
 | ------------- | ------------------------------------------------------------------ | ------------ |
@@ -34,7 +34,7 @@ Cloudflare supports cron expressions with five fields, along with most [Quartz s
 | Months        | 1-12, case-insensitive 3-letter abbreviations ("JAN", "aug", etc.) | \* , - /     |
 | Weekdays      | 1-7, case-insensitive 3-letter abbreviations ("MON", "fri", etc.)  | \* , - / L # |
 
-</TableWrap>
+{{</table-wrap>}}
 
 ### Examples
 

@@ -22,7 +22,7 @@ A JSON response for the [Filters API](https://api.cloudflare.com/#filters-proper
 
 This table summarizes the object properties:
 
-<TableWrap>
+{{<table-wrap>}}
   <table style="table-layout:fixed; width: 100%;">
     <thead>
       <tr>
@@ -93,4 +93,4 @@ This table summarizes the object properties:
       </tr>
     </tbody>
   </table>
-</TableWrap>
+{{</table-wrap>}}

@@ -12,7 +12,7 @@ Below is a table of the currently available API Token Templates and access they 
 
 </ContentColumn>
 
-<TableWrap>
+{{<table-wrap>}}
 
 <table>
   <tbody>
@@ -116,4 +116,4 @@ Below is a table of the currently available API Token Templates and access they 
   </tbody>
 </table>
 
-</TableWrap>
+{{</table-wrap>}}

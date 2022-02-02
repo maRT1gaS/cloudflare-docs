@@ -6,7 +6,7 @@ title: DNS logs
 
 The descriptions below detail the fields available for `dns_logs`.
 
-<TableWrap>
+{{<table-wrap>}}
 
 | Field            | Value                                                                                                                                 | Type          |
 | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------- | ------------- |
@@ -20,4 +20,4 @@ The descriptions below detail the fields available for `dns_logs`.
 | SourceIP         | IP address of the client (IPv4 or IPv6)                                                                                               | string        |
 | Timestamp        | Timestamp at which the query occurred                                                                                                 | int or string |
 
-</TableWrap>
+{{</table-wrap>}}

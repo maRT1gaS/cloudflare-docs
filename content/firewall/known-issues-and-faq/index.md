@@ -57,7 +57,7 @@ See [_How do I create an exception to exclude certain requests from being blocke
 
 The table below lists a **sample** of known bots that Firewall Rules currently detects. When traffic comes from these bots and others not listed, the _cf.client.bot_ field is set to true.
 
-<TableWrap>
+{{<table-wrap>}}
   <table style="width: 100%">
     <thead>
       <tr>
@@ -222,7 +222,7 @@ The table below lists a **sample** of known bots that Firewall Rules currently d
       </tr>
     </tbody>
   </table>
-</TableWrap>
+{{</table-wrap>}}
 
 ## How do I create an exception to exclude certain requests from being blocked or challenged?
 
@@ -243,7 +243,7 @@ If you wish to permit certain exclusions, the examples below illustrate a few po
 
 Exclude multiple IP addresses from a blocking/challenging rule that assesses Threat Score
 
-<TableWrap>
+{{<table-wrap>}}
 <table style="width: 100%">
   <tbody>
     <tr>
@@ -301,13 +301,13 @@ Exclude multiple IP addresses from a blocking/challenging rule that assesses Thr
   </tbody>
 </table>
 
-</TableWrap>
+{{</table-wrap>}}
 
 ### Example 2
 
 Block Amazon Web Services (AWS) and Google Cloud Platform (GCP) because of large volumes of undesired traffic, but allow Googlebot and other known bots that Cloudflare validates
 
-<TableWrap>
+{{<table-wrap>}}
   <table style="width: 100%">
     <tbody>
       <tr>
@@ -371,7 +371,7 @@ Block Amazon Web Services (AWS) and Google Cloud Platform (GCP) because of large
       </tr>
     </tbody>
   </table>
-</TableWrap>
+{{</table-wrap>}}
 
 ## Why does a Firewall Event display a Cloudflare IP address even though other fields match the client details?
 

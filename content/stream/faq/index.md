@@ -57,7 +57,7 @@ If the frame rate is variable we will drop frames (e.g. if there are more than 1
 
 You can embed the Stream player on the following platforms:
 
-<TableWrap>
+{{<table-wrap>}}
 
 | Browser | Version                             |
 | ------- | ----------------------------------- |
@@ -67,13 +67,13 @@ You can embed the Stream player on the following platforms:
 | Safari  | Supported since Safari version 14+  |
 | Opera   | Supported since Opera version 75+   |
 
-</TableWrap>
+{{</table-wrap>}}
 
 {{<Aside type="note" header="Note">}}
 Cloudflare Stream is not available on Chromium, as Chromium does not support H.264 videos.
 {{</Aside>}}
 
-<TableWrap>
+{{<table-wrap>}}
 
 | Mobile Platform       | Version                                                                  |
 | --------------------- | ------------------------------------------------------------------------ |
@@ -82,7 +82,7 @@ Cloudflare Stream is not available on Chromium, as Chromium does not support H.2
 | Samsung Internet      | Supported on 13+                                                         |
 | Safari on iOS         | Supported on iOS 13.4+. Speed selector supported when not in fullscreen. |
 
-</TableWrap>
+{{</table-wrap>}}
 
 ### What are the recommended upload settings for video uploads?
 
@@ -98,7 +98,7 @@ If you are producing a brand new file for Cloudflare Stream, we recommend you us
 
 Below are bitrate recommendations for encoding new videos for Stream:
 
-<TableWrap>
+{{<table-wrap>}}
 
 | Resolution | Recommended bitrate |
 | ---------- | ------------------- |
@@ -107,7 +107,7 @@ Below are bitrate recommendations for encoding new videos for Stream:
 | 480p       | 2.4 Mbps            |
 | 360p       | 1 Mbps              |
 
-</TableWrap>
+{{</table-wrap>}}
 
 ### If I cancel my stream subscription, are the videos deleted?
 

@@ -138,7 +138,7 @@ Cloudflare sends GET requests to the `http_url` using `User-Agent: Cloudflare Cu
 
 Various hostname verification errors include:
 
-<TableWrap>
+{{<table-wrap>}}
   <table style="table-layout:fixed; width:100%">
     <thead>
       <tr>
@@ -187,13 +187,13 @@ Various hostname verification errors include:
       </tr>
     </tbody>
   </table>
-</TableWrap>
+{{</table-wrap>}}
 
 ## Verification statuses
 
 Applicable hostname verification status includes:
 
-<TableWrap>
+{{<table-wrap>}}
   <table>
     <thead>
       <tr>
@@ -239,4 +239,4 @@ Applicable hostname verification status includes:
       </tr>
     </tbody>
   </table>
-</TableWrap>
+{{</table-wrap>}}

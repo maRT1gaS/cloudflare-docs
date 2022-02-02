@@ -20,7 +20,7 @@ Cloudflare maintains a list of build configurations for popular frameworks and t
 
 If you are not using a framework, you may input `exit 0` into the **Build command** field.
 
-<TableWrap>
+{{<table-wrap>}}
 
 | Framework/tool               | Build command                        | Build directory             |
 | ---------------------------- | ------------------------------------ | --------------------------- |
@@ -49,7 +49,7 @@ If you are not using a framework, you may input `exit 0` into the **Build comman
 | Vue                          | `npm run build`                      | `public`                    |
 | VuePress                     | `vuepress build $directory`          | `$directory/.vuepress/dist` |
 
-</TableWrap>
+{{</table-wrap>}}
 
 ## Environment variables
 

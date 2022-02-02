@@ -8,7 +8,7 @@ title: Global rules
 
 Cloudflare for Teams applies a set of **global rules** to all accounts.
 
-<TableWrap>
+{{<table-wrap>}}
 
 | Criteria       | Value                       | Action    | Description                                                                                                                                     |
 | -------------- | --------------------------- | --------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -24,4 +24,4 @@ Cloudflare for Teams applies a set of **global rules** to all accounts.
 | Hostname       | `help.teams.cloudflare.com` | allow     | Teams client will use this to check if Gateway is on by inspecting cert. Also will check if certificate is properly installed on client machine |
 | Request Header | `Accept: text/html`         | noisolate | Browsers issue an `Accept:` header that begins with `text/html`. Do not isolate if we don't see such a header because this is not a browser     |
 
-</TableWrap>
+{{</table-wrap>}}

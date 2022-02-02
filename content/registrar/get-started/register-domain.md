@@ -26,7 +26,7 @@ At this time, you can only use ASCII characters for contact data. If the default
 
 {{</Aside>}}
 
-  <TableWrap>
+  {{<table-wrap>}}
 
 | Field        | Required? | Restrictions                                                                                                                   |
 | ------------ | --------- | ------------------------------------------------------------------------------------------------------------------------------ |
@@ -43,7 +43,7 @@ At this time, you can only use ASCII characters for contact data. If the default
 | Country      | Yes       | You must select one from the drop-down options.                                                                                |
 | Postal Code  | Yes       | Must be a properly formatted postal code.                                                                                      |
 
-  </TableWrap>
+  {{</table-wrap>}}
 
 After entering the contact information click **Continue**. If any of the contact information is missing or not properly validated, an error message will appear and you will need to correct the data before proceeding.
 

@@ -13,7 +13,7 @@ The table below summarizes the job operations available. All the examples in thi
 The `<zone_id>` argument is the zone id (hexadecimal string). The `<account_id>` argument is the organization id (hexadecimal string). These arguments can be found using [API's zones endpoint](https://api.cloudflare.com/#getting-started-resource-ids).
 The `<job>` argument is the numeric job id. The `<dataset>` argument indicates the log category (such as `http_requests`, `spectrum_events`, `firewall_events`, `nel_reports`, or `dns_logs`).
 
-<TableWrap>
+{{<table-wrap>}}
 
 | Operation | Description                                  | URL                                                                                                                 |
 | --------- | -------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
@@ -30,7 +30,7 @@ The `<job>` argument is the numeric job id. The `<dataset>` argument indicates t
 | POST      | Validate ownership challenge                 | <em>https://api.cloudflare.com/client/v4/zones/\<zone\_id>/logpush/ownership/validate</em>                      |
 | POST      | Validate log options                         | <em>https://api.cloudflare.com/client/v4/zones/\<zone\_id>/logpush/validate/origin</em>                         |
 
-</TableWrap>
+{{</table-wrap>}}
 
 For concrete examples, see the tutorial [Manage Logpush with cURL](/logs/reference/logpush-api-configuration/examples/example-logpush-curl/).
 

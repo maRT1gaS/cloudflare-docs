@@ -34,14 +34,14 @@ Once enabled, when users authenticate and visit the URL of the application, Clou
 This should only be enabled if a [service token](/cloudflare-one/identity/service-auth/service-tokens/) cannot be used for your automated service.
 {{</Aside>}}
 
-<TableWrap>
+{{<table-wrap>}}
 
 | Before you start                                                             |
 | ---------------------------------------------------------------------------- |
 | Ensure you have an automated service relying on `cloudflared` authentication |
 | Ensure you have an active IdP session when logging in through `cloudflared`  |
 
-</TableWrap>
+{{</table-wrap>}}
 
 When you log into Access through `cloudflared`, your browser prompts you to allow access by
 displaying this page:

@@ -396,7 +396,7 @@ A checkmark (✓) indicates that this feature is believed to be fully supported 
 \[//]: # An x (✘) indicates that this feature is part of the specification but not implemented.
 \[//]: # If a feature only implements the operation partially, details are listed.
 
-<TableWrap>
+{{<table-wrap>}}
 
 | Algorithm                                          | sign()<br/>verify() | encrypt()<br/>decrypt() | digest() | deriveBits()<br/>deriveKey() | generateKey() | wrapKey()<br/>unwrapKey() | exportKey() | importKey() |
 | :------------------------------------------------- | :------------------ | :---------------------- | :------- | :--------------------------- | :------------ | :------------------------ | :---------- | :---------- |
@@ -419,7 +419,7 @@ A checkmark (✓) indicates that this feature is believed to be fully supported 
 | HKDF                                               |                     |                         |          | ✓                            |               |                           |             | ✓           |
 | PBKDF2                                             |                     |                         |          | ✓                            |               |                           |             | ✓           |
 
-</TableWrap>
+{{</table-wrap>}}
 
 **Footnotes:**
 
