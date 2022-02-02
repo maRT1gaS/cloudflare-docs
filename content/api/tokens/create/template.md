@@ -6,11 +6,11 @@ title: API token templates
 
 # API token templates
 
-<ContentColumn>
+{{<content-column>}}
 
 Below is a table of the currently available API Token Templates and access they grant. You can start creating a token with one of these templates and modify the permissions and resources from there.
 
-</ContentColumn>
+{{</content-column>}}
 
 {{<table-wrap>}}
 

@@ -11,9 +11,9 @@ title: Conditional response
 
 # Conditional response
 
-<ContentColumn>
+{{<content-column>}}
   <p>{props.frontmatter.summary}</p>
-</ContentColumn>
+{{</content-column>}}
 
 ```js
 const BLOCKED_HOSTNAMES = ['nope.mywebsite.com', 'bye.website.com'];

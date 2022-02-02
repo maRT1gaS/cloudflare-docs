@@ -6,11 +6,11 @@ title: API tokens permissions
 
 # API tokens permissions
 
-<ContentColumn>
+{{<content-column>}}
 
 Below is a list of all the Token Permissions that are available to use. The current list can be [fetched via the API](https://api.cloudflare.com/#permission-groups-list-permission-groups) at any time.
 
-</ContentColumn>
+{{</content-column>}}
 
 ## User permissions
 

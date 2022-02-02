@@ -11,9 +11,9 @@ title: CORS header proxy
 
 # CORS header proxy
 
-<ContentColumn>
+{{<content-column>}}
   <p>{props.frontmatter.summary}</p>
-</ContentColumn>
+{{</content-column>}}
 
 ```js
 // We support the GET, POST, HEAD, and OPTIONS methods from any origin,

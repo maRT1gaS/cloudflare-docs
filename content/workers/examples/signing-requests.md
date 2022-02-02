@@ -12,9 +12,9 @@ title: Sign requests
 
 # Sign requests
 
-<ContentColumn>
+{{<content-column>}}
   <p>{props.frontmatter.summary}</p>
-</ContentColumn>
+{{</content-column>}}
 
 ```js
 // We will need some super-secret data to use as a symmetric key.
@@ -99,7 +99,7 @@ addEventListener('fetch', event => {
 
 ---
 
-<ContentColumn>
+{{<content-column>}}
 
 ## Generating signed requests
 
@@ -111,7 +111,7 @@ Typically, signed requests are delivered to the user in some out-of-band way, su
 
 For request URLs beginning with `/generate/`, we replace `/generate/` with `/verify/`, sign the resulting path with its timestamp, and return the full, signed URL in the response body.
 
-</ContentColumn>
+{{</content-column>}}
 
 ```js
 async function generateSignedUrl(url) {

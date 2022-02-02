@@ -10,9 +10,9 @@ title: Logging headers to console
 
 # Logging headers to console
 
-<ContentColumn>
+{{<content-column>}}
   <p>{props.frontmatter.summary}</p>
-</ContentColumn>
+{{</content-column>}}
 
 ```js
 async function handleRequest(request) {
@@ -28,7 +28,7 @@ addEventListener('fetch', event => {
 
 ---
 
-<ContentColumn>
+{{<content-column>}}
 
 ## Console-logging headers
 
@@ -119,4 +119,4 @@ This results in something like:
 //=> }
 ```
 
-</ContentColumn>
+{{</content-column>}}

@@ -7,7 +7,7 @@ meta:
   title: Cloudflare Pages documentation
 ---
 
-<ContentColumn>
+{{<content-column>}}
 
 # Cloudflare Pages documentation
 
@@ -44,4 +44,4 @@ You can [connect with the Pages community on Discord](https://discord.gg/cloudfl
 
 These docs are built with the [Cloudflare Docs engine](/docs-engine/).
 
-</ContentColumn>
+{{</content-column>}}

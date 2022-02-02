@@ -11,9 +11,9 @@ title: Cookie parsing
 
 # Cookie parsing
 
-<ContentColumn>
+{{<content-column>}}
   <p>{props.frontmatter.summary}</p>
-</ContentColumn>
+{{</content-column>}}
 
 ```js
 import { parse } from 'cookie';

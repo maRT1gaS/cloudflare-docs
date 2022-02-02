@@ -8,7 +8,7 @@ meta:
 
 # Cloudflare Randomness Beacon
 
-<ContentColumn>
+{{<content-column>}}
 
 Explore drand: a distributed service providing public randomness in an application-agnostic, secure, and efficient way.
 
@@ -18,4 +18,4 @@ Explore drand: a distributed service providing public randomness in an applicati
   {{</button>}}
 </p>
 
-</ContentColumn>
+{{</content-column>}}

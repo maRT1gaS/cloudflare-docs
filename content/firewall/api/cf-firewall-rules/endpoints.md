@@ -7,7 +7,7 @@ title: Endpoints
 
 # Endpoints
 
-<ContentColumn>
+{{<content-column>}}
 
 To invoke a Cloudflare Firewall Rules API operation, append the endpoint to the Cloudflare API base URL:
 
@@ -27,7 +27,7 @@ To retrieve a list of zones associated with your account, use the [List Zones](h
 
 The Cloudflare Firewall Rules API supports the operations outlined below. Visit the associated links for examples.
 
-</ContentColumn>
+{{</content-column>}}
 
 {{<table-wrap style="width:100%">}}
   <table style="table-layout:fixed; width:100%">

@@ -11,9 +11,9 @@ title: Bulk redirects
 
 # Bulk redirects
 
-<ContentColumn>
+{{<content-column>}}
   <p>{props.frontmatter.summary}</p>
-</ContentColumn>
+{{</content-column>}}
 
 ```js
 const externalHostname = 'examples.cloudflareworkers.com';

@@ -10,9 +10,9 @@ title: A/B testing
 
 # A/B testing
 
-<ContentColumn>
+{{<content-column>}}
   <p>{props.frontmatter.summary}</p>
-</ContentColumn>
+{{</content-column>}}
 
 ```js
 function handleRequest(request) {

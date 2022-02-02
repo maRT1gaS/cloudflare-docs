@@ -9,7 +9,7 @@ meta:
 
 # DDoS attack coverage
 
-<ContentColumn>
+{{<content-column>}}
 
 The [DDoS Attack Protection Managed Rulesets](/ddos-protection/managed-rulesets/) provide protection against a variety of DDoS attacks across L3/4 (layers 3/4) and L7 of the OSI model. Cloudflare constantly updates these Managed Rulesets to improve the attack coverage, increase the mitigation consistency, cover new and emerging threats, and ensure cost-efficient mitigations.
 
@@ -17,7 +17,7 @@ As a general guideline, Cloudflare customers are protected up to the layer on wh
 
 The following table includes a sample of covered attack vectors:
 
-</ContentColumn>
+{{</content-column>}}
 
 {{<table-wrap>}}
 

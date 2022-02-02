@@ -13,9 +13,9 @@ title: Cache using fetch
 
 # Cache using fetch
 
-<ContentColumn>
+{{<content-column>}}
   <p>{props.frontmatter.summary}</p>
-</ContentColumn>
+{{</content-column>}}
 
 ```js
 async function handleRequest(request) {
@@ -50,7 +50,7 @@ addEventListener('fetch', event => {
 
 ---
 
-<ContentColumn>
+{{<content-column>}}
 
 ## Caching HTML resources
 
@@ -112,4 +112,4 @@ fetch(request, {
 
 This option is a version of the `cacheTtl` feature which chooses a TTL based on the response's status code and does not automatically set `cacheEverything: true`. If the response to this request has a status code that matches, Cloudflare will cache for the instructed time, and override cache directives sent by the origin. You can review [details on the `cacheTtl` feature on the Request page](/workers/runtime-apis/request/#requestinitcfproperties).
 
-</ContentColumn>
+{{</content-column>}}

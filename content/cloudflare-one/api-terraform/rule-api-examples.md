@@ -7,7 +7,7 @@ title: Access API examples
 
 # Access API examples
 
-<ContentColumn>
+{{<content-column>}}
 
 Access users can create policies, including individual rule blocks inside of group or policy bodies. For example, this policy allows all Cloudflare email account users to reach the application with the exception of one account:
 
@@ -33,7 +33,7 @@ Access users can create policies, including individual rule blocks inside of gro
 }
 ```
 
-</ContentColumn>
+{{</content-column>}}
 
 ## Example rule configurations
 

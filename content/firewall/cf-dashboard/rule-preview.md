@@ -7,7 +7,7 @@ weight: 330
 
 # Preview rules
 
-<ContentColumn>
+{{<content-column>}}
 
 ## Overview
 
@@ -44,7 +44,7 @@ In this screenshot, a rule that matches all User-Agents that contain the string 
 
 **Cloudflare does not store the entirety of requests, so only a limited number of fields are available to Rule Preview**. The table below lists the fields that Rule Preview supports (green cells), broken down by operator. Fields and operators that are not supported are not included in this table.
 
-</ContentColumn>
+{{</content-column>}}
 
 {{<table-wrap style="width:100%">}}
   <table style="width: 100%">

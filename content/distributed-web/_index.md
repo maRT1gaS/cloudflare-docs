@@ -9,7 +9,7 @@ meta:
 
 # Cloudflare Distributed Web docs
 
-<ContentColumn>
+{{<content-column>}}
 
 View files stored on the InterPlanetary File System in your browser. Interact with the Ethereum blockchain. Explore the Distributed Web.
 
@@ -22,4 +22,4 @@ Ethereum Gateway
 {{</button>}}
 {{</button-group>}}
 
-</ContentColumn>
+{{</content-column>}}

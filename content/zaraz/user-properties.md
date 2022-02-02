@@ -5,13 +5,13 @@ type: overview
 title: Accessing User Properties
 ---
 
-<ContentColumn>
+{{<content-column>}}
 
 # Accessing User Properties
 
 Cloudflare Zaraz offers system properties that you can use when configuring the dashboard. They are helpful to send data to a third-party tool or to create triggers as they have context about a specific user's browser session and the actions they take on the website. Here is a full list of the System properties, how can you access them, and their values:
 
-</ContentColumn>
+{{</content-column>}}
 
 {{<table-wrap>}}
 

@@ -11,9 +11,9 @@ title: Data loss prevention
 
 # Data loss prevention
 
-<ContentColumn>
+{{<content-column>}}
   <p>{props.frontmatter.summary}</p>
-</ContentColumn>
+{{</content-column>}}
 
 ```js
 const DEBUG = true;

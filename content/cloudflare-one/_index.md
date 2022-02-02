@@ -9,7 +9,7 @@ meta:
 
 # Cloudflare for Teams documentation
 
-<ContentColumn>
+{{<content-column>}}
 
 Cloudflare for Teams replaces legacy security perimeters with our global edge, making the Internet faster and safer for teams around the world.
 
@@ -33,4 +33,4 @@ Cloudflare for Teams replaces legacy security perimeters with our global edge, m
 
 ![Teams illustration](/static/documentation/teams-no-background.png)
 
-</ContentColumn>
+{{</content-column>}}

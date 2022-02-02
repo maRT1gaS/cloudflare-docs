@@ -23,7 +23,7 @@
 - [x] (sidebar) frontmatter for "no subnavs"
 - [x] (sidebar) mark "active" root subnav on load
 
-- [ ] (topbar) position for feedback
+- [x] (topbar) position for feedback
 - [ ] (topbar) algolia search
 - [ ] (topbar) search shift+S keybind
 

@@ -4,13 +4,13 @@ type: overview
 title: Configure webhooks
 ---
 
-<ContentColumn>
+{{<content-column>}}
 
 # Configure webhooks
 
 There are a variety of services you can connect to Cloudflare using webhooks to receive Notifications from your Cloudflare account. The following table lists some of the most popular services you can connect to your Cloudflare account, as well as the information you need to connect to them:
 
-</ContentColumn>
+{{</content-column>}}
 
 {{<table-wrap>}}
 
@@ -25,7 +25,7 @@ There are a variety of services you can connect to Cloudflare using webhooks to 
 
 {{</table-wrap>}}
 
-<ContentColumn>
+{{<content-column>}}
 
 After configuring the external service you want to connect to, set up webhooks in your Cloudflare dashboard:
 
@@ -43,4 +43,4 @@ After configuring the external service you want to connect to, set up webhooks i
 
 The new webhook will appear in the **Webhooks** card.
 
-</ContentColumn>
+{{</content-column>}}

@@ -11,9 +11,9 @@ title: Debugging logs
 
 # Debugging logs
 
-<ContentColumn>
+{{<content-column>}}
   <p>{props.frontmatter.summary}</p>
-</ContentColumn>
+{{</content-column>}}
 
 ```js
 // Service configured to receive logs

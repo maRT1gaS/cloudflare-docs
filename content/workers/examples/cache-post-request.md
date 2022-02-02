@@ -12,9 +12,9 @@ title: Cache POST requests
 
 # Cache POST requests
 
-<ContentColumn>
+{{<content-column>}}
   <p>{props.frontmatter.summary}</p>
-</ContentColumn>
+{{</content-column>}}
 
 ```js
 async function sha256(message) {

@@ -7,13 +7,13 @@ title: Settings by plan
 
 # Settings by plan
 
-<ContentColumn>
+{{<content-column>}}
 
 Certain fields in Spectrum request and response bodies require an Enterprise plan. To upgrade your plan, contact your account team.
 
 Spectrum properties requiring an Enterprise plan:
 
-</ContentColumn>
+{{</content-column>}}
 
 {{<table-wrap>}}
 
@@ -27,8 +27,8 @@ Spectrum properties requiring an Enterprise plan:
 
 {{</table-wrap>}}
 
-<ContentColumn>
+{{<content-column>}}
 
 Review the [Spectrum API documentation](https://api.cloudflare.com/#spectrum-applications-properties) for example API requests.
 
-</ContentColumn>
+{{</content-column>}}

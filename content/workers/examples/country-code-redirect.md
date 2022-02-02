@@ -10,9 +10,9 @@ title: Country code redirect
 
 # Country code redirect
 
-<ContentColumn>
+{{<content-column>}}
   <p>{props.frontmatter.summary}</p>
-</ContentColumn>
+{{</content-column>}}
 
 ```js
 /**

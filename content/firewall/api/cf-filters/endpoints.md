@@ -8,8 +8,7 @@ markup:
 
 # Endpoints
 
-<ContentColumn>
-
+{{<content-column>}}
 To invoke a Cloudflare Filters API operation, append the endpoint to the Cloudflare API base URL:
 
 ```html
@@ -27,8 +26,7 @@ To retrieve a list of zones associated with your account, use the [List Zones](h
 {{</Aside>}}
 
 The Cloudflare Filters API supports the operations outlined below. Visit the associated links for examples.
-
-</ContentColumn>
+{{</content-column>}}
 
 {{<table-wrap style="width:100%">}}
   <table style="table-layout:fixed; width:100%">

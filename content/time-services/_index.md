@@ -9,7 +9,7 @@ meta:
 
 # Cloudflare Time Services docs
 
-<ContentColumn>
+{{<content-column>}}
 
 Learn more about Cloudflare’s suite of time services.
 
@@ -25,4 +25,4 @@ Roughtime
 {{</button>}}
 {{</button-group>}}
 
-</ContentColumn>
+{{</content-column>}}

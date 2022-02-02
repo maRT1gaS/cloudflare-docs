@@ -5,7 +5,7 @@ pcx-content-type: landing-page
 title: Cloudflare Notifications
 ---
 
-<ContentColumn>
+{{<content-column>}}
 
 # Cloudflare Notifications
 
@@ -27,4 +27,4 @@ Notifications are available in your [Cloudflare dashboard](https://dash.cloudfla
 
 Go to our [Types of Notifications](/fundamentals/notification-available/) section to know more about what each Notification does and what do to when receiving one.
 
-</ContentColumn>
+{{</content-column>}}

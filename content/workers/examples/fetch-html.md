@@ -11,9 +11,9 @@ title: Fetch HTML
 
 # Fetch HTML
 
-<ContentColumn>
+{{<content-column>}}
   <p>{props.frontmatter.summary}</p>
-</ContentColumn>
+{{</content-column>}}
 
 ```js
 /**
