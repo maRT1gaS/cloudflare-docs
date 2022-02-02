@@ -7,7 +7,7 @@
 
 {{- if hugo.IsProduction -}}
 	{{- $css = $css | minify | fingerprint "md5" }}
-	<!-- <link rel="stylesheet" href="{{ $css.Permalink }}" integrity="{{ $css.Data.Integrity }}" crossorigin="anonymous"/> -->
+	<!-- <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}" crossorigin="anonymous"/> -->
 {{- end -}}
 
 {{- if .inline -}}

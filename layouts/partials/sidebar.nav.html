@@ -1,5 +1,5 @@
-{{- $url := .Permalink -}}
-{{- $root := absURL (printf "/%s/" .Section) -}}
+{{- $url := .RelPermalink -}}
+{{- $root := relURL (printf "/%s/" .Section) -}}
 {{- $title := (title .Section) -}}
 {{- $DATA := (.Scratch.Get "product") }}
 

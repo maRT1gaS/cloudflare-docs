@@ -1,4 +1,4 @@
-{{- $current := .Context.Permalink -}}
+{{- $current := .Context.RelPermalink -}}
 {{- $active := (eq .Active $current) -}}
 {{- $isExpand := (and .Context.IsSection (hasPrefix .Active $current)) -}}
 {{- $hasChildren := (and .Context.IsSection (ne .Context.Params.hidechildren true)) -}}
