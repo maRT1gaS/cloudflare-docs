@@ -5,6 +5,7 @@
 // $ pnpm migrate
 
 import { join } from 'node:path';
+
 import * as normalize from './normalize';
 import * as $ from './utils';
 
@@ -32,6 +33,9 @@ await $.ls(PRODUCTS).then(products => {
       if ($.exists(file)) {
         let output = join(DATA, name + '.yml');
         await normalize.product(file, output);
+
+        $.log(`rm "products/${name}/docs-config.js"`);
+        await $.rm(file);
       } else {
         console.warn('[WARN] Missing "products/%s/docs-config.js" file!', name);
       }
@@ -42,7 +46,7 @@ await $.ls(PRODUCTS).then(products => {
 
       let target = join(CONTENT, name);
 
-      $.log(`cp -rf "products/${name}" "content/${name}"`)
+      $.log(`cp -rf "products/${name}" "content/${name}"`);
       await $.cp(src, target, { recursive: true });
 
       $.log(`rm -rf "products/${name}"`);
@@ -69,4 +73,15 @@ await $.git(`commit -m "move products -> content"`);
 await $.git(`add data`);
 await $.git(`commit -m "migrate docs-configs -> data yaml"`);
 
+// Touch all "content/**" files for code style
+// ~> minimizes the commit diff for later work
+
+await $.walk(CONTENT, {
+  async task({ file }) {
+    await normalize.markdown(file);
+  }
+});
+
+await $.git(`add content`);
+await $.git(`commit -m "initial code style"`);
 console.warn('~~~\nREMINDER: copy over `layouts` and `assets` directories!\n~~~');

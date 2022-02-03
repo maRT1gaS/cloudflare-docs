@@ -39,6 +39,33 @@ export async function mkdir(dir: string) {
   return exists(dir) || fs.promises.mkdir(dir, { recursive: true });
 }
 
+interface Options {
+  ignore?(name: string, file: string, list: string[]): boolean;
+  task(args: { name: string, file: string, list: string[], dir: string }): any;
+}
+
+export const Ignores = new Set(['node_modules', 'static']);
+export async function walk(dir: string, options: Options) {
+  let list = await ls(dir, { withFileTypes: true });
+  let names = list.map(x => x.name);
+
+  await Promise.all(
+    list.map(async dirent => {
+      let name = dirent.name;
+      let file = join(dir, name);
+
+      if (Ignores.has(name)) return;
+      if (options.ignore && options.ignore(name, file, names)) return;
+
+      if (dirent.isFile() && /\.md$/.test(name)) {
+        await options.task({ name, file, list: names, dir });
+      } else if (dirent.isDirectory()) {
+        return walk(file, options);
+      }
+    })
+  );
+}
+
 const isDEBUG = process.argv.includes('--debug');
 export function log(...x: unknown[]) {
   if (isDEBUG) console.log(...x);

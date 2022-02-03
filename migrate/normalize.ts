@@ -1,4 +1,6 @@
 import { join } from 'node:path';
+import { toMarkdown } from 'mdast-util-to-markdown';
+import { fromMarkdown } from 'mdast-util-from-markdown';
 import yaml from 'yaml';
 
 import * as $ from './utils';
@@ -98,4 +100,30 @@ export function product(src: string, target: string) {
     .replace('externals:', '\nexternals:');
 
 	return $.write(target, result);
+}
+
+/**
+ * Ensure file has frontmatter, even if empty
+ * Write the file w/ MDAST code style (necessary atm)
+ * @param file The absolute "content/.../*.md" file path
+ */
+export async function markdown(file: string): Promise<void> {
+  let [, product] = /content[\\/]+([^\\/]+)/.exec(file) || [];
+  $.log('~> markdown file belongs to "%s" product', product);
+
+  let data = await $.read(file, 'utf8');
+
+  let ftxt: string;
+  if (data.substring(0, 3) !== '---') {
+    ftxt = '---\n---';
+  } else {
+    let index = data.indexOf('---', 3);
+    ftxt = data.substring(0, index + 3).trim();
+    data = data.substring(index + 3).trim();
+  }
+
+  let tree = fromMarkdown(data);
+  let content = ftxt + '\n\n' + toMarkdown(tree);
+
+  return $.write(file, content);
 }
