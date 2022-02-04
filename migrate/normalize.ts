@@ -229,12 +229,12 @@ export function attributes(attrs: string) {
 }
 
 export function rewrite(content: string, tag: string, partial: string) {
-  let open = new RegExp('\\?<' + tag + '([^>]+)>', 'g');
+  let open = new RegExp('\\\\?<' + tag + '([^>]+)?>', 'g');
   let close = new RegExp('<\\/' + tag + '>', 'g');
 
   return content
     .replace(open, (_, attrs) => {
-      if (attrs) attrs = attributes(attrs);
+      attrs = attrs ? attributes(attrs) : '';
       return '{{<' + partial + attrs + '>}}';
     })
     .replace(close, '{{</' + partial + '>}}');
@@ -252,13 +252,13 @@ export async function mdx(file: string) {
   // ~> {{<Aside$1>}}...{{</Aside>}}
   data = rewrite(data, 'Aside', 'Aside');
 
-  // <Button(.*)>...</Button>
-  // ~> {{<button$1>}}...{{</button>}}
-  data = rewrite(data, 'Button', 'button');
-
   // <ButtonGroup(.*)>...</ButtonGroup>
   // ~> {{<button-group$1>}}...{{</button-group>}}
   data = rewrite(data, 'ButtonGroup', 'button-group');
+
+  // <Button(.*)>...</Button>
+  // ~> {{<button$1>}}...{{</button>}}
+  data = rewrite(data, 'Button', 'button');
 
   // <YouTube(.*)/> ~> {{<youtube$1>}}
   data = rewrite(data, 'YouTube', 'youtube');
