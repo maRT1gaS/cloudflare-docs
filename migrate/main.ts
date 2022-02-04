@@ -88,7 +88,6 @@ await $.git(`commit -m "initial code style"`);
 // ---
 // Normalize markdown content
 //   - if partial, apply hugo "ignore me" yaml
-//   - rewrite (some/static) MDX components
 //   - ensure `title` in frontmatter
 //   - normalize anchor link paths
 //   - normalize image src paths
@@ -102,4 +101,14 @@ await $.walk(CONTENT, {
 
 await $.git(`add content`);
 await $.git(`commit -m "normalize; fix links, images, frontmatter"`);
+
+// rewrite MDX -> hugo partials
+await $.walk(CONTENT, {
+  async task({ file }) {
+    await normalize.mdx(file);
+  }
+});
+
+await $.git(`add content`);
+await $.git(`commit -m "mdx -> hugo partials"`);
 console.warn('~~~\nREMINDER: copy over `layouts` and `assets` directories!\n~~~');

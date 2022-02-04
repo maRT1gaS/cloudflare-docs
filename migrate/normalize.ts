@@ -125,12 +125,6 @@ export async function content(file: string) {
   let [, product] = PRODNAME.exec(file) || [];
   let prefix = `/${product}/`;
 
-  // TODO: <Aside(.*)> -> {{<Aside$1>}}
-  // TODO: </Aside> -> {{</Aside>}}
-
-  // TODO: <...(.*)> -> {{<...$1>}}
-  // TODO: </...> -> {{</...>}}
-
   // look for title value from h1
   astray.walk<MDAST.Root, void, any>(tree, {
     heading(node: MDAST.Heading) {
@@ -227,4 +221,59 @@ export async function content(file: string) {
 
   // write the updated markdown file
   return $.write(file, ftxt + toMarkdown(tree));
+}
+
+// foo='hello world' ~> foo="hello world"
+export function attributes(attrs: string) {
+  return attrs.replace(/(\s+?)([^=]+)\=\'([^']+)\'/g, (_, ws, name, value) => ws + `${name}="${value}"`);
+}
+
+export function rewrite(content: string, tag: string, partial: string) {
+  let open = new RegExp('\\?<' + tag + '([^>]+)>', 'g');
+  let close = new RegExp('<\\/' + tag + '>', 'g');
+
+  return content
+    .replace(open, (_, attrs) => {
+      if (attrs) attrs = attributes(attrs);
+      return '{{<' + partial + attrs + '>}}';
+    })
+    .replace(close, '{{</' + partial + '>}}');
+}
+
+/**
+ * Rewrite (some) static MDX components
+ * ~> insert the hugo partial instead
+ * TODO: read `import`s from _partials and _components
+ */
+export async function mdx(file: string) {
+  let data = await $.read(file, 'utf8');
+
+  // <Aside(.*)>...</Aside>
+  // ~> {{<Aside$1>}}...{{</Aside>}}
+  data = rewrite(data, 'Aside', 'Aside');
+
+  // <Button(.*)>...</Button>
+  // ~> {{<button$1>}}...{{</button>}}
+  data = rewrite(data, 'Button', 'button');
+
+  // <ButtonGroup(.*)>...</ButtonGroup>
+  // ~> {{<button-group$1>}}...{{</button-group>}}
+  data = rewrite(data, 'ButtonGroup', 'button-group');
+
+  // <YouTube(.*)/> ~> {{<youtube$1>}}
+  data = rewrite(data, 'YouTube', 'youtube');
+
+  // <TableWrap(.*)>...</TableWrap>
+  // ~> {{<table-wrap$1>}}...{{</table-wrap>}}
+  data = rewrite(data, 'TableWrap', 'table-wrap');
+
+  // <ContentColumn(.*)>...</ContentColumn>
+  // ~> {{<content-column$1>}}...{{</content-column>}}
+  data = rewrite(data, 'ContentColumn', 'content-column');
+
+  // TODO: other partials ??
+
+  // TODO: imports from partials/components
+
+  await $.write(file, data);
 }
