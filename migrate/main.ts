@@ -111,4 +111,11 @@ await $.walk(CONTENT, {
 
 await $.git(`add content`);
 await $.git(`commit -m "mdx -> hugo partials"`);
+
+// --- others ---
+
+await $.rm(PRODUCTS, { recursive: true });
+await $.git(`add products`);
+await $.git(`commit -m "rm -rf products"`);
+
 console.warn('~~~\nREMINDER: copy over `layouts` and `assets` directories!\n~~~');
