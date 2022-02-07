@@ -1,6 +1,8 @@
 // Sidebar navlink expansions
 // ---
 
+import { $tabbable } from './events';
+
 export function init() {
   document.querySelectorAll<HTMLButtonElement>('.DocsSidebar--nav-expand-collapse-button').forEach(btn => {
     let item = btn.parentNode; // .DocsSidebar--nav-item
@@ -32,17 +34,24 @@ function toggle(ev: Event) {
   // .DocsSidebar--nav-item-collapse-wrapper
   let sizes = [0, container.firstElementChild!.clientHeight];
 
-  item.toggleAttribute(attr, !isExpanded);
-
   let initial = +isExpanded;
   // expanded:: height -> 0 || minimize:: 0 -> height
   container.style.height = sizes[initial] + 'px';
+
+  // only adjust immediate <ul> child
+  let subnav = container.querySelector('ul');
+  let items = subnav && subnav.querySelectorAll('li>a,li>button');
+  if (items) $tabbable(items, !isExpanded);
+  item.toggleAttribute(attr, !isExpanded);
 
   setTimeout(() => {
     container.style.height = sizes[1 - initial] + 'px';
   }, 1);
 
-  if (!isExpanded) {
+  if (isExpanded) {
+    // minimizing
+  } else {
+    // expanding
     item.timer = setTimeout(() => {
       container.style.height = 'auto';
       container.classList.add('DocsSidebar--nav-item-collapse-entered');

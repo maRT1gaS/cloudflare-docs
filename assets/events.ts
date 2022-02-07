@@ -1,3 +1,16 @@
+export function $focus(elem: HTMLElement, bool: boolean) {
+  elem.toggleAttribute('is-focus-visible', bool);
+  if (bool) elem.focus();
+}
+
+export function $tabbable(links: NodeListOf<Element>, bool: boolean) {
+  for (let i=0; i < links.length; i++) {
+    bool
+      ? links[i].removeAttribute('tabindex')
+      : links[i].setAttribute('tabindex', '-1');
+  }
+}
+
 // mobile sidebar toggle
 export function mobile() {
   let root = document.documentElement;
@@ -5,11 +18,6 @@ export function mobile() {
   if (btn) btn.addEventListener('click', () => {
     root.toggleAttribute('is-mobile-sidebar-open');
   });
-}
-
-function $focus(elem: HTMLElement, bool: boolean) {
-  elem.toggleAttribute('is-focus-visible', bool);
-  if (bool) elem.focus();
 }
 
 // add focus attribute to activeElement if keyboard trigger
@@ -61,9 +69,8 @@ export function dropdowns() {
         ev.stopPropagation();
         removeEventListener('click', close);
 
-        for (let i=0; i < links.length; i++) {
-          links[i].setAttribute('tabindex', '-1');
-        }
+        // tab-inactive sublinks
+        $tabbable(links, false);
 
         div.setAttribute(attr, 'false');
         btn.setAttribute(attr, 'false');
@@ -75,9 +82,8 @@ export function dropdowns() {
         ev.stopPropagation();
         addEventListener('click', close);
 
-        for (let i=0; i < links.length; i++) {
-          links[i].removeAttribute('tabindex');
-        }
+        // tab-friendly sublinks
+        $tabbable(links, true);
 
         div.setAttribute(attr, 'true');
         btn.setAttribute(attr, 'true');
