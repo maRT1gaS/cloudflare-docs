@@ -60,7 +60,7 @@ export function product(src: string, target: string) {
 		image: raw.siteMetadata.image,
 	};
 
-	if (raw.search) {
+	if (raw.search && raw.search.indexName) {
 		data.algolia = {
 			index: raw.search.indexName,
 			apikey: raw.search.apiKey,
