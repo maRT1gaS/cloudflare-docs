@@ -18,14 +18,16 @@
 
 ---
 
-- [-] (sidebar) dropdown JS
+- [x] (sidebar) dropdown JS
 - [x] (sidebar) mobile toggle JS
 - [x] (sidebar) frontmatter for "no subnavs"
 - [x] (sidebar) mark "active" root subnav on load
 
 - [x] (topbar) position for feedback
-- [ ] (topbar) algolia search
-- [ ] (topbar) search shift+S keybind
+- [-] (topbar) algolia search
+- [x] (topbar) search shift+S keybind
+
+- [ ] components convert (_components and DirectoryListing)
 
 - [x] table of contents add/customize
 - [ ] update all code snippets --> customize output? probabyl not, change css instead
