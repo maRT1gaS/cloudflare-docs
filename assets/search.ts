@@ -1,11 +1,15 @@
 import { get, render } from './swaps';
 
 let tag = document.currentScript;
+let $ = document.querySelector.bind(document);
 
 let dataset = tag && tag.dataset;
 let { index, key, filters } = dataset || {};
 
+
 function loaded() {
+  let element = $('#DocsSearch--input') || $('#SiteSearch--input');
+
   let algolia = window.docsearch({
     indexName: index,
     apiKey: key,
@@ -13,8 +17,7 @@ function loaded() {
       facetFilters: filters || ''
     },
 
-    // TODO: pass DOM node?
-    inputSelector: '#DocsSearch--input',
+    inputSelector: '#' + element.id,
 
     autocompleteOptions: {
       // https://github.com/algolia/autocomplete.js#global-options
@@ -23,7 +26,7 @@ function loaded() {
       clearOnSelected: false,
       tabAutocomplete: false,
 
-      appendTo: '.DocsSearch--input-wrapper',
+      appendTo: '.' + element.parentNode.className,
       hint: false,
 
       autoselectOnBlur: matchMedia('(pointer: course)').matches
