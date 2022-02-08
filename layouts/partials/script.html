@@ -16,9 +16,5 @@
     {{- $script = $script | fingerprint "md5" -}}
   {{- end -}}
 
-  {{- if .defer -}}
-    <script src="{{ $script.RelPermalink }}" defer></script>
-  {{- else -}}
-    <script src="{{ $script.RelPermalink }}"></script>
-  {{- end -}}
+  <script src="{{ $script.RelPermalink }}"{{ if .defer }} defer{{ end }}></script>
 {{- end -}}
