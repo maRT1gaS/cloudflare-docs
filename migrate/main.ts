@@ -123,5 +123,3 @@ await $.git(`commit -m "mdx -> hugo partials"`);
 await $.rm(PRODUCTS, { recursive: true });
 await $.git(`add products`);
 await $.git(`commit -m "rm -rf products"`);
-
-console.warn('~~~\nREMINDER: copy over `layouts` and `assets` directories!\n~~~');
