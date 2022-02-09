@@ -9,11 +9,15 @@ const __filename = fileURLToPath(import.meta.url);
 export const require = createRequire(__filename);
 export const __dirname = dirname(__filename);
 
-// directories
 export const ROOT = join(__dirname, '..');
+
+// directories :: gatsby
+export const SITE = join(ROOT, 'developers.cloudflare.com');
+export const PRODUCTS = join(ROOT, 'products');
+
+// directories :: hugo
 export const ASSETS = join(ROOT, 'assets');
 export const LAYOUTS = join(ROOT, 'layouts');
-export const PRODUCTS = join(ROOT, 'products');
 export const CONTENT = join(ROOT, 'content');
 export const STATIC = join(ROOT, 'static');
 export const DATA = join(ROOT, 'data');

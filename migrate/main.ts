@@ -21,8 +21,8 @@ await $.mkdir(DATA);
 // Move "products/*/src/content" ~> "content/**"
 // Normalize "static|images" subdir location
 // Convert "products/*/docs-config.js" ~> "data/*.yml"
-await $.ls(PRODUCTS).then(products => {
-  return Promise.all(
+await $.ls(PRODUCTS).then(async products => {
+  await Promise.all(
     products.map(async name => {
       // ignore products/readme.md
       if (isMDX.test(name)) return;
@@ -65,6 +65,12 @@ await $.ls(PRODUCTS).then(products => {
       }
     })
   );
+
+  // create "data/home.yml" file
+  let target = join(DATA, 'home.yml');
+  let file = join($.SITE, 'docs-config.js');
+  await normalize.product(file, target);
+  await $.rm(file);
 });
 
 await $.git(`add products content`);
