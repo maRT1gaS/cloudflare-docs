@@ -6,7 +6,6 @@ let $ = document.querySelector.bind(document);
 let dataset = tag && tag.dataset;
 let { index, key, filters } = dataset || {};
 
-
 function loaded() {
   let element = $('#DocsSearch--input') || $('#SiteSearch--input');
 
@@ -40,15 +39,19 @@ function loaded() {
       algolia.input.autocomplete.setVal('');
       algolia.input[0].blur();
 
-      // no scroll if is H1 tag
       let req = get(ctx.pathname);
-      let toScroll = !suggestion.isLvl0;
+
+      // no scroll if is H1 tag
+      if (suggestion.isLvl0) ctx.hash = '';
 
       req.onload = () => {
         if (req.status < 400) {
           render(ctx, req.responseText!);
 
-          let header = toScroll && document.querySelector(ctx.hash);
+          let header = ctx.hash && document.getElementById(
+            ctx.hash.substring(1) // handle `#5a-foobar` case
+          );
+
           if (header) (header as HTMLElement).focus();
         } else {
           console.log('[TODO] 4xx fetch error', ctx.pathname);
@@ -94,7 +97,6 @@ function loaded() {
 
 // init
 (function check() {
-  console.log('~> checking');
   if (!index || !key) return;
   if (window.docsearch) loaded();
   else setTimeout(check, 25);
