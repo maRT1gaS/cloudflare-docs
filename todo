@@ -1,48 +1,33 @@
-- [x] render markdown links w/ HTML (or change css)
-- [x] header `id` values (linkable) – https://github.com/valeriangalliat/markdown-it-anchor
-- [x] frontmatter for code snippets (highlight, theme, etc)
-- [ ] (BIG) convert all engine components -> partials
-- [ ] (BIG) grab ALL markup output for 1:1 alignment
-- [x] check mobile menus, etc
-- [x] fix link hrefs
-- [x] sidenav anim
-- [ ] sidenav persist (`swaps` for content)
-- [ ] redirects
+CONVERT
+---
+- [ ] components convert (_components and DirectoryListing)
+- [ ] update all code snippets --> customize output? probabyl not, change css instead
+- [ ] (baseof) icons / static product images
+- [ ] (baseof) sitemap, manifest, etc
+- [x] developers.cloudflare homepage
+- [ ] product grid css responsive
 
-- "federated search"??
 
+MIGRATE / AUTOMATE
+---
+- [ ] component/partial imports
+- [ ] stylesheets
+- [ ] robots.txt
+- [ ] sitemaps
+- [ ] product grid data
+- [ ] icons/images?
+
+FUTURE
+---
+- [ ] integrated examples repo
+- [ ] (CI) broken link check
+- [ ] (CI) spell checker
+- [ ] different description per page
+- [ ] "federated search"??
+
+BONGO
+---
 - [ ] (bongo) menus
 - [ ] (bongo) index pages
 - [ ] (bongo) fix `dev` assets
 - [ ] (bongo) allow `bongo:foo/bar` and `bongo:foo-bar`
-
----
-
-- [x] (sidebar) dropdown JS
-- [x] (sidebar) mobile toggle JS
-- [x] (sidebar) frontmatter for "no subnavs"
-- [x] (sidebar) mark "active" root subnav on load
-
-- [x] (topbar) position for feedback
-- [-] (topbar) algolia search
-- [x] (topbar) search shift+S keybind
-
-- [ ] components convert (_components and DirectoryListing)
-
-- [x] table of contents add/customize
-- [ ] update all code snippets --> customize output? probabyl not, change css instead
-
-- [ ] (baseof) icons / static product images
-- [ ] (baseof) sitemap, manifest, etc
-- [x] developers.cloudflare homepage
-
-
-https://github.com/cloudflare/cloudflare-docs-engine/tree/master/src/components/mdx
-
-
-- broken link check -- https://github.com/marketplace/actions/hugo-broken-link-check
-- spell checker
-
-IMPROVES
----
-- different description per page? everything the same within subsite
