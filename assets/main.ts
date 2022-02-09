@@ -3,6 +3,13 @@ import * as contents from './contents';
 import * as timeago from './timeago';
 import * as navs from './navlinks';
 
+declare global {
+  interface Window {
+    // algolia; @see search.ts
+    docsearch?(options: any): any;
+  }
+}
+
 navs.init();
 timeago.init();
 

@@ -1,5 +1,3 @@
-import { get, render } from './swaps';
-
 let tag = document.currentScript;
 let $ = document.querySelector.bind(document);
 
@@ -33,30 +31,16 @@ function loaded() {
 
     // https://docsearch.algolia.com/docs/behavior
     handleSelected(input, event, suggestion, datasetNumber, context) {
-      console.log('~> HANDLE SELECTED', { input, event, suggestion, datasetNumber, context });
       let ctx = new URL(suggestion.url);
 
       algolia.input.autocomplete.setVal('');
       algolia.input[0].blur();
 
-      let req = get(ctx.pathname);
-
       // no scroll if is H1 tag
       if (suggestion.isLvl0) ctx.hash = '';
 
-      req.onload = () => {
-        if (req.status < 400) {
-          render(ctx, req.responseText!);
-
-          let header = ctx.hash && document.getElementById(
-            ctx.hash.substring(1) // handle `#5a-foobar` case
-          );
-
-          if (header) (header as HTMLElement).focus();
-        } else {
-          console.log('[TODO] 4xx fetch error', ctx.pathname);
-        }
-      };
+      // redirect to new path
+      return location.assign(ctx.pathname + ctx.search + ctx.hash);
     },
 
     transformData(hits) {
