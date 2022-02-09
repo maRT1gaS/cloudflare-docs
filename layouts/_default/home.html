@@ -2,7 +2,6 @@
 <html lang="{{ .Site.LanguageCode }}" theme="light" is-site-page is-docs-page>
   <head>
     {{- partial "head.meta" (dict "Context" . "Product" "home") -}}
-    {{- partial "head.search" (dict "Context" . "Product" "home") -}}
 
     <link rel="stylesheet" href="/home.css"/>
     {{- partial "script" (dict "src" "theme.ts" "inline" true "format" "iife") -}}

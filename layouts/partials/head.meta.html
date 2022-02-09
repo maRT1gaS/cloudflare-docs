@@ -1,3 +1,4 @@
+{{/* @see :: data/<Product>.yml */}}
 {{- $DATA := (index .Context.Site.Data .Product) -}}
 {{- .Scratch.Set "product" $DATA -}}
 
@@ -32,3 +33,22 @@
 <meta name="twitter:description" content="{{ $META.description }}"/>
 <meta name="twitter:creator" content="{{ $META.author }}"/>
 <meta name="twitter:card" content="summary_large_image"/>
+
+{{- if $DATA.algolia -}}
+  <script defer async src="https://cdnjs.cloudflare.com/ajax/libs/docsearch.js/2.6.3/docsearch.min.js"></script>
+
+  {{/* modified "script" partial */}}
+  {{- $opts := dict "target" "es2015" "minify" hugo.IsProduction "format" "iife" -}}
+  {{- $script := (resources.Get "search.ts") | js.Build $opts -}}
+
+  {{- if hugo.IsProduction -}}
+    {{- $script = $script | minify | fingerprint "md5" -}}
+  {{- end -}}
+
+  <script
+    src="{{ $script.RelPermalink }}" defer
+    data-filters="{{ $DATA.algolia.filters }}"
+    data-index="{{ $DATA.algolia.index }}"
+    data-key="{{ $DATA.algolia.apikey }}"
+  ></script>
+{{- end -}}
