@@ -1,9 +1,9 @@
-{{- $DATA := (index $.Site.Data .Section) -}}
+{{- $DATA := (index .Context.Site.Data .Product) -}}
 {{- .Scratch.Set "product" $DATA -}}
 
-{{- $META := merge $DATA.meta (default dict .Params.meta) -}}
+{{- $META := merge $DATA.meta (default dict .Context.Params.meta) -}}
 
-{{- $pt := default .Title .Params.meta.title -}}
+{{- $pt := default .Context.Title .Context.Params.meta.title -}}
 {{- $title := printf "%s · %s" $pt $DATA.meta.title -}}
 
 <meta charset="utf-8">

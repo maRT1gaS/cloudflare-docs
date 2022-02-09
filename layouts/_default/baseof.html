@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="{{ .Site.LanguageCode }}" theme="light" is-docs-page js-focus-visible-polyfill-available>
   <head>
-    {{- partial "head.meta" . -}}
+    {{- partial "head.meta" (dict "Context" . "Product" .Section) -}}
 
     <link rel="stylesheet" href="/style.css"/>
     {{- block "styles" . -}}{{- end -}}

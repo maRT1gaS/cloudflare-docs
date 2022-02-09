@@ -1,8 +1,7 @@
 <!doctype html>
 <html lang="{{ .Site.LanguageCode }}" theme="light" is-site-page is-docs-page>
   <head>
-    {{ partial "head.meta" . }}
-
+    {{- partial "head.meta" (dict "Context" . "Product" "home") -}}
     {{- partial "head.search" (dict "Context" . "Product" "home") -}}
 
     <link rel="stylesheet" href="/home.css"/>
