@@ -1,6 +1,6 @@
 reset:
 	cd ..
-	git reset HEAD~13 --hard
+	git reset HEAD~15 --hard
 	git clean -xdf
 	cp ../docs-hugo/migrate/Makefile .
 
@@ -35,6 +35,17 @@ run:
 	rm *.js
 	git add package.json *.js
 	@git commit -m "update root files"
+
+	@echo "\n~> updating .github/workflows directory"
+	rm -rf .github/workflows
+	cp -rf ../docs-hugo/.github/workflows .
+	git add .github/workflows
+	@git commit -m "update github actions"
+
+	@echo "\n~> importing Makefile for Pages"
+	cp ../docs-hugo/Makefile .
+	git add Makefile
+	@git commit -m "import Makefile for Pages"
 
 	@echo "\n~> cleanup~!"
 	rm -rf migrate
