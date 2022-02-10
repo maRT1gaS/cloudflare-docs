@@ -76,7 +76,7 @@ await $.ls(PRODUCTS).then(async products => {
 await $.git(`add products content`);
 await $.git(`commit -m "move products -> content"`);
 
-await $.git(`add data`);
+await $.git(`add data developers.cloudflare.com`);
 await $.git(`commit -m "migrate docs-configs -> data yaml"`);
 
 // Touch all "content/**" files for code style
@@ -90,6 +90,15 @@ await $.walk(CONTENT, {
 
 await $.git(`add content`);
 await $.git(`commit -m "initial code style"`);
+
+// Remove "content/docs-engine" product
+await $.rm(
+  join(CONTENT, 'docs-engine'),
+  { recursive: true }
+);
+
+await $.git(`add content`);
+await $.git(`commit -m "remove \"docs-engine\" content"`);
 
 // ---
 // Normalize markdown content

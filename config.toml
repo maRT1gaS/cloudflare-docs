@@ -1,5 +1,4 @@
-baseURL = "http://localhost:1313/"
-# baseURL = "https://developers.cloudflare.com"
+baseURL = "https://developers.cloudflare.com"
 
 title = "Cloudflare Developers"
 languageCode = "en"
@@ -13,6 +12,7 @@ disableKinds = ["taxonomy", "taxonomyTerm"]
 enableEmoji = true
 enableGitInfo = true
 
+# TODO
 rssLimit = 10
 
 paginate = 12 # default 10

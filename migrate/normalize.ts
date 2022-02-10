@@ -203,6 +203,16 @@ export async function content(file: string) {
       fmatter.layout = 'list';
     }
 
+    if (fmatter.url && /^(https?:)?\/\//.test(fmatter.url)) {
+      let ctx = new URL(fmatter.url);
+      if (ctx.hostname === 'developers.cloudflare.com') {
+        fmatter.url = ctx.pathname + ctx.search + ctx.hash;
+      } else {
+        fmatter.redirect = fmatter.url;
+        delete fmatter.url;
+      }
+    }
+
     if (fmatter.title === title) {
       // do nothing
     } else if (fmatter.title) {
@@ -225,7 +235,10 @@ export async function content(file: string) {
 
 // foo='hello world' ~> foo="hello world"
 export function attributes(attrs: string) {
-  return attrs.replace(/(\s+?)([^=]+)\=\'([^']+)\'/g, (_, ws, name, value) => ws + `${name}="${value}"`);
+  return attrs
+    .replace(/[ ]/g, ' ') // <<< REMOVE WEIRD SPACES!
+    .replace(/\s+[a]\s+href/g, ' ') // eg; <button a href="...">
+    .replace(/(\s+?)([^=]+)\=(["'])([^\3]+)\3/g, (_, ws, name, q, value) => ws + `${name.trim()}="${value}"`);
 }
 
 export function rewrite(content: string, tag: string, partial: string) {
@@ -235,6 +248,7 @@ export function rewrite(content: string, tag: string, partial: string) {
   return content
     .replace(open, (_, attrs) => {
       attrs = attrs ? attributes(attrs) : '';
+      if (attrs.endsWith('/')) attrs = attrs.substring(0, attrs.length - 1);
       return '{{<' + partial + attrs + '>}}';
     })
     .replace(close, '{{</' + partial + '>}}');

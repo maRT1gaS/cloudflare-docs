@@ -1,6 +1,6 @@
 reset:
 	cd ..
-	git reset HEAD~10 --hard
+	git reset HEAD~13 --hard
 	git clean -xdf
 	cp ../docs-hugo/migrate/Makefile .
 
@@ -24,6 +24,17 @@ run:
 	cp -rf ../docs-hugo/layouts .
 	git add layouts
 	@git commit -m "import layouts directory"
+
+	@echo "\n~> copying /config.toml file"
+	cp ../docs-hugo/config.toml .
+	git add config.toml
+	@git commit -m "import config.toml file"
+
+	@echo "\n~> copying /layouts directory"
+	cp ../docs-hugo/package.json .
+	rm *.js
+	git add package.json *.js
+	@git commit -m "update root files"
 
 	@echo "\n~> cleanup~!"
 	rm -rf migrate
