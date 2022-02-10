@@ -42,10 +42,11 @@ run:
 	git add .github/workflows
 	@git commit -m "update github actions"
 
-	@echo "\n~> importing Makefile for Pages"
+	@echo "\n~> importing Pages build scripts"
+	cp -rf ../docs-hugo/bin .
 	cp ../docs-hugo/Makefile .
-	git add Makefile
-	@git commit -m "import Makefile for Pages"
+	git add Makefile bin
+	@git commit -m "import Pages build scripts"
 
 	@echo "\n~> cleanup~!"
 	rm -rf migrate
