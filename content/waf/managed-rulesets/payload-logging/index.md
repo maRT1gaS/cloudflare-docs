@@ -5,7 +5,7 @@ order: 25
 
 # Log the payload of matched rules
 
-<Aside type='note'>
+\<Aside type='note'>
 
 This feature is only available for customers on an Enterprise plan.
 
@@ -15,18 +15,18 @@ The WAF allows you to log the request information that triggered a specific rule
 
 Each Managed Ruleset has its own payload logging configuration. To enable the feature, configure a public key to encrypt the logged payload by doing one of the following:
 
-* Generate a key pair directly in the dashboard (Cloudflare will **only** save the generated public key)
-* Enter your own public key
+*   Generate a key pair directly in the dashboard (Cloudflare will **only** save the generated public key)
+*   Enter your own public key
 
 Once enabled, the WAF saves the payload of any rule matches for the Managed Ruleset configured with payload logging, encrypting the payload with your public key.
 
 To view the content of the payload in clear text, do one of the following:
 
-* In the Firewall Analytics page (**Firewall** > **Overview**), enter your private key to decrypt the payload of a log entry directly in the browser. See [View the payload content in the dashboard](/managed-rulesets/payload-logging/view).
+*   In the Firewall Analytics page (**Firewall** > **Overview**), enter your private key to decrypt the payload of a log entry directly in the browser. See [View the payload content in the dashboard](/managed-rulesets/payload-logging/view).
 
-* Decrypt the payload in the command line using the `matched-data-cli` tool. See [Decrypt the payload content in the command line](/managed-rulesets/payload-logging/command-line/decrypt-payload).
+*   Decrypt the payload in the command line using the `matched-data-cli` tool. See [Decrypt the payload content in the command line](/managed-rulesets/payload-logging/command-line/decrypt-payload).
 
-<Aside type='warning' header='Important'>
+\<Aside type='warning' header='Important'>
 
 All Cloudflare logs are encrypted at rest. Encrypting the payload content adds a second layer of encryption for the matched values that triggered a WAF rule.
 

@@ -7,7 +7,7 @@ pcx-content-type: reference
 
 ## Overview
 
-In a small number of cases, the analytics provided on the Cloudflare dashboard and GraphQL Analytics API are based on a _sample_—a subset of the data set. In these cases, Cloudflare Analytics returns an estimate derived from the sampled value. For example, suppose that during an attack the sampling rate is 10% and 5,000 events are sampled. Cloudflare will estimate 50,000 total events (5,000 × 10) and report this value in Analytics.
+In a small number of cases, the analytics provided on the Cloudflare dashboard and GraphQL Analytics API are based on a *sample*—a subset of the data set. In these cases, Cloudflare Analytics returns an estimate derived from the sampled value. For example, suppose that during an attack the sampling rate is 10% and 5,000 events are sampled. Cloudflare will estimate 50,000 total events (5,000 × 10) and report this value in Analytics.
 
 ## Sampled data sets
 
@@ -28,7 +28,7 @@ Cloudflare Analytics builds the following data sets from sampled data:
 
 </TableWrap>
 
-_* These nodes are deprecated. Refer to [Data Sets](/graphql-api/features/data-sets#deprecated-data-nodes) for more information._
+*\* These nodes are deprecated. Refer to [Data Sets](/graphql-api/features/data-sets#deprecated-data-nodes) for more information.*
 
 The presence of sampled data is called out in the Cloudflare dashboard and in the description of the data set in the API.
 
@@ -40,7 +40,7 @@ Analytics is designed to provide requested data, at the appropriate level of det
 
 ### Adaptive sampling
 
-Cloudflare almost always uses _adaptive sampling_, which means the sample rate fluctuates depending on the volume of data ingested or queried. If the number of records is relatively small, sampling is not used. However, as the volume of records grows larger, progressively lower sample rates are applied. Firewall Analytics and the Firewall Event Log follow this model. Data nodes that use adaptive sampling are easy to identify by the `Adaptive` suffix in the node name, as in `firewallEventsAdaptive`.
+Cloudflare almost always uses *adaptive sampling*, which means the sample rate fluctuates depending on the volume of data ingested or queried. If the number of records is relatively small, sampling is not used. However, as the volume of records grows larger, progressively lower sample rates are applied. Firewall Analytics and the Firewall Event Log follow this model. Data nodes that use adaptive sampling are easy to identify by the `Adaptive` suffix in the node name, as in `firewallEventsAdaptive`.
 
 ### Fixed sampling
 

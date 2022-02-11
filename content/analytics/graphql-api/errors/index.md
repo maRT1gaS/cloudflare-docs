@@ -9,11 +9,12 @@ The GraphQL Analytics API is a RESTful API based on HTTPS requests and JSON resp
 
 All responses contain an `errors` array, which will be `null` if there are no errors, and include at least one error object if there was an error. Non-null error objects will contain the following fields:
 
-- `message`: a string describing the error
-- `path`: the nodes associated with the error, starting from the root. Note that the number included in the path array, e.g., `0` or `1`, specifies to which zone the error applies; `0` indicates the first zone in the list (or only zone, if only one is being queried).
-- `timestamp`: UTC datetime when the error occurred
+*   `message`: a string describing the error
+*   `path`: the nodes associated with the error, starting from the root. Note that the number included in the path array, e.g., `0` or `1`, specifies to which zone the error applies; `0` indicates the first zone in the list (or only zone, if only one is being queried).
+*   `timestamp`: UTC datetime when the error occurred
 
 ## Example
+
 ```json
 {
   "data": null,
@@ -40,17 +41,17 @@ All responses contain an `errors` array, which will be `null` if there are no er
 
 Sample error messages:
 
-- "cannot request data older than..."
-- "number of fields can't be more than..."
+*   "cannot request data older than..."
+*   "number of fields can't be more than..."
 
-Indicate that the query exceeds what's allowed for the particular data set under your plan. _See [Data set accessibility](/graphql-api/limits/#data-set-accessibility)_ for details.
+Indicate that the query exceeds what's allowed for the particular data set under your plan. *See [Data set accessibility](/graphql-api/limits/#data-set-accessibility)* for details.
 
 ### Parsing issues
 
 Sample error messages:
 
-- "error parsing args..."
-- "scalar fields must have not selections"
+*   "error parsing args..."
+*   "scalar fields must have not selections"
 
 Indicate that the query can't be processed because it's malformed.
 
@@ -58,5 +59,5 @@ Indicate that the query can't be processed because it's malformed.
 
 Sample error messages:
 
-- "limit reached, please try reduced time period"
-- "quota exceeded, please repeat your request in the next minute"
+*   "limit reached, please try reduced time period"
+*   "quota exceeded, please repeat your request in the next minute"

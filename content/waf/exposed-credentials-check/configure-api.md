@@ -9,7 +9,7 @@ Configure exposed credentials checks using the [Rulesets API](https://developers
 
 ## Deploy the Exposed Credentials Check Managed Ruleset
 
-<Aside type='warning' header='Important'>
+\<Aside type='warning' header='Important'>
 
 You must deploy the Managed Ruleset to the `http_request_firewall_managed` phase.
 
@@ -17,13 +17,13 @@ You must deploy the Managed Ruleset to the `http_request_firewall_managed` phase
 
 To deploy the Managed Ruleset for a given zone, do the following:
 
-1. Obtain the zone ID of the zone where you want to deploy the Managed Ruleset.
-1. Use the [List existing rulesets](https://developers.cloudflare.com/ruleset-engine/rulesets-api/view#list-existing-rulesets) method to obtain the following ruleset IDs:
-    * The ruleset ID of the ruleset for the `http_request_firewall_managed` phase at the zone level
-    * The ruleset ID of the Exposed Credentials Check Managed Ruleset
-1. If the `http_request_firewall_managed` phase ruleset does not exist, create it using the Create ruleset method.
-1. Use the [View ruleset](https://developers.cloudflare.com/ruleset-engine/rulesets-api/view#view-a-specific-ruleset) method to get the rules already associated with the phase ruleset where you want to deploy the Managed Ruleset.
-1. Use the [Update ruleset](https://developers.cloudflare.com/ruleset-engine/rulesets-api/update) method to add a rule to the phase ruleset deploying the Exposed Credentials Check Managed Ruleset. Make sure you include the existing rules in the phase ruleset in your `PUT` request.
+1.  Obtain the zone ID of the zone where you want to deploy the Managed Ruleset.
+2.  Use the [List existing rulesets](https://developers.cloudflare.com/ruleset-engine/rulesets-api/view#list-existing-rulesets) method to obtain the following ruleset IDs:
+    *   The ruleset ID of the ruleset for the `http_request_firewall_managed` phase at the zone level
+    *   The ruleset ID of the Exposed Credentials Check Managed Ruleset
+3.  If the `http_request_firewall_managed` phase ruleset does not exist, create it using the Create ruleset method.
+4.  Use the [View ruleset](https://developers.cloudflare.com/ruleset-engine/rulesets-api/view#view-a-specific-ruleset) method to get the rules already associated with the phase ruleset where you want to deploy the Managed Ruleset.
+5.  Use the [Update ruleset](https://developers.cloudflare.com/ruleset-engine/rulesets-api/update) method to add a rule to the phase ruleset deploying the Exposed Credentials Check Managed Ruleset. Make sure you include the existing rules in the phase ruleset in your `PUT` request.
 
 For more information on deploying a Managed Ruleset, check [Deploy a Managed Ruleset](https://developers.cloudflare.com/ruleset-engine/managed-rulesets/deploy-managed-ruleset).
 
@@ -47,15 +47,15 @@ A rule with exposed credentials check has a match when both the rule expression 
 
 To check for exposed credentials in a custom rule, include the field `exposed_credential_check` in the rule definition. This field requires the following options:
 
-* `username_expression` — Expression that selects the user ID used in the credentials check. This field can have up to 1024 characters.
-* `password_expression` — Expression that selects the password used in the credentials check. This field can have up to 1024 characters.
+*   `username_expression` — Expression that selects the user ID used in the credentials check. This field can have up to 1024 characters.
+*   `password_expression` — Expression that selects the password used in the credentials check. This field can have up to 1024 characters.
 
-<Aside type='warning' header='Important'>
+\<Aside type='warning' header='Important'>
 
 These options have additional requirements:
 
-* Each expression must evaluate to a string.
-* You can only use the `upper()`, `lower()`, and `url_decode()` functions, and you cannot nest these functions.
+*   Each expression must evaluate to a string.
+*   You can only use the `upper()`, `lower()`, and `url_decode()` functions, and you cannot nest these functions.
 
 </Aside>
 

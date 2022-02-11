@@ -12,6 +12,7 @@ The default order for an aggregated data set is by the fields on which the aggre
 <Aside type="note" header="Note">
 
 Ordering within nested structures is not supported.
+
 </Aside>
 
 ## Examples

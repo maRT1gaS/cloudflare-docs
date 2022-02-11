@@ -3,7 +3,7 @@ order: 13
 pcx-content-type: concept
 ---
 
-import AutomaticHTTPSRewritesDefinition from "../../_partials/_automatic-https-rewrites-definition.md"
+import AutomaticHTTPSRewritesDefinition from "../../\_partials/\_automatic-https-rewrites-definition.md"
 
 # Automatic HTTPS Rewrites
 
@@ -18,9 +18,10 @@ Mixed content is often due to factors not under the website owner’s control su
 ## Enable Automatic HTTPS Rewrites
 
 To enable **Automatic HTTPS Rewrites**:
-1. Log in to your [Cloudflare account](https://dash.cloudflare.com) and go to a specific domain.
-1. Navigate to **SSL/TLS** > **Edge Certificates**.
-1. For **Automatic HTTPS Rewrites**, switch the toggle to **On**.
+
+1.  Log in to your [Cloudflare account](https://dash.cloudflare.com) and go to a specific domain.
+2.  Navigate to **SSL/TLS** > **Edge Certificates**.
+3.  For **Automatic HTTPS Rewrites**, switch the toggle to **On**.
 
 ## Limitations
 

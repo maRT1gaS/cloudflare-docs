@@ -2,6 +2,7 @@
 order: 12
 pcx-content-type: reference
 ---
+
 # Zone Analytics Colos Endpoint to GraphQL Analytics
 
 This guide shows how you might migrate from the deprecated (and soon to be
@@ -21,9 +22,9 @@ curl -H "Authorization: Bearer $API_TOKEN" "https://api.cloudflare.com/client/v4
 
 This query says:
 
-- Given an `API_TOKEN` which has Analytics Read access to `ZONE_ID`.
-- Fetch colos analytics for `ZONE_ID` with a time range that starts on
-  `2020-12-10T00:00:00Z` (`since` paramenter) to now.
+*   Given an `API_TOKEN` which has Analytics Read access to `ZONE_ID`.
+*   Fetch colos analytics for `ZONE_ID` with a time range that starts on
+    `2020-12-10T00:00:00Z` (`since` paramenter) to now.
 
 The question that we want to answer is: "what is the number of requests for ZHR
 per hour?" Using the colos endpoint response data and some wrangling by jq we
@@ -46,7 +47,7 @@ This means "break out the result array into individual json lines"
 ```
 
 This breaks out each json line into multiple json lines. Each resulting line
-contains a `colo_id` and one element of the `timeseries` array. 
+contains a `colo_id` and one element of the `timeseries` array.
 
 ```bash
 {colo_id: .colo_id, timeslot: .timeseries.since, requests: .timeseries.requests.all, bandwidth: .timeseries.bandwidth.all}
@@ -96,11 +97,11 @@ The data we want is about HTTP requests. Hence, we use the canonical source for
 HTTP request data, also known as `httpRequestsAdaptiveGroups`. This node in
 GraphQL API allows you to filter and group by almost any dimension of an http
 request imaginable. It is "Adaptive" so responses will be fast since it is
-driven by our 
+driven by our
 ["ABR" technology](https://blog.cloudflare.com/explaining-cloudflares-abr-analytics/).
 
 Let's craft a GraphQL API query to retrieve the data we need to answer the
-question: "what is the number of requests for ZHR per hour?" 
+question: "what is the number of requests for ZHR per hour?"
 
 ```text
 {
@@ -151,7 +152,7 @@ The format of a GraphQL response is much the same as the query. A successful
 response always contains a "data" object which wraps the data in the response.
 A query will always have a "viewer" object which represents your user. Then, we
 unwrap the zones objects, one per line. Our query only has one zone (since this
-is how we chose to do it). But a query could have multiple zones as well. 
+is how we chose to do it). But a query could have multiple zones as well.
 
 ```bash
 .httpRequestsAdaptiveGroups[]

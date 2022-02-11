@@ -5,7 +5,7 @@ order: 2
 
 # Configure exposed credentials checks in the dashboard
 
-<Aside type='warning'>
+\<Aside type='warning'>
 
 The Exposed Credentials Check Managed Ruleset is only available in the Cloudflare WAF announced on March 2021.
 

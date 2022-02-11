@@ -11,7 +11,7 @@ Your installation of cloudflared software constitutes a symbol of your signature
 
 BY USING THE SOLUTION, YOU ARE INDICATING THAT YOU HAVE READ, AND AGREE TO BE BOUND BY, THE POLICIES, TERMS, AND CONDITIONS SET FORTH BELOW IN THEIR ENTIRETY WITHOUT LIMITATION OR QUALIFICATION, AS WELL AS BY ALL APPLICABLE LAWS AND REGULATIONS, AS IF YOU HAD HANDWRITTEN YOUR NAME ON AND SIGNED THIS AGREEMENT.  IF YOU DO NOT AGREE TO THE TERMS AND CONDITIONS CONTAINED IN THIS AGREEMENT, YOU MAY NOT USE THE SOLUTION.
 
-1.    *GRANT OF RIGHTS*
+1.  *GRANT OF RIGHTS*
 
 *1.1	Grant of License.*  The Solution is licensed by Cloudflare and its licensors, it is not being sold.  Subject to the terms and conditions of this Agreement, Cloudflare hereby grants you a non-exclusive, non-sublicensable, non-transferable license to use the Solution (the “License”).  You may examine source code, if provided to you, solely for the limited purpose of evaluating the Software for security flaws.  You may also use the cloudflared Services to create derivative works; provided, that in no event may you create derivative works for use with products or services other than those provided to you by or on behalf of Cloudflare.  This Agreement applies to the parts of the Solution developed by Cloudflare.  The Solution may also incorporate externally maintained libraries and other open software, which may be governed by third-party licenses.
 

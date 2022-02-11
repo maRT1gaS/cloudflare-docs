@@ -13,9 +13,9 @@ The GraphQL filter is represented by the [GraphQL Input Object](https://graphql.
 
 You can use filters as an argument on the following resources:
 
-- zones
-- accounts
-- tables (data sets)
+*   zones
+*   accounts
+*   tables (data sets)
 
 #### Zone filter
 
@@ -51,6 +51,7 @@ You must specify an account filter when making an account-scoped query, and you 
 <Aside type="info" header="Info">
 
 Network Analytics queries require an Account ID (`accountTag`) filter.
+
 </Aside>
 
 #### Table (data set) filter

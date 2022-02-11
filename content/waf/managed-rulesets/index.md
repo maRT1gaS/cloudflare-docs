@@ -8,6 +8,7 @@ order: 4
 Cloudflare provides the following Managed Rulesets in the WAF:
 
 <TableWrap><table style="table-layout:fixed; width:100%;">
+
   <thead>
     <tr>
       <th style='width:30%; white-space:normal'><strong>Ruleset</strong></th>
@@ -42,6 +43,7 @@ You can also activate or deactivate scoring rules by overriding the paranoia lev
 The following rulesets run in the response phase:
 
 <TableWrap><table style="table-layout:fixed; width:100%;">
+
   <thead>
     <tr>
       <th style='width:30%; white-space:normal'><strong>Ruleset</strong></th>

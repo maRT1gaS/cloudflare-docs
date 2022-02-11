@@ -29,7 +29,7 @@ The following table compares the features of NAv1 and NAv2:
 
 </TableWrap>
 
-_* Applicable only for Magic Transit customers._
+*\* Applicable only for Magic Transit customers.*
 
 <Aside type="note">
 

@@ -26,9 +26,9 @@ curl -X GET \
 
 The response displays the following rulesets:
 
-* Managed Rulesets you can deploy, indicated by `"kind": "managed"`
-* Zone-level phase entry points, if configured, indicated by `"kind": "zone"`
-* Custom rulesets, if configured, indicated by `"kind": "custom"`
+*   Managed Rulesets you can deploy, indicated by `"kind": "managed"`
+*   Zone-level phase entry points, if configured, indicated by `"kind": "zone"`
+*   Custom rulesets, if configured, indicated by `"kind": "custom"`
 
 ```json
 ---
@@ -89,9 +89,9 @@ curl -X GET \
 
 The response displays the following rulesets:
 
-* Managed Rulesets you can deploy, indicated by `"kind": "managed"`
-* Account-level phase entry points, if configured, indicated by `"kind": "root"`
-* Custom rulesets, if configured, indicated by `"kind": "custom"`
+*   Managed Rulesets you can deploy, indicated by `"kind": "managed"`
+*   Account-level phase entry points, if configured, indicated by `"kind": "root"`
+*   Custom rulesets, if configured, indicated by `"kind": "custom"`
 
 ```json
 ---
@@ -275,6 +275,6 @@ Each rule in a Managed Ruleset can have associated tags or categories, listed in
 </div>
 </details>
 
----
+***
 
 For more information on the available API methods for viewing rulesets, check [List and view rulesets](/rulesets-api/view).

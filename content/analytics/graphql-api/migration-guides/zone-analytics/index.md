@@ -8,6 +8,7 @@ pcx-content-type: reference
 The [Zone Analytics API](https://api.cloudflare.com/#zone-analytics-properties) allows you to get request data by zone. It offers optional `since` and `until` parameters to specify the request time period and a `continuous` parameter to indicate whether the time period should be moved backward to find a period with completely aggregated data.
 
 For example, here is a sample curl call to get data for a two minute period:
+
 ```bash
 curl -s -H "X-Auth-Email: <REDACTED>" -H "X-Auth-Key: <REDACTED>" -X GET "https://api.cloudflare.com/client/v4/zones/<ZONE_ID>/analytics/dashboard?since=2019-09-08T20:00:00Z&until=2019-09-08T20:02:00Z&continuous=false" | jq .
 ```
@@ -504,6 +505,6 @@ As you can see from the response, Zone Analytics returns metrics along many dime
 </div>
 </details>
 
-Notice that you can specify the request time period using a data set filter (see [_Filtering_](/graphql-api/features/filtering/)). The `continuous` parameter is no longer needed because GraphQL Analytics is designed to provide data as soon as it is available.
+Notice that you can specify the request time period using a data set filter (see [*Filtering*](/graphql-api/features/filtering/)). The `continuous` parameter is no longer needed because GraphQL Analytics is designed to provide data as soon as it is available.
 
 Also, if you want to get the totals for a particular period, rather than a breakdown by time period, simply remove the `datetimeMinute` field under `dimensions`.
