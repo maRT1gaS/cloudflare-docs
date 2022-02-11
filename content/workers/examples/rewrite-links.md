@@ -12,9 +12,9 @@ layout: list
 
 # Rewrite links
 
-<ContentColumn>
+{{<content-column>}}
   <p>{props.frontmatter.summary}</p>
-</ContentColumn>
+{{</content-column>}}
 
 ```js
 const OLD_URL = "developer.mozilla.org"

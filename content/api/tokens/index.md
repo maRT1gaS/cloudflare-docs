@@ -14,8 +14,8 @@ When possible, use API tokens to interact with the Cloudflare API.
 
 <DirectoryListing path="/tokens"/>
 
-<Aside type="note">
+{{<Aside type="note">}}
 
 Though you can still use API keys to access the Cloudflare API, these keys have [several limitations](/api/keys/#limitations) that make them less secure than API tokens.
 
-</Aside>
+{{</Aside>}}

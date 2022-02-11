@@ -36,7 +36,7 @@ The Cloudflare dashboard provides two settings to manage URL normalization:
 
 The following table shows how URL normalization settings affect incoming URLs before they pass to other Cloudflare features and to origin:
 
-<TableWrap>
+{{<table-wrap>}}
 
 Incoming URL | Normalize incoming URLs | Normalize URLs to origin | URL passed to Cloudflare edge | URL passed to origin
 \---|---|---|---|---
@@ -47,4 +47,4 @@ Incoming URL | Normalize incoming URLs | Normalize URLs to origin | URL passed t
 `www.example.com/%68ello` | *On*  | *On*  | `www.example.com/hello`   | `www.example.com/hello`
 `www.example.com/%68ello` | *Off* | *Off* | `www.example.com/%68ello` | `www.example.com/%68ello`
 
-</TableWrap>
+{{</table-wrap>}}

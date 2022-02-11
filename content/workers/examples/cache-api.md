@@ -13,9 +13,9 @@ layout: list
 
 # Using the Cache API
 
-<ContentColumn>
+{{<content-column>}}
   <p>{props.frontmatter.summary}</p>
-</ContentColumn>
+{{</content-column>}}
 
 ```js
 

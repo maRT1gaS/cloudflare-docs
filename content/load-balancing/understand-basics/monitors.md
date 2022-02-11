@@ -15,11 +15,11 @@ import HealthCheckRegions from "../\_partials/\_health-check-regions.md"
 
 Health checks that result in a status change for an origin server are recorded as events in the Load Balancing event logs.
 
-<Aside type="note">
+{{<Aside type="note">}}
 
 Health checks associated with load balancers are different from <strong>Standalone health checks</strong>. For more details about Standalone health checks, see the <a href="https://support.cloudflare.com/hc/articles/4404867308429">Support documentation</a>.
 
-</Aside>
+{{</Aside>}}
 
 ***
 
@@ -59,7 +59,7 @@ When a load balancer runs health checks, headers set on an origin override heade
 
 The Cloudflare API supports the following commands for monitors. Examples are given for user-level endpoint but apply to the account-level endpoint as well.
 
-<TableWrap>
+{{<table-wrap>}}
 
 <table>
   <thead>
@@ -108,4 +108,4 @@ The Cloudflare API supports the following commands for monitors. Examples are gi
   </tbody>
 </table>
 
-</TableWrap>
+{{</table-wrap>}}

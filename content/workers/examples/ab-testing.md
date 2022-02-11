@@ -13,9 +13,9 @@ layout: list
 
 # A/B testing with same-URL direct access
 
-<ContentColumn>
+{{<content-column>}}
   <p>{props.frontmatter.summary}</p>
-</ContentColumn>
+{{</content-column>}}
 
 ```js
 const NAME = "myExampleWorkersABTest";

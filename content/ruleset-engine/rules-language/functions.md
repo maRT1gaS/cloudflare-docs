@@ -64,11 +64,11 @@ The Rules language supports these transformation functions:
     *   *Example:*<br />
         If `http.request.uri.path` is `"/welcome.html"`, then `ends_with(http.request.uri.path, ".html")` will return `true`.
 
-        <Aside type='warning'>
+        {{<Aside type="warning">}}
 
         **Warning:** The `ends_with()` function is not available in [Firewall Rules](/firewall/).
 
-        </Aside>
+        {{</Aside>}}
 
 *   <code>len(<Type>String | bytes</Type>)</code> <Type>Integer</Type>
 
@@ -110,11 +110,11 @@ The Rules language supports these transformation functions:
         Replace with capture groups:<br />
         `regex_replace("/foo/a/path", "^/foo/([^/]*)/(.*)$", "/bar/${2}/${1}") == "/bar/path/a/"`
 
-        <Aside type='warning'>
+        {{<Aside type="warning">}}
 
         **Warning:** You can only use the `regex_replace()` function in [rewrite expressions of Transform Rules](/rules/transform). Additionally, the first argument must be a field under `http.request.headers` or `http.request.uri`.
 
-        </Aside>
+        {{</Aside>}}
 
 *   <code>remove\_bytes(<Type>bytes</Type>)</code> <Type>bytes</Type>
 
@@ -131,11 +131,11 @@ The Rules language supports these transformation functions:
     *   *Example:*<br />
         If `http.request.uri.path` is `"/blog/first-post"`, then `starts_with(http.request.uri.path, "/blog")` will return `true`.
 
-        <Aside type='warning'>
+        {{<Aside type="warning">}}
 
         **Warning:** The `starts_with()` function is not available in [Firewall Rules](/firewall/).
 
-        </Aside>
+        {{</Aside>}}
 
 *   <code>to\_string(<Type>Integer | Boolean | IP address</Type>)</code> <Type>String</Type>
 
@@ -148,11 +148,11 @@ The Rules language supports these transformation functions:
         to_string(ssl) == 'true'
         ```
 
-        <Aside type='warning'>
+        {{<Aside type="warning">}}
 
         **Warning:** You can only use the `to_string()` function in [rewrite expressions of Transform Rules](/rules/transform).
 
-        </Aside>
+        {{</Aside>}}
 
 *   <code>upper(<Type>String</Type>)</code> <Type>String</Type>
 
@@ -186,11 +186,11 @@ The Rules language supports these transformation functions:
 
 ## HMAC validation
 
-<Aside type='warning' header='Important'>
+{{<Aside type="warning' header='Important">}}
 
 Access to the HMAC validation function requires a Cloudflare Pro, Business, or Enterprise plan.
 
-</Aside>
+{{</Aside>}}
 
 ### Overview
 
@@ -299,13 +299,13 @@ For details on generating a MessageMAC, refer to [Implement token creation](http
 
 ## HMAC validation examples
 
-<Aside type='warning' header='Important'>
+{{<Aside type="warning' header='Important">}}
 
 When you do not use the optional *flags* argument for `is_timed_hmac_valid_v0()`, you must URL encode the base64 value for *mac* in the *MessageMAC* argument.
 
 For more information, refer to [HMAC Validation: Overview](#overview).
 
-</Aside>
+{{</Aside>}}
 
 ### Simple case
 

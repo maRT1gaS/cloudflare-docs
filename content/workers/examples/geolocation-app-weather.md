@@ -12,9 +12,9 @@ layout: list
 
 # Geolocation: Weather application
 
-<ContentColumn>
+{{<content-column>}}
   <p>{props.frontmatter.summary}</p>
-</ContentColumn>
+{{</content-column>}}
 
 ```js
 addEventListener('fetch', event => {

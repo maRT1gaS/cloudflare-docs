@@ -308,7 +308,7 @@ addEventListener('fetch', async event => {
 });
 ```
 
-<Aside type="note">
+{{<Aside type="note">}}
 
 You can create a namespace [using Wrangler](/workers/cli-wrangler/commands/#getting-started) or in the [Cloudflare dashboard](https://dash.cloudflare.com/). You can also bind the namespace to your Worker in the dashboard:
 
@@ -318,7 +318,7 @@ You can create a namespace [using Wrangler](/workers/cli-wrangler/commands/#gett
 4.  Go to **KV Namespace Bindings**.
 5.  Select **Add binding**.
 
-</Aside>
+{{</Aside>}}
 
 ### Referencing KV from Durable Objects and Workers using Modules Syntax
 

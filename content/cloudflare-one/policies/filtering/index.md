@@ -8,9 +8,9 @@ meta:
 
 # Secure Web Gateway policies
 
-<Aside>
+{{<Aside>}}
 When creating or editing policies, keep in mind that it may take up to 60 seconds for that policy to be updated across all of our data centers.
-</Aside>
+{{</Aside>}}
 
 With Secure Web Gateway polices, Cloudflare Zero Trust allows you to set up policies to inspect DNS, HTTP, and Network traffic.
 

@@ -29,7 +29,7 @@ You are strongly encouraged to verify IRR entries for the exact prefixes you'll 
 
 To verify your prefix and ASN route, use the tools and methods outlined in this table:
 
-<TableWrap><table>
+{{<table-wrap>}}<table>
 
   <thead>
     <tr>
@@ -63,7 +63,7 @@ To verify your prefix and ASN route, use the tools and methods outlined in this 
       <td>IRR route, origin, and source information.</td>
     </tr>
   </tbody>
-</table></TableWrap>
+</table>{{</table-wrap>}}
 
 ### WHOIS output example
 
@@ -93,10 +93,10 @@ last-modified:  2018-03-16T16:58:06Z
 source:         APNIC
 ```
 
-<Aside type="note" header="Note:">
+{{<Aside type="note" header="Note:">}}
 
 WHOIS output also shows the RPKI entry information for prefix IP addresses. When your WHOIS output only contains an RPKI entry, you must add the IRR entry.
 
 For more information, see [best practices for IRR entry updates](/byoip/best-practices/irr-entries/).
 
-</Aside>
+{{</Aside>}}

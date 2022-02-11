@@ -39,11 +39,11 @@ Unlike many of our framework guides, the build command and build directory for y
 
 After configuring your site, you can begin your first deploy. Your custom build command (if provided) will run, and Pages will deploy your static site.
 
-<Aside type="note">
+{{<Aside type="note">}}
 
 For the complete guide to deploying your first site to Cloudflare Pages, refer to the [Get started guide](/pages/get-started/).
 
-</Aside>
+{{</Aside>}}
 
 After you have deployed your site, you will receive a unique subdomain for your project on `*.pages.dev`. Cloudflare Pages will automatically rebuild your project and deploy it. You will also get access to [preview deployments](/pages/platform/preview-deployments/) on new pull requests, so you can preview how changes look to your site before deploying them to production.
 

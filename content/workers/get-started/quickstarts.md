@@ -10,7 +10,7 @@ import WorkerStarter from "../../components/worker-starter"
 
 # Quickstarts
 
-<ContentColumn>
+{{<content-column>}}
 
 Quickstarts are GitHub repos that are designed to be a starting point for building a new Cloudflare Workers project. For the projects below, you simply run:
 
@@ -28,7 +28,7 @@ $ wrangler generate <new-project-name> <github-repo-url>
 
 </Definitions>
 
-</ContentColumn>
+{{</content-column>}}
 
 ***
 
@@ -222,4 +222,4 @@ repo="cloudflare/worker-emscripten-template"
 
 Get inspiration from other sites and projects out there that were built with Cloudflare Workers.
 
-<Button type="primary" href="https://workers.cloudflare.com/built-with">Built with Workers</Button>
+{{<button type="primary" href="https://workers.cloudflare.com/built-with">}}Built with Workers{{</button>}}

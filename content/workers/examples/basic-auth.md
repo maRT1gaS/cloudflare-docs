@@ -13,9 +13,9 @@ layout: list
 
 # HTTP Basic Authentication
 
-<ContentColumn>
+{{<content-column>}}
   <p>{props.frontmatter.summary}</p>
-</ContentColumn>
+{{</content-column>}}
 
 ```js
 /**

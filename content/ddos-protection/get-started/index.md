@@ -41,11 +41,11 @@ You must have one of the following:
 
 ### 1. Configure ruleset actions to Log
 
-<Aside type="note">
+{{<Aside type="note">}}
 
 The *Log* action is only available to Enterprise customers.
 
-</Aside>
+{{</Aside>}}
 
 Configure ruleset actions to *Log* for each of the [DDoS Attack Protection Managed Rulesets](/ddos-protection/managed-rulesets/).
 
@@ -63,11 +63,11 @@ Alternatively, if you are using the API, define an override at the ruleset level
 *   [Configure an override for the HTTP DDoS Attack Protection Managed Ruleset](/ddos-protection/managed-rulesets/http/configure-api/#configure-an-override-for-http-ddos-attack-protection)
 *   [Configure an override for the Network-layer DDoS Attack Protection Managed Ruleset](/ddos-protection/managed-rulesets/network/configure-api/#configure-an-override-for-the-network-layer-ddos-attack-protection-managed-ruleset)
 
-<Aside type="warning" header="Notes">
+{{<Aside type="warning" header="Notes">}}
 
 *   Currently, Spectrum and Magic transit customers do not have access to **Firewall** > **DDoS** tab and have to configure the DDoS Attack Protection Managed Rulesets using the API.
 
-</Aside>
+{{</Aside>}}
 
 ### 2. Review flagged traffic
 

@@ -50,10 +50,10 @@ When EDNS is enabled, the DNS Firewall gives out the geographically correct answ
 3.  The DNS Firewall  will cache the answer from the origin, but only for that `/24`.
 4.  `203.0.113.0/24` now asks the same DNS question and the answer is again returned from the origin instead of the cache.
 
-<Aside type="note">
+{{<Aside type="note">}}
 
 EDNS limits the effectiveness of the DNS cache.
 
-</Aside>
+{{</Aside>}}
 </div>
 </details>

@@ -13,9 +13,9 @@ layout: list
 
 # Hot-link protection
 
-<ContentColumn>
+{{<content-column>}}
   <p>{props.frontmatter.summary}</p>
-</ContentColumn>
+{{</content-column>}}
 
 ```js
 const HOMEPAGE_URL = "https://tutorial.cloudflareworkers.com/"

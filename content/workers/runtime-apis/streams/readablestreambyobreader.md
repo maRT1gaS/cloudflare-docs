@@ -40,7 +40,7 @@ const reader = readable.getReader({ mode: "byob" })
 
 ## Common issues
 
-  <Aside type="warning" header="Warning">
+  {{<Aside type="warning" header="Warning">}}
 
 `read` provides no control over the minimum number of bytes that should be read into the buffer. Even if you allocate a 1 MiB buffer, the kernel is perfectly within its rights to fulfill this read with a single byte, whether or not an EOF immediately follows.
 
@@ -48,7 +48,7 @@ In practice, the Workers team has found that `read` typically fills only 1% of t
 
 `readAtLeast` is a non-standard extension to the Streams API which allows users to specify that at least `minBytes` bytes must be read into the buffer before resolving the read.
 
-  </Aside>
+  {{</Aside>}}
 
 ## Related resources
 

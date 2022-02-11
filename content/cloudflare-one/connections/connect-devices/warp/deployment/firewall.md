@@ -14,9 +14,9 @@ The WARP client talks with our edge via a standard HTTPS connection outside the 
 
 *   IPv4 API Endpoint: `162.159.192.1`
 
-<Aside> 
+{{<Aside>}} 
   The Orchestration API endpoint is currently shared with our Consumer WARP Client. In early 2022 we will be splitting this out to its own dedicated IP address.
-</Aside>
+{{</Aside>}}
 
 ## DoH IP
 

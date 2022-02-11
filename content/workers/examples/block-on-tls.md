@@ -12,9 +12,9 @@ layout: list
 
 # Block on TLS
 
-<ContentColumn>
+{{<content-column>}}
   <p>{props.frontmatter.summary}</p>
-</ContentColumn>
+{{</content-column>}}
 
 ```js
 async function handleRequest(request) {

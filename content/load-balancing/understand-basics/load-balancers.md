@@ -10,11 +10,11 @@ import LBDefinition from "../\_partials/\_load-balancer-definition.md"
 
 <LBDefinition/>
 
-<Aside type="note">
+{{<Aside type="note">}}
 
 For more background information on what load balancers are and how they work, check out our <a href="https://www.cloudflare.com/learning/performance/what-is-load-balancing/">Learning Center</a>.
 
-</Aside>
+{{</Aside>}}
 
 ***
 
@@ -56,7 +56,7 @@ For an up-to-date list of load balancer properties, refer to [Load balancer prop
 
 The Cloudflare API supports the following commands for load balancers.
 
-<TableWrap>
+{{<table-wrap>}}
 
 <table>
   <thead>
@@ -121,4 +121,4 @@ The Cloudflare API supports the following commands for load balancers.
   </tbody>
 </table>
 
-</TableWrap>
+{{</table-wrap>}}

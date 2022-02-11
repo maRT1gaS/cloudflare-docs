@@ -25,7 +25,7 @@ A JSON response for the [Rules Lists API](https://api.cloudflare.com/#rules-list
 
 This table summarizes the object properties:
 
-<TableWrap>
+{{<table-wrap>}}
   <table style="width: 100%">
     <thead>
         <tr>
@@ -84,7 +84,7 @@ This table summarizes the object properties:
         </tr>
     </tbody>
   </table>
-</TableWrap>
+{{</table-wrap>}}
 
 ## List item object structure and properties
 
@@ -121,7 +121,7 @@ A fully populated JSON object for a Bulk Redirect List item has the following st
 
 The JSON object properties for a list item are defined as follows:
 
-<TableWrap>
+{{<table-wrap>}}
   <table style="width: 100%">
     <thead>
         <tr>
@@ -177,6 +177,6 @@ The JSON object properties for a list item are defined as follows:
         </tr>
     </tbody>
   </table>
-</TableWrap>
+{{</table-wrap>}}
 
 For a detailed specification, refer to the [Rules Lists API](https://api.cloudflare.com/#rules-lists-properties) documentation.

@@ -9,17 +9,17 @@ The [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) prov
 
 The `fetch` method is implemented on the `ServiceWorkerGlobalScope`. Refer to [MDN documentation](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch) for more information.
 
-<Aside type="note">
+{{<Aside type="note">}}
 
 Asynchronous tasks such as `fetch` are not executed at the top level in a Worker script and must be executed within a `FetchEvent` handler such as [`respondWith`](/workers/runtime-apis/fetch-event/#methods). Learn more about [the Request context](/workers/runtime-apis/request/#the-request-context).
 
-</Aside>
+{{</Aside>}}
 
-<Aside type="warning" header="Worker to Worker">
+{{<Aside type="warning" header="Worker to Worker">}}
 
 It is not currently (January 2022) possible to send fetch requests to other Workers (Worker to Worker) within the same zone. The origin server, if any, will receive the request instead. However, sending requests to Workers within other zones is possible and will work as normal.
 
-</Aside>
+{{</Aside>}}
 
 ***
 

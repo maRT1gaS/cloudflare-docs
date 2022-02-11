@@ -11,9 +11,9 @@ layout: list
 
 # Setting Cron Triggers
 
-<ContentColumn>
+{{<content-column>}}
   <p>{props.frontmatter.summary}</p>
-</ContentColumn>
+{{</content-column>}}
 
 ```js
 addEventListener('scheduled', event => {

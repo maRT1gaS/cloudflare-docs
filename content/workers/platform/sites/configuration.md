@@ -55,11 +55,11 @@ There are a few specific configuration settings for Workers Sites in your `wrang
 
 To learn more about the optional `include` and `exclude` fields, refer to [Ignoring subsets of static assets](#ignoring-subsets-of-static-assets).
 
-<Aside type="note">
+{{<Aside type="note">}}
 
 If your project uses [environments](/workers/platform/environments/), make sure to place `site` above any environment-specific configuration blocks.
 
-</Aside>
+{{</Aside>}}
 
 Example of a `wrangler.toml`:
 

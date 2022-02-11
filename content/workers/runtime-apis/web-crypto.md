@@ -30,11 +30,11 @@ Some common uses include:
 
 *   [Signing requests](/workers/examples/signing-requests/)
 
-<Aside type="warning" header="Warning">
+{{<Aside type="warning" header="Warning">}}
 
 The Web Crypto API differs significantly from Node’s Crypto API. If you want to port JavaScript code that relies on Node’s Crypto API, you will need to adapt it to use Web Crypto primitives.
 
-</Aside>
+{{</Aside>}}
 
 ## Methods
 
@@ -304,7 +304,7 @@ A checkmark (✓) indicates that this feature is believed to be fully supported 
 \[//]: #  An x (✘) indicates that this feature is part of the specification but not implemented.
 \[//]: #  If a feature only implements the operation partially, details are listed.
 
-<TableWrap>
+{{<table-wrap>}}
 
 | Algorithm                                         | sign()<br/>verify()  | encrypt()<br/>decrypt()   | digest() | deriveBits()<br/>deriveKey() | generateKey() | wrapKey()<br/>unwrapKey() | exportKey() | importKey() |
 | :------------------------------------------------ | :------------------- | :------------------------ | :------- | :--------------------------- | :------------ | :------------------------ | :---------- | :---------- |
@@ -327,7 +327,7 @@ A checkmark (✓) indicates that this feature is believed to be fully supported 
 | HKDF                                              |                      |                           |          | ✓                            |               |                           |             | ✓           |
 | PBKDF2                                            |                      |                           |          | ✓                            |               |                           |             | ✓           |
 
-</TableWrap>
+{{</table-wrap>}}
 
 **Footnotes:**
 

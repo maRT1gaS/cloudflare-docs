@@ -12,11 +12,11 @@ Advanced certificates offers a flexible and customizable way to issue and manage
 
 <ACMDefinition/>
 
-<Aside type="note" header="Note">
+{{<Aside type="note" header="Note">}}
 
 Advanced certificates supersede legacy [Dedicated SSL certificates](https://support.cloudflare.com/hc/articles/228009108).
 
-</Aside>
+{{</Aside>}}
 
 ## Features
 
@@ -31,11 +31,11 @@ Advanced certificates allow you multiple customization options:
 *   Select a custom trust store for origin authentication.
 *   Control [cipher suites used for TLS](/ssl/ssl-tls/cipher-suites/#disable-cipher-suites).
 
-<Aside type="note">
+{{<Aside type="note">}}
 
 Enterprise customers can also purchase a subscription for Advanced Certificate Manager, which allows them to add up to 100 edge certificates per zone.
 
-</Aside>
+{{</Aside>}}
 
 ## Related resources
 

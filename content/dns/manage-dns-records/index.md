@@ -10,8 +10,8 @@ DNS records help communicate information about your domain to visitors and other
 
 <DirectoryListing path="/manage-dns-records"/>
 
-<Aside type="note" header="Note:">
+{{<Aside type="note" header="Note:">}}
 
 For more background about different types of DNS records, refer to the [Learning Center](https://www.cloudflare.com/learning/dns/dns-records/).
 
-</Aside>
+{{</Aside>}}

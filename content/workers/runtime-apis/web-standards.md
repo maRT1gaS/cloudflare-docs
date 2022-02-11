@@ -63,11 +63,11 @@ The following methods are available per the [Worker Global Scope](https://develo
 
 </Definitions>
 
-<Aside type="note">
+{{<Aside type="note">}}
 
 Timers are only available inside of [the Request Context](/workers/runtime-apis/request/#the-request-context).
 
-</Aside>
+{{</Aside>}}
 
 ### EventTarget and Event
 
@@ -87,11 +87,11 @@ The [`AbortController`](https://developer.mozilla.org/en-US/docs/Web/API/AbortCo
 
 </Definitions>
 
-<Aside type="note">
+{{<Aside type="note">}}
 
 The Fetch API is only available inside of [the Request Context](/workers/runtime-apis/request/#the-request-context).
 
-</Aside>
+{{</Aside>}}
 
 ***
 
@@ -109,8 +109,8 @@ The URL API supports URLs conforming to HTTP and HTTPs schemes.
 
 [Refer to the MDN documentation for more information](https://developer.mozilla.org/en-US/docs/Web/API/URL)
 
-<Aside type="note">
+{{<Aside type="note">}}
 
 The Workers’ Runtime’s URL class behavior differs from the URL Spec documented above. If you would like to use another URL implementation, you can [shim the URL class using webpack](/workers/cli-wrangler/webpack/#shimming-globals).
 
-</Aside>
+{{</Aside>}}

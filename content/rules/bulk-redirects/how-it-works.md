@@ -82,7 +82,7 @@ The URL of an incoming request matches a URL Redirect in a list if:
 
 3.  The path is the same as the source URL. If **Subpath matching** is enabled, Cloudflare also considers the subpaths of the path in the URL Redirect's source URL when determining if there is a match. For example, a URL Redirect with its source URL defined as `example.com/blog` will also match requests to `example.com/blog/foo` and `example.com/blog/bar`.
 
-     <Aside type="note" header="Note">
+     {{<Aside type="note" header="Note">}}
 
     URL Redirects with **Subpath matching** enabled are only considered for request paths with 16 or fewer slashes. For example, if there is a configured URL Redirect with source URL set to `example.com/foo` and with **Subpath matching** enabled:
 
@@ -91,7 +91,7 @@ The URL of an incoming request matches a URL Redirect in a list if:
 
     This does not affect URL Redirects with **Subpath matching** disabled. Exact path matches are always considered, even for redirects with **Subpath matching** enabled.
 
-     </Aside>
+     {{</Aside>}}
 
 ### Determining the URL Redirect to apply
 

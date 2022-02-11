@@ -8,7 +8,7 @@ weight: 3
 
 Cloudflare Images allows developers to upload images that cover a wide range of use cases.
 
-<TableWrap>
+{{<table-wrap>}}
 
 | Upload method | When to use |
 | ---| --- |
@@ -16,7 +16,7 @@ Cloudflare Images allows developers to upload images that cover a wide range of 
 | API | A preferred way to upload images from your back-end services. |
 | Direct Creator Uploads | Let your users upload images to Cloudflare Images without exposing your API key or token. |
 
-</TableWrap>
+{{</table-wrap>}}
 
 Refer to the links below for more information on each topic:
 

@@ -13,11 +13,11 @@ The Cache API is available globally but the contents of the cache do not replica
 
 However, any Cache API operations in the Cloudflare Workers dashboard editor, [Playground](/workers/learning/playground/) previews, and any `*.workers.dev` deployments will have no impact. For Workers fronted by [Cloudflare Access](https://www.cloudflare.com/teams/access/), the Cache API is not currently available. Only Workers deployed to custom domains have access to functional `cache` operations.
 
-<Aside type="note">
+{{<Aside type="note">}}
 
 This individualized zone cache object differs from Cloudflare’s Global CDN. For details, refer to [How the Cache Works](/workers/learning/how-the-cache-works/).
 
-</Aside>
+{{</Aside>}}
 
 ***
 
@@ -60,13 +60,13 @@ Our implementation of the Cache API respects the following HTTP headers on the r
 
 This differs from the web browser Cache API as they do not honor any headers on the request or response.
 
-<Aside type="note">
+{{<Aside type="note">}}
 
 Responses with `Set-Cookie` headers are never cached, because this sometimes indicates that the response contains unique data. To store a response with a `Set-Cookie` header, either delete that header or set `Cache-Control: private=Set-Cookie` on the response before calling `cache.put()`.
 
 Use the `Cache-Control` method to store the response without the `Set-Cookie` header.
 
-</Aside>
+{{</Aside>}}
 
 ***
 
@@ -86,11 +86,11 @@ cache.put(request, response)
 
 </Definitions>
 
-<Aside type="note">
+{{<Aside type="note">}}
 
 The `stale-while-revalidate` and `stale-if-error` directives are not supported when using the `cache.put` or `cache.match` methods.
 
-</Aside>
+{{</Aside>}}
 
 #### Parameters
 
@@ -130,11 +130,11 @@ cache.match(request, options)
 
 </Definitions>
 
-<Aside type="note">
+{{<Aside type="note">}}
 
 The `stale-while-revalidate` and `stale-if-error` directives are not supported when using the `cache.put` or `cache.match` methods.
 
-</Aside>
+{{</Aside>}}
 
 #### Parameters
 

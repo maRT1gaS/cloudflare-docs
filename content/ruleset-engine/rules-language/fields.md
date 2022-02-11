@@ -29,13 +29,13 @@ Most standard fields use the same naming conventions as [Wireshark display field
 
 *   The Cloudflare Rules language does not support the `slice` operator.
 
-<Aside type='note' header="Availability notes">
+{{<Aside type="note" header="Availability notes">}}
 
 *   Access to `ip.geoip.is_in_european_union`, `ip.geoip.subdivision_1_iso_code`, and `ip.geoip.subdivision_2_iso_code` fields requires a Cloudflare Business or Enterprise plan.
 
 *   Access to `http.request.cookies` field requires a Cloudflare Pro, Business, or Enterprise plan.
 
-</Aside>
+{{</Aside>}}
 
 The Cloudflare Rules language supports these standard fields:
 
@@ -344,11 +344,11 @@ The Cloudflare Rules language supports these standard fields:
 
 Dynamic fields represent computed or derived values, typically related to threat intelligence about an HTTP request.
 
-<Aside type='note'>
+{{<Aside type="note">}}
 
 Access to any fields containing `cf.bot_management` requires a Cloudflare Enterprise plan with [Bot Management](/bots/plans/bm-subscription) enabled.
 
-</Aside>
+{{</Aside>}}
 
 The Cloudflare Rules language supports these dynamic fields:
 
@@ -891,21 +891,21 @@ The Cloudflare Rules language supports these HTTP header fields:
 
 ## HTTP request body fields
 
-<Aside type='note'>
+{{<Aside type="note">}}
 
 Access to HTTP body is an add-on product of the Cloudflare Enterprise plan.
 
-</Aside>
+{{</Aside>}}
 
 The Rules language includes fields that represent properties of an HTTP request body. Many of these return [arrays](/ruleset-engine/rules-language/values/#arrays) containing the respective values.
 
-<Aside type="warning">
+{{<Aside type="warning">}}
 
 The value of `http.request.body.*` fields has a maximum size of 128 KB, which means that you cannot define expressions that rely on request body data beyond the first 128 KB. If the request body is larger, the body fields will contain a truncated value and the `http.request.body.truncated` field will be set to `true`.
 
 The maximum body size applies only to the values of HTTP body fields — the origin server will still receive the complete request body.
 
-</Aside>
+{{</Aside>}}
 
 The Cloudflare Rules language supports these HTTP body fields:
 
@@ -1015,11 +1015,11 @@ The Cloudflare Rules language supports these HTTP body fields:
 
 The Rules language includes fields that represent properties of HTTP response headers returned by the origin or by a Worker script.
 
-<Aside type="note">
+{{<Aside type="note">}}
 
 You can only use HTTP response header fields in [HTTP Response Header Modification Rules](/rules/transform/response-header-modification) and in filter expressions of the [Cloudflare Sensitive Data Detection](/waf/managed-rulesets) ruleset.
 
-</Aside>
+{{</Aside>}}
 
 The Cloudflare Rules language supports these HTTP response header fields:
 

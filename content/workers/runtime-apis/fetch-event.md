@@ -99,13 +99,13 @@ When responding to a HTTP request, the fetch handler may use any of the followin
 
 Intercepts the request and allows the Worker to send a custom response.
 
-<Aside type="warning" header="Service Worker format only">
+{{<Aside type="warning" header="Service Worker format only">}}
 
 The `respondWith` method is only applicable to the Service Worker format.
 
 With the Module Worker format, return a `Response` from the handler directly.
 
-</Aside>
+{{</Aside>}}
 
 If a `fetch` event handler does not call `respondWith`, the runtime delivers the event to the next registered `fetch` event handler. In other words, while not recommended, this means it is possible to add multiple `"fetch"` event handlers within a Worker.
 

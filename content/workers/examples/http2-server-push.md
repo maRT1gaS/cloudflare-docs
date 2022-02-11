@@ -12,9 +12,9 @@ layout: list
 
 # HTTP2 server push
 
-<ContentColumn>
+{{<content-column>}}
   <p>{props.frontmatter.summary}</p>
-</ContentColumn>
+{{</content-column>}}
 
 ```js
 const CSS = `body { color: red; }`
