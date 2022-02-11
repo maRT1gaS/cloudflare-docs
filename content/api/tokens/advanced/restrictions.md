@@ -1,6 +1,7 @@
 ---
-order: 5
 pcx-content-type: concept
+title: Restricting token use
+weight: 6
 ---
 
 # Restricting token use
@@ -22,7 +23,7 @@ By default, tokens don't expire. They are long lived. Defining a TTL allows for 
 
 <Aside type="note"> 
 
-Dates selected are defined as 00:00 UTC of that day. For finer grained time selection, use the [API](../api).
+Dates selected are defined as 00:00 UTC of that day. For finer grained time selection, use the [API](/api/).
 
 </Aside>
 

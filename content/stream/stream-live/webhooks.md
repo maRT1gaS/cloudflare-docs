@@ -1,6 +1,7 @@
 ---
-order: 9
 pcx-content-type: tutorial
+title: Getting Live Webhooks
+weight: 10
 ---
 
 # Getting Live Webhooks

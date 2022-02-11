@@ -1,11 +1,12 @@
 ---
-order: 2
 pcx-content-type: how-to
+title: Add a third-party tool
+weight: 3
 ---
 
 # Add a third-party tool
 
-You can add new third-party tools and load them into your website through the Cloudflare dashboard. If your tool needs more than a simple `Pageview` event to trigger it, [create the trigger](/get-started/create-trigger) you need first.
+You can add new third-party tools and load them into your website through the Cloudflare dashboard. If your tool needs more than a simple `Pageview` event to trigger it, [create the trigger](/zaraz/get-started/create-trigger/) you need first.
 
 1.  Log in to the [Cloudflare dashboard](https://dash.cloudflare.com/login), and select your account and website.
 
@@ -25,7 +26,7 @@ From this page you can configure the tool's **Settings** or add additional event
 
 <div class="full-img">
 
-![An example of what adding a tool looks like in Zaraz dahsboard](../static/tool-settings.png)
+![An example of what adding a tool looks like in Zaraz dahsboard](/zaraz/static/tool-settings.png)
 
 </div>
 

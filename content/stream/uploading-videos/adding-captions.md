@@ -1,6 +1,7 @@
 ---
-order: 4
 pcx-content-type: interim
+title: Adding captions
+weight: 5
 ---
 
 # Adding captions

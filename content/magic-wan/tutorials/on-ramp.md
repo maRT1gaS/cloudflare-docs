@@ -1,12 +1,12 @@
 ---
 title: On-ramp
 pcx-content-type: tutorial
-order: 2
+weight: 3
 ---
 
 # On-ramp
 
-You can use a variety of on-ramp options with Magic WAN, including [Anycast GRE tunnels](https://developers.cloudflare.com/magic-transit/about/tunnels-and-encapsulation), [Cloudflare Network Interconnect](https://developers.cloudflare.com/network-interconnect/), [Cloudflare Tunnel](https://developers.cloudflare.com/load-balancing/additional-options/cloudflare-tunnel), [WARP](https://developers.cloudflare.com/warp-client/), or one of [Cloudflare's Network On-ramp partners](https://blog.cloudflare.com/network-onramp-partnerships).
+You can use a variety of on-ramp options with Magic WAN, including [Anycast GRE tunnels](/magic-transit/about/tunnels-and-encapsulation), [Cloudflare Network Interconnect](/network-interconnect/), [Cloudflare Tunnel](/load-balancing/additional-options/cloudflare-tunnel), [WARP](/warp-client/), or one of [Cloudflare's Network On-ramp partners](https://blog.cloudflare.com/network-onramp-partnerships).
 
 ## Set up a GRE on-ramp using Gateway
 

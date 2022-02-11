@@ -1,6 +1,7 @@
 ---
 pcx-content-type: tutorial
-order: 4
+title: Transfer your domain to Cloudflare
+weight: 5
 ---
 
 import BeforeYouBegin from "../\_partials/\_before-you-begin.md"
@@ -62,7 +63,7 @@ You will be presented with the price for each transfer. When you transfer a doma
 
 If you do not have a payment method on file, add one at this step before proceeding.
 
-![Cloudflare checkout screenshot](../static/checkout-page.png)
+![Cloudflare checkout screenshot](/registrar/static/checkout-page.png)
 
 Sites can be unavailable for a few reasons, including:
 
@@ -81,7 +82,7 @@ If you have an <a href='https://support.cloudflare.com/hc/articles/203471284#h_1
 
 ### 6. Input your authorization code
 
-In the next page, input the authorization code for each domain you are transferring. You also need to unlock each domain so that Cloudflare can process your request. For more information, refer to the instructions provided by your [current registrar on how to transfer your domain](/get-started/transfer-domain-to-cloudflare#set-up-a-domain-transfer).
+In the next page, input the authorization code for each domain you are transferring. You also need to unlock each domain so that Cloudflare can process your request. For more information, refer to the instructions provided by your [current registrar on how to transfer your domain](/registrar/get-started/transfer-domain-to-cloudflare/#set-up-a-domain-transfer).
 
 ### 7. Confirm or input your contact information
 

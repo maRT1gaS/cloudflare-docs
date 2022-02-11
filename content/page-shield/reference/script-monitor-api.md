@@ -1,6 +1,7 @@
 ---
-order: 2
 pcx-content-type: reference
+title: Script Monitor API
+weight: 3
 ---
 
 # Script Monitor API

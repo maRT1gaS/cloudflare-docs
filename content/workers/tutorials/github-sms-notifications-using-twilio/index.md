@@ -1,8 +1,9 @@
 ---
 updated: 2020-08-25
 difficulty: Beginner
-content_type: "📝 Tutorial"
+content_type: 📝 Tutorial
 pcx-content-type: tutorial
+title: GitHub SMS notifications using Twilio
 ---
 
 import TutorialsBeforeYouStart from "../../\_partials/\_tutorials-before-you-start.md"
@@ -53,7 +54,7 @@ To start, configure a GitHub webhook to post to your Worker when there is an upd
 
 1.  Go to your Github repository's **Settings** > **Webhooks** > **Add webhook**.
 
-2.  Set the Payload URL to the `/webhook` path on your Worker URL. You can find your worker URL by populating [your account id in the `wrangler.toml`](/get-started/guide#6-preview-your-project) file and then [running `wrangler publish` in your command line](/get-started/guide#8-publish-your-project) to generate a live URL for your Worker.
+2.  Set the Payload URL to the `/webhook` path on your Worker URL. You can find your worker URL by populating [your account id in the `wrangler.toml`](/workers/get-started/guide/#6-preview-your-project) file and then [running `wrangler publish` in your command line](/workers/get-started/guide/#8-publish-your-project) to generate a live URL for your Worker.
 
 3.  In the **Content type** dropdown, select *application/json*.
 
@@ -92,7 +93,7 @@ async function handleRequest(request) {
 }
 ```
 
-Begin by modifying the starter code to handle a `POST` response and renaming the request handler. Use the `request.method` property of [`Request`](/runtime-apis/request) to check if the request is a `POST` request, and send an error response if the request is not a `POST` request. The `simpleResponse` function is an easy wrapper for you to respond with requests using your Worker.
+Begin by modifying the starter code to handle a `POST` response and renaming the request handler. Use the `request.method` property of [`Request`](/workers/runtime-apis/request/) to check if the request is a `POST` request, and send an error response if the request is not a `POST` request. The `simpleResponse` function is an easy wrapper for you to respond with requests using your Worker.
 
 ```js
 ---
@@ -181,7 +182,7 @@ async function checkSignature(formData, headers) {
 }
 ```
 
-Since our project relies on importing a library, use [webpack](/cli-wrangler/webpack/) and update your `wrangler.toml` file to set `type = "webpack"`.
+Since our project relies on importing a library, use [webpack](/workers/cli-wrangler/webpack/) and update your `wrangler.toml` file to set `type = "webpack"`.
 
 Your `wrangler.toml` file should look like this:
 
@@ -237,7 +238,7 @@ async function sendText(message){
 }
 ```
 
-To make this work, you need to set some secrets to hide your `ACCOUNT_SID` and `AUTH_TOKEN` from the source code. You can set secrets with [`wrangler secret put`](/cli-wrangler/commands#put) in your command line.
+To make this work, you need to set some secrets to hide your `ACCOUNT_SID` and `AUTH_TOKEN` from the source code. You can set secrets with [`wrangler secret put`](/workers/cli-wrangler/commands/#put) in your command line.
 
 ```sh
 $ wrangler secret put ACCOUNT_SID
@@ -293,6 +294,6 @@ By completing this tutorial, you have learned how to build webhooks using Worker
 
 ## Related resources
 
-*   [Authorize users with Auth0](/tutorials/authorize-users-with-auth0)
-*   [Build a JAMStack app](/tutorials/build-a-jamstack-app)
-*   [Build a QR code generator](/tutorials/build-a-qr-code-generator)
+*   [Authorize users with Auth0](/workers/tutorials/authorize-users-with-auth0/)
+*   [Build a JAMStack app](/workers/tutorials/build-a-jamstack-app/)
+*   [Build a QR code generator](/workers/tutorials/build-a-qr-code-generator/)

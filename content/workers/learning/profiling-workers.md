@@ -1,6 +1,7 @@
 ---
-order:
 pcx-content-type: concept
+title: Profiling Workers
+weight: 0
 ---
 
 # Profiling Workers
@@ -11,7 +12,7 @@ As part of the Workers platform's integration with Chrome Developer Tools, you c
 
 <StreamVideo id="f11809a382160334e9be9a2aedf13d1d" />
 
-`wrangler inspect` is only available in Wrangler v1.19.3 or later. Check what version you have before continuing. If you need to update Wrangler, refer to the guide on [upgrading Wrangler](https://developers.cloudflare.com/workers/cli-wrangler/install-update).
+`wrangler inspect` is only available in Wrangler v1.19.3 or later. Check what version you have before continuing. If you need to update Wrangler, refer to the guide on [upgrading Wrangler](/workers/cli-wrangler/install-update).
 
 ## Profiling an example project
 

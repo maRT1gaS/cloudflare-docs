@@ -1,6 +1,7 @@
 ---
-order: 3
 pcx-content-type: concept
+title: Deploy Hooks
+weight: 4
 ---
 
 # Deploy Hooks

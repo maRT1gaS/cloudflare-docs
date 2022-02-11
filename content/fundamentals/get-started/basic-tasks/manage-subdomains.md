@@ -1,6 +1,7 @@
 ---
-order: 1
 pcx-content-type: reference
+title: Manage subdomains
+weight: 2
 ---
 
 # Manage subdomains
@@ -29,7 +30,7 @@ Sometimes, you might want to create a subdomain (`www.example.com`) that simply 
 
      </Example>
 
-2.  Use [Bulk redirects](https://developers.cloudflare.com/rules/bulk-redirects) to forward traffic from your subdomain to your root domain. You will likely want to include **Subpath matching** and **Preserve path suffix** to ensure requests to `www.example.com/examples` go to `example.com/examples`.
+2.  Use [Bulk redirects](/rules/bulk-redirects) to forward traffic from your subdomain to your root domain. You will likely want to include **Subpath matching** and **Preserve path suffix** to ensure requests to `www.example.com/examples` go to `example.com/examples`.
 
      <Example>
 
@@ -55,7 +56,7 @@ Sometimes, you might want all traffic to your root domain (`example.com`) to act
 
      </Example>
 
-3.  Use [Bulk redirects](https://developers.cloudflare.com/rules/bulk-redirects) to forward traffic from your root domain to your subdomain. You will likely want to include **Subpath matching** and **Preserve path suffix** to ensure requests to `example.com/examples` go to `www.example.com/examples`.
+3.  Use [Bulk redirects](/rules/bulk-redirects) to forward traffic from your root domain to your subdomain. You will likely want to include **Subpath matching** and **Preserve path suffix** to ensure requests to `example.com/examples` go to `www.example.com/examples`.
 
      <Example>
 
@@ -67,9 +68,9 @@ Sometimes, you might want all traffic to your root domain (`example.com`) to act
 
 ## SSL/TLS for subdomains
 
-If your main domain is using Cloudflare's [Universal SSL certificate](https://developers.cloudflare.com/ssl/edge-certificates/universal-ssl), that certificate also covers all first-level subdomains (`blog.example.com`).
+If your main domain is using Cloudflare's [Universal SSL certificate](/ssl/edge-certificates/universal-ssl), that certificate also covers all first-level subdomains (`blog.example.com`).
 
-For deeper subdomains (`dev.blog.example.com`), use a [different type of certificate](https://developers.cloudflare.com/ssl/edge-certificates/universal-ssl/limitations#full-setup).
+For deeper subdomains (`dev.blog.example.com`), use a [different type of certificate](/ssl/edge-certificates/universal-ssl/limitations#full-setup).
 
 ## Customize subdomain behavior
 

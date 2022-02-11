@@ -1,6 +1,7 @@
 ---
-order:
 pcx-content-type: concept
+title: Workers Services
+weight: 0
 ---
 
 # Workers Services
@@ -101,7 +102,7 @@ export default {
 
 ![service binding diagram](./media/app-workers-dev.png)
 
-Workers Service bindings use the standard [Fetch API](/runtime-apis/fetch). You can continue to use your existing utilities and libraries - a Workers Service binding will trigger a `FetchEvent`. You can also change the environment of a Workers Service binding, so you can test a new version of a Service.
+Workers Service bindings use the standard [Fetch API](/workers/runtime-apis/fetch/). You can continue to use your existing utilities and libraries - a Workers Service binding will trigger a `FetchEvent`. You can also change the environment of a Workers Service binding, so you can test a new version of a Service.
 
 In the next example, 1% of requests are routed to a `CANARY` deployment of a Worker. If a request to the `CANARY` fails, it is sent to the production deployment for another chance.
 
@@ -157,7 +158,7 @@ This authentication Workers Service does not need to have a `*.workers.dev` or o
 
 ### Gateway Worker and Service bindings usage
 
-In order to bind and call the [authentication Workers Service above](/#authentication-service), the application Workers Service needs to set up a Workers Service binding. You can manage Workers Service bindings in **Workers** > select your **Worker** > **Settings**> **Variables** > **Service Bindings** > **Edit variables**.
+In order to bind and call the [authentication Workers Service above](/workers/#authentication-service), the application Workers Service needs to set up a Workers Service binding. You can manage Workers Service bindings in **Workers** > select your **Worker** > **Settings**> **Variables** > **Service Bindings** > **Edit variables**.
 
 ![Workers service bindings](./media/service-bindings.png)
 
@@ -165,7 +166,7 @@ Once added, the application Workers Service can access the Workers Service bindi
 
 <Aside type="note">
 
-Note that [Requests](/runtime-apis/request) can only be read once. If you need to use a Request object multiple times, clone your incoming Request objects.
+Note that [Requests](/workers/runtime-apis/request/) can only be read once. If you need to use a Request object multiple times, clone your incoming Request objects.
 
 </Aside>
 

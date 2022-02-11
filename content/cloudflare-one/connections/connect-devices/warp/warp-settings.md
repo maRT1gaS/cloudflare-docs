@@ -1,13 +1,14 @@
 ---
-order: 6
 pcx-content-type: reference
+title: WARP settings
+weight: 7
 ---
 
 # WARP settings
 
 <Aside type="note">
 
-If you are deploying [WARP in Managed mode](/connections/connect-devices/warp/deployment/mdm-deployment), refer to this [list of parameters](/connections/connect-devices/warp/deployment/mdm-deployment/parameters) instead. Any settings you configure on the Zero Trust Dashboard will be overridden by an MDM deployment. To ensure Dashboard settings are applied as intended, remove the corresponding parameters from your MDM deployment.
+If you are deploying [WARP in Managed mode](/cloudflare-one/connections/connect-devices/warp/deployment/mdm-deployment/), refer to this [list of parameters](/cloudflare-one/connections/connect-devices/warp/deployment/mdm-deployment/parameters/) instead. Any settings you configure on the Zero Trust Dashboard will be overridden by an MDM deployment. To ensure Dashboard settings are applied as intended, remove the corresponding parameters from your MDM deployment.
 
 </Aside>
 
@@ -19,7 +20,7 @@ To manage WARP settings and device connectivity preferences, navigate to **Setti
 <summary>Feature availability</summary>
 <div>
 
-| Operating Systems | [WARP mode required](/connections/connect-devices/warp#warp-client-modes) | [Zero Trust plans](https://www.cloudflare.com/teams-pricing/) |
+| Operating Systems | [WARP mode required](/cloudflare-one/connections/connect-devices/warp/#warp-client-modes) | [Zero Trust plans](https://www.cloudflare.com/teams-pricing/) |
 | ----------------- | --------- | ---- |
 | macOS, Windows, Linux | Any mode | All plans |
 
@@ -52,7 +53,7 @@ Users will then need to open the WARP client on their devices, navigate to **Pre
 <summary>Feature availability</summary>
 <div>
 
-| Operating Systems | [WARP mode required](/connections/connect-devices/warp#warp-client-modes) | [Zero Trust plans](https://www.cloudflare.com/teams-pricing/) |
+| Operating Systems | [WARP mode required](/cloudflare-one/connections/connect-devices/warp/#warp-client-modes) | [Zero Trust plans](https://www.cloudflare.com/teams-pricing/) |
 | ----------------- | --------- | ---- |
 | All systems | Any mode | All plans |
 
@@ -73,7 +74,7 @@ Cloudflare Zero Trust allows you to establish which users in your organization c
 <summary>Feature availability</summary>
 <div>
 
-| Operating Systems | [WARP mode required](/connections/connect-devices/warp#warp-client-modes) | [Zero Trust plans](https://www.cloudflare.com/teams-pricing/) |
+| Operating Systems | [WARP mode required](/cloudflare-one/connections/connect-devices/warp/#warp-client-modes) | [Zero Trust plans](https://www.cloudflare.com/teams-pricing/) |
 | ----------------- | --------- | ---- |
 | macOS, Windows | WARP with Gateway | All plans |
 
@@ -90,14 +91,14 @@ When the toggle is enabled, the WARP client will automatically turn off when it 
 <summary>Feature availability</summary>
 <div>
 
-| Operating Systems | [WARP mode required](/connections/connect-devices/warp#warp-client-modes) | [Zero Trust plans](https://www.cloudflare.com/teams-pricing/) |
+| Operating Systems | [WARP mode required](/cloudflare-one/connections/connect-devices/warp/#warp-client-modes) | [Zero Trust plans](https://www.cloudflare.com/teams-pricing/) |
 | ----------------- | --------- | ---- |
 | macOS, Windows, Linux | WARP with Gateway | All plans |
 
 </div>
 </details>
 
-When the toggle is enabled, users have the option to turn off the [Gateway with WARP](/connections/connect-devices/warp#gateway-with-warp-default) mode and switch to [Gateway with DoH mode](/connections/connect-devices/warp#gateway-with-doh). When the toggle is disabled, end users will not be able to switch between WARP modes.
+When the toggle is enabled, users have the option to turn off the [Gateway with WARP](/cloudflare-one/connections/connect-devices/warp/#gateway-with-warp-default) mode and switch to [Gateway with DoH mode](/cloudflare-one/connections/connect-devices/warp/#gateway-with-doh). When the toggle is disabled, end users will not be able to switch between WARP modes.
 
 ***
 

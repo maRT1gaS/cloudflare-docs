@@ -1,8 +1,9 @@
 ---
 updated: 2021-11-04
 difficulty: Beginner
-content_type: "📝 Tutorial"
+content_type: 📝 Tutorial
 pcx-content-type: tutorial
+title: Create a serverless, globally distributed REST API with Fauna
 ---
 
 import TutorialsBeforeYouStart from "../../\_partials/\_tutorials-before-you-start.md"
@@ -100,7 +101,7 @@ You must publish a version of your project before storing your server secret in 
 
 ### Adding your Fauna secret as an environment variable
 
-After creating and deploying your Worker, store your Fauna client [secret](/cli-wrangler/commands#put) safely with the following command:
+After creating and deploying your Worker, store your Fauna client [secret](/workers/cli-wrangler/commands/#put) safely with the following command:
 
 ```sh
 ---

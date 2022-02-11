@@ -1,7 +1,9 @@
 ---
 pcx-content-type: how-to
-order: 1
 type: overview
+title: View rulesets
+weight: 2
+layout: list
 ---
 
 # View rulesets
@@ -277,4 +279,4 @@ Each rule in a Managed Ruleset can have associated tags or categories, listed in
 
 ***
 
-For more information on the available API methods for viewing rulesets, check [List and view rulesets](/rulesets-api/view).
+For more information on the available API methods for viewing rulesets, check [List and view rulesets](/ruleset-engine/rulesets-api/view/).

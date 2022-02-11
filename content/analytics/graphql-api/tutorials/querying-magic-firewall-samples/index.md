@@ -1,5 +1,6 @@
 ---
 pcx-content-type: interim
+title: Querying Magic Firewall Samples with GraphQL
 ---
 
 # Querying Magic Firewall Samples with GraphQL

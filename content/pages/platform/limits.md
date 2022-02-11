@@ -1,6 +1,7 @@
 ---
-order: 8
 pcx-content-type: concept
+title: Limits
+weight: 9
 ---
 
 # Limits
@@ -31,7 +32,7 @@ A `_headers` file can have a maximum of 100 header rules.
 
 ## Preview deployments
 
-You can have an unlimited number of [preview deployments](/platform/preview-deployments) active on your project at a time.
+You can have an unlimited number of [preview deployments](/pages/platform/preview-deployments/) active on your project at a time.
 
 ## Redirects
 

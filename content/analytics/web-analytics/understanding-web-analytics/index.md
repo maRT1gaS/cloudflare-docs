@@ -1,6 +1,7 @@
 ---
-order: 20
 pcx-content-type: navigation
+title: Understanding Cloudflare Web Analytics
+weight: 21
 ---
 
 # Understanding Cloudflare Web Analytics

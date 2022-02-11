@@ -2,6 +2,7 @@
 updated: 2020-09-22
 difficulty: Beginner
 pcx-content-type: tutorial
+title: Migrating from Netlify to Pages
 ---
 
 # Migrating from Netlify to Pages
@@ -30,7 +31,7 @@ In the **Build & Deploy** tab, find the **Build settings** panel, which will hav
 
 Once you have found your build directory and build command, you can move your project to Cloudflare Pages.
 
-The [Get started guide](/get-started) will instruct you how to add your GitHub project to Cloudflare Pages.
+The [Get started guide](/pages/get-started/) will instruct you how to add your GitHub project to Cloudflare Pages.
 
 If you choose to use a custom domain for your Pages, you can set it to the same custom domain as your currently deployed Netlify application. When Pages finishes the initial deploy of your site, you will need to delete the Workers application to start sending requests to Cloudflare Pages.
 

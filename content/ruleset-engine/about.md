@@ -1,12 +1,14 @@
 ---
 title: About
 pcx-content-type: concept
-order: 2
+weight: 3
+meta:
+  title: About Ruleset Engine
 ---
 
 # About Ruleset Engine
 
-The Cloudflare Ruleset Engine allows you to create and deploy rules and rulesets. The engine syntax, inspired by the Wireshark Display Filter language, is defined by the [Rules language](/rules-language). Cloudflare uses the Ruleset Engine in different products, allowing you to configure several products using the same basic syntax.
+The Cloudflare Ruleset Engine allows you to create and deploy rules and rulesets. The engine syntax, inspired by the Wireshark Display Filter language, is defined by the [Rules language](/ruleset-engine/rules-language/). Cloudflare uses the Ruleset Engine in different products, allowing you to configure several products using the same basic syntax.
 
 There are several elements involved in the configuration and use of the Ruleset Engine. These elements are:
 
@@ -59,7 +61,7 @@ The rules in a Managed Ruleset have a default action and status. However, you ca
 
 There are several Cloudflare products that provide you with Managed Rulesets. Check each product’s documentation for details on the available Managed Rulesets.
 
-For more information on deploying Managed Rulesets and defining overrides, check [Work with Managed Rulesets](/managed-rulesets).
+For more information on deploying Managed Rulesets and defining overrides, check [Work with Managed Rulesets](/ruleset-engine/managed-rulesets/).
 
 ### Custom rulesets
 
@@ -71,11 +73,11 @@ Currently, custom rulesets are only supported by the Cloudflare WAF.
 
 Use custom rulesets to define your own sets of rules. After creating a custom ruleset, deploy it to a phase by creating a rule that executes the ruleset.
 
-For more information on creating and deploying custom rulesets, check [Work with custom rulesets](/custom-rulesets).
+For more information on creating and deploying custom rulesets, check [Work with custom rulesets](/ruleset-engine/custom-rulesets/).
 
 ## Rules
 
-A **rule** defines a filter and an action to perform on the incoming requests that match the filter. The rule filter **expression** defines the scope of the rule and the rule **action** defines what happens when there’s a match for the expression. Rule filter expressions are defined using the [Rules language](/rules-language).
+A **rule** defines a filter and an action to perform on the incoming requests that match the filter. The rule filter **expression** defines the scope of the rule and the rule **action** defines what happens when there’s a match for the expression. Rule filter expressions are defined using the [Rules language](/ruleset-engine/rules-language/).
 
 For example, consider the following ruleset with four rules (R1, R2, R3, and R4). For a given incoming request, the expression of the first two rules matches the request properties. Therefore, the action for these rules runs (*Execute* and *Log*, respectively). The action of the first rule executes a Managed Ruleset, which means that every rule in the Managed Ruleset is evaluated. The action of the second rule logs an event associated with the current phase. There is no match for the expressions of rules 3 and 4, so their actions do not run. Since no rule blocks the request, it proceeds to the next phase.
 
@@ -85,20 +87,20 @@ Rules can have additional features through specific Cloudflare products. You may
 
 ### Rule evaluation and field values
 
-While evaluating rules for a given request/response, the values of all request and response [fields](/rules-language/fields) are immutable within each phase. However, field values may change between phases.
+While evaluating rules for a given request/response, the values of all request and response [fields](/ruleset-engine/rules-language/fields/) are immutable within each phase. However, field values may change between phases.
 
 For example:
 
-*   If a [URL Rewrite Rule](https://developers.cloudflare.com/rules/transform/url-rewrite) #1 updates the URI path or the query string of a request, URL Rewrite Rule #2 will not take these earlier changes into consideration.
-*   If a [HTTP Request Header Modification Rule](https://developers.cloudflare.com/rules/transform/request-header-modification) #1 sets the value of a request header, HTTP Request Header Modification Rule #2 will not be able to read or evaluate this new value.
+*   If a [URL Rewrite Rule](/rules/transform/url-rewrite) #1 updates the URI path or the query string of a request, URL Rewrite Rule #2 will not take these earlier changes into consideration.
+*   If a [HTTP Request Header Modification Rule](/rules/transform/request-header-modification) #1 sets the value of a request header, HTTP Request Header Modification Rule #2 will not be able to read or evaluate this new value.
 *   If a URL Rewrite Rule updates the URI path or query string of a request, the `http.request.uri`, `http.request.uri.*`, and `http.request.full_uri` fields will have a different value in phases after the `http_request_transform` phase (where URL Rewrite Rules are executed).
 
 ***
 
 ## Get started
 
-To view existing rulesets and their properties, see [View rulesets](/basic-operations/view-rulesets).
+To view existing rulesets and their properties, see [View rulesets](/ruleset-engine/basic-operations/view-rulesets/).
 
-For more information on deploying Managed Rulesets and defining overrides, check [Work with Managed Rulesets](/managed-rulesets).
+For more information on deploying Managed Rulesets and defining overrides, check [Work with Managed Rulesets](/ruleset-engine/managed-rulesets/).
 
-For more information on creating and deploying custom rulesets, check [Work with custom rulesets](/custom-rulesets).
+For more information on creating and deploying custom rulesets, check [Work with custom rulesets](/ruleset-engine/custom-rulesets/).

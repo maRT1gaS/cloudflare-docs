@@ -1,6 +1,7 @@
 ---
-order: 38
 pcx-content-type: concept
+title: Data origin and collection
+weight: 39
 ---
 
 # Data origin and collection

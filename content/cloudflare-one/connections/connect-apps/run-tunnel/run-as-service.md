@@ -1,24 +1,25 @@
 ---
-order: 30
 pcx-content-type: how-to
+title: Run as a service
+weight: 31
 ---
 
 # Run as a service
 
 | Before you start |
 |---|
-| Follow the [Tunnel guide](/connect-apps/install-and-setup/tunnel-guide) to create a tunnel, route traffic to a tunnel, and run it. |
+| Follow the [Tunnel guide](/cloudflare-one/connect-apps/install-and-setup/tunnel-guide/) to create a tunnel, route traffic to a tunnel, and run it. |
 
 Cloudflare Tunnel can install itself as a system service on Linux and Windows and as a launch agent on macOS.
 
-By default, Cloudflare Tunnel expects all of the configuration to exist in the `.cloudflared/config.yml` configuration file. The available options are documented on the [configuration file reference](/connections/connect-apps/configuration/configuration-file/ingress), but at a minimum you must specify the following arguments to run as a service:
+By default, Cloudflare Tunnel expects all of the configuration to exist in the `.cloudflared/config.yml` configuration file. The available options are documented on the [configuration file reference](/cloudflare-one/connections/connect-apps/configuration/configuration-file/ingress/), but at a minimum you must specify the following arguments to run as a service:
 
 |Argument|Description|
 |---|---|
 |`tunnel`|The UUID of your Tunnel
 |`credentials-file`|The location of the credentials file for your Tunnel|
 
-You must [create the Tunnel](/connections/connect-apps/create-tunnel), and its credentials file, prior to installing it as a service. Creating the Tunnel in advance will generate the `credentials` file.
+You must [create the Tunnel](/cloudflare-one/connections/connect-apps/create-tunnel/), and its credentials file, prior to installing it as a service. Creating the Tunnel in advance will generate the `credentials` file.
 
 If you do not want to create the tunnel in advance, you must install `cloudflared` with the `--legacy` flag.
 
@@ -96,7 +97,7 @@ Output will be logged to `/Library/Logs/com.cloudflare.cloudflared.err.log` and 
 
 ## Windows
 
-1.  [Download the latest `cloudflared` version](/connections/connect-apps/install-and-setup/installation).
+1.  [Download the latest `cloudflared` version](/cloudflare-one/connections/connect-apps/install-and-setup/installation/).
 
 2.  Create a new directory:
 
@@ -138,9 +139,9 @@ Output will be logged to `/Library/Logs/com.cloudflare.cloudflared.err.log` and 
     cloudflared.exe tunnel create <Tunnel Name>
     ```
 
-    This will generate a [credentials file](/connections/connect-apps/tunnel-useful-terms#credentials-file) in `.json` format.
+    This will generate a [credentials file](/cloudflare-one/connections/connect-apps/tunnel-useful-terms/#credentials-file) in `.json` format.
 
-10. [Create a configuration file](/connections/connect-apps/install-and-setup/tunnel-guide#4-create-a-configuration-file) with the following content:
+10. [Create a configuration file](/cloudflare-one/connections/connect-apps/install-and-setup/tunnel-guide/#4-create-a-configuration-file) with the following content:
 
     ```text
     tunnel: <Tunnel ID>
@@ -163,7 +164,7 @@ Output will be logged to `/Library/Logs/com.cloudflare.cloudflared.err.log` and 
 
      <Aside type='Note'>
 
-    If you haven't created a config.yml file, follow [these instructions](/connections/connect-apps/install-and-setup/tunnel-guide#4-create-a-configuration-file).
+    If you haven't created a config.yml file, follow [these instructions](/cloudflare-one/connections/connect-apps/install-and-setup/tunnel-guide/#4-create-a-configuration-file).
 
      </Aside>
 

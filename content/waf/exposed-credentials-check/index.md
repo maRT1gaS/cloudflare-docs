@@ -1,6 +1,7 @@
 ---
 pcx-content-type: concept
-order: 5
+title: Automated exposed credentials check
+weight: 6
 ---
 
 # Automated exposed credentials check
@@ -64,7 +65,7 @@ The Managed Ruleset contains an additional rule that blocks HTTP requests alread
 
 </Aside>
 
-You can turn the Managed Ruleset on/off and customize the action performed by each rule when there is a match. Check [Configure exposed credentials check in the dashboard](/exposed-credentials-check/configure-dashboard) for more information.
+You can turn the Managed Ruleset on/off and customize the action performed by each rule when there is a match. Check [Configure exposed credentials check in the dashboard](/waf/exposed-credentials-check/configure-dashboard/) for more information.
 
 ## Exposed credentials checks in custom rules
 
@@ -78,7 +79,7 @@ You can also check for exposed credentials in custom rules. One common use case 
 
 To check for exposed credentials in a custom rule, include the exposed credentials check in the rule definition and specify how to obtain the username and password values from the HTTP request.
 
-Use the [Rulesets API](https://developers.cloudflare.com/ruleset-engine/rulesets-api) to include exposed credentials check in a custom rule. For more information, see [Create a custom rule checking for exposed credentials](/exposed-credentials-check/configure-api#create-a-custom-rule-checking-for-exposed-credentials).
+Use the [Rulesets API](/ruleset-engine/rulesets-api) to include exposed credentials check in a custom rule. For more information, see [Create a custom rule checking for exposed credentials](/waf/exposed-credentials-check/configure-api/#create-a-custom-rule-checking-for-exposed-credentials).
 
 \<Aside type='note' header='Note'>
 

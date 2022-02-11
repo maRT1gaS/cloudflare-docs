@@ -1,7 +1,9 @@
 ---
-order: 3
 pcx-content-type: how-to
 type: overview
+title: HTTP Strict Transport Security (HSTS)
+weight: 4
+layout: list
 ---
 
 import HSTSDefinition from "../../\_partials/\_hsts-definition.md"
@@ -10,7 +12,7 @@ import HSTSDefinition from "../../\_partials/\_hsts-definition.md"
 
 <HSTSDefinition/>
 
-HSTS adds an HTTP header that directs [compliant web browsers](/ssl-tls/browser-compatibility) to:
+HSTS adds an HTTP header that directs [compliant web browsers](/ssl/ssl-tls/browser-compatibility/) to:
 
 *   Transform HTTP links to HTTPS links
 *   Prevent users from bypassing SSL browser warnings

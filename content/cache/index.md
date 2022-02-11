@@ -1,7 +1,9 @@
 ---
 title: Overview
-order: 0
 pcx-content-type: concept
+weight: 1
+meta:
+  title: Cache
 ---
 
 # Cache
@@ -10,7 +12,7 @@ Cloudflare makes customer websites faster by storing a copy of the website’s c
 
 Cloudflare caches static content based on the following factors:
 
-*   Cache level set at a zone or [page rule](/how-to/create-page-rules)
+*   Cache level set at a zone or [page rule](/cache/how-to/create-page-rules/)
 *   File extension
 *   Presence of query strings
 *   Origin cache-control headers

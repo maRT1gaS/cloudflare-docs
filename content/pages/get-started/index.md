@@ -1,6 +1,7 @@
 ---
-order: 1
 pcx-content-type: get-started
+title: Get started
+weight: 2
 ---
 
 # Get started
@@ -21,7 +22,7 @@ To begin, go to the [Cloudflare Pages site](https://pages.dev) and sign in with 
 
 ### Connect to your git provider
 
-Pages offers support for [GitHub](https://github.com/) and [GitLab](https://gitlab.com/). After logging into your Cloudflare account, in **Account Home** > go to **Pages** > **Create a project**. You will be prompted to sign in with your preferred git provider which allows [Cloudflare Pages](https://pages.dev) to deploy your projects, and update your PRs with [preview deployments](/platform/preview-deployments).
+Pages offers support for [GitHub](https://github.com/) and [GitLab](https://gitlab.com/). After logging into your Cloudflare account, in **Account Home** > go to **Pages** > **Create a project**. You will be prompted to sign in with your preferred git provider which allows [Cloudflare Pages](https://pages.dev) to deploy your projects, and update your PRs with [preview deployments](/pages/platform/preview-deployments/).
 
 <Aside type="note">
 
@@ -41,7 +42,7 @@ If using GitLab, you can select a project from your personal account or from a G
 
 <Aside type="note">
 
-If you do not have a project repository to choose from yet, refer to our extensive [How to section](/how-to) to learn how to create and deploy common frameworks and tools to Cloudflare Pages.
+If you do not have a project repository to choose from yet, refer to our extensive [How to section](/pages/how-to/) to learn how to create and deploy common frameworks and tools to Cloudflare Pages.
 
 </Aside>
 
@@ -51,7 +52,7 @@ Once you have selected a repository, select **Install & Authorize** and **Begin 
 
 Your **project name** will be used to generate your project's hostname. By default, this matches your GitHub/GitLab project name.
 
-**Production branch** indicates the branch that Cloudflare Pages should use to deploy the production version of your site. For most projects, this is the `main` or `master` branch. All other branches that are not your production branch will be used for [preview deployments](/platform/preview-deployments).
+**Production branch** indicates the branch that Cloudflare Pages should use to deploy the production version of your site. For most projects, this is the `main` or `master` branch. All other branches that are not your production branch will be used for [preview deployments](/pages/platform/preview-deployments/).
 
 <Aside type="note">
 
@@ -65,7 +66,7 @@ You must have pushed at least one branch to your GitHub or GitLab project in ord
 
 Depending on the framework, tool, or project you are deploying to Cloudflare Pages, you will need to specify the site's **build command** and **build output directory** to tell Cloudflare Pages how to deploy your site. The contents of this directory are uploaded to Cloudflare Pages as your website's contents.
 
-Our deployment dashboard provides a number of framework-specific presets, which provide the default values for the selected framework. If you are unsure what the correct values are for this section, refer to our documentation on [build configuration](/platform/build-configuration). If you do not need a build step, you may input  `exit 0` into the **Build command** field.
+Our deployment dashboard provides a number of framework-specific presets, which provide the default values for the selected framework. If you are unsure what the correct values are for this section, refer to our documentation on [build configuration](/pages/platform/build-configuration/). If you do not need a build step, you may input  `exit 0` into the **Build command** field.
 
 ![Build settings](./images/build-settings.png)
 
@@ -119,7 +120,7 @@ If your site is already managed as a Cloudflare zone, the CNAME record will be a
 
 <Aside type="note">
 
-To ensure a custom domain is added successfully, you must go through the [Adding a custom domain](/get-started#adding-a-custom-domain) process described above. Manually adding a custom CNAME record pointing to your Cloudflare Pages site - without first associating the domain (or subdomains) in the Cloudflare Pages dashboard - will result in your domain failing to resolve at the CNAME record address, and display a [`522` error](https://support.cloudflare.com/hc/en-us/articles/115003011431-Troubleshooting-Cloudflare-5XX-errors#522error).
+To ensure a custom domain is added successfully, you must go through the [Adding a custom domain](/pages/get-started/#adding-a-custom-domain) process described above. Manually adding a custom CNAME record pointing to your Cloudflare Pages site - without first associating the domain (or subdomains) in the Cloudflare Pages dashboard - will result in your domain failing to resolve at the CNAME record address, and display a [`522` error](https://support.cloudflare.com/hc/en-us/articles/115003011431-Troubleshooting-Cloudflare-5XX-errors#522error).
 
 </Aside>
 

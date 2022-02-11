@@ -1,5 +1,6 @@
 ---
 pcx-content-type: concept
+title: Environment variables
 ---
 
 # Environment variables
@@ -8,7 +9,7 @@ In the Workers platform, environment variables, secrets, and KV namespaces are k
 
 ## Environmental variables with module workers
 
-When deploying a Module Worker, any [bindings](/platform/environment-variables) will not be available as global runtime variables. Instead, they are passed to the handler as a [parameter](#parameters) – refer to the `FetchEvent` [documentation for further comparisons and examples](/runtime-apis/fetch-event#bindings-1).
+When deploying a Module Worker, any [bindings](/workers/platform/environment-variables/) will not be available as global runtime variables. Instead, they are passed to the handler as a [parameter](#parameters) – refer to the `FetchEvent` [documentation for further comparisons and examples](/workers/runtime-apis/fetch-event/#bindings-1).
 
 ## Environment variables via wrangler
 
@@ -56,7 +57,7 @@ console.log(STRIPE_TOKEN);
 
 ### Adding secrets via wrangler
 
-Secrets are defined by running [`wrangler secret put <NAME>`](/cli-wrangler/commands#secret) in your terminal, where `<NAME>` is the name of your binding. You may assign environment-specific secrets by re-running the command `wrangler secret put <NAME> -e` or `wrangler secret put <NAME> --env`. Keep a list of the secrets used in your code in your `wrangler.toml` file, like the example under `[secrets]`:
+Secrets are defined by running [`wrangler secret put <NAME>`](/workers/cli-wrangler/commands/#secret) in your terminal, where `<NAME>` is the name of your binding. You may assign environment-specific secrets by re-running the command `wrangler secret put <NAME> -e` or `wrangler secret put <NAME> --env`. Keep a list of the secrets used in your code in your `wrangler.toml` file, like the example under `[secrets]`:
 
 ```toml
 ---
@@ -76,13 +77,13 @@ workers_dev = true
 
 <Aside type="warning">
 
-\* **Warning:** Do not use plaintext environment variables to store sensitive information. Use [`wrangler secret put`](/cli-wrangler/commands#secret) instead.
+\* **Warning:** Do not use plaintext environment variables to store sensitive information. Use [`wrangler secret put`](/workers/cli-wrangler/commands/#secret) instead.
 
 </Aside>
 
 ### Adding KV namespaces via wrangler
 
-KV namespaces are defined via the [`kv_namespaces`](/cli-wrangler/configuration#kv_namespaces) configuration in your `wrangler.toml` and are always provided as [KV runtime instances](/runtime-apis/kv).
+KV namespaces are defined via the [`kv_namespaces`](/workers/cli-wrangler/configuration/#kv_namespaces) configuration in your `wrangler.toml` and are always provided as [KV runtime instances](/workers/runtime-apis/kv/).
 
 ```toml
 ---

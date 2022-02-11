@@ -1,6 +1,7 @@
 ---
-order: 1
 pcx-content-type: reference
+title: Parameters
+weight: 2
 ---
 
 # Parameters
@@ -9,7 +10,7 @@ Each client supports the following set of parameters as part of their deployment
 
 ## Required for full Cloudflare One features
 
-For the vast majority of Cloudflare Zero Trust features to work, you need to specify a team name. Examples of Cloudflare Zero Trust features depending on the team name are [HTTP policies](/policies/filtering/http-policies), [Browser Isolation](/connections/connect-browsers), and [device posture](/identity/devices).
+For the vast majority of Cloudflare Zero Trust features to work, you need to specify a team name. Examples of Cloudflare Zero Trust features depending on the team name are [HTTP policies](/cloudflare-one/policies/filtering/http-policies/), [Browser Isolation](/cloudflare-one/connections/connect-browsers/), and [device posture](/cloudflare-one/identity/devices/).
 
 ### `organization`
 
@@ -17,9 +18,9 @@ For the vast majority of Cloudflare Zero Trust features to work, you need to spe
 | ----- | -------- |
 | `organization` | string |
 
-**Description.** Instructs the client to register device with your organization. Registration requires authentication via an [IDP](/identity/idp-integration) or [Service Auth](/identity/service-auth).
+**Description.** Instructs the client to register device with your organization. Registration requires authentication via an [IDP](/cloudflare-one/identity/idp-integration/) or [Service Auth](/cloudflare-one/identity/service-auth/).
 
-**Value:** Your [team name](/glossary#team-name).
+**Value:** Your [team name](/cloudflare-one/glossary/#team-name).
 
 ## Required field for DNS only policy enforcemet
 
@@ -33,7 +34,7 @@ This field is only required to enforce DNS policies when deploying the client in
 
 **Description.** Instructs the client to direct all DNS queries to a specific policy location. This value is only necessary if deploying without a team name *or* in an organization with multiple policy locations.
 
-**Value:** Your [DoH subdomain](/glossary#doh-subdomain).
+**Value:** Your [DoH subdomain](/cloudflare-one/glossary/#doh-subdomain).
 
 ## Optional fields
 
@@ -47,8 +48,8 @@ This field is only required to enforce DNS policies when deploying the client in
 
 **Value:**
 
-*   `1dot1` Gateway enforcement of DNS policies only through [DoH](/glossary#doh). All other traffic is handled by your devices default mechanisms
-*   `warp`  \[default value] All traffic sent through [Cloudflare Gateway](/glossary#cloudflare-gateway) via our encrypted tunnel. This mode is required for features such as HTTP policies, Browser Isolation, identity-based rules, or device posture.
+*   `1dot1` Gateway enforcement of DNS policies only through [DoH](/cloudflare-one/glossary/#doh). All other traffic is handled by your devices default mechanisms
+*   `warp`  \[default value] All traffic sent through [Cloudflare Gateway](/cloudflare-one/glossary/#cloudflare-gateway) via our encrypted tunnel. This mode is required for features such as HTTP policies, Browser Isolation, identity-based rules, or device posture.
 
 ### `onboarding`
 
@@ -120,7 +121,7 @@ This parameter replaces the old `enabled` property, which can no longer be used 
   Devices that connect to Cloudflare Zero Trust with Service Token authentication are not subject to identity based rules.
 </Aside>
 
-Instead of requiring users to authenticate with their credentials, you can deploy the WARP client with a pre-generated [Service Token](/identity/service-auth/service-tokens).
+Instead of requiring users to authenticate with their credentials, you can deploy the WARP client with a pre-generated [Service Token](/cloudflare-one/identity/service-auth/service-tokens/).
 
 Both a `auth_client_id` and `auth_client_secret` are required when using this authentication method.
 
@@ -130,7 +131,7 @@ Both a `auth_client_id` and `auth_client_secret` are required when using this au
 | ----- | -------- |
 | `auth_client_id` | string |
 
-**Description.** The automatically generated ID when you created your [Service Token](/identity/service-auth/service-tokens).
+**Description.** The automatically generated ID when you created your [Service Token](/cloudflare-one/identity/service-auth/service-tokens/).
 
 **Value:** `Client ID` from your service token.
 
@@ -140,7 +141,7 @@ Both a `auth_client_id` and `auth_client_secret` are required when using this au
 | ----- | -------- |
 | `auth_client_secret` | string |
 
-**Description.** The automatically generated secret when you created your [Service Token](/identity/service-auth/service-tokens).
+**Description.** The automatically generated secret when you created your [Service Token](/cloudflare-one/identity/service-auth/service-tokens/).
 
 **Value:** `Client Secret` from your service token.
 

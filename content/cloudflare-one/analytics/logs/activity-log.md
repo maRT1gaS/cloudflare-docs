@@ -1,6 +1,7 @@
 ---
-order: 2
 pcx-content-type: reference
+title: Activity logs
+weight: 3
 ---
 
 # Activity logs
@@ -17,15 +18,15 @@ The Activity log allows you to see individual DNS queries made from your locatio
 
 By default, Gateway logs all events, including DNS queries and HTTP requests that are allowed and not a risk. You can customize what type of events are logged by navigating to **Settings** > **Network** and indicating your preferences under **Gateway Selective Logging**.
 
-![Selective Logging](../../static/documentation/logs/selective-logging.png)
+![Selective Logging](/cloudflare-one/static/documentation/logs/selective-logging.png)
 
 ## DNS logs
 
-![Gateway activity log](../../static/documentation/logs/teams-dash-activity-log.png)
+![Gateway activity log](/cloudflare-one/static/documentation/logs/teams-dash-activity-log.png)
 
 When you click on the row, you can see information related to the identity that is making the DNS request and attributes relevant to the DNS queries.
 
-![Gateway activity log expanded](../../static/documentation/logs/teams-dash-activity-log-expanded.png)
+![Gateway activity log expanded](/cloudflare-one/static/documentation/logs/teams-dash-activity-log-expanded.png)
 
 ### Explanation of the fields
 

@@ -1,6 +1,7 @@
 ---
-order: 1
 pcx-content-type: tutorial
+title: Creating API tokens
+weight: 2
 ---
 
 # Creating API tokens
@@ -21,7 +22,7 @@ For this example, the `Edit Zone DNS` template has been selected. After selectin
 2.  The permissions granted to the token
 3.  The resources the token can affect
 
-There are two additional inputs that can be used to restrict how a token is used. These are *IP restrictions* and *Time to Live (TTL) restrictions*. Both of these are covered in Advance Usage under [Restricting Token Use](/tokens/advanced/restrictions)
+There are two additional inputs that can be used to restrict how a token is used. These are *IP restrictions* and *Time to Live (TTL) restrictions*. Both of these are covered in Advance Usage under [Restricting Token Use](/api/tokens/advanced/restrictions/)
 
 ![Template Customization](./media/template-customize.png)
 
@@ -39,7 +40,7 @@ Permissions are segmented into three categories based on resource:
 2.  Account Permissions
 3.  User Permissions
 
-Each category contains Permission Groups related to those resources. DNS permissions belong to the Zone category, while Billing permissions belong to the Account category. A full list of the Permission Groups can be [found here](/tokens/create/permissions)
+Each category contains Permission Groups related to those resources. DNS permissions belong to the Zone category, while Billing permissions belong to the Account category. A full list of the Permission Groups can be [found here](/api/tokens/create/permissions/)
 
 After selecting a Permission Group, you can choose what level of access to grant the token. Most groups offer `Edit` or `Read` options. `Edit` is full *CRUDL* (*create*, *read*, *update*, *delete*, *list*) access, while `Read` is just the *read* permission and *list* where appropriate.
 

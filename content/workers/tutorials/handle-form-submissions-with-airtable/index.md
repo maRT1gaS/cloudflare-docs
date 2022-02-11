@@ -1,8 +1,9 @@
 ---
 updated: 2021-06-17
 difficulty: Beginner
-content_type: "📝 Tutorial"
+content_type: 📝 Tutorial
 pcx-content-type: tutorial
+title: Handle form submissions with Airtable
 ---
 
 import TutorialsBeforeYouStart from "../../\_partials/\_tutorials-before-you-start.md"
@@ -27,7 +28,7 @@ In this tutorial, you will use Workers and [Airtable](https://airtable.com) to p
 
 For this tutorial, you will be building a contact form. You can customize the fields, but the form this tutorial references will collect a first name, last name, email address, phone number, subject, and a message.
 
-If this is your first time building a form and you would like to follow a tutorial to create a form with Cloudflare Pages, refer to the [HTML forms](https://developers.cloudflare.com/pages/tutorials/forms) Pages tutorial. Then continue with [Create a serverless function](/tutorials/handle-form-submissions-with-airtable).
+If this is your first time building a form and you would like to follow a tutorial to create a form with Cloudflare Pages, refer to the [HTML forms](/pages/tutorials/forms) Pages tutorial. Then continue with [Create a serverless function](/workers/tutorials/handle-form-submissions-with-airtable/).
 
 The simplified HTML markup for this form:
 
@@ -137,7 +138,7 @@ If you have chosen to work with the [sample codebase on GitHub](https://github.c
 
 </Aside>
 
-In the `wrangler.toml` file of your project's directory, add your Cloudflare account ID. [Refer to the Get started guide](https://developers.cloudflare.com/workers/get-started/guide#7-configure-your-project-for-deployment) to find your Cloudflare account ID.
+In the `wrangler.toml` file of your project's directory, add your Cloudflare account ID. [Refer to the Get started guide](/workers/get-started/guide#7-configure-your-project-for-deployment) to find your Cloudflare account ID.
 
 ```toml
 ---
@@ -187,7 +188,7 @@ Further down the page, you will begin to see example requests, showing you how t
 
 ![An example request in Airtable's API documentation, with the Airtable API key highlighted](./api-key.png)
 
-To make this API key available in your codebase, use the [`wrangler secret`](/cli-wrangler/commands#secret) command. The `secret` command encrypts and stores environment variables for use in your function, without revealing them to users.
+To make this API key available in your codebase, use the [`wrangler secret`](/workers/cli-wrangler/commands/#secret) command. The `secret` command encrypts and stores environment variables for use in your function, without revealing them to users.
 
 Run `wrangler secret put`, passing `AIRTABLE_API_KEY` as the name of your secret:
 
@@ -302,7 +303,7 @@ const createAirtableRecord = body => {
 }
 ```
 
-To make an authenticated request to Airtable, you need to provide three constants that represent data about your Airtable account, base, and table name. You have already set `AIRTABLE_API_KEY` using `wrangler secret`, since it is a value that should be encrypted. The **Airtable base ID** and **table name** are values that can be publicly shared in places like GitHub. Use Wrangler's [`vars`](/cli-wrangler/configuration#vars) feature to pass public environment variables from your `wrangler.toml` file.
+To make an authenticated request to Airtable, you need to provide three constants that represent data about your Airtable account, base, and table name. You have already set `AIRTABLE_API_KEY` using `wrangler secret`, since it is a value that should be encrypted. The **Airtable base ID** and **table name** are values that can be publicly shared in places like GitHub. Use Wrangler's [`vars`](/workers/cli-wrangler/configuration/#vars) feature to pass public environment variables from your `wrangler.toml` file.
 
 Add a `vars` table at the end of your `wrangler.toml` file:
 
@@ -341,7 +342,7 @@ You will notice that your function is deployed to a unique URL — for example, 
 <!-- The rest of your HTML form -->
 ```
 
-After you have deployed your new form (refer to the [HTML forms](https://developers.cloudflare.com/pages/tutorials/forms) tutorial if you need help creating a form), you should be able to submit a new form submission and see the value show up immediately in Airtable:
+After you have deployed your new form (refer to the [HTML forms](/pages/tutorials/forms) tutorial if you need help creating a form), you should be able to submit a new form submission and see the value show up immediately in Airtable:
 
 ![Example GIF of complete Airtable and serverless function integration](./example.gif)
 
@@ -353,7 +354,7 @@ You can find the source for this project — both the front-end UI and the serve
 
 ## Related resources
 
-*   [Build a Slackbot](https://developers.cloudflare.com/workers/tutorials/build-a-slackbot)
-*   [Build a To-Do List Jamstack App](https://developers.cloudflare.com/workers/tutorials/build-a-jamstack-app)
-*   [Build a blog using Nuxt.js and Sanity.io on Cloudflare Pages](https://developers.cloudflare.com/pages/tutorials/build-a-blog-using-nuxt-and-sanity)
+*   [Build a Slackbot](/workers/tutorials/build-a-slackbot)
+*   [Build a To-Do List Jamstack App](/workers/tutorials/build-a-jamstack-app)
+*   [Build a blog using Nuxt.js and Sanity.io on Cloudflare Pages](/pages/tutorials/build-a-blog-using-nuxt-and-sanity)
 *   [James Quick's video on building a Cloudflare Workers + Airtable integration](https://www.youtube.com/watch?v=tFQ2kbiu1K4)

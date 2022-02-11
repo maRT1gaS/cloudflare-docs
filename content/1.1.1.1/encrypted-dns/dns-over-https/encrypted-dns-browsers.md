@@ -1,6 +1,7 @@
 ---
-order:
 pcx-content-type: how-to
+title: Configure DoH on your browser
+weight: 0
 ---
 
 # Configure DoH on your browser
@@ -28,7 +29,7 @@ This setting may already be enabled by default.
 3.  Scroll down to **Privacy and security** > **Security**.
 4.  Scroll down and enable the **Use secure DNS** switch.
 
-Your browser infers the DNS over HTTPS provider you want based on your system DNS. To benefit from Cloudflare DoH, make sure your system is [properly configured](/setup-1.1.1.1/windows).
+Your browser infers the DNS over HTTPS provider you want based on your system DNS. To benefit from Cloudflare DoH, make sure your system is [properly configured](/1.1.1.1/setup-1.1.1.1/windows/).
 
 ## Microsoft Edge
 

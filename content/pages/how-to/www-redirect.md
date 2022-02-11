@@ -1,5 +1,6 @@
 ---
 pcx-content-type: how-to
+title: Redirecting www to domain apex
 ---
 
 # Redirecting www to domain apex

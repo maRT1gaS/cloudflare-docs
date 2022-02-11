@@ -1,6 +1,7 @@
 ---
-order: 43
 pcx-content-type: reference
+title: Limits
+weight: 44
 ---
 
 # Limits

@@ -1,6 +1,7 @@
 ---
-order:
 pcx-content-type: concept
+title: Security model
+weight: 0
 ---
 
 # Security model

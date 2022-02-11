@@ -1,6 +1,7 @@
 ---
-order: 5
 pcx-content-type: how-to
+title: Applying watermarks
+weight: 6
 ---
 
 # Applying watermarks

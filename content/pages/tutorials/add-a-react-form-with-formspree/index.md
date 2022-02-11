@@ -1,8 +1,9 @@
 ---
 updated: 2021-11-30
 difficulty: Beginner
-content_type: "📝 Tutorial"
+content_type: 📝 Tutorial
 pcx-content-type: tutorial
+title: Add a React form with Formspree
 ---
 
 # Add a React form with Formspree
@@ -11,7 +12,7 @@ Almost every React website needs a form to collect user data. [Formspree](https:
 
 In this tutorial, you will create a `<form>` component using React and add it to a single page application built with `create-react-app`. Though you are using `create-react-app` (CRA), the concepts will apply to any React framework including Next.js, Gatsby, and more. You will use Formspree to collect the submitted data and send out email notifications when new submissions arrive, without requiring any server-side coding.
 
-You will deploy your site to Cloudflare Pages. Refer to the [Get started guide](/get-started) to familiarize yourself with the platform.
+You will deploy your site to Cloudflare Pages. Refer to the [Get started guide](/pages/get-started/) to familiarize yourself with the platform.
 
 ## Setup
 
@@ -32,7 +33,7 @@ You may now modify the React application in the `new-app` directory you created.
 
 ## The front-end code
 
-The starting point for `create-react-app` includes a simple Hello World website. You will be adding a Contact Us form that accepts a name, email address, and message. The form code is adapted from the HTML Forms tutorial. For a more in-depth explanation of how HTML forms work and additional learning resources, refer to the [HTML Forms tutorial](/tutorials/forms).
+The starting point for `create-react-app` includes a simple Hello World website. You will be adding a Contact Us form that accepts a name, email address, and message. The form code is adapted from the HTML Forms tutorial. For a more in-depth explanation of how HTML forms work and additional learning resources, refer to the [HTML Forms tutorial](/pages/tutorials/forms/).
 
 First, create a new react component called `ContactForm.js` and place it in the `src` folder alongside `App.js`.
 
@@ -145,7 +146,7 @@ function App() {
 export default App;
 ```
 
-Now you have a single-page application containing a Contact Us form with several fields for the user to fill out. However, you have not set up the form to submit to a valid form endpoint yet. You will do that in the [next section](/add-a-react-form-with-formspree#the-formspree-back-end).
+Now you have a single-page application containing a Contact Us form with several fields for the user to fill out. However, you have not set up the form to submit to a valid form endpoint yet. You will do that in the [next section](/pages/add-a-react-form-with-formspree/#the-formspree-back-end).
 
 <Aside type="info" header="GitHub repository">
 
@@ -173,7 +174,7 @@ const [state, handleSubmit] = useForm("mqldaqwx");
 /* replace the random-like string above with your own form's ID */
 ```
 
-Now when you submit your form, you should be shown a Thank You message. The form data will be submitted to your account on [Formspree.io](formspree.io).
+Now when you submit your form, you should be shown a Thank You message. The form data will be submitted to your account on [Formspree.io](/pages/formspree.io/).
 
 From here you can adjust your form processing logic to update the [notification email address](https://help.formspree.io/hc/en-us/articles/115008379348-Changing-a-form-email-address), or add plugins like [Google Sheets](https://help.formspree.io/hc/en-us/articles/360036563573-Use-Google-Sheets-to-send-your-submissions-to-a-spreadsheet), [Slack](https://help.formspree.io/hc/en-us/articles/360045648933-Send-Slack-notifications), and more.
 
@@ -200,7 +201,7 @@ $ git push -u origin main
 
 Your work now resides within the GitHub repository, which means that Pages is able to access it too.
 
-If this is your first Cloudflare Pages project, refer to the [Get started guide](/get-started) for a complete walkthrough. After selecting the appropriate GitHub repository, you must configure your project with the following build settings:
+If this is your first Cloudflare Pages project, refer to the [Get started guide](/pages/get-started/) for a complete walkthrough. After selecting the appropriate GitHub repository, you must configure your project with the following build settings:
 
 *   **Project name** – Your choice
 *   **Production branch** – `main`
@@ -240,5 +241,5 @@ If you would like to review the full source code for this application, you can f
 
 ## Related resources
 
-*   [Add an HTML form with Formspree](/tutorials/add-an-html-form-with-formspree)
-*   [HTML Forms](/tutorials/forms)
+*   [Add an HTML form with Formspree](/pages/tutorials/add-an-html-form-with-formspree/)
+*   [HTML Forms](/pages/tutorials/forms/)

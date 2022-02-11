@@ -1,7 +1,9 @@
 ---
 title: Overview
 pcx-content-type: overview
-order: 0
+weight: 1
+meta:
+  title: Network Error Logging (Beta)
 ---
 
 # Network Error Logging (Beta)
@@ -10,7 +12,7 @@ Network Error Logging (NEL) is a browser-based reporting system that allows user
 
 <Aside type="note" header="Note">
 
-Network Error Logging is currently in a closed beta for Enterprise users. To sign up for Network Error Logging, refer to [Get started](/get-started).
+Network Error Logging is currently in a closed beta for Enterprise users. To sign up for Network Error Logging, refer to [Get started](/network-error-logging/get-started/).
 
 </Aside>
 

@@ -1,6 +1,7 @@
 ---
-order: 3
 pcx-content-type: reference
+title: Known limitations
+weight: 4
 ---
 
 # Known limitations
@@ -31,7 +32,7 @@ We are still defining our minimum requirements but expect Browser Isolation to w
 
 ### Safari
 
-Safari's default configuration is susceptible to "[Maximum Sessions Reached](/faq/teams-troubleshooting#i-see-a-maximum-sessions-reached-alert)" alerts. To workaround this behaviour open Safari → Preferences → Privacy and uncheck **Prevent cross-site tracking**.
+Safari's default configuration is susceptible to "[Maximum Sessions Reached](/cloudflare-one/faq/teams-troubleshooting/#i-see-a-maximum-sessions-reached-alert)" alerts. To workaround this behaviour open Safari → Preferences → Privacy and uncheck **Prevent cross-site tracking**.
 
 ## Submitting feedback
 
@@ -39,4 +40,4 @@ Please submit feedback by opening Cloudflare WARP and selecting the Bug Icon.
 
 This will open the Feedback window for you to submit feedback. If we require further information we may contact you via the supplied email address.
 
-![Submit feedback](../../static/documentation/rbi/macos-submitting-feedback.png)
+![Submit feedback](/cloudflare-one/static/documentation/rbi/macos-submitting-feedback.png)

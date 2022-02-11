@@ -1,12 +1,14 @@
 ---
 title: DNS records
-order:
 pcx-content-type: reference
+weight: 0
+meta:
+  title: DNS records for load balancing
 ---
 
 # DNS records for load balancing
 
-When you [create a load balancer](/how-to/create-load-balancer), we automatically create an LB DNS record for the specified **Hostname**. This functionality allows you to use a hostname with or without an existing DNS record (A, AAAA, CNAME).
+When you [create a load balancer](/load-balancing/how-to/create-load-balancer/), we automatically create an LB DNS record for the specified **Hostname**. This functionality allows you to use a hostname with or without an existing DNS record (A, AAAA, CNAME).
 
 ## Priority order
 
@@ -47,8 +49,8 @@ In both cases, disabling your load balancer prevents traffic from going to any a
 
 ## SSL/TLS coverage
 
-Due to internal limitations, Cloudflare [Universal SSL certificates](https://developers.cloudflare.com/ssl/edge-certificates/universal-ssl) do not cover load balancing hostnames by default. This behavior will be corrected in the future.
+Due to internal limitations, Cloudflare [Universal SSL certificates](/ssl/edge-certificates/universal-ssl) do not cover load balancing hostnames by default. This behavior will be corrected in the future.
 
 As a current workaround for a domain or first-level subdomain (`lb.example.com`), create a [proxied CNAME/A/AAAA record](https://support.cloudflare.com/hc/articles/360019093151) for that hostname.
 
-To get coverage for any deeper subdomain (`lb.dev.example.com`), purchase an [advanced certificate](https://developers.cloudflare.com/ssl/edge-certificates/advanced-certificate-manager).
+To get coverage for any deeper subdomain (`lb.dev.example.com`), purchase an [advanced certificate](/ssl/edge-certificates/advanced-certificate-manager).

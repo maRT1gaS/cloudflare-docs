@@ -1,7 +1,9 @@
 ---
 title: About
-order: 2
 pcx-content-type: concept
+weight: 3
+meta:
+  title: About Cloudflare Page Shield
 ---
 
 # About Cloudflare Page Shield
@@ -18,7 +20,7 @@ When turned on, Page Shield uses a [content security policy](https://developer.m
 
 You can check the list of detected scripts in the Script Monitor dashboard. Since the scripts list is based on sampling, there may be a small delay between script deployment and appearance.
 
-If you are a customer with an add-on to your Enterprise plan, Cloudflare will apply additional mechanisms to detect and report any potentially malicious scripts in your domain. For more information, refer to [Review changed scripts](/use-dashboard/review-changed-scripts) and [Detecting malicious scripts](/about/malicious-script-detection).
+If you are a customer with an add-on to your Enterprise plan, Cloudflare will apply additional mechanisms to detect and report any potentially malicious scripts in your domain. For more information, refer to [Review changed scripts](/page-shield/use-dashboard/review-changed-scripts/) and [Detecting malicious scripts](/page-shield/about/malicious-script-detection/).
 
 ## Learn more
 

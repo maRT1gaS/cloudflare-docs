@@ -1,6 +1,7 @@
 ---
-order: 2
 pcx-content-type: reference
+title: Introduction
+weight: 3
 ---
 
 # Introduction

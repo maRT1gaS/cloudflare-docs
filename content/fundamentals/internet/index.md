@@ -1,6 +1,7 @@
 ---
-order: 2
 pcx-content-type: concept
+title: The Internet
+weight: 3
 ---
 
 # The Internet

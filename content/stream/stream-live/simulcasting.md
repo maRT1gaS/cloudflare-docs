@@ -1,6 +1,7 @@
 ---
-order: 8
 pcx-content-type: tutorial
+title: Simulcasting
+weight: 9
 ---
 
 # Simulcasting
